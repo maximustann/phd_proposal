@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (Web2C 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: proj_report_outline.aux
+A level-1 auxiliary file: introduction.aux
+The style file: acm.bst
+Database file #1: sample.bib
+Warning--I didn't find a database entry for "Buyya:2009wt"
+Warning--I didn't find a database entry for "Uhlig:2005ub"
+Warning--I didn't find a database entry for "Barham:2003vu"
+Warning--I didn't find a database entry for "Kivity:2007wu"
+Warning--I didn't find a database entry for "Zhang:2010vo"
+Warning--I didn't find a database entry for "Clark:2005ud"
+Warning--I didn't find a database entry for "energy_2007"
+You've used 0 entries,
+            2253 wiz_defined-function locations,
+            541 strings with 4078 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 7 warnings)
