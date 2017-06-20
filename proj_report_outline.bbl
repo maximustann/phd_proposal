@@ -1,3 +1,125 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{Barroso:2007jt}
+{\sc Barroso, L.~A., and H{\"o}lzle, U.}
+\newblock {The Case for Energy-Proportional Computing.}
+\newblock {\em IEEE Computer 40}, 12 (2007), 33--37.
+
+\bibitem{Buyya:2009ix}
+{\sc Buyya, R., Yeo, C.~S., Venugopal, S., Broberg, J., and Brandic, I.}
+\newblock {Cloud computing and emerging IT platforms: Vision, hype, and reality
+  for delivering computing as the 5th utility}.
+\newblock {\em Future Generation Computer Systems 25}, 6 (June 2009), 599--616.
+
+\bibitem{Candeia:2010wt}
+{\sc Candeia, D., Santos, R.~A., Lopes, R.~V., and Brasileiro, F.~V.}
+\newblock {Investigating Business-Driven Cloudburst Schedulers for E-Science
+  Bag-of-Tasks Applications.}
+\newblock {\em CloudCom\/} (2010).
+
+\bibitem{Cho:2016kz}
+{\sc Cho, J., and Kim, Y.}
+\newblock {Improving energy efficiency of dedicated cooling system and its
+  contribution towards meeting an energy-optimized data center}.
+\newblock {\em Applied Energy 165\/} (Mar. 2016), 967--982.
+
+\bibitem{Gupta:2008ul}
+{\sc Gupta, R., Bose, S.~K., Sundarrajan, S., Chebiyam, M., and Chakrabarti,
+  A.}
+\newblock {A Two Stage Heuristic Algorithm for Solving the Server Consolidation
+  Problem with Item-Item and Bin-Item Incompatibility Constraints.}
+\newblock {\em IEEE SCC\/} (2008).
+
+\bibitem{Hameed:2016cma}
+{\sc Hameed, A., Khoshkbarforoushha, A., Ranjan, R., Jayaraman, P.~P.,
+  Kolodziej, J., Balaji, P., Zeadally, S., Malluhi, Q.~M., Tziritas, N.,
+  Vishnu, A., Khan, S.~U., and Zomaya, A.~Y.}
+\newblock {A survey and taxonomy on energy efficient resource allocation
+  techniques for cloud computing systems.}
+\newblock {\em Computing 98}, 7 (2016), 751--774.
+
+\bibitem{Jung:2008vb}
+{\sc Jung, G., Joshi, K.~R., Hiltunen, M.~A., Schlichting, R.~D., and Pu, C.}
+\newblock {Generating Adaptation Policies for Multi-tier Applications in
+  Consolidated Server Environments.}
+\newblock {\em ICAC\/} (2008).
+
+\bibitem{Kaplan:up01fR-k}
+{\sc Kaplan, J.~M., Forrest, W., and Kindler, N.}
+\newblock {Revolutionizing data center energy efficiency}, 2008.
+
+\bibitem{Li:2009wf}
+{\sc Li, B., and Jianxin, L.}
+\newblock {\em {An Energy-saving Application Live Placement Approach for Cloud
+  Computing Environment}}.
+\newblock ACM International Conference on Cloud Computing, 2009.
+
+\bibitem{Li:2011ti}
+{\sc Li, W., Tordsson, J., and Elmroth, E.}
+\newblock {Modeling for Dynamic Cloud Scheduling Via Migration of Virtual
+  Machines.}
+\newblock {\em CloudCom\/} (2011).
+
+\bibitem{Mann:2015ua}
+{\sc Mann, Z.~{\'A}.}
+\newblock {Approximability of virtual machine allocation: much harder than bin
+  packing}.
+
+\bibitem{Mann:2016hx}
+{\sc Mann, Z.~{\'A}.}
+\newblock {Interplay of Virtual Machine Selection and Virtual Machine
+  Placement}.
+\newblock In {\em Service-Oriented and Cloud Computing}. Springer International
+  Publishing, Cham, Aug. 2016, pp.~137--151.
+
+\bibitem{marinescu2013cloud}
+{\sc Marinescu, D.~C.}
+\newblock {\em Cloud computing: theory and practice}.
+\newblock Newnes, 2013.
+
+\bibitem{Panigrahy:2011wk}
+{\sc Panigrahy, R., Talwar, K., Uyeda, L., and Wieder, U.}
+\newblock {Heuristics for vector bin packing}.
+\newblock {\em research microsoft com\/} (2011).
+
+\bibitem{Rong:2016js}
+{\sc Rong, H., Zhang, H., Xiao, S., Li, C., and Hu, C.}
+\newblock {Optimizing energy consumption for data centers}.
+\newblock {\em Renewable and Sustainable Energy Reviews 58\/} (May 2016),
+  674--691.
+
+\bibitem{Speitkamp:2010ck}
+{\sc Speitkamp, B., and Bichler, M.}
+\newblock {A mathematical programming approach for server consolidation
+  problems in virtualized data centers}.
+\newblock {\em IEEE Transactions on services {\ldots}\/} (2010).
+
+\bibitem{Tomas:2013iv}
+{\sc Tom{\'a}s, L., and Tordsson, J.}
+\newblock {Improving cloud infrastructure utilization through overbooking.}
+\newblock {\em CAC\/} (2013), 1.
+
+\bibitem{Uhlig:2005do}
+{\sc Uhlig, R., Neiger, G., Rodgers, D., Santoni, A.~L., Martins, F. C.~M.,
+  Anderson, A.~V., Bennett, S.~M., K{\"a}gi, A., Leung, F.~H., and Smith, L.}
+\newblock {Intel Virtualization Technology.}
+\newblock {\em IEEE Computer 38}, 5 (2005), 48--56.
+
+\bibitem{Varasteh:2015fu}
+{\sc Varasteh, A., and Goudarzi, M.}
+\newblock {Server Consolidation Techniques in Virtualized Data Centers: A
+  Survey}.
+\newblock {\em IEEE Systems Journal\/} (2015), 1--12.
+
+\bibitem{Xu:2010vh}
+{\sc Xu, J., and Fortes, J. A.~B.}
+\newblock {Multi-Objective Virtual Machine Placement in Virtualized Data Center
+  Environments.}
+\newblock {\em GreenCom/CPSCom\/} (2010).
+
+\bibitem{Zhang:2010vo}
+{\sc Zhang, Q., Cheng, L., and Boutaba, R.}
+\newblock {Cloud computing: state-of-the-art and research challenges}.
+\newblock {\em Journal of internet services and {\ldots}\/} (2010).
 
 \end{thebibliography}

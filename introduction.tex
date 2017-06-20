@@ -1,50 +1,172 @@
 \chapter{Introduction}\label{C:intro}
-\section{Problem Statement}
+\input{ProblemStatement}
+\input{Motivation}
+\input{Goals}
+\input{published}
 
-The advent of Cloud computing has completely reformed the software industry \cite{Buyya:2009wt}. 
-In Cloud customers' perspective, applications deployed on a Cloud can 
-have unlimited scalability without upfront investment. Beyond that, 
-Cloud offers a \emph{pay-as-you-go} policy which allows Cloud customers to 
-pay the minimum rental of resources on a basis.
-These two advantages make Cloud computing an attractive option.
-% particularly for Web-based appliacations which have unpredictable workloads.
-Virtualization \cite{Uhlig:2005ub} is the core technology that not only enables 
-the elastic management of Cloud resource but also can be used to improve the utilization and reduce 
-energy consumption.
-It maps a physical machine's system resource - including processors, memory, and 
-other devices - into isolated units called \emph{Virtual Machines (VMs)} which allows 
-multiple operating system to run on. 
-In essence, virtualization add an extra layer of software called 
-\emph{Virtual Machine Monitor (VMM)} or \emph{hypervisors} that can deploy, 
-release and migrate VMs at runtime. 
-Numerous VMMs have been designed for x86 commodity machines such as 
-Xen \cite{Barham:2003vu}, Kvm \cite{Kivity:2007wu}, and VMware ESX server \cite{Barham:2003vu}.
- 
-\emph{Server consolidation} is a strategy for improving utilization of Cloud resources
- \cite{Zhang:2010vo}.
-It uses a \emph{live VM migration techinique} \cite{Clark:2005ud} to concentrate VMs into fewer 
-physical servers so that a datacenter can accommodate more applications and idle servers 
-can be turned off to save energy. 
-However, Cloud datacenter is a highly dynamic environment with application demand fluctruation, 
-VMs arrival and release.
-Maintaining a high level of server utilization is a continuous process with different server consolidation
-methods. Mainly, there are two types of server consolidation: static and dynamic. 
-Static method is often treated as an offline approach and it is applied in a periodical manner 
-where a batch of VMs are allocated to a set of servers. 
-Dynamic method is an online approach, 
-where a single VM needs to be allocated to a set of servers. 
-The overall goal for server consolidation is to maximize the utilization of servers as well as 
-minimize the number of migration. 
 
-% The convenience offered by Cloud and the difficulty of managing Cloud resources are 
-% two sides of a coin. It is increasingly difficult to manage a large scale virtualized datacenter
-% which usually contains hundreds of thousands servers.
 
-Despite the usefulness of server consolidation, 
 
+
+% \subsection*{Limitation of Current CaaS Server Consolidation}
+% We identify the limitation of state-of-the-art server consolidation approaches 
+% in terms of two phases \cite{Varasteh:2015fu} and computing system design.
+% Phase 1 - Problem definition including objective functions and constraints; 
+% Phase 2 - The techniques to solve the optimization problems. 
+% From the computing system design point of view, we identify a cross-layer collaborative 
+% technique and a VM multiplexing technique which can potentially improve the utilization of 
+% computation resources.
+
+% \subsubsection*{Limitation in the IaaS model}
+% Infrastructure as a Service is one of the three basic 
+% service models (others are SaaS and PaaS) in Cloud computing. Different from other two service 
+% models, IaaS allows Cloud customers to manage the low-level details of 
+% virtual machine sizes, security settings and network regions. 
+% From the perspective of resource management, IaaS separates 
+% the concern of customers' task allocation and VM placement.
+% Cloud customers or brokers estimate the computational resources they need and map them into
+% a set of virtual machines. Once the task allocation is done, 
+% Cloud resource management system will find a set of servers and provision the required VM
+% on them. 
+
+% However, this separated responsibility has become of a major reason for the low utilization in Cloud
+% data centers. Cloud customers and brokers tend to over-estimate the resource they need in order
+% to maintain its QoS in the peak service time. In fact, the peak time only accounts for a small portion
+% of the overall service period. 
+% Although modern virtualization technology allows overbooking strategies, Cloud providers also
+% need to keep monitoring the overbooked servers to avoid overload. This surely increases the 
+% overhead of management.
+
+% One of the approach to improve the resource utilization is to put 
+% the responsibility of task allocation and VM consolidation in the same hand of Cloud providers,
+% thereafter, Cloud provider can estimate and dynamically adjust the resource assigned to a task.
+% In addition, VM multiplexing can also be used in improving the utilization.
+% Mann's research \cite{} gives an example which shows a scenario that simultaneously decide the 
+% task allocation and VM placement can reduce one third of the energy consumption.
+
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{example.png}
+% 	\caption{An example shows VM multiplexing can reduce 33\% of energy consumption \cite{}}
+% 	\label{fig:example}
+% \end{figure}
+
+% Another limitation of IaaS model is that it only provides limited types of VM with fixed amount resources (including CPU, memory, etc). When a customer chooses VM type, they are forced to
+% choose a VM type with the enough resource of a critical resource (e.g. CPU), therefore, other resources are over-provisioned \cite{Gmach:2012uu}. In order to tackle the fixed size of resources,
+% previous researchers employ an overbooking technique \cite{Tomas:2013us}, where extra
+% VM can be placed in a PM dependent on the actual resource utilization in that PM instead of the VM sizes.
+
+% As shown above, service allocation has strong influence on VM placement.
+% Therefore, instead of considering of complicated algorithms to achieve server consolidation.
+% We can think from system design point of view to build a cross-layer (SaaS and IaaS) 
+% collaborative technique which leads to high utilization as well as energy saving. 
+
+% Another benefit brought from this technique is that, it will further releases the burden from 
+% server providers of estimating the resource requirement and resource selection. 
+% The price model will follow the pay-as-you-go policy so that service providers do not need to 
+% rent a certain amount of reserved resources to cover the minimum requirement.
+
+
+% % \subsubsection*{Affinity aware VM Placement}
+% \subsubsection*{VM Multiplexing}
+
+% Another direction that could potentially improve the utilization of resource is VM multiplexing.
+% VM multiplexing is a technique that several services are deployed into a same VM so that 
+% it improve the utilization of saving a little amount of resource from running a separated VM.
+
+% VM multiplexing is a technique that usually be conducted by a private cloud owner, because 
+% private cloud owner has complete control of cloud resources and tasks, multiple tasks 
+% can be consolidated in one VM. Previously, VM multiplexing is not suitable for a public cloud
+% environment because the operating system cannot offer a performance isolation among the 
+% applications running internally.
+
+% With the prevalence of container technology (e.g Docker \cite{}), public cloud providers can
+% offer isolated virtual environments with shared operating system 
+% which is in essence VM multiplexing. 
+% Containers can increase the efficiency of cloud resource 
+% utilization because it is much light weighted than a VM which means it requires 
+% much less resource to than a VM manager.  Additionally, containers share a single operating system,
+% which offers much fast inter-container communication via system standard calls than inter-VM
+% communication techniques.
+
+% Current research mostly concentrate on VM consolidation problem. However, when the 
+
+
+
+% % \subsubsection*{EC-based Dynamic VM Placement}
+% % \subsubsection*{Large Scale of Server Consolidation Problem with Container}
+
+% \section*{Research Goal}
+% The overall goal of this thesis is to propose a server consolidation approach that
+% considers the challenges from all six points mentioned 
+% above when generating solutions.
+% Specifically, this approach combines element of AI planning to ensure the correctness
+% and constraint, and of Evolutionary Computation, 
+% to evolve a population of near-optimal solution. 
+% The research aims to determine a flexible way in which planning and EC can be combined to allow the creation of solution to solve consolidation problems.
+% The research goal described above can be achieved by completing the following set of 
+% objectives, which are intended to be used as research guides throughout this project.
+
+% \begin{enumerate}
+% 	\item First, develop an Evolutionary computation approach that to solve the 
+% 	combination of service allocation and VM placement problem. 
+% 	This objective has three sub-objectives:
+% 	\begin{enumerate}
+% 		\item \textit{Develop a formulation to capture the relationship between service allocation and VM placement.}
+% 		\item \textit{Propose a representation which address this problem} 
+% 		\item \itextit{Develop a multi-objective EC-based algorithm to resolve this problem.}
+% 	\end{enumerate}
+
+% 	\item Second, we would consider the multi-objective container-based consolidation problem with predefine VM types.
+% 	\begin{enumerate}
+% 		\item bla
+% 		\item bla bla 
+% 	\end{enumerate}
+
+% 	\item Third, we would develop an EC based approach that considers the container-based consolidation problem
+% 		with customized the VM types.
+% 	\begin{enumerate}
+% 		\item bla
+% 		\item bla
+% 	\end{enumerate}
+
+% 	\item Fourth, we would develop an approach for the joint allocation container and VM. 
+% 	\begin{enumerate}
+% 		\item bla
+% 		\item bla
+% 	\end{enumerate}
+
+% 	\item Fifth, we would consider the affinity-aware constraint in the consolidation
+% 	problem.
+% 	\begin{enumerate}
+% 		\item bla
+% 		\item bla
+% 	\end{enumerate}
+
+% 	\item Sixth, we would consider the co-location problem with aware the applications resource usage. 
+% 	\begin{enumerate}
+% 		\item bla
+% 		\item bla
+% 	\end{enumerate}
+
+% 	\item Seventh, we would consider the large scale consolidation problem with
+% 	centralized approach with a dimensionality reduction method.
+% 	\begin{enumerate}
+% 		\item bla
+% 		\item bla
+% 	\end{enumerate}
+
+% \end{enumerate}
+
+% \section*{Organization of Proposal}
+% The remainder of the proposal is organized as follows: Chapter 2 provides a fundamental definition of the Server Consolidation problem and performs a literature review covering a range of works in this field; Chapter 3 discusses the preliminary work carried out to explore using  EC-based techniques for the integration of service allocation and VM placement problem, one of the objectives proposed in this project; Chapter 4 presents a plan detailing this project’s intended contributions, a project timeline, and a thesis outline.
+
+% \emph{The third aspect} The dynamic 
+% \textcolor{Maroon}{Brief Literature Review}
 
 % In the previous decade, 
-% Cloud providers who were focusing on ensuring quality of service, has quickly expanded their infrastructures into a large scale.
+% Cloud providers who were focusing on ensuring quality of service, 
+% has quickly expanded their infrastructures into a large scale.
 % As a result, the average utilization of servers is as low as 20\%, 
 % according to \cite{energy_2007}'s observation of google's datacenter, hence, the energy was largely wasted. 
 

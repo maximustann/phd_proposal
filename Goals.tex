@@ -1,0 +1,77 @@
+\section{Research Goals}
+The overall goal of this thesis is to propose an end-to-end server consolidation approach that considers all three stages in the resource management as well as the large scale problem. More, specifically, this approach combines element of AI planning, to ensure the objectives and constraint fulfilment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims to determine a flexible way in which planning and EC can be combined to allow the creation of solutions to solve server consolidation problems. The research goal described above can be archieved by completing the following set of objectives. 
+
+
+\begin{enumerate}
+	\item In a CaaS cloud model, the initial VM provisioning and placement become a joint allocation of containers and virtual machines. This joint allocation is one of the major improvement in energy efficiency in CaaS which will be detailed explain in the next section.
+	The joint allocation can be separated into two steps, in the first step, the tasks are mapped to VMs 
+	and the VMs are allocated to physical machines in the second step. Because of the complexity, previous research
+	only considers the first step. They map the incoming tasks into predefined categories and based on the characteristic of the categories, the size of new virtual machines' resources are decided. After each tasks have chosen its VM type, they are allocated to virtual machines using a lightweight heursitic algorithm. 
+	We intend to apply an EC-based approach to solve this problem by proposing a coevolutionary that simuetiously decide the virtual machine type as well as the allocation of VMs.
+
+
+	% The 
+	% initial placement can be considered as a two-level of multi-dimensional bin-packing problem with multi-objectives. 
+	% \item First, from the perspective of \emph{Cloud resource allocation model}, 
+	% 	traditional Infrastructure as a Service (IaaS) resource allocation model 
+	% 	considers service allocation and VM placement as separated responsibility.
+	% 	Cloud users or brokers need to concern about the resource mapping and VM selection and 
+	% 	Cloud providers take care of the VM placement. 
+	% 	However, as Cloud users tend to over-provision in order to satisfy the QoS, they often book more
+	% 	resources than their need. This is the major reason for the low utilization in 
+	% 	Cloud computing \cite{Vogels:2008bg}. This problem cannot be 
+	% 	resolved solely from the Cloud providers' perspective but to change the current resource allocation model. In the new resource allocation model, the responsibility of service allocation and VM placement are in the same hand of the Cloud provider.
+	% 	Thereafter, Cloud providers have the full control of resource management. 
+	% 	However, this process makes the VM initial placement a more complicated problem. Currently, only few researchers \cite{} have noticed this problem and propose initial work to address this problem.
+	\item Dynamic server consolidation is the process that the resource management continuously detects the server runtime status and if one of the server is overloaded. Then,
+	one of the VM or container running inside the server will be migrated to other machine 
+	so that the applications do not suffer from a performance degradation. In a container-based
+	environment, there are three questions to be answered. \emph{When to migrate ?} refers to determine the time point that a physical server is overloaded. \emph{Which container to migrate?} refers to determine
+	which container need to be migrated so that it optimize the global energy consumption.
+	\emph{Where to migrate?} refers to determine which VM and host that a container is migrated to.  
+	Specifically, in the second question, the main idea in the literature is still simple heuristics and random selection. Therefore, we are going to investigate using a genetic programming technique to learn to choose the best. In the 
+	third question, literature also rely on simple bin-packing heuristics which do not consider the impact of environment. Therefore, we are going to propose an idea which uses the features of workload, to decide which VM
+	is the best choice.
+
+	\item Static server consolidation is the process that a batch of VM and container joint is
+	consolidated in order to achieve an low energy consumption status. This stage is often
+	applied when the overall energy consumption is reached a predefine threshold. The static
+	server consolidation can globally optimize the energy consumption of the data center.
+	The process is similar with the initialization stage but with different objectives and constraints.
+
+	\item Large scale of server consolidation has always been a challenge in a Cloud data center. 
+	         Especially, typical number of servers in a data center is at the million-level. Many approaches 
+	        have been proposed in the literature to resolve the problem. There are mainly two ways, both rely on distributed methods, hierarchical-based \cite{} and agent-based management systems \cite{}.
+	        The major problem in agent-based systems is that agents rely on heavy communication to maintain a high-level utilization. Therefore, it causes heavy load in the networking. Hierarchical-based approaches are the predominate methods. Hierarchical-based methods, in essence, are centralized systems where all the states of machines are collected and analyzed. One of way to improving the effectiveness of centralized system is to reduce the number of variables so that the search space is narrowed. In this thesis, we are going to investigate the way to eliminate the redundant information.
+
+	% \item Second, container as a service has become an important trend in the 		Cloud computing industry and being support by many Cloud providers 	such as Amazon, Azure and many 
+	% 	open-source projects. Both Cloud users and providers 
+	% 	are beneficial to its lightweight. It provides a finer granularity resource management
+	% 	for Cloud providers. From Ref \cite{}, we observed that VM-level consolidation could further improve the utilization of resource as well as the footprint from traditional hypervisors. 
+	% 	However, there is not much container consolidation methods were discussed in the literature. 
+	% 	New models and consolidation methods need to be proposed to solve the problem. Moreover, similar to
+	% % 	VM placement, container placement is also an multi-objective which need to be addressed.
+
+	% \item Third, the joint VM and container poses another level of consolidation problem. Ref \cite{} states, 
+	% 	one of the reasons that container consolidation has high SLA violations is because the 
+	% 	higher migration rate of containers. Therefore, designing algorithms that dynamically select between VM and container migration based on application SLA requirement as well as the impact on energy consumption is the major concern of the joint allocation. This can be treated as a dynamic task. 
+
+	% \item Fourth, a common problem that faced by both traditional VM-based and the recent container-based data 	center is the affinity aware resource allocation problem. 
+	% 	Modern Cloud-native applications normally have more than one copy of its implementation called replica in order to resolve the stateless as well as load balancing problem. Hence, they must be allocated into different servers to maintain its reliability. Similarly, the backup of databases has the same issue. In the CaaS scenario, more constraints appear such as operating system aware allocation which means, 
+	% 	certain container can only be allocated in a specific operating system \cite{}. 
+	% 	The affinity-aware allocation has been discussed in the literature, 
+	% 	however, they can only be applied in the VM-based data center.   
+	% \item Fifth, a resource-utilization aware co-location scheme can be helpful in order to resolve the 
+	% 	resource competition problem. The study is about the behavior of the applications deployed
+	% 	in the same physical machine. The previous research assumes that the applications' behavior
+	% 	is a priori \cite{}, however, applications' behavior can be changed over time. It is important to allocate
+	% 	the compatible applications in the same physical machine so that the physical machine reaches a 
+	% 	stable status.
+
+	% \item Sixth, large scale of server consolidation has always been a challenge in a Cloud data center. 
+	% 	Especially, typical number of servers in a data center is at the million-level. Many approaches 
+	% 	have been proposed in the literature to resolve the problem. 
+	% 	There are mainly two ways, both rely on distributed methods, 
+	% 	hierarchical-based \cite{} and agent-based management systems \cite{}.
+	% 	The major problem in agent-based systems is that agents rely on heavy communication to maintain a high-level utilization. Therefore, it causes heavy load in the networking. Hierarchical-based approaches are the predominate methods. Hierarchical-based methods, in essence, are centralized systems where all the states of machines are collected and analyzed. One of way to improving the effectiveness of centralized system is to reduce the size of variables without losing too much of the consolidation performance. The main idea is to eliminating the high-utilized servers so that it reduces the dimensionality. 
+\end{enumerate}
