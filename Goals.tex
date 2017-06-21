@@ -1,13 +1,40 @@
 \section{Research Goals}
-The overall goal of this thesis is to propose an end-to-end server consolidation approach that considers all three stages in the resource management as well as the large scale problem. More, specifically, this approach combines element of AI planning, to ensure the objectives and constraint fulfilment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims to determine a flexible way in which planning and EC can be combined to allow the creation of solutions to solve server consolidation problems. The research goal described above can be archieved by completing the following set of objectives. 
+The overall goal of this thesis is to propose an end-to-end server consolidation approach that considers all three stages in the resource management as well as the large scale static optimization problem. More, specifically, this approach combines element of AI planning, to ensure the objectives and constraint fulfilment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims to determine a flexible way in which planning and EC can be combined to allow the creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
 
 
 \begin{enumerate}
-	\item In a CaaS cloud model, the initial VM provisioning and placement become a joint allocation of containers and virtual machines. This joint allocation is one of the major improvement in energy efficiency in CaaS which will be detailed explain in the next section.
-	The joint allocation can be separated into two steps, in the first step, the tasks are mapped to VMs 
-	and the VMs are allocated to physical machines in the second step. Because of the complexity, previous research
-	only considers the first step. They map the incoming tasks into predefined categories and based on the characteristic of the categories, the size of new virtual machines' resources are decided. After each tasks have chosen its VM type, they are allocated to virtual machines using a lightweight heursitic algorithm. 
-	We intend to apply an EC-based approach to solve this problem by proposing a coevolutionary that simuetiously decide the virtual machine type as well as the allocation of VMs.
+	\item The initialization Problem,
+	\begin{itemize}
+		\item Problem Model
+		\item Representation
+		\item Algorithm
+		\item Evaluation and Comparison
+	\end{itemize}
+
+	\item Offline Static Joint Allocation of Container and VM Problem,
+	\begin{itemize}
+		\item Problem Model
+		\item Representation
+		\item Algorithm
+		\item Evaluation and Comparison
+	\end{itemize}
+
+	\item Online Dynamic Container Placement Problem with a GP approach,
+	\begin{itemize}
+		\item Problem Model
+		\item Representation
+		\item Construct Functional Set and Primitive Set for the problem
+		\item Develop a GP-based method for evolving Dispatching rules
+		\item Evaluation and Comparison
+	\end{itemize}
+
+	\item Large-scale Static Consolidation Problem
+	\begin{itemize}
+		\item Propose a preprocessing method to eliminate variables
+		\item Apply static consolidation algorithm on the processed dataset
+		\item Evaluation and Comparison
+	\end{itemize}
+\end{enumerate}
 
 
 	% The 
@@ -23,26 +50,23 @@ The overall goal of this thesis is to propose an end-to-end server consolidation
 	% 	resolved solely from the Cloud providers' perspective but to change the current resource allocation model. In the new resource allocation model, the responsibility of service allocation and VM placement are in the same hand of the Cloud provider.
 	% 	Thereafter, Cloud providers have the full control of resource management. 
 	% 	However, this process makes the VM initial placement a more complicated problem. Currently, only few researchers \cite{} have noticed this problem and propose initial work to address this problem.
-	\item Dynamic server consolidation is the process that the resource management continuously detects the server runtime status and if one of the server is overloaded. Then,
-	one of the VM or container running inside the server will be migrated to other machine 
-	so that the applications do not suffer from a performance degradation. In a container-based
-	environment, there are three questions to be answered. \emph{When to migrate ?} refers to determine the time point that a physical server is overloaded. \emph{Which container to migrate?} refers to determine
-	which container need to be migrated so that it optimize the global energy consumption.
-	\emph{Where to migrate?} refers to determine which VM and host that a container is migrated to.  
-	Specifically, in the second question, the main idea in the literature is still simple heuristics and random selection. Therefore, we are going to investigate using a genetic programming technique to learn to choose the best. In the 
-	third question, literature also rely on simple bin-packing heuristics which do not consider the impact of environment. Therefore, we are going to propose an idea which uses the features of workload, to decide which VM
-	is the best choice.
+	% \item Dynamic server consolidation is the process that the resource management continuously detects the server runtime status and if one of the server is overloaded. Then,
+	% one of the VM or container running inside the server will be migrated to other machine 
+	% so that the applications do not suffer from a performance degradation. In a container-based
+	% environment, there are three questions to be answered. \emph{When to migrate ?} refers to determine the time point that a physical server is overloaded. \emph{Which container to migrate?} refers to determine
+	% which container need to be migrated so that it optimize the global energy consumption.
+	% \emph{Where to migrate?} refers to determine which VM and host that a container is migrated to.  
+	% Specifically, in the second question, the main idea in the literature is still simple heuristics and random selection. Therefore, we are going to investigate using a genetic programming technique to learn to choose the best. In the 
+	% third question, literature also rely on simple bin-packing heuristics which do not consider the impact of environment. Therefore, we are going to propose an idea which uses the features of workload, to decide which VM
+	% is the best choice.
 
-	\item Static server consolidation is the process that a batch of VM and container joint is
-	consolidated in order to achieve an low energy consumption status. This stage is often
-	applied when the overall energy consumption is reached a predefine threshold. The static
-	server consolidation can globally optimize the energy consumption of the data center.
-	The process is similar with the initialization stage but with different objectives and constraints.
+	% \item Static server consolidation is the process that a batch of VM and container joint is
+	% consolidated in order to achieve an low energy consumption status. This stage is often
+	% applied when the overall energy consumption is reached a predefine threshold. The static
+	% server consolidation can globally optimize the energy consumption of the data center.
+	% The process is similar with the initialization stage but with different objectives and constraints.
 
-	\item Large scale of server consolidation has always been a challenge in a Cloud data center. 
-	         Especially, typical number of servers in a data center is at the million-level. Many approaches 
-	        have been proposed in the literature to resolve the problem. There are mainly two ways, both rely on distributed methods, hierarchical-based \cite{} and agent-based management systems \cite{}.
-	        The major problem in agent-based systems is that agents rely on heavy communication to maintain a high-level utilization. Therefore, it causes heavy load in the networking. Hierarchical-based approaches are the predominate methods. Hierarchical-based methods, in essence, are centralized systems where all the states of machines are collected and analyzed. One of way to improving the effectiveness of centralized system is to reduce the number of variables so that the search space is narrowed. In this thesis, we are going to investigate the way to eliminate the redundant information.
+	% \item 
 
 	% \item Second, container as a service has become an important trend in the 		Cloud computing industry and being support by many Cloud providers 	such as Amazon, Azure and many 
 	% 	open-source projects. Both Cloud users and providers 
@@ -74,4 +98,4 @@ The overall goal of this thesis is to propose an end-to-end server consolidation
 	% 	There are mainly two ways, both rely on distributed methods, 
 	% 	hierarchical-based \cite{} and agent-based management systems \cite{}.
 	% 	The major problem in agent-based systems is that agents rely on heavy communication to maintain a high-level utilization. Therefore, it causes heavy load in the networking. Hierarchical-based approaches are the predominate methods. Hierarchical-based methods, in essence, are centralized systems where all the states of machines are collected and analyzed. One of way to improving the effectiveness of centralized system is to reduce the size of variables without losing too much of the consolidation performance. The main idea is to eliminating the high-utilized servers so that it reduces the dimensionality. 
-\end{enumerate}
+% \end{enumerate}

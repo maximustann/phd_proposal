@@ -2,59 +2,48 @@ This is BibTeX, Version 0.99d (Web2C 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
-A level-1 auxiliary file: background.aux
-A level-1 auxiliary file: preliminary.aux
-A level-1 auxiliary file: contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-Warning--I didn't find a database entry for "Mell:2011ix"
-Warning--I didn't find a database entry for "Wang:2016eh"
-Warning--I didn't find a database entry for "Soltesz:2007ty"
-Warning--I didn't find a database entry for "Piraghaj:2015uf"
-Warning--I didn't find a database entry for "Chaisiri:2012wg"
-Warning--I didn't find a database entry for "Felter:2015wl"
-Warning--I didn't find a database entry for "Piraghaj:2016tl"
-Warning--I didn't find a database entry for "Speitkamp:2010vp"
 Warning--empty journal in Mann:2015ua
-You've used 21 entries,
+You've used 37 entries,
             2253 wiz_defined-function locations,
-            676 strings with 8192 characters,
-and the built_in function-call counts, 6830 in all, are:
-= -- 633
-> -- 422
+            765 strings with 11416 characters,
+and the built_in function-call counts, 13127 in all, are:
+= -- 1252
+> -- 804
 < -- 0
-+ -- 173
-- -- 152
-* -- 559
-:= -- 1186
-add.period$ -- 62
-call.type$ -- 21
-change.case$ -- 137
++ -- 329
+- -- 292
+* -- 1131
+:= -- 2240
+add.period$ -- 109
+call.type$ -- 37
+change.case$ -- 257
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 211
-empty$ -- 473
-format.name$ -- 152
-if$ -- 1351
+cite$ -- 38
+duplicate$ -- 364
+empty$ -- 896
+format.name$ -- 292
+if$ -- 2593
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 22
-newline$ -- 106
-num.names$ -- 42
-pop$ -- 125
+int.to.str$ -- 37
+missing$ -- 35
+newline$ -- 185
+num.names$ -- 74
+pop$ -- 211
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 220
 quote$ -- 0
-skip$ -- 132
+skip$ -- 229
 stack$ -- 0
-substring$ -- 294
-swap$ -- 49
+substring$ -- 740
+swap$ -- 86
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
+type$ -- 146
 warning$ -- 1
-while$ -- 60
-width$ -- 23
-write$ -- 202
-(There were 9 warnings)
+while$ -- 125
+width$ -- 39
+write$ -- 364
+(There was 1 warning)
