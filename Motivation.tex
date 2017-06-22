@@ -2,10 +2,10 @@
 \section{Motivation}
 
 The motivation for this thesis mainly includes two parts, in the first part, we illustrate the roots of container-based server consolidation problem. In the second parts, we explain the motivations for solving the sub-problems of the problem.
-\begin{enumerate}
 
 \subsection{Motivation For Container-based Server Consolidation Problem}
 
+\begin{enumerate}
 \item Container is a new virtualization technology which provides an operating level of virtualization.
 Figure \ref{fig:root} illustrates the root of container technology from an energy efficient point of view. Most Clouds provide a set fixed types of VM for service providers to choose. Each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage). This service model leads to a great waste of resources for two reasons. 
 \begin{itemize}
@@ -54,8 +54,7 @@ In a container-based environment, it involves three steps .
 	\end{itemize}
 	Specifically, we focus on the third question: dynamic placement problem. Previous research employ simple heuristics \cite{Shi:2011ke, Forsman:2015ca, Beloglazov:2012ji}, they are fast but could not perform well. Multi-objective genetic algorithm (GA) \cite{Xu:2010vh} has been applied. However, GA is too slow for dynamic problem. 
 
-	To solve a dynamic placement with large number of variables, dispatching rule can be an useful tool \cite{Sarin:2011fu}. In this scenario, a dispatching rule is considered as a function that determines the priorities of servers that a container can be placed.
-	We intend to develop a hyper-heuristic method - genetic programming (GA) technique \cite{Banzhaf:1998wc} or artificial immune system \cite{Hofmeyr:2000ju}- to automatic evolve dispatching rules to solve this problem.
+	To solve a dynamic placement with large number of variables, heuristics and dispatching rules are often used\cite{Sarin:2011fu}.  In this scenario, a dispatching rule is considered as a function that determines the priorities of servers that a container can be placed. However, dynamic placement is much complex than bin-packing problem \cite{Mann:2015ua}. Therefore, we intend to develop a hyper-heuristic method - Genetic Programming (GP) technique \cite{Banzhaf:1998wc} or artificial immune system \cite{Hofmeyr:2000ju}- to automatic evolve dispatching rules to solve this problem. GP has been applied in generating dispatching rules for bin-packing problem \cite{Burke:2006ei, SoteloFigueroa:2013be} and it produces promising solutions.
 
 \item Cloud data center typically has hundreds of thousands servers and more. 
 	Large scale of server consolidation has always been a challenge. 

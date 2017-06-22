@@ -20,6 +20,11 @@
   of data centers for Cloud computing.}
 \newblock {\em Future Generation Comp. Syst. 28}, 5 (2012), 755--768.
 
+\bibitem{Burke:2006ei}
+{\sc Burke, E.~K., Hyde, M.~R., and Kendall, G.}
+\newblock {Evolving Bin Packing Heuristics with Genetic Programming.}
+\newblock {\em PPSN 4193}, Chapter 87 (2006), 860--869.
+
 \bibitem{Buyya:2009ix}
 {\sc Buyya, R., Yeo, C.~S., Venugopal, S., Broberg, J., and Brandic, I.}
 \newblock {Cloud computing and emerging IT platforms: Vision, hype, and reality
@@ -168,6 +173,14 @@
 \newblock {Container-based operating system virtualization - a scalable,
   high-performance alternative to hypervisors.}
 \newblock {\em EuroSys 41}, 3 (2007), 275--287.
+
+\bibitem{SoteloFigueroa:2013be}
+{\sc Sotelo-Figueroa, M.~A., Soberanes, H. J.~P., Carpio, J.~M., Huacuja, H.
+  J.~F., Reyes, L.~C., and Soria-Alcaraz, J.~A.}
+\newblock {Evolving Bin Packing Heuristic Using Micro-Differential Evolution
+  with Indirect Representation.}
+\newblock {\em Recent Advances on Hybrid Intelligent Systems 451}, Chapter 28
+  (2013), 349--359.
 
 \bibitem{Speitkamp:2010ck}
 {\sc Speitkamp, B., and Bichler, M.}

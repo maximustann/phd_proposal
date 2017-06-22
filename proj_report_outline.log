@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (Web2C 2016) (preloaded format=pdflatex 2017.6.13)  21 JUN 2017 20:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (Web2C 2016) (preloaded format=pdflatex 2017.6.13)  22 JUN 2017 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -258,25 +258,31 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 File: pics/energyConsumption.png Graphic file (type png)
 
 <use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png used on input line 46.
+Package pdftex.def Info: pics/energyConsumption.png used on input line 48.
 (pdftex.def)             Requested size: 220.50885pt x 133.08444pt.
  [1
 
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./Motivation.tex
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 7.
- [2 <./pics/energyConsumption.png>]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 12.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (6.52473pt too wide) in paragraph at lines 77--87
+\OT1/ppl/m/n/10.95 In ad-di-tion, vir-tu-al-iza-tion tech-nol-ogy has evolved t
+o al-low finer gran-u-lar-ity re-source schedul-
+ []
 
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+) (./Motivation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./pics/energyConsumption.png>]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 12.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
-
 <pics/problem_flow.jpeg, id=13, 370.38374pt x 408.02437pt>
 File: pics/problem_flow.jpeg Graphic file (type jpg)
 
@@ -297,7 +303,7 @@ m which are NP-hard. Container-
 
 [3 <./pics/problem_flow.jpeg>] [4]) (./Goals.tex [5]) (./published.tex))
 [6] (./proj_report_outline.bbl
-Underfull \hbox (badness 1783) in paragraph at lines 59--65
+Underfull \hbox (badness 1783) in paragraph at lines 64--70
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
@@ -308,19 +314,19 @@ a-man, P. P.,
 
 ] [8]) [9] (./proj_report_outline.aux (./introduction.aux)) ) 
 Here is how much of TeX's memory you used:
- 3286 strings out of 493681
- 46674 string characters out of 6155712
- 118474 words of memory out of 5000000
- 6564 multiletter control sequences out of 15000+600000
+ 3288 strings out of 493681
+ 46711 string characters out of 6155712
+ 118482 words of memory out of 5000000
+ 6566 multiletter control sequences out of 15000+600000
  14603 words of font info for 38 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 40i,7n,35p,1129b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,7n,35p,1129b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/te
 xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/
 uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr
 /pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on proj_report_outline.pdf (9 pages, 259486 bytes).
+Output written on proj_report_outline.pdf (9 pages, 260586 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

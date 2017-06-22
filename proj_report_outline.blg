@@ -5,45 +5,45 @@ A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: sample.bib
 Warning--empty journal in Mann:2015ua
-You've used 37 entries,
+You've used 39 entries,
             2253 wiz_defined-function locations,
-            765 strings with 11416 characters,
-and the built_in function-call counts, 13127 in all, are:
-= -- 1252
-> -- 804
+            782 strings with 11987 characters,
+and the built_in function-call counts, 13930 in all, are:
+= -- 1330
+> -- 853
 < -- 0
-+ -- 329
-- -- 292
-* -- 1131
-:= -- 2240
-add.period$ -- 109
-call.type$ -- 37
-change.case$ -- 257
++ -- 349
+- -- 310
+* -- 1209
+:= -- 2374
+add.period$ -- 115
+call.type$ -- 39
+change.case$ -- 272
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 364
-empty$ -- 896
-format.name$ -- 292
-if$ -- 2593
+cite$ -- 40
+duplicate$ -- 382
+empty$ -- 950
+format.name$ -- 310
+if$ -- 2750
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 35
-newline$ -- 185
-num.names$ -- 74
-pop$ -- 211
+int.to.str$ -- 39
+missing$ -- 37
+newline$ -- 195
+num.names$ -- 78
+pop$ -- 222
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 233
 quote$ -- 0
-skip$ -- 229
+skip$ -- 239
 stack$ -- 0
-substring$ -- 740
-swap$ -- 86
+substring$ -- 800
+swap$ -- 90
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 146
+type$ -- 154
 warning$ -- 1
-while$ -- 125
-width$ -- 39
-write$ -- 364
+while$ -- 133
+width$ -- 41
+write$ -- 384
 (There was 1 warning)
