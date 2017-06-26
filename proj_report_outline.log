@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (Web2C 2016) (preloaded format=pdflatex 2017.6.13)  22 JUN 2017 09:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  26 JUN 2017 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **proj_report_outline.tex
 (./proj_report_outline.tex
 LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 40 language(s) loaded.
+Babel <3.10> and hyphenation patterns for 40 language(s) loaded.
 (/usr/pkg/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/pkg/share/texmf-dist/tex/latex/base/size11.clo
@@ -41,15 +41,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 
 (/usr/pkg/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count89
+File: pdftex.def 2017/06/12 v1.0b Graphics/color driver for pdftex
 ))
 (/usr/pkg/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -77,22 +69,22 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/pkg/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2016/04/19 v0.5f Insert pages of external PDF documents (AM)
+Package: pdfpages 2017/01/14 v0.5h Insert pages of external PDF documents (AM)
 
 (/usr/pkg/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/pkg/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count90
-\calc@Bcount=\count91
+\calc@Acount=\count89
+\calc@Bcount=\count90
 \calc@Adimen=\dimen103
 \calc@Bdimen=\dimen104
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count92
+\calc@Ccount=\count91
 \calc@Cskip=\skip45
 )
 (/usr/pkg/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
@@ -101,18 +93,24 @@ Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 (/usr/pkg/share/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
 (/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 ))
 (/usr/pkg/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 ))
 (/usr/pkg/share/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/pkg/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/01 v1.2a Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/pkg/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -129,16 +127,16 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \AM@pageheight=\dimen108
 
 (/usr/pkg/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box28
 \AM@global@opts=\toks17
 \AM@toc@title=\toks18
-\c@AM@survey=\count93
+\c@AM@survey=\count92
 \AM@templatesizebox=\box29
 )
 \@float@every@fig=\toks19
-\c@fig=\count94
+\c@fig=\count93
  (./vuwproject.sty
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/mathpazo.sty
 Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
@@ -170,31 +168,18 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 (/usr/pkg/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count95
+\scratchcounter=\count94
 \scratchdimen=\dimen109
 \scratchbox=\box31
-\nofMPsegments=\count96
-\nofMParguments=\count97
+\nofMPsegments=\count95
+\nofMParguments=\count96
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count98
+\MPscratchCnt=\count97
 \MPscratchDim=\dimen110
-\MPnumerator=\count99
-\makeMPintoPDFobject=\count100
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
 \everyMPtoPDFconversion=\toks21
-) (/usr/pkg/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/pkg/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
 (/usr/pkg/share/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -211,16 +196,29 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 (/usr/pkg/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2 ,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/pkg/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -253,44 +251,53 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (./ProblemStatement.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-
-<pics/energyConsumption.png, id=1, 512.66531pt x 309.40594pt>
+<pics/stakeholders.png, id=1, 667.74469pt x 130.23656pt>
+File: pics/stakeholders.png Graphic file (type png)
+<use pics/stakeholders.png>
+Package pdftex.def Info: pics/stakeholders.png  used on input line 18. on input
+ line 18.
+Package pdftex.def Info: Requested size: 308.71104pt x 60.2116pt on input line 
+18.
+<pics/energyConsumption.png, id=3, 551.81157pt x 339.51843pt>
 File: pics/energyConsumption.png Graphic file (type png)
-
 <use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png used on input line 48.
-(pdftex.def)             Requested size: 220.50885pt x 133.08444pt.
+Package pdftex.def Info: pics/energyConsumption.png  used on input line 55. on 
+input line 55.
+Package pdftex.def Info: Requested size: 220.50885pt x 135.67545pt on input lin
+e 55.
  [1
 
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (6.52473pt too wide) in paragraph at lines 77--87
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pics/stakeholders.png>]
+Overfull \hbox (6.52473pt too wide) in paragraph at lines 84--94
 \OT1/ppl/m/n/10.95 In ad-di-tion, vir-tu-al-iza-tion tech-nol-ogy has evolved t
 o al-low finer gran-u-lar-ity re-source schedul-
  []
 
-) (./Motivation.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./pics/energyConsumption.png>]
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+ [2 <./pics/energyConsumption.png>]) (./Motivation.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 12.
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
-<pics/problem_flow.jpeg, id=13, 370.38374pt x 408.02437pt>
-File: pics/problem_flow.jpeg Graphic file (type jpg)
+<pics/problem_flow.png, id=17, 336.50719pt x 436.63126pt>
+File: pics/problem_flow.png Graphic file (type png)
+<use pics/problem_flow.png>
+Package pdftex.def Info: pics/problem_flow.png  used on input line 22. on input
+ line 22.
+Package pdftex.def Info: Requested size: 132.30666pt x 171.6713pt on input line
+ 22.
 
-<use pics/problem_flow.jpeg>
-Package pdftex.def Info: pics/problem_flow.jpeg used on input line 22.
-(pdftex.def)             Requested size: 132.30666pt x 145.74931pt.
-
-Overfull \hbox (14.86905pt too wide) in paragraph at lines 27--29
+Overfull \hbox (20.34404pt too wide) in paragraph at lines 27--29
 []\OT1/ppl/m/n/10.95 This con-tainer tech-nol-ogy cer-tainly brings many ad-van
 -tages to cur-rent Cloud industry[[]].
  []
@@ -301,35 +308,56 @@ Overfull \hbox (13.1723pt too wide) in paragraph at lines 27--29
 m which are NP-hard. Container-
  []
 
-[3 <./pics/problem_flow.jpeg>] [4]) (./Goals.tex [5]) (./published.tex))
-[6] (./proj_report_outline.bbl
-Underfull \hbox (badness 1783) in paragraph at lines 64--70
+[3] [4 <./pics/problem_flow.png>]) (./Goals.tex [5] [6]) (./published.tex)
+(./organization.tex
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 2.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 3.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 4.
+
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+)) [7] [8
+
+
+] (./proj_report_outline.bbl
+Underfull \hbox (badness 1783) in paragraph at lines 71--77
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
 
-[7
+[9
 
+] [10]) [11] (./proj_report_outline.aux (./introduction.aux))
 
+LaTeX Warning: There were undefined references.
 
-] [8]) [9] (./proj_report_outline.aux (./introduction.aux)) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 3288 strings out of 493681
- 46711 string characters out of 6155712
- 118482 words of memory out of 5000000
- 6566 multiletter control sequences out of 15000+600000
- 14603 words of font info for 38 fonts, out of 8000000 for 9000
+ 3252 strings out of 493675
+ 46260 string characters out of 6155645
+ 113858 words of memory out of 5000000
+ 6531 multiletter control sequences out of 15000+600000
+ 15592 words of font info for 40 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 40i,7n,35p,1129b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/pkg/share/te
-xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/
-uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr
-/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on proj_report_outline.pdf (9 pages, 260586 bytes).
+ 41i,7n,35p,1129b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
+/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
+ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+
+Output written on proj_report_outline.pdf (11 pages, 240868 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

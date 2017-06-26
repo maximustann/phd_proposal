@@ -31,6 +31,13 @@
   for delivering computing as the 5th utility}.
 \newblock {\em Future Generation Computer Systems 25}, 6 (June 2009), 599--616.
 
+\bibitem{Canon:2010go}
+{\sc Canon, L.-C., and Jeannot, E.}
+\newblock {Evaluation and Optimization of the Robustness of DAG Schedules in
+  Heterogeneous Environments}.
+\newblock {\em IEEE Transactions on Parallel and Distributed Systems 21}, 4
+  (2010), 532--546.
+
 \bibitem{Chaisiri:2012cv}
 {\sc Chaisiri, S., Lee, B.-S., and Niyato, D.}
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
@@ -223,6 +230,11 @@
 \newblock {Dynamic Resource Allocation in Computing Clouds Using Distributed
   Multiple Criteria Decision Analysis.}
 \newblock {\em IEEE CLOUD\/} (2010), 91--98.
+
+\bibitem{Zhang:2016cx}
+{\sc Zhang, J., Huang, H., and Wang, X.}
+\newblock {Resource provision algorithms in cloud computing - A survey.}
+\newblock {\em J. Network and Computer Applications 64\/} (2016), 23--42.
 
 \bibitem{Zhang:2010vo}
 {\sc Zhang, Q., Cheng, L., and Boutaba, R.}

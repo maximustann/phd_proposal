@@ -1,37 +1,47 @@
 \section{Research Goals}
-The overall goal of this thesis is to propose an end-to-end server consolidation approach that considers all three stages in the resource management as well as the large scale static optimization problem. More, specifically, this approach combines element of AI planning, to ensure the objectives and constraint fulfilment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims to determine a flexible way in which planning and EC can be combined to allow the creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
-
+The overall goal of this thesis is to propose an end-to-end server consolidation approach that considers all three stages: Initialization, Off-line Static Joint Allocation of Container and VM, On-line Dynamic Container Placement Problem. In addition, the static allocation normally involves with large amount of variables which is particular difficult to optimize. We also going to propose a method to solve this problem.  These approaches combine element of AI planning, to ensure the objectives and constraint fulfillment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims to determine a flexible way in which planning and EC can be combined to allow the creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
 
 \begin{enumerate}
-	\item The initialization Problem, 
-	\begin{itemize}
-		\item Without affinity-awareness
-		\item With affinity-awareness
-	\end{itemize}
+	\item The initialization Problem, \\ 
+	Currently, most research focus on VM-based server consolidation technique. They often modeled this problem as a vector bin-packing problem \cite{Zhang:2016cx}. Container adds an extra layer of abstraction on top of VM. The placement problem has become a two-step procedure, in the first step, containers are packed into VMs and then VMs are consolidated into physical machines. These two steps are inter-related to each other. 
+	\begin{enumerate}
+		\item \emph{Modeling} \\
+		Previous VM-based models do not consider this structure, therefore, our first sub problem is to propose a description of model for the initialization problem. In order to achieve this goal, we will first review the related models including VM-based placement model and bilevel optimization model. Furthermore, we are going to consider the differences and design the constraints and other characteristics.
+		\item \emph{Representation} \\
+		Based on this new model, we are going to discover a representation that suitable for this problem.
+		\item \emph{New operators and searching mechanisms}\\
+		In order to utilize Evolutionary Computation (EC) to solve this problem, we are going to  design searching mechanisms according to the nature of problem. In order to achieve this goal, we will design several new operators.
+	\end{enumerate}
 
-	\item Offline Static Joint Allocation of Container and VM Problem,
-	\begin{itemize}
-		\item Problem Model
-		\item Representation
-		\item Algorithm
-		\item Evaluation and Comparison
-	\end{itemize}
+	\item Off-line Static Joint Allocation of Container and VM Problem, \\
+	A static allocation can be seen as a resource scheduling problem. A schedule is robust if it is able to absorb some degree of uncertainty in tasks duration while maintaining a stable solution \cite{Canon:2010go}. Cloud resource management is a continuous process, after each static allocation, the system should be able to maintain a stable status with the least adjustment. The development of static allocation approach has 
+	three sub-objectives.
+	\begin{enumerate}
+		\item \emph{Design a robustness measure} \\
+ 		Previous studies only use simple measurement which counts the migration number between two static consolidation. This measurement aims at minimizing the number of migration in a static placement process. It may cause more migration in the next consolidation. Therefore, it needs a time-series aware measure of the robustness of system. A data center should be both consolidated as well as robustness after consolidate. Therefore, in this objective, the first sub-problem we are going to solve is to propose a robustness measure.
+		\item \emph{Design an allocation method consider previous allocation} \\
+		Based on the robustness measure, we will first design an allocation method 
+		which takes previous allocation into account. It has two objectives, maximize the robustness and also minimize the energy consolidation.
+		\item \emph{Design a time-series-aware allocation method}\\
+		Last but not the least, we will generalize the previous sub-objective to a more general one: design a time-series-aware allocation method which takes several allocation into consider.
+	\end{enumerate}
 
-	\item Online Dynamic Container Placement Problem with a GP approach,
-	\begin{itemize}
-		\item Problem Model
-		\item Representation
-		\item Construct Functional Set and Primitive Set for the problem
-		\item Develop a GP-based method for evolving Dispatching rules
-		\item Evaluation and Comparison
-	\end{itemize}
+	\item On-line Dynamic Container Placement Problem with a GP approach,
+	\begin{enumerate}
+		\item Representation \\
+		In order to utilize a hyper-heuristic method such as GP to solve the problem, 
+		the first step is to design a representation. 
+		\item Construct Functional Set and Primitive Set for the problem \\
+		As the basic component of a dispatching rule, primitive set contains the states of environment including: status of VMs, features of workloads. The functional set 
+		contains the operators which combines low level features.
+		\item Develop GP-based methods for evolving Dispatching rules
+		\item One heuristic can solve all the problem or different heuristics to solve specific problems.
+	\end{enumerate}
 
 	\item Large-scale Static Consolidation Problem
-	\begin{itemize}
+	\begin{enumerate}
 		\item Propose a preprocessing method to eliminate variables
-		\item Apply static consolidation algorithm on the processed dataset
-		\item Evaluation and Comparison
-	\end{itemize}
+	\end{enumerate}
 \end{enumerate}
 
 

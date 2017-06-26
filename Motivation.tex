@@ -1,7 +1,7 @@
 
 \section{Motivation}
 
-The motivation for this thesis mainly includes two parts, in the first part, we illustrate the roots of container-based server consolidation problem. In the second parts, we explain the motivations for solving the sub-problems of the problem.
+The motivation for this thesis mainly includes two parts, in the first part, we illustrate the roots of container-based server consolidation problem. In the second parts, we explain the motivations for the objectives.
 
 \subsection{Motivation For Container-based Server Consolidation Problem}
 
@@ -19,7 +19,7 @@ do research in this field.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.3\textwidth]{pics/problem_flow.jpeg}
+	\includegraphics[width=0.3\textwidth]{pics/problem_flow.png}
 	\caption{The root of container technology}
 	\label{fig:root}
 \end{figure}
@@ -59,7 +59,8 @@ In a container-based environment, it involves three steps .
 \item Cloud data center typically has hundreds of thousands servers and more. 
 	Large scale of server consolidation has always been a challenge. 
  	Many approaches have been proposed in the literature to resolve the problem. There are mainly two ways, both rely on distributed methods, hierarchical-based \cite{Jung:2010dt, Moens:2011gk} and agent-based management systems \cite{Yazir:2010bk}.
-	The major problem in agent-based systems is that agents rely on heavy communication to maintain a high-level utilization. Therefore, it causes heavy load in the networking. Hierarchical-based approaches are the predominate methods. In essence, these approaches are static methods where all the states of machines are collected and analyzed. One of way to improving the effectiveness is to reduce the number of variables so that the search space is narrowed. In this thesis, we are going to investigate the way to eliminate the redundant information.
+	The major problem in agent-based systems is that agents rely on heavy communication to maintain a high-level utilization. Therefore, it causes heavy load in the networking. Hierarchical-based approaches are the predominate methods. In essence, these approaches are static methods where all the states of machines are collected and analyzed. In fact, it is infeasible and unnecessary to check all the states of machines since the search space is too large and most machines do not need a change. This idea
+	motivates a way to improving the effectiveness is to reduce the number of variables so that the search space is narrowed. In this thesis, we are going to investigate the way to eliminate the redundant information.
 \end{enumerate}
 
 
