@@ -4,10 +4,11 @@ The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: sample.bib
+Warning--I didn't find a database entry for "Nguyen:2014ts"
 Warning--empty journal in Mann:2015ua
 You've used 39 entries,
             2253 wiz_defined-function locations,
-            785 strings with 12076 characters,
+            787 strings with 12102 characters,
 and the built_in function-call counts, 13980 in all, are:
 = -- 1338
 > -- 853
@@ -46,4 +47,4 @@ warning$ -- 1
 while$ -- 134
 width$ -- 41
 write$ -- 384
-(There was 1 warning)
+(There were 2 warnings)
