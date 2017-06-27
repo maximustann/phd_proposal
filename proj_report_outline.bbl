@@ -38,11 +38,6 @@
 \newblock {\em IEEE Transactions on Parallel and Distributed Systems 21}, 4
   (2010), 532--546.
 
-\bibitem{Chaisiri:2012cv}
-{\sc Chaisiri, S., Lee, B.-S., and Niyato, D.}
-\newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
-\newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
-
 \bibitem{Dong:2014iz}
 {\sc Dong, Z., Zhuang, W., and Rojas-Cessa, R.}
 \newblock {Energy-aware scheduling schemes for cloud data centers on Google
@@ -194,11 +189,6 @@
 \newblock {A mathematical programming approach for server consolidation
   problems in virtualized data centers}.
 \newblock {\em IEEE Transactions on services {\ldots}\/} (2010).
-
-\bibitem{Tomas:2013iv}
-{\sc Tom{\'a}s, L., and Tordsson, J.}
-\newblock {Improving cloud infrastructure utilization through overbooking.}
-\newblock {\em CAC\/} (2013), 1.
 
 \bibitem{Uhlig:2005do}
 {\sc Uhlig, R., Neiger, G., Rodgers, D., Santoni, A.~L., Martins, F. C.~M.,

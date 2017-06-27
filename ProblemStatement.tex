@@ -9,7 +9,6 @@
 % Server consolidation \cite{Zhang:2010vo} is the major strategy to resolve this issue. 
 % It reduces the server energy consumption by gathering virtual machines (VMs) into a fewer 
 % number of physical servers so that idle servers can be turned off. 
-\textcolor{Blue}{Cloud computing definition}\\
 Cloud computing is a computing model offers a network of servers to their 
 clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."}
 
@@ -20,7 +19,6 @@ clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \text
 	\label{fig:stakeholders}
 \end{figure}
 
-\textcolor{Blue}{Cloud computing advantages from clients' perspective}\\
 Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to web-based software or web service providers.
 First, service providers do not need upfront investment in hardwares (e.g servers and networking devices) and pay for hardwares' maintenance. 
 Second, service providers will not worried about the limited resources will obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, software providers can pay as much as the resource usage under a \emph{pay-as-you-go} policy.
@@ -35,7 +33,6 @@ a reasonable price.
 
 % The convenience offered by Cloud computing and the 
 % difficulties of managing Cloud resources are two sides of a coin. 
-\textcolor{Blue}{Research Problem from Cloud Providers' Perspective}\\
 From Cloud providers' perspective, they are trying to make the most profit on data centers.
 On one hand, cloud providers are trying to improve the quality of  Cloud service to attract more service providers.  
 On the other hand, they want to cut enormous energy consumption 
@@ -44,12 +41,12 @@ On the other hand, they want to cut enormous energy consumption
 Energy consumption in data centers are derived from several parts as 
 illustrated in Figure \ref{fig:consumption}. 
 Regardless the energy consumption of refrigeration system (or cooling system), 
-the majority. 
+the majority are from servers.
 According to Hameed et al \cite{Hameed:2016cma}, 
-servers are far from energy-efficient and 
-the main reason for the wastage is ``the idle power when ICT resources such as servers run at low utilization''. Therefore, a concept of
-\emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the low utilization and it leads to 
-the vitualization technology and server consolidation.
+servers are far from energy-efficient. 
+The main reason for the wastage is that the energy consumption of servers remains high even when the utilization are low. Therefore, a concept of
+\emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. This leads to 
+using vitualization technology to achieve server consolidation.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{pics/energyConsumption.png}
@@ -62,35 +59,37 @@ Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.
 Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by gathering virtual machines (VMs) into a fewer number of physical machines (PMs), so that the resource utilization of PMs are maintained at a high level.  
 In the meanwhile, idle servers are turned off to save energy.
 
-\textcolor{Blue}{Difficulties}\\
 Despite the usefulness of server consolidation, it is a difficult task. 
 Server consolidation is often considered as a global optimization problem 
-where its goal is to minimize the energy consumption. 
-From mathematical model's point of view, it is often modeled as a bin-packing problem \cite{Mann:2015ua}.
-Bin-packing problem is a well-known NP-hard problem meaning it is unlikely to find an optimal solution 
+where its goal is to minimize the overall energy consumption. 
+It is often modeled as a bin-packing problem \cite{Mann:2015ua} which is a well-known NP-hard problem meaning it is unlikely to find an optimal solution 
 of a large problem. Previous research have studied the problem extensively. 
-Because of its NP-hard nature, deterministic methods such as  
+Deterministic methods such as  
 Integer Linear Programming \cite{Speitkamp:2010ck} and Mixed
 Integer Programming \cite{Wang:2016eh} are unsuitable for a large scale problem 
 because of the long computation time.  More research proposed heuristic methods
  to approximate the optimal solution such as 
 First Fit Decreasing (FFD) \cite{Panigrahy:2011wk}, Best Fit Decreasing (BFD) \cite{Xu:2010vh}.
-In addition, manually designed heuristics are designed to tackle the special requirements such 
+Manually designed heuristics are designed to tackle the special requirements such 
 as a bin-item incomplete scenario \cite{Gupta:2008ul} and Multi-tier Applications \cite{Jung:2008vb, Li:2009wf}. Although these greedy-based heuristics can quickly solve the consolidation problem,  as Mann's research \cite{Mann:2015ua} shown, 
-server consolidation is a lot more harder than bin-packing problem - because of multi-dimension, many constraints - 
-therefore, these greedy-based heuristics can not reach a good approximation and be easy to 
-stuck at a local optima.
+server consolidation is a lot more harder than bin-packing problem because of multi-dimension, many constraints. Therefore, a simple greedy-based heuristic (e.g FFD) leads to a bad performance and human designed heuristics cannot handle it well when Cloud environment has changed.
 
-\textcolor{Blue}{New technology}\\
-In addition, virtualization technology has evolved to allow finer granularity resource scheduling.
+In addition, virtualization technology has evolved to allow finer granularity resource management.
 A recent development of Container technique \cite{Soltesz:2007cu} has drove the attention of both industrial and academia.
-Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system. Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller managable units.
+Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison}). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
 This new concept starts a new service model called Container as a Service (CaaS) \cite{Piraghaj:2015uf}. 
-CaaS has advantages of both IaaS and PaaS but without their disadvantages. On one hand - similar to PaaS - it removes the customers' responsibility of estimation of resources. On the other hand - similar to IaaS - it allows customers' to customize their software environment. 
+From Cloud customers' perspective, CaaS has advantages of both IaaS (Infrastructure as a Service) and PaaS (Platform as a Service) but without their disadvantages. On one hand - similar to PaaS - it frees the customers' from low level resource management so that they can focus on application development. On the other hand - similar to IaaS - it allows customers to customize their software environment without being constrained by platforms. 
 From Cloud providers' perspective, CaaS allows Cloud providers to manage both the deployment of applications and resource allocation.
 Hence, Cloud providers have a complete control of resources which may lead to a better utilization of resources. However the management difficulty also increases. 
-Currently, vast amount of research focus on VM-based server consolidation, which can not be directly used on Contained-based model.
-This thesis, therefore, aims at providing an end-to-end solution which includes three stages: initialization, static container-based server consolidation and dynamic container placement.
+Currently, vast amount of research focus on VM-based server consolidation, which can not be directly used on Contained-based Cloud.
+This thesis, therefore, aims at providing an end-to-end solution for Container-based server consolidation which includes three stages: initialization, static container-based server consolidation and dynamic container placement.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
+	\caption{A comparison between VM-based and Container-based virtualization}
+	\label{fig:comparison}
+\end{figure}
 
 
 % World Energy Outlook 2013 \cite{energyOutlook} estimated world electricity demand for 
