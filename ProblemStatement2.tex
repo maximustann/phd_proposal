@@ -1,0 +1,47 @@
+\section{Problem Statement}
+
+Cloud computing is a computing model offers a network of servers to their 
+clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."}
+
+Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to web-based software or web service providers.
+First, service providers do not need upfront investment in hardwares (e.g servers and networking devices) and pay for hardwares' maintenance. 
+Second, service providers will not worried about the limited resources will obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, software providers can pay as much as the resource usage under a \emph{pay-as-you-go} policy.
+Third, service providers can publish and update their applications at any location 
+as long as there is an Internet connection. 
+These advantages allow anyone or organization to deploy their softwares on Cloud in
+a reasonable price. 
+
+From Cloud providers' perspective, they are trying to make the most profit on data centers.
+On one hand, cloud providers are trying to improve the quality of  Cloud service to attract more service providers.  
+On the other hand, they want to cut enormous energy consumption 
+- as much as 25,000 households \cite{Kaplan:up01fR-k} - to lower the expense.  
+
+Server consolidation technique \cite{Zhang:2010vo} can reduce the number of servers, which minimizes investments and hardware maintenance. It also dramatically improves hardware utilization and lowers server and cooling energy consumption. Its basic idea is to consolidate a set of applications or virtual machines into fewer number of 
+physical servers, so that it minimizes the energy consumption.
+A consolidation needs careful planning to ensure cost-effective deployments and a consolidation plan includes four major items:
+			\begin{enumerate}
+				\item A list of existed servers after consolidation
+				\item A list of new virtual machines will be created after consolidation
+				\item A list of old virtual machines will be shutdown after consolidation
+				\item The exact placement of applications and services
+			\end{enumerate}
+Server consolidation techniques can be roughly categories into static and dynamic methods \cite{Xiao:2015ik, Verma:2009wi}. Static consolidation refers to the process which, based on the entire data centers' environment: states of applications and servers, decides the allocation of applications. These applications are either new arrivals or placed in servers in a long time (e.g weeks). Because it is a time consuming process, static consolidation is often conducted off-line in a periodical fashion. Dynamic consolidation adjusts servers at runtime. It prevents overloading by migrating one of the inner applications from an overloaded server to another server; it improves resource utilization by migrating applications from low utilized servers to others, so that they can be turned off. Because it considers one applications' allocation, it is often conducted on-line and it requires fast decision-making and maintains the global energy-efficiency.
+
+\vspace{10mm}
+
+Despite the usefulness of server consolidation, it is a difficult task. Traditional server consolidation is conducted manually with vast data analysis and interviews with application owners. It is clearly fraught and extremely difficult to reach a global optima state.
+Later on, server consolidation is often considered as a global optimization problem 
+where its goal is to minimize the overall energy consumption. 
+It is often modeled as a bin-packing problem \cite{Mann:2015ua} which is a well-known NP-hard problem meaning it is unlikely to find an optimal solution of a large problem. 
+
+According to different categories of consolidation problem, previous research are also roughly divided into static and dynamic methods. In static methods, deterministic methods such as  
+Integer Linear Programming \cite{Speitkamp:2010ck} and Mixed
+Integer Programming \cite{Wang:2016eh} are often considered. However, it is well-known that they are very time-consuming for a large scale problem. More research proposed heuristic methods
+ to approximate the optimal solution such as 
+First Fit Decreasing (FFD) \cite{Panigrahy:2011wk}, Best Fit Decreasing (BFD).
+Manually designed heuristics are designed to tackle the special requirements such 
+as a bin-item incomplete scenario \cite{Gupta:2008ul} and Multi-tier Applications \cite{Jung:2008vb, Li:2009wf}. Although these greedy-based heuristics can quickly solve the consolidation problem,  as Mann's research \cite{Mann:2015ua} shown, server consolidation is a lot more harder than bin-packing problem because of multi-dimension, many constraints. Therefore, a simple greedy-based heuristic (e.g FFD) leads to a bad performance. 
+
+Evolutionary Computation (EC) is commonly used to solve combinatorial optimization problem \cite{Guzek:2015ds}, therefore, it is particular useful in solving the static consolidation problem.  Many EC techniques including Genetic Algorithm (GA) \cite{Xu:2010vh}, Ant Colony Optimization (ACO) \cite{Gao:2013gg, Mateos:2013bm}, Particle Swarm Optimization (PSO) \cite{Jeyarani:2012fg} have been used in solving this problem. EC algorithms show their advantages in the following aspects. Firstly, EC algorithms are good at solving multi-objective problems because of their population-based nature. And static consolidation problem often involves two or more objectives (e.g energy efficiency and migration cost). Secondly,  they can provide near-optimal solutions within a reasonable amount of time.  
+
+Dynamic consolidation problem requires fast decision-making and global optimization. Previous most research proposed human designed greedy-based dispatching rules or heuristics such as a First-Fit-based approach \cite{Bobroff:2007ec}, Modified Best Fit Decreasing \cite{Beloglazov:2012ji}, and a two-stage heuristic \cite{Zhang:2015jm}. One of the major problem for human designed heuristics is that if any inherent component gets changes, then the designed heuristic may not work as it was expected \cite{SoteloFigueroa:2013be}. EC algorithms are also seldom considered in this scenario because most EC methods need more time to search through solutions space.

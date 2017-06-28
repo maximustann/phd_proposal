@@ -6,45 +6,45 @@ The style file: acm.bst
 Database file #1: sample.bib
 Warning--I didn't find a database entry for "Nguyen:2014ts"
 Warning--empty journal in Mann:2015ua
-You've used 39 entries,
+You've used 47 entries,
             2253 wiz_defined-function locations,
-            787 strings with 12102 characters,
-and the built_in function-call counts, 13980 in all, are:
-= -- 1338
-> -- 853
+            835 strings with 13722 characters,
+and the built_in function-call counts, 16803 in all, are:
+= -- 1623
+> -- 984
 < -- 0
-+ -- 349
-- -- 310
-* -- 1216
-:= -- 2379
-add.period$ -- 115
-call.type$ -- 39
-change.case$ -- 272
++ -- 403
+- -- 356
+* -- 1454
+:= -- 2834
+add.period$ -- 139
+call.type$ -- 47
+change.case$ -- 319
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 382
-empty$ -- 954
-format.name$ -- 310
-if$ -- 2760
+cite$ -- 48
+duplicate$ -- 469
+empty$ -- 1175
+format.name$ -- 356
+if$ -- 3340
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 37
-newline$ -- 195
-num.names$ -- 78
-pop$ -- 222
+int.to.str$ -- 47
+missing$ -- 45
+newline$ -- 235
+num.names$ -- 94
+pop$ -- 258
 preamble$ -- 1
-purify$ -- 233
+purify$ -- 272
 quote$ -- 0
-skip$ -- 238
+skip$ -- 294
 stack$ -- 0
-substring$ -- 816
-swap$ -- 90
+substring$ -- 1029
+swap$ -- 114
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
+type$ -- 186
 warning$ -- 1
-while$ -- 134
-width$ -- 41
-write$ -- 384
+while$ -- 166
+width$ -- 49
+write$ -- 465
 (There were 2 warnings)

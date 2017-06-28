@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  27 JUN 2017 19:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  28 JUN 2017 15:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -248,103 +248,101 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-(./ProblemStatement.tex
+(./ProblemStatement2.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-<pics/stakeholders.png, id=1, 667.74469pt x 130.23656pt>
-File: pics/stakeholders.png Graphic file (type png)
-<use pics/stakeholders.png>
-Package pdftex.def Info: pics/stakeholders.png  used on input line 17. on input
- line 17.
-Package pdftex.def Info: Requested size: 308.71104pt x 60.2116pt on input line 
-17.
-<pics/energyConsumption.png, id=3, 551.81157pt x 339.51843pt>
-File: pics/energyConsumption.png Graphic file (type png)
-<use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png  used on input line 52. on 
-input line 52.
-Package pdftex.def Info: Requested size: 220.50885pt x 135.67545pt on input lin
-e 52.
  [1
 
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pics/stakeholders.png>]
-Underfull \vbox (badness 1968) has occurred while \output is active []
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./Motivation.tex
+Overfull \hbox (1.31349pt too wide) in paragraph at lines 47--1
+\OT1/ppl/m/n/10.95 Pre-vi-ous most re-search pro-posed hu-man de-signed greedy-
+based dis-patch-ing rules or heuris-
+ []
 
- [2 <./pics/energyConsumption.png>]
-<pics/comparison.png, id=17, 504.38437pt x 314.67563pt>
-File: pics/comparison.png Graphic file (type png)
-<use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 88. on input l
-ine 88.
-Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
-e 88.
-) (./Motivation.tex
+[2]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
- [3 <./pics/comparison.png>]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 55.
-
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+<pics/energyConsumption.png, id=12, 551.81157pt x 339.51843pt>
+File: pics/energyConsumption.png Graphic file (type png)
+<use pics/energyConsumption.png>
+Package pdftex.def Info: pics/energyConsumption.png  used on input line 18. on 
+input line 18.
+Package pdftex.def Info: Requested size: 220.50885pt x 135.67545pt on input lin
+e 18.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 35.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
- [4]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+ [3 <./pics/energyConsumption.png>]
+<pics/comparison.png, id=19, 504.38437pt x 314.67563pt>
+File: pics/comparison.png Graphic file (type png)
+<use pics/comparison.png>
+Package pdftex.def Info: pics/comparison.png  used on input line 50. on input l
+ine 50.
+Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
+e 50.
+ [4 <./pics/comparison.png>]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 61.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 104.
 
 
-LaTeX Warning: Citation `Nguyen:2014ts' on page 5 undefined on input line 61.
+LaTeX Warning: Citation `Nguyen:2014ts' on page 5 undefined on input line 104.
 
-) (./Goals.tex [5] [6]) (./published.tex) (./organization.tex
+[5]) (./Goals.tex [6]
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 2.
+ []
+
+) (./published.tex [7]) (./organization.tex
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 2.
 
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 3.
+LaTeX Warning: Reference `' on page 8 undefined on input line 3.
 
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 4.
+LaTeX Warning: Reference `' on page 8 undefined on input line 4.
 
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-)) [7] [8
+)) [8] (./proj_report_outline.bbl [9
 
 
-] (./proj_report_outline.bbl
-Underfull \hbox (badness 1783) in paragraph at lines 66--72
+
+]
+Underfull \hbox (badness 1783) in paragraph at lines 82--88
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
 
-[9
-
-] [10]) [11] (./proj_report_outline.aux (./introduction.aux))
+[10] [11]) [12] (./proj_report_outline.aux (./introduction.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3250 strings out of 493675
- 46232 string characters out of 6155645
- 113850 words of memory out of 5000000
- 6529 multiletter control sequences out of 15000+600000
+ 3253 strings out of 493675
+ 46224 string characters out of 6155645
+ 113872 words of memory out of 5000000
+ 6533 multiletter control sequences out of 15000+600000
  15592 words of font info for 40 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 41i,7n,35p,973b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,35p,1044b,239s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on proj_report_outline.pdf (11 pages, 231645 bytes).
+Output written on proj_report_outline.pdf (12 pages, 218657 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

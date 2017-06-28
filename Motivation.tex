@@ -4,6 +4,54 @@
 The motivation for this thesis mainly includes two parts, in the first part, we illustrate the roots of container-based server consolidation problem. In the second parts, we explain the motivations for the objectives.
 
 \subsection{Motivation For Container-based Server Consolidation Problem}
+Energy consumption is the major concern of Cloud providers. It is derived from several parts as 
+illustrated in Figure \ref{fig:consumption}. 
+Regardless the energy consumption of refrigeration system (or cooling system), 
+the majority are from servers.
+According to Hameed et al \cite{Hameed:2016cma}, servers are far from energy-efficient. 
+The main reason for the wastage is that the energy consumption of servers remains high even when the utilization are low. 
+Therefore, a concept of
+\emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. This leads to 
+using vitualization technology to achieve server consolidation.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/energyConsumption.png}
+	\caption{Energy consumption distribution of data centers \cite{Rong:2016js}}
+	\label{fig:consumption}
+\end{figure}
+
+Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on them. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing. Soon, people realized it can be a way to improve the utilization of hardware resources. Thereafter, a resource management strategy of server consolidation was invented.
+
+% Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by gathering virtual machines (VMs) into a fewer number of physical machines (PMs), so that the resource utilization of PMs are maintained at a high level. In the meanwhile, idle servers are turned off to save energy. Consolidation can minimize investments in hardware, hardware maintenance, data center space and energy consumption including both servers consume and cooling systems.
+
+In addition, virtualization technology has evolved to allow finer granularity resource management.
+A recent development of Container technique \cite{Soltesz:2007cu} has drove the attention of both industrial and academia.
+Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison}). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
+This new concept starts a new service model called Container as a Service (CaaS) \cite{Piraghaj:2015uf}. 
+From Cloud customers' perspective, CaaS has advantages of both IaaS (Infrastructure as a Service) and PaaS (Platform as a Service) but without their disadvantages. On one hand - similar to PaaS - it frees the customers' from low level resource management so that they can focus on application development. On the other hand - similar to IaaS - it allows customers to customize their software environment without being constrained by platforms. 
+
+For Clouds provide, traditional IaaS leads to the low utilization of resources. IaaS provides a set fixed types of VM for Cloud customers. Each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage).  The following two reasons cause the low utilization.
+\begin{itemize}
+	\item Firstly, service providers tend to over estimate the resources for ensuring the QoS at the peak hours, hence, they often reserve more resources \cite{Chaisiri:2012cv}. 
+	\item Secondly, specific applications may use a type of resources a lot more than another \cite{Tomas:2013iv}, for example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM may provide much more RAM than it needs.
+\end{itemize}
+
+In contrast, CaaS allows Cloud providers to manage both the deployment of applications and resource allocation.
+Hence, Cloud providers have a complete control of resources which may lead to a better utilization of resources. 
+In addition, IaaS Cloud runs many redundant operating systems and hypervisors. These redundancies can be eliminated by running multiple containers in a same operating system. 
+% do research in this field.
+
+
+Currently, vast amount of server consolidation methods are mostly VM-based which can not be directly applied on this problem, because two-level of bin-packing problems interact with each other. Piraghaj \cite{Piraghaj:2016bw} proposes a two-step procedure; it first maps tasks to VMs and then allocate containers to VMs. As Mann illustrated in \cite{Mann:2016hx},  these two steps should be conducted simultaneously, otherwise it leads to local optimal. Other research \cite{Dong:2014iz, Hindman:2011ux, Anselmi:2008ik} propose greedy-based heuristics on container allocation problem. They can be easily stuck at local optimal. 
+This thesis, therefore, aims at providing an end-to-end solution for Container-based server consolidation which includes three stages: initialization, static container-based server consolidation and dynamic container placement.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
+	\caption{A comparison between VM-based and Container-based virtualization}
+	\label{fig:comparison}
+\end{figure}
+
 
 % \begin{figure}
 % 	\centering
@@ -14,18 +62,13 @@ The motivation for this thesis mainly includes two parts, in the first part, we 
 % \begin{enumerate}
 % \item Container is a new virtualization technology which provides an operating level of virtualization.
 % % Figure \ref{fig:root} illustrates the root of container technology from an energy efficient point of view. 
-% Most Clouds provide a set fixed types of VM (e.g IaaS) for service providers. Each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage). This service model leads to a great waste of resources for two reasons. 
-% \begin{itemize}
-% 	\item Firstly, service providers tend to over estimate the resources for ensuring the QoS at the peak hours, hence, they often reserve more resources \cite{Chaisiri:2012cv}. 
-% 	\item Secondly, specific applications may use a type of resources a lot more than another \cite{Tomas:2013iv}, for example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM may provide much more RAM than it needs.
-% \end{itemize}
+
 % In order to solve this problem, overbooking strategy tends to place more VMs than the server's maximum capacity. However, this technique is highly relied on workload prediction on the application running in a VM. Otherwise, servers are easily overloaded. Container technique can improve the utilization by further partitioning VM into resource isolated chunks. Therefore, multiple applications can share the same VM. This technique avoids the prediction of workload as well as improving the utilization. 
 
-% Despite the potential improvement in energy efficiency, containers have advantages on other aspects. In terms of resource utilization, traditional IaaS (Infrastructure as a Service) Cloud data centers run many redundant operating systems and hypervisors. These redundancies can be eliminated by running multiple containers in a same operating system. From service model's perspective, softwares running in PaaS (Platform as a  Service) must be compatible with the platform: all technologies including programming languages, libraries must be supported by the platform. CaaS enhances PaaS by providing separated software runtime environment. These advantages make the container technology a popular trend. This is the reason that attracts us to
-% do research in this field.
 
-This container technology brings many advantages to current Cloud industry\cite{Felter:2015ki}but it also brings difficulties for server consolidation. Container-based server consolidation adds another level of abstraction which makes it a two-level vector bin-packing problem. Current server consolidation methods are mostly VM-based which can not be directly applied on this problem, because two-level of bin-packing problems interact with each other. Piraghaj \cite{Piraghaj:2016bw} proposes a two-step procedure; it first maps tasks to VMs and then allocate containers to VMs. As Mann illustrated in \cite{Mann:2016hx},  these two steps should be conducted simultaneously, otherwise it leads to local optimal. Other research \cite{Dong:2014iz, Hindman:2011ux, Anselmi:2008ik} propose greedy-based heuristics on container allocation problem. They can be easily stuck at local optimal. 
-Therefore, it motivates us to provide \emph{global optimized} resource allocation solution for container-based data centers.
+
+% This container technology brings many advantages to current Cloud industry\cite{Felter:2015ki}but it also brings difficulties for server consolidation. Container-based server consolidation adds another level of abstraction which makes it a two-level vector bin-packing problem.
+% Therefore, it motivates us to provide \emph{global optimized} resource allocation solution for container-based data centers.
 
 % \end{enumerate}
 
@@ -44,7 +87,7 @@ This stage will establish the fundamental concepts in studying the joint allocat
 
 \item Server consolidation can be considered as static or dynamic problem \cite{Xiao:2015ik}.
 A \emph{static server consolidation} is conducted to improve the global energy efficiency at a certain time point, e.g. a fixed time interval. This is because Cloud data center has a highly dynamic nature with continuous arriving and releasing of VMs. Therefore, 
-after the initial allocation, the energy efficiency keeps dropping. Similar with VM-based consolidation, migration cost is one of the key consideration. So the problem is considered as a multi-objective problem with minimization of migration cost as well as keeping a good energy efficiency. Previous research only consider each consolidation as an independent process \cite{}. Therefore, although in current consolidation, the migration is minimized. It may lead to more migration in the future. We are going to consider the robustness of consolidation and propose a novel time-series-aware server consolidation which takes the previous consolidations and the future consolidation into consideration. 
+after the initial allocation, the energy efficiency keeps dropping. Similar with VM-based consolidation, migration cost is one of the key consideration. So the problem is considered as a multi-objective problem with minimization of migration cost as well as keeping a good energy efficiency. Previous research only consider each consolidation as an independent process. Therefore, although in current consolidation, the migration is minimized. It may lead to more migration in the future. We are going to consider the robustness of consolidation and propose a novel time-series-aware server consolidation which takes the previous consolidations and the future consolidation into consideration. 
 % and representations must be proposed to capture the characteristic of the joint allocation. 
 % 	and the VMs are allocated to physical machines in the second step. Because of the complexity, previous research
 % 	only considers the first step. They map the incoming tasks into predefined categories and based on the characteristic of the categories, the size of new virtual machines' resources are decided. After each tasks have chosen its VM type, they are allocated to virtual machines using a lightweight heursitic algorithm. 
@@ -56,7 +99,7 @@ In a container-based environment, it involves three steps .
 		\item \emph{Which container to migrate?} refers to determine which container need to be migrated so that it optimize the global energy consumption.
 		\item \emph{Where to migrate?} refers to determine which VM and host that a container is migrated to.  
 	\end{itemize}
-	Specifically, we focus on the third question: dynamic placement problem. To solve a dynamic placement with large number of variables, heuristics and dispatching rules are often used\cite{Sarin:2011fu, Shi:2011ke, Forsman:2015ca, Beloglazov:2012ji}.  In this scenario, a dispatching rule is considered as a function that determines the priorities of servers that a container can be placed. However, dynamic placement is much complex than bin-packing problem \cite{Mann:2015ua}. Because of its dynamic nature, human designed heuristics do not work well when the environment has changed \cite{SoteloFigueroa:2013be}. Multi-objective genetic algorithm (GA) \cite{Xu:2010vh} has been applied. However, GA is too slow for dynamic problem. 
+	Specifically, we focus on the third question: dynamic placement problem. To solve a dynamic placement with large number of variables, heuristics and dispatching rules are often used \cite{Sarin:2011fu, Shi:2011ke, Forsman:2015ca, Beloglazov:2012ji}.  In this scenario, a dispatching rule is considered as a function that determines the priorities of servers that a container can be placed. However, dynamic placement is much complex than bin-packing problem \cite{Mann:2015ua}. Because of its dynamic nature, human designed heuristics do not work well when the environment has changed \cite{SoteloFigueroa:2013be}. Multi-objective genetic algorithm (GA) \cite{Xu:2010vh} has been applied. However, GA is too slow for dynamic problem. 
 
 	We intend to develop a hyper-heuristic method - Genetic Programming (GP) technique \cite{Banzhaf:1998wc} or artificial immune system \cite{Hofmeyr:2000ju}- to learn from the best previous allocation and automatic evolve dispatching rules to solve this problem. GP has been applied in generating dispatching rules for bin-packing problem \cite{Burke:2006ei, SoteloFigueroa:2013be} and other scheduling problems \cite{Nguyen:2014ts}. The results have shown promising results.
 

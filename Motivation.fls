@@ -1,0 +1,8 @@
+PWD /am/st-james/home1/tanboxi/PH.D/proposal
+INPUT /etc/texmf/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT Motivation.tex
+OUTPUT Motivation.log
+INPUT /usr/pkg/share/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
