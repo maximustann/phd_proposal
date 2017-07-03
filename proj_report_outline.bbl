@@ -48,6 +48,11 @@
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
 \newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
 
+\bibitem{Chebiyyam:2009uq}
+{\sc Chebiyyam, M., Malviya, R., and Bose, S.~K.}
+\newblock {Server consolidation: Leveraging the benefits of virtualization}.
+\newblock {\em Perform or Perish\/} (2009).
+
 \bibitem{Dong:2014iz}
 {\sc Dong, Z., Zhuang, W., and Rojas-Cessa, R.}
 \newblock {Energy-aware scheduling schemes for cloud data centers on Google
@@ -156,11 +161,23 @@
 \newblock Tech. rep., National Institute of Standards and Technology,
   Gaithersburg, MD, Gaithersburg, MD, 2011.
 
+\bibitem{Mishra:2012kx}
+{\sc Mishra, M., Das, A., Kulkarni, P., and Sahoo, A.}
+\newblock {Dynamic resource management using virtual machine migrations}.
+\newblock {\em IEEE Communications {\ldots} 50}, 9 (2012), 34--40.
+
 \bibitem{Moens:2011gk}
 {\sc Moens, H., Famaey, J., Latr{\'e}, S., Dhoedt, B., and De~Turck, F.}
 \newblock {Design and evaluation of a hierarchical application placement
   algorithm in large scale clouds.}
 \newblock {\em Integrated Network Management\/} (2011), 137--144.
+
+\bibitem{Nguyen:2014eu}
+{\sc Nguyen, S., Zhang, M., Johnston, M., and Tan, K.~C.}
+\newblock {Automatic Design of Scheduling Policies for Dynamic Multi-objective
+  Job Shop Scheduling via Cooperative Coevolution Genetic Programming}.
+\newblock {\em IEEE Transactions on Evolutionary Computation 18}, 2 (2014),
+  193--208.
 
 \bibitem{Panigrahy:2011wk}
 {\sc Panigrahy, R., Talwar, K., Uyeda, L., and Wieder, U.}
@@ -204,6 +221,11 @@
   high-performance alternative to hypervisors.}
 \newblock {\em EuroSys 41}, 3 (2007), 275--287.
 
+\bibitem{Somani:2009ho}
+{\sc Somani, G., and Chaudhary, S.}
+\newblock {Application Performance Isolation in Virtualization.}
+\newblock {\em IEEE CLOUD\/} (2009), 41--48.
+
 \bibitem{SoteloFigueroa:2013be}
 {\sc Sotelo-Figueroa, M.~A., Soberanes, H. J.~P., Carpio, J.~M., Huacuja, H.
   J.~F., Reyes, L.~C., and Soria-Alcaraz, J.~A.}
@@ -217,6 +239,12 @@
 \newblock {A mathematical programming approach for server consolidation
   problems in virtualized data centers}.
 \newblock {\em IEEE Transactions on services {\ldots}\/} (2010).
+
+\bibitem{Svard:2015ic}
+{\sc Svard, P., Li, W., Wadbro, E., Tordsson, J., and Elmroth, E.}
+\newblock {Continuous Datacenter Consolidation}.
+\newblock In {\em 2015 IEEE 7th International Conference on Cloud Computing
+  Technology and Science (CloudCom)\/} (2015), IEEE, pp.~387--396.
 
 \bibitem{Tomas:2013iv}
 {\sc Tom{\'a}s, L., and Tordsson, J.}

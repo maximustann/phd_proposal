@@ -4,9 +4,18 @@
 %% $Author: kevin $
 %%
 \chapter{Literature Review}\label{C:background}
-\section*{Background}
+\section{Background}
 
-\subsection*{An Overview of Resource Allocation in Cloud}
+This chapter begins by providing a fundamental background to the field of server consolidation in Section \ref{}, then addresses several areas of current research interest.
+Section \ref{} discusses the resource allocation in PaaS as well as the bi-level optimization including both biologically and non-biologically
+inspired approaches; Section \ref{} delves into approaches that optimize the static placement. In addition, time-series aware problems and their approaches will be discussed; Section \ref{} discusses the issue of dynamic server consolidation and genetic programming; Section \ref{} covers approaches of scalability; Finally, Section \ref{} presents a summary of the important points identified in this review, alongside a discussion of the limitations of existing approaches.
+
+\subsection{An Overview of server consolidation}
+
+
+
+
+
 
 
 The reasons for energy wastage can be derived from several components of a data center, including 
@@ -148,6 +157,15 @@ resource management system can be seen in Figure \ref{}.
 	\label{fig:arch}
 \end{figure}
 
+The taxonomy of server consolidation has not reach an agreement. In Verma's work \cite{Verma:2009wi}, they categorize it into three groups: static, semi-static and dynamic consolidation. In static consolidation, applications are placed on PM without any further movement. Semi-static refers to periodical adjustment. Dynamic consolidation is still applied on a set of VMs in response to their workload variations.
+
+
+
+
+
+
+
+
 
 A dynamic server consolidation approach
 can usually be decomposed into a series of steps, 
@@ -205,8 +223,8 @@ a cloud broker needs to adjust the VMs allocation across multiple Cloud provider
 This work proposes a model which maximize a Cloud consumers' profit by adjusting VMs across
 multiple Clouds. Their model does not consider a Cloud provider's profit.
 
-
-
+Wang and Xia \cite{Wang:2016ui} propose a MIP formulation for energy-aware VM placement in Cloud.
+The major difference between their work and previous work is that they use a non-linear energy model \cite{Gandhi:2009wp}.  Based on this model, they consider two resources CPU and memory. In order to solve the non-linear problem, they propose a linearization method which uses piecewise linear function to approximate the non-linear objective function. In the end, they uses a relaxation method to relax the integer linear programming problem into continuous and apply a rounding function to obtain a near-optimal solution. In summary, the energy model is the key objective in consolidation problem. With different models, the applied algorithm can be very different. However, EC approaches can deal with both linear and non-linear problem without any changes. That is an obvious advantage. 
 
 % Virtualization technology was first developed in IBM System/360 in 1960s 
 % targeting a finer granularity resource management. 
