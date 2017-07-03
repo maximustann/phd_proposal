@@ -1,49 +1,49 @@
-This is BibTeX, Version 0.99d (Web2C 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: sample.bib
 Warning--empty journal in Mann:2015ua
-You've used 52 entries,
+You've used 51 entries,
             2253 wiz_defined-function locations,
-            864 strings with 14702 characters,
-and the built_in function-call counts, 18670 in all, are:
-= -- 1806
-> -- 1084
+            859 strings with 14547 characters,
+and the built_in function-call counts, 18402 in all, are:
+= -- 1782
+> -- 1067
 < -- 0
-+ -- 444
-- -- 392
-* -- 1609
-:= -- 3136
-add.period$ -- 154
-call.type$ -- 52
-change.case$ -- 352
++ -- 437
+- -- 386
+* -- 1589
+:= -- 3088
+add.period$ -- 151
+call.type$ -- 51
+change.case$ -- 346
 chr.to.int$ -- 0
-cite$ -- 53
-duplicate$ -- 529
-empty$ -- 1313
-format.name$ -- 392
-if$ -- 3723
+cite$ -- 52
+duplicate$ -- 520
+empty$ -- 1294
+format.name$ -- 386
+if$ -- 3670
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 50
-newline$ -- 260
-num.names$ -- 104
-pop$ -- 287
+int.to.str$ -- 51
+missing$ -- 49
+newline$ -- 255
+num.names$ -- 102
+pop$ -- 282
 preamble$ -- 1
-purify$ -- 300
+purify$ -- 295
 quote$ -- 0
-skip$ -- 335
+skip$ -- 329
 stack$ -- 0
-substring$ -- 1149
-swap$ -- 132
+substring$ -- 1144
+swap$ -- 130
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 206
+type$ -- 202
 warning$ -- 1
-while$ -- 185
-width$ -- 54
-write$ -- 515
+while$ -- 183
+width$ -- 53
+write$ -- 506
 (There was 1 warning)

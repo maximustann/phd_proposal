@@ -48,11 +48,6 @@
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
 \newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
 
-\bibitem{Chebiyyam:2009uq}
-{\sc Chebiyyam, M., Malviya, R., and Bose, S.~K.}
-\newblock {Server consolidation: Leveraging the benefits of virtualization}.
-\newblock {\em Perform or Perish\/} (2009).
-
 \bibitem{Dong:2014iz}
 {\sc Dong, Z., Zhuang, W., and Rojas-Cessa, R.}
 \newblock {Energy-aware scheduling schemes for cloud data centers on Google

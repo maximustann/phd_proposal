@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  3 JUL 2017 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.29)  3 JUL 2017 22:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**proj_report_outline.tex
-(./proj_report_outline.tex
-LaTeX2e <2016/03/31> patch level 3
-Babel <3.10> and hyphenation patterns for 40 language(s) loaded.
-(/usr/pkg/share/texmf-dist/tex/latex/base/report.cls
+**/Users/maximustann/Work/PH.D/proposal/proj_report_outline.tex
+(/Users/maximustann/Work/PH.D/proposal/proj_report_outline.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/pkg/share/texmf-dist/tex/latex/base/size11.clo
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,130 +23,122 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/pkg/share/texmf-dist/tex/latex/float/float.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count88
 \float@exts=\toks14
 \float@box=\box26
 \@float@everytoks=\toks15
 \@floatcapt=\box27
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-(/usr/pkg/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+Package color Info: Driver file: pdftex.def on input line 142.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-Package color Info: Driver file: pdftex.def on input line 147.
-
-(/usr/pkg/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/06/12 v1.0b Graphics/color driver for pdftex
-))
-(/usr/pkg/share/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/pkg/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+\Gread@gobject=\count89
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 709.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
-(/usr/pkg/share/texmf-dist/tex/latex/url/url.sty
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(/usr/pkg/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2017/01/14 v0.5h Insert pages of external PDF documents (AM)
-
-(/usr/pkg/share/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/05/11 v0.4x Insert pages of external PDF documents (AM)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/pkg/share/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count89
-\calc@Bcount=\count90
+\calc@Acount=\count90
+\calc@Bcount=\count91
 \calc@Adimen=\dimen103
 \calc@Bdimen=\dimen104
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count91
+\calc@Ccount=\count92
 \calc@Cskip=\skip45
-)
-(/usr/pkg/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-))
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/keyval.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-))
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/01 v1.2a Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-(/usr/pkg/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 )
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
 \AM@pagewidth=\dimen107
 \AM@pageheight=\dimen108
-
-(/usr/pkg/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2015/05/11 v0.4x Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box28
-\AM@global@opts=\toks17
-\AM@toc@title=\toks18
-\c@AM@survey=\count92
+\AM@toc@title=\toks17
+\c@AM@survey=\count93
 \AM@templatesizebox=\box29
 )
-\@float@every@fig=\toks19
-\c@fig=\count93
- (./vuwproject.sty
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/mathpazo.sty
+\@float@every@fig=\toks18
+\c@fig=\count94
+(/Users/maximustann/Work/PH.D/proposal/vuwproject.sty (/usr/local/texlive/2015/
+texmf-dist/tex/latex/psnfss/mathpazo.sty
 Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup4
 )
+! Font \vuwf=vuw20 scaled 2074 not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   \relax 
+l.82 \font\vuwf  = vuw20 scaled\magstep4
+                                        
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
 VUW Honours reports modifications -- Mar 1995
 Modified to handle different degrees 2003
 Modified to handle duplex printing properly 2006
 \@abstract=\box30
-) (./proj_report_outline.aux (./introduction.aux
+) (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.aux (/Users/maximu
+stann/Work/PH.D/proposal/introduction.aux
 
 LaTeX Warning: Label `fig:unproportional' multiply defined.
 
@@ -166,167 +158,135 @@ LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 57.
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
-)
-(/usr/pkg/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+) (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count94
+\scratchcounter=\count95
 \scratchdimen=\dimen109
 \scratchbox=\box31
-\nofMPsegments=\count95
-\nofMParguments=\count96
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count97
+\nofMPsegments=\count96
+\nofMParguments=\count97
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count98
 \MPscratchDim=\dimen110
-\MPnumerator=\count98
-\makeMPintoPDFobject=\count99
-\everyMPtoPDFconversion=\toks21
-) (/usr/pkg/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+\MPnumerator=\count99
+\makeMPintoPDFobject=\count100
+\everyMPtoPDFconversion=\toks20
 )
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+\AtBeginShipoutBox=\box32
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2 ,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/pkg/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-))
-\AtBeginShipoutBox=\box32
-
-(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
-Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
-
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-
-(/usr/pkg/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 \big@size=\dimen111
 \openout2 = `introduction.aux'.
 
-
-(./introduction.tex
+(/Users/maximustann/Work/PH.D/proposal/introduction.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-(./ProblemStatement2.tex
+(/Users/maximustann/Work/PH.D/proposal/ProblemStatement2.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 <pics/stakeholders.png, id=1, 660.21657pt x 413.29407pt>
 File: pics/stakeholders.png Graphic file (type png)
 <use pics/stakeholders.png>
-Package pdftex.def Info: pics/stakeholders.png  used on input line 12. on input
- line 12.
-Package pdftex.def Info: Requested size: 308.71104pt x 193.25813pt on input lin
-e 12.
- [1
+Package pdftex.def Info: pics/stakeholders.png used on input line 12.
+(pdftex.def)             Requested size: 308.71104pt x 193.25813pt.
+[1
 
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pics/stakeholders.png>]
-<pics/energyConsumption.png, id=12, 551.81157pt x 339.51843pt>
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
+maximustann/Work/PH.D/proposal/pics/stakeholders.png>] <pics/energyConsumption.
+png, id=12, 551.81157pt x 339.51843pt>
 File: pics/energyConsumption.png Graphic file (type png)
 <use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png  used on input line 27. on 
-input line 27.
-Package pdftex.def Info: Requested size: 220.50885pt x 135.67545pt on input lin
-e 27.
+Package pdftex.def Info: pics/energyConsumption.png used on input line 27.
+(pdftex.def)             Requested size: 220.50885pt x 135.67545pt.
 <pics/util.png, id=13, 821.0675pt x 583.17876pt>
 File: pics/util.png Graphic file (type png)
 <use pics/util.png>
-Package pdftex.def Info: pics/util.png  used on input line 47. on input line 47
-.
-Package pdftex.def Info: Requested size: 220.50885pt x 156.615pt on input line 
-47.
- [2 <./pics/energyConsumption.png> <./pics/util.png>]
-<pics/consolidate.png, id=19, 762.59906pt x 178.41656pt>
+Package pdftex.def Info: pics/util.png used on input line 47.
+(pdftex.def)             Requested size: 220.50885pt x 156.615pt.
+[2 </Users/maximustann/Work/PH.D/proposal/pics/energyConsumption.png> </Users/m
+aximustann/Work/PH.D/proposal/pics/util.png>] <pics/consolidate.png, id=19, 762
+.59906pt x 178.41656pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 60. on input 
-line 60.
-Package pdftex.def Info: Requested size: 308.71104pt x 72.22563pt on input line
- 60.
-<pics/resource_management.png, id=20, 1027.84pt x 770.88pt>
+Package pdftex.def Info: pics/consolidate.png used on input line 60.
+(pdftex.def)             Requested size: 308.71104pt x 72.22563pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 68.
+[3 </Users/maximustann/Work/PH.D/proposal/pics/consolidate.png>] <pics/resource
+_management.png, id=24, 1027.84pt x 770.88pt>
 File: pics/resource_management.png Graphic file (type png)
 <use pics/resource_management.png>
-Package pdftex.def Info: pics/resource_management.png  used on input line 74. o
-n input line 74.
-Package pdftex.def Info: Requested size: 352.8155pt x 264.61295pt on input line
- 74.
-[3 <./pics/consolidate.png>] [4 <./pics/resource_management.png>]
-Overfull \hbox (1.31349pt too wide) in paragraph at lines 106--107
-\OT1/ppl/m/n/10.95 Pre-vi-ous most re-search pro-posed hu-man de-signed greedy-
-based dis-patch-ing rules or heuris-
- []
+Package pdftex.def Info: pics/resource_management.png used on input line 74.
+(pdftex.def)             Requested size: 352.8155pt x 264.61295pt.
+<pics/comparison.png, id=25, 504.38437pt x 314.67563pt>
+File: pics/comparison.png Graphic file (type png)
+<use pics/comparison.png>
+Package pdftex.def Info: pics/comparison.png used on input line 92.
+(pdftex.def)             Requested size: 308.71104pt x 192.60005pt.
+[4 </Users/maximustann/Work/PH.D/proposal/pics/resource_management.png>]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 106.
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 117.
-
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
- [5]
-<pics/comparison.png, id=33, 504.38437pt x 314.67563pt>
-File: pics/comparison.png Graphic file (type png)
-<use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 132. on input 
-line 132.
-Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
-e 132.
-) (./Motivation.tex
-[6 <./pics/comparison.png>] [7]) (./Goals.tex [8]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
+[5 </Users/maximustann/Work/PH.D/proposal/pics/comparison.png>]
+Overfull \hbox (11.04327pt too wide) in paragraph at lines 130--133
+[]\OT1/ppl/m/n/10.95 In VM-based dy-namic prob-lem, pre-vi-ous most re-search p
+ro-posed hu-man de-signed greedy-
+ []
+
+) (/Users/maximustann/Work/PH.D/proposal/Motivation.tex [6] [7]) (/Users/maximu
+stann/Work/PH.D/proposal/Goals.tex [8]
 Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
-) (./published.tex) (./organization.tex
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
-
+) (/Users/maximustann/Work/PH.D/proposal/published.tex) (/Users/maximustann/Wor
+k/PH.D/proposal/organization.tex
 
 LaTeX Warning: Reference `' on page 9 undefined on input line 2.
 
@@ -339,17 +299,18 @@ LaTeX Warning: Reference `' on page 9 undefined on input line 4.
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-)) [9] [10] (./proj_report_outline.bbl [11
+) [9]) [10] (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.bbl [11
 
 
 
 ]
-Underfull \hbox (badness 1783) in paragraph at lines 87--93
+Underfull \hbox (badness 1783) in paragraph at lines 82--88
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
 
-[12] [13]) [14] (./proj_report_outline.aux (./introduction.aux))
+[12] [13]) [14] (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.aux 
+(/Users/maximustann/Work/PH.D/proposal/introduction.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -358,19 +319,20 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3277 strings out of 493675
- 46767 string characters out of 6155645
- 113962 words of memory out of 5000000
- 6554 multiletter control sequences out of 15000+600000
- 14176 words of font info for 37 fonts, out of 8000000 for 9000
- 890 hyphenation exceptions out of 8191
- 41i,7n,35p,965b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
-/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
-ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-
-Output written on proj_report_outline.pdf (14 pages, 427717 bytes).
+ 3260 strings out of 493089
+ 48043 string characters out of 6134842
+ 119865 words of memory out of 5000000
+ 6662 multiletter control sequences out of 15000+600000
+ 14153 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,7n,35p,1003b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on /Users/maximustann/Work/PH.D/proposal/proj_report_outline.pdf
+ (14 pages, 432036 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
