@@ -29,8 +29,8 @@ a reasonable price.
 	\label{fig:consumption}
 \end{figure} 
 
-From Cloud providers' perspective, they are trying to make the most profit on data centers.
-On one hand, cloud providers are trying to improve the quality of  Cloud service to attract more service providers.  
+Cloud providers are trying to make the most profit on data centers.
+On one hand, cloud providers are trying to improve the quality of  Cloud service to attract more service providers.
 On the other hand, they want to cut enormous energy consumption 
 - as much as 25,000 households \cite{Kaplan:up01fR-k} - to lower the expense. Energy consumption is the major concern of Cloud providers. It is derived from several parts as 
 illustrated in Figure \ref{fig:consumption}. 
@@ -62,10 +62,18 @@ Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by
 	\label{fig:unproportional}
 \end{figure} 
 
-Server consolidation is the core functionality involving in all Cloud resource management processes. Cloud resource management can be roughly separated into three phases \cite{Svard:2015ic, Mishra:2012kx} (see Figure \ref{fig:management}): application Initialization, Dynamic resource management, and Static consolidation. Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because old applications replicas are released if the application was canceled or has been assigned with too much capacity. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by allocating one application at a time. Finally, static consolidation is conducted periodically to dramatically improve the resource utilization.
+Server consolidation is the core functionality involving in all Cloud resource management processes. Cloud resource management can be roughly separated into three phases \cite{Svard:2015ic, Mishra:2012kx} (see Figure \ref{fig:management}): application Initialization, Dynamic resource management, and Static consolidation. Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because an old application instance is released if the application was canceled or has been assigned with too much capacity. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, static consolidation is conducted periodically to dramatically improve the resource utilization.
 \begin{enumerate}
 	\item \emph{Application initialization} takes a list of incoming requests of applications as the input, based on their requested resource sizes, determines their allocation in servers. This phase can be seen as a static consolidation, where the requested applications are consolidated into a minimum number of servers.
-	\item \emph{Dynamic resource management} adjusts the allocation based on servers' states at any time. Normally, there are three scenarios when the dynamic management is conducted. \textbf{First}, an application has intensive requests causes the server overloading (Figure \ref{fig:management}). In order to prevent the Quality of Service (QoS) dropping, an application is migrated to another server. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, a server in a low utilization state should be emptied. Therefore, all the VMs inside are migrated to other active servers. This is a dynamic consolidation. \textbf{Third}, servers are discrepancy in utilization level. An adjustment is to migrate one or more VMs from high utilized servers to low ones. This is called load balancing.
+	\item \emph{Dynamic resource management} adjusts the allocation based on servers' states at any time. Normally, there are three purposes when the dynamic management is conducted. \textbf{First},  prevent a server from overloading. Overloading is often caused by increasing of workload. In order to prevent the Quality of Service (QoS) dropping, an application is migrated to another server. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, prevent a server from underloading. Underloading is when a server in a low utilization state. At this moment, all the applications inside are migrated to other active servers. This is called dynamic consolidation. \textbf{Third}, prevent a server has very high level of utilization while others have low. An adjustment is to migrate one or more VMs from high utilized servers to low ones. This is called load balancing.
+
+	No matter which purpose it is, a dynamic resource management always involves three steps . 
+	\begin{itemize}
+		\item \emph{When to migrate?} refers to determine the time point that a physical server is overloaded or underloaded. It is often decide by a threshold of utilization.
+		\item \emph{Which container to migrate?} refers to determine which application need to be migrated so that it optimize the global energy consumption.
+		\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency.
+	\end{itemize}
+
 	\item A \emph{static server consolidation} is conducted to improve the global energy efficiency at a certain time point, e.g. a fixed time interval. This is because Cloud data center has a highly dynamic nature with continuous arriving and releasing of VMs. Therefore, after the initial allocation, the energy efficiency keeps dropping. In comparison with initialization, static consolidation considers the previous allocation in order to reduce the number of migration, for migration is a very expensive operation. In comparison with dynamic consolidation, static consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
 \end{enumerate}
 
@@ -76,15 +84,15 @@ Server consolidation is the core functionality involving in all Cloud resource m
 	\label{fig:management}
 \end{figure} 
 
-% A consolidation needs careful planning to ensure cost-effective deployments and a consolidation plan includes four major items:
-% 			\begin{enumerate}
-% 				\item A list of existing servers after consolidation
-% 				\item A list of new virtual machines created after consolidation
-% 				\item A list of old virtual machines turned off after consolidation
-% 				\item The exact placement of applications and services
-% 			\end{enumerate}
+Finally, a consolidation plan includes four major items:
+			\begin{enumerate}
+				\item A list of existing servers after consolidation
+				\item A list of new virtual machines created after consolidation
+				\item A list of old virtual machines turned off after consolidation
+				\item The exact placement of applications and services
+			\end{enumerate}
 
-By the nature of Cloud resource management, server consolidation techniques can also be categories into static and dynamic methods \cite{Xiao:2015ik, Verma:2009wi}. Static consolidation is a time consuming process which is often conducted off-line in a periodical fashion. It provides a global optimization to the data center. Dynamic consolidation adjusts servers in real time. It often allocates one application at a time. Therefore, it can be executed quickly and often provides a local optimization to the data center.
+By the nature of Cloud resource management, server consolidation techniques can also be categories into static and dynamic methods \cite{Xiao:2015ik, Verma:2009wi}. Static method is a time consuming process which is often conducted off-line in a periodical fashion; initialization and static consolidation belong to this category. It provides a global optimization to the data center. Dynamic method adjusts servers in real time. It often allocates one application at a time. Therefore, it can be executed quickly and often provides a local optimization to the data center.
 
 \vspace{10mm}
 \begin{figure}
@@ -95,13 +103,13 @@ By the nature of Cloud resource management, server consolidation techniques can 
 \end{figure}
 
 In recent years, virtualization technology has evolved to allow finer granularity resource management.
-A recent development of Container technique \cite{Soltesz:2007cu} has drove the attention of both industrial and academia.
-Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison}). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
+A recent development of Container technique \cite{Soltesz:2007cu} has driven the attention of both industrial and academia.
+Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison} right-hand side). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
 This new concept starts a new service model called Container as a Service (CaaS) \cite{Piraghaj:2015uf}. CaaS brings advantages for both Cloud customers and providers.
-From customers' perspective, CaaS has advantages of both IaaS (Infrastructure as a Service) and PaaS (Platform as a Service) but without their disadvantages. On one hand - similar to PaaS - it frees the customers' from low level resource management so that they can focus on application development. On the other hand - similar to IaaS - it allows customers to customize their software environment without being constrained by platforms. 
-For Clouds provide, traditional IaaS leads to the low utilization of resources. 
+From Cloud users' perspective, CaaS has advantages of both IaaS (Infrastructure as a Service) and PaaS (Platform as a Service) but without their disadvantages. On one hand - similar to PaaS - it does not require Cloud users to estimate the quantity of resources so that they can focus on application development. On the other hand - similar to IaaS - it allows Cloud users to customize their software environment without being constrained by platforms. 
 
-The reasons for low utilization of resources with IaaS derive from two mechanisms: the separated responsibilities of resource selection for applications and resource allocation; The fixed types of VMs, where each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage). 
+For Cloud provides, CaaS resolves two IaaS's inherent weaknesses which cause low utilization of resources.
+IaaS's weaknesses come from two mechanisms: the separated responsibilities of resource selection for applications and resource allocation; The fixed types of VMs, where each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage). 
 \begin{itemize}
 	\item Firstly, because of separated responsibilities, customers must estimate the quantity of resources. They tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv}. This causes the low utilization.
 	\item Secondly, because of the fixed size of VM and the one-on-one mapping of applications and VMs (see Figure \ref{fig:comparison} left hand-side), specific applications consume unbalanced resources lead to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating.
@@ -115,24 +123,24 @@ In addition, IaaS Cloud runs many redundant operating systems and hypervisors. C
 
 \vspace{10mm}
 
-Currently, vast amount of server consolidation methods are mostly VM-based which can not be directly applied on this problem, because two-level of bin-packing problems interact with each other. And even for single level of bin-packing problem \cite{Mann:2015ua}, the complicity is NP-hard meaning it is unlikely to find an optimal solution of a large problem.
+Currently, vast amount of server consolidation methods are mostly VM-based and they are mainly modeled as bin-packing problems \cite{Mann:2015ua}, where applications represent items and servers represent bins. These methods can not be directly applied on Container-based problem because container-based consolidation has two levels of allocation: Containers are allocated to VM as the first level and VM are allocated to PM as the second level. These two levels of allocation interact with each other. 
 
+Even for single level of bin-packing problems, the complexity is NP-hard meaning it is unlikely to find an optimal solution of a large problem.
 In VM-based static problem, deterministic methods such as  
 Integer Linear Programming \cite{Speitkamp:2010ck} and Mixed
 Integer Programming \cite{Wang:2016eh} are often considered. However, it is well-known that they are very time-consuming for a large scale problem. More research proposed heuristic methods
  to approximate the optimal solution such as 
 First Fit Decreasing (FFD) \cite{Panigrahy:2011wk}, Best Fit Decreasing (BFD) \cite{Beloglazov:2012ji}.
 Manually designed heuristics are designed to tackle the special requirements such 
-as a bin-item incomplete scenario \cite{Gupta:2008ul} and Multi-tier Applications \cite{Jung:2008vb, Li:2009wf}. Although these greedy-based heuristics can quickly solve the consolidation problem,  as Mann's research \cite{Mann:2015ua} shown, server consolidation is a lot more harder than bin-packing problem because of multi-dimension, many constraints. Therefore, a simple greedy-based heuristic (e.g FFD) leads to a bad performance. 
+as a bin-item incomplete scenario \cite{Gupta:2008ul} and multi-tier applications \cite{Jung:2008vb, Li:2009wf}. Although these greedy-based heuristics can quickly approximate an answer,  as Mann's research \cite{Mann:2015ua} shown, server consolidation is a lot more harder than bin-packing problem because of multi-dimension, many constraints. Therefore, general bin-packing algorithms do not perform well with many contraints and specific designed heuristics only perform well in very narrow scope.
 
 Evolutionary Computation (EC) is commonly used to solve combinatorial optimization problem \cite{Guzek:2015ds}, therefore, it is particular useful in solving the static consolidation problem.  Many EC techniques including Genetic Algorithm (GA) \cite{Xu:2010vh}, Ant Colony Optimization (ACO) \cite{Gao:2013gg, Mateos:2013bm}, Particle Swarm Optimization (PSO) \cite{Jeyarani:2012fg} have been used in solving this problem. EC algorithms show their advantages in the following aspects. Firstly, EC algorithms are good at solving multi-objective problems because of their population-based nature. And static consolidation problem often involves two or more objectives (e.g energy efficiency and migration cost). Secondly,  they can provide near-optimal solutions within a reasonable amount of time.  
 
 In VM-based dynamic problem, 
-% Dynamic consolidation problem requires fast decision-making and global optimization. 
 previous most research proposed human designed greedy-based dispatching rules or heuristics such as a First-Fit-based approach \cite{Bobroff:2007ec}, Modified Best Fit Decreasing \cite{Beloglazov:2012ji}, and a two-stage heuristic \cite{Zhang:2015jm}. One of the major problem for human designed heuristics is that if any inherent component gets changes, then the designed heuristic may not work as it was expected \cite{SoteloFigueroa:2013be}. EC algorithms are also seldom considered in this scenario because most EC methods need more time to search through solutions space.
 
 Only a few research focus on container-based consolidation, Piraghaj \cite{Piraghaj:2016bw} designs a dynamic allocation system. She proposes a two-step procedure; it first maps tasks to VMs and then allocate containers to VMs. As Mann illustrated in \cite{Mann:2016hx},  these two steps should be conducted simultaneously, otherwise it leads to local optimal. Other research \cite{Dong:2014iz, Hindman:2011ux, Anselmi:2008ik} propose greedy-based heuristics on container allocation problem. They can be easily stuck at local optimal. 
-This thesis, therefore, aims at providing an end-to-end solution for Container-based server consolidation which includes three stages: initialization, static container-based server consolidation and dynamic container placement.
+This thesis, therefore, aims at providing an end-to-end solution for Container-based server consolidation which includes three stages correspond with the Cloud resource management procedure (see Figure \ref{fig:management}): initialization, static container-based server consolidation and dynamic container placement.
 
 % Despite the usefulness of server consolidation, it is a difficult task. Traditional server consolidation is conducted manually \cite{Chebiyyam:2009uq} with vast data analysis and interviews with application owners. It is fraught and extremely difficult to reach a global optima state.
 % Later on, server consolidation is often considered as a global optimization problem 
