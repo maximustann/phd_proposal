@@ -4,47 +4,50 @@ The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: sample.bib
-Warning--I didn't find a database entry for "Wen:1991kt"
+Repeated entry---line 656 of file sample.bib
+ : @article{Chaisiri:2012cv
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in Mann:2015ua
-You've used 51 entries,
+You've used 52 entries,
             2253 wiz_defined-function locations,
-            861 strings with 14567 characters,
-and the built_in function-call counts, 18402 in all, are:
-= -- 1782
-> -- 1067
+            867 strings with 14703 characters,
+and the built_in function-call counts, 18679 in all, are:
+= -- 1808
+> -- 1079
 < -- 0
-+ -- 437
-- -- 386
-* -- 1589
-:= -- 3088
-add.period$ -- 151
-call.type$ -- 51
-change.case$ -- 346
++ -- 442
+- -- 390
+* -- 1615
+:= -- 3135
+add.period$ -- 154
+call.type$ -- 52
+change.case$ -- 351
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 520
-empty$ -- 1294
-format.name$ -- 386
-if$ -- 3670
+cite$ -- 53
+duplicate$ -- 529
+empty$ -- 1317
+format.name$ -- 390
+if$ -- 3726
 int.to.chr$ -- 0
-int.to.str$ -- 51
-missing$ -- 49
-newline$ -- 255
-num.names$ -- 102
-pop$ -- 282
+int.to.str$ -- 52
+missing$ -- 50
+newline$ -- 260
+num.names$ -- 104
+pop$ -- 285
 preamble$ -- 1
-purify$ -- 295
+purify$ -- 299
 quote$ -- 0
-skip$ -- 329
+skip$ -- 334
 stack$ -- 0
-substring$ -- 1144
-swap$ -- 130
+substring$ -- 1158
+swap$ -- 132
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 202
+type$ -- 206
 warning$ -- 1
-while$ -- 183
-width$ -- 53
-write$ -- 506
-(There were 2 warnings)
+while$ -- 186
+width$ -- 54
+write$ -- 516
+(There was 1 error message)

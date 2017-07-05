@@ -1,5 +1,5 @@
 \section{Research Goals}
-The overall goal of this thesis is to propose an end-to-end server consolidation approach that considers all three stages: Initialization, Off-line Static Joint Allocation of Container and VM, On-line Dynamic Container Placement Problem. In addition, the static allocation normally involves with large amount of variables which is particular difficult to optimize. We also going to propose a method to solve this problem.  These approaches combine element of AI planning, to ensure the objectives and constraint fulfillment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims to determine a flexible way in which planning and EC can be combined to allow the creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
+The overall goal of this thesis is to propose an end-to-end server consolidation approach that considers all three stages: Initialization, Off-line Static Joint Allocation of Container and VM, On-line Dynamic Container Placement Problem. In addition, the static allocation normally involves with large amount of variables which is particular difficult to optimize. We also going to propose a method to solve this problem.  These approaches combine element of AI planning, to ensure the objectives and constraint fulfillment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims to determine a flexible way in creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
 
 \begin{enumerate}
 	\item The initialization Problem, \\ 
@@ -8,14 +8,16 @@ The overall goal of this thesis is to propose an end-to-end server consolidation
 		\item \emph{Modeling} \\
 		Previous VM-based models do not consider two-level allocation structure, therefore, our first sub problem is to propose a description of model for the initialization problem. In order to achieve this goal, we will first review the related models including VM-based placement models and bi-level optimization models. Furthermore, we are going to consider the differences and design the constraints and other characteristics.
 		\item \emph{Representation} \\
-		Based on this new model, we are going to discover a representation that suitable for this problem.
+		Based on this new model, we are going to develop a representation that suitable for this problem.
 		\item \emph{New operators and searching mechanisms}\\
-		In order to utilize Evolutionary Computation (EC) to solve this problem, we are going to discover searching mechanisms according to the nature of problem. In order to achieve this goal, we will design several new operators.
+		In order to utilize Evolutionary Computation (EC) to solve this problem, we are going to develop searching mechanisms according to the nature of problem. In order to achieve this goal, we will design several new operators. In order to evaluate the quality of these components, we will perform analytical analysis on the result.
 	\end{enumerate}
 
 	\item Off-line Static Joint Allocation of Container and VM Problem, \\
-	A static allocation can be seen as a resource scheduling problem. A schedule is robust if it is able to absorb some degree of uncertainty in tasks duration while maintaining a stable solution \cite{Canon:2010go}. Cloud resource management is a continuous process, after each static allocation, the system should be able to maintain a stable status with the least adjustment. The development of static allocation approach has 
-	three sub-objectives.
+	A static allocation can be seen as a resource scheduling problem. A schedule is robust if it is able to endure some degree of uncertainty while maintaining a stable solution \cite{Canon:2010go}. Cloud resource management is a continuous process, after each static allocation, the system should be able to maintain a stable status with the least adjustment. 
+	The development of static allocation approach has three sub-objectives.
+	In order to measure the degree of robust, we need to design a robustness measure. The second objective is to design static consolidation algorithm with considering its previous result. The third objective extend the second objective to a more general case, considering both previous and next allocation. The evaluation of algorithm is based on analytical analysis of fitness functions and robustness measure. 
+
 	\begin{enumerate}
 		\item \emph{Design a robustness measure} \\
  		Previous studies only use simple measurement which counts the migration number between two static consolidation. This measurement aims at minimizing the number of migration in a static placement process. It may cause more migration in the next consolidation. Therefore, it needs a time-series aware measure of the robustness of system. A data center should be both consolidated as well as robustness after consolidate. Therefore, in this objective, the first sub-problem we are going to solve is to propose a robustness measure.
@@ -28,12 +30,12 @@ The overall goal of this thesis is to propose an end-to-end server consolidation
 
 	\item On-line Dynamic Container Placement Problem with a GP approach,
 	\begin{enumerate}
-		\item Representation \\
-		In order to utilize a hyper-heuristic method such as GP to solve the problem, 
-		the first step is to design a representation. 
 		\item Construct Functional Set and Primitive Set for the problem \\
 		As the basic component of a dispatching rule, primitive set contains the states of environment including: status of VMs, features of workloads. The functional set 
 		contains the operators which combines low level features.
+		\item Representation \\
+		In order to utilize a hyper-heuristic method such as GP to solve the problem, 
+		the first step is to design a representation. 
 		\item Develop GP-based methods for evolving Dispatching rules \\
 		% \item One heuristic can solve all the problem or different heuristics to solve specific problems.
 	\end{enumerate}

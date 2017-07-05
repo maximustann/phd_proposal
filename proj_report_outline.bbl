@@ -264,6 +264,12 @@
 \newblock In {\em 2016 IEEE 9th International Conference on Cloud Computing
   (CLOUD\/} (2016), IEEE, pp.~84--91.
 
+\bibitem{Wen:1991kt}
+{\sc Wen, U.-P., and Hsu, S.-T.}
+\newblock {Linear Bi-Level Programming Problems -- A Review}.
+\newblock {\em The Journal of the Operational Research Society 42}, 2 (Feb.
+  1991), 125.
+
 \bibitem{Xiao:2015ik}
 {\sc Xiao, Z., Jiang, J., Zhu, Y., Ming, Z., Zhong, S.-h., and Cai, S.-B.}
 \newblock {A solution of dynamic VMs placement problem for energy consumption
