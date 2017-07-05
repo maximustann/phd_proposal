@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  5 JUL 2017 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  5 JUL 2017 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -146,11 +146,7 @@ VUW Honours reports modifications -- Mar 1995
 Modified to handle different degrees 2003
 Modified to handle duplex printing properly 2006
 \@abstract=\box30
-) (./proj_report_outline.aux (./introduction.aux
-
-LaTeX Warning: Label `fig:unproportional' multiply defined.
-
-))
+) (./proj_report_outline.aux (./literature_review.aux))
 \openout1 = `proj_report_outline.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -166,7 +162,8 @@ LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 57.
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 (/usr/pkg/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -242,136 +239,59 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 \big@size=\dimen111
-\openout2 = `introduction.aux'.
+\openout2 = `literature_review.aux'.
 
 
-(./introduction.tex
+(./literature_review.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-(./ProblemStatement2.tex
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
+(./background.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-<pics/stakeholders.png, id=1, 660.21657pt x 413.29407pt>
-File: pics/stakeholders.png Graphic file (type png)
-<use pics/stakeholders.png>
-Package pdftex.def Info: pics/stakeholders.png  used on input line 14. on input
- line 14.
-Package pdftex.def Info: Requested size: 308.71104pt x 193.25813pt on input lin
-e 14.
- [1
-
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pics/stakeholders.png>]
-<pics/energyConsumption.png, id=12, 551.81157pt x 339.51843pt>
-File: pics/energyConsumption.png Graphic file (type png)
-<use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png  used on input line 29. on 
-input line 29.
-Package pdftex.def Info: Requested size: 220.50885pt x 135.67545pt on input lin
-e 29.
-<pics/util.png, id=13, 821.0675pt x 583.17876pt>
-File: pics/util.png Graphic file (type png)
-<use pics/util.png>
-Package pdftex.def Info: pics/util.png  used on input line 49. on input line 49
-.
-Package pdftex.def Info: Requested size: 220.50885pt x 156.615pt on input line 
-49.
- [2 <./pics/energyConsumption.png> <./pics/util.png>]
-<pics/consolidate.png, id=19, 762.59906pt x 178.41656pt>
-File: pics/consolidate.png Graphic file (type png)
-<use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 62. on input 
-line 62.
-Package pdftex.def Info: Requested size: 308.71104pt x 72.22563pt on input line
- 62.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 70.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 74.
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
- [3 <./pics/consolidate.png>]
-<pics/resource_management.png, id=24, 1027.84pt x 770.88pt>
-File: pics/resource_management.png Graphic file (type png)
-<use pics/resource_management.png>
-Package pdftex.def Info: pics/resource_management.png  used on input line 84. o
-n input line 84.
-Package pdftex.def Info: Requested size: 352.8155pt x 264.61295pt on input line
- 84.
- [4 <./pics/resource_management.png>]
-<pics/comparison.png, id=30, 504.38437pt x 314.67563pt>
-File: pics/comparison.png Graphic file (type png)
-<use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 102. on input 
-line 102.
-Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
-e 102.
- [5 <./pics/comparison.png>]
-Overfull \hbox (11.04327pt too wide) in paragraph at lines 141--143
-[]\OT1/ppl/m/n/10.95 In VM-based dy-namic prob-lem, pre-vi-ous most re-search p
-ro-posed hu-man de-signed greedy-
- []
-
-[6]) (./Motivation.tex [7]) (./Goals.tex [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
-) (./published.tex) (./organization.tex
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 2.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 4.
 
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 3.
+LaTeX Warning: Reference `C:' on page 1 undefined on input line 4.
+
+)) [1
 
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 4.
 
-Missing character: There is no â in font pplr7t!
-Missing character: There is no € in font pplr7t!
-Missing character: There is no ™ in font pplr7t!
-)) [10] (./proj_report_outline.bbl [11
 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 
 ]
-Underfull \hbox (badness 1783) in paragraph at lines 82--88
-[]\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
-a-man, P. P.,
- []
+(./proj_report_outline.bbl
 
-[12] [13]) [14] (./proj_report_outline.aux (./introduction.aux))
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [3
+
+] (./proj_report_outline.aux (./literature_review.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 3277 strings out of 493675
- 46761 string characters out of 6155645
- 113962 words of memory out of 5000000
- 6554 multiletter control sequences out of 15000+600000
- 14176 words of font info for 37 fonts, out of 8000000 for 9000
+ 3144 strings out of 493675
+ 44606 string characters out of 6155645
+ 107673 words of memory out of 5000000
+ 6448 multiletter control sequences out of 15000+600000
+ 11722 words of font info for 32 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 41i,7n,35p,1000b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,35p,848b,127s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
-/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
-ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-
-Output written on proj_report_outline.pdf (14 pages, 429835 bytes).
+dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1
+/urw/palatino/uplr8a.pfb>
+Output written on proj_report_outline.pdf (3 pages, 31902 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 23 PDF objects out of 1000 (max. 8388607)
+ 15 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
