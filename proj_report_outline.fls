@@ -106,6 +106,8 @@ INPUT background.tex
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
 OUTPUT proj_report_outline.pdf
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
@@ -116,6 +118,8 @@ INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT proj_report_outline.bbl
