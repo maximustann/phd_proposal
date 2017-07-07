@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  6 JUL 2017 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  7 JUL 2017 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -260,13 +260,7 @@ LaTeX Warning: Reference `C:' on page 1 undefined on input line 4.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
 
-LaTeX Warning: Reference `' on page 1 undefined on input line 30.
-
-
-Overfull \hbox (5.83588pt too wide) in paragraph at lines 32--33
-[]\OT1/ppl/m/n/10.95 Infrastructure as a Ser-vice, Cloud provider of-fers the f
-un-da-men-tal com-put-ing re-sources,
- []
+LaTeX Warning: Citation `Wei:2010fn' on page 1 undefined on input line 8.
 
 [1
 
@@ -274,22 +268,37 @@ un-da-men-tal com-put-ing re-sources,
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 41.
+
+
+Overfull \hbox (5.83588pt too wide) in paragraph at lines 43--44
+[]\OT1/ppl/m/n/10.95 Infrastructure as a Ser-vice, Cloud provider of-fers the f
+un-da-men-tal com-put-ing re-sources,
+ []
+
+[2]
 ! Undefined control sequence.
-l.47 \subsecion
-               {Server Consolidation}
+l.58 \subsecion
+               {Energy-aware Resource Management}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)) [2] (./proj_report_outline.bbl
+)
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 12.
+
+) [3] [4
+
+
+] (./proj_report_outline.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [3
-
-
+) [5
 
 ] (./proj_report_outline.aux (./literature_review.aux))
 
@@ -297,20 +306,20 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3149 strings out of 493675
- 44657 string characters out of 6155645
+ 3150 strings out of 493675
+ 44669 string characters out of 6155645
  111673 words of memory out of 5000000
- 6452 multiletter control sequences out of 15000+600000
+ 6453 multiletter control sequences out of 15000+600000
  13138 words of font info for 35 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 41i,6n,35p,848b,194s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,35p,848b,190s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb>
-Output written on proj_report_outline.pdf (3 pages, 40797 bytes).
+Output written on proj_report_outline.pdf (5 pages, 46172 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 15 compressed objects within 1 object stream
+ 29 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

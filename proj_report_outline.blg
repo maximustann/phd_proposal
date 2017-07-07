@@ -3,11 +3,11 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: literature_review.aux
 The style file: acm.bst
-I found no \citation commands---while reading file proj_report_outline.aux
 Database file #1: sample.bib
+Warning--I didn't find a database entry for "Wei:2010fn"
 You've used 0 entries,
             2253 wiz_defined-function locations,
-            528 strings with 3924 characters,
+            530 strings with 3944 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0
@@ -46,4 +46,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 2
-(There was 1 error message)
+(There was 1 warning)
