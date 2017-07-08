@@ -2,24 +2,25 @@
 
 Cloud computing is a computing model offers a network of servers to their 
 clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} 
-To illustrate how it works, considering a case: a web-based application provider deploy applications on Cloud servers through a console as if these servers are at local. As applications start providing services, Cloud will automatically adjusts the capacity of servers in cope with fluctuating requests while the provider only focuses on application development. 
+To illustrate how it works, considering a case: a web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers. 
 
-% To illustrate the benefit of cloud computing, traditional Web-based application providers either build their own data center or rent servers to deploy their applications. Although, providers carefully plan the servers' capacity, static plans often lack resilient to fluctuated requests. In contrast, applications deploying in Cloud data centers can have elastic resource capacity which can fit the request incoming rate.  
+One of the major contributions of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, the stakeholders of Cloud computing become: Cloud provider, Cloud user, and End (application) user \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
 
-Cloud computing has mainly three stakeholders \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}): Cloud provider, Cloud user and End user. \emph{Cloud providers} build data centers, provide maintenance and resource management on the hardware infrastructure. Their income come from Cloud users' rental of servers and Cloud providers' expense include upfront investment, energy consumption, and maintenance. \emph{Cloud users} deploy their applications or services in Cloud. They make profit from selling their services to End users and pay for the resources to Cloud providers.
- % according to the quantity of reserved resources and on-demand resources \cite{Chaisiri:2012cv}. 
- \emph{End users} request and pay for the applications.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/stakeholders.png}
 	\caption{Stakeholders of Cloud computing}
 	\label{fig:stakeholders}
 \end{figure}
+Each stakeholder has their responsibility, goal, and objectives. \emph{Cloud providers} build data centers, provide maintenance and resource management on the hardware infrastructure. Their goal is to increase the profit by boosting the income and reducing the expense. Their income come from Cloud users' rental of servers. Therefore, Cloud providers' first objective is to maximize the income by accommodating more Cloud users in the limited resource data center. Because Cloud providers' expense mainly come from energy consumption of data centers \cite{}, hence, the second objective is to cut the energy consumption. \emph{Cloud users} 
+develop and deploy softwares on Cloud. Their goal is also increase the profit mainly through two objectives, attracting more End users to use their services and reduce the expense of resources. The first objective can be achieved by improving the quality of service as well as lower the fee for End users. Either way depends not only on the software entities but also the quality of service (QoS) from Cloud provider. The second objective can be achieved by a good estimation of the reserved resources, so that they do not suffer from under-provision or over-provision scenarios \cite{}. \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. Their goal is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the behavior of  the service.
 
-Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to web-based software or web service providers.
-First, service providers do not need upfront investment in hardwares (e.g servers and networking devices) and pay for hardwares' maintenance. 
-Second, service providers will not worried about the limited resources will obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, software providers can pay as much as the resource under a \emph{pay-as-you-go} policy.
-Third, service providers can publish and update their applications at any location 
+
+
+Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users.
+First, Cloud users do not need upfront investment in hardwares (e.g servers and networking devices) and pay for hardwares' maintenance. 
+Second, Cloud users will not worried about the limited resources will obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, software providers can pay as much as the resource under a \emph{pay-as-you-go} policy.
+Third, Cloud users can publish and update their applications at any location 
 as long as there is an Internet connection. 
 These advantages allow anyone or organization to deploy their softwares on Cloud in
 a reasonable price. 
@@ -31,11 +32,7 @@ a reasonable price.
 	\label{fig:consumption}
 \end{figure} 
 
-Cloud providers are trying to make the most profit on data centers.
-On one hand, cloud providers are trying to improve the quality of  Cloud service to attract more service providers.
-On the other hand, they want to cut enormous energy consumption 
-- as much as 25,000 households \cite{Kaplan:up01fR-k} - to lower the expense. Energy consumption is the major concern of Cloud providers. It is derived from several parts as 
-illustrated in Figure \ref{fig:consumption}. 
+Energy consumption \cite{Kaplan:up01fR-k} is the major concern of Cloud providers. It is derived from several parts as illustrated in Figure \ref{fig:consumption}. 
 Regardless the energy consumption of refrigeration system (or cooling system), 
 the majority are from servers.
 According to Hameed et al \cite{Hameed:2016cma}, servers are far from energy-efficient. 
