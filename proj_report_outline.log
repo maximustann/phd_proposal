@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  8 JUL 2017 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  9 JUL 2017 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -260,6 +260,12 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 
 LaTeX Warning: Citation `Wei:2010fn' on page 1 undefined on input line 7.
 
+
+Overfull \hbox (0.2399pt too wide) in paragraph at lines 7--8
+\OT1/ppl/m/n/10.95 vices of com-put-ing''. There-fore, stake-hold-ers of Cloud 
+com-put-ing be-come: Cloud providers,
+ []
+
 <pics/stakeholders.png, id=1, 660.21657pt x 413.29407pt>
 File: pics/stakeholders.png Graphic file (type png)
 <use pics/stakeholders.png>
@@ -284,19 +290,19 @@ e 30.
 Underfull \vbox (badness 1072) has occurred while \output is active []
 
  [2 <./pics/energyConsumption.png>]
-<pics/util.png, id=17, 645.16031pt x 500.62032pt>
+<pics/util.png, id=17, 1027.84pt x 770.88pt>
 File: pics/util.png Graphic file (type png)
 <use pics/util.png>
 Package pdftex.def Info: pics/util.png  used on input line 46. on input line 46
 .
-Package pdftex.def Info: Requested size: 220.50885pt x 171.1024pt on input line
- 46.
-<pics/consolidate.png, id=18, 762.59906pt x 178.41656pt>
+Package pdftex.def Info: Requested size: 220.50885pt x 165.38309pt on input lin
+e 46.
+<pics/consolidate.png, id=18, 764.8575pt x 190.46156pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
 Package pdftex.def Info: pics/consolidate.png  used on input line 59. on input 
 line 59.
-Package pdftex.def Info: Requested size: 308.71104pt x 72.22563pt on input line
+Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
  59.
  [3 <./pics/consolidate.png> <./pics/util.png>]
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 71.
@@ -377,7 +383,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on proj_report_outline.pdf (16 pages, 326007 bytes).
+Output written on proj_report_outline.pdf (16 pages, 331508 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

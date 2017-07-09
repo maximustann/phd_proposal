@@ -38,7 +38,7 @@ a continuous optimization procedure with three stages: initialization, off-line 
 
 \begin{enumerate}
 \item The initialization stage is first step in the continuous server consolidation.
-At this stage, a set of applications or containers is allocated to empty VMs and these VMs are allocated to physical servers. This two-step procedure is interconnected, therefore, should be conducted simultaneously. 
+At this stage, a set of applications or containers is allocated to empty VMs and these VMs are allocated to PMs. This two-step procedure is interconnected, therefore, should be conducted simultaneously. 
 % Previous research \cite{Jennings:2015ht} focus on VM-based optimization
 This problem is inherently more difficult than previous VM-based consolidation problem. VM-based consolidation is modeled as bin-packing which is NP-hard. In contrast, container-based consolidation has two levels of bin-packing, this is derived from the problem's nature. Most important, these two levels of problem interact and therefore can not be solved separately. This is the first research that consider server consolidation has a bi-level programming problem \cite{Wen:1991kt}. 
 
@@ -47,7 +47,7 @@ This stage will establish the fundamental concepts in studying the joint allocat
 % This task is challenging, since a representation can highly affect the performance of consolidation \cite{SoteloFigueroa:2013be}. 
 
 \item Dynamic consolidation continuously maintains the data center to a high energy efficiency. 
-It is applied on single container at any time point. As mentioned in previous Chapter, dynamic placement is directly related to consolidation. Therefore, we focus on this question. To solve a dynamic placement with large number of variables, heuristics and dispatching rules are often used \cite{Sarin:2011fu, Shi:2011ke, Forsman:2015ca, Beloglazov:2012ji}.  In this scenario, a dispatching rule is considered as a function that determines the priorities of servers that a container can be placed. However, dynamic placement is much complex than bin-packing problem \cite{Mann:2015ua}. Because of its dynamic nature, human designed heuristics are ill-equipped in approximating solutions when the environment has changed \cite{SoteloFigueroa:2013be}. Multi-objective genetic algorithm (GA) \cite{Xu:2010vh} has been applied. However, GA is too slow for dynamic problem. 
+It is applied on single container at any time point. As mentioned in previous Chapter, dynamic placement is directly related to consolidation. Therefore, we focus on this question. To solve a dynamic placement with large number of variables, heuristics and dispatching rules are often used \cite{Sarin:2011fu, Shi:2011ke, Forsman:2015ca, Beloglazov:2012ji}.  In this scenario, a dispatching rule is considered as a function that determines the priorities of PMs that a container can be placed. However, dynamic placement is much complex than bin-packing problem \cite{Mann:2015ua}. Because of its dynamic nature, human designed heuristics are ill-equipped in approximating solutions when the environment has changed \cite{SoteloFigueroa:2013be}. Multi-objective genetic algorithm (GA) \cite{Xu:2010vh} has been applied. However, GA is too slow for dynamic problem. 
 
 We intend to develop a hyper-heuristic method - Genetic Programming (GP) technique \cite{Banzhaf:1998wc} or artificial immune system \cite{Hofmeyr:2000ju}- to learn from the best previous allocation and automatic evolves dispatching rules to solve this problem. GP has been applied in generating dispatching rules for bin-packing problem \cite{Burke:2006ei, SoteloFigueroa:2013be} and other scheduling problems \cite{Nguyen:2014eu}. The results have shown promising results.
 
@@ -61,7 +61,7 @@ The challenges are three folds, firstly, similar with initialization problem, th
 % 	We intend to apply an EC-based approach to solve this problem by proposing a coevolutionary that simuetiously decide the virtual machine type as well as the allocation of VMs.
 
 
-\item Cloud data center typically has hundreds of thousands servers and more. 
+\item Cloud data center typically has hundreds of thousands PMs and more. 
 	Large scale of static server consolidation has always been a challenge since it takes large amount of variables
 	into consider.
  	Many approaches have been proposed in the literature to resolve the problem. There are mainly two ways, both rely on distributed methods, hierarchical-based \cite{Jung:2010dt, Moens:2011gk} and agent-based management systems \cite{Yazir:2010bk}.
