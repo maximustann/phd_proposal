@@ -9,10 +9,13 @@ Repeated entry---line 656 of file sample.bib
  :                         ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Wei:2010fn"
+Warning--I didn't find a database entry for "CoffmanJr:1996ui"
+Warning--I didn't find a database entry for "Clark:2005uda"
+Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
 Warning--empty journal in Mann:2015ua
 You've used 52 entries,
             2253 wiz_defined-function locations,
-            869 strings with 14723 characters,
+            875 strings with 14813 characters,
 and the built_in function-call counts, 18679 in all, are:
 = -- 1808
 > -- 1079

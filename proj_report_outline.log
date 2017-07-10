@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  9 JUL 2017 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  10 JUL 2017 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,12 +266,12 @@ Overfull \hbox (0.2399pt too wide) in paragraph at lines 7--8
 com-put-ing be-come: Cloud providers,
  []
 
-<pics/stakeholders.png, id=1, 660.21657pt x 413.29407pt>
+<pics/stakeholders.png, id=1, 899.36pt x 554.07pt>
 File: pics/stakeholders.png Graphic file (type png)
 <use pics/stakeholders.png>
 Package pdftex.def Info: pics/stakeholders.png  used on input line 11. on input
  line 11.
-Package pdftex.def Info: Requested size: 308.71104pt x 193.25813pt on input lin
+Package pdftex.def Info: Requested size: 308.71104pt x 190.19055pt on input lin
 e 11.
 [1
 
@@ -279,79 +279,114 @@ e 11.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pics/stakeholders.png>]
-<pics/energyConsumption.png, id=12, 458.46281pt x 461.47406pt>
-File: pics/energyConsumption.png Graphic file (type png)
-<use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png  used on input line 30. on 
-input line 30.
-Package pdftex.def Info: Requested size: 220.50885pt x 221.95567pt on input lin
-e 30.
-
-Underfull \vbox (badness 1072) has occurred while \output is active []
-
- [2 <./pics/energyConsumption.png>]
-<pics/util.png, id=17, 1027.84pt x 770.88pt>
-File: pics/util.png Graphic file (type png)
-<use pics/util.png>
-Package pdftex.def Info: pics/util.png  used on input line 46. on input line 46
-.
-Package pdftex.def Info: Requested size: 220.50885pt x 165.38309pt on input lin
-e 46.
-<pics/consolidate.png, id=18, 764.8575pt x 190.46156pt>
-File: pics/consolidate.png Graphic file (type png)
-<use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 59. on input 
-line 59.
-Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
- 59.
- [3 <./pics/consolidate.png> <./pics/util.png>]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 71.
-
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 17.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
-<pics/resource_management.png, id=24, 1027.84pt x 770.88pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+<pics/energyConsumption.png, id=12, 458.46281pt x 461.47406pt>
+File: pics/energyConsumption.png Graphic file (type png)
+<use pics/energyConsumption.png>
+Package pdftex.def Info: pics/energyConsumption.png  used on input line 34. on 
+input line 34.
+Package pdftex.def Info: Requested size: 220.50885pt x 221.95567pt on input lin
+e 34.
+<pics/util.png, id=13, 1027.84pt x 770.88pt>
+File: pics/util.png Graphic file (type png)
+<use pics/util.png>
+Package pdftex.def Info: pics/util.png  used on input line 50. on input line 50
+.
+Package pdftex.def Info: Requested size: 220.50885pt x 165.38309pt on input lin
+e 50.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+<pics/consolidate.png, id=18, 764.8575pt x 190.46156pt>
+File: pics/consolidate.png Graphic file (type png)
+<use pics/consolidate.png>
+Package pdftex.def Info: pics/consolidate.png  used on input line 64. on input 
+line 64.
+Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
+ 64.
+
+[3 <./pics/energyConsumption.png> <./pics/util.png>]
+
+LaTeX Warning: Citation `CoffmanJr:1996ui' on page 4 undefined on input line 75
+.
+
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 79.
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 79.
+
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 79.
+
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 79.
+
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+
+LaTeX Warning: Citation `Clark:2005uda' on page 4 undefined on input line 82.
+
+[4 <./pics/consolidate.png>]
+
+LaTeX Warning: Citation `Borodin:uQcy_H6C' on page 5 undefined on input line 96
+.
+
+<pics/resource_management.png, id=28, 1027.84pt x 770.88pt>
 File: pics/resource_management.png Graphic file (type png)
 <use pics/resource_management.png>
-Package pdftex.def Info: pics/resource_management.png  used on input line 81. o
-n input line 81.
+Package pdftex.def Info: pics/resource_management.png  used on input line 104. 
+on input line 104.
 Package pdftex.def Info: Requested size: 352.8155pt x 264.61295pt on input line
- 81.
- [4]
-<pics/comparison.png, id=29, 504.38437pt x 314.67563pt>
+ 104.
+[5 <./pics/resource_management.png>]
+<pics/comparison.png, id=33, 504.38437pt x 314.67563pt>
 File: pics/comparison.png Graphic file (type png)
 <use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 99. on input l
-ine 99.
+Package pdftex.def Info: pics/comparison.png  used on input line 122. on input 
+line 122.
 Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
-e 99.
- [5 <./pics/resource_management.png>] [6 <./pics/comparison.png>]
-Overfull \hbox (11.04327pt too wide) in paragraph at lines 138--140
+e 122.
+ [6 <./pics/comparison.png>]
+Overfull \hbox (11.04327pt too wide) in paragraph at lines 161--163
 []\OT1/ppl/m/n/10.95 In VM-based dy-namic prob-lem, pre-vi-ous most re-search p
 ro-posed hu-man de-signed greedy-
  []
 
-) (./Motivation.tex [7] [8]) (./Goals.tex [9]
+[7]) (./Motivation.tex [8]) (./Goals.tex [9] [10]
 Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
 ) (./published.tex) (./organization.tex
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 2.
+LaTeX Warning: Reference `' on page 11 undefined on input line 2.
 
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 3.
+LaTeX Warning: Reference `' on page 11 undefined on input line 3.
 
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 4.
+LaTeX Warning: Reference `' on page 11 undefined on input line 4.
 
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-) [10]) [11] [12
+)) [11] [12
 
 
 ] (./proj_report_outline.bbl [13
@@ -371,19 +406,19 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3278 strings out of 493675
- 46773 string characters out of 6155645
+ 3338 strings out of 493675
+ 47834 string characters out of 6155645
  113962 words of memory out of 5000000
- 6555 multiletter control sequences out of 15000+600000
- 14176 words of font info for 37 fonts, out of 8000000 for 9000
+ 6597 multiletter control sequences out of 15000+600000
+ 20048 words of font info for 53 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 41i,6n,35p,1000b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,35p,982b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on proj_report_outline.pdf (16 pages, 331508 bytes).
+Output written on proj_report_outline.pdf (16 pages, 333455 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

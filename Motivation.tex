@@ -34,11 +34,11 @@
 
 % \subsection{Motivation For Research objectives}
 The container-based consolidation problem, similar to VM-based consolidation, can be seen as 
-a continuous optimization procedure with three stages: initialization, off-line static joint allocation of container and VM, and on-line dynamic consolidation. Different stages have distinctive goals, therefore, they are considered as separated research questions. In this thesis, we aims at providing an end-to-end solution to all three problems. In addition, a scalability problem of static optimization is considered as an optional objective.
+a continuous optimization procedure with three stages: initialization, global joint allocation of container and VM, and container-based dynamic placement. Different stages have distinctive goals, therefore, they are considered as separated research questions. In this thesis, we aims at providing an end-to-end solution to all three problems. In addition, a scalability problem of static optimization is considered as an optional objective.
 
 \begin{enumerate}
-\item The initialization stage is first step in the continuous server consolidation.
-At this stage, a set of applications or containers is allocated to empty VMs and these VMs are allocated to PMs. This two-step procedure is interconnected, therefore, should be conducted simultaneously. 
+\item The initialization,
+at this stage, a set of applications or containers is allocated to a set of empty VMs and these VMs are allocated to a set of PMs. This two-step procedure is interconnected meaning the results of first level of allocation affects the second level of allocation. Therefore, both allocations should be conducted simultaneously. 
 % Previous research \cite{Jennings:2015ht} focus on VM-based optimization
 This problem is inherently more difficult than previous VM-based consolidation problem. VM-based consolidation is modeled as bin-packing which is NP-hard. In contrast, container-based consolidation has two levels of bin-packing, this is derived from the problem's nature. Most important, these two levels of problem interact and therefore can not be solved separately. This is the first research that consider server consolidation has a bi-level programming problem \cite{Wen:1991kt}. 
 

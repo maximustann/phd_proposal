@@ -4,7 +4,7 @@ Cloud computing is a computing model offering a network of PMs to their
 clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, PMs, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} 
 To illustrate how it works, considering a case: a Cloud provider builds a data center which contains thousands of servers connected with network. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these servers from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers. 
 
-One of the major contributions of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
+One of the major characteristic of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
 
 \begin{figure}[H]
 	\centering
@@ -12,10 +12,14 @@ One of the major contributions of Cloud computing is to separates the role of tr
 	\caption{Stakeholders of Cloud computing}
 	\label{fig:stakeholders}
 \end{figure}
-Each stakeholder has their responsibility, goal, and objectives. \emph{Cloud providers} build data centers, provide maintenance and resource management on the hardware infrastructure. Their goal is to increase the profit by boosting the income and reducing the expense. Their income come from Cloud users' rental of servers or \emph{Physical Machines (PMs)}. Therefore, Cloud providers' first objective is to maximize the income by accommodating more applications in the limited resource data center. Because Cloud providers' expense mainly come from energy consumption of data centers \cite{}, hence, the second objective is to cut the energy consumption. \emph{Cloud users} 
-develop and deploy softwares on Cloud. Their goal is also increase the profit mainly through two objectives, attracting more End users and reduce the expense of resources. The first objective can be achieved by improving the quality of service as well as lower the fee for End users. Either way depends not only on the software entities but also the quality of service (QoS) from Cloud provider. The second objective can be achieved by a good estimation of the reserved resources, so that they do not suffer from under-provision or over-provision scenarios \cite{}. \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. Their goal is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the behavior of  the service.
+Each stakeholder has their responsibility, goal, and objectives. 
+\begin{itemize}
+	\item \emph{Cloud providers} build data centers, provide maintenance and resource management on the hardware infrastructure. Their goal is to increase the profit by boosting the income and reducing the expense. Their income comes from Cloud users' rental of servers or \emph{Physical Machines (PMs)} in terms of resource quality (e.g  3.5GHz dual-core CPU), resource quantity (e.g 3 PMs), and time (e.g 1 year). Therefore, Cloud providers objective is to maximize utilization of computing resources. A high utilization brings two benefits, firstly, it increases income by accommodating more applications in limited resources. Secondly, it cuts the expense of energy consumption by packing applications in a minimum number of servers so that idle servers can be turned off. 	
+	\item \emph{Cloud users} develop and deploy applications on Cloud. Each application generates time-vary CPU utilization. Their goal is also increase the profit mainly through two objectives, attracting more End users and reduce the expense of resources. The first objective can be achieved by improving the quality of service as well as lower the fee for End users. Either way depends not only on the software entities but also the quality of service (QoS) offered by Cloud provider. The second objective can be achieved by a good estimation of the reserved resources, so that they do not rent insufficient resources which cause low QoS or rent too much resources which cause wastage.
+	\item \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. Their goal is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the behavior of  the services.
+\end{itemize}
 
-
+In this proposal, we focus on Cloud providers' perspective which is to reduce the energy consumption in Cloud data centers by providing a series of methods to improve the overall resource utilization.
 
 Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users.
 First, Cloud users do not need upfront investment in hardwares (e.g PMs and networking devices) and pay for hardwares' maintenance. 
@@ -33,7 +37,7 @@ a reasonable price.
 \end{figure} 
 
 Energy consumption \cite{Kaplan:up01fR-k} is the major concern of Cloud providers. It is derived from several parts as illustrated in Figure \ref{fig:consumption}. 
-Regardless the energy consumption of refrigeration system (or cooling system), 
+Regardless the energy consumption of cooling system, 
 the majority are from PMs.
 According to Hameed et al \cite{Hameed:2016cma}, PMs are far from energy-efficient. 
 The main reason for the wastage is that the energy consumption of PMs remains high even when the utilization are low (see Figure \ref{fig:unproportional}). 
@@ -52,7 +56,8 @@ Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.
 
 
 
-Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by gathering applications into a fewer number of PMs (see Figure \ref{fig:unproportional}), so that the resource utilization of PMs are maintained at a high level and the idle PM can be turned off to save energy. Consolidation dramatically improves hardware utilization and lowers PM and cooling energy consumption. 
+Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by gathering applications into a fewer number of PMs (see Figure \ref{fig:unproportional}), so that the resource utilization of PMs are maintained at a high level and the idle PMs can be turned off to save energy. Consolidation dramatically improves hardware utilization and lowers PM and cooling energy consumption. 
+
 
 \begin{figure}
 	\centering
@@ -61,26 +66,36 @@ Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by
 	\label{fig:unproportional}
 \end{figure} 
 
-Server consolidation is the core functionality involving in all Cloud resource management operations. These operations can be roughly separated into three \cite{Svard:2015ic, Mishra:2012kx} (see Figure \ref{fig:management}) which are applied in different scenarios: Application initialization, Dynamic resource management, and global consolidation. 
+Server consolidation is the core functionality involving in all Cloud resource management operations. These operations can be roughly separated into three \cite{Svard:2015ic, Mishra:2012kx} (see Figure \ref{fig:management}) which are applied in different scenarios: Application initialization, global consolidation, and Dynamic resource management. 
 
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of cancelling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
 \begin{enumerate}
-	\item \emph{Application initialization} is applied when new applications or new VMs request for provisioning. Initially, a set of applications or VMs are waiting in a queue. Then, the allocation system must select a minimum number of PMs to accommodate them so that after the allocation, the energy efficiency remains high. The problem is to consider the different combinations of groups so that the total energy consumption is minimum. This problem is naturally modeled as a static bin-packing problem \cite{CoffmanJr:1996ui} which is a NP-hard problem meaning it is unlikely to find an optimal solution of a large problem. 
+	\item \emph{Application initialization} is applied when new applications or new VMs arrive and the problem is to allocate them into a minimum number of PMs.
 
-	\item A \emph{global consolidation} is conducted periodically to improve the global energy efficiency. A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Therefore, after the initial allocation, the energy efficiency is likely to drop along with time elapsing. In global consolidation, an optimization system takes the current allocation - including a list of applications/VMs allocated in a list of PMs -  in data center as the input, adjust its allocation so that the global energy consumption remains high.
+	In this problem, a set of applications or VMs are waiting in a queue. The resource capacity of the PM and usage by applications are characterized by a vector of resource utilizations including CPU, memory and etc. Then, the allocation system must select a minimum number of PMs to accommodate them so that after the allocation, the resource utilizations remain high. The problem is to consider the different combinations of applications so that the overall resource utilization is high. This problem is naturally modeled as a static bin-packing problem \cite{CoffmanJr:1996ui} which is a NP-hard problem meaning it is unlikely to find an optimal solution of a large problem. 
 
-	In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005uda}, and it is a very expensive operation. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization difficult.
+	\item \emph{Global consolidation} is conducted periodically to adjust the current allocation of applications so that the overall utilization is improved.
+
+	In this problem, time is discrete and it can be split into basic time frames such as ten seconds. A periodical operation is conducted in every $N$ time frames.
+	A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Releasing applications cause hollow in PMs; new arrivals cannot change the structure of current allocation. Therefore, after the initial allocation, the overall energy efficiency is likely to drop along with time elapsing. In global consolidation, an optimization system takes the current allocation - including a list of applications/VMs and a list of PMs -  as the input, adjust its allocation so that the global resource utilization is improved.
+
+	In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005uda}, and it is a very expensive operation because it occupies the resources in both the host and the target. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization even difficult.
 
 % In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
-	\item \emph{Dynamic resource management} is applied in three scenarios. \textbf{First},  it is applied when a PM is overloading. Overloading is often caused by increasing of workload. In order to prevent the Quality of Service (QoS) dropping, an application is migrated to another PM. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, it is applied when a PM is under-loading. Under-loading is when a PM in a low utilization state normally defined by a static threshold. At this moment, all the applications inside that PM are migrated to other active PMs. This is called dynamic consolidation. \textbf{Third}, it is applied when a PM having very high level of utilization while others having low. An adjustment is to migrate one or more application from high utilized PMs to low ones. This is called load balancing.
+	\item \emph{Dynamic resource management} 
+ 	Dynamic resource management is applied in three scenarios. \textbf{First},  it is applied when a PM is overloading. Overloading is often caused by increasing of workload. In order to prevent the Quality of Service (QoS) dropping, an application is migrated to another PM. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, it is applied when a PM is under-loading. Under-loading is when a PM in a low utilization state normally defined by a threshold. At this moment, all the applications inside that PM are migrated to other active PMs. This is called dynamic consolidation. \textbf{Third}, it is applied when a PM having very high level of utilization while others having low. An adjustment is to migrate one or more application from high utilized PMs to low ones. This is called load balancing.
 
 	No matter which scenario it is, a dynamic resource management always involves three steps . 
 	\begin{itemize}
 		\item \emph{When to migrate?} refers to determine the time point that a PM is overloaded or underloaded. It is often decide by a threshold of utilization.
-		\item \emph{Which container to migrate?} refers to determine which application need to be migrated so that it optimize the global energy consumption.
-		\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement.
+		\item \emph{Which application to migrate?} refers to determine which application need to be migrated so that it optimize the global energy consumption.
+		\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement which is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. 
 	\end{itemize}
-	Among three steps, Dynamic placement is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. There are two difficulties in this operation, firstly, dynamic placement requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
+
+	Among three operations, dynamic placement is a dynamic and on-line problem.
+	The term ``dynamic'' means the request comes at an arbitrary time point. An on-line problem is a problem which has on-line input and requires on-line output \cite{Borodin:uQcy_H6C}. It is applied when a control system does not have the complete knowledge of future events.
+
+	There are two difficulties in this operation, firstly, dynamic placement requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
 
 \end{enumerate}
 
@@ -130,7 +145,7 @@ In addition, IaaS Cloud runs many redundant operating systems and hypervisors. C
 
 \vspace{10mm}
 
-Currently, vast amount of server consolidation methods are mostly VM-based and they are mainly modeled as bin-packing problems \cite{Mann:2015ua}, where applications represent items and PMs represent bins. These methods can not be directly applied on Container-based problem because container-based consolidation has two levels of allocation: Containers are allocated to VM as the first level and VM are allocated to PM as the second level. These two levels of allocation interact with each other. 
+Currently, vast amount of server consolidation methods are mostly VM-based and they are mainly modeled as bin-packing problems \cite{Mann:2015ua}, where applications represent items and PMs represent bins. These methods can not be directly applied on container-based problem because container-based consolidation has two levels of allocation: Containers are allocated to VM as the first level and VM are allocated to PM as the second level. These two levels of allocation interact with each other. 
 
 Even for single level of bin-packing problems, the complexity is NP-hard .
 In VM-based static problem, deterministic methods such as  
