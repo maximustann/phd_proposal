@@ -23,7 +23,7 @@ In this proposal, we focus on Cloud providers' perspective which is to reduce th
 
 Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users.
 First, Cloud users do not need upfront investment in hardwares (e.g PMs and networking devices) and pay for hardwares' maintenance. 
-Second, Cloud users will not worried about the limited resources will obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, software providers can pay as much as the resource under a \emph{pay-as-you-go} policy.
+Second, Cloud users do not need to worry about the limited resources which can obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, software providers can pay as much as the resource under a \emph{pay-as-you-go} policy.
 Third, Cloud users can publish and update their applications at any location 
 as long as there is an Internet connection. 
 These advantages allow anyone or organization to deploy their softwares on Cloud in
@@ -52,7 +52,7 @@ using virtualization technology to achieve server consolidation.
 	\label{fig:unproportional}
 \end{figure} 
 
-Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on them. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing. VMs can provide good isolation which means applications running in co-located VMs within the same PM do not interfere each other \cite{Somani:2009ho}.  Soon, people realized it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later after, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
+Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on it. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing. VMs can provide good isolation which means applications running in co-located VMs within the same PM do not interfere each other \cite{Somani:2009ho}.  Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
 
 
 
@@ -62,11 +62,11 @@ Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/consolidate.png}
-	\caption{Server Consolidation by migrating VM 2 to PM A \cite{Barroso:2007jt}}
+	\caption{A Server Consolidation example: Initially, each PM runs an application wrapped with a VM in a low resource utilization state. After the consolidation, both VMs are running on PM A, so that PM B is turned off to save energy \cite{Barroso:2007jt}.}
 	\label{fig:unproportional}
 \end{figure} 
 
-Server consolidation is the core functionality involving in all Cloud resource management operations. These operations can be roughly separated into three \cite{Svard:2015ic, Mishra:2012kx} (see Figure \ref{fig:management}) which are applied in different scenarios: Application initialization, global consolidation, and Dynamic resource management. 
+Server consolidation is the core functionality involving in all Cloud resource management operations. These operations can be roughly separated into three \cite{Svard:2015ic, Mishra:2012kx} (see Figure \ref{fig:management}) which are applied in different scenarios: Application initialization, Global consolidation, and Dynamic resource management. 
 
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of cancelling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
 \begin{enumerate}
@@ -76,14 +76,14 @@ Server consolidation is the core functionality involving in all Cloud resource m
 
 	\item \emph{Global consolidation} is conducted periodically to adjust the current allocation of applications so that the overall utilization is improved.
 
-	In this problem, time is discrete and it can be split into basic time frames such as ten seconds. A periodical operation is conducted in every $N$ time frames.
+	In this problem, time is discrete and it can be split into basic time frames, for example: ten seconds. A periodical operation is conducted in every $N$ time frames.
 	A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Releasing applications cause hollow in PMs; new arrivals cannot change the structure of current allocation. Therefore, after the initial allocation, the overall energy efficiency is likely to drop along with time elapsing. In global consolidation, an optimization system takes the current allocation - including a list of applications/VMs and a list of PMs -  as the input, adjust its allocation so that the global resource utilization is improved.
 
 	In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005uda}, and it is a very expensive operation because it occupies the resources in both the host and the target. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization even difficult.
 
 % In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
 	\item \emph{Dynamic resource management} 
- 	Dynamic resource management is applied in three scenarios. \textbf{First},  it is applied when a PM is overloading. Overloading is often caused by increasing of workload. In order to prevent the Quality of Service (QoS) dropping, an application is migrated to another PM. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, it is applied when a PM is under-loading. Under-loading is when a PM in a low utilization state normally defined by a threshold. At this moment, all the applications inside that PM are migrated to other active PMs. This is called dynamic consolidation. \textbf{Third}, it is applied when a PM having very high level of utilization while others having low. An adjustment is to migrate one or more application from high utilized PMs to low ones. This is called load balancing.
+ 	Dynamic resource management is applied in three scenarios. \textbf{First},  it is applied when a PM is overloading. Overloading is defined as, one of the resources' consumption exceeds the PM's capacity. At this moment, the applications in that PM are suffering from a Quality of Service (QoS) degradation which means their performance cannot meet the agreement because of the limited resources. Overloading is often caused by the increasing of workload. In order to prevent the QoS from dropping, an application is migrated to another PM. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, it is applied when a PM is under-loading. Under-loading is when a PM in a low utilization state normally defined by a threshold. At this moment, all the applications inside that PM are migrated to other active PMs. This is called dynamic consolidation. \textbf{Third}, it is applied when a PM having very high level of utilization while others having low. An adjustment is to migrate one or more application from high utilized PMs to low ones. This is called load balancing.
 
 	No matter which scenario it is, a dynamic resource management always involves three steps . 
 	\begin{itemize}
