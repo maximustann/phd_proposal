@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  11 JUL 2017 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  11 JUL 2017 21:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -328,88 +328,84 @@ e 34.
 <pics/energyConsumption.png, id=20, 458.46281pt x 461.47406pt>
 File: pics/energyConsumption.png Graphic file (type png)
 <use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png  used on input line 61. on 
-input line 61.
+Package pdftex.def Info: pics/energyConsumption.png  used on input line 59. on 
+input line 59.
 Package pdftex.def Info: Requested size: 220.50885pt x 221.95567pt on input lin
-e 61.
+e 59.
 <pics/util.png, id=21, 1027.84pt x 770.88pt>
 File: pics/util.png Graphic file (type png)
 <use pics/util.png>
-Package pdftex.def Info: pics/util.png  used on input line 78. on input line 78
+Package pdftex.def Info: pics/util.png  used on input line 76. on input line 76
 .
 Package pdftex.def Info: Requested size: 220.50885pt x 165.38309pt on input lin
-e 78.
+e 76.
  [3 <./pics/energyConsumption.png>]
 <pics/consolidate.png, id=26, 764.8575pt x 190.46156pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 92. on input 
-line 92.
+Package pdftex.def Info: pics/consolidate.png  used on input line 90. on input 
+line 90.
 Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
- 92.
+ 90.
 
 
 LaTeX Warning: Citation `CoffmanJr:1996ui' on page 4 undefined on input line 10
-3.
+1.
 
 [4 <./pics/consolidate.png> <./pics/util.png>]
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 107
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 105
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 107
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 105
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 107
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 105
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 107
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 105
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 
-LaTeX Warning: Citation `Clark:2005uda' on page 5 undefined on input line 110.
+LaTeX Warning: Citation `Clark:2005uda' on page 5 undefined on input line 108.
 
 
 LaTeX Warning: Citation `Borodin:uQcy_H6C' on page 5 undefined on input line 12
-4.
+2.
 
 [5]
 <pics/resource_management.png, id=35, 1027.84pt x 770.88pt>
 File: pics/resource_management.png Graphic file (type png)
 <use pics/resource_management.png>
-Package pdftex.def Info: pics/resource_management.png  used on input line 132. 
-on input line 132.
+Package pdftex.def Info: pics/resource_management.png  used on input line 130. 
+on input line 130.
 Package pdftex.def Info: Requested size: 352.8155pt x 264.61295pt on input line
- 132.
+ 130.
 <pics/comparison.png, id=36, 504.38437pt x 314.67563pt>
 File: pics/comparison.png Graphic file (type png)
 <use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 150. on input 
-line 150.
+Package pdftex.def Info: pics/comparison.png  used on input line 148. on input 
+line 148.
 Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
-e 150.
+e 148.
  [6 <./pics/resource_management.png>] [7 <./pics/comparison.png>]
-Overfull \hbox (11.04327pt too wide) in paragraph at lines 193--195
+Overfull \hbox (11.04327pt too wide) in paragraph at lines 194--196
 []\OT1/ppl/m/n/10.95 In VM-based dy-namic prob-lem, pre-vi-ous most re-search p
 ro-posed hu-man de-signed greedy-
  []
 
-) (./Motivation.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-[9]) (./Goals.tex [10] [11]
+[8]) (./Motivation.tex [9]) (./Goals.tex [10] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
@@ -458,7 +454,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on proj_report_outline.pdf (16 pages, 393116 bytes).
+Output written on proj_report_outline.pdf (16 pages, 393737 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
