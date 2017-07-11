@@ -34,7 +34,7 @@ Each service model describes distinct responsibilities of stakeholders and the r
 		\includegraphics[width=\textwidth]{pics/paas.png}
 	\caption{}
 	\end{subfigure}
-	\caption{Three Service models}
+	\caption{Three Service models \cite{Jennings:2015ht}}
 	\label{fig:service_models}
 \end{figure}
 
@@ -45,8 +45,6 @@ Each service model describes distinct responsibilities of stakeholders and the r
   	
   	\item \emph{SaaS} only describes the relationship between Cloud user and End User, therefore, it does not involve with resource management. Cloud users deploy their applications in Cloud which can be accessed by End Users. 
 \end{itemize}
-
-
 
 Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users.
 First, Cloud users do not need upfront investment in hardwares (e.g PMs and networking devices) and pay for hardwares' maintenance. 
@@ -152,10 +150,17 @@ By the nature of Cloud resource management, server consolidation techniques can 
 	\label{fig:comparison}
 \end{figure}
 
+Resource management strategies are very different in IaaS and PaaS. In IaaS, Cloud users are responsible for the estimation of resources which is represented as fixed types of VMs and Cloud providers based on the size of VMs to consolidate them into fewer PMs. This strategy has two inherent flaws which lower the resource utilization.
+
+\begin{itemize}
+	\item First one is the separated responsibilities of resource selection for applications and resource allocation. Because of separated responsibilities, Cloud users must estimate the quantity of resources. They tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv}. This causes the low utilization.
+	\item Second is the fixed types of VMs, where each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage). Because of the fixed size of VM and the one-on-one mapping of applications and VMs (see Figure \ref{fig:comparison} left hand-side), specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This causes wastage.
+\end{itemize}
+
+Traditionally, \emph{overbooking} strategy is used to improve the resource utilization in IaaS. 
+Overbooking \cite{Tomas:2013iv} or oversubscribe is strategy to allocate more VMs in a PM even their aggregated resources exceed the PM's capacity. This strategy aims at solving the problem of over-provisioned VMs. The advantage of this approach is it consolidates more VMs in PMs and, indeed, improved the resource utilization. The disadvantages are also obvious: An overbooked PM is easy to suffer from overloading which is its capacity cannot satisfied the required requests. 
 
 
-
-Besides SaaS which only describes the relationship between Cloud users and End users, PaaS and IaaS have distinct strategies in resource management
 In recent years, virtualization technology has evolved to allow finer granularity resource management.
 A recent development of Container technique \cite{Soltesz:2007cu} has driven the attention of both industrial and academia.
 Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison} right-hand side). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
@@ -163,12 +168,8 @@ This new concept starts a new service model called Container as a Service (CaaS)
 From Cloud users' perspective, CaaS has advantages of both IaaS (Infrastructure as a Service) and PaaS (Platform as a Service) but without their disadvantages. On one hand - similar to PaaS - it does not require Cloud users to estimate the quantity of resources so that they can focus on application development. On the other hand - similar to IaaS - it allows Cloud users to customize their software environment without being constrained by platforms. 
 
 For Cloud provides, CaaS resolves two IaaS's inherent weaknesses which cause low utilization of resources.
-IaaS's weaknesses come from two mechanisms: the separated responsibilities of resource selection for applications and resource allocation; The fixed types of VMs, where each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage). 
-\begin{itemize}
-	\item Firstly, because of separated responsibilities, customers must estimate the quantity of resources. They tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv}. This causes the low utilization.
-	\item Secondly, because of the fixed size of VM and the one-on-one mapping of applications and VMs (see Figure \ref{fig:comparison} left hand-side), specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating.
-	This causes wastage.
-\end{itemize}
+
+
 
 In contrast, CaaS solves above two problems at a time. It allows Cloud providers to manage both the resource selection for applications and resource allocation; It also enables VM-resizing and many-to-one mapping between applications to VMs (Figure \ref{fig:comparison} right hand-side).
 Hence, Cloud providers have a complete control of resources which may result in a better utilization of resources. 
