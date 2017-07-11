@@ -2,7 +2,7 @@
 
 Cloud computing is a computing model offering a network of PMs to their 
 clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, PMs, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} 
-To illustrate how it works, considering a case: a Cloud provider builds a data center which contains thousands of servers connected with network. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these servers from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers. 
+To illustrate how it works, considering a case: a Cloud provider builds a data center which contains thousands of servers connected with network. These servers are virtualized which means they are partitioned into a smaller unit of resources called \emph{Virtual Machines (VMs)}. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these VMs from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers. 
 
 One of the major characteristic of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
 
@@ -20,6 +20,33 @@ Each stakeholder has their responsibility, goal, and objectives.
 \end{itemize}
 
 In this proposal, we focus on Cloud providers' perspective which is to reduce the energy consumption in Cloud data centers by providing a series of methods to improve the overall resource utilization.
+
+Besides the stakeholders of Cloud computing, Cloud computing has three service models \cite{Mell:2011jj} (see Figure \ref{fig:service_models}): Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). 
+Each service model describes distinct responsibilities of stakeholders and the resource management strategies are also different.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{pics/iaas.png}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{pics/paas.png}
+	\caption{}
+	\end{subfigure}
+	\caption{Three Service models}
+	\label{fig:service_models}
+\end{figure}
+
+\begin{itemize}
+ 	\item \emph{IaaS}, Cloud provider offers the fundamental computing resources, often in the form of various sizes of VMs. Apart from the virtualized hardware and operating systems, Cloud users treat the remote VMs as local and deploy their applications. In terms of resource management, Cloud users have the responsibility to estimate the quantity of resources, while Cloud providers have no knowledge and control inside VMs, resource management is based on VM. 
+  	
+  	\item \emph{PaaS}, Cloud providers establish the software development platform to enable the in-progress software to be developed in the platform.  The main difference between PaaS and IaaS is that, in PaaS, Cloud providers have the full control of resource allocation. Therefore, Cloud users can focus on software development.
+  	
+  	\item \emph{SaaS} only describes the relationship between Cloud user and End User, therefore, it does not involve with resource management. Cloud users deploy their applications in Cloud which can be accessed by End Users. 
+\end{itemize}
+
+
 
 Cloud computing has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users.
 First, Cloud users do not need upfront investment in hardwares (e.g PMs and networking devices) and pay for hardwares' maintenance. 
@@ -41,9 +68,10 @@ Regardless the energy consumption of cooling system,
 the majority are from PMs.
 According to Hameed et al \cite{Hameed:2016cma}, PMs are far from energy-efficient. 
 The main reason for the wastage is that the energy consumption of PMs remains high even when the utilization are low (see Figure \ref{fig:unproportional}). 
-Therefore, a concept of
-\emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. This leads to 
-the virtualization technology.
+Therefore, a concept of \emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. 
+The solution comes two important aspects:  Virtualization technology and resource management strategies. 
+
+
 
 \begin{figure}[H]
 	\centering
@@ -52,8 +80,8 @@ the virtualization technology.
 	\label{fig:unproportional}
 \end{figure} 
 
-Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on it. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing. VMs can provide good isolation which means applications running in co-located VMs within the same PM do not interfere each other \cite{Somani:2009ho}.  Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
 
+Virtualization \cite{Uhlig:2005do} is the fundamental technology that enables Cloud computing. It partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on it. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing. VMs can provide good isolation which means applications running in co-located VMs within the same PM do not interfere each other \cite{Somani:2009ho}.  Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
 
 
 Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by gathering applications into a fewer number of PMs (see Figure \ref{fig:unproportional}), so that the resource utilization of PMs are maintained at a high level and the idle PMs can be turned off to save energy. Consolidation dramatically improves hardware utilization and lowers PM and cooling energy consumption. 
@@ -124,6 +152,10 @@ By the nature of Cloud resource management, server consolidation techniques can 
 	\label{fig:comparison}
 \end{figure}
 
+
+
+
+Besides SaaS which only describes the relationship between Cloud users and End users, PaaS and IaaS have distinct strategies in resource management
 In recent years, virtualization technology has evolved to allow finer granularity resource management.
 A recent development of Container technique \cite{Soltesz:2007cu} has driven the attention of both industrial and academia.
 Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison} right-hand side). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
