@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.29)  7 JUL 2017 15:13
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  11 JUL 2017 20:29
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -115,10 +119,40 @@ File: pppdftex.def 2015/05/11 v0.4x Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count93
 \AM@templatesizebox=\box29
 )
+<<<<<<< HEAD
 \@float@every@fig=\toks18
 \c@fig=\count94
 (/Users/maximustann/Work/PH.D/proposal/vuwproject.sty (/usr/local/texlive/2015/
 texmf-dist/tex/latex/psnfss/mathpazo.sty
+=======
+(/usr/pkg/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(/usr/pkg/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/pkg/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen109
+\captionmargin@=\dimen110
+\captionwidth=\dimen111
+\caption@tempdima=\dimen112
+\caption@indent=\dimen113
+\caption@parindent=\dimen114
+\caption@hangindent=\dimen115
+)
+\c@ContinuedFloat=\count93
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count94
+\c@subtable=\count95
+)
+\@float@every@fig=\toks19
+\c@fig=\count96
+ (./vuwproject.sty
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/mathpazo.sty
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup4
 )
@@ -137,6 +171,7 @@ VUW Honours reports modifications -- Mar 1995
 Modified to handle different degrees 2003
 Modified to handle duplex printing properly 2006
 \@abstract=\box30
+<<<<<<< HEAD
 ) (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.aux (/Users/maximu
 stann/Work/PH.D/proposal/introduction.aux
 
@@ -159,9 +194,33 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 57.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+=======
+) (./proj_report_outline.aux (./introduction.aux
+
+LaTeX Warning: Label `fig:unproportional' multiply defined.
+
+))
+\openout1 = `proj_report_outline.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 59.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 ) (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
+<<<<<<< HEAD
 \scratchcounter=\count95
 \scratchdimen=\dimen109
 \scratchbox=\box31
@@ -180,6 +239,39 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+=======
+\scratchcounter=\count97
+\scratchdimen=\dimen116
+\scratchbox=\box31
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen117
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks21
+) (/usr/pkg/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 Package ifluatex Info: LuaTeX not detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -211,16 +303,43 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+<<<<<<< HEAD
 \big@size=\dimen111
 \openout2 = `introduction.aux'.
 
 (/Users/maximustann/Work/PH.D/proposal/introduction.tex
+=======
+\AtBeginShipoutBox=\box32
+
+(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/pkg/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+
+(/usr/pkg/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\big@size=\dimen118
+\openout2 = `introduction.aux'.
+
+
+(./introduction.tex
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
+<<<<<<< HEAD
 (/Users/maximustann/Work/PH.D/proposal/ProblemStatement2.tex
+=======
+(./ProblemStatement2.tex
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 <pics/stakeholders.png, id=1, 660.21657pt x 413.29407pt>
@@ -253,6 +372,7 @@ File: pics/consolidate.png Graphic file (type png)
 Package pdftex.def Info: pics/consolidate.png used on input line 62.
 (pdftex.def)             Requested size: 308.71104pt x 72.22563pt.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+<<<<<<< HEAD
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 70.
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 74.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsppl.fd
@@ -306,26 +426,154 @@ Chapter 2.
 (/Users/maximustann/Work/PH.D/proposal/background.tex
 
 LaTeX Warning: Reference `C:' on page 11 undefined on input line 4.
+=======
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 7.
 
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 6.
 
+LaTeX Warning: Citation `Wei:2010fn' on page 1 undefined on input line 7.
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
+
+
+<<<<<<< HEAD
 LaTeX Warning: Citation `Wei:2010fn' on page 11 undefined on input line 8.
+=======
+Overfull \hbox (0.2399pt too wide) in paragraph at lines 7--8
+\OT1/ppl/m/n/10.95 vices of com-put-ing''. There-fore, stake-hold-ers of Cloud 
+com-put-ing be-come: Cloud providers,
+ []
+
+<pics/stakeholders.png, id=1, 899.36pt x 554.07pt>
+File: pics/stakeholders.png Graphic file (type png)
+<use pics/stakeholders.png>
+Package pdftex.def Info: pics/stakeholders.png  used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 308.71104pt x 190.19055pt on input lin
+e 11.
+[1
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 
 [11
 
 
 
+<<<<<<< HEAD
 ]
 
 LaTeX Warning: Reference `' on page 12 undefined on input line 41.
+=======
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pics/stakeholders.png>]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 17.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+<pics/iaas.png, id=12, 496.85625pt x 377.15906pt>
+File: pics/iaas.png Graphic file (type png)
+<use pics/iaas.png>
+Package pdftex.def Info: pics/iaas.png  used on input line 30. on input line 30
+.
+Package pdftex.def Info: Requested size: 198.45662pt x 150.64801pt on input lin
+e 30.
+<pics/paas.png, id=13, 511.9125pt x 403.5075pt>
+File: pics/paas.png Graphic file (type png)
+<use pics/paas.png>
+Package pdftex.def Info: pics/paas.png  used on input line 34. on input line 34
+.
+Package pdftex.def Info: Requested size: 198.45662pt x 156.43143pt on input lin
+e 34.
+ [2 <./pics/iaas.png> <./pics/paas.png>]
+<pics/energyConsumption.png, id=20, 458.46281pt x 461.47406pt>
+File: pics/energyConsumption.png Graphic file (type png)
+<use pics/energyConsumption.png>
+Package pdftex.def Info: pics/energyConsumption.png  used on input line 61. on 
+input line 61.
+Package pdftex.def Info: Requested size: 220.50885pt x 221.95567pt on input lin
+e 61.
+<pics/util.png, id=21, 1027.84pt x 770.88pt>
+File: pics/util.png Graphic file (type png)
+<use pics/util.png>
+Package pdftex.def Info: pics/util.png  used on input line 78. on input line 78
+.
+Package pdftex.def Info: Requested size: 220.50885pt x 165.38309pt on input lin
+e 78.
+ [3 <./pics/energyConsumption.png>]
+<pics/consolidate.png, id=26, 764.8575pt x 190.46156pt>
+File: pics/consolidate.png Graphic file (type png)
+<use pics/consolidate.png>
+Package pdftex.def Info: pics/consolidate.png  used on input line 92. on input 
+line 92.
+Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
+ 92.
 
 
-Overfull \hbox (5.83588pt too wide) in paragraph at lines 43--44
-[]\OT1/ppl/m/n/10.95 Infrastructure as a Ser-vice, Cloud provider of-fers the f
-un-da-men-tal com-put-ing re-sources,
+LaTeX Warning: Citation `CoffmanJr:1996ui' on page 4 undefined on input line 10
+3.
+
+[4 <./pics/consolidate.png> <./pics/util.png>]
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 107
+.
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 107
+.
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 107
+.
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 107
+.
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+
+LaTeX Warning: Citation `Clark:2005uda' on page 5 undefined on input line 110.
+
+
+LaTeX Warning: Citation `Borodin:uQcy_H6C' on page 5 undefined on input line 12
+4.
+
+[5]
+<pics/resource_management.png, id=35, 1027.84pt x 770.88pt>
+File: pics/resource_management.png Graphic file (type png)
+<use pics/resource_management.png>
+Package pdftex.def Info: pics/resource_management.png  used on input line 132. 
+on input line 132.
+Package pdftex.def Info: Requested size: 352.8155pt x 264.61295pt on input line
+ 132.
+<pics/comparison.png, id=36, 504.38437pt x 314.67563pt>
+File: pics/comparison.png Graphic file (type png)
+<use pics/comparison.png>
+Package pdftex.def Info: pics/comparison.png  used on input line 150. on input 
+line 150.
+Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
+e 150.
+ [6 <./pics/resource_management.png>] [7 <./pics/comparison.png>]
+Overfull \hbox (11.04327pt too wide) in paragraph at lines 193--195
+[]\OT1/ppl/m/n/10.95 In VM-based dy-namic prob-lem, pre-vi-ous most re-search p
+ro-posed hu-man de-signed greedy-
  []
 
+) (./Motivation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
+
+ [8]
+[9]) (./Goals.tex [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
+<<<<<<< HEAD
 [12]
 ! Undefined control sequence.
 l.58 \subsecion
@@ -335,13 +583,22 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+=======
+) (./published.tex) (./organization.tex
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 
-)
+LaTeX Warning: Reference `' on page 12 undefined on input line 2.
 
+<<<<<<< HEAD
 LaTeX Warning: Reference `' on page 13 undefined on input line 12.
+=======
+
+LaTeX Warning: Reference `' on page 12 undefined on input line 3.
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 
 ) [13] [14
 
+<<<<<<< HEAD
 
 ] (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.bbl [15
 
@@ -354,6 +611,24 @@ a-man, P. P.,
 [16] [17]) [18] (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.aux 
 (/Users/maximustann/Work/PH.D/proposal/introduction.aux) (/Users/maximustann/Wo
 rk/PH.D/proposal/literature_review.aux))
+=======
+LaTeX Warning: Reference `' on page 12 undefined on input line 4.
+
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no ™ in font pplr7t!
+)) [12] (./proj_report_outline.bbl [13
+
+
+
+]
+Underfull \hbox (badness 1783) in paragraph at lines 82--88
+[]\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
+a-man, P. P.,
+ []
+
+[14] [15]) [16] (./proj_report_outline.aux (./introduction.aux))
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 
 LaTeX Warning: There were undefined references.
 
@@ -362,6 +637,7 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  3279 strings out of 493089
  48639 string characters out of 6134842
  120171 words of memory out of 5000000
@@ -381,4 +657,24 @@ PDF statistics:
  55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 4464 strings out of 493675
+ 68156 string characters out of 6155645
+ 135129 words of memory out of 5000000
+ 7711 multiletter control sequences out of 15000+600000
+ 21150 words of font info for 55 fonts, out of 8000000 for 9000
+ 890 hyphenation exceptions out of 8191
+ 42i,8n,41p,1243b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
+/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
+ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+
+Output written on proj_report_outline.pdf (16 pages, 393116 bytes).
+PDF statistics:
+ 90 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 2011cb91584b90ffd83cada4af7a86f40fe3836a
 
