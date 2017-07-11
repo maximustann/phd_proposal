@@ -48,6 +48,11 @@
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
 \newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
 
+\bibitem{CoffmanJr:1996ui}
+{\sc Coffman~Jr, E.~G., Garey, M.~R., and Johnson, D.~S.}
+\newblock {\em {Approximation algorithms for bin packing: a survey}}.
+\newblock PWS Publishing Co., Aug. 1996.
+
 \bibitem{Dong:2014iz}
 {\sc Dong, Z., Zhuang, W., and Rojas-Cessa, R.}
 \newblock {Energy-aware scheduling schemes for cloud data centers on Google
@@ -263,6 +268,12 @@
 \newblock {Energy Optimal VM Placement in the Cloud}.
 \newblock In {\em 2016 IEEE 9th International Conference on Cloud Computing
   (CLOUD\/} (2016), IEEE, pp.~84--91.
+
+\bibitem{Wei:2010fn}
+{\sc Wei, Y., and Blake, M.~B.}
+\newblock {Service-Oriented Computing and Cloud Computing - Challenges and
+  Opportunities.}
+\newblock {\em IEEE Internet Computing 14}, 6 (2010), 72--75.
 
 \bibitem{Wen:1991kt}
 {\sc Wen, U.-P., and Hsu, S.-T.}

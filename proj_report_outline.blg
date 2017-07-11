@@ -1,57 +1,56 @@
-This is BibTeX, Version 0.99d (Web2C 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: literature_review.aux
 The style file: acm.bst
 Database file #1: sample.bib
-Repeated entry---line 656 of file sample.bib
+Repeated entry---line 481 of file sample.bib
  : @article{Chaisiri:2012cv
  :                         ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Wei:2010fn"
-Warning--I didn't find a database entry for "CoffmanJr:1996ui"
 Warning--I didn't find a database entry for "Clark:2005uda"
 Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
 Warning--empty journal in Mann:2015ua
-You've used 52 entries,
+You've used 54 entries,
             2253 wiz_defined-function locations,
-            875 strings with 14813 characters,
-and the built_in function-call counts, 18679 in all, are:
-= -- 1808
-> -- 1079
+            885 strings with 15092 characters,
+and the built_in function-call counts, 19272 in all, are:
+= -- 1864
+> -- 1108
 < -- 0
-+ -- 442
-- -- 390
-* -- 1615
-:= -- 3135
-add.period$ -- 154
-call.type$ -- 52
-change.case$ -- 351
++ -- 454
+- -- 400
+* -- 1662
+:= -- 3235
+add.period$ -- 160
+call.type$ -- 54
+change.case$ -- 361
 chr.to.int$ -- 0
-cite$ -- 53
-duplicate$ -- 529
-empty$ -- 1317
-format.name$ -- 390
-if$ -- 3726
+cite$ -- 55
+duplicate$ -- 551
+empty$ -- 1365
+format.name$ -- 400
+if$ -- 3846
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 50
-newline$ -- 260
-num.names$ -- 104
-pop$ -- 285
+int.to.str$ -- 54
+missing$ -- 53
+newline$ -- 270
+num.names$ -- 108
+pop$ -- 298
 preamble$ -- 1
-purify$ -- 299
+purify$ -- 308
 quote$ -- 0
-skip$ -- 334
+skip$ -- 345
 stack$ -- 0
-substring$ -- 1158
-swap$ -- 132
+substring$ -- 1187
+swap$ -- 136
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 206
+type$ -- 212
 warning$ -- 1
-while$ -- 186
-width$ -- 54
-write$ -- 516
+while$ -- 192
+width$ -- 56
+write$ -- 536
 (There was 1 error message)
