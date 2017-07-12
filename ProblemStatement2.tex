@@ -39,7 +39,7 @@ Each service model describes distinct responsibilities of stakeholders and diffe
 \end{figure}
 
 \begin{itemize}
- 	\item \emph{IaaS}, Cloud provider offers the fundamental computing resources, often in the form of various sizes of VMs. Apart from the virtualized hardware and operating systems, Cloud users treat the remote VMs as local and deploy their applications. In terms of resource management, Cloud users have the responsibility to estimate the quantity of resources, while Cloud providers have no knowledge and control inside VMs. Resource management is based on VM. 
+ 	\item \emph{IaaS}, Cloud provider offers the fundamental computing resources, often in a form of various sizes of VMs. Apart from the virtualized hardware and operating systems, Cloud users treat the remote VMs as local; they can build a project-specific platform on it and deploy their applications. In terms of resource management, Cloud users have the responsibility to estimate the quantity of resources, while Cloud providers have no knowledge or control of what inside VMs. Resource management is based on VM. 
   	
   	\item \emph{PaaS}, Cloud providers establish the software development platform to enable the in-progress software to be developed in the platform.  The main difference between PaaS and IaaS is that, in PaaS, Cloud providers not only offer the hardwares but also a platform which allows software development. In terms of resource management, Cloud providers have the full control of resource allocation. Therefore, Cloud users can focus on software development.
   	
@@ -83,26 +83,39 @@ The solution of the high energy consumption problem comes two important aspects:
 Virtualization \cite{Uhlig:2005do} is the fundamental technology that enables Cloud computing. It partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on it. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing.
 
 In a Cloud data center, each server should not run arbitrary numbers of applications, because it cannot guarantee the performance of each application. Therefore, initially, each application is assigned to a server, which causes great wastage.
-VMs can provide good isolation which means applications running in co-located VMs within the same PM do not interfere each other \cite{Somani:2009ho}.  Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications.
+VMs can provide good isolation which means applications running in co-located VMs within the same PM do not interfere each other \cite{Somani:2009ho}.  Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. 
 
-% Later, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
+% This technique allows resource management in real time which inspires the strategy of server consolidation. 
 
 With virtualization, IaaS and PaaS applied different strategies in resource management.
+In IaaS, Cloud providers offer Cloud users a set of types of VM. The term ``type'' here means different types of VM contains distinct quantity of resources such as CPU cores, memory, and network bandwidth. A Cloud user must estimate the resource consumption of their applications and choose an appropriate type of VM.
+This step is addressed as resource mapping \cite{}. Cloud providers receive the VM provisioning requests and start to manage resources. 
 
-In IaaS, Cloud users are responsible for the estimation of resources which is represented as fixed types of VMs and Cloud providers based on the size of VMs to consolidate them into fewer PMs. This strategy has two inherent flaws which lower the resource utilization.
+Before explaining the details of resource management strategies, we first illustrate several characteristics of resource management in IaaS.
+\begin{itemize}
+	\item Resource management is based on VM. Cloud providers can dynamically adjust the location (in which PM) of a VM based on the observed resource utilization. 
+	\item Separated responsibilities of resource selection for applications and resource allocation. 
+	As above mentioned, Cloud users also play an important role of estimation of resources. This causes a problem. The accurate estimation is almost impossible because of unpredictable workloads; Cloud users tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv}. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. As Cloud providers have no knowledge or control of what inside a VM, they cannot do much about it.
+	\item Cloud providers offer fixed types of VMs for simplicity. Because of the fixed size of resources and the one-on-one mapping of applications and VMs, specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage. 
+	\item Redundant operating systems (OSs) cause vast resource wastage. Since each VM runs a separated operating system, a PM might run many operating systems at a time. However, normal applications do not need specific operating systems commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Instead, applications require a variety of software environment such as libraries. Therefore, running duplicated OSs in a PM is unnecessary.
+\end{itemize}
 
-
-Server consolidation \cite{Zhang:2010vo} resolves the low utilization problem by gathering applications into a fewer number of PMs (see Figure \ref{fig:unproportional}), so that the resource utilization of PMs are maintained at a high level and the idle PMs can be turned off to save energy. Consolidation dramatically improves hardware utilization and lowers PM and cooling energy consumption. 
-
+ The first characteristic inspires a strategy called \emph{server consolidation}; the second and third inspire an \emph{overbooking} strategy. These two strategies are collaborated to achieve a better utilization. For last characteristics, so far, it lacks effective ways to solve them.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/consolidate.png}
 	\caption{A Server Consolidation example: Initially, each PM runs an application wrapped with a VM in a low resource utilization state. After the consolidation, both VMs are running on PM A, so that PM B is turned off to save energy \cite{Barroso:2007jt}.}
-	\label{fig:unproportional}
+	\label{fig:consolidation}
 \end{figure} 
 
-Server consolidation is the core functionality involving in all Cloud resource management operations. These operations can be roughly separated into three \cite{Svard:2015ic, Mishra:2012kx} (see Figure \ref{fig:management}) which are applied in different scenarios: Application initialization, Global consolidation, and Dynamic resource management. 
+\emph{Server consolidation} \cite{Zhang:2010vo}, as above mentioned, utilized a dynamic migration technique to resolve the low utilization problem by gathering applications into a fewer number of PMs (see Figure \ref{fig:unproportional}), so that the resource utilization of PMs are maintained at a high level. In the meanwhile, idle PMs can be turned off to save energy. Consolidation dramatically improves hardware utilization and lowers PM and cooling energy consumption. 
+
+\emph{Overbooking} strategy \cite{Tomas:2013iv} is used to overcome the low utilization problem raised by the over-provisioning of VMs. It allocates more VMs in a PM even their aggregated resources have exceeded the PM's capacity. The advantage of this approach is it consolidates more VMs in PMs and, indeed, improved the resource utilization. The disadvantages are also obvious: if one or more applications are experiencing a heavy load; the PM is likely to run out of resources. At this moment, all the applications are suffer from a QoS degradation. In order to avoid the overloading, Cloud users often carefully predict the utilization of applications based on their previous workloads and use a dynamic resource management approach to adjust the VMs' location.
+
+The resource management in IaaS can be roughly separated into three \cite{Svard:2015ic, Mishra:2012kx} which are applied in different scenarios: Application initialization, Prediction and Global consolidation, and Dynamic resource management (see Figure \ref{fig:management}). 
+
+% Server consolidation is the core functionality involving in all Cloud resource management operations. These operations
 
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of cancelling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
 \begin{enumerate}
@@ -110,16 +123,19 @@ Server consolidation is the core functionality involving in all Cloud resource m
 
 	In this problem, a set of applications or VMs are waiting in a queue. The resource capacity of the PM and usage by applications are characterized by a vector of resource utilizations including CPU, memory and etc. Then, the allocation system must select a minimum number of PMs to accommodate them so that after the allocation, the resource utilizations remain high. The problem is to consider the different combinations of applications so that the overall resource utilization is high. This problem is naturally modeled as a static bin-packing problem \cite{CoffmanJr:1996ui} which is a NP-hard problem meaning it is unlikely to find an optimal solution of a large problem. 
 
-	\item \emph{Global consolidation} is conducted periodically to adjust the current allocation of applications so that the overall utilization is improved.
+	\item \emph{Prediction and Global consolidation} is conducted periodically to adjust the current allocation of applications so that the overall utilization is improved.
 
 	In this problem, time is discrete and it can be split into basic time frames, for example: ten seconds. A periodical operation is conducted in every $N$ time frames.
-	A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Releasing applications cause hollow in PMs; new arrivals cannot change the structure of current allocation. Therefore, after the initial allocation, the overall energy efficiency is likely to drop along with time elapsing. In global consolidation, an optimization system takes the current allocation - including a list of applications/VMs and a list of PMs -  as the input, adjust its allocation so that the global resource utilization is improved.
+	A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Releasing applications cause hollow in PMs; new arrivals cannot change the structure of current allocation. Therefore, after the initial allocation, the overall energy efficiency is likely to drop along with time elapsing. 
+
+	In prediction, an optimization system takes  the current applications' utilization records as the input. Make a prediction of their utilization in the next period of time. 
+	In Global consolidation, based on the predict utilization and the current allocation - including a list of applications/VMs and a list of PMs, the system adjusts the allocation so that the global resource utilization is improved.
 
 	In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005uda}, and it is a very expensive operation because it occupies the resources in both the host and the target. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization even difficult.
 
 % In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
 	\item \emph{Dynamic resource management} 
- 	Dynamic resource management is applied in three scenarios. \textbf{First},  it is applied when a PM is overloading. Overloading is defined as, one of the resources' consumption exceeds the PM's capacity. At this moment, the applications in that PM are suffering from a Quality of Service (QoS) degradation which means their performance cannot meet the agreement because of the limited resources. Overloading is often caused by the increasing of workload. In order to prevent the QoS from dropping, an application is migrated to another PM. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, it is applied when a PM is under-loading. Under-loading is when a PM is in a low utilization state normally defined by a threshold. At this moment, all the applications in the under-loading PM are migrated to other active PMs, so the PM becomes empty and can be turned off. This is called dynamic consolidation. \textbf{Third}, it is applied when a PM having very high level of utilization while others having low. An adjustment is to migrate one or more application from high utilized PMs to low ones. This is called load balancing.
+ 	Dynamic resource management is applied in three scenarios. \textbf{First},  it is applied when a PM is overloading. In order to prevent the QoS from dropping, an application is migrated to another PM. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, it is applied when a PM is under-loading. Under-loading is when a PM is in a low utilization state normally defined by a threshold. At this moment, all the applications in the under-loading PM are migrated to other active PMs, so the PM becomes empty and can be turned off. This is called dynamic consolidation. \textbf{Third}, it is applied when a PM having very high level of utilization while others having low. An adjustment is to migrate one or more application from high utilized PMs to low ones. This is called load balancing.
 
 	No matter which scenario it is, a dynamic resource management always involves three steps . 
 	\begin{itemize}
@@ -135,12 +151,30 @@ Server consolidation is the core functionality involving in all Cloud resource m
 
 \end{enumerate}
 
-\begin{figure}
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{pics/resource_management.png}
+% 	\caption{Cloud data center resource management involves three steps: initialization, dynamic resource management, and global consolidation. Grey means closed PMs.}
+% 	\label{fig:management}
+% \end{figure} 
+
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{pics/resource_management.png}
-	\caption{Cloud data center resource management involves three steps: initialization, dynamic resource management, and global consolidation. Grey means closed PMs.}
+	\begin{subfigure}[b]{0.9\textwidth}
+		\includegraphics[width=\textwidth]{pics/initialization.png}
+		\caption{Initialization}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.9\textwidth}
+		\includegraphics[width=\textwidth]{pics/dynamic_resource.png}
+	\caption{Dynamic resource management}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.9\textwidth}
+		\includegraphics[width=\textwidth]{pics/predict_consolidate.png}
+	\caption{Prediction and Consolidation}
+	\end{subfigure}
 	\label{fig:management}
-\end{figure} 
+\end{figure}
 
 Finally, a consolidation plan includes four major items:
 			\begin{enumerate}
@@ -150,7 +184,9 @@ Finally, a consolidation plan includes four major items:
 				\item The exact placement of applications and services
 			\end{enumerate}
 
-By the nature of Cloud resource management, server consolidation techniques can also be categories into static and dynamic methods \cite{Xiao:2015ik, Verma:2009wi}. Static method is a time consuming process which is often conducted off-line in a periodical fashion; initialization and global consolidation belong to this category. It provides a global optimization to the data center. Dynamic method adjusts PMs in real time. It often allocates one application at a time. Therefore, it can be executed quickly and often provides a local optimization to the data center.
+% By the nature of Cloud resource management, server consolidation techniques can also be categories into static and dynamic methods \cite{Xiao:2015ik, Verma:2009wi}. Static method is a time consuming process which is often conducted off-line in a periodical fashion; initialization and global consolidation belong to this category. It provides a global optimization to the data center. Dynamic method adjusts PMs in real time. It often allocates one application at a time. Therefore, it can be executed quickly and often provides a local optimization to the data center.
+
+Although the overbooking strategy have been studies for years \cite{}, the prediction of workload is very difficult \cite{} or even impossible in many literatures \cite{}. Therefore, it is urgent to provide a strategy without making a prediction. One possible way is to use finer granularity resource management.
 
 \vspace{10mm}
 \begin{figure}
@@ -161,14 +197,6 @@ By the nature of Cloud resource management, server consolidation techniques can 
 \end{figure}
 
 
-
-\begin{itemize}
-	\item First one is the separated responsibilities of resource selection for applications and resource allocation. Because of separated responsibilities, Cloud users must estimate the quantity of resources. They tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv}. This causes the low utilization.
-	\item Second is the fixed types of VMs, where each type of VM represents a certain amount of resources (e.g. CPU, RAM, and Storage). Because of the fixed size of VM and the one-on-one mapping of applications and VMs (see Figure \ref{fig:comparison} left hand-side), specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This causes wastage.
-\end{itemize}
-
-Traditionally, \emph{overbooking} strategy is used to improve the resource utilization in IaaS. 
-Overbooking \cite{Tomas:2013iv} or oversubscribe is strategy to allocate more VMs in a PM even their aggregated resources exceed the PM's capacity. This strategy aims at solving the problem of over-provisioned VMs. The advantage of this approach is it consolidates more VMs in PMs and, indeed, improved the resource utilization. The disadvantages are also obvious: An overbooked PM is easy to suffer from overloading which is its capacity cannot satisfied the required requests. 
 
 
 In recent years, virtualization technology has evolved to allow finer granularity resource management.

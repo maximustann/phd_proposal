@@ -1,8 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (Web2C 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
-A level-1 auxiliary file: literature_review.aux
 The style file: acm.bst
 Database file #1: sample.bib
 Repeated entry---line 481 of file sample.bib
@@ -12,45 +11,45 @@ I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Clark:2005uda"
 Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
 Warning--empty journal in Mann:2015ua
-You've used 54 entries,
+You've used 52 entries,
             2253 wiz_defined-function locations,
-            885 strings with 15092 characters,
-and the built_in function-call counts, 19272 in all, are:
-= -- 1864
-> -- 1108
+            873 strings with 14654 characters,
+and the built_in function-call counts, 18523 in all, are:
+= -- 1790
+> -- 1064
 < -- 0
-+ -- 454
-- -- 400
-* -- 1662
-:= -- 3235
-add.period$ -- 160
-call.type$ -- 54
-change.case$ -- 361
++ -- 436
+- -- 384
+* -- 1596
+:= -- 3109
+add.period$ -- 154
+call.type$ -- 52
+change.case$ -- 347
 chr.to.int$ -- 0
-cite$ -- 55
-duplicate$ -- 551
-empty$ -- 1365
-format.name$ -- 400
-if$ -- 3846
+cite$ -- 53
+duplicate$ -- 533
+empty$ -- 1313
+format.name$ -- 384
+if$ -- 3698
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 53
-newline$ -- 270
-num.names$ -- 108
-pop$ -- 298
+int.to.str$ -- 52
+missing$ -- 51
+newline$ -- 260
+num.names$ -- 104
+pop$ -- 288
 preamble$ -- 1
-purify$ -- 308
+purify$ -- 296
 quote$ -- 0
-skip$ -- 345
+skip$ -- 334
 stack$ -- 0
-substring$ -- 1187
-swap$ -- 136
+substring$ -- 1133
+swap$ -- 132
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 212
+type$ -- 204
 warning$ -- 1
-while$ -- 192
-width$ -- 56
-write$ -- 536
+while$ -- 184
+width$ -- 54
+write$ -- 516
 (There was 1 error message)

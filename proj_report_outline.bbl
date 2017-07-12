@@ -257,12 +257,6 @@
 \newblock {Intel Virtualization Technology.}
 \newblock {\em IEEE Computer 38}, 5 (2005), 48--56.
 
-\bibitem{Verma:2009wi}
-{\sc Verma, A., and Dasgupta, G.}
-\newblock {Server Workload Analysis for Power Minimization using
-  Consolidation.}
-\newblock {\em USENIX Annual Technical Conference\/} (2009), 28--28.
-
 \bibitem{Wang:2016eh}
 {\sc Wang, Y., and Xia, Y.}
 \newblock {Energy Optimal VM Placement in the Cloud}.
@@ -280,12 +274,6 @@
 \newblock {Linear Bi-Level Programming Problems -- A Review}.
 \newblock {\em The Journal of the Operational Research Society 42}, 2 (Feb.
   1991), 125.
-
-\bibitem{Xiao:2015ik}
-{\sc Xiao, Z., Jiang, J., Zhu, Y., Ming, Z., Zhong, S.-h., and Cai, S.-B.}
-\newblock {A solution of dynamic VMs placement problem for energy consumption
-  optimization based on evolutionary game theory.}
-\newblock {\em Journal of Systems and Software 101\/} (2015), 260--272.
 
 \bibitem{Xu:2010vh}
 {\sc Xu, J., and Fortes, J. A.~B.}
