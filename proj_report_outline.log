@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  12 JUL 2017 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  13 JUL 2017 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -335,101 +335,101 @@ e 77.
 <pics/consolidate.png, id=30, 764.8575pt x 190.46156pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 107. on input
- line 107.
+Package pdftex.def Info: pics/consolidate.png  used on input line 108. on input
+ line 108.
 Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
- 107.
+ 108.
 
 
-Package caption Warning: \label without proper reference on input line 176.
+Package caption Warning: \label without proper reference on input line 177.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 116.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 117.
 
-LaTeX Warning: Reference `fig:management' on page 5 undefined on input line 116
+LaTeX Warning: Reference `fig:management' on page 5 undefined on input line 117
 .
 
 [5 <./pics/consolidate.png>]
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 128
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 129
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 128
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 129
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 128
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 129
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 128
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 129
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-Overfull \hbox (0.74336pt too wide) in paragraph at lines 131--133
+Overfull \hbox (0.74336pt too wide) in paragraph at lines 132--134
 []\OT1/ppl/m/n/10.95 In pre-dic-tion, an op-ti-miza-tion sys-tem takes the cur-
 rent ap-pli-ca-tions' uti-liza-tion records
  []
 
 
-LaTeX Warning: Citation `Clark:2005uda' on page 6 undefined on input line 134.
+LaTeX Warning: Citation `Clark:2005uda' on page 6 undefined on input line 135.
 
 [6]
 
 LaTeX Warning: Citation `Borodin:uQcy_H6C' on page 7 undefined on input line 14
-8.
+9.
 
 <pics/initialization.png, id=38, 716.6775pt x 199.49532pt>
 File: pics/initialization.png Graphic file (type png)
 <use pics/initialization.png>
-Package pdftex.def Info: pics/initialization.png  used on input line 165. on in
-put line 165.
+Package pdftex.def Info: pics/initialization.png  used on input line 166. on in
+put line 166.
 Package pdftex.def Info: Requested size: 396.91324pt x 110.4868pt on input line
- 165.
+ 166.
 <pics/dynamic_resource.png, id=39, 718.18312pt x 161.85469pt>
 File: pics/dynamic_resource.png Graphic file (type png)
 <use pics/dynamic_resource.png>
-Package pdftex.def Info: pics/dynamic_resource.png  used on input line 169. on 
-input line 169.
+Package pdftex.def Info: pics/dynamic_resource.png  used on input line 170. on 
+input line 170.
 Package pdftex.def Info: Requested size: 396.91324pt x 89.45253pt on input line
- 169.
+ 170.
 <pics/predict_consolidate.png, id=40, 748.29562pt x 419.31656pt>
 File: pics/predict_consolidate.png Graphic file (type png)
 <use pics/predict_consolidate.png>
-Package pdftex.def Info: pics/predict_consolidate.png  used on input line 173. 
-on input line 173.
+Package pdftex.def Info: pics/predict_consolidate.png  used on input line 174. 
+on input line 174.
 Package pdftex.def Info: Requested size: 396.91324pt x 222.41586pt on input lin
-e 173.
+e 174.
 [7 <./pics/initialization.png> <./pics/dynamic_resource.png> <./pics/predict_co
 nsolidate.png>]
 <pics/comparison.png, id=48, 504.38437pt x 314.67563pt>
 File: pics/comparison.png Graphic file (type png)
 <use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 194. on input 
-line 194.
+Package pdftex.def Info: pics/comparison.png  used on input line 195. on input 
+line 195.
 Package pdftex.def Info: Requested size: 308.71104pt x 192.60005pt on input lin
-e 194.
+e 195.
  [8 <./pics/comparison.png>]
-Overfull \hbox (11.04327pt too wide) in paragraph at lines 232--234
+Overfull \hbox (11.04327pt too wide) in paragraph at lines 233--235
 []\OT1/ppl/m/n/10.95 In VM-based dy-namic prob-lem, pre-vi-ous most re-search p
 ro-posed hu-man de-signed greedy-
  []
 
 
-Package caption Warning: \label without proper reference on input line 176.
+Package caption Warning: \label without proper reference on input line 177.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:management' on page 9 undefined on input line 236
+LaTeX Warning: Reference `fig:management' on page 9 undefined on input line 237
 .
 
 ) (./Motivation.tex
@@ -483,7 +483,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on proj_report_outline.pdf (18 pages, 405721 bytes).
+Output written on proj_report_outline.pdf (18 pages, 405764 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
