@@ -20,14 +20,21 @@ Each stakeholder has their responsibility, goal, and objectives.
 	\item \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. Their goal is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the behavior of  the services.
 \end{itemize}
 
+In this thesis, we focus on an core issue of helping Cloud providers to increase their profits by optimizing the resource allocation in data centers. Specifically, the profit can be improved by reducing the energy consumption. A direct way to reduce energy is to use a minimum number of Physical machines (PMs). In abstract, the problem can be described as, a data center has a number of physical machines (PMs) where each of them can be represented as a set of resources such as CPU cores, RAM and etc. The data center received a list of requests for resources which is also represented as resources. The task is to allocate these requested resources to a minimum number of PMs. The decision variable in this task is which requested resource is allocated to which PM. The assumptions and constaints are different in different service models of Cloud computing.
+
 Besides the stakeholders of Cloud computing, Cloud computing has three service models \cite{Mell:2011jj} (see Figure \ref{fig:service_models}): Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). Each service model describes different the responsibilities of manipulating the Cloud resources among stakeholders.
 The relationship among three service models can be described as a pyramid (see \ref{fig:}). 
 
 \begin{itemize}
-	\item IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are encapsulated in a set of fixed size of VMs. The 'size' means a VM contains a certain number of resources such as 2-cores, 1 GB RAM, and they are predefined by the Cloud provider.
+	\item IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are often encapsulated in virtualized computing units such as VMs and containers. The 'size' means a VM contains a certain number of resources such as 2-cores, 1 GB RAM. 
+
+	In IaaS, Cloud providers establish a number of types of VM. They are the fundamental unit of resources. 
 % Cloud providers offer two price model: reservation plus an auto-scaling price model to Cloud users. Reservation means Cloud users initially need to reserve a number of resources (e.g a type of VM). Auto-sca
 
- 	In order to deploy their applications, Cloud users have to estimate how much resource do they need. Then, they can choose one or more VMs from a few fixed types. After receiving the requests, Cloud providers choose a set of PMs which contains sufficient resources, provision the required VMs in them. Then, the VMs are assigned to the Cloud users. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is used to provision new VMs to Cloud users. Finally, Cloud providers optimize the locations of VMs so that the energy consumption of data center is minimized.
+	When Cloud users want to deploy their applications, because Cloud providers do not know how much resources their applications consume, Cloud users must estimate the quantity of resources. Then, they can choose one or more VMs from a few fixed types. After these requested resources have been allocated, their sizes cannot be changed. This is the main assumption in IaaS. Cloud providers allocate these requested resources into a number of PMs. The constraint is that the aggregated resources in a PM cannot exceeds the capacity of the PM.
+
+
+	% After receiving the requests, Cloud providers choose a set of PMs which contains sufficient resources, provision the required VMs in them. Then, the VMs are assigned to the Cloud users. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is used to provision new VMs to Cloud users. Finally, Cloud providers optimize the locations of VMs so that the energy consumption of data center is minimized.
 
  	In IaaS, the responsibility of resource selection and resource optimization are separated.
 
