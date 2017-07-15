@@ -4,7 +4,8 @@ Cloud computing is a computing model offering a network of servers to their
 clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} 
 To illustrate how it works, considering a case: a Cloud provider builds a data center which contains thousands of servers connected with network. These servers are virtualized which means they are partitioned into a smaller unit of resources called \emph{Virtual Machines (VMs)}. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these VMs from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers.
 
-One of the major characteristic of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
+% One of the major characteristic of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
+Generally, Cloud computing involves three stakeholders: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}).
 
 \begin{figure}[H]
 	\centering
@@ -19,13 +20,44 @@ Each stakeholder has their responsibility, goal, and objectives.
 	\item \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. Their goal is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the behavior of  the services.
 \end{itemize}
 
+Besides the stakeholders of Cloud computing, Cloud computing has three service models \cite{Mell:2011jj} (see Figure \ref{fig:service_models}): Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). Each service model describes different the responsibilities of manipulating the Cloud resources among stakeholders.
+The relationship among three service models can be described as a pyramid (see \ref{fig:}). 
+
+\begin{itemize}
+	\item IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are encapsulated in a set of fixed size of VMs. The 'size' means a VM contains a certain number of resources such as 2-cores, 1 GB RAM, and they are predefined by the Cloud provider.
+% Cloud providers offer two price model: reservation plus an auto-scaling price model to Cloud users. Reservation means Cloud users initially need to reserve a number of resources (e.g a type of VM). Auto-sca
+
+ 	In order to deploy their applications, Cloud users have to estimate how much resource do they need. Then, they can choose one or more VMs from a few fixed types. After receiving the requests, Cloud providers choose a set of PMs which contains sufficient resources, provision the required VMs in them. Then, the VMs are assigned to the Cloud users. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is used to provision new VMs to Cloud users. Finally, Cloud providers optimize the locations of VMs so that the energy consumption of data center is minimized.
+
+ 	In IaaS, the responsibility of resource selection and resource optimization are separated.
+
+ 	\item PaaS, 
+ % The system monitors the utilization of a number of PM and VM and through adjustment of their location to optimize the energy consumption of the data center. The input is a list of VMs (e.g CPU cores and RAMs) and a list of PMs. The task is to put the VMs into these PMs so that the VMs only use a minimum number of PMs. The sizes of VMs and PMs are fixed. A system can only adjust which VM is allocated to which PM. A general constraint is the sum of resources of the VMs inside a PM cannot exceed the capacity of the PM.
+\end{itemize}
+
 In this proposal, we focus on an important issue of helping Cloud providers to improve their profit. Our approach is to reduce the expense of energy consumption in data centers by providing a series of optimization methods in Cloud resource management.
 
-In general, the problem can be described as, Cloud data center receives a list of applications deployment requests, each of the requests is described as a resource requirement list - the number of CPU cores, RAMs and etc. The resource management needs to provision the required chunks of resources and allocate them into PMs. Each PM is also represented as resources.
+In general, the problem can be described as, a Cloud data center receives a list of application deployment requests where each of the requests contains the resource requirement of the application - the number of CPU cores, RAMs and etc. The data center has a number of Physical machines (PMs) which is represented as the resources that they are contained. 
+
+In IaaS, Cloud providers only provide a lists of fixed size of VMs. 
+Cloud users have to estimate the resources that they need and send a request for a particular size of VM.
+After the resource management system receives the request, it 
+
+In different service model, resource management
+The resource management system has to match the requirement of resource to VM.
 
 
-Besides the stakeholders of Cloud computing, Cloud computing has three service models \cite{Mell:2011jj} (see Figure \ref{fig:service_models}): Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). 
-Each service model describes distinct responsibilities of stakeholders and different resource management strategies.
+has a predefined list of VM types where each type of VM contains different sizes of resources. Then, the system matches each requirement of request and the type of VM 
+
+
+For each request, the resource management system partitions a PM's resources into various size of units
+
+
+
+needs to provision a virtualized machine which has sufficient resources and deploys each application into the virtualized machine. 
+
+
+
 
 \begin{figure}[H]
 	\centering
