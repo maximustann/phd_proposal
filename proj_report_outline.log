@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  16 JUL 2017 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  18 JUL 2017 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,39 +302,41 @@ Package pdftex.def Info: pics/pyramid.png  used on input line 27. on input line
  27.
 Package pdftex.def Info: Requested size: 220.50885pt x 210.92078pt on input lin
 e 27.
- [2 <./pics/pyramid.png>]
-Overfull \hbox (10.05092pt too wide) in paragraph at lines 42--43
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Overfull \hbox (10.05092pt too wide) in paragraph at lines 43--44
 \OT1/ppl/m/n/10.95 They es-ti-mate the re-sources that their ap-pli-ca-tions mi
 ght con-sume. The Cloud providers,
  []
 
-[3]
-<pics/consolidate.png, id=21, 764.8575pt x 190.46156pt>
+[3 <./pics/pyramid.png>] [4]
+<pics/consolidate.png, id=24, 764.8575pt x 190.46156pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 87. on input 
-line 87.
+Package pdftex.def Info: pics/consolidate.png  used on input line 88. on input 
+line 88.
 Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
- 87.
+ 88.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 93.
 
 
-LaTeX Warning: Reference `fig:unproportional' on page 4 undefined on input line
- 92.
-
-[4 <./pics/consolidate.png>]
-
-LaTeX Warning: Reference `fig:' on page 5 undefined on input line 96.
+LaTeX Warning: Reference `fig:unproportional' on page 5 undefined on input line
+ 93.
 
 
-LaTeX Warning: Reference `fig:comparison' on page 5 undefined on input line 105
+LaTeX Warning: Reference `fig:' on page 5 undefined on input line 97.
+
+[5 <./pics/consolidate.png>]
+
+LaTeX Warning: Reference `fig:comparison' on page 6 undefined on input line 106
 .
 
-)) [5] [6
+)) [6] (./proj_report_outline.bbl) [7
 
 
-] (./proj_report_outline.bbl) [7
 
 ] (./proj_report_outline.aux
 (./introduction.aux))
@@ -349,13 +351,13 @@ Here is how much of TeX's memory you used:
  7592 multiletter control sequences out of 15000+600000
  14176 words of font info for 37 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 42i,6n,41p,946b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,7n,41p,933b,297s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palat
 ino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on proj_report_outline.pdf (7 pages, 134792 bytes).
+Output written on proj_report_outline.pdf (7 pages, 135061 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream

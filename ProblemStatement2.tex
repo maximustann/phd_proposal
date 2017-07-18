@@ -16,27 +16,28 @@ Generally, Cloud computing involves three stakeholders: Cloud providers, Cloud u
 Each stakeholder has their responsibility, goal, and objectives. 
 \begin{itemize}
 	\item \emph{Cloud providers} build data centers, provide maintenance and resource management on the hardware infrastructure. Their goal is to increase the profit by boosting the income and reducing the expense. Their income comes from Cloud users' rental of servers or \emph{Physical Machines (PMs)} in terms of resource quality (e.g  3.5GHz dual-core CPU), quantity (e.g 3 PMs), and time (e.g 1 year). Therefore, Cloud providers objective is to maximize utilization of computing resources. A high utilization brings two benefits, firstly, it increases income by accommodating more applications in limited resources. Secondly, it cuts the expense of energy consumption by packing applications in a minimum number of PMs so that idle PMs can be turned off. 	
-	\item \emph{Cloud users} develop and deploy applications on Cloud. Each application generates time-vary CPU utilization. Their goal is also increase the profit mainly through two objectives, attracting more End users and reduce the expense of resources. The first objective can be achieved by improving the quality of service as well as lower the fee for End users. Either way depends not only on the software entities but also the quality of service (QoS) offered by Cloud provider. The second objective can be achieved by a good estimation of the reserved resources, so that they do not rent insufficient resources which cause low QoS or rent too much resources which cause wastage.
-	\item \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. Their goal is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the behavior of  the services.
+	\item \emph{Cloud users} develop and deploy applications on Cloud. Each application generates time-vary CPU utilization. Their goal is also increase the profit mainly through two objectives, attracting more End users and reduce the expense of resources. The first objective can be achieved by improving the quality of service as well as lower the fee for End users. Either way depends not only on the software entities but also the quality of service (QoS) offered by Cloud provider. The second objective can be achieved by a good estimation of the reserved resources, so that they do not rent insufficient  or too much resources which cause performance degradation or wastage.
+	\item \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. It is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the performance of the services.
 \end{itemize}
 
-In this thesis, we focus on an core issue of helping Cloud providers to increase their profits by optimizing the resource allocation in data centers. Specifically, the profit can be improved by reducing the energy consumption. A direct way to reduce energy consumption is to always use a minimum number of Physical machines (PMs) hosting applications. In abstract, the problem can be described as, a data center has a number of PMs where each of them can be represented as a set of resources such as CPU cores, RAM and etc. The data center received a list of requests for resources which is also represented as resources. The task is to allocate these requested resources to a minimum number of PMs. The decision variable in this task is the location of each requested resource. The assumptions and constraints are distinct in real life service models of Cloud computing.
+In this thesis, we focus on an core issue of helping Cloud providers to increase their profits by optimizing the resource allocation in data centers. Specifically, the profit can be improved by reducing the energy consumption. A direct way to reduce energy consumption is to always use a minimum number of Physical machines (PMs) hosting applications. The problem can be described as, a data center has a number of PMs where each of them can be represented as a set of resources such as CPU cores, RAM and etc. The data center received a list of requests for resources which is also represented as resources. The task is to allocate these requested resources to a minimum number of PMs. The decision variable in this task is the location of each requested resource. The assumptions and constraints are distinct in real life service models of Cloud computing.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{pics/pyramid.png}
-	\caption{Pyramid of service models in Cloud computing}
+	\caption{Pyramid of service models in Cloud computing. 
+	IaaS provides the fundamental resources such as CPU cores, RAM. The resources are usually wrapped with various types of virtual machine. PaaS provides a software platform sitting on top of IaaS for Cloud users to develop applications. SaaS is the application that serves End Users.}
 	\label{fig:pyramid}
 \end{figure} 
 
 
-Besides the stakeholders of Cloud computing, a service model of Cloud computing is the key to describe the relationship and responsibilities among stakeholders. There are three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models can be described as a pyramid (see \ref{fig:pyramid}). 
+Besides the stakeholders of Cloud computing, service models of Cloud computing are the key to describe the relationships and responsibilities among stakeholders. There are three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models can be described as a pyramid (see \ref{fig:pyramid}). 
 
 
 \begin{itemize}
 	\item IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are often encapsulated in virtualized computing units called virtual machines (VMs).
 
-	Cloud providers establish a number of types of VM for simplify the management. The `type' means a VM contains a certain quantity of resources such as 2-cores and 1 GB RAM.  
+	Cloud providers establish a number of types of VM for simplifying the management. The `type' means a VM contains a certain quantity of resources such as 2-cores and 1 GB RAM.  
 	They are the fundamental unit of resources. 
 
 	When Cloud users want to deploy their applications, they must select a type of VM. They estimate the resources that their applications might consume. The Cloud providers, in this stage, cannot help them to make the decision because of lacking knowledge of applications. After Cloud users have made the decisions, they send requests to Cloud providers for a number of VMs. Cloud providers received the request, provisioned and allocated these VMs to PMs. The constraint is that the aggregated resources in a PM cannot exceed the capacity of the PM. After these VMs have been allocated, their types cannot be changed. 
@@ -75,7 +76,7 @@ IaaS has three characteristics which naturally lead to a low resource utilizatio
 	\item Separated responsibilities of resource selection for applications and resource allocation. 
 	As above mentioned, Cloud users have to select the type of resources. This causes a problem. The accurate estimation is almost impossible because of unpredictable workloads; Cloud users tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv} than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. As the types of VM are a part of the agreement, Cloud providers cannot simply change the type of VMs after provisioning. 
 
-	\item Cloud providers offer fixed types of VMs for simplicity. Because of the fixed size of resources and the one-on-one mapping of applications and VMs, specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage. 
+	\item Cloud providers offer fixed types of VM. Because of the fixed size of resources and the one-on-one mapping of applications and VMs, specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage. 
 
 	\item Redundant operating systems (OSs) cause vast resource wastage. Since each VM runs a separated operating system, a PM might run many operating systems at a time. However, normal applications do not need specific operating systems commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Therefore, running duplicated OSs in a PM is unnecessary.
 \end{itemize}
@@ -94,15 +95,25 @@ For the first two drawbacks, previous researchers and developers have come up wi
 \emph{Overbooking} strategy \cite{Tomas:2013iv} is used to overcome the low utilization problem raised by the over-provisioning of VMs. It allocates more VMs in a PM even their aggregated resources have exceeded the PM's capacity. The advantage of this approach is that, indeed, it improves the resource utilization. The disadvantages are also obvious: if one or more applications are experiencing a heavy load; the PM is likely to run out of resources. At this moment, all the applications are suffer from a QoS degradation. In order to avoid the overloading, Cloud users often carefully predict the utilization of applications based on their previous workloads and use a dynamic resource management approach to adjust the VMs' location.
 
 The workflow of utilizing these two strategies in resource management is shown in Figure \ref{fig:}. 
-It seemingly solves the over-provisioning problem and fixed types of VM, however, the overbooking strategy brings new challenges. Although the overbooking strategy have been studies for years \cite{}, the prediction of workload is very difficult \cite{} or even impossible as referred in many literatures \cite{}. The improvement of resource utilization is completely based on an accurate prediction of a large number of applications. Its effectiveness is hard to evaluate and justify. It is also very time consuming to predict the utilization of every applications, therefore, the efficiency is low. Therefore, it is urgent to provide a strategy without making a prediction. One possible way is to use finer granularity strategy of resource management.
+It seemingly solves the over-provisioning problem and fixed types of VM, however, the overbooking strategy brings new challenges. Although the overbooking strategy have been studies for years \cite{}, the prediction of workload is very difficult \cite{} or even impossible as referred in many literatures \cite{}. The improvement of resource utilization is completely based on an accurate prediction of a large number of applications. Its effectiveness is hard to evaluate and justify. It is also very time consuming to predict the utilization of every application. Therefore, it is urgent to provide a strategy without making a prediction. One possible way is to use finer granularity strategy of resource management.
 
 There is no solution for the third drawback in the context of IaaS.
 
-For traditional PaaS, Cloud providers can adjust the application's location regardless of the type of VM. Therefore, it overcomes the first two drawbacks of IaaS. Because of PaaS is built upon IaaS, the one-on-one relationship between application and VM still exist. Therefore, the OS redundancy problem cannot be solved. In addition, PaaS brings a restriction for the applications deployed on it. PaaS build a software middle-ware to allow Cloud users' development. The middle-ware requires the deployed applications to be compatible with the environment, for example, Google App engine \cite{} only allows certain programming languages and libraries. Therefore, the generality of PaaS is very limited. It is urgent to provide a environment which supports automatic resource management as well as an editable programming environment.
+For traditional PaaS, Cloud providers can adjust the applications' location and the type of VM. Therefore, it overcomes the first drawback of IaaS. Because of PaaS is built upon IaaS, the one-on-one relationship between application and VM still exist. PaaS can only select the most suitable type. Therefore, it only partially solves the unbalanced resource problem cannot be solved. In addition, PaaS brings a restriction for the applications deployed on it. PaaS build a software middle-ware to allow Cloud users' development. The middle-ware requires the deployed applications to be compatible with the environment, for example, Google App engine \cite{} only allows certain programming languages and libraries. Therefore, the generality of PaaS is limited. It is urgent to provide a environment which supports automatic resource management as well as an editable programming environment.
 
-The recent development of container technology has successfully solved all problems in both IaaS and PaaS.
-A recent development of Container technique \cite{Soltesz:2007cu} has driven the attention of both industrial and academia.
+The recent development of container technology \cite{Soltesz:2007cu} has driven the attention of both industrial and academia 
+because its potential to solve these problems in both IaaS and PaaS.
 Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison} right-hand side). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
+
+
+As a variant of PaaS, it allows Cloud providers to manage both the resource selection and resource allocation. Specifically, a container's size is changeable and can be controlled by Cloud provider in real-time. When an application is initially deployed, the Cloud user need to provide an initial estimation of resources. Cloud provider wraps the application with a container according to the estimated size and allocates it to a PM. During the life cycle of the application, the size of the container can be adjusted according to its resource utilization. Like VMs, containers can also be migrated among VMs. These flexibility allows Cloud providers to utilize the resources in VM more efficiently, hence, solved the fixed types of VM problem. 
+
+Containers also solve the problem of limited software development environment by providing user-defined libraries. Each application 
+can have distinct libraries but share the kernel of a same operating system. This surely solve the redundant operating system problem since large amount of application only needs the basic functionalities of an operating system such as memory management.
+
+
+Hence, Cloud providers have a complete control of resources which may result in a better utilization of resources. 
+In addition, IaaS Cloud runs many redundant operating systems and hypervisors. CaaS eliminates these redundancies by a single operating system with multiple containers.
 
 % \begin{figure}[H]
 % 	\centering
@@ -270,10 +281,7 @@ Container is an operating system level of virtualization which means multiple co
 
 
 
-% In contrast, CaaS solves above two problems at a time. It allows Cloud providers to manage both the resource selection for applications and resource allocation; It also enables VM-resizing and many-to-one mapping between applications to VMs (Figure \ref{fig:comparison} right hand-side).
-% Hence, Cloud providers have a complete control of resources which may result in a better utilization of resources. 
-% In addition, IaaS Cloud runs many redundant operating systems and hypervisors. CaaS eliminates these redundancies by a single operating system with multiple containers.
-% % do research in this field.
+% In contrast, CaaS solves above two problems at a time. 
 
 % \vspace{10mm}
 
