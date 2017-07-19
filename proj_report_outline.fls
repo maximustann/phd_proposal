@@ -139,6 +139,11 @@ INPUT ./pics/consolidate.png
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT pics/comparison.png
+INPUT ./pics/comparison.png
+INPUT ./pics/comparison.png
+INPUT Motivation.tex
+INPUT Motivation.tex
 INPUT proj_report_outline.bbl
 INPUT proj_report_outline.bbl
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm

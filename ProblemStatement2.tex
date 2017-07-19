@@ -7,7 +7,7 @@ To illustrate how it works, considering a case: a Cloud provider builds a data c
 % One of the major characteristic of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
 Generally, Cloud computing involves three stakeholders: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}).
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/stakeholders.png}
 	\caption{Stakeholders of Cloud computing}
@@ -20,9 +20,12 @@ Each stakeholder has their responsibility, goal, and objectives.
 	\item \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. It is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the performance of the services.
 \end{itemize}
 
-In this thesis, we focus on an core issue of helping Cloud providers to increase their profits by optimizing the resource allocation in data centers. Specifically, the profit can be improved by reducing the energy consumption. A direct way to reduce energy consumption is to always use a minimum number of Physical machines (PMs) hosting applications. The problem can be described as, a data center has a number of PMs where each of them can be represented as a set of resources such as CPU cores, RAM and etc. The data center received a list of requests for resources which is also represented as resources. The task is to allocate these requested resources to a minimum number of PMs. The decision variable in this task is the location of each requested resource. The assumptions and constraints are distinct in real life service models of Cloud computing.
+In this thesis, we focus on an core issue of helping Cloud providers to increase their profits by optimizing the resource allocation in data centers. Specifically, the profit can be improved by reducing the energy consumption. A direct way to reduce energy consumption is to always use a minimum number of Physical machines (PMs) hosting applications. This is because the more PMs are running, the more energy they are 
+consumed.
 
-\begin{figure}[H]
+The problem can be described as, a data center has a number of PMs where each of them can be represented as a set of resources such as CPU cores, RAM and etc. The data center received a list of requests for applications which is also represented as resources. The task is to allocate these requested resources to a minimum number of PMs. The decision variable in this task is the location of each requested resource. The assumptions and constraints are distinct in service models of Cloud computing.
+
+\begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{pics/pyramid.png}
 	\caption{Pyramid of service models in Cloud computing. 
@@ -31,27 +34,28 @@ In this thesis, we focus on an core issue of helping Cloud providers to increase
 \end{figure} 
 
 
-Besides the stakeholders of Cloud computing, service models of Cloud computing are the key to describe the relationships and responsibilities among stakeholders. There are three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models can be described as a pyramid (see \ref{fig:pyramid}). 
+Service models of Cloud computing are critical in solving energy consumption problem because their distinct ways of managing resources have sever effect on the problem. These distinct ways of resource management mainly result from the responsibilities among stakeholders. There are three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models can be pictured as a pyramid (see \ref{fig:pyramid}). Their detailed responsibilities among stakeholders are explained as below:
 
 
 \begin{itemize}
-	\item IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are often encapsulated in virtualized computing units called virtual machines (VMs).
+	\item IaaS, a Cloud provider hosts hardwares such as PMs and cooling infrastructure on behalf of Cloud users. A Cloud provider also provides maintenance, management of hardware resources. 
 
-	Cloud providers establish a number of types of VM for simplifying the management. The `type' means a VM contains a certain quantity of resources such as 2-cores and 1 GB RAM.  
-	They are the fundamental unit of resources. 
+	In IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are often encapsulated in virtualized computing units called virtual machines (VMs). Cloud providers establish a number of types of VM for simplifying the management. The `type' means a VM contains a certain quantity of resources such as 2-cores and 1 GB RAM.  \emph{Traditional} IaaS and PaaS use VM as the fundamental unit of resources.
 
-	When Cloud users want to deploy their applications, they must select a type of VM. They estimate the resources that their applications might consume. The Cloud providers, in this stage, cannot help them to make the decision because of lacking knowledge of applications. After Cloud users have made the decisions, they send requests to Cloud providers for a number of VMs. Cloud providers received the request, provisioned and allocated these VMs to PMs. The constraint is that the aggregated resources in a PM cannot exceed the capacity of the PM. After these VMs have been allocated, their types cannot be changed. 
+	A typical procedure of a Cloud user deploying their applications in an IaaS cloud includes several steps.
+	Initially, Cloud users estimate the resources that their applications might consume and select a type of VM which can satisfy the requirement. After Cloud users have made the decisions, they send requests to Cloud providers for a number of VMs. Finally, Cloud providers received the request, provisioned and allocated these VMs to PMs. 
 
-	During the life cycle of an application, Cloud providers can dynamically adjust the locations of VMs, provision new VMs (same type) for the replicas of an application, as well as turning on/off PMs.
+	From the resource management perspective, the constraint in allocation of VMs is that the aggregated VMs' resources in a PM cannot exceed the capacity of the PM. After these VMs have been allocated, their types cannot be changed. During the life cycle of an application, Cloud providers can dynamically adjust the locations of VMs, provision new VMs (same type) for the replicas of an application, as well as turning on/off PMs.
 
 	% After receiving the requests, Cloud providers choose a set of PMs which contains sufficient resources, provision the required VMs in them. Then, the VMs are assigned to the Cloud users. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is used to provision new VMs to Cloud users. Finally, Cloud providers optimize the locations of VMs so that the energy consumption of data center is minimized.
 
 
- 	\item PaaS, as shown in Figure \ref{fig:pyramid}, is sitting above the IaaS which means adding an abstraction over the underlying hardware as a middle-ware layer. This middle-ware layer provides a software development environment which allows Cloud users to build, test and deploy their applications on Cloud. In terms of resource management, PaaS takes the responsibility of selecting VMs and allows Cloud users to focus on software development. 
+ 	\item PaaS, a Cloud provider offers a platform which allows Cloud users to develop, test and deploy their applications on it.
 
- 	When Cloud users want to deploy their applications in PaaS, Cloud users need to provide the initial estimation of the quantity of resources instead of types of VM. Cloud providers determines the types of VM for applications according to the estimated resources. Those types of VM are normally just enough to satisfy the requirements. After this step, resource management system conducts the provisioning and allocating as the same steps in IaaS.
+ 	From resource management perspective, as shown in Figure \ref{fig:pyramid}, PaaS is sitting above the IaaS which means the underlying resource is still based on IaaS VM types. Different from IaaS, PaaS takes the responsibility of selecting VMs and allows Cloud users to focus on software development. 
 
- 	During the life cycle of applications, similar to IaaS, Cloud providers can also adjust the location of VMs, add new VMs, and control the status of PMs. Different from IaaS, Cloud providers can change the type of VM for an application as long as the application's performance can be guaranteed.
+ 	A typical procedure of a Cloud user deploying their applications in an PaaS cloud includes several steps.
+ 	In the first step, Cloud users need to provide the initial estimation of the quantity of resources instead of types of VM. Then, Cloud providers determine the types of VM for applications according to the estimated resources.  After this step, resource management system conducts the provisioning and allocating as the same steps in IaaS. During the life cycle of applications, similar to IaaS, Cloud providers can also adjust the location of VMs, add new VMs, and control the status of PMs. Different from IaaS, Cloud providers can change the type of VM for an application as long as the application's performance can be guaranteed.
 
  	% The system monitors the utilization of a number of PM and VM and through adjustment of their location to optimize the energy consumption of the data center. The input is a list of VMs (e.g CPU cores and RAMs) and a list of PMs. The task is to put the VMs into these PMs so that the VMs only use a minimum number of PMs. The sizes of VMs and PMs are fixed. A system can only adjust which VM is allocated to which PM. A general constraint is the sum of resources of the VMs inside a PM cannot exceed the capacity of the PM.
 
@@ -74,7 +78,7 @@ IaaS has three characteristics which naturally lead to a low resource utilizatio
 \begin{itemize}
 	% \item Resource management is based on VM. Cloud providers can dynamically adjust the location (in which PM) of a VM based on the observed resource utilization. 
 	\item Separated responsibilities of resource selection for applications and resource allocation. 
-	As above mentioned, Cloud users have to select the type of resources. This causes a problem. The accurate estimation is almost impossible because of unpredictable workloads; Cloud users tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv} than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. As the types of VM are a part of the agreement, Cloud providers cannot simply change the type of VMs after provisioning. 
+	As above mentioned, Cloud users have to select the type of resources. This causes a problem. The accurate estimation is almost impossible because of unpredictable workloads; Cloud users tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv} than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. As the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning. 
 
 	\item Cloud providers offer fixed types of VM. Because of the fixed size of resources and the one-on-one mapping of applications and VMs, specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage. 
 
@@ -92,28 +96,56 @@ For the first two drawbacks, previous researchers and developers have come up wi
 
 \emph{Server consolidation} \cite{Zhang:2010vo}, as above mentioned, utilized a dynamic migration technique to resolve the low utilization problem by gathering applications into a fewer number of PMs (see Figure \ref{fig:unproportional}), so that the resource utilization of PMs are maintained at a high level. In the meanwhile, idle PMs can be turned off to save energy. Consolidation dramatically improves hardware utilization and lowers PM and cooling energy consumption. 
 
-\emph{Overbooking} strategy \cite{Tomas:2013iv} is used to overcome the low utilization problem raised by the over-provisioning of VMs. It allocates more VMs in a PM even their aggregated resources have exceeded the PM's capacity. The advantage of this approach is that, indeed, it improves the resource utilization. The disadvantages are also obvious: if one or more applications are experiencing a heavy load; the PM is likely to run out of resources. At this moment, all the applications are suffer from a QoS degradation. In order to avoid the overloading, Cloud users often carefully predict the utilization of applications based on their previous workloads and use a dynamic resource management approach to adjust the VMs' location.
+\emph{Overbooking} strategy \cite{Tomas:2013iv} is used to overcome the low utilization problem raised by the over-provisioning of VMs. It allocates more VMs in a PM even their aggregated resources have exceeded the PM's capacity. The advantage of this approach is that, indeed, it improves the resource utilization. The disadvantages are also obvious: if one or more applications are experiencing a heavy load; the PM is likely to run out of resources. At this moment, all the applications are suffer from a QoS degradation. In order to avoid the overloading, Cloud users often carefully predict the utilization of applications based on their previous workloads, when applications start degrading, a dynamic resource management approach is used to adjust the VMs' location.
 
 The workflow of utilizing these two strategies in resource management is shown in Figure \ref{fig:}. 
-It seemingly solves the over-provisioning problem and fixed types of VM, however, the overbooking strategy brings new challenges. Although the overbooking strategy have been studies for years \cite{}, the prediction of workload is very difficult \cite{} or even impossible as referred in many literatures \cite{}. The improvement of resource utilization is completely based on an accurate prediction of a large number of applications. Its effectiveness is hard to evaluate and justify. It is also very time consuming to predict the utilization of every application. Therefore, it is urgent to provide a strategy without making a prediction. One possible way is to use finer granularity strategy of resource management.
+It seemingly solves the over-provisioning problem, however, the overbooking strategy brings new challenges. Although the overbooking strategy have been studies for years \cite{}, the prediction of workload is very difficult \cite{} or even impossible as referred in many literatures \cite{}. The improvement of resource utilization is completely based on an accurate prediction of a large number of applications. Its effectiveness is hard to evaluate and justify. It is also very time consuming to predict the utilization of every application. Therefore, it is urgent to provide a strategy without making a prediction. One possible way is to use finer granularity strategy of resource management.
 
-There is no solution for the third drawback in the context of IaaS.
+Furthermore, there is no solution for the third drawback in the context of IaaS.
 
-For traditional PaaS, Cloud providers can adjust the applications' location and the type of VM. Therefore, it overcomes the first drawback of IaaS. Because of PaaS is built upon IaaS, the one-on-one relationship between application and VM still exist. PaaS can only select the most suitable type. Therefore, it only partially solves the unbalanced resource problem cannot be solved. In addition, PaaS brings a restriction for the applications deployed on it. PaaS build a software middle-ware to allow Cloud users' development. The middle-ware requires the deployed applications to be compatible with the environment, for example, Google App engine \cite{} only allows certain programming languages and libraries. Therefore, the generality of PaaS is limited. It is urgent to provide a environment which supports automatic resource management as well as an editable programming environment.
+For traditional PaaS, Cloud providers can adjust the applications' location and the type of VM. Therefore, it overcomes the first drawback of IaaS. Because of PaaS is built upon IaaS, the one-on-one relationship between application and VM still exist. PaaS can only select the most suitable type instead of changing their sizes. Therefore, the unbalanced resource problem cannot be solved. In addition, PaaS brings a restriction for the applications deployed on it. PaaS build a software middle-ware to allow Cloud users' development. The middle-ware requires the deployed applications to be compatible with the environment, for example, Google App engine \cite{} only allows certain programming languages and libraries. Therefore, the generality of PaaS is limited. It is urgent to provide a environment which supports automatic resource management as well as an editable programming environment.
 
-The recent development of container technology \cite{Soltesz:2007cu} has driven the attention of both industrial and academia 
-because its potential to solve these problems in both IaaS and PaaS.
-Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison} right-hand side). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units.
+The recent development of container technology \cite{Soltesz:2007cu} has driven the attention of both industrial and academia because its potential to solve these problems in both IaaS and PaaS.
+Container is an operating system level of virtualization which means multiple containers can be installed in a same operating system (see Figure \ref{fig:comparison} right-hand side). Each container provides an isolated environment for an application. In short, a VM is partitioned into smaller manageable units. 
+Container as a Service (CaaS) is a variant of PaaS propose by a leading Lab in this field \cite{}. 
+Instead of VMs, CaaS uses both container and VM as a hybrid resource management unit.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
+	\caption{A comparison between VM-based and Container-based virtualization}
+	\label{fig:comparison}
+\end{figure}
+
+CaaS solves the problems in IaaS and PaaS because of containers' characteristics.
+The most important feature of container is that it utilizes the resources inside VMs. 
+Therefore, even CaaS is also built upon IaaS, it solves the fixed types by allocating containers in it. This feature also solves the redundant operating systems problem.
+The second characteristic is that a container's size is changeable and can be controlled by 
+Cloud provider in real-time. Therefore, the Cloud providers can monitor the resource utilization of applications and adjust it accordingly. This feature provides better flexibility which solves the over-provisioning problem. 
+In addition, one feature that separates CaaS and PaaS is that, containers allow user-defined libraries instead of constrained by the platform.
+
+Although CaaS has these promising characteristics, it also proposes a difficult research problem. In order to 
+understand the difficulty of the problem, it is necessary to illustrate the difficulty of current VM-based server consolidation problem.
 
 
-As a variant of PaaS, it allows Cloud providers to manage both the resource selection and resource allocation. Specifically, a container's size is changeable and can be controlled by Cloud provider in real-time. When an application is initially deployed, the Cloud user need to provide an initial estimation of resources. Cloud provider wraps the application with a container according to the estimated size and allocates it to a PM. During the life cycle of the application, the size of the container can be adjusted according to its resource utilization. Like VMs, containers can also be migrated among VMs. These flexibility allows Cloud providers to utilize the resources in VM more efficiently, hence, solved the fixed types of VM problem. 
+Currently, vast amount of server consolidation methods are mostly VM-based and they are mainly modeled as bin-packing problems \cite{Mann:2015ua}. This is because VMs and PMs are naturally modeled as items and bins and server consolidation and bin-packing have the same optimization objective: minimize the number of bins/PMs. The complexity of bin-packing problem is NP-hard which means it is extreme time-consuming to find its optimal solution when the number of decision variables are large. Deterministic methods such as Integer Linear Programming \cite{Speitkamp:2010ck} and Mixed
+Integer Programming \cite{Wang:2016eh} have been used but they are well-known that they are very time-consuming for a large scale problem. 
+More research proposed heuristic methods to approximate the optimal solution such as 
+First Fit Decreasing (FFD) \cite{Panigrahy:2011wk}, Best Fit Decreasing (BFD) \cite{Beloglazov:2012ji}.
+Manually designed heuristics are designed to tackle the special requirements such 
+as a bin-item incomplete scenario \cite{Gupta:2008ul} and multi-tier applications \cite{Jung:2008vb, Li:2009wf}. Although these greedy-based heuristics can quickly approximate an answer,  as Mann's research \cite{Mann:2015ua} showed, server consolidation is a lot more harder than bin-packing problem because of the multi-dimensional, many constraints. Therefore, general bin-packing algorithms do not perform well with many constraints and specific designed heuristics only perform well in very narrow scope.
 
-Containers also solve the problem of limited software development environment by providing user-defined libraries. Each application 
-can have distinct libraries but share the kernel of a same operating system. This surely solve the redundant operating system problem since large amount of application only needs the basic functionalities of an operating system such as memory management.
+Although traditional VM-based server consolidation has been studied for year, these methods can not be directly applied on container-based problem because container-based consolidation has two levels of allocation: Containers are allocated to VM as the first level and VMs are allocated to PMs as the second level. These two levels of allocation interact with each other, for the first level of allocation affects the decision in the second level.
+
+% As a variant of PaaS, it allows Cloud providers to manage both the resource selection and resource allocation. Specifically,  
+% When an application is initially deployed, the Cloud user need to provide an initial estimation of resources. Cloud provider wraps the application with a container according to the estimated size and allocates it to a PM. During the life cycle of the application, the size of the container can be adjusted according to its resource utilization. Like VMs, containers can also be migrated among VMs. These flexibility allows Cloud providers to utilize the resources in VM more efficiently, hence, solved the fixed types of VM problem. 
+
+% Containers also solve the problem of limited software development environment by providing user-defined libraries. Each application 
+% can have distinct libraries but share the kernel of a same operating system. This surely solve the redundant operating system problem since large amount of application only needs the basic functionalities of an operating system such as memory management.
 
 
-Hence, Cloud providers have a complete control of resources which may result in a better utilization of resources. 
-In addition, IaaS Cloud runs many redundant operating systems and hypervisors. CaaS eliminates these redundancies by a single operating system with multiple containers.
+% Hence, Cloud providers have a complete control of resources which may result in a better utilization of resources. 
+% In addition, IaaS Cloud runs many redundant operating systems and hypervisors. CaaS eliminates these redundancies by a single operating system with multiple containers.
 
 % \begin{figure}[H]
 % 	\centering
@@ -192,7 +224,7 @@ In addition, IaaS Cloud runs many redundant operating systems and hypervisors. C
 
 % % Server consolidation is the core functionality involving in all Cloud resource management operations. These operations
 
-% % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of cancelling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
+% % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
 % \begin{enumerate}
 % 	\item \emph{Application initialization} is applied when new applications or new VMs arrive and the problem is to allocate them into a minimum number of PMs.
 
@@ -263,13 +295,6 @@ In addition, IaaS Cloud runs many redundant operating systems and hypervisors. C
 
 
 
-% \vspace{10mm}
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
-% 	\caption{A comparison between VM-based and Container-based virtualization}
-% 	\label{fig:comparison}
-% \end{figure}
 
 
 
@@ -285,16 +310,8 @@ In addition, IaaS Cloud runs many redundant operating systems and hypervisors. C
 
 % \vspace{10mm}
 
-% Currently, vast amount of server consolidation methods are mostly VM-based and they are mainly modeled as bin-packing problems \cite{Mann:2015ua}, where applications represent items and PMs represent bins. These methods can not be directly applied on container-based problem because container-based consolidation has two levels of allocation: Containers are allocated to VM as the first level and VM are allocated to PM as the second level. These two levels of allocation interact with each other. 
 
-% Even for single level of bin-packing problems, the complexity is NP-hard .
-% In VM-based static problem, deterministic methods such as  
-% Integer Linear Programming \cite{Speitkamp:2010ck} and Mixed
-% Integer Programming \cite{Wang:2016eh} are often considered. However, it is well-known that they are very time-consuming for a large scale problem. More research proposed heuristic methods
-%  to approximate the optimal solution such as 
-% First Fit Decreasing (FFD) \cite{Panigrahy:2011wk}, Best Fit Decreasing (BFD) \cite{Beloglazov:2012ji}.
-% Manually designed heuristics are designed to tackle the special requirements such 
-% as a bin-item incomplete scenario \cite{Gupta:2008ul} and multi-tier applications \cite{Jung:2008vb, Li:2009wf}. Although these greedy-based heuristics can quickly approximate an answer,  as Mann's research \cite{Mann:2015ua} showed, server consolidation is a lot more harder than bin-packing problem because of the multi-dimensional, many constraints. Therefore, general bin-packing algorithms do not perform well with many constraints and specific designed heuristics only perform well in very narrow scope.
+
 
 % Evolutionary Computation (EC) is commonly used to solve combinatorial optimization problem \cite{Guzek:2015ds}, therefore, it is particular useful in solving the global consolidation problem.  Many EC techniques including Genetic Algorithm (GA) \cite{Xu:2010vh}, Ant Colony Optimization (ACO) \cite{Gao:2013gg, Mateos:2013bm}, Particle Swarm Optimization (PSO) \cite{Jeyarani:2012fg} have been used in solving this problem. EC algorithms show their advantages in the following aspects. Firstly, EC algorithms are good at solving multi-objective problems because of their population-based nature. And global consolidation problem often involves two or more objectives (e.g energy efficiency and migration cost). Secondly,  they can provide near-optimal solutions within a reasonable amount of time.  
 
