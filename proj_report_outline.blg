@@ -11,43 +11,43 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in Mann:2015ua
 You've used 29 entries,
             2253 wiz_defined-function locations,
-            722 strings with 9702 characters,
-and the built_in function-call counts, 9665 in all, are:
-= -- 932
-> -- 543
+            721 strings with 9724 characters,
+and the built_in function-call counts, 9723 in all, are:
+= -- 940
+> -- 548
 < -- 0
-+ -- 223
-- -- 194
-* -- 825
-:= -- 1646
++ -- 225
+- -- 196
+* -- 828
+:= -- 1655
 add.period$ -- 85
 call.type$ -- 29
-change.case$ -- 184
+change.case$ -- 185
 chr.to.int$ -- 0
 cite$ -- 30
 duplicate$ -- 277
-empty$ -- 694
-format.name$ -- 194
-if$ -- 1918
+empty$ -- 696
+format.name$ -- 196
+if$ -- 1929
 int.to.chr$ -- 0
 int.to.str$ -- 29
 missing$ -- 28
 newline$ -- 146
 num.names$ -- 58
-pop$ -- 146
+pop$ -- 147
 preamble$ -- 1
-purify$ -- 155
+purify$ -- 156
 quote$ -- 0
 skip$ -- 168
 stack$ -- 0
-substring$ -- 570
+substring$ -- 580
 swap$ -- 62
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 114
 warning$ -- 1
-while$ -- 97
+while$ -- 98
 width$ -- 31
 write$ -- 285
 (There was 1 error message)

@@ -145,12 +145,6 @@
 \newblock In {\em 2016 IEEE 9th International Conference on Cloud Computing
   (CLOUD\/} (2016), IEEE, pp.~84--91.
 
-\bibitem{Wen:1991kt}
-{\sc Wen, U.-P., and Hsu, S.-T.}
-\newblock {Linear Bi-Level Programming Problems -- A Review}.
-\newblock {\em The Journal of the Operational Research Society 42}, 2 (Feb.
-  1991), 125.
-
 \bibitem{Xu:2010vh}
 {\sc Xu, J., and Fortes, J. A.~B.}
 \newblock {Multi-Objective Virtual Machine Placement in Virtualized Data Center
@@ -163,6 +157,11 @@
 \newblock {Dynamic Resource Allocation in Computing Clouds Using Distributed
   Multiple Criteria Decision Analysis.}
 \newblock {\em IEEE CLOUD\/} (2010), 91--98.
+
+\bibitem{Zhang:2016cx}
+{\sc Zhang, J., Huang, H., and Wang, X.}
+\newblock {Resource provision algorithms in cloud computing - A survey.}
+\newblock {\em J. Network and Computer Applications 64\/} (2016), 23--42.
 
 \bibitem{Zhang:2010vo}
 {\sc Zhang, Q., Cheng, L., and Boutaba, R.}

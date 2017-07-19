@@ -144,6 +144,12 @@ INPUT ./pics/comparison.png
 INPUT ./pics/comparison.png
 INPUT Motivation.tex
 INPUT Motivation.tex
+INPUT Goals.tex
+INPUT Goals.tex
+INPUT published.tex
+INPUT published.tex
+INPUT organization.tex
+INPUT organization.tex
 INPUT proj_report_outline.bbl
 INPUT proj_report_outline.bbl
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
