@@ -2,52 +2,60 @@ This is BibTeX, Version 0.99d (Web2C 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: literature_review.aux
+A level-1 auxiliary file: preliminary.aux
+A level-1 auxiliary file: contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
 Repeated entry---line 481 of file sample.bib
  : @article{Chaisiri:2012cv
  :                         ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Clark:2005uda"
+Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
+Warning--empty journal in Energy_6
 Warning--empty journal in Mann:2015ua
-You've used 29 entries,
+Warning--can't use both volume and number fields in Energy_4
+You've used 63 entries,
             2253 wiz_defined-function locations,
-            721 strings with 9724 characters,
-and the built_in function-call counts, 9723 in all, are:
-= -- 940
-> -- 548
+            940 strings with 16852 characters,
+and the built_in function-call counts, 22856 in all, are:
+= -- 2189
+> -- 1281
 < -- 0
-+ -- 225
-- -- 196
-* -- 828
-:= -- 1655
-add.period$ -- 85
-call.type$ -- 29
-change.case$ -- 185
++ -- 528
+- -- 462
+* -- 1947
+:= -- 3780
+add.period$ -- 185
+call.type$ -- 63
+change.case$ -- 419
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 277
-empty$ -- 696
-format.name$ -- 196
-if$ -- 1929
+cite$ -- 66
+duplicate$ -- 708
+empty$ -- 1666
+format.name$ -- 462
+if$ -- 4630
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 28
-newline$ -- 146
-num.names$ -- 58
-pop$ -- 147
+int.to.str$ -- 63
+missing$ -- 62
+newline$ -- 314
+num.names$ -- 126
+pop$ -- 375
 preamble$ -- 1
-purify$ -- 156
+purify$ -- 357
 quote$ -- 0
-skip$ -- 168
+skip$ -- 446
 stack$ -- 0
-substring$ -- 580
-swap$ -- 62
+substring$ -- 1371
+swap$ -- 184
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
-warning$ -- 1
-while$ -- 98
-width$ -- 31
-write$ -- 285
+type$ -- 248
+warning$ -- 3
+while$ -- 226
+width$ -- 65
+write$ -- 629
 (There was 1 error message)

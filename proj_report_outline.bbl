@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Service_2}
+{\sc Anselmi, J., Amaldi, E., and Cremonesi, P.}
+\newblock Service consolidation with end-to-end response time constraints.
+\newblock In {\em 2008 34th Euromicro Conference Software Engineering and
+  Advanced Applications\/} (Sept 2008), pp.~345--352.
+
 \bibitem{Banzhaf:1998wc}
 {\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
 \newblock {Genetic programming: an introduction}, 1998.
@@ -9,26 +15,100 @@
 \newblock {The Case for Energy-Proportional Computing.}
 \newblock {\em IEEE Computer 40}, 12 (2007), 33--37.
 
+\bibitem{Energy_Service_2}
+{\sc Beloglazov, A., Abawajy, J., and Buyya, R.}
+\newblock Energy-aware resource allocation heuristics for efficient management
+  of data centers for cloud computing.
+\newblock {\em Future generation computer systems 28}, 5 (2012), 755--768.
+
 \bibitem{Beloglazov:2012ji}
 {\sc Beloglazov, A., Abawajy, J.~H., and Buyya, R.}
 \newblock {Energy-aware resource allocation heuristics for efficient management
   of data centers for Cloud computing.}
 \newblock {\em Future Generation Comp. Syst. 28}, 5 (2012), 755--768.
 
+\bibitem{Energy_3}
+{\sc Bohra, A. E.~H., and Chaudhary, V.}
+\newblock Vmeter: Power modelling for virtualized clouds.
+\newblock In {\em Parallel \& Distributed Processing, Workshops and Phd Forum
+  (IPDPSW), 2010 IEEE International Symposium on\/} (2010), Ieee, pp.~1--8.
+
+\bibitem{Energy_9}
+{\sc Borgetto, D., Casanova, H., Da~Costa, G., and Pierson, J.-M.}
+\newblock Energy-aware service allocation.
+\newblock {\em Future Generation Computer Systems 28}, 5 (2012), 769--779.
+
+\bibitem{Energy_6}
+{\sc Brown, R.~E., Masanet, E.~R., Nordman, B., Tschudi, W.~F., Shehabi, A.,
+  Stanley, J., Koomey, J.~G., Sartor, D.~A., and Chan, P.~T.}
+\newblock Report to congress on server and data center energy efficiency:
+  Public law 109-431.
+
 \bibitem{Burke:2006ei}
 {\sc Burke, E.~K., Hyde, M.~R., and Kendall, G.}
 \newblock {Evolving Bin Packing Heuristics with Genetic Programming.}
 \newblock {\em PPSN 4193}, Chapter 87 (2006), 860--869.
+
+\bibitem{Buyya:2009ix}
+{\sc Buyya, R., Yeo, C.~S., Venugopal, S., Broberg, J., and Brandic, I.}
+\newblock {Cloud computing and emerging IT platforms: Vision, hype, and reality
+  for delivering computing as the 5th utility}.
+\newblock {\em Future Generation Computer Systems 25}, 6 (June 2009), 599--616.
 
 \bibitem{Chaisiri:2012cv}
 {\sc Chaisiri, S., Lee, B.-S., and Niyato, D.}
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
 \newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
 
+\bibitem{Cho:2016kz}
+{\sc Cho, J., and Kim, Y.}
+\newblock {Improving energy efficiency of dedicated cooling system and its
+  contribution towards meeting an energy-optimized data center}.
+\newblock {\em Applied Energy 165\/} (Mar. 2016), 967--982.
+
+\bibitem{CoffmanJr:1996ui}
+{\sc Coffman~Jr, E.~G., Garey, M.~R., and Johnson, D.~S.}
+\newblock {\em {Approximation algorithms for bin packing: a survey}}.
+\newblock PWS Publishing Co., Aug. 1996.
+
+\bibitem{nsgaii}
+{\sc Deb, K., Pratap, A., Agarwal, S., and Meyarivan, T.}
+\newblock A fast and elitist multiobjective genetic algorithm: Nsga-{II}.
+\newblock {\em IEEE Transactions on Evolutionary Computation 6}, 2 (Apr 2002),
+  182--197.
+
+\bibitem{Energy_7}
+{\sc Desai, S., Bahadure, S., Kazi, F., and Singh, N.}
+\newblock Article: Multi-objective constrained optimization using discrete
+  mechanics and {NSGA-II} approach.
+\newblock {\em International Journal of Computer Applications 57}, 20 (2012),
+  14--20.
+
+\bibitem{MOEA}
+{\sc Desai, S., Bahadure, S., Kazi, F., and Singh, N.}
+\newblock Article: Multi-objective constrained optimization using discrete
+  mechanics and {NSGA-II} approach.
+\newblock {\em International Journal of Computer Applications 57}, 20 (2012),
+  14--20.
+
+\bibitem{dubois2015autonomic}
+{\sc Dubois, D.~J., and Casale, G.}
+\newblock Autonomic provisioning and application mapping on spot cloud
+  resources.
+\newblock In {\em Cloud and Autonomic Computing (ICCAC), 2015 International
+  Conference on\/} (2015), IEEE, pp.~57--68.
+
 \bibitem{Forsman:2015ca}
 {\sc Forsman, M., Glad, A., Lundberg, L., and Ilie, D.}
 \newblock {Algorithms for automated live migration of virtual machines.}
 \newblock {\em Journal of Systems and Software 101\/} (2015), 110--126.
+
+\bibitem{Energy_8}
+{\sc Ghribi, C., Hadji, M., and Zeghlache, D.}
+\newblock Energy efficient vm scheduling for cloud data centers: Exact
+  allocation and migration algorithms.
+\newblock In {\em Cluster, Cloud and Grid Computing (CCGrid), 2013 13th
+  IEEE/ACM International Symposium on\/} (2013), IEEE, pp.~671--678.
 
 \bibitem{Gupta:2008ul}
 {\sc Gupta, R., Bose, S.~K., Sundarrajan, S., Chebiyam, M., and Chakrabarti,
@@ -36,6 +116,14 @@
 \newblock {A Two Stage Heuristic Algorithm for Solving the Server Consolidation
   Problem with Item-Item and Bin-Item Incompatibility Constraints.}
 \newblock {\em IEEE SCC\/} (2008).
+
+\bibitem{Hameed:2016cma}
+{\sc Hameed, A., Khoshkbarforoushha, A., Ranjan, R., Jayaraman, P.~P.,
+  Kolodziej, J., Balaji, P., Zeadally, S., Malluhi, Q.~M., Tziritas, N.,
+  Vishnu, A., Khan, S.~U., and Zomaya, A.~Y.}
+\newblock {A survey and taxonomy on energy efficient resource allocation
+  techniques for cloud computing systems.}
+\newblock {\em Computing 98}, 7 (2016), 751--774.
 
 \bibitem{Hofmeyr:2000ju}
 {\sc Hofmeyr, S.~A., and Forrest, S.}
@@ -60,6 +148,30 @@
   Consolidated Server Environments.}
 \newblock {\em ICAC\/} (2008).
 
+\bibitem{ope}
+{\sc Kanagarajan, D., Karthikeyan, R., Palanikumar, K., and Davim, J.}
+\newblock Optimization of electrical discharge machining characteristics of
+  wc/co composites using non-dominated sorting genetic algorithm ({NSGA-II}).
+\newblock {\em The International Journal of Advanced Manufacturing Technology
+  36}, 11-12 (2008), 1124--1132.
+
+\bibitem{Kaplan:up01fR-k}
+{\sc Kaplan, J.~M., Forrest, W., and Kindler, N.}
+\newblock {Revolutionizing data center energy efficiency}, 2008.
+
+\bibitem{Energy_5}
+{\sc Kusic, D., Kephart, J.~O., Hanson, J.~E., Kandasamy, N., and Jiang, G.}
+\newblock Power and performance management of virtualized computing
+  environments via lookahead control.
+\newblock {\em Cluster computing 12}, 1 (2009), 1--15.
+
+\bibitem{evo_str}
+{\sc Lee, K.~Y., and Yang, F.~F.}
+\newblock Optimal reactive power planning using evolutionary algorithms: A
+  comparative study for evolutionary programming, evolutionary strategy,
+  genetic algorithm, and linear programming.
+\newblock {\em IEEE Transactions on power systems 13}, 1 (1998), 101--108.
+
 \bibitem{Li:2009wf}
 {\sc Li, B., and Jianxin, L.}
 \newblock {\em {An Energy-saving Application Live Placement Approach for Cloud
@@ -71,11 +183,21 @@
 \newblock {Approximability of virtual machine allocation: much harder than bin
   packing}.
 
+\bibitem{Mazumdar20174}
+{\sc Mazumdar, S., and Pranzo, M.}
+\newblock Power efficient server consolidation for cloud data center.
+\newblock {\em Future Generation Computer Systems 70\/} (2017), 4 -- 16.
+
 \bibitem{Mell:2011jj}
 {\sc Mell, P.~M., and Grance, T.}
 \newblock {The NIST definition of cloud computing}.
 \newblock Tech. rep., National Institute of Standards and Technology,
   Gaithersburg, MD, Gaithersburg, MD, 2011.
+
+\bibitem{Mishra:2012kx}
+{\sc Mishra, M., Das, A., Kulkarni, P., and Sahoo, A.}
+\newblock {Dynamic resource management using virtual machine migrations}.
+\newblock {\em IEEE Communications {\ldots} 50}, 9 (2012), 34--40.
 
 \bibitem{Moens:2011gk}
 {\sc Moens, H., Famaey, J., Latr{\'e}, S., Dhoedt, B., and De~Turck, F.}
@@ -95,12 +217,36 @@
 \newblock {Heuristics for vector bin packing}.
 \newblock {\em research microsoft com\/} (2011).
 
+\bibitem{SLA_metric}
+{\sc Paschke, A., and Schnappinger-Gerull, E.}
+\newblock A categorization scheme for sla metrics.
+\newblock {\em Service Oriented Electronic Commerce 80}, 25-40 (2006), 14.
+
 \bibitem{Piraghaj:2016bw}
 {\sc Piraghaj, S.~F., Calheiros, R.~N., Chan, J., Dastjerdi, A.~V., and Buyya,
   R.}
 \newblock {Virtual Machine Customization and Task Mapping Architecture for
   Efficient Allocation of Cloud Data Center Resources.}
 \newblock {\em Comput. J. 59}, 2 (2016), 208--224.
+
+\bibitem{Piraghaj:2015uf}
+{\sc Piraghaj, S.~F., Dastjerdi, A.~V., Calheiros, R.~N., and Buyya, R.}
+\newblock {Efficient Virtual Machine Sizing for Hosting Containers as a Service
+  (SERVICES 2015).}
+\newblock {\em SERVICES\/} (2015).
+
+\bibitem{Energy_4}
+{\sc Raghavendra, R., Ranganathan, P., Talwar, V., Wang, Z., and Zhu, X.}
+\newblock No power struggles: Coordinated multi-level power management for the
+  data center.
+\newblock In {\em ACM SIGARCH Computer Architecture News\/} (2008), vol.~36,
+  ACM, pp.~48--59.
+
+\bibitem{Rong:2016js}
+{\sc Rong, H., Zhang, H., Xiao, S., Li, C., and Hu, C.}
+\newblock {Optimizing energy consumption for data centers}.
+\newblock {\em Renewable and Sustainable Energy Reviews 58\/} (May 2016),
+  674--691.
 
 \bibitem{Sarin:2011fu}
 {\sc Sarin, S.~C., Varadarajan, A., and Wang, L.}
@@ -120,6 +266,11 @@
   high-performance alternative to hypervisors.}
 \newblock {\em EuroSys 41}, 3 (2007), 275--287.
 
+\bibitem{Somani:2009ho}
+{\sc Somani, G., and Chaudhary, S.}
+\newblock {Application Performance Isolation in Virtualization.}
+\newblock {\em IEEE CLOUD\/} (2009), 41--48.
+
 \bibitem{SoteloFigueroa:2013be}
 {\sc Sotelo-Figueroa, M.~A., Soberanes, H. J.~P., Carpio, J.~M., Huacuja, H.
   J.~F., Reyes, L.~C., and Soria-Alcaraz, J.~A.}
@@ -134,10 +285,34 @@
   problems in virtualized data centers}.
 \newblock {\em IEEE Transactions on services {\ldots}\/} (2010).
 
+\bibitem{Energy_1}
+{\sc Srikantaiah, S., Kansal, A., and Zhao, F.}
+\newblock Energy aware consolidation for cloud computing.
+\newblock In {\em Proceedings of the 2008 conference on Power aware computing
+  and systems\/} (2008), vol.~10, San Diego, California, pp.~1--5.
+
+\bibitem{Svard:2015ic}
+{\sc Svard, P., Li, W., Wadbro, E., Tordsson, J., and Elmroth, E.}
+\newblock {Continuous Datacenter Consolidation}.
+\newblock In {\em 2015 IEEE 7th International Conference on Cloud Computing
+  Technology and Science (CloudCom)\/} (2015), IEEE, pp.~387--396.
+
 \bibitem{Tomas:2013iv}
 {\sc Tom{\'a}s, L., and Tordsson, J.}
 \newblock {Improving cloud infrastructure utilization through overbooking.}
 \newblock {\em CAC\/} (2013), 1.
+
+\bibitem{Uhlig:2005do}
+{\sc Uhlig, R., Neiger, G., Rodgers, D., Santoni, A.~L., Martins, F. C.~M.,
+  Anderson, A.~V., Bennett, S.~M., K{\"a}gi, A., Leung, F.~H., and Smith, L.}
+\newblock {Intel Virtualization Technology.}
+\newblock {\em IEEE Computer 38}, 5 (2005), 48--56.
+
+\bibitem{Verma:2009wi}
+{\sc Verma, A., and Dasgupta, G.}
+\newblock {Server Workload Analysis for Power Minimization using
+  Consolidation.}
+\newblock {\em USENIX Annual Technical Conference\/} (2009), 28--28.
 
 \bibitem{Wang:2016eh}
 {\sc Wang, Y., and Xia, Y.}
@@ -145,11 +320,29 @@
 \newblock In {\em 2016 IEEE 9th International Conference on Cloud Computing
   (CLOUD\/} (2016), IEEE, pp.~84--91.
 
+\bibitem{Wei:2010fn}
+{\sc Wei, Y., and Blake, M.~B.}
+\newblock {Service-Oriented Computing and Cloud Computing - Challenges and
+  Opportunities.}
+\newblock {\em IEEE Internet Computing 14}, 6 (2010), 72--75.
+
+\bibitem{Xiao:2015ik}
+{\sc Xiao, Z., Jiang, J., Zhu, Y., Ming, Z., Zhong, S.-h., and Cai, S.-B.}
+\newblock {A solution of dynamic VMs placement problem for energy consumption
+  optimization based on evolutionary game theory.}
+\newblock {\em Journal of Systems and Software 101\/} (2015), 260--272.
+
 \bibitem{Xu:2010vh}
 {\sc Xu, J., and Fortes, J. A.~B.}
 \newblock {Multi-Objective Virtual Machine Placement in Virtualized Data Center
   Environments.}
 \newblock {\em GreenCom/CPSCom\/} (2010).
+
+\bibitem{Service_1}
+{\sc Yau, S.~S., and An, H.~G.}
+\newblock Adaptive resource allocation for service-based systems.
+\newblock In {\em Proceedings of the First Asia-Pacific Symposium on
+  Internetware\/} (2009), ACM, p.~3.
 
 \bibitem{Yazir:2010bk}
 {\sc Yazir, Y.~O., Matthews, C., Farahbod, R., Neville, S.~W., Guitouni, A.,
@@ -157,6 +350,13 @@
 \newblock {Dynamic Resource Allocation in Computing Clouds Using Distributed
   Multiple Criteria Decision Analysis.}
 \newblock {\em IEEE CLOUD\/} (2010), 91--98.
+
+\bibitem{ga_saas}
+{\sc Yusoh, Z. I.~M., and Tang, M.}
+\newblock A penalty-based genetic algorithm for the composite saas placement
+  problem in the cloud.
+\newblock In {\em Evolutionary Computation (CEC), 2010 IEEE Congress on\/}
+  (2010), IEEE, pp.~1--8.
 
 \bibitem{Zhang:2016cx}
 {\sc Zhang, J., Huang, H., and Wang, X.}
@@ -168,5 +368,12 @@
 \newblock {Cloud computing: state-of-the-art and research challenges}.
 \newblock {\em Journal of Internet Services and Applications 1}, 1 (2010),
   7--18.
+
+\bibitem{Service_dataset}
+{\sc Zhang, Y., Zheng, Z., and Lyu, M.}
+\newblock Exploring latent features for memory-based {QoS} prediction in cloud
+  computing.
+\newblock In {\em Reliable Distributed Systems (SRDS), 2011 30th IEEE Symposium
+  on\/} (2011), pp.~1--10.
 
 \end{thebibliography}

@@ -1,0 +1,5 @@
+PWD /am/st-james/home1/tanboxi/PH.D/proposal
+INPUT /etc/texmf/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT static_consolidation.tex
+OUTPUT static_consolidation.log
