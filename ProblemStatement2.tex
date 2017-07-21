@@ -96,12 +96,12 @@ For the first two drawbacks, previous researchers and developers have come up wi
 
 \emph{Server consolidation} \cite{Zhang:2010vo}, as above mentioned, utilized a dynamic migration technique to resolve the low utilization problem by gathering applications into a fewer number of PMs (see Figure \ref{fig:consolidation}), so that the resource utilization of PMs are maintained at a high level. In the meanwhile, idle PMs can be turned off to save energy. Consolidation dramatically improves hardware utilization and lowers PM and cooling energy consumption. 
 
-\emph{Overbooking} strategy \cite{Tomas:2013iv} is used to overcome the low utilization problem raised by the over-provisioning of VMs. It allocates more VMs in a PM even their aggregated resources have exceeded the PM's capacity. The advantage of this approach is that, indeed, it improves the resource utilization. The disadvantages are also obvious: if one or more applications are experiencing a heavy load; the PM is likely to run out of resources. At this moment, all the applications are suffer from a QoS degradation. In order to avoid the overloading, Cloud users often carefully predict the utilization of applications based on their previous workloads, when applications start degrading, a dynamic resource management approach is used to adjust the VMs' location.
+\emph{Overbooking} strategy \cite{Tomas:2013iv} is used to overcome the low utilization problem raised by the over-provisioning\cite{Chaisiri:2012cv} of VMs. Over-provisioning means Cloud users choose more resources than their needs. It allocates more VMs in a PM even their aggregated resources have exceeded the PM's capacity. The advantage of this approach is that, indeed, it improves the resource utilization. The disadvantages are also obvious: if one or more applications are experiencing a heavy load; the PM is likely to run out of resources. At this moment, all the applications are suffer from a QoS degradation. In order to avoid the overloading, Cloud users often carefully predict the utilization of applications based on their previous workloads, when applications start degrading, a dynamic resource management approach is used to adjust the VMs' location.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/workflow_management.png}
-	\caption{A workflow of dynamic resource management \cite{Mishra:2012kx}}
+	\caption{A workflow of resource management \cite{Mishra:2012kx}}
 	\label{fig:workflow}
 \end{figure}
 
