@@ -181,14 +181,11 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
 INPUT /Users/maximustann/Work/PH.D/proposal/pics/stakeholders.png
 INPUT /Users/maximustann/Work/PH.D/proposal/pics/stakeholders.png
 INPUT /Users/maximustann/Work/PH.D/proposal/pics/stakeholders.png
-INPUT /Users/maximustann/Work/PH.D/proposal/pics/energyConsumption.png
-INPUT /Users/maximustann/Work/PH.D/proposal/pics/energyConsumption.png
-INPUT /Users/maximustann/Work/PH.D/proposal/pics/energyConsumption.png
-INPUT /Users/maximustann/Work/PH.D/proposal/pics/pyramid.png
-INPUT /Users/maximustann/Work/PH.D/proposal/pics/pyramid.png
-INPUT /Users/maximustann/Work/PH.D/proposal/pics/pyramid.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /Users/maximustann/Work/PH.D/proposal/pics/pyramid.png
+INPUT /Users/maximustann/Work/PH.D/proposal/pics/pyramid.png
+INPUT /Users/maximustann/Work/PH.D/proposal/pics/pyramid.png
 INPUT /Users/maximustann/Work/PH.D/proposal/static_consolidation.tex
 INPUT /Users/maximustann/Work/PH.D/proposal/static_consolidation.tex
 INPUT /Users/maximustann/Work/PH.D/proposal/dynamic_consolidation.tex

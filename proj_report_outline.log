@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.29)  25 JUL 2017 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.29)  25 JUL 2017 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -423,15 +423,18 @@ File: pics/comparison.png Graphic file (type png)
 Package pdftex.def Info: pics/comparison.png used on input line 66.
 (pdftex.def)             Requested size: 308.71104pt x 192.60005pt.
 [3 </Users/maximustann/Work/PH.D/proposal/pics/comparison.png>] <pics/workflow_
-management.png, id=21, 1027.84pt x 770.88pt>
+management.png, id=21, 1027.84pt x 435.6275pt>
 File: pics/workflow_management.png Graphic file (type png)
 <use pics/workflow_management.png>
 Package pdftex.def Info: pics/workflow_management.png used on input line 84.
-(pdftex.def)             Requested size: 308.71104pt x 231.53633pt.
+(pdftex.def)             Requested size: 308.71104pt x 130.84213pt.
 [4 </Users/maximustann/Work/PH.D/proposal/pics/workflow_management.png>]) (/Use
-rs/maximustann/Work/PH.D/proposal/Motivation.tex [5] [6]) (/Users/maximustann/W
-ork/PH.D/proposal/Goals.tex [7]) (/Users/maximustann/Work/PH.D/proposal/publish
-ed.tex [8]) (/Users/maximustann/Work/PH.D/proposal/organization.tex
+rs/maximustann/Work/PH.D/proposal/Motivation.tex [5]) (/Users/maximustann/Work/
+PH.D/proposal/Goals.tex
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+[6] [7]) (/Users/maximustann/Work/PH.D/proposal/published.tex [8]) (/Users/maxi
+mustann/Work/PH.D/proposal/organization.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
 
@@ -463,33 +466,33 @@ File: pics/stakeholders.png Graphic file (type png)
 <use pics/stakeholders.png>
 Package pdftex.def Info: pics/stakeholders.png used on input line 13.
 (pdftex.def)             Requested size: 308.71104pt x 190.19055pt.
-<pics/energyConsumption.png, id=46, 631.35875pt x 614.295pt>
-File: pics/energyConsumption.png Graphic file (type png)
-<use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png used on input line 30.
-(pdftex.def)             Requested size: 176.40439pt x 171.63586pt.
-<pics/pyramid.png, id=47, 484.81125pt x 463.7325pt>
+
+Overfull \hbox (3.24606pt too wide) in paragraph at lines 18--19
+[]\OT1/ppl/m/n/10.95 Cloud com-put-ing in-volves three stake-hold-ers [10] (see
+ Fig-ure 2.1[]): Cloud provider, Cloud
+ []
+
+[11 </Users/maximustann/Work/PH.D/proposal/pics/stakeholders.png>] <pics/pyrami
+d.png, id=50, 484.81125pt x 463.7325pt>
 File: pics/pyramid.png Graphic file (type png)
 <use pics/pyramid.png>
-Package pdftex.def Info: pics/pyramid.png used on input line 39.
-(pdftex.def)             Requested size: 220.50885pt x 210.92078pt.
-[11] [12 </Users/maximustann/Work/PH.D/proposal/pics/stakeholders.png> </Users/
-maximustann/Work/PH.D/proposal/pics/energyConsumption.png>] [13 </Users/maximus
-tann/Work/PH.D/proposal/pics/pyramid.png>]) (/Users/maximustann/Work/PH.D/propo
-sal/static_consolidation.tex) (/Users/maximustann/Work/PH.D/proposal/dynamic_co
-nsolidation.tex) (/Users/maximustann/Work/PH.D/proposal/evolution.tex)) [14] [1
-5] [16
-
-
-] (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.bbl
+Package pdftex.def Info: pics/pyramid.png used on input line 50.
+(pdftex.def)             Requested size: 176.40439pt x 168.73378pt.
+[12 </Users/maximustann/Work/PH.D/proposal/pics/pyramid.png>] [13]) (/Users/max
+imustann/Work/PH.D/proposal/static_consolidation.tex) (/Users/maximustann/Work/
+PH.D/proposal/dynamic_consolidation.tex) (/Users/maximustann/Work/PH.D/proposal
+/evolution.tex)) [14] (/Users/maximustann/Work/PH.D/proposal/proj_report_outlin
+e.bbl
 Underfull \hbox (badness 1783) in paragraph at lines 40--46
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
 
-[17
+[15
 
-] [18]) [19] (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.aux (/U
+
+
+] [16]) [17] (/Users/maximustann/Work/PH.D/proposal/proj_report_outline.aux (/U
 sers/maximustann/Work/PH.D/proposal/introduction.aux) (/Users/maximustann/Work/
 PH.D/proposal/literature_review.aux))
 
@@ -497,23 +500,23 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5735 strings out of 493089
- 85053 string characters out of 6134842
- 162569 words of memory out of 5000000
- 9060 multiletter control sequences out of 15000+600000
+ 5729 strings out of 493089
+ 84889 string characters out of 6134842
+ 162554 words of memory out of 5000000
+ 9055 multiletter control sequences out of 15000+600000
  15569 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,43p,1240b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,6n,43p,1240b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 Output written on /Users/maximustann/Work/PH.D/proposal/proj_report_outline.pdf
- (19 pages, 258141 bytes).
+ (17 pages, 217330 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

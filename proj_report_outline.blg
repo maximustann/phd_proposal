@@ -10,45 +10,45 @@ Repeated entry---line 481 of file sample.bib
  :                         ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in Mann:2015ua
-You've used 31 entries,
+You've used 30 entries,
             2253 wiz_defined-function locations,
-            743 strings with 10388 characters,
-and the built_in function-call counts, 11143 in all, are:
-= -- 1082
-> -- 657
+            736 strings with 10190 characters,
+and the built_in function-call counts, 10726 in all, are:
+= -- 1042
+> -- 630
 < -- 0
-+ -- 269
-- -- 238
-* -- 990
-:= -- 1891
-add.period$ -- 91
-call.type$ -- 31
-change.case$ -- 213
++ -- 258
+- -- 228
+* -- 949
+:= -- 1821
+add.period$ -- 88
+call.type$ -- 30
+change.case$ -- 205
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 293
-empty$ -- 766
-format.name$ -- 238
-if$ -- 2196
+cite$ -- 31
+duplicate$ -- 284
+empty$ -- 739
+format.name$ -- 228
+if$ -- 2115
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 28
-newline$ -- 155
-num.names$ -- 62
-pop$ -- 162
+int.to.str$ -- 30
+missing$ -- 27
+newline$ -- 150
+num.names$ -- 60
+pop$ -- 156
 preamble$ -- 1
-purify$ -- 181
+purify$ -- 174
 quote$ -- 0
-skip$ -- 179
+skip$ -- 174
 stack$ -- 0
-substring$ -- 711
-swap$ -- 68
+substring$ -- 681
+swap$ -- 66
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 124
+type$ -- 120
 warning$ -- 1
-while$ -- 112
-width$ -- 33
-write$ -- 308
+while$ -- 108
+width$ -- 32
+write$ -- 298
 (There was 1 error message)
