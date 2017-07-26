@@ -1,8 +1,9 @@
-PWD /am/st-james/home1/tanboxi/PH.D/proposal
-INPUT /etc/texmf/texmf.cnf
-INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT ProblemStatement.tex
-OUTPUT ProblemStatement.log
-INPUT /usr/pkg/share/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+PWD /Users/maximustann/Work/PH.D/proposal
+INPUT /usr/local/texlive/2015/texmf.cnf
+INPUT /usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/maximustann/Work/PH.D/proposal/ProblemStatement.tex
+OUTPUT /Users/maximustann/Work/PH.D/proposal/ProblemStatement.log
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmti10.tfm

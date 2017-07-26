@@ -2,7 +2,6 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
-A level-1 auxiliary file: literature_review.aux
 The style file: acm.bst
 Database file #1: sample.bib
 Repeated entry---line 481 of file sample.bib
@@ -10,45 +9,45 @@ Repeated entry---line 481 of file sample.bib
  :                         ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in Mann:2015ua
-You've used 30 entries,
+You've used 24 entries,
             2253 wiz_defined-function locations,
-            736 strings with 10190 characters,
-and the built_in function-call counts, 10726 in all, are:
-= -- 1042
-> -- 630
+            692 strings with 8803 characters,
+and the built_in function-call counts, 8256 in all, are:
+= -- 807
+> -- 463
 < -- 0
-+ -- 258
-- -- 228
-* -- 949
-:= -- 1821
-add.period$ -- 88
-call.type$ -- 30
-change.case$ -- 205
++ -- 190
+- -- 166
+* -- 706
+:= -- 1402
+add.period$ -- 70
+call.type$ -- 24
+change.case$ -- 156
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 284
-empty$ -- 739
-format.name$ -- 228
-if$ -- 2115
+cite$ -- 25
+duplicate$ -- 230
+empty$ -- 584
+format.name$ -- 166
+if$ -- 1638
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 27
-newline$ -- 150
-num.names$ -- 60
-pop$ -- 156
+int.to.str$ -- 24
+missing$ -- 21
+newline$ -- 120
+num.names$ -- 48
+pop$ -- 119
 preamble$ -- 1
-purify$ -- 174
+purify$ -- 131
 quote$ -- 0
-skip$ -- 174
+skip$ -- 144
 stack$ -- 0
-substring$ -- 681
-swap$ -- 66
+substring$ -- 522
+swap$ -- 54
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
+type$ -- 96
 warning$ -- 1
-while$ -- 108
-width$ -- 32
-write$ -- 298
+while$ -- 84
+width$ -- 26
+write$ -- 238
 (There was 1 error message)

@@ -36,11 +36,12 @@
 % Cloud data center has a high dynamic nature where it constrantly receives new requests for resource provisioning and releases old current resources. Therefore, a data center needs different strategies to
 % handle different scenarios. 
 
-In this thesis, we aims at providing a series of approaches to continuously optimize the joint allocation of VMs and containers. A continuous optimization procedure mainly involves with three types of server consolidation: initialization, global consolidation, and dynamic consolidation. Different stages have distinctive goals, therefore, they are considered as separated research questions. In addition, a scalability problem of static optimization is considered as an optional objective.
+In this thesis, we aim at providing a series of approaches to continuously optimize the joint allocation of VMs and containers. A continuous optimization procedure mainly involves with three types of server consolidation: initialization, global consolidation, and dynamic consolidation. Different stages have distinctive goals, therefore, they are considered as separated research questions. In addition, a scalability problem of static optimization is considered as an optional objective.
 
 \begin{enumerate}
-\item The initialization, \\
-At this stage, a set of containers is allocated to a set of empty VMs and these VMs are allocated to a set of PMs. Initalization problem is also refered as placement problem \cite{Jennings:2015ht} which is fundamental for server consolidation problem.
+\item Joint allocation of container and VM (new application initialization), \\
+In this research, we take Joint allocation as a static problem which is fundamental for server consolidation problem.
+At this stage, a set of containers is allocated to a set of empty VMs and these VMs are allocated to a set of PMs. 
 % Previous research  focus on VM-based optimization
 This problem is inherently more difficult than previous VM-based consolidation problem, since  container-based consolidation naturely has a two-level structure. Only a few research focus on this problem, Piraghaj \cite{Piraghaj:2016bw} designs a dynamic allocation system. She proposes a two-step procedure. Since, these two-level structure interact each other, separate solution certainly leads to a local optima. Therefore, in this thesis, we will solve the problem simutaneously.
 % Most importantly, and therefore can not be solved separately. This is the first research that consider server consolidation has a bi-level optimization problem \cite{Wen:1991kt}. 
@@ -49,7 +50,7 @@ In this objective, we will establish the fundamental concepts in studying this j
 
 % This task is challenging, since a representation can highly affect the performance of consolidation \cite{SoteloFigueroa:2013be}. 
 
-\item Global consolidation, \\
+\item Robust Global consolidation, \\
 A Global consolidation is conducted to improve the global energy efficiency in a periodical fashion. Data center constantly receives new allocations, releasing of old resources. These operations degrade the compact structure of a data center. Therefore, the data center needs a global optimization to improve the overall energy efficiency.
 
 The challenges are three folds, firstly, similar with initialization problem, the problem has two level of allocations and they interact with each other. Secondly, like VM-based consolidation, Container-based consolidation is considered as a multi-objective problem with minimization of migration cost as well as keeping a good energy efficiency. Thirdly, consolidation is a time-dependent process which means the previous solution affects the current decision. Previous VM-based research only consider each consolidation as an independent process. As a consequence, although in one consolidation, the migration is minimized, It may lead to more migrations in the future consolidation. We will consider the robustness of consolidation and propose a novel time-aware server consolidation which takes the previous immediate consolidation and the future consolidation into consideration. 

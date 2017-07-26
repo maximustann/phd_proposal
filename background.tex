@@ -5,24 +5,36 @@
 
 
 \subsection{An Overview of Cloud Computing}
+% In this section, we will introduce the virtualization technology
+\textcolor{Maroon}{Describe the field you will be researching.}
 
-Cloud computing is a paradigm that allows Cloud users and End users to acess Cloud services and applications based on their requirements regardless of where the services are. The advent of Cloud computing meets the trend of fast growing applications where these applications are deploying in a third-party data centers and application users can use them without installing on their local computers.
+Cloud computing is a paradigm that allows Cloud users and End users to acess Cloud services and applications based on their requirements regardless of where the services are. The advent of Cloud computing meets the trend of fast growing applications where these applications are deploying in a third-party data centers and End users can use them without installing on their local computers.
 
-\begin{figure}[H]
+\textcolor{Maroon}{Why this field is important.}
+
+Cloud computing has made one critical change in software industry, it separates the role of traditional service provider into service provider and infrastructure provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, this separation add one more layer between service provider and users, as: Cloud providers, Cloud users (service providers), and End users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). 
+
+This separation of role has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users. First, Cloud users do not need upfront investment in hardwares (e.g servers and networking devices) and pay for hardwares' maintenance. Second, Cloud users will not worried about the limited resources will obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, Cloud users can pay as much as the resource usage under a \emph{pay-as-you-go} policy. Third, Cloud users can publish and update their applications at any location as long as there is an Internet connection. These advantages allow anyone or organization to deploy their softwares on Cloud in a reasonable price. 
+
+
+
+The detailed goal and objectives of stakeholders are described below. 
+
+
+\begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/stakeholders.png}
 	\caption{Stakeholders of Cloud computing}
 	\label{fig:stakeholders}
 \end{figure}
 
-Cloud computing involves three stakeholders \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}): Cloud provider, Cloud user and End User. Each of them has their responsibility, goal, and objectives. 
 \begin{itemize}
 	\item \emph{Cloud providers} build data centers, provide maintenance and resource management on the hardware infrastructure. Their goal is to increase the profit by boosting the income and reducing the expense. Their income comes from Cloud users' rental of servers or \emph{Physical Machines (PMs)} in terms of resource quality (e.g  3.5GHz dual-core CPU), quantity (e.g 3 PMs), and time (e.g 1 year). Therefore, Cloud providers objective is to maximize utilization of computing resources. A high utilization brings two benefits, firstly, it increases income by accommodating more applications in limited resources. Secondly, it cuts the expense of energy consumption by packing applications in a minimum number of PMs so that idle PMs can be turned off. 	
 	\item \emph{Cloud users} develop and deploy applications on Cloud. Each application generates time-vary CPU utilization. Their goal is also increase the profit mainly through two objectives, attracting more End users and reduce the expense of resources. The first objective can be achieved by improving the quality of service as well as lower the fee for End users. Either way depends not only on the software entities but also the quality of service (QoS) offered by Cloud provider. The second objective can be achieved by a good estimation of the reserved resources, so that they do not rent insufficient  or too much resources which cause performance degradation or wastage.
 	\item \emph{End Users} are the final customers in this chain. They consume services directly from Cloud users and indirectly from Cloud provider. Their goal is to obtain a satisfactory service. It is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the performance of the services.
 \end{itemize}
 
-In this thesis, we focus on a core issue of helping Cloud providers to increase their profits. This goal can be done by two ways, attracting more Cloud users to use Cloud services and reducing the expense.
+% In this thesis, we focus on a core issue of helping Cloud providers to increase their profits. This goal can be done by two ways, attracting more Cloud users to use Cloud services and reducing the expense.
 
 % \begin{figure}
 % 	\centering
@@ -47,16 +59,17 @@ In this thesis, we focus on a core issue of helping Cloud providers to increase 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.4\textwidth]{pics/pyramid.png}
-	\caption{Pyramid of service models in Cloud computing. 
+	\includegraphics[width=0.9\textwidth]{pics/architecture.png}
+	\caption{Cloud computing architecture \cite{Zhang:2010vo}. 
 	IaaS provides the fundamental resources such as CPU cores, RAM. The resources are usually wrapped with various types of virtual machine. PaaS provides a software platform sitting on top of IaaS for Cloud users to develop applications. SaaS is the application that serves End Users.}
-	\label{fig:pyramid}
+	\label{fig:architecture}
 \end{figure} 
 
 
 
-Service models of Cloud computing are critical in solving energy consumption problem because their distinct ways of managing resources have sever effect on the problem. These distinct ways of resource management mainly result from the responsibilities among stakeholders. There are three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models can be pictured as a pyramid (see \ref{fig:pyramid}). Their detailed responsibilities among stakeholders are explained as below:
+% Service models of Cloud computing are critical in solving energy consumption problem because their distinct ways of managing resources have severe effect on the problem. These distinct ways of resource management mainly result from the responsibilities among stakeholders. 
 
+There are three traditional service models \cite{Mell:2011jj} which describe the responsibilities among stakeholders: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The architecture of Cloud computing is illustrate in Figure \ref{fig:architecture}.
 
 \begin{itemize}
 	\item IaaS, a Cloud provider hosts hardwares such as PMs and cooling infrastructure on behalf of Cloud users. A Cloud provider also provides maintenance, management of hardware resources. 
@@ -68,12 +81,12 @@ Service models of Cloud computing are critical in solving energy consumption pro
 
 	From the resource management perspective, the constraint in allocation of VMs is that the aggregated VMs' resources in a PM cannot exceed the capacity of the PM. After these VMs have been allocated, their types cannot be changed. During the life cycle of an application, Cloud providers can dynamically adjust the locations of VMs, provision new VMs (same type) for the replicas of an application, as well as turning on/off PMs.
 
-	After receiving the requests, Cloud providers choose a set of PMs and allocate the required VMs in them. Then, Cloud users can access the VMs through remote consoles. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is automatically applied to duplicate the users' VM. Finally, Cloud providers optimize the locations of VMs by consolidating them into a minimum number of PMs.
+	% After receiving the requests, Cloud providers choose a set of PMs and allocate the required VMs in them. Then, Cloud users can access the VMs through remote consoles. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is automatically applied to duplicate the users' VM. Finally, Cloud providers optimize the locations of VMs by consolidating them into a minimum number of PMs.
 
 
  	\item PaaS, a Cloud provider builds a software platform on top of hardwares provided by IaaS. This platform allows a complete life-cycle of software development including development, testing and deployment.
 
- 	From resource management perspective, as shown in Figure \ref{fig:pyramid}, PaaS is sitting above the IaaS which means the underlying resource is still based on IaaS VM types. Different from IaaS, PaaS takes the responsibility of selecting VMs and allows Cloud users to focus on software development. 
+ 	From resource management perspective, PaaS is sitting above the IaaS which means the underlying resource is still based on IaaS VM types. Different from IaaS, PaaS takes the responsibility of selecting VMs and allows Cloud users to focus on software development. 
 
  	A typical procedure of a Cloud user deploying their applications in an PaaS cloud includes several steps.
  	In the first step, Cloud users need to provide the initial estimation of the quantity of resources instead of types of VM. Then, Cloud providers determine the types of VM for applications according to the estimated resources.  After this step, resource management system conducts the provisioning and allocating as the same steps in IaaS. During the life cycle of applications, similar to IaaS, Cloud providers can also adjust the location of VMs, add new VMs, and control the status of PMs. Different from IaaS, Cloud providers can change the type of VM for an application according to it needs.
@@ -84,14 +97,59 @@ Service models of Cloud computing are critical in solving energy consumption pro
 \end{itemize}
 
 
-Our proposed optimization approaches are based on a new service model: Container as a Service (CaaS) proposed by Piraghaj and et al. \cite{Piraghaj:2016bw} which is a variant of PaaS. The reasons for us to establish our approaches on CaaS are listed as followed:
-\begin{itemize}
-	\item CaaS uses a new virtualization technology called containers as its fundamental resource allocation unit. 
-	CaaS, like PaaS, can be built based on IaaS without changing the underlying structure, but it allows a finer resource allocation by adjusting containers.
-	Therefore, CaaS is a promising trend.
+% There are three characteristics in IaaS which naturally lead to a low resource utilization.
+% \begin{itemize}
+% 	\item Resource management is based on VM. Cloud providers can dynamically adjust the location (in which PM) of a VM based on the observed resource utilization. 
+% 	\item Separated responsibilities of resource selection for applications and resource allocation. 
+% 	As above mentioned, Cloud users have to select the type of resources. This causes a problem. The accurate estimation is almost impossible because of unpredictable workloads; Cloud users tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv} than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. As the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning. 
+
+% 	\item Cloud providers offer fixed types of VM. Because of the fixed size of resources and the one-on-one mapping of applications and VMs, specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage. 
+
+% 	\item Redundant operating systems (OSs) cause vast resource wastage. Since each VM runs a separated operating system, a PM might run many operating systems at a time. However, normal applications do not need specific operating systems commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Therefore, running duplicated OSs in a PM is unnecessary.
+% \end{itemize}
+
+
+\textcolor{Maroon}{Describe the current ``hot topics'' in the field}
+\subsection{Research Fields in Cloud Computing}
+Cloud computing paradigm has been applied for over ten years, however, many problems have been fully addressed and new challenges has emerged along with new technologies. We summarize some of the hot research fields.
+
+\subsubsection{Automated service provisioning}
+The key functionality of Cloud computing is to provide an elastic resource management for applications. Cloud users desire a complete automated service provisioning which automatically allocate and release resources for applications that satisfies the service level objective (SLOs). 
+
+Current automated service provisioning normally involves three steps \cite{Zhang:2010vo}: 
+(1) Constructing a performance model which can predict the need of resources of a given application. (2) Periodically predict the future resource requirement of the application using the model. (3) Automatically allocating resources to the application.
+
+There are multiple difficulties in this problem. First problem is the mapping between SLOs such as Quality of Service (QoS) requirements: throughput, response time and etc, to low level hardwares such as CPU and memory requirements. This problem is often addressed as Resource Demand Profiling. Approaches are categorized into model-driven, where a predefined model is used to identify the resources' requirement of applications; or statistical techniques which use machine learning algorithms to predict the requirement in the future.
+
+In the model-driven category, Urgaonkar and et al \cite{Urgaonkar:2005uo} that use a queuing model to determine the resources (each server as the resource unit) for multi-tier application. They model each server as as a G/G/1 queuing system; Bennani and Menasce \cite{Bennani:2005wd} also propose a multiclass queuing network models for both online transactions applications and batch processing applications. 
+
+In statistical approaches, Li and et al \cite{Li:2011cx} develop a trace-and-replay tool called CloudProphet to predict a legacy application's performance. It monitors the performance of the application locally and replays the workload in the cloud for prediction. Gong and et al. \cite{Gong:2010td} use a signal processing algorithm - Fast Fourier Transform to detect 
+repeating resource usage patterns, and a statistical learning algorithm - discrete-time Markov chain to build short-term demand predictions.
+
+Furthermore, the decisions are often made in an on-line fashion to trigger the allocation and de-allocation of resources in order to satisfy the fluctuate workload over multiple time scales \cite{Crovella:1997tr}. 
+
+
+
+\subsubsection{Virtual machine migration}
+\subsubsection{Server consolidation}
+\subsubsection{Energy management}
+\subsubsection{Novel cloud architectures}
+
+% \subsection{Container as a Service}
+% Our proposed optimization approaches are based on a new service model: Container as a Service (CaaS) proposed by Piraghaj and et al. \cite{Piraghaj:2016bw} which is a variant of PaaS. The reasons for us to establish our approaches on CaaS are listed as followed:
+% \begin{itemize}
+% 	\item CaaS uses a new virtualization technology called containers as its fundamental resource allocation unit. 
+% 	CaaS, like PaaS, can be built based on IaaS without changing the underlying structure, but it allows a finer resource allocation by adjusting containers.
+% 	Therefore, CaaS is a promising trend.
 	
-	\item CaaS has a fine granularity level of resource management which has shown opportunities to improve the resource utilization, however, it often proposes new optimization challenges which have not been studied yet.
-\end{itemize}
+% 	\item CaaS has a fine granularity level of resource management which has shown opportunities to improve the resource utilization, however, it often proposes new optimization challenges which have not been studied yet.
+% \end{itemize}
+
+% Before explaining the details of resource management strategies, we first illustrate several characteristics of resource management in IaaS.
+% Firstly, we illustrate the disadvantages of traditional IaaS and PaaS and discuss the reasons of why current approaches cannot completely overcome these problems. From there, we explain why CaaS is a prescription of their problems.
+
+
+
 
 % Specifically, the profit can be improved by reducing the energy consumption. A direct way to reduce energy consumption is to always use a minimum number of Physical machines (PMs) hosting applications. This is because the more PMs are running, the more energy they are 
 % consumed.
@@ -123,7 +181,7 @@ Our proposed optimization approaches are based on a new service model: Container
 % The purpose of Cloud computing is to reduce the cost of ``in-house'' 
 
 
-% Cloud computing has made one critical change in software industry, it separates the role of traditional service provider into service provider and infrastructure provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, this separation add one more layer between service provider and users, as: Cloud providers, Cloud users (service providers), and End users. 
+
 
 % The separate responsibility between Cloud providers and Cloud users has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users.
 % First, Cloud users do not need upfront investment in hardwares (e.g PMs and networking devices) and pay for hardwares' maintenance. Therefore, it eliminates the risk of initial investment.

@@ -5,79 +5,13 @@
 \section{Problem Statement}
 
 Cloud computing is a computing model offering a network of servers to their clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} 
-To illustrate how it works, considering the case: a Cloud provider builds a data center which contains thousands of servers connected with network. These servers are virtualized which means they are partitioned into a smaller unit of resources called \emph{Virtual Machines (VMs)}. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these VMs from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers.
+To illustrate how it works, considering the case: a Cloud provider builds a data center which contains thousands of servers connected with network. These servers are virtualized which means they are partitioned into a smaller unit of resources called \emph{Virtual Machines (VMs)} or \emph{Containers}. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these resource units from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers.
 
-% One of the major characteristic of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
-Cloud computing involves three stakeholders: Cloud providers, Cloud users (applications providers), and End (application) users \cite{Jennings:2015ht}. Cloud providers build data centers, provide maintenance and resource management on hardware infrastructures. Cloud users develop and deploy applications on Cloud infrastructures. End users consumes applications developed by Cloud users and hosted by Cloud providers. Our focus is on the Cloud providers' perspective to increase their profit.
+Cloud providers offer the fundamental resources: data centers and computation powers that support the modern Cloud computing industry, software industry and etc. Therefore, reducing the cost of data centers will lead to a reduction of cost of softwares which consequently be beneficial to most people who access the Internet on a daily basis.
 
+In this thesis, our goal is to help Cloud providers to reduce expense from the energy consumption by servers in data centers because energy is the major source of expense \cite{Kaplan:up01fR-k}. Specifically, we achieve this goal by providing better resource allocation techniques based on container technology and server consolidation to optimize the resource utilization in three resource allocation scenarios.
 
-
-Cloud providers have two ways to improve the profit,
-boosting the income and reducing the expense. Their income comes from Cloud users' rental of servers or \emph{Physical Machines (PMs)} in terms of resource quality (e.g  3.5GHz dual-core CPU), quantity (e.g 3 PMs), and time (e.g 1 year). The expense mainly comes from two sources: upfront investment and energy consumption. Upfront investment is the expense on infrastructure including purchasing of hardwares and etc.
-In a long run, energy consumption become an even critical concern.
-
-
-Energy consumption \cite{Kaplan:up01fR-k} is derived from several parts including cooling system (account for 40\% of total consumption), PM consumption (40\%) and others (20\%).
- % as illustrated in Figure \ref{fig:consumption}. 
- Cooling system and servers or PMs account for a majority of the consumption. A recent survey \cite{Cho:2016kz} shows that the recent development of cooling techniques have reduced its energy consumption and now server consumption has become the dominate energy consumption component. 
-
-
-The energy consumption of PM is far from efficient \cite{Hameed:2016cma} because the energy consumption remains high even when their actual utilization are low. Utilization refers to the fraction of real-time resource consumption (e.g 1 core CPU consumed by applications) to the overall resource (e.g. 8 cores CPU) in a PM. A concept of \emph{energy proportional computing} \cite{Barroso:2007jt} is raised to address the disproportionate between utilization and energy consumption. There are two ways to solve the problem, Dynamic voltage and frequency scaling (DVFS)
-which reduces the energy consumption by dynamically adjusting the voltage of hardwares. And a \emph{Server consolidation} \cite{Zhang:2010vo} strategy. It resolves the low utilization problem by migrating applications (e.g. deployed in a VM) into a fewer number of PMs (see Figure \ref{fig:consolidation}), so that the resource utilization of PMs are maintained at a high level. In the meanwhile, idle PMs can be turned off to save energy. We will focus on server consolidation instead of DVFS.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\textwidth]{pics/consolidate.png}
-	\caption{A Server Consolidation example: Initially, each PM runs an application wrapped with a VM in a low resource utilization state. After the consolidation, both VMs are running on PM A, so that PM B is turned off to save energy \cite{Barroso:2007jt}.}
-	\label{fig:consolidation}
-\end{figure}
-
-% The low utilization of PM is also called \emph{Server Spawl} which means a large number of unnecessary PMs are running - result in large amount of extra energy consumption.
-% The way of improving the resource utilization is through an effective resource allocation.
-
-% Resource management in Cloud computing is a broad term including 
-% various different strategies such as server 
-
-Server consolidation is achieved by manipulating the allocation of applications in the PMs so that the resource utilization of PMs achieve a high level. An effective resource allocation is affected by multiple factors such as virtualization technologies and distinct approaches in different scenarios or stages.
-
-Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units such as virtual machines (VMs) or containers. Traditional resource allocation is based on VMs, where Cloud providers offer a number fixed types of VM; Cloud users can select VMs by themselves - in Infrastructure as a Service (IaaS) or automatically select by a software platform provided by Cloud provider - in Platform as a Service (PaaS). 
-
-However, there are mainly three inherent disadvantages of VM-based resource allocation which cause low utilization in data centers.
-
-\begin{itemize}
-	% \item Resource management is based on VM. Cloud providers can dynamically adjust the location (in which PM) of a VM based on the observed resource utilization. 
-	% \item Separated responsibilities of resource selection for applications and resource allocation. 
-	% As above mentioned, Cloud users have to select the type of resources. This causes a problem. The accurate estimation is almost impossible because of unpredictable workloads; Cloud users tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv} than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. As the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning. 
-	\item Resource over-provisioning. \\
-	As previous mentioned, VMs are either selected by Cloud users or automatically selected by software platforms. In either case, it requires an estimation of required resources. However, The accurate estimation is almost impossible because of unpredictable workloads; A simple way is to reserve more resources for ensuring the QoS at peak hours \cite{Chaisiri:2012cv}, rather than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. In IaaS, the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning. In PaaS, Cloud providers can change the type of VMs to more suitable sizes.
-
-	% \item Cloud providers offer fixed types of VM. Because of the fixed size of resources and the one-on-one mapping of applications and VMs, specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage. 
-	\item Unbalanced usage of resources. \\
-	Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
-
-	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) cause resource wastage. \\
-	% Redundant operating systems (OSs) cause vast resource wastage. \\ 
-	In VM-based resource allocation, heavy overhead is caused by
-	the hypervisor of VMs and the separated operating systems running in the PM. A hypervisor manages and monitors the VMs running on a PM. The overhead of a hypervisor is heavier with the increasing numbers of VM. Redundant operating system is another reason for overhead, as normal applications do not need specific operating systems; Commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Therefore, running applications in separated operating system simultaneously is unnecessary.
-\end{itemize}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
-	\caption{A comparison between VM-based and Container-based virtualization}
-	\label{fig:comparison}
-\end{figure}
-
-The recent development of container technology \cite{Soltesz:2007cu} is an operating system level of virtualization. Each container wraps an application and multiple containers can be installed in a same operating system within a VM (see Figure \ref{fig:comparison} right-hand side). Container technology has attracted the attention of both industrial and academia because it has the potential to solve these problems. Firstly, it solves the over-provisioning problem by allocating multiple containers in the same VM. Secondly, the unbalance resource problem can be solved by combining different types of applications (e.g CPU-intensive and Memory-intensive). Thirdly, because containers share a same VM, the overhead of hypervisor and OSs are naturally solved with less deployment of VMs.
-
-
-Apart from virtualization, different server consolidation strategies should be applied in different scenarios. This is because Cloud data center has a highly dynamic nature where it constantly receives new requests for resource allocation and releases of old resources, consequently, the energy efficiency is constantly dropping.
-
-Server consolidation strategies can be applied in multiple resource re-allocation scenarios as shown in Figure \ref{fig:workflow} including new application allocation, periodic
-optimization, overloading and under-loading adjustment.
-Periodic optimization can be seen as static server consolidation, because these operation normally take a number of applications and re-allocate them into a number of PMs. This optimization is quite time-consuming, therefore, it is conducted in an off-line fashion. Overloading is a scenario that the CPU utilization of a PM reaches a predefined threshold: e.g. 80\%, then it is likely that the applications running inside will reach the bottleneck of CPU. At this occasion, it assumes that migrates one of the applications to another PM can solve the problem. Under-loading is the scenario when the CPU utilization of a PM is under a predefined threshold: e.g 50\%, then all applications running inside should be migrated to other PMs so that this PM can be turned off. These two cases re-allocate one application each time, it requires a fast on-line operation. Therefore, they can be considered as a dynamic consolidation. New application allocation can be seen as either static: allocate a batch of new applications, or dynamic: allocate a new application each time. These three consolidation scenarios can be seen distinct
-optimization tasks which have a common goal: minimizing the energy consumption. 
-
+The problem can be described as, given a number of Physical Machines (PMs) which can be represented as the resources such as a number of CPU cores and memory they contained; a number of different fixed configurations of VMs, each configuration can also be represented as aforementioned resources; and a number of containers which represent the resource requirements of applications. The task is to allocate these containers to a number of different VMs. Furthermore, allocating these VMs to a number of PMs. The objective is to minimize the number of PMs used to accommodate these containers. The decision variable is the location of containers and VMs as well as the selection of the configurations of VMs. The constraints are the aggregated resources of containers inside a VM cannot exceed the VM's capacity. Similarly, the aggregated resources of VMs inside a PM cannot exceed the PM's capacity. The task is generally considered as a server consolidation problem.
 
 \begin{figure}
 	\centering
@@ -85,13 +19,99 @@ optimization tasks which have a common goal: minimizing the energy consumption.
 	\caption{A workflow of resource management \cite{Mishra:2012kx}}
 	\label{fig:workflow}
 \end{figure}
-In this thesis, our goal is to help Cloud providers to increase their profits by saving money from the energy consumed by servers.
-Specifically, we achieve this goal by providing better resource allocation techniques using the container-based server consolidation to optimize the resource utilization in different scenarios.
 
-The problem can be described as, a data center has a number of PMs, a number of types of VM and a number of containers to be allocated. They can be represented as resources 
-such as CPU cores and RAM. The task is to allocate these containers to a number of VMs, each of VM has a type. Furthermore, allocating these VMs to a minimum number of PMs. The decision variable is the location of containers and VMs as well as the types of VMs. The constraints are the aggregated resources of containers inside a VM cannot exceed the VM's capacity. Similarly, the aggregated resources of VMs inside a PM cannot exceed the PM's capacity. The main difficulty of the problem is a large number of combination container allocation and the choices of VMs which is too time-consuming for a brutal-force approach.
+Server consolidation problems have different assumptions, objectives and requirements in multiple resource re-allocation scenarios as shown in Figure \ref{fig:workflow} including new application allocation, periodic optimization, overloading and under-loading adjustment.
+Periodic optimization can be seen as static server consolidation, because these optimization normally involves large amount of variables, therefore, it is quite time-consuming. It takes a number of existing applications and re-allocate them into a number of PMs. This problem is conducted in an off-line fashion. Overloading and under-loading can be categories to dynamic consolidation problem, since they consider allocating one application each time and require a fast on-line operation. New application allocation can be seen as either static: allocate a batch of new applications, or dynamic: allocate a new application each time. In this thesis, we consider it as a static problem. These three consolidation problems can be seen distinct optimization tasks which have a common goal: minimizing the energy consumption of a data center. 
 
-Specifically, the new challenge posed by Container-based server consolidation is even harder than VM-based consolidation. Traditional VM-based server consolidation are modeled as bin-packing problems \cite{Mann:2015ua}. This is because VMs and PMs are naturally modeled as items and bins and server consolidation and bin-packing have the same optimization objective: minimize the number of bins/PMs. The complexity of bin-packing problem is NP-hard which means it is extreme time-consuming to find its optimal solution when the number of decision variables are large. In container-based server consolidation, there are two levels of allocation: Containers are allocated to VM as the first level and VMs are allocated to PMs as the second level. These two levels of allocation interact with each other, for the first level of allocation affects the decision in the second level. Therefore, it is necessary to propose new approaches for the problem.
+% is a scenario that the CPU utilization of a PM reaches a predefined threshold: e.g. 80\%, then it is likely that the applications running inside will reach the bottleneck of CPU. At this occasion, it assumes that migrates one of the applications to another PM can solve the problem. Under-loading is the scenario when the CPU utilization of a PM is under a predefined threshold: e.g 50\%, then all applications running inside should be migrated to other PMs so that this PM can be turned off. These two cases re-allocate one application each time, it requires a fast on-line operation. Therefore, they can be considered as a dynamic consolidation. 
+
+
+
+
+% One of the major characteristic of Cloud computing is to separates the role of traditional service provides into Cloud user (software provider) and Cloud (infrastructure) provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, stakeholders of Cloud computing become: Cloud providers, Cloud users, and End (application) users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). This separation beneficial for both Cloud user and End user: It releases the burden of purchasing and maintaining hardwares for Cloud users. Consequently, lower the expense of End users. 
+
+% Cloud computing involves three stakeholders: Cloud providers, Cloud users (applications providers), and End (application) users \cite{Jennings:2015ht}. Cloud providers build data centers, provide maintenance and resource management on hardware infrastructures. Cloud users develop and deploy applications on Cloud infrastructures. End users consumes applications developed by Cloud users and hosted by Cloud providers. 
+% Our focus is on the Cloud providers' perspective to increase their profit.
+
+
+
+% Cloud providers have two ways to improve the profit,
+% boosting the income and reducing the expense. Their income comes from Cloud users' rental of servers or \emph{Physical Machines (PMs)} in terms of resource quality (e.g  3.5GHz dual-core CPU), quantity (e.g 3 PMs), and time (e.g 1 year). The expense mainly comes from two sources: upfront investment and energy consumption. Upfront investment is the expense on infrastructure including purchasing of hardwares and etc.
+% In a long run, energy consumption become an even critical concern.
+
+
+% Energy consumption \cite{Kaplan:up01fR-k} is derived from several parts including cooling system (account for 40\% of total consumption), PM consumption (40\%) and others (20\%).
+ % as illustrated in Figure \ref{fig:consumption}. 
+ % Cooling system and servers or PMs account for a majority of the consumption. A recent survey \cite{Cho:2016kz} shows that the recent development of cooling techniques have reduced its energy consumption and now server consumption has become the dominate energy consumption component. 
+
+
+% The energy consumption of PM is far from efficient \cite{Hameed:2016cma} because the energy consumption remains high even when their actual utilization are low. Utilization refers to the fraction of real-time resource consumption (e.g 1 core CPU consumed by applications) to the overall resource (e.g. 8 cores CPU) in a PM. A concept of \emph{energy proportional computing} \cite{Barroso:2007jt} is raised to address the disproportionate between utilization and energy consumption. There are two ways to solve the problem, Dynamic voltage and frequency scaling (DVFS)
+% which reduces the energy consumption by dynamically adjusting the voltage of hardwares. And a \emph{Server consolidation} \cite{Zhang:2010vo} strategy. It resolves the low utilization problem by migrating applications (e.g. deployed in a VM) into a fewer number of PMs (see Figure \ref{fig:consolidation}), so that the resource utilization of PMs are maintained at a high level. In the meanwhile, idle PMs can be turned off to save energy. We will focus on server consolidation instead of DVFS.
+
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.7\textwidth]{pics/consolidate.png}
+% 	\caption{A Server Consolidation example: Initially, each PM runs an application wrapped with a VM in a low resource utilization state. After the consolidation, both VMs are running on PM A, so that PM B is turned off to save energy \cite{Barroso:2007jt}.}
+% 	\label{fig:consolidation}
+% \end{figure}
+
+% The low utilization of PM is also called \emph{Server Spawl} which means a large number of unnecessary PMs are running - result in large amount of extra energy consumption.
+% The way of improving the resource utilization is through an effective resource allocation.
+
+% Resource management in Cloud computing is a broad term including 
+% various different strategies such as server 
+
+% Server consolidation is achieved by manipulating the allocation of applications in the PMs so that the resource utilization of PMs achieve a high level. An effective resource allocation is affected by multiple factors such as virtualization technologies and distinct approaches in different scenarios or stages.
+
+% Virtualization \cite{Uhlig:2005do} partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units such as virtual machines (VMs) or containers. Traditional resource allocation is based on VMs, where Cloud providers offer a number fixed types of VM; Cloud users can select VMs by themselves - in Infrastructure as a Service (IaaS) or automatically select by a software platform provided by Cloud provider - in Platform as a Service (PaaS). 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
+	\caption{A comparison between VM-based and Container-based virtualization}
+	\label{fig:comparison}
+\end{figure}
+
+Apart from these different resource allocation scenarios, we would also like to consider the server consolidation problem based on a new technology. Container technology \cite{Soltesz:2007cu} is an operating system level of virtualization. Each container wraps an application and multiple containers can be installed in a same operating system within a VM (see Figure \ref{fig:comparison} right-hand side). The reason for choosing container as the fundamental resource management unit is because
+Container-based resource allocation can overcome three inherent disadvantages of VM-based resource allocation which cause low utilization in data centers.
+
+\begin{itemize}
+	% \item Resource management is based on VM. Cloud providers can dynamically adjust the location (in which PM) of a VM based on the observed resource utilization. 
+	% \item Separated responsibilities of resource selection for applications and resource allocation. 
+	% As above mentioned, Cloud users have to select the type of resources. This causes a problem. The accurate estimation is almost impossible because of unpredictable workloads; Cloud users tend to reserve more resources for ensuring the QoS at the peak hours \cite{Chaisiri:2012cv} than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. As the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning. 
+	\item Resource over-provisioning \\
+	As previous mentioned, VMs are either selected by Cloud users or automatically selected by software platforms. In either case, it requires an estimation of required resources. However, The accurate estimation is almost impossible because of unpredictable workloads; A simple way is to reserve more resources for ensuring the QoS at peak hours \cite{Chaisiri:2012cv}, rather than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. In IaaS, the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning. In PaaS, Cloud providers can change the type of VMs to more suitable sizes.
+
+	% \item Cloud providers offer fixed types of VM. Because of the fixed size of resources and the one-on-one mapping of applications and VMs, specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage. 
+	\item Unbalanced usage of resources \\
+	Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
+
+	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) \\
+	% Redundant operating systems (OSs) cause vast resource wastage. \\ 
+	In VM-based resource allocation, heavy overhead is caused by
+	the hypervisor of VMs and the separated operating systems running in the PM. A hypervisor manages and monitors the VMs running on a PM. The overhead of a hypervisor is heavier with the increasing numbers of VM. Redundant operating system is another reason for overhead, as normal applications do not need specific operating systems; Commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Therefore, running applications in separated operating system simultaneously is unnecessary.
+\end{itemize}
+
+
+Container-based allocation solves the over-provisioning problem by allocating multiple containers in the same VM. In addition, the unbalance resource problem can be solved by combining different types of applications (e.g CPU-intensive and Memory-intensive). Furthermore, because containers share a same VM, the overhead of hypervisor and OSs are naturally solved with less deployment of VMs.
+
+% The recent development of container technology \cite{Soltesz:2007cu} is an operating system level of virtualization. Each container wraps an application and multiple containers can be installed in a same operating system within a VM (see Figure \ref{fig:comparison} right-hand side). Container technology has attracted the attention of both industrial and academia because it has the potential to solve these problems. 
+
+
+
+
+% Apart from virtualization, different server consolidation strategies should be applied in different scenarios. This is because Cloud data center has a highly dynamic nature where it constantly receives new requests for resource allocation and releases of old resources, consequently, the energy efficiency is constantly dropping.
+
+
+
+
+
+% In this thesis, our goal is to help Cloud providers to increase their profits by saving money from the energy consumed by servers.
+% Specifically, we achieve this goal by providing better resource allocation techniques using the container-based server consolidation to optimize the resource utilization in different scenarios.
+
+% The problem can be described as, a data center has a number of PMs, a number of types of VM and a number of containers to be allocated. They can be represented as resources 
+% such as CPU cores and RAM. The task is to allocate these containers to a number of VMs, each of VM has a type. Furthermore, allocating these VMs to a minimum number of PMs. The decision variable is the location of containers and VMs as well as the types of VMs. The constraints are the aggregated resources of containers inside a VM cannot exceed the VM's capacity. Similarly, the aggregated resources of VMs inside a PM cannot exceed the PM's capacity. The main difficulty of the problem is a large number of combination container allocation and the choices of VMs which is too time-consuming for a brutal-force approach.
+
+However, the new challenge posed by Container-based server consolidation is even harder than VM-based consolidation. Traditional VM-based server consolidation are modeled as bin-packing problems \cite{Mann:2015ua}. This is because VMs and PMs are naturally modeled as items and bins and server consolidation and bin-packing have the same optimization objective: minimize the number of bins/PMs. The complexity of bin-packing problem is NP-hard which means it is extreme time-consuming to find its optimal solution when the number of decision variables are large. In container-based server consolidation, there are two levels of allocation: Containers are allocated to VM as the first level and VMs are allocated to PMs as the second level. These two levels of allocation interact with each other, for the first level of allocation affects the decision in the second level. Therefore, it is necessary to propose new approaches for the problem.
 
 Currently, most research focus on VM-based server consolidation and these methods can not be directly applied on container-based consolidation because of the different structure. Only few research focus on container-based server consolidation problem. One of the state-of-the-art research is from Piraghaj and et al \cite{Piraghaj:2015uf}. They first propose a VM-resizing technique that defines the types of VM based on analyzing the historical data from Google. Then they propose a two-step allocation: first allocate containers to VMs and then allocate VMs to PMs. Their major contribution is the method of defining types of VM. The allocation of containers does not optimize the energy consumption and the allocation of VMs are traditional First Fit algorithm. In addition, they propose a dynamic consolidation \cite{Piraghaj:2016bw} using a series simple heuristics such as Random Host Selection Algorithm or First Fit Host Selection. 
 Their resource allocation system completely relies on dynamic consolidation without using static methods. Although their system can execute allocation fast, the energy efficiency cannot be guaranteed.
@@ -114,14 +134,6 @@ The reasons are mainly from two aspects, firstly, they mainly rely on simple bin
 % In addition, one feature that separates CaaS and PaaS is that, containers allow user-defined libraries instead of constrained by the platform.
 
 
-% Virtualization \cite{Uhlig:2005do} is the fundamental technology that enables Cloud computing. It partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on it. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing, because VMs can provide good isolation which means applications running in co-located VMs within the same PM without interfering each other \cite{Somani:2009ho}. Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. 
-
-% Disadvantages of VM 
-% This technique allows resource management in real time which inspires the strategy of server consolidation. 
-
-
-
-
 % The way of improving the resource utiltization is called server consolidation.
 
 
@@ -133,8 +145,6 @@ The reasons are mainly from two aspects, firstly, they mainly rely on simple bin
 
 
 
-
-% The problem can be described as, a data center has a number of PMs where each of them can be represented as a set of resources such as CPU cores, RAM and etc. The data center received a list of requests for applications which is also represented as resources. The task is to allocate these requested resources to a minimum number of PMs. The decision variable in this task is the location of each requested resource. The assumptions and constraints are distinct in service models of Cloud computing.
 
 % \begin{figure}
 % 	\centering
