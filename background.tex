@@ -4,6 +4,56 @@
 % Then, it narrows down to the Energy-aware resource management problem in Section \ref{C:}.
 
 
+\subsection{Virtualization}
+Virtualization \cite{Uhlig:2005do} is the fundamental technology that enables Cloud computing. It partitions a physical machine's resources (e.g. CPU, memory and disk) into several independent units called virtual machines (VMs) or containers. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing, because each virtualized unit can provide good isolation which means multiple applications can run in separated VMs within the same PM without interfering each other \cite{Somani:2009ho}. 
+
+Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, multiple ways of dynamic migration (e.g pre-copy \cite{Clark:2005uda} and post-copy \cite{Hines:2009vs}) of VM were invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
+
+Virtual machine-based virtualization is the mainstream in the previous decades and producing many popular hypervisors: Xen \cite{Barham:2003cj}, KVM \cite{Kivity:2007wu}, and VMware ESX \cite{Waldspurger:2002vl}.
+The recent development of container: application containers such as Docker, Linux Container, and Kubernetes \cite{Bernstein:2014ur} 
+have attract the attention from both academia and industry. It provides a finer granularity of resource management by enabling an application level of operations including deployment, scaling, and migration.  
+
+\subsubsection{VM-based system architecture and resource management}
+
+
+
+\subsubsection{Container-based architecture and resource management}
+Container-based virtualization is also often addressed as 
+operating-system-level virtualization. It includes two types of container: OS container and application container \cite{Piraghaj:2017vi}. OS container (as shown in Figure \ref{}) can run in both PM and VM. Each container provides an isolated environment. There are mainly three implementations of OS-level of containers: OpenVZ, Google's control groups, and namespace \cite{Rosen:2013wt}.
+Google and Facebook have been using OS container for years and being beneficial for its lightweight and fast communication among applications.
+
+In contrast of OS containers, an application container, such as Docker and Rocket, runs a single process. It allows to separate an applications into many components. With application container, it is easy to achieve auto-scaling on a single process. In comparison between OS and application container, the former can be seen as a VM runs multiple applications where each application can has its separated environment (e.g. libraries); An Application container is a single application that can be deployed in both OS container and VM.
+
+He et al \cite{He:2012im} propose an hierarchical resource management architecture for application container (see Figure \ref{fig:container_architecture}). The major functionality of Cloud controller is to provide a global optimization.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/container-arch.png.png}
+	\caption{A resource management architecture of container-based Cloud and the functionalities of each layer.}
+	\label{fig:container_architecture}
+\end{figure}
+
+Several research \cite{He:2012im, Felter:2015ki, Xavier:2013is, Dua:2014uz} have compared VM-based and container-based virtualization. The advantages of container-based virtualization are mainly from two aspects:
+1. Low overhead, containers have a lightweight management. which generate much less overhead than a hypervisor. On the other hand, shared OS system also reduces the overhead on running multiple OSs. 2. Containers have a near-native performance of CPU, memory, disk and network. While VM has a poor I/O performance \cite{Shafer:2010vh}: up to 50\% reduction of bandwidth (e.g hard disk and network). This defect also has a negative effect on the migration performance, since a VM-image is ranging from hundreds of MB to several GBs. On the other hand, the disadvantages of containers are also categorized in two aspects. Containers have rather poor performance in isolation for memory, disk, and network. Security is the major concern for container virtualization.
+
+
+\subsection{Server consolidation}
+
+\textcolor[Maroon]{What is Server consolidation?}
+Server consolidation is an approach to reduce the total number of PM or PM locations. It is often applied to solve the problem of physical server sprawl \cite{Khanna:2006vq}: a situation that more PMs are used in a low-utilized way. 
+
+
+\textcolor[Maroon]{Why Server consolidation?}
+Physical server sprawl not only wastes valuable computing resources but leads to a waste of energy, as Hameed et al \cite{Hameed:2016cma} addressed, even at a low level of 10\% of CPU utilization, PMs still consume more than 50\% of its peak time. 
+In addition, Han et al \cite{Han:2017jz} state that average resource utilization of PMs  is usually between 10\% to 50\%
+of its capacity. Server consolidation is often used to solve the disproportionate between utilization and energy consumption \cite{Barroso:2007jt}.
+
+\textcolor[Maroon]{How to do server consolidation?}
+From a broad technologies perspective, there are generally two technologies can be used to achieve server consolidation: virtualization and clustering. Clustering is used in a situation that the applications running in PMs are I/O intensive. This is because current virtualization technologies  such as KVM \cite{Kivity:2007wu} or Xen \cite{Barham:2003cj} have a 20\% to 55\% of reduction of I/O bandwidth (e.g disk reads and writes, network bandwidth) in comparison with non-virtualized PM \cite{Shafer:2010vh}. Virtualization is more suitable for applications which require little CPU utilization (e.g 15\%) and low I/O needs. Web services are mostly categorized into this group. Three major benefits of virtualization make it be the first choice for web-based application consolidation: No reliance on hardware, easy to provision and live migration.
+
+As \ref{sec:virtualization} mentioned, there are two types of virtualization: VM-based and container-based. Current consolidation are mostly VM-based since there is few data center has adopt the container-based technique.
+
+
 \subsection{An Overview of Cloud Computing}
 % In this section, we will introduce the virtualization technology
 \textcolor{Maroon}{Describe the field you will be researching.}
@@ -19,8 +69,6 @@ This separation of role has completely reformed the software industry \cite{Buyy
 
 
 The detailed goal and objectives of stakeholders are described below. 
-
-
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/stakeholders.png}
@@ -53,8 +101,6 @@ The detailed goal and objectives of stakeholders are described below.
 % 	\label{fig:unproportional}
 % \end{figure}
 
-% According to Hameed et al \cite{Hameed:2016cma}, PMs are far from energy-efficient. 
-% The main reason for the wastage is that the energy consumption of PMs remains high even when the utilization are low (see Figure \ref{fig:unproportional}). Therefore, a concept of \emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. 
 
 
 \begin{figure}
@@ -202,7 +248,6 @@ Furthermore, the decisions are often made in an on-line fashion to trigger the a
 
 
 
-% Virtualization \cite{Uhlig:2005do} is the fundamental technology that enables Cloud computing. It partitions a physical machine's resources (e.g. CPU, memory and disk) into several isolated units called virtual machines (VMs) where each VM allows an operating system running on it. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing, because VMs can provide good isolation which means applications running in co-located VMs within the same PM without interfering each other \cite{Somani:2009ho}. Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, a dynamic migration of VM was invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
 
 
 % \subsection{Resource Management in IaaS}
