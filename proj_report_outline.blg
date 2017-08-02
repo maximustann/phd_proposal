@@ -4,50 +4,50 @@ The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: sample.bib
-Repeated entry---line 481 of file sample.bib
- : @article{Chaisiri:2012cv
- :                         ,
+I was expecting a `,' or a `}'---line 1048 of file sample.bib
+ : month = 06
+ :           /2008
 I'm skipping whatever remains of this entry
 Warning--empty journal in Mann:2015ua
-You've used 24 entries,
+You've used 18 entries,
             2253 wiz_defined-function locations,
-            692 strings with 8803 characters,
-and the built_in function-call counts, 8256 in all, are:
-= -- 807
-> -- 463
+            651 strings with 7574 characters,
+and the built_in function-call counts, 6196 in all, are:
+= -- 619
+> -- 306
 < -- 0
-+ -- 190
-- -- 166
-* -- 706
-:= -- 1402
-add.period$ -- 70
-call.type$ -- 24
-change.case$ -- 156
++ -- 126
+- -- 108
+* -- 514
+:= -- 1030
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 230
-empty$ -- 584
-format.name$ -- 166
-if$ -- 1638
+cite$ -- 19
+duplicate$ -- 189
+empty$ -- 466
+format.name$ -- 108
+if$ -- 1256
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 21
-newline$ -- 120
-num.names$ -- 48
-pop$ -- 119
+int.to.str$ -- 18
+missing$ -- 17
+newline$ -- 92
+num.names$ -- 36
+pop$ -- 85
 preamble$ -- 1
-purify$ -- 131
+purify$ -- 90
 quote$ -- 0
-skip$ -- 144
+skip$ -- 120
 stack$ -- 0
-substring$ -- 522
-swap$ -- 54
+substring$ -- 425
+swap$ -- 48
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 72
 warning$ -- 1
-while$ -- 84
-width$ -- 26
-write$ -- 238
+while$ -- 66
+width$ -- 20
+write$ -- 183
 (There was 1 error message)

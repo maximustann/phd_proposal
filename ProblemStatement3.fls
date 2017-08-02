@@ -2,8 +2,7 @@ PWD /Users/maximustann/Work/PH.D/proposal
 INPUT /usr/local/texlive/2015/texmf.cnf
 INPUT /usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/maximustann/Work/PH.D/proposal/ProblemStatement2.tex
-OUTPUT /Users/maximustann/Work/PH.D/proposal/ProblemStatement2.log
+INPUT /Users/maximustann/Work/PH.D/proposal/ProblemStatement3.tex
+OUTPUT /Users/maximustann/Work/PH.D/proposal/ProblemStatement3.log
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

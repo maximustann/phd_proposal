@@ -7,34 +7,38 @@
 \subsection{Virtualization}
 Virtualization \cite{Uhlig:2005do} is the fundamental technology that enables Cloud computing. It partitions a physical machine's resources (e.g. CPU, memory and disk) into several independent units called virtual machines (VMs) or containers. This technology rooted back in the 1960s' and was originally invented to enable isolated software testing, because each virtualized unit can provide good isolation which means multiple applications can run in separated VMs within the same PM without interfering each other \cite{Somani:2009ho}. 
 
-Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, multiple ways of dynamic migration (e.g pre-copy \cite{Clark:2005uda} and post-copy \cite{Hines:2009vs}) of VM were invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
+Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. Later, multiple ways of dynamic migration (e.g pre-copy \cite{Clark:2005ud} and post-copy \cite{Hines:2009fv}) of VM were invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
 
-Virtual machine-based virtualization is the mainstream in the previous decades and producing many popular hypervisors: Xen \cite{Barham:2003cj}, KVM \cite{Kivity:2007wu}, and VMware ESX \cite{Waldspurger:2002vl}.
+Virtual machine-based virtualization is the mainstream in the previous decades and producing many popular hypervisors: Xen \cite{Barham:2003cj}, KVM \cite{Kivity:2007wu}, and VMware ESX \cite{Waldspurger:2002db}.
 The recent development of container: application containers such as Docker, Linux Container, and Kubernetes \cite{Bernstein:2014ur} 
 have attract the attention from both academia and industry. It provides a finer granularity of resource management by enabling an application level of operations including deployment, scaling, and migration.  
 
-\subsubsection{VM-based system architecture and resource management}
+\subsubsection{Virtual machine and VM-based resource management}
 
 
 
-\subsubsection{Container-based architecture and resource management}
+\subsubsection{Container and container-based resource management}
+
+
 Container-based virtualization is also often addressed as 
 operating-system-level virtualization. It includes two types of container: OS container and application container \cite{Piraghaj:2017vi}. OS container (as shown in Figure \ref{}) can run in both PM and VM. Each container provides an isolated environment. There are mainly three implementations of OS-level of containers: OpenVZ, Google's control groups, and namespace \cite{Rosen:2013wt}.
 Google and Facebook have been using OS container for years and being beneficial for its lightweight and fast communication among applications.
 
-In contrast of OS containers, an application container, such as Docker and Rocket, runs a single process. It allows to separate an applications into many components. With application container, it is easy to achieve auto-scaling on a single process. In comparison between OS and application container, the former can be seen as a VM runs multiple applications where each application can has its separated environment (e.g. libraries); An Application container is a single application that can be deployed in both OS container and VM.
+In contrast of OS containers, an application container, such as Docker and Rocket, runs a single process. It allows to separate an applications into many components. With application container, it is easy to achieve auto-scaling on a single process. In comparison between OS and application container, the former can be seen as a VM runs multiple applications where each application can has its separated environment (e.g. libraries), while an application container act like a single unit in OS container and it can be allocated in both OS container and VM.
 
 He et al \cite{He:2012im} propose an hierarchical resource management architecture for application container (see Figure \ref{fig:container_architecture}). The major functionality of Cloud controller is to provide a global optimization.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{pics/container-arch.png.png}
+	\includegraphics[width=0.7\textwidth]{pics/container-arch.png}
 	\caption{A resource management architecture of container-based Cloud and the functionalities of each layer.}
 	\label{fig:container_architecture}
 \end{figure}
 
-Several research \cite{He:2012im, Felter:2015ki, Xavier:2013is, Dua:2014uz} have compared VM-based and container-based virtualization. The advantages of container-based virtualization are mainly from two aspects:
-1. Low overhead, containers have a lightweight management. which generate much less overhead than a hypervisor. On the other hand, shared OS system also reduces the overhead on running multiple OSs. 2. Containers have a near-native performance of CPU, memory, disk and network. While VM has a poor I/O performance \cite{Shafer:2010vh}: up to 50\% reduction of bandwidth (e.g hard disk and network). This defect also has a negative effect on the migration performance, since a VM-image is ranging from hundreds of MB to several GBs. On the other hand, the disadvantages of containers are also categorized in two aspects. Containers have rather poor performance in isolation for memory, disk, and network. Security is the major concern for container virtualization.
+
+Several research \cite{He:2012im, Felter:2015ki, Xavier:2013fy, Dua:2014bw} have compared VM-based and container-based virtualization. The advantages of container-based virtualization are mainly from three aspects:
+1. Low overhead, containers have a lightweight management. which generate much less overhead than a hypervisor. On the other hand, shared OS system also reduces the overhead on running multiple OSs. 2. Containers have a near-native performance of CPU, memory, disk and network. While VM has a poor I/O performance \cite{Shafer:2010vh}: up to 50\% reduction of bandwidth (e.g hard disk and network). This defect also has a negative effect on the migration performance, since a VM-image is ranging from hundreds of MB to several GBs. Another advantage of containers is that, it naturally support vertical scaling while VM does not. Vertical scaling means a container can dynamically adjust its resources under the host's resource contraint.
+This feature offers a fine granularity management of resources. On the other hand, the disadvantages of containers are categorized in two aspects. Currently, containers have rather poor performance in isolation for memory, disk, and network. Security is immature in containers \cite{Bernstein:2014ur}, therefore, high security required applications are not recommended to be deployed in such systems.
 
 
 \subsection{Server consolidation}

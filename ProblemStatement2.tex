@@ -4,7 +4,15 @@
 
 \section{Problem Statement}
 
-Cloud computing is a computing model offering a network of servers to their clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} 
+% Cloud computing is a computing model offering a network of servers to their clients in a on-demand fashion. It provides great flexibility to application providers who can simply start their businesses by deploying their applications on Cloud servers. With elastic resource management system, Cloud provides unlimited resources to application with a pay-as-you-go policy. This fundamentally changes the software industry.
+
+% As the virtualization technology evolves, a new trend of container-based Cloud \cite{Felter:2015ki, Dua:2014uza} emerges in recent years and quickly become a hot topic in both industry and acedemia.A corresponding service model: Container as a Service \cite{Piraghaj:2015uf} is proposed in order to overcome the disadvantages (see details in Section \ref{sec:}) of traditional service models: the over-provisioning problem in Infrastructure as a Service (IaaS) and the restricted software development environment in Platform as a Service (PaaS). Overall, container technology provides a finer granularity level of resource management than VM-based virtualization which can dramatically alleviate the over-provisioning problem. Furthermore, containers support user-defined libraries which solve the lock-in problem \cite{Armbrust:2010vq} in PaaS.
+
+% However, the new technology also brings new challenges to resource optimization. 
+
+
+
+% From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} 
 To illustrate how it works, considering the case: a Cloud provider builds a data center which contains thousands of servers connected with network. These servers are virtualized which means they are partitioned into a smaller unit of resources called \emph{Virtual Machines (VMs)} or \emph{Containers}. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these resource units from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers.
 
 Cloud providers offer the fundamental resources: data centers and computation powers that support the modern Cloud computing industry, software industry and etc. Therefore, reducing the cost of data centers will lead to a reduction of cost of softwares which consequently be beneficial to most people who access the Internet on a daily basis.
