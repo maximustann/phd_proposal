@@ -1,9 +1,30 @@
 \begin{thebibliography}{10}
 
+\bibitem{AlRoomi:2013te}
+{\sc Al-Roomi, M., and Al-Ebrahim, S.}
+\newblock {Cloud computing pricing models: a survey}.
+\newblock {\em Computing\/} (2013).
+
+\bibitem{Angelo:2013ee}
+{\sc Angelo, J.~S., Krempser, E., and Barbosa, H. J.~C.}
+\newblock {Differential evolution for bilevel programming}.
+\newblock In {\em 2013 IEEE Congress on Evolutionary Computation (CEC)\/}
+  (2013), IEEE, pp.~470--477.
+
+\bibitem{Banzhaf:1998wc}
+{\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
+\newblock {Genetic programming: an introduction}, 1998.
+
 \bibitem{Barroso:2007jt}
 {\sc Barroso, L.~A., and H{\"o}lzle, U.}
 \newblock {The Case for Energy-Proportional Computing.}
 \newblock {\em IEEE Computer 40}, 12 (2007), 33--37.
+
+\bibitem{Beloglazov:2012ji}
+{\sc Beloglazov, A., Abawajy, J.~H., and Buyya, R.}
+\newblock {Energy-aware resource allocation heuristics for efficient management
+  of data centers for Cloud computing.}
+\newblock {\em Future Generation Comp. Syst. 28}, 5 (2012), 755--768.
 
 \bibitem{Beloglazov:2012bw}
 {\sc Beloglazov, A., and Buyya, R.}
@@ -19,6 +40,11 @@
   Machines in Cloud Data Centers under Quality of Service Constraints}.
 \newblock {\em IEEE Transactions on Parallel and Distributed Systems 24}, 7
   (2013), 1366--1379.
+
+\bibitem{Burke:2006ei}
+{\sc Burke, E.~K., Hyde, M.~R., and Kendall, G.}
+\newblock {Evolving Bin Packing Heuristics with Genetic Programming.}
+\newblock {\em PPSN 4193}, Chapter 87 (2006), 860--869.
 
 \bibitem{Colson:2007bu}
 {\sc Colson, B., Marcotte, P., and Savard, G.}
@@ -36,6 +62,23 @@
   containers.}
 \newblock {\em ISPASS\/} (2015), 171--172.
 
+\bibitem{Ferdaus:2014ep}
+{\sc Ferdaus, M.~H., Murshed, M.~M., Calheiros, R.~N., and Buyya, R.}
+\newblock {Virtual Machine Consolidation in Cloud Data Centers Using ACO
+  Metaheuristic.}
+\newblock {\em Euro-Par 8632}, Chapter 26 (2014), 306--317.
+
+\bibitem{Forsman:2015ca}
+{\sc Forsman, M., Glad, A., Lundberg, L., and Ilie, D.}
+\newblock {Algorithms for automated live migration of virtual machines.}
+\newblock {\em Journal of Systems and Software 101\/} (2015), 110--126.
+
+\bibitem{Gao:2013gg}
+{\sc Gao, Y., Guan, H., Qi, Z., Hou, Y., and Liu, L.}
+\newblock {A multi-objective ant colony system algorithm for virtual machine
+  placement in cloud computing.}
+\newblock {\em J. Comput. Syst. Sci. 79}, 8 (2013), 1230--1242.
+
 \bibitem{He:2012im}
 {\sc He, S., Guo, L., Guo, Y., Wu, C., Ghanem, M., and Han, R.}
 \newblock {Elastic Application Container: A Lightweight Approach for Cloud
@@ -44,17 +87,43 @@
   Information Networking and Applications (AINA)\/} (Feb. 2012), IEEE,
   pp.~15--22.
 
+\bibitem{Hindman:2011ux}
+{\sc Hindman, B., Konwinski, A., Zaharia, M., Ghodsi, A., Joseph, A.~D., Katz,
+  R.~H., Shenker, S., and Stoica, I.}
+\newblock {Mesos - A Platform for Fine-Grained Resource Sharing in the Data
+  Center.}
+\newblock {\em NSDI\/} (2011).
+
 \bibitem{Jennings:2015ht}
 {\sc Jennings, B., and Stadler, R.}
 \newblock {Resource Management in Clouds: Survey and Research Challenges}.
 \newblock {\em Journal of Network and Systems Management 23}, 3 (2015),
   567--619.
 
+\bibitem{Jung:2010dt}
+{\sc Jung, G., Hiltunen, M.~A., Joshi, K.~R., Schlichting, R.~D., and Pu, C.}
+\newblock {Mistral - Dynamically Managing Power, Performance, and Adaptation
+  Cost in Cloud Infrastructures.}
+\newblock {\em ICDCS\/} (2010), 62--73.
+
 \bibitem{Legillon:2012dd}
 {\sc Legillon, F., Liefooghe, A., and Talbi, E.-G.}
 \newblock {CoBRA - A cooperative coevolutionary algorithm for bi-level
   optimization.}
 \newblock {\em IEEE Congress on Evolutionary Computation\/} (2012), 1--8.
+
+\bibitem{Li:2006br}
+{\sc Li, X., Tian, P., and Min, X.}
+\newblock {A Hierarchical Particle Swarm Optimization for Solving Bilevel
+  Programming Problems}.
+\newblock In {\em Service-Oriented and Cloud Computing}. Springer Berlin
+  Heidelberg, Berlin, Heidelberg, 2006, pp.~1169--1178.
+
+\bibitem{Magalhaes:2015ep}
+{\sc Magalh{\~a}es, D., Calheiros, R.~N., Buyya, R., and Gomes, D.~G.}
+\newblock {Workload modeling for resource usage analysis and simulation in
+  cloud computing.}
+\newblock {\em Computers {\&} Electrical Engineering 47\/} (2015), 69--81.
 
 \bibitem{Mann:2015ua}
 {\sc Mann, Z.~{\'A}.}
@@ -79,6 +148,19 @@
 \newblock {Dynamic resource management using virtual machine migrations}.
 \newblock {\em IEEE Communications {\ldots} 50}, 9 (2012), 34--40.
 
+\bibitem{Moens:2011gk}
+{\sc Moens, H., Famaey, J., Latr{\'e}, S., Dhoedt, B., and De~Turck, F.}
+\newblock {Design and evaluation of a hierarchical application placement
+  algorithm in large scale clouds.}
+\newblock {\em Integrated Network Management\/} (2011), 137--144.
+
+\bibitem{Nguyen:2014eu}
+{\sc Nguyen, S., Zhang, M., Johnston, M., and Tan, K.~C.}
+\newblock {Automatic Design of Scheduling Policies for Dynamic Multi-objective
+  Job Shop Scheduling via Cooperative Coevolution Genetic Programming}.
+\newblock {\em IEEE Transactions on Evolutionary Computation 18}, 2 (2014),
+  193--208.
+
 \bibitem{Piraghaj:2016bw}
 {\sc Piraghaj, S.~F., Calheiros, R.~N., Chan, J., Dastjerdi, A.~V., and Buyya,
   R.}
@@ -92,11 +174,28 @@
   (SERVICES 2015).}
 \newblock {\em SERVICES\/} (2015).
 
+\bibitem{Sarin:2011fu}
+{\sc Sarin, S.~C., Varadarajan, A., and Wang, L.}
+\newblock {A survey of dispatching rules for operational control in wafer
+  fabrication}.
+\newblock {\em Production Planning and {\ldots} 22}, 1 (Jan. 2011), 4--24.
+
 \bibitem{Shen:2015hm}
 {\sc Shen, S., van Beek, V., and Iosup, A.}
 \newblock {Statistical Characterization of Business-Critical Workloads Hosted
   in Cloud Datacenters.}
 \newblock {\em CCGRID\/} (2015), 465--474.
+
+\bibitem{Shi:2011ke}
+{\sc Shi, W., and Hong, B.}
+\newblock {Towards Profitable Virtual Machine Placement in the Data Center.}
+\newblock {\em UCC\/} (2011), 138--145.
+
+\bibitem{Sinha:2017et}
+{\sc Sinha, A., Malo, P., and Deb, K.}
+\newblock {A Review on Bilevel Optimization: From Classical to Evolutionary
+  Approaches and Applications}.
+\newblock {\em IEEE Transactions on Evolutionary Computation\/} (2017), 1--1.
 
 \bibitem{Soltesz:2007cu}
 {\sc Soltesz, S., P{\"o}tzl, H., Fiuczynski, M.~E., Bavier, A.~C., and
@@ -105,10 +204,56 @@
   high-performance alternative to hypervisors.}
 \newblock {\em EuroSys 41}, 3 (2007), 275--287.
 
+\bibitem{SoteloFigueroa:2013be}
+{\sc Sotelo-Figueroa, M.~A., Soberanes, H. J.~P., Carpio, J.~M., Huacuja, H.
+  J.~F., Reyes, L.~C., and Soria-Alcaraz, J.~A.}
+\newblock {Evolving Bin Packing Heuristic Using Micro-Differential Evolution
+  with Indirect Representation.}
+\newblock {\em Recent Advances on Hybrid Intelligent Systems 451}, Chapter 28
+  (2013), 349--359.
+
 \bibitem{Varasteh:2015fu}
 {\sc Varasteh, A., and Goudarzi, M.}
 \newblock {Server Consolidation Techniques in Virtualized Data Centers: A
   Survey}.
 \newblock {\em IEEE Systems Journal\/} (2015), 1--12.
+
+\bibitem{Vicente:1994ie}
+{\sc Vicente, L., Savard, G., and J{\'u}dice, J.}
+\newblock {Descent approaches for quadratic bilevel programming}.
+\newblock {\em Journal of Optimization Theory and Applications 81}, 2 (May
+  1994), 379--399.
+
+\bibitem{Wang:2007em}
+{\sc Wang, G.~G., and Shan, S.}
+\newblock {Review of Metamodeling Techniques in Support of Engineering Design
+  Optimization}.
+\newblock {\em Journal of Mechanical Design 129}, 4 (Apr. 2007), 370--380.
+
+\bibitem{Xu:2010df}
+{\sc Xu, J., and Fortes, J. A.~B.}
+\newblock {Multi-Objective Virtual Machine Placement in Virtualized Data Center
+  Environments}.
+\newblock In {\em Int'l Conference on Cyber, Physical and Social Computing
+  (CPSCom)\/} (2010), IEEE, pp.~179--188.
+
+\bibitem{Yazir:2010bk}
+{\sc Yazir, Y.~O., Matthews, C., Farahbod, R., Neville, S.~W., Guitouni, A.,
+  Ganti, S., and Coady, Y.}
+\newblock {Dynamic Resource Allocation in Computing Clouds Using Distributed
+  Multiple Criteria Decision Analysis.}
+\newblock {\em IEEE CLOUD\/} (2010), 91--98.
+
+\bibitem{Zhang:2016cx}
+{\sc Zhang, J., Huang, H., and Wang, X.}
+\newblock {Resource provision algorithms in cloud computing - A survey.}
+\newblock {\em J. Network and Computer Applications 64\/} (2016), 23--42.
+
+\bibitem{Zhu:2006in}
+{\sc Zhu, X., Yu, Q., and Wang, X.}
+\newblock {A Hybrid Differential Evolution Algorithm for Solving Nonlinear
+  Bilevel Programming with Linear Constraints}.
+\newblock In {\em 2006 5th IEEE International Conference on Cognitive
+  Informatics\/} (2006), IEEE, pp.~126--131.
 
 \end{thebibliography}

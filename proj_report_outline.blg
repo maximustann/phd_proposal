@@ -4,50 +4,55 @@ The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
 Database file #1: sample.bib
-I was expecting a `,' or a `}'---line 1048 of file sample.bib
+I was expecting a `,' or a `}'---line 1111 of file sample.bib
  : month = 06
  :           /2008
 I'm skipping whatever remains of this entry
+Repeated entry---line 1114 of file sample.bib
+ : @article{Gao:2013gg
+ :                    ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Tan:2017tz"
 Warning--empty journal in Mann:2015ua
-You've used 18 entries,
+You've used 42 entries,
             2253 wiz_defined-function locations,
-            651 strings with 7574 characters,
-and the built_in function-call counts, 6196 in all, are:
-= -- 619
-> -- 306
+            816 strings with 12718 characters,
+and the built_in function-call counts, 15449 in all, are:
+= -- 1533
+> -- 809
 < -- 0
-+ -- 126
-- -- 108
-* -- 514
-:= -- 1030
-add.period$ -- 54
-call.type$ -- 18
-change.case$ -- 109
++ -- 332
+- -- 290
+* -- 1303
+:= -- 2531
+add.period$ -- 126
+call.type$ -- 42
+change.case$ -- 272
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 189
-empty$ -- 466
-format.name$ -- 108
-if$ -- 1256
+cite$ -- 43
+duplicate$ -- 467
+empty$ -- 1137
+format.name$ -- 290
+if$ -- 3141
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 17
-newline$ -- 92
-num.names$ -- 36
-pop$ -- 85
+int.to.str$ -- 42
+missing$ -- 40
+newline$ -- 211
+num.names$ -- 84
+pop$ -- 223
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 229
 quote$ -- 0
-skip$ -- 120
+skip$ -- 308
 stack$ -- 0
-substring$ -- 425
-swap$ -- 48
+substring$ -- 1067
+swap$ -- 130
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 168
 warning$ -- 1
-while$ -- 66
-width$ -- 20
-write$ -- 183
-(There was 1 error message)
+while$ -- 160
+width$ -- 44
+write$ -- 425
+(There were 2 error messages)
