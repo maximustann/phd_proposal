@@ -218,6 +218,12 @@
   Survey}.
 \newblock {\em IEEE Systems Journal\/} (2015), 1--12.
 
+\bibitem{Verma:2009wi}
+{\sc Verma, A., and Dasgupta, G.}
+\newblock {Server Workload Analysis for Power Minimization using
+  Consolidation.}
+\newblock {\em USENIX Annual Technical Conference\/} (2009), 28--28.
+
 \bibitem{Vicente:1994ie}
 {\sc Vicente, L., Savard, G., and J{\'u}dice, J.}
 \newblock {Descent approaches for quadratic bilevel programming}.

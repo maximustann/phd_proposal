@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (Web2C 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 The style file: acm.bst
@@ -12,47 +12,53 @@ Repeated entry---line 1114 of file sample.bib
  : @article{Gao:2013gg
  :                    ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Yin:2000ut"
+Warning--I didn't find a database entry for "Deb:2010wh"
+Warning--I didn't find a database entry for "Takouna:2014ua"
+Warning--I didn't find a database entry for "Grimes:2016vv"
+Warning--I didn't find a database entry for "Farahnakian:2015vj"
+Warning--I didn't find a database entry for "Tan:2011vy"
 Warning--I didn't find a database entry for "Tan:2017tz"
 Warning--empty journal in Mann:2015ua
-You've used 42 entries,
+You've used 43 entries,
             2253 wiz_defined-function locations,
-            816 strings with 12718 characters,
-and the built_in function-call counts, 15449 in all, are:
-= -- 1533
-> -- 809
+            835 strings with 13039 characters,
+and the built_in function-call counts, 15752 in all, are:
+= -- 1565
+> -- 821
 < -- 0
-+ -- 332
-- -- 290
-* -- 1303
-:= -- 2531
-add.period$ -- 126
-call.type$ -- 42
-change.case$ -- 272
++ -- 337
+- -- 294
+* -- 1326
+:= -- 2581
+add.period$ -- 129
+call.type$ -- 43
+change.case$ -- 277
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 467
-empty$ -- 1137
-format.name$ -- 290
-if$ -- 3141
+cite$ -- 44
+duplicate$ -- 476
+empty$ -- 1162
+format.name$ -- 294
+if$ -- 3203
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 40
-newline$ -- 211
-num.names$ -- 84
-pop$ -- 223
+int.to.str$ -- 43
+missing$ -- 41
+newline$ -- 216
+num.names$ -- 86
+pop$ -- 226
 preamble$ -- 1
-purify$ -- 229
+purify$ -- 233
 quote$ -- 0
-skip$ -- 308
+skip$ -- 314
 stack$ -- 0
-substring$ -- 1067
-swap$ -- 130
+substring$ -- 1091
+swap$ -- 132
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 168
+type$ -- 172
 warning$ -- 1
-while$ -- 160
-width$ -- 44
-write$ -- 425
+while$ -- 164
+width$ -- 45
+write$ -- 435
 (There were 2 error messages)
