@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (Web2C 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: literature_review.aux
 The style file: acm.bst
 Database file #1: sample.bib
 I was expecting a `,' or a `}'---line 1111 of file sample.bib
@@ -19,46 +20,48 @@ Warning--I didn't find a database entry for "Grimes:2016vv"
 Warning--I didn't find a database entry for "Farahnakian:2015vj"
 Warning--I didn't find a database entry for "Tan:2011vy"
 Warning--I didn't find a database entry for "Tan:2017tz"
+Warning--I didn't find a database entry for "Piraghaj:2017vi"
+Warning--empty journal in Clark:2005ud
 Warning--empty journal in Mann:2015ua
-You've used 43 entries,
+You've used 60 entries,
             2253 wiz_defined-function locations,
-            835 strings with 13039 characters,
-and the built_in function-call counts, 15752 in all, are:
-= -- 1565
-> -- 821
+            936 strings with 16456 characters,
+and the built_in function-call counts, 22333 in all, are:
+= -- 2169
+> -- 1265
 < -- 0
-+ -- 337
-- -- 294
-* -- 1326
-:= -- 2581
-add.period$ -- 129
-call.type$ -- 43
-change.case$ -- 277
++ -- 518
+- -- 458
+* -- 1907
+:= -- 3693
+add.period$ -- 180
+call.type$ -- 60
+change.case$ -- 410
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 476
-empty$ -- 1162
-format.name$ -- 294
-if$ -- 3203
+cite$ -- 62
+duplicate$ -- 665
+empty$ -- 1592
+format.name$ -- 458
+if$ -- 4502
 int.to.chr$ -- 0
-int.to.str$ -- 43
-missing$ -- 41
-newline$ -- 216
-num.names$ -- 86
-pop$ -- 226
+int.to.str$ -- 60
+missing$ -- 58
+newline$ -- 301
+num.names$ -- 120
+pop$ -- 348
 preamble$ -- 1
-purify$ -- 233
+purify$ -- 349
 quote$ -- 0
-skip$ -- 314
+skip$ -- 435
 stack$ -- 0
-substring$ -- 1091
-swap$ -- 132
+substring$ -- 1416
+swap$ -- 181
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 172
-warning$ -- 1
-while$ -- 164
-width$ -- 45
-write$ -- 435
+type$ -- 240
+warning$ -- 2
+while$ -- 221
+width$ -- 62
+write$ -- 600
 (There were 2 error messages)

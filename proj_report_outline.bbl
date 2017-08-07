@@ -15,6 +15,12 @@
 {\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
 \newblock {Genetic programming: an introduction}, 1998.
 
+\bibitem{Barham:2003cj}
+{\sc Barham, P., Dragovic, B., Fraser, K., Hand, S., Harris, T.~L., Ho, A.,
+  Neugebauer, R., Pratt, I., and Warfield, A.}
+\newblock {Xen and the art of virtualization.}
+\newblock {\em SOSP\/} (2003), 164.
+
 \bibitem{Barroso:2007jt}
 {\sc Barroso, L.~A., and H{\"o}lzle, U.}
 \newblock {The Case for Energy-Proportional Computing.}
@@ -41,10 +47,21 @@
 \newblock {\em IEEE Transactions on Parallel and Distributed Systems 24}, 7
   (2013), 1366--1379.
 
+\bibitem{Bernstein:2014ur}
+{\sc Bernstein, D.}
+\newblock {Containers and Cloud - From LXC to Docker to Kubernetes.}
+\newblock {\em IEEE Cloud Computing\/} (2014).
+
 \bibitem{Burke:2006ei}
 {\sc Burke, E.~K., Hyde, M.~R., and Kendall, G.}
 \newblock {Evolving Bin Packing Heuristics with Genetic Programming.}
 \newblock {\em PPSN 4193}, Chapter 87 (2006), 860--869.
+
+\bibitem{Clark:2005ud}
+{\sc Clark, C., Fraser, K., Hand, S., Hansen, J.~G., Jul, E., Limpach, C.,
+  Pratt, I., and Warfield, A.}
+\newblock {Live migration of virtual machines}.
+\newblock 273--286.
 
 \bibitem{Colson:2007bu}
 {\sc Colson, B., Marcotte, P., and Savard, G.}
@@ -55,6 +72,12 @@
 {\sc Dayarathna, M., Wen, Y., and Fan, R.}
 \newblock {Data Center Energy Consumption Modeling - A Survey.}
 \newblock {\em {\ldots} Surveys {\&} Tutorials\/} (2016).
+
+\bibitem{Dua:2014bw}
+{\sc Dua, R., Raja, A.~R., and Kakadia, D.}
+\newblock {Virtualization vs Containerization to Support PaaS}.
+\newblock In {\em 2014 IEEE International Conference on Cloud Engineering
+  (IC2E)\/} (2014), IEEE, pp.~610--614.
 
 \bibitem{Felter:2015ki}
 {\sc Felter, W., Ferreira, A., Rajamony, R., and Rubio, J.}
@@ -79,6 +102,20 @@
   placement in cloud computing.}
 \newblock {\em J. Comput. Syst. Sci. 79}, 8 (2013), 1230--1242.
 
+\bibitem{Hameed:2016cma}
+{\sc Hameed, A., Khoshkbarforoushha, A., Ranjan, R., Jayaraman, P.~P.,
+  Kolodziej, J., Balaji, P., Zeadally, S., Malluhi, Q.~M., Tziritas, N.,
+  Vishnu, A., Khan, S.~U., and Zomaya, A.~Y.}
+\newblock {A survey and taxonomy on energy efficient resource allocation
+  techniques for cloud computing systems.}
+\newblock {\em Computing 98}, 7 (2016), 751--774.
+
+\bibitem{Han:2017jz}
+{\sc Han, G., Que, W., Jia, G., and Zhang, W.}
+\newblock {Resource-utilization-aware energy efficient server consolidation
+  algorithm for green computing in IIOT}.
+\newblock {\em Journal of Network and Computer Applications\/} (July 2017).
+
 \bibitem{He:2012im}
 {\sc He, S., Guo, L., Guo, Y., Wu, C., Ghanem, M., and Han, R.}
 \newblock {Elastic Application Container: A Lightweight Approach for Cloud
@@ -94,6 +131,11 @@
   Center.}
 \newblock {\em NSDI\/} (2011).
 
+\bibitem{Hines:2009fv}
+{\sc Hines, M.~R., Deshpande, U., and Gopalan, K.}
+\newblock {Post-copy live migration of virtual machines}.
+\newblock {\em SIGOPS Oper. Syst. Rev. 43}, 3 (July 2009), 14--26.
+
 \bibitem{Jennings:2015ht}
 {\sc Jennings, B., and Stadler, R.}
 \newblock {Resource Management in Clouds: Survey and Research Challenges}.
@@ -105,6 +147,17 @@
 \newblock {Mistral - Dynamically Managing Power, Performance, and Adaptation
   Cost in Cloud Infrastructures.}
 \newblock {\em ICDCS\/} (2010), 62--73.
+
+\bibitem{Khanna:2006vq}
+{\sc Khanna, G., Beaty, K.~A., Kar, G., and Kochut, A.}
+\newblock {Application Performance Management in Virtualized Server
+  Environments.}
+\newblock {\em NOMS\/} (2006).
+
+\bibitem{Kivity:2007wu}
+{\sc Kivity, A., Kamay, Y., Laor, D., and Lublin, U.}
+\newblock {kvm: the Linux virtual machine monitor}.
+\newblock {\em {\ldots} of the Linux {\ldots}\/} (2007).
 
 \bibitem{Legillon:2012dd}
 {\sc Legillon, F., Liefooghe, A., and Talbi, E.-G.}
@@ -174,11 +227,22 @@
   (SERVICES 2015).}
 \newblock {\em SERVICES\/} (2015).
 
+\bibitem{Rosen:2013wt}
+{\sc Rosen, R.}
+\newblock {Resource management: Linux kernel namespaces and cgroups}.
+\newblock {\em Haifux\/} (2013).
+
 \bibitem{Sarin:2011fu}
 {\sc Sarin, S.~C., Varadarajan, A., and Wang, L.}
 \newblock {A survey of dispatching rules for operational control in wafer
   fabrication}.
 \newblock {\em Production Planning and {\ldots} 22}, 1 (Jan. 2011), 4--24.
+
+\bibitem{Shafer:2010vh}
+{\sc Shafer, J.}
+\newblock {I/O virtualization bottlenecks in cloud computing today}.
+\newblock In {\em Proceedings of the 2nd conference on I/O virtualization\/}
+  (2010).
 
 \bibitem{Shen:2015hm}
 {\sc Shen, S., van Beek, V., and Iosup, A.}
@@ -204,6 +268,11 @@
   high-performance alternative to hypervisors.}
 \newblock {\em EuroSys 41}, 3 (2007), 275--287.
 
+\bibitem{Somani:2009ho}
+{\sc Somani, G., and Chaudhary, S.}
+\newblock {Application Performance Isolation in Virtualization.}
+\newblock {\em IEEE CLOUD\/} (2009), 41--48.
+
 \bibitem{SoteloFigueroa:2013be}
 {\sc Sotelo-Figueroa, M.~A., Soberanes, H. J.~P., Carpio, J.~M., Huacuja, H.
   J.~F., Reyes, L.~C., and Soria-Alcaraz, J.~A.}
@@ -211,6 +280,18 @@
   with Indirect Representation.}
 \newblock {\em Recent Advances on Hybrid Intelligent Systems 451}, Chapter 28
   (2013), 349--359.
+
+\bibitem{Uhlig:2005do}
+{\sc Uhlig, R., Neiger, G., Rodgers, D., Santoni, A.~L., Martins, F. C.~M.,
+  Anderson, A.~V., Bennett, S.~M., K{\"a}gi, A., Leung, F.~H., and Smith, L.}
+\newblock {Intel Virtualization Technology.}
+\newblock {\em IEEE Computer 38}, 5 (2005), 48--56.
+
+\bibitem{vm_technology}
+{\sc Uhlig, R., Neiger, G., Rodgers, D., Santoni, A.~L., Martins, F. C.~M.,
+  Anderson, A.~V., Bennett, S.~M., Kagi, A., Leung, F.~H., and Smith, L.}
+\newblock {Intel virtualization technology}.
+\newblock {\em Computer 38}, 5 (May 2005), 48--56.
 
 \bibitem{Varasteh:2015fu}
 {\sc Varasteh, A., and Goudarzi, M.}
@@ -230,11 +311,26 @@
 \newblock {\em Journal of Optimization Theory and Applications 81}, 2 (May
   1994), 379--399.
 
+\bibitem{Waldspurger:2002db}
+{\sc Waldspurger, C.~A.}
+\newblock {Memory resource management in VMware ESX server}.
+\newblock {\em ACM SIGOPS Operating Systems Review 36}, SI (Dec. 2002),
+  181--194.
+
 \bibitem{Wang:2007em}
 {\sc Wang, G.~G., and Shan, S.}
 \newblock {Review of Metamodeling Techniques in Support of Engineering Design
   Optimization}.
 \newblock {\em Journal of Mechanical Design 129}, 4 (Apr. 2007), 370--380.
+
+\bibitem{Xavier:2013fy}
+{\sc Xavier, M.~G., Neves, M.~V., Rossi, F.~D., Ferreto, T.~C., Lange, T., and
+  De~Rose, C. A.~F.}
+\newblock {Performance Evaluation of Container-Based Virtualization for High
+  Performance Computing Environments}.
+\newblock In {\em 2013 21st Euromicro International Conference on Parallel,
+  Distributed and Network-Based Processing (PDP 2013)\/} (2013), IEEE,
+  pp.~233--240.
 
 \bibitem{Xu:2010df}
 {\sc Xu, J., and Fortes, J. A.~B.}
@@ -254,6 +350,12 @@
 {\sc Zhang, J., Huang, H., and Wang, X.}
 \newblock {Resource provision algorithms in cloud computing - A survey.}
 \newblock {\em J. Network and Computer Applications 64\/} (2016), 23--42.
+
+\bibitem{Zhang:2010vo}
+{\sc Zhang, Q., Cheng, L., and Boutaba, R.}
+\newblock {Cloud computing: state-of-the-art and research challenges}.
+\newblock {\em Journal of Internet Services and Applications 1}, 1 (2010),
+  7--18.
 
 \bibitem{Zhu:2006in}
 {\sc Zhu, X., Yu, Q., and Wang, X.}

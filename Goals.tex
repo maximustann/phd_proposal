@@ -29,7 +29,7 @@ As previous section (see \ref{sec:motivation}) mentioned, the task is multi-obje
 
 	\item Second, we will design a robustness measure. Previous studies only use simple measurement which counts the migration number between two static consolidation. This measurement aims at minimizing the number of migration between two  static placement processes. It may cause more migration in the next consolidation. Therefore, it needs a time-aware measure of the robustness of system. Therefore, in this objective, the first sub-problem we are going to solve is to propose a robustness measure. Currently, only a few research propose robustness aware server consolidation techniques \cite{Takouna:2014ua, Grimes:2016vv} have been proposed. They are either static threshold or probability-based threshold to measure the robustness of PMs. We will investigate an adaptive measure based on the historical data and current status.
 	
-	\item Third, we will design a proactive server consolidation approach. Based on a prediction of future server consolidation and the robustness measure,we will first design an approach which maximize the robustness and also minimize the current energy consumption. Proactive consolidation \cite{Farahnakian:2015vj,Tan:2011vy} has been studied extensively. Their experience in analyzing the workload pattern can be useful in designing the new algorithm.
+	\item Third, we will design a proactive server consolidation approach. Based on a prediction of future server consolidation and the robustness measure,we will first design an approach which maximize the robustness and also minimize the current energy consumption. Proactive consolidation \cite{Farahnakian:2015vj,Tan:2011vy} has been studied extensively. Their experience in analyzing the workload patterns can be useful in designing new algorithms.
 	
 	% \item \emph{Design a }\\
 
@@ -45,14 +45,12 @@ Previously, dynamic consolidation methods,including both VM-based and container-
 \begin{enumerate}
 	\item First, we will investigate which features and attributes are important when dealing with energy efficiency problem. As the basic component of a dispatching rule, primitive set contains the states of environment including: status of VMs (e.g. utilization, wastage), features of workloads (e.g. resource consumption). Although there is no research has investigate how to use them to construct dispatching rules, there are extensive statistical analysis on workload \cite{Verma:2009wi}. The effectiveness of functional set and primitive set will be tested by applying the constructed dispatching rules on dynamic consolidation problem.
 
-	\item Develop GP-based methods for evolving Dispatching rules \\
-		This sub-objective explores suitable representations for GP to construct useful dispatching rules. It also proposes new genetic operators as well as search mechanisms.
+	\item Develop GP-based methods for evolving dispatching rules. This sub-objective explores suitable representations for GP to construct useful dispatching rules. It also proposes new genetic operators as well as search mechanisms.
 	\end{enumerate}
 
 \subsection{Objective Four (Optional) Large-scale Static Consolidation Problem}
 Propose a preprocessing method to eliminate redundant variables 
-Current static consolidation takes all servers into consider which will lead to a scalability problem. In this objective, we will propose a method that categorizes servers so that only a small number of servers are considered. This approach will dramatically reduce the search space. The potential approaches that can be applied in this task are various clustering methods.
-
+Current static consolidation takes all servers into consider which will lead to a scalability problem. In this objective, we will investigate two branches of methods, first one categorizes a number of containers into fewer groups so that the granularity will decrease \cite{Piraghaj:2015uf}. Second method categorizes PMs so that only a small number of PMs are considered. This approach will dramatically reduce the search space. The potential approaches that can be applied in this task are various clustering methods.
 
 	% The 
 	% initial placement can be considered as a two-level of multi-dimensional bin-packing problem with multi-objectives. 

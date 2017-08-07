@@ -163,34 +163,6 @@ The reasons are mainly from two aspects, firstly, they mainly rely on simple bin
 % \end{figure} 
 
 
-% Service models of Cloud computing are critical in solving energy consumption problem because their distinct ways of managing resources have sever effect on the problem. These distinct ways of resource management mainly result from the responsibilities among stakeholders. There are three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models can be pictured as a pyramid (see \ref{fig:pyramid}). Their detailed responsibilities among stakeholders are explained as below:
-
-
-% \begin{itemize}
-% 	\item IaaS, a Cloud provider hosts hardwares such as PMs and cooling infrastructure on behalf of Cloud users. A Cloud provider also provides maintenance, management of hardware resources. 
-
-% 	In IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are often encapsulated in virtualized computing units called virtual machines (VMs). Cloud providers establish a number of types of VM for simplifying the management. The `type' means a VM contains a certain quantity of resources such as 2-cores and 1 GB RAM.  \emph{Traditional} IaaS and PaaS use VM as the fundamental unit of resources.
-
-% 	A typical procedure of a Cloud user deploying their applications in an IaaS cloud includes several steps.
-% 	Initially, Cloud users estimate the resources that their applications might consume and select a type of VM which can satisfy the requirement. After Cloud users have made the decisions, they send requests to Cloud providers for a number of VMs. Finally, Cloud providers received the request, provisioned and allocated these VMs to PMs. 
-
-% 	From the resource management perspective, the constraint in allocation of VMs is that the aggregated VMs' resources in a PM cannot exceed the capacity of the PM. After these VMs have been allocated, their types cannot be changed. During the life cycle of an application, Cloud providers can dynamically adjust the locations of VMs, provision new VMs (same type) for the replicas of an application, as well as turning on/off PMs.
-
-	% After receiving the requests, Cloud providers choose a set of PMs which contains sufficient resources, provision the required VMs in them. Then, the VMs are assigned to the Cloud users. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is used to provision new VMs to Cloud users. Finally, Cloud providers optimize the locations of VMs so that the energy consumption of data center is minimized.
-
-
- 	% \item PaaS, a Cloud provider offers a platform which allows Cloud users to develop, test and deploy their applications on it.
-
- 	% From resource management perspective, as shown in Figure \ref{fig:pyramid}, PaaS is sitting above the IaaS which means the underlying resource is still based on IaaS VM types. Different from IaaS, PaaS takes the responsibility of selecting VMs and allows Cloud users to focus on software development. 
-
- 	% A typical procedure of a Cloud user deploying their applications in an PaaS cloud includes several steps.
- 	% In the first step, Cloud users need to provide the initial estimation of the quantity of resources instead of types of VM. Then, Cloud providers determine the types of VM for applications according to the estimated resources.  After this step, resource management system conducts the provisioning and allocating as the same steps in IaaS. During the life cycle of applications, similar to IaaS, Cloud providers can also adjust the location of VMs, add new VMs, and control the status of PMs. Different from IaaS, Cloud providers can change the type of VM for an application as long as the application's performance can be guaranteed.
-
- 	% The system monitors the utilization of a number of PM and VM and through adjustment of their location to optimize the energy consumption of the data center. The input is a list of VMs (e.g CPU cores and RAMs) and a list of PMs. The task is to put the VMs into these PMs so that the VMs only use a minimum number of PMs. The sizes of VMs and PMs are fixed. A system can only adjust which VM is allocated to which PM. A general constraint is the sum of resources of the VMs inside a PM cannot exceed the capacity of the PM.
-
-%  	\item SaaS describes the relationship between Cloud users and End users. End users create workloads for applications. Although this service model does not directly related to the resource management, it provides the fundamental reasons for resource management and optimization. Because of the dynamic nature of workloads, the underlying resources must also be dynamic adjusted to meet the requirement.
-% \end{itemize}
-
 % In this proposal, we focus on an important issue of helping Cloud providers to improve their profit. Our approach is to reduce the expense of energy consumption in data centers by providing a series of optimization methods in Cloud data center resource management. The centric idea of resource management is to decide the location a set of applications in a minimum number of physical machines 
 % so that the energy consumption of PMs are minimized. 
 
@@ -241,12 +213,7 @@ The reasons are mainly from two aspects, firstly, they mainly rely on simple bin
 % Container as a Service (CaaS) is a variant of PaaS propose by a leading Lab in this field \cite{Piraghaj:2015uf}. 
 % Instead of VMs, CaaS uses both container and VM as a hybrid resource management unit.
 
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
-% 	\caption{A comparison between VM-based and Container-based virtualization}
-% 	\label{fig:comparison}
-% \end{figure}
+
 
 % CaaS solves the problems in IaaS and PaaS because of containers' characteristics.
 % The most important feature of container is that it utilizes the resources inside VMs. 
