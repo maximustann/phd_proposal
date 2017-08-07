@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  7 AUG 2017 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  7 AUG 2017 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,13 +544,13 @@ Package pdftex.def Info: pics/architecture.png  used on input line 45. on input
 Package pdftex.def Info: Requested size: 396.91324pt x 271.32358pt on input lin
 e 45.
  [10 <./pics/stakeholders.png>] [11 <./pics/architecture.png>]
-<pics/comparison.png, id=48, 763.85374pt x 485.815pt>
+<pics/comparison.png, id=48, 551.05875pt x 389.20406pt>
 File: pics/comparison.png Graphic file (type png)
 <use pics/comparison.png>
 Package pdftex.def Info: pics/comparison.png  used on input line 86. on input l
 ine 86.
-Package pdftex.def Info: Requested size: 308.71104pt x 196.33887pt on input lin
-e 86.
+Package pdftex.def Info: Requested size: 308.71104pt x 218.0478pt on input line
+ 86.
 
 
 LaTeX Warning: Citation `Piraghaj:2017vi' on page 12 undefined on input line 11
@@ -678,7 +678,7 @@ g/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/pkg/share/te
 xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/t
 ype1/urw/palatino/uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatin
 o/uplri8a.pfb>
-Output written on proj_report_outline.pdf (19 pages, 301536 bytes).
+Output written on proj_report_outline.pdf (19 pages, 301683 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
