@@ -3,65 +3,69 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: literature_review.aux
+A level-1 auxiliary file: preliminary.aux
+A level-1 auxiliary file: contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-I was expecting a `,' or a `}'---line 1111 of file sample.bib
+Repeated entry---line 690 of file sample.bib
+ : @article{Chaisiri:2012cv
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 880 of file sample.bib
+ : @article{Verma:2009wi
+ :                      ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1183 of file sample.bib
  : month = 06
  :           /2008
 I'm skipping whatever remains of this entry
-Repeated entry---line 1114 of file sample.bib
+Repeated entry---line 1186 of file sample.bib
  : @article{Gao:2013gg
  :                    ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Yin:2000ut"
-Warning--I didn't find a database entry for "Deb:2010wh"
-Warning--I didn't find a database entry for "Takouna:2014ua"
-Warning--I didn't find a database entry for "Grimes:2016vv"
-Warning--I didn't find a database entry for "Farahnakian:2015vj"
-Warning--I didn't find a database entry for "Tan:2011vy"
-Warning--I didn't find a database entry for "Tan:2017tz"
-Warning--I didn't find a database entry for "Piraghaj:2017vi"
+Warning--I didn't find a database entry for "Clark:2005uda"
+Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Mann:2015ua
-You've used 60 entries,
+You've used 91 entries,
             2253 wiz_defined-function locations,
-            936 strings with 16456 characters,
-and the built_in function-call counts, 22333 in all, are:
-= -- 2169
-> -- 1265
+            1105 strings with 22636 characters,
+and the built_in function-call counts, 33704 in all, are:
+= -- 3266
+> -- 1857
 < -- 0
-+ -- 518
-- -- 458
-* -- 1907
-:= -- 3693
-add.period$ -- 180
-call.type$ -- 60
-change.case$ -- 410
++ -- 761
+- -- 670
+* -- 2837
+:= -- 5525
+add.period$ -- 272
+call.type$ -- 91
+change.case$ -- 608
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 665
-empty$ -- 1592
-format.name$ -- 458
-if$ -- 4502
+cite$ -- 93
+duplicate$ -- 1059
+empty$ -- 2466
+format.name$ -- 670
+if$ -- 6853
 int.to.chr$ -- 0
-int.to.str$ -- 60
-missing$ -- 58
-newline$ -- 301
-num.names$ -- 120
-pop$ -- 348
+int.to.str$ -- 91
+missing$ -- 89
+newline$ -- 455
+num.names$ -- 182
+pop$ -- 544
 preamble$ -- 1
-purify$ -- 349
+purify$ -- 517
 quote$ -- 0
-skip$ -- 435
+skip$ -- 689
 stack$ -- 0
-substring$ -- 1416
-swap$ -- 181
+substring$ -- 2110
+swap$ -- 291
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 240
+type$ -- 362
 warning$ -- 2
-while$ -- 221
-width$ -- 62
-write$ -- 600
-(There were 2 error messages)
+while$ -- 338
+width$ -- 93
+write$ -- 912
+(There were 4 error messages)

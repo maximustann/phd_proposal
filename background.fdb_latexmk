@@ -1,16 +1,15 @@
 # Fdb version 3
-["pdflatex"] 1500953273 "/Users/maximustann/Work/PH.D/proposal/background.tex" "/Users/maximustann/Work/PH.D/proposal/background.pdf" "background" 1500953274
-  "/Users/maximustann/Work/PH.D/proposal/background.aux" 1498095479 1347 65326f0eedfb9cb9fb23eafdf8a3b788 ""
-  "/Users/maximustann/Work/PH.D/proposal/background.tex" 1500953259 20565 15f834ffd8247e35657b08972ad78594 ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
-  "/usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf" 1428852030 31983 18aeec08f48baa3cf3508d538dd5f459 ""
-  "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1443471631 3849859 c4ef9b7cb6126f85bbcd7fe455db18d3 ""
-  "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "background.tex" 1500953259 20565 15f834ffd8247e35657b08972ad78594 ""
+["pdflatex"] 1502146757 "background.tex" "background.pdf" "background" 1502146757
+  "/etc/texmf/texmf.cnf" 1498188680 31930 5d12f12a9f7d785fbba339159e5d30d3 ""
+  "/usr/pkg/share/texmf-dist/fonts/map/fontname/texfonts.map" 1466306335 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1486026475 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1486026475 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1498191925 1840254 3acd441173b041e027012f0eb946dc1f ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1498190442 2963132 81ca9361992cbf4ed56a7283785ae50a ""
+  "background.aux" 1498022423 1347 65326f0eedfb9cb9fb23eafdf8a3b788 ""
+  "background.tex" 1502146756 46340 e9771268a712ea4a5a05639de6c9b14e ""
   (generated)
-  "/Users/maximustann/Work/PH.D/proposal/background.pdf"
-  "background.log"
-  "background.pdf"
   "/Users/maximustann/Work/PH.D/proposal/background.log"
+  "/Users/maximustann/Work/PH.D/proposal/background.pdf"
+  "background.pdf"
+  "background.log"
