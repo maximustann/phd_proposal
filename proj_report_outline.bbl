@@ -119,13 +119,6 @@
   Algorithm}.
 \newblock {\em dx.doi.org 18}, 3 (Aug. 2010), 403--449.
 
-\bibitem{MOEA}
-{\sc Desai, S., Bahadure, S., Kazi, F., and Singh, N.}
-\newblock {Article: Multi-Objective Constrained Optimization using Discrete
-  Mechanics and NSGA-II Approach}.
-\newblock {\em International Journal of Computer Applications 57}, 20 (2012),
-  14--20.
-
 \bibitem{Dua:2014bw}
 {\sc Dua, R., Raja, A.~R., and Kakadia, D.}
 \newblock {Virtualization vs Containerization to Support PaaS}.
@@ -216,13 +209,6 @@
 \newblock {Mistral - Dynamically Managing Power, Performance, and Adaptation
   Cost in Cloud Infrastructures.}
 \newblock {\em ICDCS\/} (2010), 62--73.
-
-\bibitem{ope}
-{\sc Kanagarajan, D., Karthikeyan, R., Palanikumar, K., and Davim, J.~P.}
-\newblock {Optimization of electrical discharge machining characteristics of
-  WC/Co composites using non-dominated sorting genetic algorithm (NSGA-II)}.
-\newblock {\em The International Journal of Advanced Manufacturing Technology
-  36}, 11-12 (2008), 1124--1132.
 
 \bibitem{Kaplan:up01fR-k}
 {\sc Kaplan, J.~M., Forrest, W., and Kindler, N.}
@@ -521,13 +507,6 @@
 {\sc Yin, Y.}
 \newblock {Genetic-algorithms-based approach for bilevel programming models}.
 \newblock {\em Journal of Transportation Engineering\/} (2000).
-
-\bibitem{ga_saas}
-{\sc Yusoh, Z. I.~M., and Tang, M.}
-\newblock {A penalty-based genetic algorithm for the composite SaaS placement
-  problem in the cloud}.
-\newblock In {\em Evolutionary Computation (CEC), 2010 IEEE Congress on\/}
-  (2010), IEEE, pp.~1--8.
 
 \bibitem{Zhang:2016cx}
 {\sc Zhang, J., Huang, H., and Wang, X.}
