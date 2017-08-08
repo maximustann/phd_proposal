@@ -162,12 +162,6 @@
   placement in cloud computing.}
 \newblock {\em J. Comput. Syst. Sci. 79}, 8 (2013), 1230--1242.
 
-\bibitem{Ghodsi:2011vm}
-{\sc Ghodsi, A., Zaharia, M., Hindman, B., and Konwinski, A.}
-\newblock {Dominant Resource Fairness: Fair Allocation of Multiple Resource
-  Types.}
-\newblock {\em NSDI\/} (2011).
-
 \bibitem{Grimes:2016ia}
 {\sc Grimes, D., Mehta, D., OSullivan, B., Birke, R., Chen, L., Scherer, T.,
   and Castineiras, I.}
@@ -306,11 +300,6 @@
   Job Shop Scheduling via Cooperative Coevolution Genetic Programming}.
 \newblock {\em IEEE Transactions on Evolutionary Computation 18}, 2 (2014),
   193--208.
-
-\bibitem{Panigrahy:2011wk}
-{\sc Panigrahy, R., Talwar, K., Uyeda, L., and Wieder, U.}
-\newblock {Heuristics for vector bin packing}.
-\newblock {\em research microsoft com\/} (2011).
 
 \bibitem{SLA_metric}
 {\sc Paschke, A., and Schnappinger-Gerull, E.}
