@@ -279,12 +279,18 @@ Finally, a consolidation plan includes four major items:
 			\end{enumerate}
 
 
+\subsection{Bilevel Optimization}
+\subsection{Vector Bin Packing Problem}
 % \subsection{VM-based Static Consolidation Techniques}
 % \label{sec:static}
 
 % Static initialization, is also frequently referred to initial placement problem \cite{Jennings:2015ht}. Whenever a request for provisioning of applications by one or more Cloud users. The resource management system schedules the applications into a set of PMs. Currently, most state-of-the-art research focus on VM-based placement, in this case, applications are installed in VMs. Therefore, ``application placement'' and ``VM placement'' are used interchangeable in the literature. 
 
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
+
+\section{Related Work}
+\subsection{Initialization (VM Placement)}
+In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 
 % Because of its NP-hard nature, several researchers propose well-known bin-packing heuristics
@@ -298,12 +304,25 @@ Finally, a consolidation plan includes four major items:
 % \section{Container-based Consolidation Techniques}
 % Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
+\subsection{Proactive Static consolidation}
+
+\subsection{VM-based Dynamic Consolidation Techniques}
+\label{sec:dynamic}
+
+\subsection{Container-based Consolidation Techniques}
+\subsubsection{Initilization (Container Placement)}
+% Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
+% As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
 
 % % Previous research mainly use heuristic to solve this problem. 
 % Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralised slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
 
 % Piraghaj et al \cite{Piraghaj:2016bw} propose an architecture for container-based resource management. Their allocation approach is policy-based, where it allocates each VM with containers until its estimated utilization above 90\%. This heuristic is similar to First Fit, it is fast but does not guarantee global optimal.
 
+% \subsection{Traditional Approaches}
+% \subsection{EC Approaches}
+
+% \section{}
 % \textcolor{Maroon}{Why this field is important.}
 
 % Cloud computing has made one critical change in software industry, it separates the role of traditional service provider into service provider and infrastructure provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, this separation add one more layer between service provider and users, as: Cloud providers, Cloud users (service providers), and End users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). 

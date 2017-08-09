@@ -311,9 +311,6 @@ INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
-INPUT pics/preliminary/hollow.png
-INPUT ./pics/preliminary/hollow.png
-INPUT ./pics/preliminary/hollow.png
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
@@ -322,6 +319,9 @@ INPUT /usr/pkg/share/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT pics/preliminary/hollow.png
+INPUT ./pics/preliminary/hollow.png
+INPUT ./pics/preliminary/hollow.png
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
 INPUT pics/preliminary/without/testCase1_.png
 INPUT ./pics/preliminary/without/testCase1_.png

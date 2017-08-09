@@ -27,45 +27,45 @@ Warning--I didn't find a database entry for "Clark:2005uda"
 Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Mann:2015ua
-You've used 89 entries,
+You've used 86 entries,
             2253 wiz_defined-function locations,
-            1096 strings with 22339 characters,
-and the built_in function-call counts, 33106 in all, are:
-= -- 3214
-> -- 1813
+            1078 strings with 21627 characters,
+and the built_in function-call counts, 31961 in all, are:
+= -- 3101
+> -- 1757
 < -- 0
-+ -- 743
-- -- 654
-* -- 2789
-:= -- 5417
-add.period$ -- 266
-call.type$ -- 89
-change.case$ -- 594
++ -- 720
+- -- 634
+* -- 2691
+:= -- 5235
+add.period$ -- 257
+call.type$ -- 86
+change.case$ -- 575
 chr.to.int$ -- 0
-cite$ -- 91
-duplicate$ -- 1041
-empty$ -- 2428
-format.name$ -- 654
-if$ -- 6737
+cite$ -- 88
+duplicate$ -- 1003
+empty$ -- 2338
+format.name$ -- 634
+if$ -- 6500
 int.to.chr$ -- 0
-int.to.str$ -- 89
-missing$ -- 87
-newline$ -- 445
-num.names$ -- 178
-pop$ -- 532
+int.to.str$ -- 86
+missing$ -- 84
+newline$ -- 430
+num.names$ -- 172
+pop$ -- 514
 preamble$ -- 1
-purify$ -- 505
+purify$ -- 489
 quote$ -- 0
-skip$ -- 677
+skip$ -- 654
 stack$ -- 0
-substring$ -- 2100
-swap$ -- 287
+substring$ -- 2019
+swap$ -- 277
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 354
+type$ -- 342
 warning$ -- 2
-while$ -- 334
-width$ -- 91
-write$ -- 894
+while$ -- 321
+width$ -- 88
+write$ -- 863
 (There were 4 error messages)
