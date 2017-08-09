@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (Web2C 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: proj_report_outline.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: literature_review.aux
@@ -27,45 +27,45 @@ Warning--I didn't find a database entry for "Clark:2005uda"
 Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Mann:2015ua
-You've used 88 entries,
+You've used 86 entries,
             2253 wiz_defined-function locations,
-            1087 strings with 21924 characters,
-and the built_in function-call counts, 32559 in all, are:
-= -- 3153
-> -- 1801
+            1078 strings with 21627 characters,
+and the built_in function-call counts, 31961 in all, are:
+= -- 3101
+> -- 1757
 < -- 0
-+ -- 738
-- -- 650
-* -- 2739
-:= -- 5343
-add.period$ -- 263
-call.type$ -- 88
-change.case$ -- 589
++ -- 720
+- -- 634
+* -- 2691
+:= -- 5235
+add.period$ -- 257
+call.type$ -- 86
+change.case$ -- 575
 chr.to.int$ -- 0
-cite$ -- 90
-duplicate$ -- 1021
-empty$ -- 2376
-format.name$ -- 650
-if$ -- 6616
+cite$ -- 88
+duplicate$ -- 1003
+empty$ -- 2338
+format.name$ -- 634
+if$ -- 6500
 int.to.chr$ -- 0
-int.to.str$ -- 88
-missing$ -- 86
-newline$ -- 440
-num.names$ -- 176
-pop$ -- 526
+int.to.str$ -- 86
+missing$ -- 84
+newline$ -- 430
+num.names$ -- 172
+pop$ -- 514
 preamble$ -- 1
-purify$ -- 501
+purify$ -- 489
 quote$ -- 0
-skip$ -- 666
+skip$ -- 654
 stack$ -- 0
-substring$ -- 2029
-swap$ -- 281
+substring$ -- 2019
+swap$ -- 277
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 350
+type$ -- 342
 warning$ -- 2
-while$ -- 325
-width$ -- 90
-write$ -- 881
+while$ -- 321
+width$ -- 88
+write$ -- 863
 (There were 4 error messages)
