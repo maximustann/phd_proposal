@@ -293,6 +293,10 @@ Finally, a consolidation plan includes four major items:
 In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 
+Gao et al \cite{Gao:2013wm} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They model multi-dimensional resource utilization based on vector algebra complementary resource utilization capturing technique \cite{Mishra:2011vm}. They propose a \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they apply a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007ua}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
+
+Xu and Fortes propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007ud}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
+
 % Because of its NP-hard nature, several researchers propose well-known bin-packing heuristics
 % First Fit (FF), First Fit Decreasing (FFD), Best Fit (BF) and etc. These algorithms have constant-factor approximation to bin-packing problems. However, VM placement is more complex than bin-packing problem \cite{Mann:2015ua}, 
 
@@ -304,7 +308,9 @@ In energy-aware resource management, the initialization has the objective of min
 % \section{Container-based Consolidation Techniques}
 % Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
-\subsection{Proactive Static consolidation}
+\subsection{Periodic consolidation}
+
+Murtazaev and Oh \cite{Murtazaev:2011ue} propose a Sercon algorithm which is a heuristic based on First and Best Fit to solve the periodic consolidation problem. They consider two resources CPU and memory with two optimization objectives, minimizing the energy consumption and the number of migration. They conduct experiments on synthetic data and compare with FFD. The results indicate that Sercon outperforms FFD in migration efficiency, meanwhile, the numbers of nodes used in Sercon and FFD are almost the same.
 
 \subsection{VM-based Dynamic Consolidation Techniques}
 \label{sec:dynamic}
