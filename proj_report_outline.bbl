@@ -61,8 +61,9 @@
 \bibitem{Energy_3}
 {\sc Bohra, A. E.~H., and Chaudhary, V.}
 \newblock {VMeter: Power modelling for virtualized clouds}.
-\newblock In {\em Parallel and Distributed Processing, Workshops and Phd Forum
-  (IPDPSW), 2010 IEEE International Symposium on\/} (2010), Ieee, pp.~1--8.
+\newblock In {\em Parallel \{\&} Distributed Processing, Workshops and Phd
+  Forum (IPDPSW), 2010 IEEE International Symposium on\/} (2010), Ieee,
+  pp.~1--8.
 
 \bibitem{Energy_9}
 {\sc Borgetto, D., Casanova, H., Da~Costa, G., and Pierson, J.-M.}
@@ -124,6 +125,11 @@
 \newblock {Virtualization vs Containerization to Support PaaS}.
 \newblock In {\em 2014 IEEE International Conference on Cloud Engineering
   (IC2E)\/} (2014), IEEE, pp.~610--614.
+
+\bibitem{Fan:2007jr}
+{\sc Fan, X., Weber, W.-D., and Barroso, L.~A.}
+\newblock {Power provisioning for a warehouse-sized computer.}
+\newblock {\em ISCA\/} (2007), 13.
 
 \bibitem{Farahnakian:2015vj}
 {\sc Farahnakian, F., Pahikkala, T., Liljeberg, P., Plosila, J., and Tenhunen,
@@ -245,6 +251,13 @@
 \newblock In {\em Service-Oriented and Cloud Computing}. Springer Berlin
   Heidelberg, Berlin, Heidelberg, 2006, pp.~1169--1178.
 
+\bibitem{Lien:2007it}
+{\sc Lien, C.-H., Bai, Y.-W., and Lin, M.-B.}
+\newblock {Estimation by Software for the Power Consumption of Streaming-Media
+  Servers.}
+\newblock {\em IEEE Trans. Instrumentation and Measurement 56}, 5 (2007),
+  1859--1870.
+
 \bibitem{Magalhaes:2015ep}
 {\sc Magalh{\~a}es, D., Calheiros, R.~N., Buyya, R., and Gomes, D.~G.}
 \newblock {Workload modeling for resource usage analysis and simulation in
@@ -274,11 +287,23 @@
 \newblock {Dynamic resource management using virtual machine migrations}.
 \newblock {\em IEEE Communications {\ldots} 50}, 9 (2012), 34--40.
 
+\bibitem{Mishra:2011bz}
+{\sc Mishra, M., and Sahoo, A.}
+\newblock {On Theory of VM Placement - Anomalies in Existing Methodologies and
+  Their Mitigation Using a Novel Vector Based Approach.}
+\newblock {\em IEEE CLOUD\/} (2011), 275--282.
+
 \bibitem{Moens:2011gk}
 {\sc Moens, H., Famaey, J., Latr{\'e}, S., Dhoedt, B., and De~Turck, F.}
 \newblock {Design and evaluation of a hierarchical application placement
   algorithm in large scale clouds.}
 \newblock {\em Integrated Network Management\/} (2011), 137--144.
+
+\bibitem{Murtazaev:2011ue}
+{\sc Murtazaev, A., and Oh, S.}
+\newblock {Sercon: Server Consolidation Algorithm using Live Migration of
+  Virtual Machines for Green Computing}.
+\newblock {\em IETE Technical Review 28}, 3 (Sept. 2014), 212.
 
 \bibitem{Nguyen:2014eu}
 {\sc Nguyen, S., Zhang, M., Johnston, M., and Tan, K.~C.}
@@ -298,12 +323,6 @@
 \newblock {Virtual Machine Customization and Task Mapping Architecture for
   Efficient Allocation of Cloud Data Center Resources.}
 \newblock {\em Comput. J. 59}, 2 (2016), 208--224.
-
-\bibitem{Piraghaj:2017vi}
-{\sc Piraghaj, S.~F., Dastjerdi, A.~V., and Calheiros, R.~N.}
-\newblock {A survey and taxonomy of energy efficient resource management
-  techniques in platform as a service cloud}.
-\newblock {\em {\ldots} of Research on End-to {\ldots}\/} (2017).
 
 \bibitem{Piraghaj:2015uf}
 {\sc Piraghaj, S.~F., Dastjerdi, A.~V., Calheiros, R.~N., and Buyya, R.}

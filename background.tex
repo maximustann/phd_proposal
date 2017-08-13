@@ -185,7 +185,6 @@ CaaS has advantages of both IaaS and PaaS  but without their disadvantages. On o
 \subsection{Bilevel Optimization}
 
 \subsection{Vector Bin Packing Problem}
-
 A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, I^2, \dots, I^n$ where each item has $d$ dimension of resources represented in real number $I^i \in R^d$. A valid solution is packing $I$ into bins $B^1, B^2, \dots, B^k$. For each bin and each dimension, the sum of resources can not exceed the capacity of bin. The goal of Vector Bin Packing problem is to find a valid solution with minimum number of bins. $VBP_d$ is an NP-hard problem.
 
 \section{Server consolidation}
@@ -250,7 +249,7 @@ The server consolidation in data center can be applied to three \cite{Svard:2015
 	In prediction, an optimization system takes  the current applications' utilization records as the input. Make a prediction of their utilization in the next period of time. 
 	In Global consolidation, based on the predict utilization and the current allocation - including a list of applications/VMs and a list of PMs, the system adjusts the allocation so that the global resource utilization is improved.
 
-	In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005uda}, and it is a very expensive operation because it occupies the resources in both the host and the target. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization even difficult.
+	In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005ud}, and it is a very expensive operation because it occupies the resources in both the host and the target. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization even difficult.
 
 In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
 	\item \emph{Dynamic resource management} 
@@ -279,8 +278,6 @@ Finally, a consolidation plan includes four major items:
 			\end{enumerate}
 
 
-\subsection{Bilevel Optimization}
-\subsection{Vector Bin Packing Problem}
 % \subsection{VM-based Static Consolidation Techniques}
 % \label{sec:static}
 
@@ -293,9 +290,9 @@ Finally, a consolidation plan includes four major items:
 In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 
-Gao et al \cite{Gao:2013wm} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They model multi-dimensional resource utilization based on vector algebra complementary resource utilization capturing technique \cite{Mishra:2011vm}. They propose a \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they apply a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007ua}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
+Gao et al \cite{Gao:2013gg} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They model multi-dimensional resource utilization based on vector algebra complementary resource utilization capturing technique \cite{Mishra:2011bz}. They propose a \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they apply a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007jr}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
 
-Xu and Fortes propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007ud}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
+Xu and Fortes propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007it}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
 
 % Because of its NP-hard nature, several researchers propose well-known bin-packing heuristics
 % First Fit (FF), First Fit Decreasing (FFD), Best Fit (BF) and etc. These algorithms have constant-factor approximation to bin-packing problems. However, VM placement is more complex than bin-packing problem \cite{Mann:2015ua}, 
