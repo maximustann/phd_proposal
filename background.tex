@@ -184,8 +184,38 @@ CaaS has advantages of both IaaS and PaaS  but without their disadvantages. On o
 	
 \subsection{Bilevel Optimization}
 
+A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one problem is embedded within another. The outer optimization is referred to as the \emph{upper-level} problem, while the inner optimization is referred to as the \emph{lower-level} problem . 
+
+The general formulation of a bilevel optimization problem can be defined as: 
+
+\begin{subequation}
+\label{eq:bilevel}
+	\begin{align}
+	min_{x \in X, y} 	\quad    F(x, y) \\
+	s.t 			\quad G(x, y) \leq 0, \\
+	min_y			\quad f(x, y) \\
+	s.t 			\quad g(x, y)
+	\end{align}
+\end{subequation}
+
+The variables of problem, $x \in \mathbb{R}^{n_1}$ is the \emph{upper-level variables} and $y \in \mathbb{R}^{n_2}$ is the \emph{lower-level variables}. The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
+
+Bilevel optimization problem has a hierarchical structure which may introduce difficulties such as non-convexity and disconnectedness even for simple cases such as bilevel linear programming problems is strongly NP-hard \cite{:2013tn}. 
+
+In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995up}, management: network facility location \cite{Sun:2008ta},  and engineering related: optimal design \cite{KirjnerNeto:1998tp}. 
+
 \subsection{Vector Bin Packing Problem}
-A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, I^2, \dots, I^n$ where each item has $d$ dimension of resources represented in real number $I^i \in R^d$. A valid solution is packing $I$ into bins $B^1, B^2, \dots, B^k$. For each bin and each dimension, the sum of resources can not exceed the capacity of bin. The goal of Vector Bin Packing problem is to find a valid solution with minimum number of bins. $VBP_d$ is an NP-hard problem.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{pics/bin_packing_problem.png}
+	\caption{A comparison between standard bin packing and vector bin packing}
+	\label{fig:bin_packing_problem}
+\end{figure}
+
+Vector bin packing problem is variant of standard bin packing problem (see Figure \ref{fig:bin_packing_problem} ).  It is particularly suitable for modeling resource allocation problems where there is a set of bins with known capacities and a set of items with known demands \cite{Panigrahy:2011wk}. 
+
+A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, I^2, \dots, I^n$ where each item has $d$ dimension of resources represented in real number $I^i \in R^d$. A valid solution is packing $I$ into bins $B^1, B^2, \dots, B^k$. For each bin $j$ and each dimension $i$, the sum of resources can not exceed the capacity of bin. The goal of Vector Bin Packing problem is to find a valid solution with minimum number of bins. Notice that, the items assigned to bins do not consider the positions in the bins, that is, there is no geometric interpretation of the items or bins \cite{Johnson:2016wp}. $VBP_d$ is an NP-hard problem. 
 
 \section{Server consolidation}
 
@@ -307,13 +337,32 @@ Xu and Fortes propose a multi-objective VM placement approach with three objecti
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
 \subsection{Periodic consolidation}
 
-Murtazaev and Oh \cite{Murtazaev:2011ue} propose a Sercon algorithm which is a heuristic based on First and Best Fit to solve the periodic consolidation problem. They consider two resources CPU and memory with two optimization objectives, minimizing the energy consumption and the number of migration. They conduct experiments on synthetic data and compare with FFD. The results indicate that Sercon outperforms FFD in migration efficiency, meanwhile, the numbers of nodes used in Sercon and FFD are almost the same.
+Murtazaev and Oh \cite{Murtazaev:2011ue} propose a Sercon algorithm which is a heuristic based on First and Best Fit to solve the periodic consolidation problem. They consider two resources CPU and memory with two optimization objectives, minimizing the energy consumption and the number of migration. They conduct experiments on synthetic data and compare with FFD. The results indicate that Sercon outperforms FFD in migration efficiency, meanwhile, the total energy consumption from Sercon and FFD are similar. 
 
 \subsection{VM-based Dynamic Consolidation Techniques}
 \label{sec:dynamic}
 
 \subsection{Container-based Consolidation Techniques}
-\subsubsection{Initilization (Container Placement)}
+\subsubsection{Initialization (Container Placement)}
+\subsection{Techniques for Bilevel optimization}
+
+A number of studies have been conducted on bilevel optimization \cite{Colson:2007bu,Dempe:2006jc}. Because of its NP-hard nature, approximation algorithms such as Karush-kuhn-Tucker approach \cite{Bianco:2009ej, Herskovits:2000be}, branch-and-bound \cite{Bard:1982gs} are often applied to solve the problem. Most of these approaches are not applicable when the problem size increases.
+
+As the complexity of the problem, practical problems with bilevel nature are often simplified into a single-level optimization problem which can achieve a satisfactory level instead of optimal. Classic algorithms often fail because of the nature of bilevel problem such as non-linearity, discreteness, no-differentiability, non-convexity etc.
+
+% Heuristics such as Evolutionary methods have been applied for solving bilevel optimization problem with higher level of complexity \cite{Yin:2000bt,Wang:2008kb}. 
+
+Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:1994dw} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
+
+Oduguwa and Roy \cite{Oduguwa:2002ts} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
+
+Wang et al \cite{Wang:2005we} proposed an evolutionary algorithm based approach with a constraint handling technique.  Their approach is able to handle non-differentiability at the upper level objective function, but not in constraints and lower  level objective function.
+Later on, Wang proposed an improved version \cite{Wang:2011vg} that shows better performance than the previous version.
+
+Particle Swarm Optimization \cite{Li:2006br} was also used in solving bilevel problems.
+A recent work is from Sinha et al \cite{:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005we} and WLD \cite{Wang:2011vg}. The results show BLEAQ is much faster than previous approaches.
+One major drawback of evolutionary algorithms is its high computation cost which limits the problem size from growing bigger.
+
 % Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
 

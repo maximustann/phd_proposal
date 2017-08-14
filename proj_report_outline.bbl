@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{:2013tn}
+{\sc 0001, A.~S., Malo, P., and Deb, K.}
+\newblock {Efficient Evolutionary Algorithm for Single-Objective Bilevel
+  Optimization}.
+\newblock {\em CoRR\/} (2013).
+
 \bibitem{AlRoomi:2013te}
 {\sc Al-Roomi, M., and Al-Ebrahim, S.}
 \newblock {Cloud computing pricing models: a survey}.
@@ -14,6 +20,11 @@
 \bibitem{Banzhaf:1998wc}
 {\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
 \newblock {Genetic programming: an introduction}, 1998.
+
+\bibitem{Bard:1982gs}
+{\sc Bard, J.~F., and Falk, J.~E.}
+\newblock {An explicit solution to the multi-level programming problem}.
+\newblock {\em Computers {\&} Operations Research 9}, 1 (Jan. 1982), 77--100.
 
 \bibitem{Barham:2003cj}
 {\sc Barham, P., Dragovic, B., Fraser, K., Hand, S., Harris, T.~L., Ho, A.,
@@ -58,6 +69,12 @@
 \newblock {Containers and Cloud - From LXC to Docker to Kubernetes.}
 \newblock {\em IEEE Cloud Computing\/} (2014).
 
+\bibitem{Bianco:2009ej}
+{\sc Bianco, L., Caramia, M., and Giordani, S.}
+\newblock {A bilevel flow model for hazmat transportation network design}.
+\newblock {\em Transportation Research Part C: {\ldots} 17}, 2 (Apr. 2009),
+  175--196.
+
 \bibitem{Energy_3}
 {\sc Bohra, A. E.~H., and Chaudhary, V.}
 \newblock {VMeter: Power modelling for virtualized clouds}.
@@ -69,6 +86,12 @@
 {\sc Borgetto, D., Casanova, H., Da~Costa, G., and Pierson, J.-M.}
 \newblock {Energy-aware service allocation}.
 \newblock {\em Future Generation Computer Systems 28}, 5 (2012), 769--779.
+
+\bibitem{Brotcorne:2001je}
+{\sc Brotcorne, L., Labb{\'e}, M., Marcotte, P., and Savard, G.}
+\newblock {A Bilevel Model for Toll Optimization on a Multicommodity
+  Transportation Network}.
+\newblock {\em Transportation Science 35}, 4 (Nov. 2001), 345--358.
 
 \bibitem{Burke:2006ei}
 {\sc Burke, E.~K., Hyde, M.~R., and Kendall, G.}
@@ -119,6 +142,12 @@
   Multi-Objective Programming Problems Using a Hybrid Evolutionary-Local-Search
   Algorithm}.
 \newblock {\em dx.doi.org 18}, 3 (Aug. 2010), 403--449.
+
+\bibitem{Dempe:2006jc}
+{\sc Dempe, S., Dutta, J., and Lohse, S.}
+\newblock {Optimality conditions for bilevel programming problems}.
+\newblock {\em {\ldots} with Multivalued Mappings 55}, 5-6 (Oct. 2006),
+  505--524.
 
 \bibitem{Dua:2014bw}
 {\sc Dua, R., Raja, A.~R., and Kakadia, D.}
@@ -186,6 +215,12 @@
   Information Networking and Applications (AINA)\/} (Feb. 2012), IEEE,
   pp.~15--22.
 
+\bibitem{Herskovits:2000be}
+{\sc Herskovits, J., Leontiev, A., Dias, G., and Santos, G.}
+\newblock {Contact shape optimization: a bilevel programming approach}.
+\newblock {\em Structural and Multidisciplinary Optimization 20}, 3 (2000),
+  214--221.
+
 \bibitem{Hindman:2011ux}
 {\sc Hindman, B., Konwinski, A., Zaharia, M., Ghodsi, A., Joseph, A.~D., Katz,
   R.~H., Shenker, S., and Stoica, I.}
@@ -203,6 +238,10 @@
 \newblock {Resource Management in Clouds: Survey and Research Challenges}.
 \newblock {\em Journal of Network and Systems Management 23}, 3 (2015),
   567--619.
+
+\bibitem{Johnson:2016wp}
+{\sc Johnson, D.~S.}
+\newblock {Vector Bin Packing.}
 
 \bibitem{Jung:2010dt}
 {\sc Jung, G., Hiltunen, M.~A., Joshi, K.~R., Schlichting, R.~D., and Pu, C.}
@@ -311,6 +350,11 @@
   Job Shop Scheduling via Cooperative Coevolution Genetic Programming}.
 \newblock {\em IEEE Transactions on Evolutionary Computation 18}, 2 (2014),
   193--208.
+
+\bibitem{Panigrahy:2011wk}
+{\sc Panigrahy, R., Talwar, K., Uyeda, L., and Wieder, U.}
+\newblock {Heuristics for vector bin packing}.
+\newblock {\em research microsoft com\/} (2011).
 
 \bibitem{SLA_metric}
 {\sc Paschke, A., and Schnappinger-Gerull, E.}
