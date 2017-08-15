@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{:2013tn}
 {\sc 0001, A.~S., Malo, P., and Deb, K.}
@@ -233,6 +233,12 @@
 \newblock {Post-copy live migration of virtual machines}.
 \newblock {\em SIGOPS Oper. Syst. Rev. 43}, 3 (July 2009), 14--26.
 
+\bibitem{Holt:2004fs}
+{\sc Holt, C.~C.}
+\newblock {Author's retrospective on {\textquoteleft}Forecasting seasonals and
+  trends by exponentially weighted moving averages{\textquoteright}}.
+\newblock {\em International journal of forecasting 20}, 1 (Jan. 2004), 11--13.
+
 \bibitem{Jennings:2015ht}
 {\sc Jennings, B., and Stadler, R.}
 \newblock {Resource Management in Clouds: Survey and Research Challenges}.
@@ -263,6 +269,11 @@
 {\sc Kivity, A., Kamay, Y., Laor, D., and Lublin, U.}
 \newblock {kvm: the Linux virtual machine monitor}.
 \newblock {\em {\ldots} of the Linux {\ldots}\/} (2007).
+
+\bibitem{Kunkle:2008bz}
+{\sc Kunkle, D., and Schindler, J.}
+\newblock {A Load Balancing Framework for Clustered Storage Systems.}
+\newblock {\em HiPC 5374}, 1 (2008), 57--72.
 
 \bibitem{Energy_5}
 {\sc Kusic, D., Kephart, J.~O., Hanson, J.~E., Kandasamy, N., and Jiang, G.}
@@ -296,6 +307,12 @@
   Servers.}
 \newblock {\em IEEE Trans. Instrumentation and Measurement 56}, 5 (2007),
   1859--1870.
+
+\bibitem{Liu:2013kl}
+{\sc Liu, H., Jin, H., Xu, C.-Z., and Liao, X.}
+\newblock {Performance and energy modeling for live migration of virtual
+  machines.}
+\newblock {\em Cluster computing 16}, 2 (2013), 249--264.
 
 \bibitem{Magalhaes:2015ep}
 {\sc Magalh{\~a}es, D., Calheiros, R.~N., Buyya, R., and Gomes, D.~G.}
@@ -351,6 +368,12 @@
 \newblock {\em IEEE Transactions on Evolutionary Computation 18}, 2 (2014),
   193--208.
 
+\bibitem{Oduguwa:2002kr}
+{\sc Oduguwa, V., and Roy, R.}
+\newblock {Bi-level optimisation using genetic algorithm}.
+\newblock In {\em 2002 IEEE International Conference on Artificial Intelligence
+  Systems (ICAIS 2002)\/} (2002), IEEE Comput. Soc, pp.~322--327.
+
 \bibitem{Panigrahy:2011wk}
 {\sc Panigrahy, R., Talwar, K., Uyeda, L., and Wieder, U.}
 \newblock {Heuristics for vector bin packing}.
@@ -373,6 +396,11 @@
 \newblock {Efficient Virtual Machine Sizing for Hosting Containers as a Service
   (SERVICES 2015).}
 \newblock {\em SERVICES\/} (2015).
+
+\bibitem{Qin:2012wu}
+{\sc Qin, X., Zhang, W., 0049, W.~W., Wei, J., Zhao, X., and Huang, T.}
+\newblock {Towards a Cost-Aware Data Migration Approach for Key-Value Stores.}
+\newblock {\em CLUSTER\/} (2012).
 
 \bibitem{Energy_4}
 {\sc Raghavendra, R., Ranganathan, P., Talwar, V., Wang, Z., and Zhu, X.}
@@ -519,6 +547,19 @@
 \newblock {Review of Metamodeling Techniques in Support of Engineering Design
   Optimization}.
 \newblock {\em Journal of Mechanical Design 129}, 4 (Apr. 2007), 370--380.
+
+\bibitem{Wang:2005fa}
+{\sc Wang, Y., Jiao, Y.-C., and Li, H.}
+\newblock {An evolutionary algorithm for solving nonlinear bilevel programming
+  based on a new constraint-handling scheme.}
+\newblock {\em IEEE Trans. Systems, Man, and Cybernetics, Part C 35}, 2 (2005),
+  221--232.
+
+\bibitem{Wang:2011di}
+{\sc Wang, Y., Li, H., and Dang, C.}
+\newblock {A New Evolutionary Algorithm for a Class of Nonlinear Bilevel
+  Programming Problems and Its Global Convergence.}
+\newblock {\em INFORMS Journal on Computing 23}, 4 (2011), 618--629.
 
 \bibitem{Xavier:2013fy}
 {\sc Xavier, M.~G., Neves, M.~V., Rossi, F.~D., Ferreto, T.~C., Lange, T., and

@@ -198,7 +198,7 @@ The general formulation of a bilevel optimization problem can be defined as:
 	\end{align}
 \end{subequation}
 
-The variables of problem, $x \in \mathbb{R}^{n_1}$ is the \emph{upper-level variables} and $y \in \mathbb{R}^{n_2}$ is the \emph{lower-level variables}. The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
+The variables of problem, $x \in \mathbb{R}^{n_1}$ is the \emph{upper-level variables} and $y \in \mathbb{R}^{n_2}$ is the \emph{lower-level variables}. The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
 
 Bilevel optimization problem has a hierarchical structure which may introduce difficulties such as non-convexity and disconnectedness even for simple cases such as bilevel linear programming problems is strongly NP-hard \cite{:2013tn}. 
 
@@ -322,7 +322,7 @@ In energy-aware resource management, the initialization has the objective of min
 
 Gao et al \cite{Gao:2013gg} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They model multi-dimensional resource utilization based on vector algebra complementary resource utilization capturing technique \cite{Mishra:2011bz}. They propose a \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they apply a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007jr}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
 
-Xu and Fortes propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007it}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
+Xu and Fortes \cite{Xu:2010df} propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007it}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
 
 % Because of its NP-hard nature, several researchers propose well-known bin-packing heuristics
 % First Fit (FF), First Fit Decreasing (FFD), Best Fit (BF) and etc. These algorithms have constant-factor approximation to bin-packing problems. However, VM placement is more complex than bin-packing problem \cite{Mann:2015ua}, 
@@ -342,6 +342,12 @@ Murtazaev and Oh \cite{Murtazaev:2011ue} propose a Sercon algorithm which is a h
 \subsection{VM-based Dynamic Consolidation Techniques}
 \label{sec:dynamic}
 
+Forsman et al \cite{Forsman:2015ca} propose two distributed migration strategies to balance the load in a system. \emph{The push} strategy is applied on overloaded PM; it attempts to migrate \emph{One} VM at a time to less loaded PMs. \emph{The pull} strategy is applied on underutilized PMs request workload from heavier loaded PMs. Each of the strategy is executed on each PM as an intelligent agent. They share their status with each other through a communication protocol. There are several interesting features of their approach. First, they apply an adaptive high-load threshold (e.g 0.7 of overall CPU utilization) so that it considers the environment changes. Second, they use an EWMA algorithm to reduce the unnecessary migration because EWMA \cite{Holt:2004fs} is useful in smoothing out variations in the average load. Third, they applied an entropy to model the load distribution which is also applied in some previous approaches \cite{Qin:2012wu,Kunkle:2008bz}. Their system is agent-based which means large amount of communication may occur between nodes, this would certainly cost extra network resources which are not discussed. Therefore, we expect to design a centralized system, where all nodes are controlled by a controller. 
+
+Xiao et al \cite{Xiao:2015ik} make two contributions, first, they build a quadratic energy model for the energy consumption of PM and a linear model for the energy consumption of migration \cite{Liu:2013kl}. Second, they propose an algorithm based on Multiplayer random evolutionary game theory to solve the problem. In their approach, VMs are mapped into players that take part in the evolutionary game. In each iteration, all the players choose their best feasible action, i.e, Migrate to a PM which can minimize the energy consumption. Some players will randomly choose PM to avoid stucking in a local optimal. Their approach is compared with First Fit, Best Fit Increasing, Best Fit Decreasing, Greedy and Load Balance rule. The solutions show their approach can improve energy consumption greatly, especially in the scenario that the distributions of VMs are very centralized.
+
+Beloglazov and Buyya \cite{Beloglazov:2012bw} propose
+
 \subsection{Container-based Consolidation Techniques}
 \subsubsection{Initialization (Container Placement)}
 \subsection{Techniques for Bilevel optimization}
@@ -354,13 +360,13 @@ As the complexity of the problem, practical problems with bilevel nature are oft
 
 Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:1994dw} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
 
-Oduguwa and Roy \cite{Oduguwa:2002ts} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
+Oduguwa and Roy \cite{Oduguwa:2002kr} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
 
-Wang et al \cite{Wang:2005we} proposed an evolutionary algorithm based approach with a constraint handling technique.  Their approach is able to handle non-differentiability at the upper level objective function, but not in constraints and lower  level objective function.
-Later on, Wang proposed an improved version \cite{Wang:2011vg} that shows better performance than the previous version.
+Wang et al \cite{Wang:2005fa} proposed an evolutionary algorithm based approach with a constraint handling technique.  Their approach is able to handle non-differentiability at the upper level objective function, but not in constraints and lower  level objective function.
+Later on, Wang proposed an improved version \cite{Wang:2011di} that shows better performance than the previous version.
 
 Particle Swarm Optimization \cite{Li:2006br} was also used in solving bilevel problems.
-A recent work is from Sinha et al \cite{:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005we} and WLD \cite{Wang:2011vg}. The results show BLEAQ is much faster than previous approaches.
+A recent work is from Sinha et al \cite{:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005fa} and WLD \cite{Wang:2011di}. The results show BLEAQ is much faster than previous approaches.
 One major drawback of evolutionary algorithms is its high computation cost which limits the problem size from growing bigger.
 
 % Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 

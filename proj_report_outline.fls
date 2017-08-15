@@ -149,6 +149,7 @@ INPUT pics/workflow_management.png
 INPUT ./pics/workflow_management.png
 OUTPUT proj_report_outline.pdf
 INPUT ./pics/workflow_management.png
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
@@ -158,6 +159,8 @@ INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT Motivation.tex
 INPUT Motivation.tex
 INPUT Goals.tex
@@ -171,11 +174,8 @@ INPUT published.tex
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplri7t.tfm
 INPUT organization.tex
 INPUT organization.tex
-INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplri7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
-INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
-INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 OUTPUT literature_review.aux
 INPUT literature_review.tex
 INPUT literature_review.tex

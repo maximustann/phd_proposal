@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  14 AUG 2017 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  15 AUG 2017 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,7 +493,13 @@ Package pdftex.def Info: pics/workflow_management.png  used on input line 14. o
 n input line 14.
 Package pdftex.def Info: Requested size: 308.71104pt x 130.84213pt on input lin
 e 14.
- [1
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 19.
+
+
+LaTeX Warning: Citation `Xiao:2015ue' on page 1 undefined on input line 19.
+
+[1
 
 
 
@@ -503,16 +509,21 @@ e 14.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 4.
 
+
+LaTeX Warning: Citation `Liu:2013wj' on page 4 undefined on input line 9.
+
 [4]
 Overfull \hbox (25.29332pt too wide) in paragraph at lines 16--19
 \OT1/ppl/m/n/10.95 cient al-go-rithms. There are sev-eral pos-si-ble di-rec-tio
 ns to be ex-plored such as metamodeling-
  []
 
-[5]) (./published.tex [6]) (./organization.tex
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
+[5]
 
+LaTeX Warning: Citation `Feitelson:2002vp' on page 6 undefined on input line 47
+.
+
+) (./published.tex [6]) (./organization.tex
 
 LaTeX Warning: Reference `' on page 7 undefined on input line 2.
 
@@ -677,42 +688,6 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 201
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-! Undefined control sequence.
-l.201 ...{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow
-                                                   \mathbb{R}$ and $f : \mat...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.201 ...{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow
-                                                   \mathbb{R}$ are the \emph...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.201 ...{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow
-                                                   \mathbb{R}^{m_1}$ and $g ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.201 ...{R}^{n_1} \times  \mathbb{R}^{n_2} \arrow
-                                                   \mathbb{R}^{m_2}$ are cal...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 LaTeX Warning: Citation `Constantin:1995up' on page 15 undefined on input line 
 205.
@@ -779,27 +754,10 @@ Overfull \hbox (28.31529pt too wide) in paragraph at lines 323--324
 e wastage. They model multi-dimensional
  []
 
-[19]
+[19] [20]
 
-LaTeX Warning: Citation `Mathieu:1994dw' on page 20 undefined on input line 355
+LaTeX Warning: Citation `Mathieu:1994dw' on page 21 undefined on input line 361
 .
-
-
-LaTeX Warning: Citation `Oduguwa:2002ts' on page 20 undefined on input line 357
-.
-
-
-LaTeX Warning: Citation `Wang:2005we' on page 20 undefined on input line 359.
-
-
-LaTeX Warning: Citation `Wang:2011vg' on page 20 undefined on input line 360.
-
-[20]
-
-LaTeX Warning: Citation `Wang:2005we' on page 21 undefined on input line 363.
-
-
-LaTeX Warning: Citation `Wang:2011vg' on page 21 undefined on input line 363.
 
 )) [21]
 \openout2 = `preliminary.aux'.
@@ -1005,12 +963,12 @@ deleted material, e.g., by typing `I$}'.
 [39
 
 ] [40]
-Underfull \hbox (badness 1783) in paragraph at lines 203--209
+Underfull \hbox (badness 1168) in paragraph at lines 203--209
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
 
-[41] [42] [43] [44]) [45] (./proj_report_outline.aux (./introduction.aux)
+[41] [42] [43] [44] [45]) [46] (./proj_report_outline.aux (./introduction.aux)
 (./literature_review.aux) (./preliminary.aux) (./contribution.aux))
 
 LaTeX Warning: There were undefined references.
@@ -1020,13 +978,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6209 strings out of 493675
- 91153 string characters out of 6155645
- 163249 words of memory out of 5000000
- 9325 multiletter control sequences out of 15000+600000
+ 6216 strings out of 493675
+ 91248 string characters out of 6155645
+ 163282 words of memory out of 5000000
+ 9332 multiletter control sequences out of 15000+600000
  42473 words of font info for 122 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 42i,10n,43p,1240b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,10n,43p,1337b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmmi10.pfb></usr/pkg/share/texmf-dist/fonts/type1/pub
@@ -1037,10 +995,10 @@ g/share/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/pkg/share/texmf-
 dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on proj_report_outline.pdf (45 pages, 1051751 bytes).
+Output written on proj_report_outline.pdf (46 pages, 1055444 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
+ 254 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
