@@ -7,73 +7,58 @@ A level-1 auxiliary file: preliminary.aux
 A level-1 auxiliary file: contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-I was expecting a `,' or a `}'---line 1040 of file sample.bib
+I was expecting a `,' or a `}'---line 1194 of file sample.bib
  : month = 06
  :           /2008
 I'm skipping whatever remains of this entry
-Repeated entry---line 1220 of file sample.bib
- : @article{Verma:2009wi
- :                      ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1274 of file sample.bib
- : @article{Chaisiri:2012cv
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1499 of file sample.bib
- : @article{Gao:2013gg
- :                    ,
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Xiao:2015ue"
-Warning--I didn't find a database entry for "Liu:2013wj"
-Warning--I didn't find a database entry for "Feitelson:2002vp"
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
-Warning--I didn't find a database entry for "Constantin:1995up"
-Warning--I didn't find a database entry for "Sun:2008ta"
-Warning--I didn't find a database entry for "KirjnerNeto:1998tp"
-Warning--I didn't find a database entry for "Borodin:uQcy_H6C"
-Warning--I didn't find a database entry for "Mathieu:1994dw"
+Warning--I didn't find a database entry for "vm_technology"
+Warning--I didn't find a database entry for ":2013tn"
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Energy_Service_2"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
-You've used 104 entries,
+Warning--empty journal in Sinha:2013tn
+You've used 127 entries,
             2253 wiz_defined-function locations,
-            1204 strings with 24977 characters,
-and the built_in function-call counts, 37997 in all, are:
-= -- 3698
-> -- 2053
+            1326 strings with 28040 characters,
+and the built_in function-call counts, 44134 in all, are:
+= -- 4324
+> -- 2274
 < -- 0
-+ -- 842
-- -- 738
-* -- 3223
-:= -- 6231
-add.period$ -- 310
-call.type$ -- 104
-change.case$ -- 681
++ -- 935
+- -- 808
+* -- 3673
+:= -- 7253
+add.period$ -- 378
+call.type$ -- 127
+change.case$ -- 784
 chr.to.int$ -- 0
-cite$ -- 107
-duplicate$ -- 1179
-empty$ -- 2797
-format.name$ -- 738
-if$ -- 7715
+cite$ -- 131
+duplicate$ -- 1395
+empty$ -- 3324
+format.name$ -- 808
+if$ -- 8978
 int.to.chr$ -- 0
-int.to.str$ -- 104
-missing$ -- 102
-newline$ -- 519
-num.names$ -- 208
-pop$ -- 593
+int.to.str$ -- 127
+missing$ -- 125
+newline$ -- 632
+num.names$ -- 254
+pop$ -- 669
 preamble$ -- 1
-purify$ -- 577
+purify$ -- 658
 quote$ -- 0
-skip$ -- 761
+skip$ -- 899
 stack$ -- 0
-substring$ -- 2447
-swap$ -- 320
+substring$ -- 2853
+swap$ -- 371
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 414
-warning$ -- 3
-while$ -- 386
-width$ -- 107
-write$ -- 1039
-(There were 4 error messages)
+type$ -- 504
+warning$ -- 4
+while$ -- 457
+width$ -- 130
+write$ -- 1258
+(There was 1 error message)

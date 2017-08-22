@@ -1,8 +1,8 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
 \contentsline {section}{\numberline {1.2}Motivation}{3}
-\contentsline {section}{\numberline {1.3}Research Goals}{4}
-\contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single objective joint allocation of containers and VMs}{4}
+\contentsline {section}{\numberline {1.3}Research Goals}{5}
+\contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single objective joint allocation of containers and VMs}{5}
 \contentsline {subsection}{\numberline {1.3.2}Objective Two: Develop EC-based approaches for the multi-objective joint allocation problem}{5}
 \contentsline {subsection}{\numberline {1.3.3}Objective Three: Develop a hyper-heuristic Genetic Programming (GP) approach for automatically generating dispatching rules for dynamic consolidation}{6}
 \contentsline {subsection}{\numberline {1.3.4}Objective Four (Optional) Large-scale Static Consolidation Problem}{6}
@@ -15,44 +15,47 @@
 \contentsline {subsubsection}{Virtual machine}{12}
 \contentsline {subsubsection}{Container}{12}
 \contentsline {subsubsection}{Comparison between Container and VM}{13}
-\contentsline {subsection}{\numberline {2.1.3}Energy Efficiency in Cloud Data centers}{14}
+\contentsline {subsection}{\numberline {2.1.3}Energy Efficiency in Cloud Data centers}{13}
 \contentsline {subsection}{\numberline {2.1.4}Drawbacks of Traditional Service Models}{14}
 \contentsline {subsection}{\numberline {2.1.5}Container as a Service}{15}
-\contentsline {section}{\numberline {2.2}Server consolidation}{15}
-\contentsline {subsection}{\numberline {2.2.1}General Server Consolidation Scenarios}{16}
-\contentsline {subsection}{\numberline {2.2.2}VM-based Static Consolidation Techniques}{19}
-\contentsline {subsubsection}{Initilization (VM Placement)}{19}
-\contentsline {subsubsection}{Proactive Static consolidation}{19}
-\contentsline {subsubsection}{VM-based Dynamic Consolidation Techniques}{19}
-\contentsline {subsection}{\numberline {2.2.3}Container-based Consolidation Techniques}{19}
-\contentsline {subsubsection}{Initilization (Container Placement)}{19}
-\contentsline {section}{\numberline {2.3}Bilevel Optimization}{20}
-\contentsline {subsection}{\numberline {2.3.1}Traditional Approaches}{20}
-\contentsline {subsection}{\numberline {2.3.2}EC Approaches}{20}
-\contentsline {chapter}{\numberline {3}Preliminary Work}{21}
-\contentsline {section}{\numberline {3.1}Related models}{21}
-\contentsline {subsection}{\numberline {3.1.1}Workload model}{21}
-\contentsline {subsection}{\numberline {3.1.2}Power Model}{21}
-\contentsline {section}{\numberline {3.2}Problem Description}{22}
-\contentsline {subsubsection}{Hard constraint}{23}
-\contentsline {subsubsection}{Soft constraint}{23}
-\contentsline {section}{\numberline {3.3}Methods}{23}
-\contentsline {subsection}{\numberline {3.3.1}Chromosome Representation}{23}
-\contentsline {subsection}{\numberline {3.3.2}Initialization}{24}
-\contentsline {subsection}{\numberline {3.3.3}Mutation}{25}
-\contentsline {subsection}{\numberline {3.3.4}Violation control method}{25}
-\contentsline {subsection}{\numberline {3.3.5}Selection}{26}
-\contentsline {subsection}{\numberline {3.3.6}Fitness Function}{26}
-\contentsline {subsection}{\numberline {3.3.7}Algorithm}{26}
-\contentsline {section}{\numberline {3.4}Experiment}{27}
-\contentsline {subsection}{\numberline {3.4.1}Dataset and Problem Design}{27}
-\contentsline {subsection}{\numberline {3.4.2}Results}{29}
-\contentsline {section}{\numberline {3.5}Conclusion}{32}
-\contentsline {chapter}{\numberline {4}Proposed Contributions and Project Plan}{33}
-\contentsline {section}{\numberline {4.1}Overview of Project Plan}{33}
-\contentsline {section}{\numberline {4.2}Project Timeline}{33}
-\contentsline {section}{\numberline {4.3}Thesis Outline}{34}
-\contentsline {section}{\numberline {4.4}Resources Required}{35}
-\contentsline {subsection}{\numberline {4.4.1}Computing Resources}{35}
-\contentsline {subsection}{\numberline {4.4.2}Library Resources}{35}
-\contentsline {subsection}{\numberline {4.4.3}Conference Travel Grants}{35}
+\contentsline {subsection}{\numberline {2.1.6}Bilevel Optimization}{15}
+\contentsline {subsection}{\numberline {2.1.7}Vector Bin Packing Problem}{16}
+\contentsline {subsection}{\numberline {2.1.8}Evolutionary Computation}{16}
+\contentsline {subsubsection}{Genetic Algorithm}{17}
+\contentsline {subsubsection}{Particle Swarm Optimization}{17}
+\contentsline {subsubsection}{Genetic Programming}{18}
+\contentsline {subsection}{\numberline {2.1.9}Server consolidation}{19}
+\contentsline {subsubsection}{General Server Consolidation Scenarios}{19}
+\contentsline {section}{\numberline {2.2}Related Work}{22}
+\contentsline {subsection}{\numberline {2.2.1}Initialization (VM Placement)}{22}
+\contentsline {subsection}{\numberline {2.2.2}Periodic consolidation}{23}
+\contentsline {subsection}{\numberline {2.2.3}VM-based Dynamic Consolidation Techniques}{24}
+\contentsline {subsection}{\numberline {2.2.4}Container-based Consolidation Techniques}{24}
+\contentsline {subsection}{\numberline {2.2.5}Techniques for Bilevel optimization}{25}
+\contentsline {chapter}{\numberline {3}Preliminary Work}{27}
+\contentsline {section}{\numberline {3.1}Related models}{27}
+\contentsline {subsection}{\numberline {3.1.1}Workload model}{27}
+\contentsline {subsection}{\numberline {3.1.2}Power Model}{27}
+\contentsline {section}{\numberline {3.2}Problem Description}{28}
+\contentsline {subsubsection}{Hard constraint}{29}
+\contentsline {subsubsection}{Soft constraint}{29}
+\contentsline {section}{\numberline {3.3}Methods}{29}
+\contentsline {subsection}{\numberline {3.3.1}Chromosome Representation}{29}
+\contentsline {subsection}{\numberline {3.3.2}Initialization}{30}
+\contentsline {subsection}{\numberline {3.3.3}Mutation}{31}
+\contentsline {subsection}{\numberline {3.3.4}Violation control method}{31}
+\contentsline {subsection}{\numberline {3.3.5}Selection}{32}
+\contentsline {subsection}{\numberline {3.3.6}Fitness Function}{32}
+\contentsline {subsection}{\numberline {3.3.7}Algorithm}{32}
+\contentsline {section}{\numberline {3.4}Experiment}{33}
+\contentsline {subsection}{\numberline {3.4.1}Dataset and Problem Design}{33}
+\contentsline {subsection}{\numberline {3.4.2}Results}{35}
+\contentsline {section}{\numberline {3.5}Conclusion}{38}
+\contentsline {chapter}{\numberline {4}Proposed Contributions and Project Plan}{39}
+\contentsline {section}{\numberline {4.1}Overview of Project Plan}{39}
+\contentsline {section}{\numberline {4.2}Project Timeline}{39}
+\contentsline {section}{\numberline {4.3}Thesis Outline}{40}
+\contentsline {section}{\numberline {4.4}Resources Required}{41}
+\contentsline {subsection}{\numberline {4.4.1}Computing Resources}{41}
+\contentsline {subsection}{\numberline {4.4.2}Library Resources}{41}
+\contentsline {subsection}{\numberline {4.4.3}Conference Travel Grants}{41}

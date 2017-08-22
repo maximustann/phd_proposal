@@ -121,7 +121,7 @@ The recent development of application container such as Docker and Kubernetes \c
 % \end{figure}
 
 \subsubsection{Comparison between Container and VM}
-Several research \cite{He:2012im, Felter:2015ki, Xavier:2013fy, Dua:2014bw} have compared VM-based and container-based virtualization. The advantages of container-based virtualization are mainly from three aspects:
+Several research \cite{Felter:2015ki, Xavier:2013fy, Dua:2014bw} have compared VM-based and container-based virtualization. The advantages of container-based virtualization are mainly from three aspects:
 
 \begin{itemize}
 	\item Low overhead, containers have a lightweight management. which generate much less overhead than a hypervisor. On the other hand, shared OS system also reduces the overhead on running multiple OSs. 
@@ -149,7 +149,7 @@ On the other hand, the disadvantages of containers are categorized in two aspect
 
 Apart from upfront investment, Energy consumption \cite{Kaplan:up01fR-k} is the major expense of data centers. Therefore, it is also the top concern of Cloud providers. Energy consumption is derived from several parts as illustrated in Figure \ref{fig:consumption}. Cooling system and servers or PMs account for a majority of the consumption. A recent survey \cite{Cho:2016kz} shows that the recent development of cooling techniques have reduced its energy consumption and now server consumption has become the dominate energy consumption component. 
 
-According to Hameed et al \cite{Hameed:2016cma}, 
+According to Hameed et al \cite{Hameed:2016cmb}, 
 servers are far from energy-efficient. 
 The main reason for the wastage is that the energy consumption of servers remains high even when the utilization are low. Therefore, a concept of
 \emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. This leads to 
@@ -161,7 +161,7 @@ using virtualization technology to achieve server consolidation.
 There are three characteristics in IaaS which naturally lead to a low resource utilization.
 \begin{itemize}
 	\item Resource over-provisioning \\
-	As previous mentioned, VMs are either selected by Cloud users or automatically selected by software platforms. In either case, it requires an estimation of required resources. However, The accurate estimation is almost impossible because of unpredictable workloads; A simple way is to reserve more resources for ensuring the QoS at peak hours \cite{Chaisiri:2012cv}, rather than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. In IaaS, the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning.
+	As previous mentioned, VMs are either selected by Cloud users or automatically selected by software platforms. In either case, it requires an estimation of required resources. However, The accurate estimation is almost impossible because of unpredictable workloads; A simple way is to reserve more resources for ensuring the QoS at peak hours \cite{Chaisiri:2012cva}, rather than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. In IaaS, the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning.
 
 	\item Unbalanced usage of resources \\
 	Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
@@ -188,7 +188,7 @@ A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one 
 
 The general formulation of a bilevel optimization problem can be defined as: 
 
-\begin{subequation}
+\begin{subequations}
 \label{eq:bilevel}
 	\begin{align}
 	min_{x \in X, y} 	\quad    F(x, y) \\
@@ -196,13 +196,13 @@ The general formulation of a bilevel optimization problem can be defined as:
 	min_y			\quad f(x, y) \\
 	s.t 			\quad g(x, y)
 	\end{align}
-\end{subequation}
+\end{subequations}
 
 The variables of problem, $x \in \mathbb{R}^{n_1}$ is the \emph{upper-level variables} and $y \in \mathbb{R}^{n_2}$ is the \emph{lower-level variables}. The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
 
 Bilevel optimization problem has a hierarchical structure which may introduce difficulties such as non-convexity and disconnectedness even for simple cases such as bilevel linear programming problems is strongly NP-hard \cite{:2013tn}. 
 
-In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995up}, management: network facility location \cite{Sun:2008ta},  and engineering related: optimal design \cite{KirjnerNeto:1998tp}. 
+In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995hu}, management: network facility location \cite{Sun:2008gq},  and engineering related: optimal design \cite{KirjnerNeto:1998ef}. 
 
 \subsection{Vector Bin Packing Problem}
 
@@ -213,11 +213,84 @@ In practice, there are a number of problems that are bilevel in nature. For exam
 	\label{fig:bin_packing_problem}
 \end{figure}
 
-Vector bin packing problem is variant of standard bin packing problem (see Figure \ref{fig:bin_packing_problem} ).  It is particularly suitable for modeling resource allocation problems where there is a set of bins with known capacities and a set of items with known demands \cite{Panigrahy:2011wk}. 
+Vector bin packing problem is variant of standard bin packing problem (see Figure \ref{fig:bin_packing_problem}). It is also referred as multi-capacity \cite{Leinberger:1999fs} or multi-dimensional bin packing problem \cite{Xiong:2014jq}. It is particularly suitable for modeling resource allocation problems where there is a set of bins with known capacities and a set of items with known demands \cite{Panigrahy:2011wk}. 
 
-A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, I^2, \dots, I^n$ where each item has $d$ dimension of resources represented in real number $I^i \in R^d$. A valid solution is packing $I$ into bins $B^1, B^2, \dots, B^k$. For each bin $j$ and each dimension $i$, the sum of resources can not exceed the capacity of bin. The goal of Vector Bin Packing problem is to find a valid solution with minimum number of bins. Notice that, the items assigned to bins do not consider the positions in the bins, that is, there is no geometric interpretation of the items or bins \cite{Johnson:2016wp}. $VBP_d$ is an NP-hard problem. 
+A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, I^2, \dots, I^n$ where each item has $d$ dimension of resources represented in real or discrete number $I^i \in R^d$. A valid solution is packing $I$ into bins $B^1, B^2, \dots, B^k$. For each bin $j$ and each dimension $i$, the sum of resources can not exceed the capacity of bin. The goal of Vector Bin Packing problem is to find a valid solution with minimum number of bins. Notice that, the items assigned to bins do not consider the positions in the bins, that is, there is no geometric interpretation of the items or bins \cite{Johnson:2016wp}.  Notice that, when $d$ = 1, vector bin packing reduces to the classic \emph{bin-packing} problem. Vector bin packing is an NP-hard problem in strong sense, as it is a generalized bin packing problem.
 
-\section{Server consolidation}
+Several one dimensional bin packing algorithms have been generalized to vector bin packing such as generalized First Fit and Best Fit. In studies \cite{}, they suggest that an algorithm should keep the bins as ``balanced'' as possible, so that bins have better potential to accommodate more items. 
+
+\subsection{Evolutionary Computation}
+Evolutionary Computation is a subfield of Artificial Intelligence. It is very well-known for its effective global search ability. These algorithms are 
+inspired by biological mechanisms of evolution, social interactions and swarm intelligence. 
+There are several distinguished characteristics of EC algorithms such
+as the use of a population-based search and the ability of avoiding local optima. 
+A common process of EC algorithms is as follows. Initially, the population are randomly generated in the search space. During the evolution process, the population
+explores according to the evaluation of a or multiple predefined fitness functions. At the end of the evolution, the individual with the best fitness value is selected as the output.
+
+The origins of evolutionary computation can be traced back to 1950s \cite{Back:1997gb}. Since 1970s, the output of EC research has grown exponentially. 
+The majority of current implementations of EC algorithms descend from three major approaches: \emph{genetic algorithms}, \emph{particle swarm optimization}
+and \emph{genetic programming}.
+
+\subsubsection{Genetic Algorithm}
+GA \cite{Holland:1962fy} was introduced by Holland. Since then, a large number of applications have applied GA \cite{DeJong:1992vk, DeJong:1992ws} as their search mechanism.
+
+In a GA, a population of chromosomes which represents the solutions of the problem are often represented as a fixed length string. Each entry or bit can be continuous, discrete or even alphabets depending on the problem.  The evolution often starts from randomly generated population followed by an iterative process called generation.  In each generation, the fitness value of chromosomes is evaluated according to a defined fitness function.  Then, genetic operators such as mutation, crossover are applied on the solutions so that they are modified. As a search mechanism, these operators move solutions to explore the search space. New generation of solutions are then evaluated by the fitness function.  This evolutionary procedure ends with a predefined a generation number or a satisfactory level of fitness has been reached.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.44\textwidth}
+		\includegraphics[width=\textwidth]{pics/crossover.png}
+	\caption{Crossover}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.44\textwidth}
+		\includegraphics[width=\textwidth]{pics/mutation.png}
+	\caption{Mutation}
+	\end{subfigure}
+	\label{fig:operators}
+\end{figure}
+% Evolutionary programming, introduced by Fogel \cite{Fogel:1962wv}, was originally designed to generate artificial intelligence. 
+% Evolutionary strategies as developed by Rechenberg \cite{Rechenberg:a_aZDNtZ} and Schwefel \cite{Schwefel:Nd2pzTwG}, were initially designed with the goal of solving difficult discrete
+% and continuous, mainly experimental, parameter optimization problems \cite{Klockgether:1970tw}. 
+
+\subsubsection{Particle Swarm Optimization}
+Kennedy and Eberhart proposed PSO in 1995 \cite{Eberhart:1995tj}. It is a meta-heuristic algorithm inspired by the social behavior of birds. In PSO, each individual - a particle - searches the solution space. The underlying phenomenon of PSO is to use the collective knowledge to find the optimal solution.
+
+At the initial state, each particle has a random initial position in the search space which is represented by a vector $\vec{x}_i = (x_{i1}, x_{i2}, \dots, x_{iD})$, where \emph{D} is the dimension of the search space. A particle has a velocity as $\vec{v}_i = (v_{i1}, v_{i2}, \dots, v_{iD})$. The velocity is limited by a threshold $v_{\max}$ so that for any $i$ and $d$, $v_{id} \in [-v_{\max}, v_{\max}]$. During the search process, each particle maintains a record of its best position so far, called the \emph{personal best} ($pbest$). The best positions among all the personal best positions of its neighbors is the \emph{global best} ($gbest$). The position and velocity of each particle are updated according to the following equations:
+\begin{equation}
+\label{eq:updatePosition}
+x^{t+1}_{id} = x^{t}_{id} + v^{t+1}_{id},
+\end{equation}
+
+\begin{equation}
+\label{eq:updateVelocity}
+v^{t+1}_{id} = w \cdot v^{t}_{id} + c_1 \cdot r_{1i} \cdot (p_{id} - x^t_{id}) + c_2 \cdot r_{2i} \cdot (p_{pg} - x^i_{id}).
+\end{equation}
+
+Here, $t$ is the index of iteration. $d$ is the index of dimension. The inertia weight $w$ is used to balance the local search and global search abilities. The parameters $c_1$ and $c_2$ are the acceleration constants. $r_{1i}$ and $r_{2i}$ are random constants following the uniform distribution in the interval $[0, 1]$. $p_{id}$ and $p_{gd}$ denote the values of $pbest$ and $gbest$ in the $d^{th}$ dimension of the $i^{th}$ particle.
+
+PSO was initiated to solve continuous optimization problems - position update function is developed for real numbers. To address discrete problems, Kennedy and Eberhart developed a binary PSO \cite{Kennedy:1997hd}. 
+
+\subsubsection{Genetic Programming}
+
+Genetic programming \cite{1992gppc.book.....K} is an evolutionary computation technique, inspired by biological evolution, to automatically find 
+computer programs for solving a specific task. In a GP population, each individual represents a computer program. In each generation, these programs are evaluated by a predefined fitness function, which accesses the performance of each program. Then, individuals will go through several genetic operators such as selection, crossover, and mutation. A number of top individuals will survive to the next generation while others will be discarded. The major difference between GA and GP is that, each GP individual is represented as a tree with variant depth instead of a string. This representation is particular suitable for a program. For example,  a GP individual is showed in Figure \ref{fig:gp_program} which is a program x + max(y $\times$ 2, -2). The variables \{x, y\} and constraint \{-2, 2\} are called terminal of the program. The arithmetic operations \{+, $\times$, max \} are called functions in GP. A GP individual is a specific combination of elements in terminal set and functional set. In order to observe the relationship between a function and its subtrees, the GP programs are usually presented to human users by using the $prefix$ notation similar to a Lisp expression, for example, x + max(y $\times$ 2, -2) can be expressed as (+ (x (min ($\times$ y 2) -2 ))).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\textwidth]{pics/gp-tree.png}
+	\caption{GP program that represents x + max(y $\times$ 2, -2)}
+	\label{fig:gp_program}
+\end{figure}
+
+
+GP approach based hyper-heuristics (GP-HH)  has been applied in many applications such as Job shop scheduling to evolve dispatching rules \cite{Nguyen:2014eu}. The term hyper-heuristics \cite{Cowling:2000ek} means ``heuristics to choose heuristics''.
+\emph{Dispatching rule} is essentially a heuristics \cite{Panwalkar:1977fw} used in a scheduling context. 
+Resource allocation problems are also in the scheduling category and they are often modeled as bin packing problems. 
+GP-HH has been applied in generating heuristics for bin-packing problems \cite{Poli:2007kt,Sim:2013fe,Burke:2012gs}. These research have shown that GP-HH can generate excellent heuristics which have equal or better performance than human designed heuristics.
+
+In the Cloud computing context,  Cloud resource allocation usually has extra constraints such as multi-dimensional resources, migration costs, heterogeneous PMs etc. These constraints make the Cloud resource allocation problem much harder than original bin packing \cite{Mann:2015ua}. Therefore, traditional bin packing approaches such as First Fit Decreasing, Best Fit etc cannot perform well in this context.  GP-HH, therefore, is a promising technique can be used to automatically generate heuristics under multiple constraints.
+
+\subsection{Server consolidation}
 
 Server consolidation packs a number of VMs on fewer number of PMs to improve the resource utilization and decrease the energy consumed by PMs. It is often applied to solve the problem of physical server sprawl \cite{Khanna:2006vq}: a situation that more PMs are used in a low-utilized way. 
 
@@ -243,7 +316,7 @@ Server consolidation can be done in two ways: Static and Dynamic \cite{Xiao:2015
 
 
 
-\subsection{General Server Consolidation Scenarios}
+\subsubsection{General Server Consolidation Scenarios}
 
 The server consolidation in data center can be applied to three \cite{Svard:2015ic, Mishra:2012kx} scenarios: Application initialization, Prediction and Global consolidation, and Dynamic resource management (see Figure \ref{fig:management}). 
 
@@ -293,7 +366,7 @@ In comparison with dynamic consolidation, global consolidation takes a set of VM
 	\end{itemize}
 
 	Among three operations, dynamic placement is a dynamic and on-line problem.
-	The term ``dynamic'' means the request comes at an arbitrary time point. An on-line problem is a problem which has on-line input and requires on-line output \cite{Borodin:uQcy_H6C}. It is applied when a control system does not have the complete knowledge of future events.
+	The term ``dynamic'' means the request comes at an arbitrary time point. An on-line problem is a problem which has on-line input and requires on-line output \cite{Borodin:2cY4439E}. It is applied when a control system does not have the complete knowledge of future events.
 
 	There are two difficulties in this operation, firstly, dynamic placement requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
 
@@ -322,8 +395,37 @@ In energy-aware resource management, the initialization has the objective of min
 
 Gao et al \cite{Gao:2013gg} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They model multi-dimensional resource utilization based on vector algebra complementary resource utilization capturing technique \cite{Mishra:2011bz}. They propose a \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they apply a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007jr}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
 
-Xu and Fortes \cite{Xu:2010df} propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007it}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
+Xu and Fortes \cite{Xu:2010vh} propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm (GGA) with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007it}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
 
+ Wilcox et al \cite{Wilcox:2011ea} also propose a reordering GGA approach because GGA can effectively avoid redundancy \cite{Falkenauer:1996hv}. They use a indirect representation \cite{Radcliffe:1991tp} which represents the packing as a sequence. In order to transform the sequence into a packing, they applied an ordering operator which, in essence, is a first fit algorithm. This design naturally avoids infeasible solution, therefore, there is no need for constraint handling. 
+
+ Wang and Xia \cite{Wang:2016eha} develop a MIP algorithm for solving large-scale VM placement problem under a \emph{non-linear} power consumption model.  Instead of considering the power consumption as a linear model like most researchers, they consider the CPU frequency can be adjust by dynamic voltage and frequency scaling (DVFS), therefore, the power consumption is a cubical power function of frequency. In order to solve the non-linear problem, they first use a linear function to approximate the cubical function. Then, they first use the Gruobi MIP solver to solve the relaxed linearized problem. Then, they apply an iterative rounding algorithm to obtain the near optimal solution.   
+
+\begin{equation} \label{distance}
+	\delta = \sum_{i=1}^n \sqrt{\sum_{j=1}^d (u_j^i - ubest_i)^2}
+\end{equation}
+
+Xiong and Xu \cite{Xiong:2014jq} propose a PSO based approach to solve the problem. Their major contribution is using a total Euclidean distance $\delta$ to represent the distance between current resource utilization and the optimal resource utilization (see equation \ref{distance}) where $d$ is the dimension of resources, $u_j^i$ is the current resource utilization of $j$ in a PM $i$, $ubest_i$ is the predefined optimal resource utilization (e.g 70\% CPU utilization). Another contribution is their representation used in PSO. They represent the allocation of each VM to a PM as a probability and let particles search through the indirect solution space.
+
+
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\scalebox{0.7}{
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\multicolumn{1}{c}{Research}                      & Resources        & Algorithm                     & \multicolumn{1}{l}{Power model} & Wastage model                             & \multicolumn{1}{l}{Objective} \\ \midrule
+\multicolumn{1}{c}{Xu et al \cite{Xu:2010vh}}   & CPU and RAM      & GGA and Fuzzy multi-objective & Linear                          & balance  resources & three                         \\
+\multicolumn{1}{c}{Gao et al \cite{Gao:2013gg}} & CPU and RAM      & Ant Colony Optimization       & Linear                          & balance  resources & Two                           \\
+Ferdaus et al \cite{Ferdaus:2014ep}             & CPU, RAM, and IO & Ant Colony Optimization       & Linear                          & Sum of  resources          & Single                        \\
+Wang and Xia \cite{Wang:2016eha}                & CPU and RAM      & MIP                           & Cubical                         & No                                        & Single                        \\
+Wilcox et al \cite{Wilcox:2011ea}               & CPU and RAM      & GGA                           & Linear                          & Sum of resources          & Single    \\
+Xiong and Xu \cite{Xiong:2014jq}               & CPU,RAM,Bandwidth,Disk      & PSO & Non-linear & Sum of resources          & Single \\ \bottomrule
+\end{tabular}
+}
+\end{table}
 % Because of its NP-hard nature, several researchers propose well-known bin-packing heuristics
 % First Fit (FF), First Fit Decreasing (FFD), Best Fit (BF) and etc. These algorithms have constant-factor approximation to bin-packing problems. However, VM placement is more complex than bin-packing problem \cite{Mann:2015ua}, 
 
@@ -335,21 +437,37 @@ Xu and Fortes \cite{Xu:2010df} propose a multi-objective VM placement approach w
 % \section{Container-based Consolidation Techniques}
 % Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
+% \subsubsection{Affinity-aware VM Placement}
+
+
 \subsection{Periodic consolidation}
 
-Murtazaev and Oh \cite{Murtazaev:2011ue} propose a Sercon algorithm which is a heuristic based on First and Best Fit to solve the periodic consolidation problem. They consider two resources CPU and memory with two optimization objectives, minimizing the energy consumption and the number of migration. They conduct experiments on synthetic data and compare with FFD. The results indicate that Sercon outperforms FFD in migration efficiency, meanwhile, the total energy consumption from Sercon and FFD are similar. 
+Murtazaev and Oh \cite{Murtazaev:2014eo} propose a Sercon algorithm which is a heuristic based on First and Best Fit to solve the periodic consolidation problem. They consider two resources CPU and memory with two optimization objectives, minimizing the energy consumption and the number of migration. They conduct experiments on synthetic data and compare with FFD. The results indicate that Sercon outperforms FFD in migration efficiency, meanwhile, the total energy consumption from Sercon and FFD are similar. 
+
+Beloglazov et al \cite{Beloglazov:2013ht} propose a periodical reallocation approach with a multisize sliding window workload estimation \cite{Luiz:2010go}.  The basic idea is to model the workload as unknown non-stationary workload and apply a sliding window workload estimation approach.  A window is selected dynamically using the information about the previous system state and variances of the estimates obtained from different windows.
+
+Farahnakian et al propose two CPU utilization prediction algorithms: a linear regression approach \cite{Farahnakian:2013gg} and a K-Nearest Neighbor Regression approach \cite{Farahnakian:2015vj}. Based on the prediction, they further propose a utilization prediction-aware Best Fit Decreasing (BFD) algorithm that not only consider current but the future utilization of resources. In comparison with consolidation approaches that do not consider future workload, their approach substantially reduce the number of VM migrations. 
+
+Hieu el al \cite{Hieu:2015ub} also propose a consolidation process with the consideration of short-term future CPU utilization based on the local history of the considered servers. They propose a multi-linear regression to predict the short-term future workload. Instead of developing a uniform consolidation algorithm that can be applied on all PMs, they separate the overloaded and underloaded PMs with predefined thresholds, and develop two heuristics to these scenarios. They conduct experiments on real world datasets: PlanetLab and the Google Cluster Dataset which show their approach effectively reduce the number of migrations and the number of power state changes of the servers.
 
 \subsection{VM-based Dynamic Consolidation Techniques}
 \label{sec:dynamic}
 
 Forsman et al \cite{Forsman:2015ca} propose two distributed migration strategies to balance the load in a system. \emph{The push} strategy is applied on overloaded PM; it attempts to migrate \emph{One} VM at a time to less loaded PMs. \emph{The pull} strategy is applied on underutilized PMs request workload from heavier loaded PMs. Each of the strategy is executed on each PM as an intelligent agent. They share their status with each other through a communication protocol. There are several interesting features of their approach. First, they apply an adaptive high-load threshold (e.g 0.7 of overall CPU utilization) so that it considers the environment changes. Second, they use an EWMA algorithm to reduce the unnecessary migration because EWMA \cite{Holt:2004fs} is useful in smoothing out variations in the average load. Third, they applied an entropy to model the load distribution which is also applied in some previous approaches \cite{Qin:2012wu,Kunkle:2008bz}. Their system is agent-based which means large amount of communication may occur between nodes, this would certainly cost extra network resources which are not discussed. Therefore, we expect to design a centralized system, where all nodes are controlled by a controller. 
 
-Xiao et al \cite{Xiao:2015ik} make two contributions, first, they build a quadratic energy model for the energy consumption of PM and a linear model for the energy consumption of migration \cite{Liu:2013kl}. Second, they propose an algorithm based on Multiplayer random evolutionary game theory to solve the problem. In their approach, VMs are mapped into players that take part in the evolutionary game. In each iteration, all the players choose their best feasible action, i.e, Migrate to a PM which can minimize the energy consumption. Some players will randomly choose PM to avoid stucking in a local optimal. Their approach is compared with First Fit, Best Fit Increasing, Best Fit Decreasing, Greedy and Load Balance rule. The solutions show their approach can improve energy consumption greatly, especially in the scenario that the distributions of VMs are very centralized.
+Xiao et al \cite{Xiao:2015ik} make two contributions, first, they build a quadratic energy model for the energy consumption of PM and a linear model for the energy consumption of migration \cite{Liu:2013kl}. Second, they propose an algorithm based on Multiplayer random evolutionary game theory to solve the problem. In their approach, VMs are mapped into players that take part in the evolutionary game. In each iteration, all the players choose their best feasible action, i.e, Migrate to a PM which can minimize the energy consumption. Some players will randomly choose PM to avoid being stuck at a local optimal. Their approach is compared with First Fit, Best Fit Increasing, Best Fit Decreasing, Greedy and Load Balance rule. The solutions show their approach can improve energy consumption greatly, especially in the scenario that the distributions of VMs are very centralized.
 
-Beloglazov and Buyya \cite{Beloglazov:2012bw} propose
+% Beloglazov and Buyya \cite{Beloglazov:2012bw} propose
 
 \subsection{Container-based Consolidation Techniques}
-\subsubsection{Initialization (Container Placement)}
+Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralized slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
+
+Piraghaj et al \cite{Piraghaj:2016bw} propose an architecture for container-based resource management. Their allocation approach is policy-based, where it allocates each VM with containers until its estimated utilization above 90\%. This heuristic is similar to First Fit, it is fast but does not guarantee global optimal.
+
+Mann's research \cite{Mann:2016hx} is the earliest study that realized the VM selection and VM placement should be considered together. Although his paper does not mention the term ``container placement'', it actually allocates containers to VMs. They apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. They show that the results improved with an algorithm which has more knowledge of the PMs' capacity. However, he still consider these two operations separately, while in our thesis, we are going to consider it together.
+
+
+
 \subsection{Techniques for Bilevel optimization}
 
 A number of studies have been conducted on bilevel optimization \cite{Colson:2007bu,Dempe:2006jc}. Because of its NP-hard nature, approximation algorithms such as Karush-kuhn-Tucker approach \cite{Bianco:2009ej, Herskovits:2000be}, branch-and-bound \cite{Bard:1982gs} are often applied to solve the problem. Most of these approaches are not applicable when the problem size increases.
@@ -358,7 +476,7 @@ As the complexity of the problem, practical problems with bilevel nature are oft
 
 % Heuristics such as Evolutionary methods have been applied for solving bilevel optimization problem with higher level of complexity \cite{Yin:2000bt,Wang:2008kb}. 
 
-Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:1994dw} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
+Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:1994uh} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
 
 Oduguwa and Roy \cite{Oduguwa:2002kr} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
 
@@ -366,16 +484,14 @@ Wang et al \cite{Wang:2005fa} proposed an evolutionary algorithm based approach 
 Later on, Wang proposed an improved version \cite{Wang:2011di} that shows better performance than the previous version.
 
 Particle Swarm Optimization \cite{Li:2006br} was also used in solving bilevel problems.
-A recent work is from Sinha et al \cite{:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005fa} and WLD \cite{Wang:2011di}. The results show BLEAQ is much faster than previous approaches.
+A recent work is from Sinha et al \cite{Sinha:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005fa} and WLD \cite{Wang:2011di}. The results show BLEAQ is much faster than previous approaches.
 One major drawback of evolutionary algorithms is its high computation cost which limits the problem size from growing bigger.
 
 % Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
 
 % % Previous research mainly use heuristic to solve this problem. 
-% Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralised slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
 
-% Piraghaj et al \cite{Piraghaj:2016bw} propose an architecture for container-based resource management. Their allocation approach is policy-based, where it allocates each VM with containers until its estimated utilization above 90\%. This heuristic is similar to First Fit, it is fast but does not guarantee global optimal.
 
 % \subsection{Traditional Approaches}
 % \subsection{EC Approaches}
@@ -604,7 +720,9 @@ One major drawback of evolutionary algorithms is its high computation cost which
 
 % Cloud users deploy their software on Clouds. They want to increase the profit by increasing income and decreasing expense. In order to accomplish this goal, they can attract more End suers by improving the functionality of softwares and the non-functionality features by guaranteeing Quality of Service (QoS). To improve the non-functionality features, Cloud users need to reserve enough resources as well as minimizing the resource so that the cost is low.
 
+
 % service capacity planning is the core process. The capacity planning has two conflicting objectives, on one hand, it must meet End users' QoS requirement by using enough resources.  On the other hand, the cost must be minimized. In pre-Cloud era, the capacity planning determines the upfront investment in infrastructure, therefore, capacity, reliability, and scalability are all need to be carefully considered and balanced. In Cloud environment, the burden of capacity planning is largely released by elastic resource management and the pay-as-you-go policy.
+
 
 % Cloud users identify a list of critical QoS parameters called Service Level Agreement (SLA) which specifies the non-functional requirements such as throughput, latency, and availability. These QoS parameters are mapped to resources (e.g. CPU, memory, network bandwidth) which can satisfy these requirements. Violation of SLA will lead to penalty and decreasing in number of users. Therefore, in essence, the key to attract more users is an effective resource management system which can rapidly react to the fluctuating resource demand. 
 
