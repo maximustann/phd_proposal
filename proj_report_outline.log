@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  22 AUG 2017 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  23 AUG 2017 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,10 +585,10 @@ e 12.
 
 
  <./pics/workflow_management.png>] [2])
-(./Motivation.tex [3]) (./Goals.tex
+(./Motivation.tex [3] [4]) (./Goals.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 4.
- [4] [5] [6]) (./published.tex)
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 5.
+ [5] [6]) (./published.tex)
 (./organization.tex
 
 LaTeX Warning: Reference `' on page 7 undefined on input line 2.
@@ -744,61 +744,67 @@ Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
 <pics/initialization.png, id=110, 716.6775pt x 199.49532pt>
 File: pics/initialization.png Graphic file (type png)
 <use pics/initialization.png>
-Package pdftex.def Info: pics/initialization.png  used on input line 326. on in
-put line 326.
+Package pdftex.def Info: pics/initialization.png  used on input line 327. on in
+put line 327.
 Package pdftex.def Info: Requested size: 396.91324pt x 110.4868pt on input line
- 326.
+ 327.
 <pics/dynamic_resource.png, id=111, 718.18312pt x 161.85469pt>
 File: pics/dynamic_resource.png Graphic file (type png)
 <use pics/dynamic_resource.png>
-Package pdftex.def Info: pics/dynamic_resource.png  used on input line 330. on 
-input line 330.
+Package pdftex.def Info: pics/dynamic_resource.png  used on input line 331. on 
+input line 331.
 Package pdftex.def Info: Requested size: 396.91324pt x 89.45253pt on input line
- 330.
+ 331.
 <pics/predict_consolidate.png, id=112, 748.29562pt x 419.31656pt>
 File: pics/predict_consolidate.png Graphic file (type png)
 <use pics/predict_consolidate.png>
-Package pdftex.def Info: pics/predict_consolidate.png  used on input line 334. 
-on input line 334.
+Package pdftex.def Info: pics/predict_consolidate.png  used on input line 335. 
+on input line 335.
 Package pdftex.def Info: Requested size: 396.91324pt x 222.41586pt on input lin
-e 334.
+e 335.
  [19 <./pics/consolidate.png>] [20 <./pics/initialization.png> <./pics/dynamic_
 resource.png> <./pics/predict_consolidate.png>]
-Overfull \hbox (0.74336pt too wide) in paragraph at lines 352--354
+Overfull \hbox (0.74336pt too wide) in paragraph at lines 353--355
 []\OT1/ppl/m/n/10.95 In pre-dic-tion, an op-ti-miza-tion sys-tem takes the cur-
 rent ap-pli-ca-tions' uti-liza-tion records
  []
 
 [21]
-Overfull \hbox (28.31529pt too wide) in paragraph at lines 396--397
-\OT1/ppl/m/n/10.95 ob-jec-tives: min-i-miz-ing power con-sump-tion and re-sourc
-e wastage. They model multi-dimensional
+Overfull \hbox (1.65872pt too wide) in paragraph at lines 397--399
+[]\OT1/ppl/m/n/10.95 This sec-tion first dis-cusses container-based ap-proaches
+ and their draw-backs. Then, based
  []
 
 [22]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 412.
+               Default added (so using `tbp') on input line 415.
 
 
-Overfull \hbox (13.50563pt too wide) in paragraph at lines 427--428
+Overfull \hbox (13.50563pt too wide) in paragraph at lines 430--431
  [][] 
  []
 
-[23] [24])) [25]
+
+Overfull \hbox (28.31529pt too wide) in paragraph at lines 433--434
+\OT1/ppl/m/n/10.95 ob-jec-tives: min-i-miz-ing power con-sump-tion and re-sourc
+e wastage. They model multi-dimensional
+ []
+
+[23] [24] [25])) [26]
 \openout2 = `preliminary.aux'.
 
- (./preliminary.tex [26
-
-
-
-]
+ (./preliminary.tex
 Chapter 3.
 
 LaTeX Warning: Citation `Energy_Service_2' on page 27 undefined on input line 1
 99.
 
-[27] [28]
+[27
+
+
+
+] [28]
 <pics/preliminary/cec.png, id=152, 722.7pt x 542.025pt>
 File: pics/preliminary/cec.png Graphic file (type png)
 <use pics/preliminary/cec.png>
@@ -993,7 +999,7 @@ deleted material, e.g., by typing `I$}'.
 [43
 
 ] [44]
-Underfull \hbox (badness 1168) in paragraph at lines 256--262
+Underfull \hbox (badness 1168) in paragraph at lines 250--256
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
@@ -1009,10 +1015,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6280 strings out of 493675
- 92283 string characters out of 6155645
- 163496 words of memory out of 5000000
- 9383 multiletter control sequences out of 15000+600000
+ 6282 strings out of 493675
+ 92327 string characters out of 6155645
+ 163601 words of memory out of 5000000
+ 9385 multiletter control sequences out of 15000+600000
  50064 words of font info for 141 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
  42i,10n,43p,1374b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1027,7 +1033,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (57 pages, 1142991 bytes).
+Output written on proj_report_outline.pdf (57 pages, 1144571 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams

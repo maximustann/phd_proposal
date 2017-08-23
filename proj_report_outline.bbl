@@ -246,12 +246,6 @@
   placement in cloud computing.}
 \newblock {\em J. Comput. Syst. Sci. 79}, 8 (2013), 1230--1242.
 
-\bibitem{Ghodsi:2011vm}
-{\sc Ghodsi, A., Zaharia, M., Hindman, B., and Konwinski, A.}
-\newblock {Dominant Resource Fairness: Fair Allocation of Multiple Resource
-  Types.}
-\newblock {\em NSDI\/} (2011).
-
 \bibitem{Hameed:2016cmb}
 {\sc Hameed, A., Khoshkbarforoushha, A., Ranjan, R., Jayaraman, P.~P.,
   Kolodziej, J., Balaji, P., Zeadally, S., Malluhi, Q.~M., Tziritas, N.,

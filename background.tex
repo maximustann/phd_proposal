@@ -317,6 +317,7 @@ Server consolidation can be done in two ways: Static and Dynamic \cite{Xiao:2015
 
 
 \subsubsection{General Server Consolidation Scenarios}
+\label{scenarios}
 
 The server consolidation in data center can be applied to three \cite{Svard:2015ic, Mishra:2012kx} scenarios: Application initialization, Prediction and Global consolidation, and Dynamic resource management (see Figure \ref{fig:management}). 
 
@@ -340,7 +341,7 @@ The server consolidation in data center can be applied to three \cite{Svard:2015
 
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
 \begin{enumerate}
-	\item \emph{Application initialization} is applied when new applications or new VMs arrive and the problem is to allocate them into a minimum number of PMs.
+	\item \emph{Application initial placement} is applied when new applications or new VMs arrive and the problem is to allocate them into a minimum number of PMs.
 
 	In this problem, a set of applications or VMs are waiting in a queue. The resource capacity of the PM and usage by applications are characterized by a vector of resource utilizations including CPU, memory and etc. Then, the allocation system must select a minimum number of PMs to accommodate them so that after the allocation, the resource utilizations remain high. The problem is to consider the different combinations of applications so that the overall resource utilization is high. This problem is naturally modeled as a static bin-packing problem \cite{CoffmanJr:1996ui} which is a NP-hard problem meaning it is unlikely to find an optimal solution of a large problem. 
 
@@ -389,9 +390,45 @@ Finally, a consolidation plan includes four major items:
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 \section{Related Work}
-\subsection{Initialization (VM Placement)}
-In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
+\subsection{Application Initial Placement}
+As Section \ref{scenarios} mentioned, application initial placement is one of the major process in resource management.
+Cloud users request a number of resources represented by VMs or containers with certain configurations, the task for cloud provider is to deploy these resources (VMs or containers) to a minimum number of physical machines (PM) because the energy consumption is proportional to the active PMs.
 
+This section first discusses container-based approaches and their drawbacks. Then, based on their drawbacks, we will review the reasons for our first objective (see \ref{sec:obj1}): propose EC-based approaches for solving the joint allocation of containers and VMs. Since there are only few research study the container-based placement and none of them considers it as a bilevel optimization problem, we will have to propose a model to formulate this problem. Thus, we will review a number of VM-based placement and mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
+% In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
+
+\subsubsection{Container-based Application Initial Placement}
+\label{container-based-placement}
+Piraghaj et al \cite{Piraghaj:2016bw} first propose an architecture for container-based resource management. In this architecture, it allows the cloud providers to customize the size or type of VM when allocating applications instead of traditional fixed size VM. They determine the size of VM by two steps, in a pre-execution phase, they perform clustering technique on historical workload data from Google Cluster Data. In this way, they assert that the applications with similar workload pattern are clustered into the same group. In the execution phase, when a number of deployment requests of container arrives, they perform First Fit on existing VMs. If new VMs need to be initiated, they first determines the size of VMs by some policies such as utilization based Resource allocation or requested resource allocation. Then, the containers are allocated to certain size of VMs. 
+Then, they again apply First Fit to allocate VMs to PMs. 
+
+Mann's research \cite{Mann:2016hx} is the earliest study which realizes when deploying applications or containers, the VM size selection and VM placement should be considered together because they are interact with each other. The paper claims ``it would be advantageous to combine into a single VM as many tasks as possible, on the other hand, too big VMs limit the consolidation possibilities''.  They apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. The results show that the solutions improved with the VM selection has more knowledge of the PMs' capacity.
+
+There are mainly three reasons for us to propose a distinct approach from Piraghaj \cite{Piraghaj:2016bw} to solve the container-based placement problem. First, their proposed architecture assumes arbitrary size of VM can be created when requests arrive. In order to adapt to these architecture, cloud providers need to pay huge amount of upfront investment to modify the current system. While our assumption is that the container-based architecture is based on traditional IaaS, where fix-size VMs provide the fundamental resources. Second, from the perspective of energy efficiency, the allocation of container and VM interact with each other. That is, the minimum number of VMs does not necessary lead to the minimum number of PMs, because the type of VMs also affect the results. This inspires us to simultaneously allocate containers and VMs. Third, their approach does not consider the OS requirement of containers. We argue that this is another critical reason for deploying containers into different VMs besides the ``limit the consolidation possibilities'' argument states by Mann.
+% Without this constraint, all containers can be simply allocated to homogeneous VMs which can be solved by traditional VM-based approaches.
+
+% Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralized slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
+
+\subsubsection{VM-based Application Initial Placement}
+This section reviews several research focused on VM-based placement, as mentioned, we mainly focus on their models.
+
+\begin{table}[]
+\centering
+\caption{A Comparison of different models and approaches}
+\label{vm-based-comparison}
+\scalebox{0.7}{
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\multicolumn{1}{c}{Research}                      & Resources        & Algorithm                     & \multicolumn{1}{l}{Power model} & Wastage model                             & \multicolumn{1}{l}{Objective} \\ \midrule
+\multicolumn{1}{c}{Xu et al \cite{Xu:2010vh}}   & CPU and RAM      & GGA and Fuzzy multi-objective & Linear                          & balance  resources & three                         \\
+\multicolumn{1}{c}{Gao et al \cite{Gao:2013gg}} & CPU and RAM      & Ant Colony Optimization       & Linear                          & balance  resources & Two                           \\
+Ferdaus et al \cite{Ferdaus:2014ep}             & CPU, RAM, and IO & Ant Colony Optimization       & Linear                          & Sum of  resources          & Single                        \\
+Wang and Xia \cite{Wang:2016eha}                & CPU and RAM      & MIP                           & Cubical                         & No                                        & Single                        \\
+Wilcox et al \cite{Wilcox:2011ea}               & CPU and RAM      & GGA                           & Linear                          & Sum of resources          & Single    \\
+Xiong and Xu \cite{Xiong:2014jq}               & CPU,RAM,Bandwidth,Disk      & PSO & Non-linear & Sum of resources          & Single \\ \bottomrule
+\end{tabular}
+}
+\end{table}
 
 Gao et al \cite{Gao:2013gg} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They model multi-dimensional resource utilization based on vector algebra complementary resource utilization capturing technique \cite{Mishra:2011bz}. They propose a \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they apply a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007jr}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
 
@@ -409,23 +446,7 @@ Xiong and Xu \cite{Xiong:2014jq} propose a PSO based approach to solve the probl
 
 
 
-\begin{table}[]
-\centering
-\caption{My caption}
-\label{my-label}
-\scalebox{0.7}{
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-\multicolumn{1}{c}{Research}                      & Resources        & Algorithm                     & \multicolumn{1}{l}{Power model} & Wastage model                             & \multicolumn{1}{l}{Objective} \\ \midrule
-\multicolumn{1}{c}{Xu et al \cite{Xu:2010vh}}   & CPU and RAM      & GGA and Fuzzy multi-objective & Linear                          & balance  resources & three                         \\
-\multicolumn{1}{c}{Gao et al \cite{Gao:2013gg}} & CPU and RAM      & Ant Colony Optimization       & Linear                          & balance  resources & Two                           \\
-Ferdaus et al \cite{Ferdaus:2014ep}             & CPU, RAM, and IO & Ant Colony Optimization       & Linear                          & Sum of  resources          & Single                        \\
-Wang and Xia \cite{Wang:2016eha}                & CPU and RAM      & MIP                           & Cubical                         & No                                        & Single                        \\
-Wilcox et al \cite{Wilcox:2011ea}               & CPU and RAM      & GGA                           & Linear                          & Sum of resources          & Single    \\
-Xiong and Xu \cite{Xiong:2014jq}               & CPU,RAM,Bandwidth,Disk      & PSO & Non-linear & Sum of resources          & Single \\ \bottomrule
-\end{tabular}
-}
-\end{table}
+
 % Because of its NP-hard nature, several researchers propose well-known bin-packing heuristics
 % First Fit (FF), First Fit Decreasing (FFD), Best Fit (BF) and etc. These algorithms have constant-factor approximation to bin-packing problems. However, VM placement is more complex than bin-packing problem \cite{Mann:2015ua}, 
 
@@ -459,12 +480,6 @@ Xiao et al \cite{Xiao:2015ik} make two contributions, first, they build a quadra
 
 % Beloglazov and Buyya \cite{Beloglazov:2012bw} propose
 
-\subsection{Container-based Consolidation Techniques}
-Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralized slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
-
-Piraghaj et al \cite{Piraghaj:2016bw} propose an architecture for container-based resource management. Their allocation approach is policy-based, where it allocates each VM with containers until its estimated utilization above 90\%. This heuristic is similar to First Fit, it is fast but does not guarantee global optimal.
-
-Mann's research \cite{Mann:2016hx} is the earliest study that realized the VM selection and VM placement should be considered together. Although his paper does not mention the term ``container placement'', it actually allocates containers to VMs. They apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. They show that the results improved with an algorithm which has more knowledge of the PMs' capacity. However, he still consider these two operations separately, while in our thesis, we are going to consider it together.
 
 
 

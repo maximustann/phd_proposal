@@ -1,7 +1,9 @@
 \section{Research Goals}
+As previous section introduced, we aims at providing a series of approaches to continuously optimize the a joint allocation of VMs and containers that considers three consolidation scenarios: application initial placement, periodic consolidation, and Dynamic consolidation. 
 % In this thesis, we aims at providing a series of approaches to continuously optimize the a joint allocation of VMs and containers that considers three consolidation scenarios: Initialization, global consolidation, Dynamic consolidation. In addition, the static allocation normally involves with large amount of variables which is particular difficult to optimize. We are also going to propose a method to solve this problem.  These approaches combine element of AI planning, to ensure the objectives and constraint fulfillment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims at determining a flexible way in creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
 
 \subsection{Objective One: Develop EC-based approaches for the single objective joint allocation of containers and VMs}
+\label{sec:obj1}
 
 Currently, most research focus on VM-based server consolidation technique. They often modeled this problem as a vector bin-packing problem \cite{Zhang:2016cx}. Container adds an extra layer of abstraction on top of VM. The placement problem has become a two-step procedure, in the first step, containers are packed into VMs and then VMs are consolidated into physical machines. These two steps are inter-related to each other. Previous research \cite{Piraghaj:2015uf} solve this problem in separated steps where the first step allocate containers to VMs and the second step allocate VMs to PMs with simple bin-packing heuristics which leads to local optima. We will consider these two allocation simultaneously to reach a near-optima solution.
 \begin{enumerate}
@@ -19,8 +21,10 @@ Currently, most research focus on VM-based server consolidation technique. They 
 \end{enumerate}
 \subsection{Objective Two: Develop EC-based approaches for the multi-objective joint allocation problem}
 
-As previous section (see \ref{sec:motivation}) mentioned, the task is multi-objective since the number of VM migration has to be minimized while keep the overall energy low. In addition, periodic optimization is a time-dependent problem which means the optimal consolidation in previous operation might lead to more migrations in the current consolidation. The robustness of a data center is particularly important. The robustness measures the stableness of result of consolidation.
-Furthermore, we will investigate proactive approaches - considering future allocation.
+As previous section (see \ref{sec:motivation}) mentioned, the task is multi-objective since the number of VM migration has to be minimized while keep the overall energy low. In addition, periodic optimization is a time-dependent problem which means the optimal consolidation in previous operation might lead to more migrations in the current consolidation. The robustness of a data center is particularly important. 
+
+% The robustness measures the stableness of result of consolidation.
+% Furthermore, we will investigate proactive approaches - considering future allocation.
 % In order to measure the degree of robustness, we need to design a robustness measure. The second sub-objective is to design static consolidation algorithm with considering its previous immediate result. The third objective extends the second objective to a more general case, considering both previous immediate and next allocation. The evaluation of algorithm is based on analytical analysis of fitness functions and robustness measure. 
 
 \begin{enumerate}
