@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  23 AUG 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  24 AUG 2017 20:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -577,10 +577,10 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 <pics/workflow_management.png, id=26, 1027.84pt x 435.6275pt>
 File: pics/workflow_management.png Graphic file (type png)
 <use pics/workflow_management.png>
-Package pdftex.def Info: pics/workflow_management.png  used on input line 12. o
-n input line 12.
+Package pdftex.def Info: pics/workflow_management.png  used on input line 15. o
+n input line 15.
 Package pdftex.def Info: Requested size: 308.71104pt x 130.84213pt on input lin
-e 12.
+e 15.
  [1
 
 
@@ -691,21 +691,21 @@ til.png>]
 LaTeX Warning: Citation `Piraghaj:2017vi' on page 15 undefined on input line 18
 0.
 
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 201
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 202
 .
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
-LaTeX Warning: Citation `:2013tn' on page 15 undefined on input line 203.
+LaTeX Warning: Citation `:2013tn' on page 15 undefined on input line 204.
 
 <pics/bin_packing_problem.png, id=86, 628.59843pt x 306.39468pt>
 File: pics/bin_packing_problem.png Graphic file (type png)
 <use pics/bin_packing_problem.png>
-Package pdftex.def Info: pics/bin_packing_problem.png  used on input line 211. 
-on input line 211.
+Package pdftex.def Info: pics/bin_packing_problem.png  used on input line 213. 
+on input line 213.
 Package pdftex.def Info: Requested size: 264.61331pt x 128.97942pt on input lin
-e 211.
+e 213.
 [15]
 Underfull \vbox (badness 2626) has occurred while \output is active []
 
@@ -733,7 +733,9 @@ e 280.
 Package pdftex.def Info: Requested size: 132.30666pt x 195.1986pt on input line
  280.
 
-[18 <./pics/gp-tree.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 <./pics/gp-tree.png>]
 <pics/consolidate.png, id=109, 764.8575pt x 190.46156pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
@@ -769,27 +771,28 @@ Overfull \hbox (0.74336pt too wide) in paragraph at lines 353--355
 rent ap-pli-ca-tions' uti-liza-tion records
  []
 
-[21]
-Overfull \hbox (1.65872pt too wide) in paragraph at lines 397--399
-[]\OT1/ppl/m/n/10.95 This sec-tion first dis-cusses container-based ap-proaches
- and their draw-backs. Then, based
- []
+[21] [22]
 
-[22]
+LaTeX Warning: Citation `:2013tn' on page 23 undefined on input line 418.
+
+
+LaTeX Warning: Citation `Bard:1982ud' on page 23 undefined on input line 418.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 415.
+               Default added (so using `tbp') on input line 427.
 
 
-Overfull \hbox (13.50563pt too wide) in paragraph at lines 430--431
+Overfull \hbox (13.50563pt too wide) in paragraph at lines 442--443
  [][] 
  []
 
 
-Overfull \hbox (28.31529pt too wide) in paragraph at lines 433--434
-\OT1/ppl/m/n/10.95 ob-jec-tives: min-i-miz-ing power con-sump-tion and re-sourc
-e wastage. They model multi-dimensional
- []
+LaTeX Warning: Citation `Wood:2009tw' on page 23 undefined on input line 448.
+
+
+LaTeX Warning: Citation `Beloglazov:2010vm' on page 23 undefined on input line 
+448.
 
 [23] [24] [25])) [26]
 \openout2 = `preliminary.aux'.
@@ -1015,10 +1018,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6282 strings out of 493675
- 92327 string characters out of 6155645
- 163601 words of memory out of 5000000
- 9385 multiletter control sequences out of 15000+600000
+ 6287 strings out of 493675
+ 92401 string characters out of 6155645
+ 163627 words of memory out of 5000000
+ 9390 multiletter control sequences out of 15000+600000
  50064 words of font info for 141 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
  42i,10n,43p,1374b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1033,7 +1036,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (57 pages, 1144571 bytes).
+Output written on proj_report_outline.pdf (57 pages, 1146560 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams

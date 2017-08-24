@@ -183,6 +183,7 @@ Container as a Service (CaaS) \cite{Piraghaj:2017vi} is a new service model whic
 CaaS has advantages of both IaaS and PaaS  but without their disadvantages. On one hand - similar to PaaS - CaaS allows Cloud providers to manage resource in a fine granularity with containers, therefore, it may lead to high utilization of resources. On the other hand - similar to IaaS - CaaS allows customers to customize their software environment without being constrained by platforms. Therefore, it has more flexibility than PaaS.
 	
 \subsection{Bilevel Optimization}
+\label{bilevel}
 
 A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one problem is embedded within another. The outer optimization is referred to as the \emph{upper-level} problem, while the inner optimization is referred to as the \emph{lower-level} problem . 
 
@@ -205,6 +206,7 @@ Bilevel optimization problem has a hierarchical structure which may introduce di
 In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995hu}, management: network facility location \cite{Sun:2008gq},  and engineering related: optimal design \cite{KirjnerNeto:1998ef}. 
 
 \subsection{Vector Bin Packing Problem}
+\label{vector_bin_packing}
 
 \begin{figure}
 	\centering
@@ -232,9 +234,7 @@ The majority of current implementations of EC algorithms descend from three majo
 and \emph{genetic programming}.
 
 \subsubsection{Genetic Algorithm}
-GA \cite{Holland:1962fy} was introduced by Holland. Since then, a large number of applications have applied GA \cite{DeJong:1992vk, DeJong:1992ws} as their search mechanism.
-
-In a GA, a population of chromosomes which represents the solutions of the problem are often represented as a fixed length string. Each entry or bit can be continuous, discrete or even alphabets depending on the problem.  The evolution often starts from randomly generated population followed by an iterative process called generation.  In each generation, the fitness value of chromosomes is evaluated according to a defined fitness function.  Then, genetic operators such as mutation, crossover are applied on the solutions so that they are modified. As a search mechanism, these operators move solutions to explore the search space. New generation of solutions are then evaluated by the fitness function.  This evolutionary procedure ends with a predefined a generation number or a satisfactory level of fitness has been reached.
+GA \cite{Holland:1962fy} was introduced by Holland. Since then, a large number of applications \cite{DeJong:1992vk, DeJong:1992ws} have applied GA  as their search mechanism. In a GA, a population of chromosomes which represents the solutions of the problem are often represented as a fixed length string. Each entry or bit can be continuous, discrete or even alphabets depending on the problem.  The evolution often starts from randomly generated population followed by an iterative process called generation.  In each generation, the fitness value of chromosomes is evaluated according to a defined fitness function.  Then, genetic operators such as mutation, crossover are applied on the solutions so that they are modified. As a search mechanism, these operators move solutions to explore the search space. New generation of solutions are then evaluated by the fitness function.  This evolutionary procedure ends with a predefined a generation number or a satisfactory level of fitness has been reached.
 
 \begin{figure}
 	\centering
@@ -390,27 +390,39 @@ Finally, a consolidation plan includes four major items:
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 \section{Related Work}
-\subsection{Application Initial Placement}
-As Section \ref{scenarios} mentioned, application initial placement is one of the major process in resource management.
-Cloud users request a number of resources represented by VMs or containers with certain configurations, the task for cloud provider is to deploy these resources (VMs or containers) to a minimum number of physical machines (PM) because the energy consumption is proportional to the active PMs.
+In this section, we summarize the related works in the terms of three resource management scenarios: application initial placement, periodic consolidation and dynamic consolidation, corresponding to our proposed objectives. 
+We would first analyze the container-based approaches, discuss their models and problem solving methodologies in each scenario. So far, there are few research about container-based consolidation. In order to borrow some useful ideas from previous studies, we will discuss some similar VM-based approaches. 
 
-This section first discusses container-based approaches and their drawbacks. Then, based on their drawbacks, we will review the reasons for our first objective (see \ref{sec:obj1}): propose EC-based approaches for solving the joint allocation of containers and VMs. Since there are only few research study the container-based placement and none of them considers it as a bilevel optimization problem, we will have to propose a model to formulate this problem. Thus, we will review a number of VM-based placement and mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
+
+\subsection{Application Initial Placement}
+Application initial placement is one of the major process in resource management as discussed in Section \ref{scenarios}.
+Cloud users request a number of resources represented by VMs or containers with certain configurations, the task for cloud provider is to deploy these resources (wrapped with VMs or containers) to a minimum number of physical machines (PM) as the number of PM is proportional to the energy consumption. The optimization objective is to minimize the energy consumption.
+
+This section first discusses container-based approaches including modeling and methodology. Then, we will discuss the problem in their approaches and review the reasons that their approach cannot obtain the near optimal energy consumption. Furthermore, in our first objective (Section \ref{sec:obj1}), we intend to propose a bilevel optimization to solve the problem. So far there is no research consider the placement problem as a bilevel optimization problem. Therefore, we will review a number of VM-based placement to learn from their models and problem solving approaches. 
+
+% since there are only few research study the  container-based placement and none of them considers it as a bilevel optimization problem, specifically, each level of optimization problem is a bin packing problem.  
+
+
+We will first review a number of approaches solving the problem with traditional bin packing approaches. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 \subsubsection{Container-based Application Initial Placement}
 \label{container-based-placement}
-Piraghaj et al \cite{Piraghaj:2016bw} first propose an architecture for container-based resource management. In this architecture, it allows the cloud providers to customize the size or type of VM when allocating applications instead of traditional fixed size VM. They determine the size of VM by two steps, in a pre-execution phase, they perform clustering technique on historical workload data from Google Cluster Data. In this way, they assert that the applications with similar workload pattern are clustered into the same group. In the execution phase, when a number of deployment requests of container arrives, they perform First Fit on existing VMs. If new VMs need to be initiated, they first determines the size of VMs by some policies such as utilization based Resource allocation or requested resource allocation. Then, the containers are allocated to certain size of VMs. 
+Piraghaj et al \cite{Piraghaj:2016bw} first propose an architecture for container-based resource management. In this architecture, it allows the cloud providers to customize the size or type of VM when allocating applications instead of traditional fixed size VM. They determine the size of VM by two steps, in a pre-execution phase, they perform clustering technique on historical workload data from Google Cluster Data. In this way, they assert that the applications with similar workload pattern can be categorized into the same group. In the execution phase, when a number of deployment requests of container arrives, if there are enough available resources in the existing VMs, they perform First Fit these containers. If new VMs need to be initiated, they first determines the size of VMs by designed policies such as utilization based Resource allocation or requested resource allocation. Then, the containers are allocated to certain size of VMs. 
 Then, they again apply First Fit to allocate VMs to PMs. 
 
 Mann's research \cite{Mann:2016hx} is the earliest study which realizes when deploying applications or containers, the VM size selection and VM placement should be considered together because they are interact with each other. The paper claims ``it would be advantageous to combine into a single VM as many tasks as possible, on the other hand, too big VMs limit the consolidation possibilities''.  They apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. The results show that the solutions improved with the VM selection has more knowledge of the PMs' capacity.
 
-There are mainly three reasons for us to propose a distinct approach from Piraghaj \cite{Piraghaj:2016bw} to solve the container-based placement problem. First, their proposed architecture assumes arbitrary size of VM can be created when requests arrive. In order to adapt to these architecture, cloud providers need to pay huge amount of upfront investment to modify the current system. While our assumption is that the container-based architecture is based on traditional IaaS, where fix-size VMs provide the fundamental resources. Second, from the perspective of energy efficiency, the allocation of container and VM interact with each other. That is, the minimum number of VMs does not necessary lead to the minimum number of PMs, because the type of VMs also affect the results. This inspires us to simultaneously allocate containers and VMs. Third, their approach does not consider the OS requirement of containers. We argue that this is another critical reason for deploying containers into different VMs besides the ``limit the consolidation possibilities'' argument states by Mann.
+There are mainly three reasons for us to propose a distinct approach from Piraghaj \cite{Piraghaj:2016bw} to solve the container-based placement problem. First, their proposed architecture assumes arbitrary size of VM can be created when requests arrive. In order to adapt to these architecture, cloud providers need to pay huge amount of upfront investment to modify the current system. While our assumption is that the container-based architecture is based on traditional IaaS, where fix-size VMs provide the fundamental resources. Second, from the perspective of energy efficiency, the allocation of container and VM interact with each other. That is, the minimum number of VMs does not necessary lead to the minimum number of PMs, because the type of VMs also affect the results. Therefore, their approach cannot guarantee the energy consumption is near optimal. This inspires us to simultaneously allocate containers and VMs. Third, both two approaches did not consider the OS requirement of containers or applications. We argue that this is another critical reason for deploying containers into different VMs besides the ``limit the consolidation possibilities'' argument states by Mann \cite{Mann:2016hx}.
+
+In order to solve the two-level of optimization problem, we believe this problem can be modeled as a bilevel optimization \cite{Colson:2007bu} as described in detailed in Section \ref{bilevel}. Bilevel optimization is a strongly NP-hard problem \cite{:2013tn}, therefore, traditional approaches such as Branch-and-bound \cite{Bard:1982ud} can only be applied in very small problems, or convert the problem into a single-level optimization problem.  Evolutionary algorithms, on the other hand, becoming popular approaches in this field \cite{Wang:2005fa, Sinha:2013tn}. 
+
 % Without this constraint, all containers can be simply allocated to homogeneous VMs which can be solved by traditional VM-based approaches.
 
 % Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralized slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
 
 \subsubsection{VM-based Application Initial Placement}
-This section reviews several research focused on VM-based placement, as mentioned, we mainly focus on their models.
+This section first review a number of traditional approach for the VM placement problem. Their drawback will be presented. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
 
 \begin{table}[]
 \centering
@@ -426,11 +438,16 @@ Ferdaus et al \cite{Ferdaus:2014ep}             & CPU, RAM, and IO & Ant Colony 
 Wang and Xia \cite{Wang:2016eha}                & CPU and RAM      & MIP                           & Cubical                         & No                                        & Single                        \\
 Wilcox et al \cite{Wilcox:2011ea}               & CPU and RAM      & GGA                           & Linear                          & Sum of resources          & Single    \\
 Xiong and Xu \cite{Xiong:2014jq}               & CPU,RAM,Bandwidth,Disk      & PSO & Non-linear & Sum of resources          & Single \\ \bottomrule
-\end{tabular}
+\end{tabular}{}
 }
 \end{table}
 
-Gao et al \cite{Gao:2013gg} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They model multi-dimensional resource utilization based on vector algebra complementary resource utilization capturing technique \cite{Mishra:2011bz}. They propose a \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they apply a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007jr}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
+
+% As previous Section \ref{vector_bin_packing} mentioned , VM placement problem is often modeled as vector bin packing problem because they are very structurally similar. 
+
+Most of the works model VM placement problem as variants of bin packing problem and propose extensions of greedy-based heuristics such as First Fit Decreasing (FFD) \cite{Wood:2009tw}, Best Fit, Best Fit Decreasing \cite{Beloglazov:2010vm} etc. However, as VM placement is an NP-hard problem, greedy-based approaches are not  guaranteed to generate near optimal solutions. Mishra and Sahoo's paper \cite{Mishra:2011bz} further analyze and discuss the drawbacks of these approaches. They found that, VM placement can only be modeled as vector bin packing (see Section \ref{vector_bin_packing}) instead of standard bin packing. Another drawback of traditional bin packing heuristic is that they do not consider the balance among resources which is a critical issue for vector bin packing problem. They further list five principles for a good design of objective function that the core idea is to capture the balance among resources.
+
+Based on this intuition, Gao et al \cite{Gao:2013gg} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic using a vector algebra complementary resource utilization model proposed by Mishra \cite{Mishra:2011bz}. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They apply the \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they use a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007jr}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
 
 Xu and Fortes \cite{Xu:2010vh} propose a multi-objective VM placement approach with three objectives: minimizing total resource wastage, power consumption and thermal dissipation costs. They applied an improved grouping genetic algorithm (GGA) with fuzzy multi-objective evaluation. Their wastage by calculating as differences between the smallest normalized residual resource and the others. They also applied a linear power model to estimate the power consumption \cite{Lien:2007it}.  They conduct experiments on synthetic data and compare with six traditional approaches including First Fit Decreasing (FFD), Best Fit Decreasing (BFD) and single-objective grouping GA. The results showed the superior performance than other approaches. 
 
@@ -443,6 +460,9 @@ Xu and Fortes \cite{Xu:2010vh} propose a multi-objective VM placement approach w
 \end{equation}
 
 Xiong and Xu \cite{Xiong:2014jq} propose a PSO based approach to solve the problem. Their major contribution is using a total Euclidean distance $\delta$ to represent the distance between current resource utilization and the optimal resource utilization (see equation \ref{distance}) where $d$ is the dimension of resources, $u_j^i$ is the current resource utilization of $j$ in a PM $i$, $ubest_i$ is the predefined optimal resource utilization (e.g 70\% CPU utilization). Another contribution is their representation used in PSO. They represent the allocation of each VM to a PM as a probability and let particles search through the indirect solution space.
+
+
+In summary, most of VM-based placement approaches consider two or three resources (I/O has not been considered in many approaches because they assume hard disk is shared among VMs). After Mishra unreal the principles of vector bin packing, most research apply a balance-measure among resources as their objectives. EC approaches are widely used because they are better performed than traditional heuristics and faster than ILP methods.
 
 
 

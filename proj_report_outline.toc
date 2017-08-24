@@ -30,9 +30,9 @@
 \contentsline {subsection}{\numberline {2.2.1}Application Initial Placement}{22}
 \contentsline {subsubsection}{Container-based Application Initial Placement}{22}
 \contentsline {subsubsection}{VM-based Application Initial Placement}{23}
-\contentsline {subsection}{\numberline {2.2.2}Periodic consolidation}{24}
+\contentsline {subsection}{\numberline {2.2.2}Periodic consolidation}{25}
 \contentsline {subsection}{\numberline {2.2.3}VM-based Dynamic Consolidation Techniques}{25}
-\contentsline {subsection}{\numberline {2.2.4}Techniques for Bilevel optimization}{25}
+\contentsline {subsection}{\numberline {2.2.4}Techniques for Bilevel optimization}{26}
 \contentsline {chapter}{\numberline {3}Preliminary Work}{27}
 \contentsline {section}{\numberline {3.1}Related models}{27}
 \contentsline {subsection}{\numberline {3.1.1}Workload model}{27}

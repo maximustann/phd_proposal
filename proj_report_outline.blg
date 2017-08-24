@@ -15,6 +15,9 @@ Warning--I didn't find a database entry for "Piraghaj:2017vi"
 Warning--I didn't find a database entry for "vm_technology"
 Warning--I didn't find a database entry for ":2013tn"
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Bard:1982ud"
+Warning--I didn't find a database entry for "Wood:2009tw"
+Warning--I didn't find a database entry for "Beloglazov:2010vm"
 Warning--I didn't find a database entry for "Energy_Service_2"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
@@ -22,7 +25,7 @@ Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
 You've used 126 entries,
             2253 wiz_defined-function locations,
-            1322 strings with 27885 characters,
+            1328 strings with 27963 characters,
 and the built_in function-call counts, 43835 in all, are:
 = -- 4298
 > -- 2252
