@@ -7,7 +7,7 @@ A level-1 auxiliary file: preliminary.aux
 A level-1 auxiliary file: contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-I was expecting a `,' or a `}'---line 1194 of file sample.bib
+I was expecting a `,' or a `}'---line 1223 of file sample.bib
  : month = 06
  :           /2008
 I'm skipping whatever remains of this entry
@@ -23,45 +23,45 @@ Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 126 entries,
+You've used 128 entries,
             2253 wiz_defined-function locations,
-            1328 strings with 27963 characters,
-and the built_in function-call counts, 43835 in all, are:
-= -- 4298
-> -- 2252
+            1338 strings with 28248 characters,
+and the built_in function-call counts, 44394 in all, are:
+= -- 4354
+> -- 2276
 < -- 0
-+ -- 926
-- -- 800
-* -- 3649
-:= -- 7199
-add.period$ -- 375
-call.type$ -- 126
-change.case$ -- 777
++ -- 936
+- -- 808
+* -- 3692
+:= -- 7293
+add.period$ -- 381
+call.type$ -- 128
+change.case$ -- 787
 chr.to.int$ -- 0
-cite$ -- 130
-duplicate$ -- 1386
-empty$ -- 3305
-format.name$ -- 800
-if$ -- 8920
+cite$ -- 132
+duplicate$ -- 1404
+empty$ -- 3351
+format.name$ -- 808
+if$ -- 9034
 int.to.chr$ -- 0
-int.to.str$ -- 126
-missing$ -- 124
-newline$ -- 627
-num.names$ -- 252
-pop$ -- 663
+int.to.str$ -- 128
+missing$ -- 126
+newline$ -- 637
+num.names$ -- 256
+pop$ -- 670
 preamble$ -- 1
-purify$ -- 652
+purify$ -- 660
 quote$ -- 0
-skip$ -- 893
+skip$ -- 904
 stack$ -- 0
-substring$ -- 2848
-swap$ -- 369
+substring$ -- 2883
+swap$ -- 373
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 500
+type$ -- 508
 warning$ -- 4
-while$ -- 455
-width$ -- 129
-write$ -- 1249
+while$ -- 461
+width$ -- 131
+write$ -- 1268
 (There was 1 error message)

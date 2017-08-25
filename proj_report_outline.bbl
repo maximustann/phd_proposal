@@ -414,6 +414,12 @@
 \newblock In {\em Service-Oriented and Cloud Computing}. Springer International
   Publishing, Cham, Aug. 2016, pp.~137--151.
 
+\bibitem{Manvi:2014hm}
+{\sc Manvi, S.~S., and Shyam, G.~K.}
+\newblock {Resource management for Infrastructure as a Service (IaaS) in cloud
+  computing - A survey.}
+\newblock {\em J. Network and Computer Applications 41\/} (2014), 424--440.
+
 \bibitem{Mathieu:1994uh}
 {\sc Mathieu, R., Pittard, L., and Anandalingam, G.}
 \newblock {Genetic algorithm based approach to bi-level linear programming}.
@@ -584,6 +590,11 @@
   with Indirect Representation.}
 \newblock {\em Recent Advances on Hybrid Intelligent Systems 451}, Chapter 28
   (2013), 349--359.
+
+\bibitem{Sprott:2004wt}
+{\sc Sprott, D., and Wilkes, L.}
+\newblock {Understanding service-oriented architecture}.
+\newblock {\em The Architecture Journal\/} (2004).
 
 \bibitem{Energy_1}
 {\sc Srikantaiah, S., Kansal, A., and Zhao, F.}
