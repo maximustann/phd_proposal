@@ -12,56 +12,58 @@ I was expecting a `,' or a `}'---line 1223 of file sample.bib
  :           /2008
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
+Warning--I didn't find a database entry for "Esposito:2016us"
 Warning--I didn't find a database entry for "vm_technology"
 Warning--I didn't find a database entry for ":2013tn"
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "Bard:1982ud"
 Warning--I didn't find a database entry for "Wood:2009tw"
 Warning--I didn't find a database entry for "Beloglazov:2010vm"
+Warning--I didn't find a database entry for "Ferreto:2011vz"
 Warning--I didn't find a database entry for "Energy_Service_2"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 128 entries,
+You've used 125 entries,
             2253 wiz_defined-function locations,
-            1338 strings with 28248 characters,
-and the built_in function-call counts, 44394 in all, are:
-= -- 4354
-> -- 2276
+            1325 strings with 27553 characters,
+and the built_in function-call counts, 43126 in all, are:
+= -- 4234
+> -- 2185
 < -- 0
-+ -- 936
-- -- 808
-* -- 3692
-:= -- 7293
-add.period$ -- 381
-call.type$ -- 128
-change.case$ -- 787
++ -- 899
+- -- 774
+* -- 3577
+:= -- 7075
+add.period$ -- 372
+call.type$ -- 125
+change.case$ -- 761
 chr.to.int$ -- 0
-cite$ -- 132
-duplicate$ -- 1404
-empty$ -- 3351
-format.name$ -- 808
-if$ -- 9034
+cite$ -- 129
+duplicate$ -- 1377
+empty$ -- 3274
+format.name$ -- 774
+if$ -- 8789
 int.to.chr$ -- 0
-int.to.str$ -- 128
-missing$ -- 126
-newline$ -- 637
-num.names$ -- 256
-pop$ -- 670
+int.to.str$ -- 125
+missing$ -- 123
+newline$ -- 622
+num.names$ -- 250
+pop$ -- 650
 preamble$ -- 1
-purify$ -- 660
+purify$ -- 637
 quote$ -- 0
-skip$ -- 904
+skip$ -- 886
 stack$ -- 0
-substring$ -- 2883
-swap$ -- 373
+substring$ -- 2805
+swap$ -- 367
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 508
+type$ -- 496
 warning$ -- 4
-while$ -- 461
-width$ -- 131
-write$ -- 1268
+while$ -- 449
+width$ -- 128
+write$ -- 1238
 (There was 1 error message)

@@ -341,7 +341,7 @@ The server consolidation in data center can be applied to three \cite{Svard:2015
 
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
 \begin{enumerate}
-	\item \emph{Application initial placement} is applied when new applications or new VMs arrive and the problem is to allocate them into a minimum number of PMs.
+	\item \emph{Application initial placement} is applied when new applications or new VMs arrive and the problem is to allocate them into a minimum number of PMs \cite{Mishra:2012kx}.
 
 	In this problem, a set of applications or VMs are waiting in a queue. The resource capacity of the PM and usage by applications are characterized by a vector of resource utilizations including CPU, memory and etc. Then, the allocation system must select a minimum number of PMs to accommodate them so that after the allocation, the resource utilizations remain high. The problem is to consider the different combinations of applications so that the overall resource utilization is high. This problem is naturally modeled as a static bin-packing problem \cite{CoffmanJr:1996ui} which is a NP-hard problem meaning it is unlikely to find an optimal solution of a large problem. 
 
@@ -390,28 +390,33 @@ Finally, a consolidation plan includes four major items:
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 \section{Related Work}
-In this section, we summarize the related works in the terms of three resource management scenarios: application initial placement, periodic consolidation and dynamic consolidation, corresponding to our proposed objectives. 
-We would first analyze the container-based approaches, discuss their models and problem solving methodologies in each scenario. So far, there are few research about container-based consolidation. In order to borrow some useful ideas from previous studies, we will discuss some similar VM-based approaches. 
-
+In this section, we summarize the related works in the terms of three resource management processes: application initial placement, periodic consolidation and dynamic consolidation, corresponding to our proposed objectives. In each sub section, we analyze the container-based and VM-based approaches, discuss their models and methodologies. 
 
 \subsection{Application Initial Placement}
-Application initial placement is one of the major process in resource management as discussed in Section \ref{scenarios}.
-Cloud users request a number of resources represented by VMs or containers with certain configurations, the task for cloud provider is to deploy these resources (wrapped with VMs or containers) to a minimum number of physical machines (PM) as the number of PM is proportional to the energy consumption. The optimization objective is to minimize the energy consumption.
+Application initial placement is one of the major process in resource management as discussed in Section \ref{scenarios}. 
+The task of application initial placement for cloud provider is to deploy a number of VMs or containers to a minimum number of physical machines (PM), because energy consumption is proportional to the PM number.
 
-This section first discusses container-based approaches including modeling and methodology. Then, we will discuss the problem in their approaches and review the reasons that their approach cannot obtain the near optimal energy consumption. Furthermore, in our first objective (Section \ref{sec:obj1}), we intend to propose a bilevel optimization to solve the problem. So far there is no research consider the placement problem as a bilevel optimization problem. Therefore, we will review a number of VM-based placement to learn from their models and problem solving approaches. 
+This section first discusses container-based approaches including modeling and methodology. The modeling includes power model and wastage model. Then, we will discuss the disadvantages in their design and the reasons that their algorithm cannot obtain the near optimal energy consumption. We will review a number of VM-based placement including traditional bin packing and more advanced approaches.
+% Furthermore, in our first objective (Section \ref{sec:obj1}), we intend to propose a bilevel optimization to solve the problem. So far there is no research consider the placement problem as a bilevel optimization problem. Therefore, we will review a number of VM-based placement to learn from their models and problem solving approaches. 
 
 % since there are only few research study the  container-based placement and none of them considers it as a bilevel optimization problem, specifically, each level of optimization problem is a bin packing problem.  
 
 
-We will first review a number of approaches solving the problem with traditional bin packing approaches. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
+% We will first review a number of approaches solving the problem with traditional bin packing approaches. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
 \subsubsection{Container-based Application Initial Placement}
 \label{container-based-placement}
+
+This section will briefly discuss the models of container-based approaches. Furthermore, our main task is to discuss the design of separate concern of container placement and VM placement as well as the collaborative concern. This will lead to our first objective.
+
+There are only few container-based research in the literature which mainly follow the VM-based modeling. Piraghaj et al \cite{Piraghaj:2016bw} and Mann \cite{Mann:2016hx} both consider a linear energy model which is widely adopted in the literature \cite{Xavier:2017jl}. In terms of wastage model, so far, they did not consider the wastage among resources. In contrast, in most VM-based approaches, wastage has been widely considered. It will be discussed in the next section.  
+
+Different from VM-based placement approaches, container-based placement naturally has two-level of problem: allocate containers to VMs and allocate VMs to PMs. Some of the literature considers they are separate optimization tasks. 
 Piraghaj et al \cite{Piraghaj:2016bw} first propose an architecture for container-based resource management. In this architecture, it allows the cloud providers to customize the size or type of VM when allocating applications instead of traditional fixed size VM. They determine the size of VM by two steps, in a pre-execution phase, they perform clustering technique on historical workload data from Google Cluster Data. In this way, they assert that the applications with similar workload pattern can be categorized into the same group. In the execution phase, when a number of deployment requests of container arrives, if there are enough available resources in the existing VMs, they perform First Fit these containers. If new VMs need to be initiated, they first determines the size of VMs by designed policies such as utilization based Resource allocation or requested resource allocation. Then, the containers are allocated to certain size of VMs. 
 Then, they again apply First Fit to allocate VMs to PMs. 
 
-Mann's research \cite{Mann:2016hx} is the earliest study which realizes when deploying applications or containers, the VM size selection and VM placement should be considered together because they are interact with each other. The paper claims ``it would be advantageous to combine into a single VM as many tasks as possible, on the other hand, too big VMs limit the consolidation possibilities''.  They apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. The results show that the solutions improved with the VM selection has more knowledge of the PMs' capacity.
+Mann's research \cite{Mann:2016hx} is the earliest study which realizes this two level of placement are interact with each other, the VM size selection and VM placement should be considered together because they are interact with each other. The paper claims ``it would be advantageous to combine into a single VM as many tasks as possible, on the other hand, too big VMs limit the consolidation possibilities''.  They apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. The results show that the solutions improved with the VM selection has more knowledge of the PMs' capacity.
 
 There are mainly three reasons for us to propose a distinct approach from Piraghaj \cite{Piraghaj:2016bw} to solve the container-based placement problem. First, their proposed architecture assumes arbitrary size of VM can be created when requests arrive. In order to adapt to these architecture, cloud providers need to pay huge amount of upfront investment to modify the current system. While our assumption is that the container-based architecture is based on traditional IaaS, where fix-size VMs provide the fundamental resources. Second, from the perspective of energy efficiency, the allocation of container and VM interact with each other. That is, the minimum number of VMs does not necessary lead to the minimum number of PMs, because the type of VMs also affect the results. Therefore, their approach cannot guarantee the energy consumption is near optimal. This inspires us to simultaneously allocate containers and VMs. Third, both two approaches did not consider the OS requirement of containers or applications. We argue that this is another critical reason for deploying containers into different VMs besides the ``limit the consolidation possibilities'' argument states by Mann \cite{Mann:2016hx}.
 
@@ -462,7 +467,7 @@ Xu and Fortes \cite{Xu:2010vh} propose a multi-objective VM placement approach w
 Xiong and Xu \cite{Xiong:2014jq} propose a PSO based approach to solve the problem. Their major contribution is using a total Euclidean distance $\delta$ to represent the distance between current resource utilization and the optimal resource utilization (see equation \ref{distance}) where $d$ is the dimension of resources, $u_j^i$ is the current resource utilization of $j$ in a PM $i$, $ubest_i$ is the predefined optimal resource utilization (e.g 70\% CPU utilization). Another contribution is their representation used in PSO. They represent the allocation of each VM to a PM as a probability and let particles search through the indirect solution space.
 
 
-In summary, most of VM-based placement approaches consider two or three resources (I/O has not been considered in many approaches because they assume hard disk is shared among VMs). After Mishra unreal the principles of vector bin packing, most research apply a balance-measure among resources as their objectives. EC approaches are widely used because they are better performed than traditional heuristics and faster than ILP methods.
+In summary, most of VM-based placement approaches consider two or three resources (I/O has not been considered in many approaches because they assume that network attached storage (NAS) is used as a main storage along the cluster \cite{Murtazaev:2014eo}). After Mishra unreal the principles of vector bin packing, most research apply a balance-measure among resources as their objectives. EC approaches are widely used because they are better performed than traditional heuristics and faster than ILP methods.
 
 
 
@@ -476,12 +481,17 @@ In summary, most of VM-based placement approaches consider two or three resource
 % \label{sec:dynamic}
 
 % \section{Container-based Consolidation Techniques}
-% Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
+% Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or {}dynamic problem \cite{Beloglazov:2012bw}. 
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
 % \subsubsection{Affinity-aware VM Placement}
 
 
 \subsection{Periodic consolidation}
+Periodic consolidation (see \ref{scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud datacenter is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when it reaches a certain level. 
+Although periodic consolidation has been applied in VM-based Cloud for years \cite{Murtazaev:2014eo,Ferreto:2011vz}, it has not been studied in the new context of container-based Cloud. Therefore, this section will first discuss VM-based models, especially the migration models. Secondly, we will discuss the gaps in periodic consolidation in the VM-context, specifically, in terms of robustness, these gaps existed in both VM and container context. Similar to previous section, we will focus on the following aspects: migration model, resource model, workload model, algorithm and objectives.
+
+
+
 
 Murtazaev and Oh \cite{Murtazaev:2014eo} propose a Sercon algorithm which is a heuristic based on First and Best Fit to solve the periodic consolidation problem. They consider two resources CPU and memory with two optimization objectives, minimizing the energy consumption and the number of migration. They conduct experiments on synthetic data and compare with FFD. The results indicate that Sercon outperforms FFD in migration efficiency, meanwhile, the total energy consumption from Sercon and FFD are similar. 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  25 AUG 2017 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  26 AUG 2017 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -574,6 +574,10 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (./ProblemStatement3.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
+
+
+LaTeX Warning: Citation `Esposito:2016us' on page 1 undefined on input line 8.
+
 <pics/workflow_management.png, id=26, 1027.84pt x 435.6275pt>
 File: pics/workflow_management.png Graphic file (type png)
 <use pics/workflow_management.png>
@@ -581,15 +585,14 @@ Package pdftex.def Info: pics/workflow_management.png  used on input line 14. o
 n input line 14.
 Package pdftex.def Info: Requested size: 308.71104pt x 130.84213pt on input lin
 e 14.
- [1
+[1
 
 
-] [2 <./pics/workflow_management.png>])
-(./Motivation.tex [3] [4]) (./Goals.tex
+] [2 <./pics/workflow_management.png>]) (./Motivation.tex [3]) (./Goals.tex
+[4]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 5.
- [5] [6]) (./published.tex)
-(./organization.tex
+ [5]) (./published.tex [6]) (./organization.tex
 
 LaTeX Warning: Reference `' on page 7 undefined on input line 2.
 
@@ -773,28 +776,33 @@ rent ap-pli-ca-tions' uti-liza-tion records
 
 [21] [22]
 
-LaTeX Warning: Citation `:2013tn' on page 23 undefined on input line 418.
+LaTeX Warning: Citation `:2013tn' on page 23 undefined on input line 417.
 
 
-LaTeX Warning: Citation `Bard:1982ud' on page 23 undefined on input line 418.
+LaTeX Warning: Citation `Bard:1982ud' on page 23 undefined on input line 417.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 427.
+               Default added (so using `tbp') on input line 426.
 
 
-Overfull \hbox (13.50563pt too wide) in paragraph at lines 442--443
+Overfull \hbox (13.50563pt too wide) in paragraph at lines 441--442
  [][] 
  []
 
 
-LaTeX Warning: Citation `Wood:2009tw' on page 23 undefined on input line 448.
+LaTeX Warning: Citation `Wood:2009tw' on page 23 undefined on input line 447.
 
 
 LaTeX Warning: Citation `Beloglazov:2010vm' on page 23 undefined on input line 
-448.
+447.
 
-[23] [24] [25])) [26]
+[23] [24]
+
+LaTeX Warning: Citation `Ferreto:2011vz' on page 25 undefined on input line 485
+.
+
+[25])) [26]
 \openout2 = `preliminary.aux'.
 
  (./preliminary.tex
@@ -1018,13 +1026,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6289 strings out of 493675
- 92430 string characters out of 6155645
- 163632 words of memory out of 5000000
- 9392 multiletter control sequences out of 15000+600000
+ 6288 strings out of 493675
+ 92422 string characters out of 6155645
+ 163617 words of memory out of 5000000
+ 9391 multiletter control sequences out of 15000+600000
  50064 words of font info for 141 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 42i,10n,43p,1742b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,10n,43p,1849b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmmi10.pfb></usr/pkg/share/texmf-dist/fonts/type1/pub
@@ -1036,7 +1044,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (57 pages, 1147586 bytes).
+Output written on proj_report_outline.pdf (57 pages, 1145411 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams

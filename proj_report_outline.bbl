@@ -299,12 +299,6 @@
 {\sc Johnson, D.~S.}
 \newblock {Vector Bin Packing.}
 
-\bibitem{Jung:2010dt}
-{\sc Jung, G., Hiltunen, M.~A., Joshi, K.~R., Schlichting, R.~D., and Pu, C.}
-\newblock {Mistral - Dynamically Managing Power, Performance, and Adaptation
-  Cost in Cloud Infrastructures.}
-\newblock {\em ICDCS\/} (2010), 62--73.
-
 \bibitem{Kaplan:up01fR-k}
 {\sc Kaplan, J.~M., Forrest, W., and Kindler, N.}
 \newblock {Revolutionizing data center energy efficiency}, 2008.
@@ -441,12 +435,6 @@
 \newblock {On Theory of VM Placement - Anomalies in Existing Methodologies and
   Their Mitigation Using a Novel Vector Based Approach.}
 \newblock {\em IEEE CLOUD\/} (2011), 275--282.
-
-\bibitem{Moens:2011gk}
-{\sc Moens, H., Famaey, J., Latr{\'e}, S., Dhoedt, B., and De~Turck, F.}
-\newblock {Design and evaluation of a hierarchical application placement
-  algorithm in large scale clouds.}
-\newblock {\em Integrated Network Management\/} (2011), 137--144.
 
 \bibitem{Murtazaev:2014eo}
 {\sc Murtazaev, A., and Oh, S.}
@@ -716,13 +704,6 @@
 \newblock {Adaptive resource allocation for service-based systems}.
 \newblock In {\em Proceedings of the First Asia-Pacific Symposium on
   Internetware\/} (2009), ACM, p.~3.
-
-\bibitem{Yazir:2010bk}
-{\sc Yazir, Y.~O., Matthews, C., Farahbod, R., Neville, S.~W., Guitouni, A.,
-  Ganti, S., and Coady, Y.}
-\newblock {Dynamic Resource Allocation in Computing Clouds Using Distributed
-  Multiple Criteria Decision Analysis.}
-\newblock {\em IEEE CLOUD\/} (2010), 91--98.
 
 \bibitem{Yin:2000bt}
 {\sc Yin, Y.}
