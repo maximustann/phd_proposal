@@ -7,7 +7,7 @@ A level-1 auxiliary file: preliminary.aux
 A level-1 auxiliary file: contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-I was expecting a `,' or a `}'---line 1223 of file sample.bib
+I was expecting a `,' or a `}'---line 1244 of file sample.bib
  : month = 06
  :           /2008
 I'm skipping whatever remains of this entry
@@ -20,50 +20,54 @@ Warning--I didn't find a database entry for "Bard:1982ud"
 Warning--I didn't find a database entry for "Wood:2009tw"
 Warning--I didn't find a database entry for "Beloglazov:2010vm"
 Warning--I didn't find a database entry for "Ferreto:2011vz"
+Warning--I didn't find a database entry for "Ferreto:2011vza"
+Warning--I didn't find a database entry for "Viswanathan:2012uw"
+Warning--I didn't find a database entry for "Chen:2011ti"
+Warning--I didn't find a database entry for "Feller:2011vs"
 Warning--I didn't find a database entry for "Energy_Service_2"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 125 entries,
+You've used 124 entries,
             2253 wiz_defined-function locations,
-            1325 strings with 27553 characters,
-and the built_in function-call counts, 43126 in all, are:
-= -- 4234
-> -- 2185
+            1327 strings with 27452 characters,
+and the built_in function-call counts, 42678 in all, are:
+= -- 4183
+> -- 2178
 < -- 0
-+ -- 899
-- -- 774
-* -- 3577
-:= -- 7075
-add.period$ -- 372
-call.type$ -- 125
-change.case$ -- 761
++ -- 896
+- -- 772
+* -- 3550
+:= -- 7018
+add.period$ -- 369
+call.type$ -- 124
+change.case$ -- 757
 chr.to.int$ -- 0
-cite$ -- 129
-duplicate$ -- 1377
-empty$ -- 3274
-format.name$ -- 774
-if$ -- 8789
+cite$ -- 128
+duplicate$ -- 1353
+empty$ -- 3230
+format.name$ -- 772
+if$ -- 8683
 int.to.chr$ -- 0
-int.to.str$ -- 125
-missing$ -- 123
-newline$ -- 622
-num.names$ -- 250
-pop$ -- 650
+int.to.str$ -- 124
+missing$ -- 122
+newline$ -- 617
+num.names$ -- 248
+pop$ -- 643
 preamble$ -- 1
-purify$ -- 637
+purify$ -- 634
 quote$ -- 0
-skip$ -- 886
+skip$ -- 868
 stack$ -- 0
-substring$ -- 2805
-swap$ -- 367
+substring$ -- 2758
+swap$ -- 357
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 496
+type$ -- 492
 warning$ -- 4
-while$ -- 449
-width$ -- 128
-write$ -- 1238
+while$ -- 443
+width$ -- 127
+write$ -- 1227
 (There was 1 error message)
