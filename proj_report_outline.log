@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  28 AUG 2017 17:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  29 AUG 2017 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -574,10 +574,6 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (./ProblemStatement3.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
-
-
-LaTeX Warning: Citation `Esposito:2016us' on page 1 undefined on input line 8.
-
 <pics/workflow_management.png, id=26, 1027.84pt x 435.6275pt>
 File: pics/workflow_management.png Graphic file (type png)
 <use pics/workflow_management.png>
@@ -585,27 +581,33 @@ Package pdftex.def Info: pics/workflow_management.png  used on input line 14. o
 n input line 14.
 Package pdftex.def Info: Requested size: 308.71104pt x 130.84213pt on input lin
 e 14.
-[1
+ [1
 
 
-] [2 <./pics/workflow_management.png>]) (./Motivation.tex [3]) (./Goals.tex
-[4]
+] [2 <./pics/workflow_management.png>])
+(./Motivation.tex [3]) (./Goals.tex [4]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 5.
- [5]) (./published.tex) (./organization.tex
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 2.
+Overfull \hbox (3.93092pt too wide) in paragraph at lines 25--26
+\OT1/ppl/m/n/10.95 such as K-means, DB-Scan can be use-ful in cat-e-go-riz-ing 
+con-tain-ers in pre-de-fined groups.
+ []
+
+[5] [6]) (./published.tex) (./organization.tex
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 2.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 3.
+LaTeX Warning: Reference `' on page 7 undefined on input line 3.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 4.
+LaTeX Warning: Reference `' on page 7 undefined on input line 4.
 
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-) [6]) [7]
+)) [7]
 \openout2 = `literature_review.aux'.
 
  (./literature_review.tex [8
@@ -798,28 +800,7 @@ LaTeX Warning: Citation `Wood:2009tw' on page 24 undefined on input line 453.
 LaTeX Warning: Citation `Beloglazov:2010vm' on page 24 undefined on input line 
 453.
 
-[24]
-
-LaTeX Warning: Citation `Ferreto:2011vz' on page 25 undefined on input line 489
-.
-
-
-LaTeX Warning: Citation `Ferreto:2011vza' on page 25 undefined on input line 49
-1.
-
-[25]
-
-LaTeX Warning: Citation `Viswanathan:2012uw' on page 26 undefined on input line
- 495.
-
-
-LaTeX Warning: Citation `Chen:2011ti' on page 26 undefined on input line 495.
-
-
-LaTeX Warning: Citation `Feller:2011vs' on page 26 undefined on input line 495.
-
-
-[26])) [27]
+[24] [25] [26])) [27]
 \openout2 = `preliminary.aux'.
 
  (./preliminary.tex [28
@@ -1027,13 +1008,14 @@ deleted material, e.g., by typing `I$}'.
 [45
 
 ] [46]
-Underfull \hbox (badness 1168) in paragraph at lines 248--254
+Underfull \hbox (badness 1168) in paragraph at lines 264--270
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
 
-[47] [48] [49] [50] [51]) [52] (./proj_report_outline.aux (./introduction.aux)
-(./literature_review.aux) (./preliminary.aux) (./contribution.aux))
+[47] [48] [49] [50] [51] [52]) [53] (./proj_report_outline.aux
+(./introduction.aux) (./literature_review.aux) (./preliminary.aux)
+(./contribution.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1042,13 +1024,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6292 strings out of 493675
- 92490 string characters out of 6155645
- 163625 words of memory out of 5000000
- 9395 multiletter control sequences out of 15000+600000
+ 6290 strings out of 493675
+ 92455 string characters out of 6155645
+ 163645 words of memory out of 5000000
+ 9393 multiletter control sequences out of 15000+600000
  50064 words of font info for 141 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 42i,10n,43p,1849b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,10n,43p,1848b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmmi10.pfb></usr/pkg/share/texmf-dist/fonts/type1/pub
@@ -1060,10 +1042,10 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (58 pages, 1147388 bytes).
+Output written on proj_report_outline.pdf (59 pages, 1150387 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
+ 305 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

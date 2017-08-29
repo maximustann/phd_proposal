@@ -112,6 +112,12 @@
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
 \newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
 
+\bibitem{Chen:2011fl}
+{\sc Chen, M., Zhang, H., Su, Y.-Y., Wang, X., Jiang, G., and Yoshihira, K.}
+\newblock {Effective VM sizing in virtualized data centers}.
+\newblock In {\em 2011 IFIP/IEEE International Symposium on Integrated Network
+  Management (IM 2011)\/} (2011), IEEE, pp.~594--601.
+
 \bibitem{Cho:2016kz}
 {\sc Cho, J., and Kim, Y.}
 \newblock {Improving energy efficiency of dedicated cooling system and its
@@ -193,6 +199,11 @@
   Conference on Neural Network}}.
 \newblock Perth, 1995.
 
+\bibitem{Esposito:2016br}
+{\sc Esposito, C., Castiglione, A., and Choo, K.-K.~R.}
+\newblock {Challenges in Delivering Software in the Cloud as Microservices}.
+\newblock {\em IEEE Cloud Computing 3}, 5 (2016), 10--14.
+
 \bibitem{Falkenauer:1996hv}
 {\sc Falkenauer, E.}
 \newblock {A hybrid grouping genetic algorithm for bin packing}.
@@ -203,17 +214,15 @@
 \newblock {Power provisioning for a warehouse-sized computer.}
 \newblock {\em ISCA\/} (2007), 13.
 
-\bibitem{Farahnakian:2015vj}
-{\sc Farahnakian, F., Pahikkala, T., Liljeberg, P., Plosila, J., and Tenhunen,
-  H.}
-\newblock {Utilization Prediction Aware VM Consolidation Approach for Green
-  Cloud Computing.}
-\newblock {\em CLOUD\/} (2015).
-
 \bibitem{Feitelson:2002kn}
 {\sc Feitelson, D.~G.}
 \newblock {Workload Modeling for Performance Evaluation.}
 \newblock {\em Performance 2459}, Chapter 6 (2002), 114--141.
+
+\bibitem{Feller:2011vs}
+{\sc Feller, E., Rilling, L., and Morin, C.}
+\newblock {Energy-Aware Ant Colony Based Workload Placement in Clouds.}
+\newblock {\em GRID\/} (2011).
 
 \bibitem{Felter:2015ki}
 {\sc Felter, W., Ferreira, A., Rajamony, R., and Rubio, J.}
@@ -226,6 +235,13 @@
 \newblock {Virtual Machine Consolidation in Cloud Data Centers Using ACO
   Metaheuristic.}
 \newblock {\em Euro-Par 8632}, Chapter 26 (2014), 306--317.
+
+\bibitem{Ferreto:2011ii}
+{\sc Ferreto, T.~C., Netto, M. A.~S., Calheiros, R.~N., and De~Rose, C. A.~F.}
+\newblock {Server consolidation with migration control for virtualized data
+  centers}.
+\newblock {\em Future Generation Computer Systems 27}, 8 (Oct. 2011),
+  1027--1034.
 
 \bibitem{Forsman:2015ca}
 {\sc Forsman, M., Glad, A., Lundberg, L., and Ilie, D.}
@@ -257,12 +273,6 @@
 \newblock {Contact shape optimization: a bilevel programming approach}.
 \newblock {\em Structural and Multidisciplinary Optimization 20}, 3 (2000),
   214--221.
-
-\bibitem{Hieu:2015ub}
-{\sc Hieu, N.~T., Di~Francesco, M., and Yl{\"a}-J{\"a}{\"a}ski, A.}
-\newblock {Virtual Machine Consolidation with Usage Prediction for
-  Energy-Efficient Cloud Data Centers.}
-\newblock {\em CLOUD\/} (2015).
 
 \bibitem{Hindman:2011ux}
 {\sc Hindman, B., Konwinski, A., Zaharia, M., Ghodsi, A., Joseph, A.~D., Katz,
@@ -416,6 +426,13 @@
 \newblock {The NIST definition of cloud computing}.
 \newblock Tech. rep., National Institute of Standards and Technology,
   Gaithersburg, MD, Gaithersburg, MD, 2011.
+
+\bibitem{Meng:2010gh}
+{\sc Meng, X., Isci, C., Kephart, J.~O., 0002, L.~Z., Bouillet, E., and
+  Pendarakis, D.~E.}
+\newblock {Efficient resource provisioning in compute clouds via VM
+  multiplexing.}
+\newblock {\em ICAC\/} (2010), 11.
 
 \bibitem{Mishra:2012kx}
 {\sc Mishra, M., Das, A., Kulkarni, P., and Sahoo, A.}
@@ -599,12 +616,6 @@
 \newblock {A NSGA-II-based approach for service resource allocation in Cloud.}
 \newblock {\em CEC\/} (2017), 2574--2581.
 
-\bibitem{Tan:2011jd}
-{\sc Tan, J., Dube, P., Meng, X., and 0002, L.~Z.}
-\newblock {Exploiting Resource Usage Patterns for Better Utilization
-  Prediction.}
-\newblock {\em ICDCS Workshops\/} (2011), 14--19.
-
 \bibitem{Tomas:2013iv}
 {\sc Tom{\'a}s, L., and Tordsson, J.}
 \newblock {Improving cloud infrastructure utilization through overbooking.}
@@ -633,6 +644,12 @@
 \newblock {Descent approaches for quadratic bilevel programming}.
 \newblock {\em Journal of Optimization Theory and Applications 81}, 2 (May
   1994), 379--399.
+
+\bibitem{Viswanathan:2012ej}
+{\sc Viswanathan, B., Verma, A., and Dutta, S.}
+\newblock {CloudMap - Workload-aware placement in private heterogeneous
+  clouds.}
+\newblock {\em NOMS\/} (2012), 9--16.
 
 \bibitem{Waldspurger:2002db}
 {\sc Waldspurger, C.~A.}
@@ -709,6 +726,11 @@
 {\sc Yin, Y.}
 \newblock {Genetic-algorithms-based approach for bilevel programming models}.
 \newblock {\em Journal of Transportation Engineering\/} (2000).
+
+\bibitem{Zhang:2016cx}
+{\sc Zhang, J., Huang, H., and Wang, X.}
+\newblock {Resource provision algorithms in cloud computing - A survey.}
+\newblock {\em J. Network and Computer Applications 64\/} (2016), 23--42.
 
 \bibitem{Zhang:2010vo}
 {\sc Zhang, Q., Cheng, L., and Boutaba, R.}
