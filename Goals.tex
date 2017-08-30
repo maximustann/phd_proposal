@@ -46,8 +46,10 @@ As previously (see Section  \ref{sec:motivation}) mentioned, the task is multi-o
 
 	\item How to design an EC-based approach which considers periodic workloads?
 
-	In this sub-objective, we will design a time-series aware EC-based server consolidation approach with considering periodic workload. Since periodical workload is one of the major type of workload, we will consider how to adapt it into the previously designed multi-objective algorithm.
-	We will start from analyzing the workload from existing dataset, construct a new one with only periodical workloads. 
+	In this sub-objective, we will design a time-series aware EC-based server consolidation approach with considering periodic workload. Since periodical workload is one of the major type of workload, we will consider how to adapt it into the previously designed multi-objective algorithm. 
+	Previous research also consider periodic workload \cite{Meng:2010gh}, however, they only consider combining paired complementary workloads, therefore, it is very limited. In contrast, we are going to consider combining multiple periodic workloads which is much challenging since 
+
+	We will start from constructing a dataset contains only periodical workload. In order to simplify this task, we will first focus on the workload from same scales (e.g Monthly, Daily or hourly). 
 	% Proactive consolidation \cite{Farahnakian:2015vj, Tan:2011jd} has driven a lot of attention in recent years. They mainly focus on making prediction of the workloads using a regression approach such as linear regression, multi-linear regression, and K-means regression. However, most of their consolidation methods are simple heuristics. In our approach, we seek to propose a combined technique.
 
 	\item How to design an EC-based approach which considers unpredictable workloads?
