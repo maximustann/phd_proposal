@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  30 AUG 2017 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  31 AUG 2017 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -594,7 +594,11 @@ Overfull \hbox (3.93092pt too wide) in paragraph at lines 25--26
 con-tain-ers in pre-de-fined groups.
  []
 
-[5] [6]) (./published.tex) (./organization.tex
+[5]
+
+LaTeX Warning: Citation `Wold:1987wx' on page 6 undefined on input line 50.
+
+[6]) (./published.tex) (./organization.tex
 
 LaTeX Warning: Reference `' on page 7 undefined on input line 2.
 
@@ -1024,10 +1028,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6290 strings out of 493675
- 92455 string characters out of 6155645
+ 6291 strings out of 493675
+ 92468 string characters out of 6155645
  163645 words of memory out of 5000000
- 9393 multiletter control sequences out of 15000+600000
+ 9394 multiletter control sequences out of 15000+600000
  50064 words of font info for 141 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
  42i,10n,43p,1848b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1042,7 +1046,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (59 pages, 1150614 bytes).
+Output written on proj_report_outline.pdf (59 pages, 1150716 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  170 compressed objects within 2 object streams
