@@ -230,6 +230,9 @@ INPUT Motivation.tex
 INPUT Motivation.tex
 INPUT Goals.tex
 INPUT Goals.tex
+INPUT pics/thesisPlan.jpeg
+INPUT ./pics/thesisPlan.jpeg
+INPUT ./pics/thesisPlan.jpeg
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm

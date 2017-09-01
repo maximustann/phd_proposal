@@ -392,12 +392,6 @@
   machines.}
 \newblock {\em Cluster computing 16}, 2 (2013), 249--264.
 
-\bibitem{Magalhaes:2015ep}
-{\sc Magalh{\~a}es, D., Calheiros, R.~N., Buyya, R., and Gomes, D.~G.}
-\newblock {Workload modeling for resource usage analysis and simulation in
-  cloud computing.}
-\newblock {\em Computers {\&} Electrical Engineering 47\/} (2015), 69--81.
-
 \bibitem{Mann:2015ua}
 {\sc Mann, Z.~{\'A}.}
 \newblock {Approximability of virtual machine allocation: much harder than bin

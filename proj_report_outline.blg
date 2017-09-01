@@ -12,7 +12,7 @@ I was expecting a `,' or a `}'---line 1294 of file sample.bib
  :           /2008
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
-Warning--I didn't find a database entry for "Wold:1987wx"
+Warning--I didn't find a database entry for "Fehling:2014tl"
 Warning--I didn't find a database entry for "vm_technology"
 Warning--I didn't find a database entry for ":2013tn"
 Warning--I didn't find a database entry for ""
@@ -24,45 +24,45 @@ Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 128 entries,
+You've used 127 entries,
             2253 wiz_defined-function locations,
-            1342 strings with 28022 characters,
-and the built_in function-call counts, 44346 in all, are:
-= -- 4348
-> -- 2266
+            1335 strings with 27781 characters,
+and the built_in function-call counts, 43980 in all, are:
+= -- 4312
+> -- 2244
 < -- 0
-+ -- 932
-- -- 804
-* -- 3697
-:= -- 7283
-add.period$ -- 381
-call.type$ -- 128
-change.case$ -- 785
++ -- 923
+- -- 796
+* -- 3664
+:= -- 7221
+add.period$ -- 378
+call.type$ -- 127
+change.case$ -- 778
 chr.to.int$ -- 0
-cite$ -- 132
-duplicate$ -- 1404
-empty$ -- 3353
-format.name$ -- 804
-if$ -- 9026
+cite$ -- 131
+duplicate$ -- 1395
+empty$ -- 3328
+format.name$ -- 796
+if$ -- 8954
 int.to.chr$ -- 0
-int.to.str$ -- 128
-missing$ -- 126
-newline$ -- 637
-num.names$ -- 256
-pop$ -- 667
+int.to.str$ -- 127
+missing$ -- 125
+newline$ -- 632
+num.names$ -- 254
+pop$ -- 662
 preamble$ -- 1
-purify$ -- 658
+purify$ -- 652
 quote$ -- 0
-skip$ -- 902
+skip$ -- 897
 stack$ -- 0
-substring$ -- 2882
-swap$ -- 373
+substring$ -- 2858
+swap$ -- 371
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 508
+type$ -- 504
 warning$ -- 4
-while$ -- 461
-width$ -- 131
-write$ -- 1269
+while$ -- 457
+width$ -- 130
+write$ -- 1259
 (There was 1 error message)
