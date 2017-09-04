@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  1 SEP 2017 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  2 SEP 2017 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,15 +585,18 @@ e 14.
 
 
 ] [2 <./pics/workflow_management.png>])
-(./Motivation.tex [3]) (./Goals.tex
-<pics/thesisPlan.jpeg, id=39, 1027.84pt x 770.88pt>
+(./Motivation.tex
+Underfull \vbox (badness 3199) has occurred while \output is active []
+
+ [3]
+[4]) (./Goals.tex
+<pics/thesisPlan.jpeg, id=42, 1027.84pt x 770.88pt>
 File: pics/thesisPlan.jpeg Graphic file (type jpg)
 <use pics/thesisPlan.jpeg>
 Package pdftex.def Info: pics/thesisPlan.jpeg  used on input line 5. on input l
 ine 5.
 Package pdftex.def Info: Requested size: 396.91324pt x 297.68956pt on input lin
 e 5.
- [4]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 13.
  [5 <./pics/thesisPlan.jpeg>]
@@ -1048,7 +1051,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (59 pages, 1515896 bytes).
+Output written on proj_report_outline.pdf (59 pages, 1516543 bytes).
 PDF statistics:
  306 PDF objects out of 1000 (max. 8388607)
  170 compressed objects within 2 object streams
