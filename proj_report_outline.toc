@@ -1,37 +1,36 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
-\contentsline {section}{\numberline {1.2}Motivation}{4}
-\contentsline {section}{\numberline {1.3}Research Goals}{5}
-\contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single objective joint allocation of containers and VMs}{5}
-\contentsline {subsection}{\numberline {1.3.2}Objective Two: Develop EC-based approaches for the multi-objective joint allocation problem}{7}
-\contentsline {subsection}{\numberline {1.3.3}Objective Three: Develop a hyper-heuristic Genetic Programming (GP) approach for automatically generating dispatching rules for dynamic consolidation}{8}
-\contentsline {section}{\numberline {1.4}Published Papers}{8}
-\contentsline {section}{\numberline {1.5}Organisation of Proposal}{8}
+\contentsline {section}{\numberline {1.2}Research Goals}{4}
+\contentsline {subsection}{\numberline {1.2.1}Objective One: Develop EC-based approaches for the single objective joint allocation of containers and VMs}{5}
+\contentsline {subsection}{\numberline {1.2.2}Objective Two: Develop EC-based approaches for the multi-objective joint allocation problem}{6}
+\contentsline {subsection}{\numberline {1.2.3}Objective Three: Develop a hyper-heuristic Genetic Programming (GP) approach for automatically generating dispatching rules for dynamic consolidation}{7}
+\contentsline {section}{\numberline {1.3}Published Papers}{8}
+\contentsline {section}{\numberline {1.4}Organisation of Proposal}{8}
 \contentsline {chapter}{\numberline {2}Literature Review}{9}
 \contentsline {section}{\numberline {2.1}Background}{9}
 \contentsline {subsection}{\numberline {2.1.1}Cloud computing}{9}
-\contentsline {subsection}{\numberline {2.1.2}Virtualization}{12}
-\contentsline {subsubsection}{Virtual machine}{12}
-\contentsline {subsubsection}{Container}{12}
-\contentsline {subsubsection}{Comparison between Container and VM}{13}
-\contentsline {subsection}{\numberline {2.1.3}Energy Efficiency in Cloud Data centers}{13}
-\contentsline {subsection}{\numberline {2.1.4}Drawbacks of Traditional Service Models}{14}
-\contentsline {subsection}{\numberline {2.1.5}Container as a Service}{15}
-\contentsline {subsection}{\numberline {2.1.6}Bilevel Optimization}{15}
-\contentsline {subsection}{\numberline {2.1.7}Vector Bin Packing Problem}{16}
-\contentsline {subsection}{\numberline {2.1.8}Evolutionary Computation}{16}
-\contentsline {subsubsection}{Genetic Algorithm}{17}
+\contentsline {subsection}{\numberline {2.1.2}Drawbacks of Traditional Service Models}{11}
+\contentsline {subsection}{\numberline {2.1.3}Container as a Service}{12}
+\contentsline {subsection}{\numberline {2.1.4}Energy Efficiency in Cloud Data centers}{12}
+\contentsline {subsection}{\numberline {2.1.5}Virtualization}{13}
+\contentsline {subsubsection}{Virtual machine}{13}
+\contentsline {subsubsection}{Container}{13}
+\contentsline {subsubsection}{Comparison between Container and VM}{15}
+\contentsline {subsection}{\numberline {2.1.6}Vector Bin Packing Problem}{15}
+\contentsline {subsection}{\numberline {2.1.7}Evolutionary Computation}{16}
+\contentsline {subsubsection}{Genetic Algorithm}{16}
 \contentsline {subsubsection}{Particle Swarm Optimization}{17}
-\contentsline {subsubsection}{Genetic Programming}{18}
-\contentsline {subsection}{\numberline {2.1.9}Server consolidation}{19}
+\contentsline {subsubsection}{Genetic Programming}{17}
+\contentsline {subsection}{\numberline {2.1.8}Server consolidation}{18}
 \contentsline {subsubsection}{General Server Consolidation Scenarios}{19}
 \contentsline {section}{\numberline {2.2}Related Work}{22}
 \contentsline {subsection}{\numberline {2.2.1}Application Initial Placement}{22}
 \contentsline {subsubsection}{Container-based Application Initial Placement}{22}
 \contentsline {subsubsection}{VM-based Application Initial Placement}{23}
-\contentsline {subsection}{\numberline {2.2.2}Periodic consolidation}{25}
-\contentsline {subsection}{\numberline {2.2.3}VM-based Dynamic Consolidation Techniques}{26}
-\contentsline {subsection}{\numberline {2.2.4}Techniques for Bilevel optimization}{27}
+\contentsline {subsection}{\numberline {2.2.2}Bilevel Optimization}{25}
+\contentsline {subsection}{\numberline {2.2.3}Techniques for Bilevel optimization}{25}
+\contentsline {subsection}{\numberline {2.2.4}Periodic consolidation}{26}
+\contentsline {subsection}{\numberline {2.2.5}VM-based Dynamic Consolidation Techniques}{27}
 \contentsline {chapter}{\numberline {3}Preliminary Work}{29}
 \contentsline {section}{\numberline {3.1}Related models}{29}
 \contentsline {subsection}{\numberline {3.1.1}Workload model}{29}

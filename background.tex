@@ -1,14 +1,13 @@
 \section{Background}
 \label{sec:background}
-% This chapter begins by providing an overall understanding of Cloud computing and its related research field.
-% Then, it narrows down to the Energy-aware resource management problem in Section \ref{C:}.
+This chapter begins by providing an overall understanding of Cloud computing and its related research field. Then, it narrows down to the Energy-aware resource management problem in Section \ref{C:}.
+
 \subsection{Cloud computing}
-Cloud computing is a computing model offers a network of servers to their clients in a on-demand fashion. From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."}
+\textcolor{Maroon}{Cloud computing is a computing model offers a network of servers to their clients in a on-demand fashion.} From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."}
 
-To illustrate how it works, considering the case: a Cloud provider builds a data center which contains thousands of servers connected with network. These servers are virtualized which means they are partitioned into smaller units of resources called \emph{Virtual Machines (VMs)} or \emph{Containers} \cite{Felter:2015ki}. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these resource units from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers.
+\textcolor{Maroon}{To give an example of how Cloud computing works, considering the case:} a Cloud provider builds a data center which contains thousands of servers connected with network. These servers are virtualized which means they are partitioned into smaller units of resources called \emph{Virtual Machines (VMs)} or \emph{Containers} \cite{Felter:2015ki}. A web-based application provider can access and deploy their applications (e.g Endnote, Google Drive and etc.) in these resource units from anywhere in the world. Once the applications start serving, application users can use them without installing on their local computers.
 
-
-Cloud computing involves three stakeholders (see Figure \ref{fig:stakeholders}): Cloud providers, Cloud users (applications providers), and End (application) users \cite{Jennings:2015ht}. Cloud providers build data centers, provide maintenance and resource management on hardware infrastructures such as servers. Cloud users develop and deploy applications on Cloud infrastructures. End users consumes applications developed by Cloud users and hosted by Cloud providers. 
+\textcolor{Maroon}{To understand the relationship among providers and users, we first illustrate the stakeholders of Cloud computing.} (see Figure \ref{fig:stakeholders}): Cloud providers, Cloud users (applications providers), and End (application) users \cite{Jennings:2015ht}. Cloud providers build data centers, provide maintenance and resource management on hardware infrastructures such as servers. Cloud users develop and deploy applications on Cloud infrastructures. End users consumes applications developed by Cloud users and hosted by Cloud providers. 
 
 % Cloud computing has made one critical change in software industry, it separates the role of traditional service provider into service provider and infrastructure provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, this separation add one more layer between service provider and users, as: Cloud providers, Cloud users (service providers), and End users \cite{Jennings:2015ht} . 
 
@@ -27,6 +26,7 @@ The detailed goal and objectives of stakeholders are described below.
 	\item \emph{End Users}' goal is to obtain a satisfactory service. It is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the performance of the services.
 \end{itemize}
 
+\textcolor{Maroon}{Cloud service models describe the responsibilities and obligations of stakeholders.}
 Cloud computing has three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models is showed in Figure \ref{fig:architecture}. 
 Service models of Cloud computing are critical in solving energy consumption problem because their distinct ways of managing resources have sever effect on the problem. These distinct ways of resource management mainly result from the responsibilities among stakeholders. 
 
@@ -60,15 +60,58 @@ Service models of Cloud computing are critical in solving energy consumption pro
 
  	\item SaaS, Cloud users develop applications and deploy them on Cloud so that End users can access them via the Internet. Although this service model does not directly related to the resource management, it provides the fundamental reasons for resource management and optimization: applications receive fluctuated requests from End users. Because of the dynamic nature of workloads, the underlying resources must also be dynamic adjusted to meet the requirement.
 \end{itemize}
+ 
+\subsection{Drawbacks of Traditional Service Models}
 
-Overall, Cloud computing has five chacteristics:
-\begin{enumerate}
- \item On-demand self-service: A Cloud user can require computing resources (e.g CPU time, storage, software use) without the interaction with Cloud provider.
- \item Broad network access: Computing resources are connected and delivered over the network.
- \item Resource pool: a Cloud provider has a ``pool'' of resources which are normally virtualized servers. In IaaS, it provides predefined sizes of VMs. In PaaS, the resources are `invisible' to Cloud users who have no knowledge or ability to control. 
- \item Rapid elasticity: From the perspective of Cloud users, computing resources are assigned and released in real time. In addition, the resources assign to their software is ``infinite''. Therefore, Cloud users do not need to worried about the scalability of their applications.
- \item Measured Service: Cloud provides an accurate measure of the usage of computing resources. It is fundamental to the pay-as-you-go policy.
-\end{enumerate}
+There are three characteristics in IaaS which naturally lead to a low resource utilization.
+\begin{itemize}
+	\item Resource over-provisioning \\
+	As previous mentioned, VMs are either selected by Cloud users or automatically selected by software platforms. In either case, it requires an estimation of required resources. However, The accurate estimation is almost impossible because of unpredictable workloads; A simple way is to reserve more resources for ensuring the QoS at peak hours \cite{Chaisiri:2012cva}, rather than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. In IaaS, the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning.
+
+	\item Unbalanced usage of resources \\
+	Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
+
+	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) \\
+	% Redundant operating systems (OSs) cause vast resource wastage. \\ 
+	In VM-based resource allocation, heavy overhead is caused by
+	the hypervisor of VMs and the separated operating systems running in the PM. A hypervisor manages and monitors the VMs running on a PM. The overhead of a hypervisor is heavier with the increasing numbers of VM. Redundant operating system is another reason for overhead, as normal applications do not need specific operating systems; Commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Therefore, running applications in separated operating system simultaneously is unnecessary.
+\end{itemize}
+
+
+For traditional PaaS, Cloud providers can adjust the VMs' location and the type of VMs. Therefore, it overcomes the first drawback of IaaS. Because of PaaS is built upon IaaS, the one-on-one relationship between application and VM still exist. PaaS can only select the most suitable type instead of changing their sizes. Therefore, the unbalanced resource problem cannot be solved. In addition, PaaS brings a restriction for the applications deployed on it. PaaS build a software middle-ware to allow Cloud users' development. The middle-ware requires the deployed applications to be compatible with the environment, for example, Google App engine only allows certain programming languages and libraries. Therefore, the generality of PaaS is limited. It is urgent to provide a environment which supports automatic resource management as well as an editable programming environment.
+
+
+\subsection{Container as a Service}
+\textcolor{Maroon}{Container as a Service (CaaS) \cite{Piraghaj:2017vi} is a new service model which is usually considered as a combination of IaaS and PaaS.} CaaS uses containers and VM as its fundamental resource allocation unit as shown in Figure \ref{fig:comparison} on the right hand side. 
+
+
+\textcolor{Maroon}{CaaS has advantages of both IaaS and PaaS but without their disadvantages.} On one hand - similar to PaaS - CaaS allows Cloud providers to manage resource in a fine granularity with containers, therefore, it may lead to high utilization of resources. On the other hand - similar to IaaS - CaaS allows customers to customize their software environment without being constrained by platforms. Therefore, it has more flexibility than PaaS.
+
+
+
+\subsection{Energy Efficiency in Cloud Data centers}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{pics/energyConsumption.png}
+		\caption{Energy consumption distribution of data centers \cite{Rong:2016js}}
+		\label{fig:consumption}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{pics/util.png}
+		\caption{Disproportionate between utilization and energy consumption \cite{Barroso:2007jt}}
+		\label{fig:unproportional}
+	\end{subfigure}
+\end{figure} 
+
+Apart from upfront investment, Energy consumption \cite{Kaplan:up01fR-k} is the major expense of data centers. Therefore, it is also the top concern of Cloud providers. Energy consumption is derived from several parts as illustrated in Figure \ref{fig:consumption}. Cooling system and servers or PMs account for a majority of the consumption. A recent survey \cite{Cho:2016kz} shows that the recent development of cooling techniques have reduced its energy consumption and now server consumption has become the dominate energy consumption component. 
+
+According to Hameed et al \cite{Hameed:2016cmb}, 
+servers are far from energy-efficient. 
+The main reason for the wastage is that the energy consumption of servers remains high even when the utilization are low. Therefore, a concept of
+\emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. This leads to 
+using virtualization technology to achieve server consolidation.
 
 
 
@@ -129,81 +172,8 @@ Several research \cite{Felter:2015ki, Xavier:2013fy, Dua:2014bw} have compared V
 	\item Containers naturally support vertical scaling while VMs do not. Vertical scaling means a container can dynamically adjust its resources under the host's resource constraint.This feature offers a fine granularity management of resources. 
 \end{itemize}
 	
-On the other hand, the disadvantages of containers are categorized in two aspects. Currently, containers have rather poor performance in isolation for memory, disk, and network. Security is immature in containers \cite{Bernstein:2014ur}, therefore, high security required applications are not recommended to be deployed in such systems.
+On the other hand, the disadvantages of containers are categorized in two aspects. Currently, containers have rather poor performance in isolation for memory, disk, and network. Security is immature in containers \cite{Bernstein:2014ur}, therefore, high security required applications are not recommended to be deployed in such systems. 
 
-\subsection{Energy Efficiency in Cloud Data centers}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{pics/energyConsumption.png}
-		\caption{Energy consumption distribution of data centers \cite{Rong:2016js}}
-		\label{fig:consumption}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\textwidth}
-		\includegraphics[width=\textwidth]{pics/util.png}
-		\caption{Disproportionate between utilization and energy consumption \cite{Barroso:2007jt}}
-		\label{fig:unproportional}
-	\end{subfigure}
-\end{figure} 
-
-Apart from upfront investment, Energy consumption \cite{Kaplan:up01fR-k} is the major expense of data centers. Therefore, it is also the top concern of Cloud providers. Energy consumption is derived from several parts as illustrated in Figure \ref{fig:consumption}. Cooling system and servers or PMs account for a majority of the consumption. A recent survey \cite{Cho:2016kz} shows that the recent development of cooling techniques have reduced its energy consumption and now server consumption has become the dominate energy consumption component. 
-
-According to Hameed et al \cite{Hameed:2016cmb}, 
-servers are far from energy-efficient. 
-The main reason for the wastage is that the energy consumption of servers remains high even when the utilization are low. Therefore, a concept of
-\emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption. This leads to 
-using virtualization technology to achieve server consolidation.
-
-
-\subsection{Drawbacks of Traditional Service Models}
-
-There are three characteristics in IaaS which naturally lead to a low resource utilization.
-\begin{itemize}
-	\item Resource over-provisioning \\
-	As previous mentioned, VMs are either selected by Cloud users or automatically selected by software platforms. In either case, it requires an estimation of required resources. However, The accurate estimation is almost impossible because of unpredictable workloads; A simple way is to reserve more resources for ensuring the QoS at peak hours \cite{Chaisiri:2012cva}, rather than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. In IaaS, the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning.
-
-	\item Unbalanced usage of resources \\
-	Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
-
-	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) \\
-	% Redundant operating systems (OSs) cause vast resource wastage. \\ 
-	In VM-based resource allocation, heavy overhead is caused by
-	the hypervisor of VMs and the separated operating systems running in the PM. A hypervisor manages and monitors the VMs running on a PM. The overhead of a hypervisor is heavier with the increasing numbers of VM. Redundant operating system is another reason for overhead, as normal applications do not need specific operating systems; Commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Therefore, running applications in separated operating system simultaneously is unnecessary.
-\end{itemize}
-
-
-For traditional PaaS, Cloud providers can adjust the VMs' location and the type of VMs. Therefore, it overcomes the first drawback of IaaS. Because of PaaS is built upon IaaS, the one-on-one relationship between application and VM still exist. PaaS can only select the most suitable type instead of changing their sizes. Therefore, the unbalanced resource problem cannot be solved. In addition, PaaS brings a restriction for the applications deployed on it. PaaS build a software middle-ware to allow Cloud users' development. The middle-ware requires the deployed applications to be compatible with the environment, for example, Google App engine only allows certain programming languages and libraries. Therefore, the generality of PaaS is limited. It is urgent to provide a environment which supports automatic resource management as well as an editable programming environment.
-
-
-\subsection{Container as a Service}
-Container as a Service (CaaS) \cite{Piraghaj:2017vi} is a new service model which is usually considered as a combination of IaaS and PaaS. CaaS uses containers and VM as its fundamental resource allocation unit as shown in Figure \ref{fig:comparison} on the right hand side. 
-
-
-CaaS has advantages of both IaaS and PaaS  but without their disadvantages. On one hand - similar to PaaS - CaaS allows Cloud providers to manage resource in a fine granularity with containers, therefore, it may lead to high utilization of resources. On the other hand - similar to IaaS - CaaS allows customers to customize their software environment without being constrained by platforms. Therefore, it has more flexibility than PaaS.
-	
-\subsection{Bilevel Optimization}
-\label{bilevel}
-
-A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one problem is embedded within another. The outer optimization is referred to as the \emph{upper-level} problem, while the inner optimization is referred to as the \emph{lower-level} problem . 
-
-The general formulation of a bilevel optimization problem can be defined as: 
-
-\begin{subequations}
-\label{eq:bilevel}
-	\begin{align}
-	min_{x \in X, y} 	\quad    F(x, y) \\
-	s.t 			\quad G(x, y) \leq 0, \\
-	min_y			\quad f(x, y) \\
-	s.t 			\quad g(x, y)
-	\end{align}
-\end{subequations}
-
-The variables of problem, $x \in \mathbb{R}^{n_1}$ is the \emph{upper-level variables} and $y \in \mathbb{R}^{n_2}$ is the \emph{lower-level variables}. The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
-
-Bilevel optimization problem has a hierarchical structure which may introduce difficulties such as non-convexity and disconnectedness even for simple cases such as bilevel linear programming problems is strongly NP-hard \cite{:2013tn}. 
-
-In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995hu}, management: network facility location \cite{Sun:2008gq},  and engineering related: optimal design \cite{KirjnerNeto:1998ef}. 
 
 \subsection{Vector Bin Packing Problem}
 \label{vector_bin_packing}
@@ -483,6 +453,49 @@ In summary, most of VM-based placement approaches consider two or three resource
 % \subsubsection{Affinity-aware VM Placement}
 
 
+\subsection{Bilevel Optimization}
+\label{bilevel}
+
+A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one problem is embedded within another. The outer optimization is referred to as the \emph{upper-level} problem, while the inner optimization is referred to as the \emph{lower-level} problem. 
+
+The general formulation of a bilevel optimization problem can be defined as: 
+
+\begin{subequations}
+\label{eq:bilevel}
+	\begin{align}
+	min_{x \in X, y} 	\quad    F(x, y) \\
+	s.t 			\quad G(x, y) \leq 0, \\
+	min_y			\quad f(x, y) \\
+	s.t 			\quad g(x, y)
+	\end{align}
+\end{subequations}
+
+The variables of problem, $x \in \mathbb{R}^{n_1}$ is the \emph{upper-level variables} and $y \in \mathbb{R}^{n_2}$ is the \emph{lower-level variables}. The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
+
+Bilevel optimization problem has a hierarchical structure which may introduce difficulties such as non-convexity and disconnectedness even for simple cases such as bilevel linear programming problems is strongly NP-hard \cite{:2013tn}. 
+
+In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995hu}, management: network facility location \cite{Sun:2008gq},  and engineering related: optimal design \cite{KirjnerNeto:1998ef}. 
+
+
+\subsection{Techniques for Bilevel optimization}
+
+A number of studies have been conducted on bilevel optimization \cite{Colson:2007bu,Dempe:2006jc}. Because of its NP-hard nature, approximation algorithms such as Karush-kuhn-Tucker approach \cite{Bianco:2009ej, Herskovits:2000be}, branch-and-bound \cite{Bard:1982gs} are often applied to solve the problem. Most of these approaches are not applicable when the problem size increases.
+
+As the complexity of the problem, practical problems with bilevel nature are often simplified into a single-level optimization problem which can achieve a satisfactory level instead of optimal. Classic algorithms often fail because of the nature of bilevel problem such as non-linearity, discreteness, no-differentiability, non-convexity etc.
+
+% Heuristics such as Evolutionary methods have been applied for solving bilevel optimization problem with higher level of complexity \cite{Yin:2000bt,Wang:2008kb}. 
+
+Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:1994uh} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
+
+Oduguwa and Roy \cite{Oduguwa:2002kr} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
+
+Wang et al \cite{Wang:2005fa} proposed an evolutionary algorithm based approach with a constraint handling technique.  Their approach is able to handle non-differentiability at the upper level objective function, but not in constraints and lower  level objective function.
+Later on, Wang proposed an improved version \cite{Wang:2011di} that shows better performance than the previous version.
+
+Particle Swarm Optimization \cite{Li:2006br} was also used in solving bilevel problems.
+A recent work is from Sinha et al \cite{Sinha:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005fa} and WLD \cite{Wang:2011di}. The results show BLEAQ is much faster than previous approaches.
+One major drawback of evolutionary algorithms is its high computation cost which limits the problem size from growing bigger.
+
 \subsection{Periodic consolidation}
 Periodic consolidation (see Section \ref{scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud datacenter is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with application initial placement (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic consolidation needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
 
@@ -524,24 +537,6 @@ Xiao et al \cite{Xiao:2015ik} make two contributions, first, they build a quadra
 
 
 
-\subsection{Techniques for Bilevel optimization}
-
-A number of studies have been conducted on bilevel optimization \cite{Colson:2007bu,Dempe:2006jc}. Because of its NP-hard nature, approximation algorithms such as Karush-kuhn-Tucker approach \cite{Bianco:2009ej, Herskovits:2000be}, branch-and-bound \cite{Bard:1982gs} are often applied to solve the problem. Most of these approaches are not applicable when the problem size increases.
-
-As the complexity of the problem, practical problems with bilevel nature are often simplified into a single-level optimization problem which can achieve a satisfactory level instead of optimal. Classic algorithms often fail because of the nature of bilevel problem such as non-linearity, discreteness, no-differentiability, non-convexity etc.
-
-% Heuristics such as Evolutionary methods have been applied for solving bilevel optimization problem with higher level of complexity \cite{Yin:2000bt,Wang:2008kb}. 
-
-Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:1994uh} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
-
-Oduguwa and Roy \cite{Oduguwa:2002kr} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
-
-Wang et al \cite{Wang:2005fa} proposed an evolutionary algorithm based approach with a constraint handling technique.  Their approach is able to handle non-differentiability at the upper level objective function, but not in constraints and lower  level objective function.
-Later on, Wang proposed an improved version \cite{Wang:2011di} that shows better performance than the previous version.
-
-Particle Swarm Optimization \cite{Li:2006br} was also used in solving bilevel problems.
-A recent work is from Sinha et al \cite{Sinha:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005fa} and WLD \cite{Wang:2011di}. The results show BLEAQ is much faster than previous approaches.
-One major drawback of evolutionary algorithms is its high computation cost which limits the problem size from growing bigger.
 
 % Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.

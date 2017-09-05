@@ -1,11 +1,11 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces A workflow of resource management \cite {Mishra:2012kx}\relax }}{2}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Relationship between objectives\relax }}{5}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Relationship between objectives\relax }}{4}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Stakeholders of Cloud computing\relax }}{10}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Cloud computing architecture \cite {Zhang:2010vo}. IaaS provides the fundamental resources such as CPU cores, RAM. The resources are usually wrapped with various types of virtual machine. PaaS provides a software platform sitting on top of IaaS for Cloud users to develop applications. SaaS describes the relationship between applications and End Users.\relax }}{11}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces A comparison between VM-based and Container-based virtualization \cite {Piraghaj:2016bw}\relax }}{12}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A comparison between OS container and Application container \cite {Piraghaj:2017vi}\relax }}{13}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A comparison between VM-based and Container-based virtualization \cite {Piraghaj:2016bw}\relax }}{14}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces A comparison between OS container and Application container \cite {Piraghaj:2017vi}\relax }}{14}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces A comparison between standard bin packing and vector bin packing\relax }}{16}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces GP program that represents x + max(y $\times $ 2, -2)\relax }}{18}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces A Server Consolidation example: Initially, each PM runs an application wrapped with a VM in a low resource utilization state. After the consolidation, both VMs are running on PM A, so that PM B is turned off to save energy \cite {Barroso:2007jt}.\relax }}{19}

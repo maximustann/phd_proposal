@@ -12,10 +12,10 @@ I was expecting a `,' or a `}'---line 1294 of file sample.bib
  :           /2008
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
+Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "Fehling:2014tl"
 Warning--I didn't find a database entry for "vm_technology"
 Warning--I didn't find a database entry for ":2013tn"
-Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "Bard:1982ud"
 Warning--I didn't find a database entry for "Wood:2009tw"
 Warning--I didn't find a database entry for "Beloglazov:2010vm"
@@ -24,45 +24,45 @@ Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 127 entries,
+You've used 120 entries,
             2253 wiz_defined-function locations,
-            1335 strings with 27781 characters,
-and the built_in function-call counts, 43980 in all, are:
-= -- 4312
-> -- 2244
+            1295 strings with 26330 characters,
+and the built_in function-call counts, 41502 in all, are:
+= -- 4075
+> -- 2090
 < -- 0
-+ -- 923
-- -- 796
-* -- 3664
-:= -- 7221
-add.period$ -- 378
-call.type$ -- 127
-change.case$ -- 778
++ -- 860
+- -- 740
+* -- 3442
+:= -- 6799
+add.period$ -- 358
+call.type$ -- 120
+change.case$ -- 729
 chr.to.int$ -- 0
-cite$ -- 131
-duplicate$ -- 1395
-empty$ -- 3328
-format.name$ -- 796
-if$ -- 8954
+cite$ -- 124
+duplicate$ -- 1332
+empty$ -- 3161
+format.name$ -- 740
+if$ -- 8470
 int.to.chr$ -- 0
-int.to.str$ -- 127
-missing$ -- 125
-newline$ -- 632
-num.names$ -- 254
-pop$ -- 662
+int.to.str$ -- 120
+missing$ -- 119
+newline$ -- 598
+num.names$ -- 240
+pop$ -- 624
 preamble$ -- 1
-purify$ -- 652
+purify$ -- 610
 quote$ -- 0
-skip$ -- 897
+skip$ -- 858
 stack$ -- 0
-substring$ -- 2858
-swap$ -- 371
+substring$ -- 2707
+swap$ -- 357
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 504
+type$ -- 476
 warning$ -- 4
-while$ -- 457
-width$ -- 130
-write$ -- 1259
+while$ -- 433
+width$ -- 123
+write$ -- 1192
 (There was 1 error message)

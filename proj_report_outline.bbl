@@ -17,10 +17,6 @@
   state.}
 \newblock {\em IEEE Trans. Evolutionary Computation 1}, 1 (1997), 3--17.
 
-\bibitem{Banzhaf:1998wc}
-{\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
-\newblock {Genetic programming: an introduction}, 1998.
-
 \bibitem{Bard:1982gs}
 {\sc Bard, J.~F., and Falk, J.~E.}
 \newblock {An explicit solution to the multi-level programming problem}.
@@ -42,14 +38,6 @@
 \newblock {Energy-aware resource allocation heuristics for efficient management
   of data centers for Cloud computing.}
 \newblock {\em Future Generation Comp. Syst. 28}, 5 (2012), 755--768.
-
-\bibitem{Beloglazov:2012bw}
-{\sc Beloglazov, A., and Buyya, R.}
-\newblock {Optimal online deterministic algorithms and adaptive heuristics for
-  energy and performance efficient dynamic consolidation of virtual machines in
-  Cloud data centers.}
-\newblock {\em Concurrency and Computation - Practice and Experience 24}, 13
-  (2012), 1397--1420.
 
 \bibitem{Beloglazov:2013ht}
 {\sc Beloglazov, A., and Buyya, R.}
@@ -273,13 +261,6 @@
 \newblock {Contact shape optimization: a bilevel programming approach}.
 \newblock {\em Structural and Multidisciplinary Optimization 20}, 3 (2000),
   214--221.
-
-\bibitem{Hindman:2011ux}
-{\sc Hindman, B., Konwinski, A., Zaharia, M., Ghodsi, A., Joseph, A.~D., Katz,
-  R.~H., Shenker, S., and Stoica, I.}
-\newblock {Mesos - A Platform for Fine-Grained Resource Sharing in the Data
-  Center.}
-\newblock {\em NSDI\/} (2011).
 
 \bibitem{Hines:2009fv}
 {\sc Hines, M.~R., Deshpande, U., and Gopalan, K.}
@@ -521,12 +502,6 @@
 \newblock {Resource management: Linux kernel namespaces and cgroups}.
 \newblock {\em Haifux\/} (2013).
 
-\bibitem{Sarin:2011fu}
-{\sc Sarin, S.~C., Varadarajan, A., and Wang, L.}
-\newblock {A survey of dispatching rules for operational control in wafer
-  fabrication}.
-\newblock {\em Production Planning and {\ldots} 22}, 1 (Jan. 2011), 4--24.
-
 \bibitem{Shafer:2010vh}
 {\sc Shafer, J.}
 \newblock {I/O virtualization bottlenecks in cloud computing today}.
@@ -538,11 +513,6 @@
 \newblock {Statistical Characterization of Business-Critical Workloads Hosted
   in Cloud Datacenters.}
 \newblock {\em CCGRID\/} (2015), 465--474.
-
-\bibitem{Shi:2011ke}
-{\sc Shi, W., and Hong, B.}
-\newblock {Towards Profitable Virtual Machine Placement in the Data Center.}
-\newblock {\em UCC\/} (2011), 138--145.
 
 \bibitem{Sim:2013fe}
 {\sc Sim, K., and Hart, E.}
@@ -573,14 +543,6 @@
 {\sc Somani, G., and Chaudhary, S.}
 \newblock {Application Performance Isolation in Virtualization.}
 \newblock {\em IEEE CLOUD\/} (2009), 41--48.
-
-\bibitem{SoteloFigueroa:2013be}
-{\sc Sotelo-Figueroa, M.~A., Soberanes, H. J.~P., Carpio, J.~M., Huacuja, H.
-  J.~F., Reyes, L.~C., and Soria-Alcaraz, J.~A.}
-\newblock {Evolving Bin Packing Heuristic Using Micro-Differential Evolution
-  with Indirect Representation.}
-\newblock {\em Recent Advances on Hybrid Intelligent Systems 451}, Chapter 28
-  (2013), 349--359.
 
 \bibitem{Sprott:2004wt}
 {\sc Sprott, D., and Wilkes, L.}
@@ -720,11 +682,6 @@
 {\sc Yin, Y.}
 \newblock {Genetic-algorithms-based approach for bilevel programming models}.
 \newblock {\em Journal of Transportation Engineering\/} (2000).
-
-\bibitem{Zhang:2016cx}
-{\sc Zhang, J., Huang, H., and Wang, X.}
-\newblock {Resource provision algorithms in cloud computing - A survey.}
-\newblock {\em J. Network and Computer Applications 64\/} (2016), 23--42.
 
 \bibitem{Zhang:2010vo}
 {\sc Zhang, Q., Cheng, L., and Boutaba, R.}
