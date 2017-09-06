@@ -13,6 +13,8 @@ I was expecting a `,' or a `}'---line 1294 of file sample.bib
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Hochbaum:1996ts"
+Warning--I didn't find a database entry for "Clark:2005uda"
 Warning--I didn't find a database entry for "Fehling:2014tl"
 Warning--I didn't find a database entry for "vm_technology"
 Warning--I didn't find a database entry for ":2013tn"
@@ -24,45 +26,45 @@ Warning--empty journal in Clark:2005ud
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 120 entries,
+You've used 118 entries,
             2253 wiz_defined-function locations,
-            1295 strings with 26330 characters,
-and the built_in function-call counts, 41502 in all, are:
-= -- 4075
-> -- 2090
+            1289 strings with 26218 characters,
+and the built_in function-call counts, 41028 in all, are:
+= -- 4026
+> -- 2066
 < -- 0
-+ -- 860
-- -- 740
-* -- 3442
-:= -- 6799
-add.period$ -- 358
-call.type$ -- 120
-change.case$ -- 729
++ -- 850
+- -- 732
+* -- 3409
+:= -- 6715
+add.period$ -- 352
+call.type$ -- 118
+change.case$ -- 719
 chr.to.int$ -- 0
-cite$ -- 124
-duplicate$ -- 1332
-empty$ -- 3161
-format.name$ -- 740
-if$ -- 8470
+cite$ -- 122
+duplicate$ -- 1314
+empty$ -- 3126
+format.name$ -- 732
+if$ -- 8376
 int.to.chr$ -- 0
-int.to.str$ -- 120
-missing$ -- 119
-newline$ -- 598
-num.names$ -- 240
-pop$ -- 624
+int.to.str$ -- 118
+missing$ -- 117
+newline$ -- 588
+num.names$ -- 236
+pop$ -- 617
 preamble$ -- 1
-purify$ -- 610
+purify$ -- 602
 quote$ -- 0
-skip$ -- 858
+skip$ -- 846
 stack$ -- 0
-substring$ -- 2707
-swap$ -- 357
+substring$ -- 2701
+swap$ -- 353
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 476
+type$ -- 468
 warning$ -- 4
-while$ -- 433
-width$ -- 123
-write$ -- 1192
+while$ -- 426
+width$ -- 121
+write$ -- 1173
 (There was 1 error message)

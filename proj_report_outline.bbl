@@ -1,10 +1,5 @@
 \begin{thebibliography}{100}
 
-\bibitem{AlRoomi:2013te}
-{\sc Al-Roomi, M., and Al-Ebrahim, S.}
-\newblock {Cloud computing pricing models: a survey}.
-\newblock {\em Computing\/} (2013).
-
 \bibitem{Angelo:2013ee}
 {\sc Angelo, J.~S., Krempser, E., and Barbosa, H. J.~C.}
 \newblock {Differential evolution for bilevel programming}.
@@ -84,16 +79,17 @@
   Transportation Network}.
 \newblock {\em Transportation Science 35}, 4 (Nov. 2001), 345--358.
 
-\bibitem{Burke:2006ei}
-{\sc Burke, E.~K., Hyde, M.~R., and Kendall, G.}
-\newblock {Evolving Bin Packing Heuristics with Genetic Programming.}
-\newblock {\em PPSN 4193}, Chapter 87 (2006), 860--869.
-
 \bibitem{Burke:2012gs}
 {\sc Burke, E.~K., Hyde, M.~R., Kendall, G., and Woodward, J.}
 \newblock {Automating the Packing Heuristic Design Process with Genetic
   Programming}.
 \newblock {\em Evolutionary Computation 20}, 1 (Mar. 2012), 63--89.
+
+\bibitem{2010arXiv1006.0308B}
+{\sc Buyya, R., Beloglazov, A., and Abawajy, J.~H.}
+\newblock {Energy-Efficient Management of Data Center Resources for Cloud
+  Computing - A Vision, Architectural Elements, and Open Challenges.}
+\newblock {\em PDPTA cs.DC\/} (2010), arXiv:1006.0308.
 
 \bibitem{Chaisiri:2012cva}
 {\sc Chaisiri, S., Lee, B.-S., and Niyato, D.}
@@ -582,12 +578,6 @@
   Anderson, A.~V., Bennett, S.~M., K{\"a}gi, A., Leung, F.~H., and Smith, L.}
 \newblock {Intel Virtualization Technology.}
 \newblock {\em IEEE Computer 38}, 5 (2005), 48--56.
-
-\bibitem{Varasteh:2015fu}
-{\sc Varasteh, A., and Goudarzi, M.}
-\newblock {Server Consolidation Techniques in Virtualized Data Centers: A
-  Survey}.
-\newblock {\em IEEE Systems Journal\/} (2015), 1--12.
 
 \bibitem{Verma:2009wi}
 {\sc Verma, A., and Dasgupta, G.}
