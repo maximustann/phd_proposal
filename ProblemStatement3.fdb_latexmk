@@ -1,14 +1,14 @@
 # Fdb version 3
-["pdflatex"] 1504488512 "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.tex" "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.pdf" "ProblemStatement3" 1504488514
-  "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.aux" 1501655784 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.tex" 1504488459 11053 310c49bfc7ed7d3de19a2ddc05764c06 ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
-  "/usr/local/texlive/2015/texmf-dist/web2c/texmf.cnf" 1428852030 31983 18aeec08f48baa3cf3508d538dd5f459 ""
-  "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1443471631 3849859 c4ef9b7cb6126f85bbcd7fe455db18d3 ""
-  "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
-  "ProblemStatement3.tex" 1504488459 11053 310c49bfc7ed7d3de19a2ddc05764c06 ""
+["pdflatex"] 1504726951 "ProblemStatement3.tex" "ProblemStatement3.pdf" "ProblemStatement3" 1504726951
+  "/etc/texmf/texmf.cnf" 1498188680 31930 5d12f12a9f7d785fbba339159e5d30d3 ""
+  "/usr/pkg/share/texmf-dist/fonts/map/fontname/texfonts.map" 1466306335 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1486026475 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1486026475 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1498190442 2963132 81ca9361992cbf4ed56a7283785ae50a ""
+  "ProblemStatement3.aux" 1501711076 8 a94a2480d3289e625eea47cd1b285758 ""
+  "ProblemStatement3.tex" 1504677638 14189 c3a31c0b1ea7f52e5e2f5df4cbe42e7b ""
   (generated)
-  "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.log"
-  "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.pdf"
   "ProblemStatement3.log"
+  "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.pdf"
+  "ProblemStatement3.pdf"
+  "/Users/maximustann/Work/PH.D/proposal/ProblemStatement3.log"

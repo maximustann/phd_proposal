@@ -2,7 +2,7 @@
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{pics/thesisPlan.jpeg}
+	\includegraphics[width=\textwidth]{pics/thesisPlan.png}
 	\caption{Relationship between objectives}
 	\label{fig:objectives}
 \end{figure}
@@ -10,7 +10,7 @@
 \bx{The overall goal for this thesis is to improve energy efficiency of a container-based Cloud data center with new models and algorithms in three resource management processes:} application initial placement, periodic optimization, and dynamic placement. The specific research objectives of this work can be itemized as follows.
 % In this thesis, we aims at providing a series of approaches to continuously optimize the a joint allocation of VMs and containers that considers three consolidation scenarios: Initialization, global consolidation, Dynamic consolidation. In addition, the static allocation normally involves with large amount of variables which is particular difficult to optimize. We are also going to propose a method to solve this problem.  These approaches combine element of AI planning, to ensure the objectives and constraint fulfillment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims at determining a flexible way in creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
 
-\subsection{Objective One: Develop EC-based approaches for the single objective joint allocation of containers and VMs}
+\subsection{Objective One: Develop EC-based approaches for the single objective joint placement of containers and VMs}
 \label{sec:obj1}
 
 \bx{The goal is to reduce the energy consumption in application initial placement considering container-based cloud data center.} To achieve this goal, inevitably, the first step is to propose a new model for container-based placement problem which considers the problem as a bilevel optimization problem. Then, we will explore evolutionary based approaches to solve the problem. The research goal leads to three objectives as follows.
@@ -26,19 +26,21 @@
 	% Second problem is that they did not consider balancing the residual resources (e.g between CPU and memory). 
 
 
-	\bx{The goal of the first sub objective is to propose a descriptive single objective model for the bilevel optimization problem of joint allocation of container and VM.} The reason to establish this model is because current server consolidation models are mostly VM-based, they cannot be directly applied on bilevel problems. Therefore, variables, constraints and objective functions need to be clarified before applying any optimization algorithm. Each level of the problem will be formulated to a multi-dimensional vector bin packing problem. It is still unclear that which objective function is the best to capture the relationship between container and VM so that the overall energy is low. 
-	We will start from the simplest case - single dimension of resource - to more general multi-dimensional resources model. In the multi-dimensional resource model, we will address the balance of CPU and memory problem by investigating several resource wastage models \cite{Ferdaus:2014ep, Xu:2010vh, Gao:2013gg} and select a suitable one. The main reason is the balance of resource affects the number of PMs which is the major source of energy consumption.
-	In this objective, we consider the static workload of applications, this is because the initial resource demand is often provided by the Cloud users.
+	\bx{The goal of the first sub objective is to propose a descriptive single objective model for the bilevel optimization problem of joint allocation of container and VM.} 
+	% The reason to establish this model is because current server consolidation models are mostly VM-based, they cannot be directly applied on bilevel problems. 
+	In order to establish a bilevel model, variables, constraints and objective functions need to be clarified before applying any optimization algorithm. Each level of the problem will be formulated to a multi-dimensional vector bin packing problem. It is still unclear that which objective function is the best to capture the relationship between container and VM so that the overall energy is low. In addition, we will address the overhead of VMs which is generally missing from previous research.
+
+	We will start from the simplest case - single dimension of resource - to more general multi-dimensional resources model. In the multi-dimensional resource model, we will address the balance of CPU and memory problem by investigating several resource wastage models \cite{Ferdaus:2014ep, Xu:2010vh, Gao:2013gg}. In this objective, we consider the static workload of applications, this is because the initial resource demand is often provided by the Cloud users.
 
 	\item Propose a new EC based to optimize energy consumption in initial application placement. 
 
 	\bx{The goal of this sub-objective is to develop a baseline approach that solve the problem using nested Evolutionary algorithms \cite{Sinha:2017et}.} We will start from the simplest form: one dimensional bin-packing in each level to more complex multi-dimensional bin-packing.
 
-	Nested methods have been used in solving bilevel problem for years, they are reported as effective approaches. We will investigate several approaches such as Nested Particle Swarm Optimization \cite{Li:2006br}, Differential evolution (DE) based approach \cite{Angelo:2013ee, Zhu:2006in} and Co-evolutioanry approach \cite{Legillon:2012dd}. In order to adapt our problem to these existing approaches, we will develop suitable representations and genetic operators that are more suitable for this binary or discrete problem. In literature, there are various representations for packing problem, for example, Xiong et al \cite{Xiong:2014jq} propose an indirect representation where the allocation of a VM to a PM is represented as a probability. While, Xu et al \cite{Xu:2010vh} propose a direct representation that groups VMs into several PMs.
+	Current nested methods have been used in solving bilevel problem, however, there is no research focus on bilevel bin-packing problem. We will investigate several approaches such as Nested Particle Swarm Optimization \cite{Li:2006br}, Differential evolution (DE) based approach \cite{Angelo:2013ee, Zhu:2006in} and Co-evolutioanry approach \cite{Legillon:2012dd}. In order to adapt our problem to these existing approaches, we will develop suitable representations such as direct binary representation \cite{Xu:2010vh}, or indirect continuous probability representation \cite{Xiong:2014jq}; and genetic operators that are more suitable for these representations. 
 
 	\item Investigate methods to improve the scalability of previously propose approach.
 
-	\bx{The goal of this sub-objective is to improve scalability of the nested approach.} Although nested approaches have been reported effective, they are very time consuming. Therefore, this sub objective intends to explore other directions to improve either better energy consumption or faster execution time. One possible direction is single-level reduction, which reduces the bilevel problem into a single dimensional problem. Clustering approaches such as K-means, DBScan can be useful in categorizing containers in predefined groups. Then, complementary containers can be grouped to reduce the variables of placement. Another possible solution is using a representation which embedded with simple heuristic (e.g First Fit); it allows to consider less number of PMs.  
+	\bx{The goal of this sub-objective is to improve scalability of the nested approach.} Although nested approaches have been reported effective, they are very time consuming \cite{}. Therefore, this sub objective intends to explore other directions to improve either better energy consumption or faster execution time. One possible direction is single-level reduction \cite{}, which reduces the bilevel problem into a single dimensional problem. Clustering approaches such as K-means \cite{}, DBScan \cite{} can be useful in categorizing containers in predefined groups. Then, complementary containers can be grouped to reduce the variables of placement. Another possible solution is using a representation which embedded with simple heuristic (e.g First Fit); it allows to consider less number of PMs.  
 
 	% \item Third, although nested approaches have been reported effective, they are often very time consuming. Therefore, our third sub-objective will focus on developing more efficient algorithms. There are several possible directions to be explored such as metamodeling-based methods \cite{Wang:2007em} and single-level reduction. 
 		% \emph{New operators and searching mechanisms}\\
