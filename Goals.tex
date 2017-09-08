@@ -30,7 +30,7 @@
 	% The reason to establish this model is because current server consolidation models are mostly VM-based, they cannot be directly applied on bilevel problems. 
 	In order to establish a bilevel model, variables, constraints and objective functions need to be clarified before applying any optimization algorithm. Each level of the problem will be formulated to a multi-dimensional vector bin packing problem. It is still unclear that which objective function is the best to capture the relationship between container and VM so that the overall energy is low. In addition, we will address the overhead of VMs which is generally missing from previous research.
 
-	We will start from the simplest case - single dimension of resource - to more general multi-dimensional resources model. In the multi-dimensional resource model, we will address the balance of CPU and memory problem by investigating several resource wastage models \cite{Ferdaus:2014ep, Xu:2010vh, Gao:2013gg}. In this objective, we consider the static workload of applications, this is because the initial resource demand is often provided by the Cloud users.
+	We will start from the simplest case - single dimension of resource - to more general multi-dimensional resources model by reviewing a number of VM-based approaches. Specifically, we focus on their variables, constraints and objective function. Objective function is mainly related to energy consumption. Hence, energy model is another major issue to study. In addition, in the multi-dimensional resource model, we will address the balance of CPU and memory problem by investigating several resource wastage models \cite{Ferdaus:2014ep, Xu:2010vh, Gao:2013gg}. In this objective, we consider the static workload of applications, this is because the initial resource demand is often provided by the Cloud users.
 
 	\item Propose a new EC based to optimize energy consumption in initial application placement. 
 
@@ -99,20 +99,24 @@ The goal is to develop multi-objective EC-base approaches for container-based cl
 % Therefore, in this objective, we will use GP to automatically generate heuristics or dispatching rules.
 
 \begin{enumerate}
+
+	\item Develop a baseline GP-based hyper-heuristic (GP-HH) approach for dynamic placement. 
+	\bx{The goal of this sub-objective is to develop a baseline GP-HH approach}. We will consider static workload in this task. \comm{More will come.}
+
 	\item Conduct feature selection on the predictable workload and unpredictable workloads.
 	\bx{The goal of this sub-objective is to construct a GP primitive set by applying feature selection on various types of application workload.} We will investigate which features and attributes are important when dealing with energy efficiency problem. As the basic component of a dispatching rule, primitive set contains the states of environment including: status of VMs (e.g. utilization, wastage), features of workloads (e.g. resource consumption). Furthermore, it has been shown that web workloads have such properties as correlation between workload attributes, nonstationarity, burstiness, and self-similarity \cite{Feitelson:2002kn}. Although there is no research has investigate how to use them to construct dispatching rules, there are extensive statistical analysis on workload \cite{Verma:2009wi}. The effectiveness of functional set and primitive set will be tested by applying the constructed dispatching rules on dynamic consolidation problem.
 
 	% types including static, continuously changing, and periodic workloads, and two other workload types: once-in-a-life-time, unpredictable workloads. Based on these features, 
 	% \textcolor{Blue}{More...}
-	\item Investigate the possible functional operators. 
+	% \item Investigate the possible functional operators. 
 
-	\bx{The goal of this sub-objective is to construct a GP functional set.}
-	\textcolor{blue}{More will come.}
+	% \bx{The goal of this sub-objective is to construct a GP functional set.}
+	% \textcolor{blue}{More will come.}
 
-	\item Develop a Cooperative-Genetic Programming approach to evolve dispatching rules for placing container and VMs.
-	\bx{The goal of this sub-objective is to develop a cooperative GP approach to evolve dispatching rules.}
+	% \item Develop a Cooperative-Genetic Programming approach to evolve dispatching rules for placing container and VMs.
+	% \bx{The goal of this sub-objective is to develop a cooperative GP approach to evolve dispatching rules.}
 
-	This sub-objective explores suitable representations for GP to construct useful dispatching rules. It also proposes new genetic operators as well as search mechanisms. \textcolor{blue}{More will come.}
+	% This sub-objective explores suitable representations for GP to construct useful dispatching rules. It also proposes new genetic operators as well as search mechanisms. \textcolor{blue}{More will come.}
 
 	\end{enumerate}
 

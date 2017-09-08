@@ -13,7 +13,6 @@ I was expecting a `,' or a `}'---line 1294 of file sample.bib
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "Hochbaum:1996ts"
 Warning--I didn't find a database entry for "Fehling:2014tl"
 Warning--I didn't find a database entry for "Jung:2010tb"
 Warning--I didn't find a database entry for "vm_technology"
@@ -28,7 +27,7 @@ Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
 You've used 118 entries,
             2253 wiz_defined-function locations,
-            1289 strings with 26241 characters,
+            1287 strings with 26211 characters,
 and the built_in function-call counts, 40965 in all, are:
 = -- 4021
 > -- 2061
