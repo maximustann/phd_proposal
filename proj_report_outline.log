@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  8 SEP 2017 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  11 SEP 2017 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -384,19 +384,19 @@ LaTeX Warning: Label `sub@fig:f' multiply defined.
 ) (./contribution.aux))
 \openout1 = `proj_report_outline.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 75.
  (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
@@ -474,59 +474,59 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 91.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 92.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 91.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 92.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 91.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 92.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 91.
+(Font)              scaled to size 10.42007pt on input line 92.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 91.
+(Font)              scaled to size 7.91925pt on input line 92.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 91.
+(Font)              scaled to size 6.25204pt on input line 92.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 91.
+(Font)              scaled to size 10.42007pt on input line 92.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 91.
+(Font)              scaled to size 7.91925pt on input line 92.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 91.
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 91.
+(Font)              scaled to size 6.25204pt on input line 92.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 92.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 91.
+(Font)              scaled to size 11.40997pt on input line 92.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 91.
+(Font)              scaled to size 8.33606pt on input line 92.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 91.
+(Font)              scaled to size 11.40997pt on input line 92.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 91.
+(Font)              scaled to size 8.33606pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 91.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 91.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 92.
  [-1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [0]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 95.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 96.
  (./proj_report_outline.toc
 Overfull \hbox (2.17882pt too wide) in paragraph at lines 7--7
  [][] []\OT1/ppl/m/n/10.95 Objective Three: De-velop a hyper-heuristic Ge-netic
@@ -588,46 +588,42 @@ Package pdftex.def Info: Requested size: 308.71104pt x 157.5297pt on input line
 
 LaTeX Warning: Citation `Fehling:2014tl' on page 3 undefined on input line 34.
 
-! Too many }'s.
-l.34 ...ially reduce the migration in the future.}
-                                                   Thus, the applications ar...
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
 
 LaTeX Warning: Citation `Jung:2010tb' on page 3 undefined on input line 50.
 
 [3]
-! Too many }'s.
-l.59 three issues:}
-                   
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 61.
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 60.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
 ) (./Goals.tex
-<pics/thesisPlan.png, id=39, 1425.07407pt x 675.27281pt>
+<pics/thesisPlan.png, id=39, 1427.3325pt x 671.50874pt>
 File: pics/thesisPlan.png Graphic file (type png)
 <use pics/thesisPlan.png>
 Package pdftex.def Info: pics/thesisPlan.png  used on input line 5. on input li
 ne 5.
-Package pdftex.def Info: Requested size: 441.01772pt x 208.97177pt on input lin
+Package pdftex.def Info: Requested size: 441.01772pt x 207.47905pt on input lin
 e 5.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 13.
- [4 <./pics/thesisPlan.png>]
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
+
+[4 <./pics/thesisPlan.png>]
 Underfull \vbox (badness 3724) has occurred while \output is active []
 
  [5]
-Overfull \hbox (0.71097pt too wide) in paragraph at lines 76--78
-[]\OT1/ppl/m/n/10.95 Similar with pre-vi-ous sub-objective, dif-fer-ent model o
-r rep-re-sen-ta-tion and cor-re-spond-
+
+LaTeX Warning: Citation `Deb:2009ug' on page 6 undefined on input line 65.
+
+
+Overfull \hbox (2.539pt too wide) in paragraph at lines 64--68
+\OT1/ppl/m/n/10.95 objective joint al-lo-ca-tion prob-lem with Pareto front ap-
+proach.[] In pre-vi-ous sub-objective
  []
+
+
+LaTeX Warning: Citation `Fehling:2014tl' on page 6 undefined on input line 73.
 
 [6]) (./published.tex) (./organization.tex
 
@@ -1005,16 +1001,30 @@ Underfull \vbox (badness 1515) has occurred while \output is active []
  (./contribution.tex
 Chapter 4.
 
-LaTeX Warning: Reference `fig:' on page 41 undefined on input line 17.
+Overfull \hbox (0.33891pt too wide) in paragraph at lines 11--12
+[]\OT1/ppl/m/n/10.95 Propose a new Ge-netic pro-gram-ming Hyper-heuristic ap-pr
+oach for dy-nam-i-cally place-
+ []
 
 
-LaTeX Warning: Reference `' on page 41 undefined on input line 24.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 23.
 
 [41
 
 
 
-] [42]
+]
+
+LaTeX Warning: Reference `tab:timetable' on page 42 undefined on input line 41.
+
+
+
+Overfull \hbox (81.23627pt too wide) in paragraph at lines 73--74
+ [] 
+ []
+
+[42]
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
@@ -1055,13 +1065,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6290 strings out of 493675
- 92454 string characters out of 6155645
- 163633 words of memory out of 5000000
- 9392 multiletter control sequences out of 15000+600000
+ 6295 strings out of 493675
+ 92508 string characters out of 6155645
+ 172698 words of memory out of 5000000
+ 9397 multiletter control sequences out of 15000+600000
  50064 words of font info for 141 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
- 42i,10n,43p,1387b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,15n,43p,1387b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/pkg/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/pkg/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmmi10.pfb></usr/pkg/share/texmf-dist/fonts/type1/pub
@@ -1073,7 +1083,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (58 pages, 1326094 bytes).
+Output written on proj_report_outline.pdf (58 pages, 1339123 bytes).
 PDF statistics:
  304 PDF objects out of 1000 (max. 8388607)
  168 compressed objects within 2 object streams

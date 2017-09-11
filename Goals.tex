@@ -6,7 +6,6 @@
 	\caption{Relationship between objectives}
 	\label{fig:objectives}
 \end{figure}
-
 \bx{The overall goal for this thesis is to improve energy efficiency of a container-based Cloud data center with new models and algorithms in three resource management processes:} application initial placement, periodic optimization, and dynamic placement. The specific research objectives of this work can be itemized as follows.
 % In this thesis, we aims at providing a series of approaches to continuously optimize the a joint allocation of VMs and containers that considers three consolidation scenarios: Initialization, global consolidation, Dynamic consolidation. In addition, the static allocation normally involves with large amount of variables which is particular difficult to optimize. We are also going to propose a method to solve this problem.  These approaches combine element of AI planning, to ensure the objectives and constraint fulfillment, and of Evolutionary Computation, to evolve a population of near-optimal solutions. The research aims at determining a flexible way in creation of solutions to solve server consolidation problems. As discussed in the previous section, the research goal can be achieved in the following objectives and sub-objectives.
 
@@ -32,11 +31,11 @@
 
 	We will start from the simplest case - single dimension of resource - to more general multi-dimensional resources model by reviewing a number of VM-based approaches. Specifically, we focus on their variables, constraints and objective function. Objective function is mainly related to energy consumption. Hence, energy model is another major issue to study. In addition, in the multi-dimensional resource model, we will address the balance of CPU and memory problem by investigating several resource wastage models \cite{Ferdaus:2014ep, Xu:2010vh, Gao:2013gg}. In this objective, we consider the static workload of applications, this is because the initial resource demand is often provided by the Cloud users.
 
-	\item Propose a new EC based to optimize energy consumption in initial application placement. 
+	\item Propose a new EC based approach to optimize energy consumption in initial application placement. 
 
 	\bx{The goal of this sub-objective is to develop a baseline approach that solve the problem using nested Evolutionary algorithms \cite{Sinha:2017et}.} We will start from the simplest form: one dimensional bin-packing in each level to more complex multi-dimensional bin-packing.
 
-	Current nested methods have been used in solving bilevel problem, however, there is no research focus on bilevel bin-packing problem. We will investigate several approaches such as Nested Particle Swarm Optimization \cite{Li:2006br}, Differential evolution (DE) based approach \cite{Angelo:2013ee, Zhu:2006in} and Co-evolutioanry approach \cite{Legillon:2012dd}. In order to adapt our problem to these existing approaches, we will develop suitable representations such as direct binary representation \cite{Xu:2010vh}, or indirect continuous probability representation \cite{Xiong:2014jq}; and genetic operators that are more suitable for these representations. 
+	Current nested methods have been used in solving bilevel problem, however, there is no research focus on bilevel bin-packing problem. We will investigate several approaches such as Nested Particle Swarm Optimization \cite{Li:2006br}, Differential evolution (DE) based approach \cite{Angelo:2013ee, Zhu:2006in} and Co-evolutioanry approach \cite{Legillon:2012dd}. In order to adapt our problem to these existing approaches, we will develop suitable representations such as direct binary representation \cite{Xu:2010vh}, or indirect continuous probability representation \cite{Xiong:2014jq}. Genetic operators will also be investigated.
 
 	\item Investigate methods to improve the scalability of previously propose approach.
 
@@ -47,7 +46,7 @@
 		% In order to utilize Evolutionary Computation (EC) to solve this problem, we are going to develop searching mechanisms according to the nature of problem as well as the selected representation. In order to achieve this goal, we will design several new operators. In order to evaluate the quality of these components, we will perform analytical analysis on the result.
 \end{enumerate}
 \subsection{Objective Two: Develop EC-based approaches for the multi-objective joint allocation problem}
-The goal is to develop multi-objective EC-base approaches for container-based cloud in periodic optimization with considering three types of workloads to reduce the overall energy consumption.
+The goal is to develop multi-objective EC-base approaches for container-based cloud in periodic optimization with considering various types of workload to reduce the overall energy consumption.
 
 % As previously (see Section  \ref{sec:motivation}) mentioned, the task is multi-objective: minimizing the number of migration and minimizing the overall energy consumption. This two objectives are conflicting since intensive optimization may incur a large number migration. The first challenge is how to solve the multi-objective bi-level optimization problem. In addition, we consider propose a robust periodic optimization which means the placement of applications does not affect much from the variant workloads. Therefore, we divide workloads into five categories according to Fehling \cite{Fehling:2014tl}: static, periodic, once-in-a-life-time, continuously changing, and unpredictable. Among five types of workloads, two of them:  once-in-a-life-time and unpredictable workloads are unsuitable for static placement, since their behavior are hard to foresee and plan, hence, they are normally solved by dynamic approaches which will be addressed in our third objective.  For static, periodic, and continuously changing workload, we are going to design specific solutions. We also use three questions to guide our objective.
 % The robustness of a data center is particularly important. 
@@ -56,24 +55,22 @@ The goal is to develop multi-objective EC-base approaches for container-based cl
 % In order to measure the degree of robustness, we need to design a robustness measure. The second sub-objective is to design static consolidation algorithm with considering its previous immediate result. The third objective extends the second objective to a more general case, considering both previous immediate and next allocation. The evaluation of algorithm is based on analytical analysis of fitness functions and robustness measure. 
 
 \begin{enumerate}
-	\item Propose an EC-based multi-objective algorithm for periodic optimization considering \textbf{static workload}.
+	\item Propose an EC-based multi-objective algorithm for periodic optimization baseline approach.
+	\bx{The goal of this sub-objective is to modified the model and develop a baseline aggregation approach for the problem.}
+	In previous objective, we develop a single-objective joint allocation of containers and VMs.  For periodic optimization, both level of placement is multi-objective since both VMs and containers can be placed to other machines. We will modified the model to adaptive to the multi-objective problem. We will further develop an EC-based multi-objective algorithm with aggregation approach as our baseline approach. The aggregation approach combines several optimization objectives into a single value. We may use previous developed algorithm to solve the problem. In addition, we will consider the workloads as static. 
 
-	\bx{The goal of this sub-objective is to develop an EC-based approach to solve the multi-objective joint allocation problem with considering static workload.} Since both container and VM can be migrated, that is, multi-objective exists on both levels. We will start from a simple case with considering multi-objective in lower level: Minimizing container migration and energy consumption. The single objective model developed in previous objective can be modified and reused. For multi-objective bilevel optimization,  there are few studies using EC methods \cite{Yin:2000bt, Deb:2010in}. However, most of them are designed for continuous problems. Therefore, new representations and operators need to be considered for discrete problem. We might use the experiences in previous objective.  
+	\item Propose an EC-based multi-objective algorithm for periodic optimization considering with Pareto front approach.
 
-	The assumptions for this objective, we will start from one dimensional of resource: CPU utilization. We will consider the static workload in this sub objective because they are common and easy to start with.  We can utilize the representation and problem models from previous objective. However, we need to propose new genetic operators to adapt the multi-objective problem.
+	\bx{The goal of this sub-objective is to develop an EC-based approach to solve the multi-objective joint allocation problem with Pareto front approach.} 
+	In previous sub-objective we develop a baseline approach using aggregation approach. However, aggregation approach has some defects such as it cannot find the non-convex solution. In the sub-objective, we will use a Pareto front approach to solve the bilevel optimization problem. Currently only a few research \cite{Yin:2000bt, Deb:2009ug,Deb:2010in} focus on bilevel optimization problem. We will investigate which approach is the most suitable for this problem.
+	The basic assumption for the workload is still static.
+	% However, most of them are designed for continuous problems. Therefore, new representations and operators need to be considered for discrete problem. 
+
+	% The assumptions for this objective, we will start from one dimensional of resource: CPU utilization. We will consider the static workload in this sub objective because they are common and easy to start with.  We can utilize the representation and problem models from previous objective. However, we need to propose new genetic operators to adapt the multi-objective problem.
 
 	% like the case in single objective problem, we need to develop new representations, genetic operators.
-	\item Propose an EC-based multi-objective algorithm for periodic optimization considering \textbf{continuously changing workloads}.
-
-	\bx{The goal of this sub objective is to propose an approach for continuously changing workloads.}
-	In comparison with static workload, continuously changing workloads (increasing or decreasing) is a more general case. They can be predicted with statistical regression approaches. The placement needs to consider their characteristics such as trend, changing ratio. Because of their continuously changing characteristic, the model or representation must be changed. The changed representation may also affect the optimization process. Main difficulty is to develop a representation that allows the combined applications can be evaluated by previous designed fitness functions.  
-
-	\item Propose an EC-based multi-objective algorithm for periodic optimization considering \textbf{periodic workloads}.
-
-	\bx{The goal of this sub objective is to propose an approach for periodic workloads.}
-	In this sub-objective, we will design a time-series aware EC-based server consolidation approach with considering periodic workload. Since periodic workload is one of the major type of workload, we will consider how to adapt it into the previously designed multi-objective algorithm. We are going to consider combining multiple periodic workloads. We will start from the simplest case of stationary workload (the mean value of the series that remains constant over a time period). 
-
-	Similar with previous sub-objective, different model or representation and corresponding genetic operators  will be explored.
+	\item Propose an EC-based multi-objective algorithm for periodic optimization considering various types of predictable workload.
+	\bx{The goal of this sub objective is to propose an approach for more general case: predictable workloads.} In previous objectives, we consider the problem using static workloads for simplicity. However, practically, rare workload remains static throughout its life cycle. Therefore, we will consider several types of predictable workloads \cite{Fehling:2014tl} such as static, linear continuously changing, and periodic. Based on our previous designed algorithm, we will investigate a general representation for different workloads. Furthermore, the representation may incur the changing of models, genetic operators and search mechanism.
 	% Factor analysis such Principle Component Analysis \cite{Wold:1987wx} can be employed in developing new measure. Meanwhile, the representation used in static workload might not work, therefore, new representation, genetic operators need to be developed. 
 
 	% Proactive consolidation \cite{Farahnakian:2015vj, Tan:2011jd} has driven a lot of attention in recent years. They mainly focus on making prediction of the workloads using a regression approach such as linear regression, multi-linear regression, and K-means regression. However, most of their consolidation methods are simple heuristics. In our approach, we seek to propose a combined technique.
@@ -101,10 +98,10 @@ The goal is to develop multi-objective EC-base approaches for container-based cl
 \begin{enumerate}
 
 	\item Develop a baseline GP-based hyper-heuristic (GP-HH) approach for dynamic placement. 
-	\bx{The goal of this sub-objective is to develop a baseline GP-HH approach}. We will consider static workload in this task. \comm{More will come.}
+	\bx{The goal of this sub-objective is to develop a baseline GP-HH approach for single-level of placement: placing containers to VMs.} We will start from the basic assumption: static workload. In order to accomplish this task, we will construct primitive set by considering various features extracted from workload datasets such as the status of VMs (e.g resource utilization), features of workloads (e.g resource requirement). We will construct the functional set by using the general operators. The original genetic programming will be used as the search mechanism.
 
-	\item Conduct feature selection on the predictable workload and unpredictable workloads.
-	\bx{The goal of this sub-objective is to construct a GP primitive set by applying feature selection on various types of application workload.} We will investigate which features and attributes are important when dealing with energy efficiency problem. As the basic component of a dispatching rule, primitive set contains the states of environment including: status of VMs (e.g. utilization, wastage), features of workloads (e.g. resource consumption). Furthermore, it has been shown that web workloads have such properties as correlation between workload attributes, nonstationarity, burstiness, and self-similarity \cite{Feitelson:2002kn}. Although there is no research has investigate how to use them to construct dispatching rules, there are extensive statistical analysis on workload \cite{Verma:2009wi}. The effectiveness of functional set and primitive set will be tested by applying the constructed dispatching rules on dynamic consolidation problem.
+	\item Conduct feature extraction on the predictable workloads and unpredictable workloads.
+	\bx{The goal of this sub-objective is to construct a GP primitive set by applying feature extraction on various types of application workload.} In previous sub-objective, we develop a baseline GP-HH on static workload. In order to develop a general GP-HH that can handle all kinds of workloads, we will extract features from predictable workloads such as linear continuous changing workloads, periodic workloads, and from unpredictable workloads: once-in-a-lifetime workloads. We will consider the using properties of workloads as features such as non-stationarity, burstiness, and self-similarity \cite{Feitelson:2002kn}. We will test the extracted features by applying classification on the training and test set. The final features will be used in the primitive set.
 
 	% types including static, continuously changing, and periodic workloads, and two other workload types: once-in-a-life-time, unpredictable workloads. Based on these features, 
 	% \textcolor{Blue}{More...}
@@ -113,8 +110,8 @@ The goal is to develop multi-objective EC-base approaches for container-based cl
 	% \bx{The goal of this sub-objective is to construct a GP functional set.}
 	% \textcolor{blue}{More will come.}
 
-	% \item Develop a Cooperative-Genetic Programming approach to evolve dispatching rules for placing container and VMs.
-	% \bx{The goal of this sub-objective is to develop a cooperative GP approach to evolve dispatching rules.}
+	\item Develop a Cooperative GP-HH approach to evolve dispatching rules for placing container and VMs.
+	\bx{The goal of this sub-objective is to develop a cooperative GP approach to evolve dispatching rules.} In the baseline approach, we develop a GP-HH approach for single-level of placement with static workload. However, there is a case that no current VM is suitable for a container to place in; a new VM is needed to place at this moment. This case incurs a second level of placement. Therefore, to construct a complete placement dispatching rule, we will develop a cooperative GP-HH approach to solve the two-level of placement problem. We may reuse the single-level GP-HH in both level or develop a new GP-HH in the VMs to PMs level.  
 
 	% This sub-objective explores suitable representations for GP to construct useful dispatching rules. It also proposes new genetic operators as well as search mechanisms. \textcolor{blue}{More will come.}
 

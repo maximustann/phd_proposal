@@ -1,27 +1,79 @@
 \chapter{Proposed Contributions and Project Plan}\label{C:con}
 
 This thesis will contribute to the field of Cloud Computing by proposing novel solutions for the joint allocation of container and VM, and to the field of Evolutionary Computation by proposing new representations and genetic operators in evolutionary algorithms. The proposed contributions of this project are listed below:
-
+ 
 \begin{enumerate}
-	\item Propose a new model for the joint allocation of container and VM problem.
-	New representations will be proposed to problem.
-	The first EC-approach to solve the problem. 
-	Reduce the energy consumption of data centers.
-	\item Propose a new robustness measure for time-dependent server consolidation problem. New optimization algorithms not only consider the two-level of packing problem but also take the previous and next consolidation into considered.
-	\item Develp a GP-based hyper-heuristic approach to automatically generate dispatching rules for dynamic server consolidation problem. New functional and primitive set for constructing useful dispatching rules will be studied. New genetic operations and representations will be proposed.
-	\item Develop a preprocessing algorithm to reduce the number of variables in a large scale static consolidation problem without scacrificing too much performance. Useful features of server consolidation problem will be studied.
+	\item Propose a new model for the single objective joint placement of container and VM problem. This new model will address the relationship between containers and energy consumption.
+	\item Propose an EC-based approach for optimizing the single objective joint allocation of container and VM problem. This algorithm is expected to achieve better performance than existing VM-based approaches in terms of energy consumption. 
+	\item Propose a pre-processing approach with the EC-based optimization algorithm to effeciently solve the joint allocation of container and VM problem. This work is expected to reduce the number of containers by combining containers into larger groups. This pre-processing technique can be used to reduce the complexity of the single objective joint allocation of container and VM problem without lossing too much performance. 
+	\item Propose EC-based multi-objective approaches for the joint placement container and VM with considering various types of workload.
+	This work will propose several multi-objective approaches with aggregation and Pareto front methods. In addition, a uniform representation for various workloads will be proposed to make the algorithm more resilient.
+	\item Propose a new Genetic programming Hyper-heuristic approach for dynamically placement of container with various types of workload. The propose GP-HH is expected to automatically generate heuristics for various types of workload, dispatching them to suitble PMs in order to reach near-optimal solution in energy consumption.
 \end{enumerate}
 
 \section{Overview of Project Plan}
 Six overall phases have been defined in the initial research plan for this PhD project, as
-shown in Figure \ref{fig:}. The first phase, which comprises reviewing the relevant literature, investigating both VM-based and container-based server consolidation algorithms, and producing the proposal, has
+shown in Table \ref{tab:plan}. The first phase, which comprises reviewing the relevant literature, investigating both VM-based and container-based server consolidation algorithms, and producing the proposal, has
 been completed. The second phase, which corresponds to the first objective of the thesis, is
 currently in progress and is expected to be finished on time, thus allowing the remaining
 phases to also be carried out as planned.
 
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\caption{Phases of project plan}
+\label{tab:plan}
+\scalebox{0.7}{
+\begin{tabular}{@{}|l|l|l|@{}}
+\toprule
+Phase & Task                                                                                                                                                       & Duration (Months) \\ \midrule
+1     & \begin{tabular}[c]{@{}l@{}}Reviewing literature, overall design, selection of datasets \\ and writing the proposal\end{tabular}                            & 12 (Complete)     \\
+2     & \begin{tabular}[c]{@{}l@{}}Develop multi-objective EC-base approaches for container-based cloud in periodic optimization \\ with considering various types of workload\end{tabular} & 7                 \\
+3     & \begin{tabular}[c]{@{}l@{}}Improve the scalability of the EC-based approach with \\ a pre-processing method\end{tabular}  & 7 \\
+4     & \begin{tabular}[c]{@{}l@{}}Develop a cooperative Genetic programming based hyper-heuristic approach for \\ dynamical placement.\end{tabular}  & 7                 \\
+5     & Writing the thesis                                                                                                                                         & 6                 \\ \bottomrule
+\end{tabular}}
+\end{table}
+
 \section{Project Timeline}
 The phases included in the plan above are estimated to be completed following the timeline
-shown in Figure \ref{}, which will serve as a guide throughout this project. Note that part of the first phase has already been done, therefore the timeline only shows the estimated remaining time for its full completion.
+shown in Figure \ref{tab:timetable}, which will serve as a guide throughout this project. Note that part of the first phase has already been done, therefore the timeline only shows the estimated remaining time for its full completion.
+
+
+\begin{table}
+\protect\caption{Time Line}
+\label{table-timeline}
+\footnotesize
+\begin{center}
+\scalebox{0.7}{
+\begin{tabular}{|l||cccc|cccc|cccc|}
+
+\hline
+  \textbf{Task}      & \multicolumn{4}{c}{ }&  \multicolumn{4}{c}{Months}&\multicolumn{4}{c|}{ }  \\ \hline
+&2&4&6&8&10&12&13&16&18&20&22&24 \\ \hline
+Literature Review and Updating &x&x&x&x&x&x&x&x&x&x&x&x \\ [1mm]
+Develop new model for the joint placement of VMs and containers &x & && & & &  & & & & &  \\ [1mm]
+Develop an EC-based bilevel optimization approach for the joint
+ placement of VMs and containers & &x&&& & & & & & & &  \\
+   Improve the scalability of the EC-based approach with
+ a pre-processing method & & &x & & & & & & & & &   \\ [1mm]
+Modified the model and develop a baseline aggregation approach for the problem & & & &x&x& & & & & & & \\ [1mm]
+Develop an EC-based approach to solve the multi-objective joint allocation problem
+with Pareto front approach & & & & & &x&x& & & & &  \\[1mm]
+Propose an EC-based multi-objective algorithm for periodic 
+optimization considering various types of predictable workload &&&&&&&&x&&&& \\ [1mm]
+Develop a baseline GP-based hyper-heuristic approach &&&&&&&&&x&x&& \\ [1mm]
+Construct a GP primitive set by applying feature extraction on various types of application workload &&&&&&&&&x&x&& \\ [1mm]
+Develop a Cooperative GP-HH approach to evolve dispatching rules for placing container and VMs &&&&&&&&&x&x&&\\ [1mm]
+Writing the first draft of the thesis &&&&&&&&&&x&x&  \\ \hline
+ Editing the final draft   &&&&&&&&&&x&x&x \\ \hline
+
+\end{tabular}
+}
+\end{center}
+\end{table}
+
 
 \section{Thesis Outline}
 The completed thesis will be organised into the following chapters:
@@ -30,16 +82,13 @@ The completed thesis will be organised into the following chapters:
 	This chapter will introduce the thesis, providing a problem statement and motivations, defining research goals and contributions, and outlining the structure of this dissertation.
 	\item \textit{Chapter 2: Literature Review} \\
 	The literature review will examine in the existing work on VM-based and container-based server consolidation, discussing the fundamental concepts in this field in order to provide the reader with the necessary background. Multiple sections will then follow, 
-	considering issues such as static consolidation, dynamic consolidation, and large-scale of consolidation problem. The focus of this review is on investigating server consolidation techniques that are based on Evolutionary Computation.
-	\item \textit{Chapter 3: An EC Approach to the joint Allocation of Container and Virtual Machine} \\
-	This chapter will establish a new model for the joint allocation of container and virtual machine problem. Furthermore, this chapter will introduce a new bi-level approach to solve this problem. One of the critical aspects of this approach is the representation of solution. Therefore, multiple representations will be proposed, analysed and compared.
-	\item \textit{Chapter 4: An EC Approach to the Time-dependent Global Server Consolidation} \\
-	In this chapter, a robustness measure of time-dependent server consolidation will be proposed. Furthermore, a time-dependent optimization techniques will be employed to solve this problem. In the first, it will only consider the previous allocation results to minimize both cost of migration as well as the overall energy consumption of data center. Then, this approach will be generalized to consider next consolidation.
-	\item \textit{Chpater 5: A Genetic Programming-based Hybrid-heuristic Approach to Dynamic Consolidation} \\
-	This chapter focuses on providing a Genetic Programming-based hybrid heuristic approach to automatic generate
-	dispatching rules to dynamic consolidation problem.
-	\item \textit{Chapter 6: A Preprocessing Algorithm for Large-scale Static Consolidation}\\
-	This chapter proposes a preprocessing algorithm for large scale static consolidation to reduce the number of variables so that the static consolidation can be more scalable. 
+	considering issues such as static placement, dynamic placement. The focus of this review is on investigating server consolidation techniques that are based on Evolutionary Computation.
+	\item \textit{Chapter 3: Develop EC-based approaches for the single objective joint placement of containers and VMs.} \\
+	This chapter will establish a new model for the joint placement of container and virtual machine problem. Furthermore, this chapter will introduce a new EC-based bi-level approach to solve this problem. 
+	\item \textit{Chapter 4: EC-based approaches for the multi-objective joint placement problem} \\
+	In this chapter, EC-based approaches for the multi-objective joint placement of containers and VMs with considering various types of workload. It is then followed by algorithm performance evaluation that contains an experiment design, setting, results and analysis.
+	\item \textit{Chpater 5: A Genetic Programming-based Hybrid-heuristic Approach to Dynamic Placement} \\
+	This chapter focuses on providing a Genetic Programming-based hybrid heuristic approach to automatic generate dispatching rules to dynamic consolidation problem. A cooperative GP-HH will be proposed in this chapter for generating dispatching rules for two-level of placement.
 	\item \textit{Chapter 7: Conclusions and Future Work}
 	In this chapter, conclusions will be drawn from the analysis and experiments conducted in the different phases of this research, and the main findings for each one of them will be summarised. Additionally, future research directions will be discussed.
 
