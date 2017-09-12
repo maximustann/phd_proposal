@@ -1,15 +1,16 @@
 # Fdb version 3
-["pdflatex"] 1502832372 "background.tex" "background.pdf" "background" 1502832373
+["pdflatex"] 1505171065 "background.tex" "background.pdf" "background" 1505171067
   "/etc/texmf/texmf.cnf" 1498188680 31930 5d12f12a9f7d785fbba339159e5d30d3 ""
   "/usr/pkg/share/texmf-dist/fonts/map/fontname/texfonts.map" 1466306335 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1486026475 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1486026475 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/pkg/share/texmf-dist/tex/latex/base/omscmr.fd" 1498190570 2256 80ce1168fb4ce6a85583a9cf8972c013 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1498191925 1840254 3acd441173b041e027012f0eb946dc1f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1498190442 2963132 81ca9361992cbf4ed56a7283785ae50a ""
   "background.aux" 1498022423 1347 65326f0eedfb9cb9fb23eafdf8a3b788 ""
-  "background.tex" 1502832370 69114 ca755b47aece9579662441989c716016 ""
+  "background.tex" 1505171063 96015 16b1d2813cd52e4a6a3f0f556fd9bc00 ""
   (generated)
-  "/Users/maximustann/Work/PH.D/proposal/background.pdf"
   "/Users/maximustann/Work/PH.D/proposal/background.log"
-  "background.pdf"
   "background.log"
+  "background.pdf"
+  "/Users/maximustann/Work/PH.D/proposal/background.pdf"

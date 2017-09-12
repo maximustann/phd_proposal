@@ -3,12 +3,12 @@
 This thesis will contribute to the field of Cloud Computing by proposing novel solutions for the joint allocation of container and VM, and to the field of Evolutionary Computation by proposing new representations and genetic operators in evolutionary algorithms. The proposed contributions of this project are listed below:
  
 \begin{enumerate}
-	\item Propose a new model for the single objective joint placement of container and VM problem. This new model will address the relationship between containers and energy consumption.
-	\item Propose an EC-based approach for optimizing the single objective joint allocation of container and VM problem. This algorithm is expected to achieve better performance than existing VM-based approaches in terms of energy consumption. 
-	\item Propose a pre-processing approach with the EC-based optimization algorithm to effeciently solve the joint allocation of container and VM problem. This work is expected to reduce the number of containers by combining containers into larger groups. This pre-processing technique can be used to reduce the complexity of the single objective joint allocation of container and VM problem without lossing too much performance. 
-	\item Propose EC-based multi-objective approaches for the joint placement container and VM with considering various types of workload.
+	\item A new model for the joint placement of container and VM problem. This new model will address the relationship between containers, VMs, PMs, and energy consumption. This model can be used in optimizing the energy consumption in a container-based cloud data center.
+	\item An EC-based approach for optimizing the single objective joint allocation of container and VM problem. This algorithm is expected to achieve better performance than existing VM-based approaches in terms of energy consumption. 
+	\item A clustering-based pre-processing approach with the EC-based optimization algorithm to effeciently solve the joint allocation of container and VM problem. This work can be used to reduce the complexity of the joint allocation of container and VM problem by combining containers into larger groups. 
+	\item EC-based multi-objective approaches for the joint placement container and VM with considering various types of workload.
 	This work will propose several multi-objective approaches with aggregation and Pareto front methods. In addition, a uniform representation for various workloads will be proposed to make the algorithm more resilient.
-	\item Propose a new Genetic programming Hyper-heuristic approach for dynamically placement of container with various types of workload. The propose GP-HH is expected to automatically generate heuristics for various types of workload, dispatching them to suitble PMs in order to reach near-optimal solution in energy consumption.
+	\item A new genetic programming hyper-heuristic (GP-HH) approach for single objective  dynamically placement of container with various types of workload. The proposed GP-HH is expected to automatically generate heuristics for various types of workload, dispatching them to suitble PMs in order to reach near-optimal solution in energy consumption.
 \end{enumerate}
 
 \section{Overview of Project Plan}
@@ -18,27 +18,29 @@ been completed. The second phase, which corresponds to the first objective of th
 currently in progress and is expected to be finished on time, thus allowing the remaining
 phases to also be carried out as planned.
 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+
 \begin{table}[]
 \centering
 \caption{Phases of project plan}
 \label{tab:plan}
-\scalebox{0.7}{
-\begin{tabular}{@{}|l|l|l|@{}}
-\toprule
-Phase & Task                                                                                                                                                       & Duration (Months) \\ \midrule
-1     & \begin{tabular}[c]{@{}l@{}}Reviewing literature, overall design, selection of datasets \\ and writing the proposal\end{tabular}                            & 12 (Complete)     \\
-2     & \begin{tabular}[c]{@{}l@{}}Develop multi-objective EC-base approaches for container-based cloud in periodic optimization \\ with considering various types of workload\end{tabular} & 7                 \\
-3     & \begin{tabular}[c]{@{}l@{}}Improve the scalability of the EC-based approach with \\ a pre-processing method\end{tabular}  & 7 \\
-4     & \begin{tabular}[c]{@{}l@{}}Develop a cooperative Genetic programming based hyper-heuristic approach for \\ dynamical placement.\end{tabular}  & 7                 \\
-5     & Writing the thesis                                                                                                                                         & 6                 \\ \bottomrule
-\end{tabular}}
+\scalebox{0.85}{
+\begin{tabular}{|c|l|l|}
+\hline
+\multicolumn{1}{|l|}{Phase} & Task                                                                                                                                                                                 & Duration (Months) \\ \hline
+1                           & \begin{tabular}[c]{@{}l@{}}Reviewing literature, overall design, selection of datasets\\ and writing the proposal\end{tabular}                                                       & 12 (Complete)     \\
+2                           & \begin{tabular}[c]{@{}l@{}}Develop a single-objective EC-based approach for the joint\\ allocation of containers and VMs\end{tabular}                                                & 7                 \\
+3                           & \begin{tabular}[c]{@{}l@{}}Develop multi-objective EC-based approaches for container-based \\ cloud in periodic optimization with considering various types of workload\end{tabular} & 7                 \\
+4                           & \begin{tabular}[c]{@{}l@{}}Develop a cooperative Genetic programming based \\ hyper-heuristic approach for dynamical placement.\end{tabular}                                         & 7                 \\
+5                           & Writing the thesis                                                                                                                                                                   & 6                 \\ \hline
+\end{tabular}
+}
 \end{table}
+
+
 
 \section{Project Timeline}
 The phases included in the plan above are estimated to be completed following the timeline
-shown in Figure \ref{tab:timetable}, which will serve as a guide throughout this project. Note that part of the first phase has already been done, therefore the timeline only shows the estimated remaining time for its full completion.
+shown in Table \ref{table-timeline}, which will serve as a guide throughout this project. Note that part of the first phase has already been done, therefore the timeline only shows the estimated remaining time for its full completion.
 
 
 \begin{table}
@@ -46,26 +48,26 @@ shown in Figure \ref{tab:timetable}, which will serve as a guide throughout this
 \label{table-timeline}
 \footnotesize
 \begin{center}
-\scalebox{0.7}{
+\scalebox{0.88}{
 \begin{tabular}{|l||cccc|cccc|cccc|}
 
 \hline
   \textbf{Task}      & \multicolumn{4}{c}{ }&  \multicolumn{4}{c}{Months}&\multicolumn{4}{c|}{ }  \\ \hline
 &2&4&6&8&10&12&13&16&18&20&22&24 \\ \hline
 Literature Review and Updating &x&x&x&x&x&x&x&x&x&x&x&x \\ [1mm]
-Develop new model for the joint placement of VMs and containers &x & && & & &  & & & & &  \\ [1mm]
-Develop an EC-based bilevel optimization approach for the joint
- placement of VMs and containers & &x&&& & & & & & & &  \\
-   Improve the scalability of the EC-based approach with
- a pre-processing method & & &x & & & & & & & & &   \\ [1mm]
-Modified the model and develop a baseline aggregation approach for the problem & & & &x&x& & & & & & & \\ [1mm]
-Develop an EC-based approach to solve the multi-objective joint allocation problem
-with Pareto front approach & & & & & &x&x& & & & &  \\[1mm]
-Propose an EC-based multi-objective algorithm for periodic 
-optimization considering various types of predictable workload &&&&&&&&x&&&& \\ [1mm]
+Develop a new model for the joint placement & x & && & & &  & & & & & \\ of VMs and containers & & && & & &  & & & & &  \\ [1mm]
+Develop an EC-based bilevel optimization approach & &x&&& & & & & & & &\\ 
+for the joint placement of VMs and containers & &&&& & & & & & & &  \\
+Improve the scalability of the EC-based approach with & & &x & & & & & & & & & \\
+ a pre-processing method & & & & & & & & & & & &   \\ [1mm]
+Modify the model and develop a baseline aggregation & & & &x&x& & & & & & & \\ approach for the multi-objective problem & & & &&& & & & & & & \\ [1mm]
+Develop an EC-based approach to solve the multi-objective & & & & & &x&x& & & & & \\ joint allocation problem
+with Pareto front approach & & & & & &&& & & & &  \\[1mm]
+Propose an EC-based multi-objective algorithm for periodic &&&&&&&&x&&&&\\
+optimization considering various types of predictable workload &&&&&&&&&&&& \\ [1mm]
 Develop a baseline GP-based hyper-heuristic approach &&&&&&&&&x&x&& \\ [1mm]
-Construct a GP primitive set by applying feature extraction on various types of application workload &&&&&&&&&x&x&& \\ [1mm]
-Develop a Cooperative GP-HH approach to evolve dispatching rules for placing container and VMs &&&&&&&&&x&x&&\\ [1mm]
+Construct a GP primitive set by applying feature extraction &&&&&&&&&x&x&&\\ on various types of application workload &&&&&&&&&&&& \\ [1mm]
+Develop a Cooperative GP-HH approach to evolve dispatching &&&&&&&&&x&x&&\\ rules for placing container and VMs &&&&&&&&&&&&\\ [1mm]
 Writing the first draft of the thesis &&&&&&&&&&x&x&  \\ \hline
  Editing the final draft   &&&&&&&&&&x&x&x \\ \hline
 

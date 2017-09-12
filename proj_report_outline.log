@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  11 SEP 2017 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  12 SEP 2017 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -384,19 +384,19 @@ LaTeX Warning: Label `sub@fig:f' multiply defined.
 ) (./contribution.aux))
 \openout1 = `proj_report_outline.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 76.
  (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
@@ -474,59 +474,59 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 92.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 93.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 92.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 93.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 92.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 93.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 92.
+(Font)              scaled to size 10.42007pt on input line 93.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 92.
+(Font)              scaled to size 7.91925pt on input line 93.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 92.
+(Font)              scaled to size 6.25204pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 92.
+(Font)              scaled to size 10.42007pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 92.
+(Font)              scaled to size 7.91925pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 92.
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 92.
+(Font)              scaled to size 6.25204pt on input line 93.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 93.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 92.
+(Font)              scaled to size 11.40997pt on input line 93.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 92.
+(Font)              scaled to size 8.33606pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 92.
+(Font)              scaled to size 11.40997pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 92.
+(Font)              scaled to size 8.33606pt on input line 93.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 93.
  [-1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [0]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 96.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 97.
  (./proj_report_outline.toc
 Overfull \hbox (2.17882pt too wide) in paragraph at lines 7--7
  [][] []\OT1/ppl/m/n/10.95 Objective Three: De-velop a hyper-heuristic Ge-netic
@@ -545,13 +545,13 @@ Overfull \hbox (2.17882pt too wide) in paragraph at lines 7--7
 LaTeX Warning: Citation `Piraghaj:2017vi' on page 3 undefined on input line 8.
 
 
-Overfull \hbox (12.77698pt too wide) in paragraph at lines 11--11
+Overfull \hbox (12.77698pt too wide) in paragraph at lines 9--9
  [][] []\OT1/ppl/m/n/10.95 A Server Con-sol-i-da-tion ex-am-ple: Ini-tially, ea
 ch PM runs an ap-pli-ca-tion wrapped 
  []
 
 
-Overfull \hbox (0.45929pt too wide) in paragraph at lines 18--18
+Overfull \hbox (0.45929pt too wide) in paragraph at lines 16--16
  [][] []\OT1/ppl/m/n/10.95 Violation Per-cent-age com-par-i-son be-tween se-lec
 -tion with vi-o-la-tion con-trol and 
  []
@@ -574,7 +574,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (./ProblemStatement3.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 4.
-<pics/workflow_management.png, id=26, 768.62157pt x 392.21532pt>
+<pics/workflow_management.png, id=25, 768.62157pt x 392.21532pt>
 File: pics/workflow_management.png Graphic file (type png)
 <use pics/workflow_management.png>
 Package pdftex.def Info: pics/workflow_management.png  used on input line 27. o
@@ -584,14 +584,7 @@ Package pdftex.def Info: Requested size: 308.71104pt x 157.5297pt on input line
  [1
 
 
-]) (./Motivation.tex [2 <./pics/workflow_management.png>]
-
-LaTeX Warning: Citation `Fehling:2014tl' on page 3 undefined on input line 34.
-
-
-LaTeX Warning: Citation `Jung:2010tb' on page 3 undefined on input line 50.
-
-[3]
+]) (./Motivation.tex [2 <./pics/workflow_management.png>] [3]
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 60.
  (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
@@ -599,257 +592,186 @@ File: omsppl.fd
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
 ) (./Goals.tex
-<pics/thesisPlan.png, id=39, 1427.3325pt x 671.50874pt>
+<pics/thesisPlan.png, id=38, 1429.59094pt x 593.21625pt>
 File: pics/thesisPlan.png Graphic file (type png)
 <use pics/thesisPlan.png>
 Package pdftex.def Info: pics/thesisPlan.png  used on input line 5. on input li
 ne 5.
-Package pdftex.def Info: Requested size: 441.01772pt x 207.47905pt on input lin
+Package pdftex.def Info: Requested size: 441.01772pt x 182.99901pt on input lin
 e 5.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
 
-[4 <./pics/thesisPlan.png>]
-Underfull \vbox (badness 3724) has occurred while \output is active []
-
- [5]
-
-LaTeX Warning: Citation `Deb:2009ug' on page 6 undefined on input line 65.
-
-
+[4 <./pics/thesisPlan.png>] [5]
 Overfull \hbox (2.539pt too wide) in paragraph at lines 64--68
 \OT1/ppl/m/n/10.95 objective joint al-lo-ca-tion prob-lem with Pareto front ap-
 proach.[] In pre-vi-ous sub-objective
  []
 
-
-LaTeX Warning: Citation `Fehling:2014tl' on page 6 undefined on input line 73.
-
 [6]) (./published.tex) (./organization.tex
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 2.
-
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 3.
-
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 4.
-
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
 )) [7]
 \openout2 = `literature_review.aux'.
 
- (./literature_review.tex [8
+ (./literature_review.tex
+[8
 
 
 
 ]
 Chapter 2.
 (./background.tex
-
-LaTeX Warning: Reference `C:' on page 9 undefined on input line 3.
-
 <pics/stakeholders.png, id=57, 899.36pt x 554.07pt>
 File: pics/stakeholders.png Graphic file (type png)
 <use pics/stakeholders.png>
-Package pdftex.def Info: pics/stakeholders.png  used on input line 18. on input
- line 18.
-Package pdftex.def Info: Requested size: 308.71104pt x 190.19055pt on input lin
-e 18.
-[9]
-Overfull \hbox (1.98639pt too wide) in paragraph at lines 29--32
-[][]\OT1/ppl/m/n/10.95 Cloud ser-vice mod-els de-scribe the re-spon-si-bil-i-ti
-es and obli-ga-tions of stake-hold-ers.[] Cloud
- []
-
-<pics/architecture.png, id=61, 770.88pt x 526.96875pt>
-File: pics/architecture.png Graphic file (type png)
-<use pics/architecture.png>
-Package pdftex.def Info: pics/architecture.png  used on input line 35. on input
- line 35.
-Package pdftex.def Info: Requested size: 396.91324pt x 271.32358pt on input lin
-e 35.
-[10 <./pics/stakeholders.png>] [11 <./pics/architecture.png>]
-
-LaTeX Warning: Citation `Piraghaj:2017vi' on page 12 undefined on input line 85
-.
-
-<pics/energyConsumption.png, id=70, 631.35875pt x 614.295pt>
+Package pdftex.def Info: pics/stakeholders.png  used on input line 11. on input
+ line 11.
+Package pdftex.def Info: Requested size: 264.61331pt x 163.01805pt on input lin
+e 11.
+ [9 <./pics/stakeholders.png>]
+<pics/energyConsumption.png, id=62, 631.35875pt x 614.295pt>
 File: pics/energyConsumption.png Graphic file (type png)
 <use pics/energyConsumption.png>
-Package pdftex.def Info: pics/energyConsumption.png  used on input line 97. on 
-input line 97.
-Package pdftex.def Info: Requested size: 198.45662pt x 193.0915pt on input line
- 97.
-<pics/util.png, id=71, 697.10437pt x 529.22719pt>
-File: pics/util.png Graphic file (type png)
-<use pics/util.png>
-Package pdftex.def Info: pics/util.png  used on input line 102. on input line 1
-02.
-Package pdftex.def Info: Requested size: 198.45662pt x 150.66173pt on input lin
-e 102.
-[12]
-<pics/comparison.png, id=75, 565.36218pt x 374.90062pt>
+Package pdftex.def Info: pics/energyConsumption.png  used on input line 29. on 
+input line 29.
+Package pdftex.def Info: Requested size: 154.35889pt x 150.18958pt on input lin
+e 29.
+<pics/comparison.png, id=63, 565.36218pt x 374.90062pt>
 File: pics/comparison.png Graphic file (type png)
 <use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 129. on input 
-line 129.
+Package pdftex.def Info: pics/comparison.png  used on input line 130. on input 
+line 130.
 Package pdftex.def Info: Requested size: 308.71104pt x 204.71436pt on input lin
-e 129.
+e 130.
 
 
-LaTeX Warning: Citation `vm_technology' on page 13 undefined on input line 136.
+LaTeX Warning: Citation `vm_technology' on page 10 undefined on input line 137.
 
 
-<pics/container_OS_APP.png, id=76, 503.63156pt x 435.12563pt>
+[10 <./pics/energyConsumption.png>]
+<pics/container_OS_APP.png, id=68, 503.63156pt x 435.12563pt>
 File: pics/container_OS_APP.png Graphic file (type png)
 <use pics/container_OS_APP.png>
-Package pdftex.def Info: pics/container_OS_APP.png  used on input line 144. on 
-input line 144.
+Package pdftex.def Info: pics/container_OS_APP.png  used on input line 147. on 
+input line 147.
 Package pdftex.def Info: Requested size: 176.40439pt x 152.40912pt on input lin
-e 144.
-
-LaTeX Warning: Citation `Piraghaj:2017vi' on page 13 undefined on input line 14
-5.
+e 147.
 
 
-LaTeX Warning: Citation `Piraghaj:2017vi' on page 13 undefined on input line 14
-5.
+LaTeX Warning: Citation `Piraghaj:2017vi' on page 11 undefined on input line 14
+8.
 
 
-LaTeX Warning: Citation `Piraghaj:2017vi' on page 13 undefined on input line 15
-0.
+LaTeX Warning: Citation `Piraghaj:2017vi' on page 11 undefined on input line 14
+8.
 
-[13 <./pics/energyConsumption.png> <./pics/util.png>] [14 <./pics/comparison.pn
-g> <./pics/container_OS_APP.png>]
-Overfull \hbox (9.02213pt too wide) in paragraph at lines 172--173
+
+LaTeX Warning: Citation `Piraghaj:2017vi' on page 11 undefined on input line 15
+3.
+
+[11 <./pics/comparison.png> <./pics/container_OS_APP.png>]
+Overfull \hbox (9.02213pt too wide) in paragraph at lines 175--176
 \OT1/ppl/m/n/10.95 a con-tainer can dy-nam-i-cally ad-just its re-sources un-de
 r the host's re-source con-straint.This
  []
 
-<pics/bin_packing_problem.png, id=88, 628.59843pt x 306.39468pt>
-File: pics/bin_packing_problem.png Graphic file (type png)
-<use pics/bin_packing_problem.png>
-Package pdftex.def Info: pics/bin_packing_problem.png  used on input line 183. 
-on input line 183.
-Package pdftex.def Info: Requested size: 264.61331pt x 128.97942pt on input lin
-e 183.
-[15]
-<pics/crossover.png, id=92, 670.00313pt x 389.95688pt>
-File: pics/crossover.png Graphic file (type png)
-<use pics/crossover.png>
-Package pdftex.def Info: pics/crossover.png  used on input line 212. on input l
-ine 212.
-Package pdftex.def Info: Requested size: 194.04886pt x 112.93584pt on input lin
-e 212.
-<pics/mutation.png, id=93, 679.03688pt x 124.96687pt>
-File: pics/mutation.png Graphic file (type png)
-<use pics/mutation.png>
-Package pdftex.def Info: pics/mutation.png  used on input line 216. on input li
-ne 216.
-Package pdftex.def Info: Requested size: 194.04886pt x 35.71126pt on input line
- 216.
- [16 <./pics/bin_packing_problem.png>] [17 <./pics/crossover.png> <./pics/mutat
-ion.png>]
-<pics/gp-tree.png, id=105, 305.64188pt x 450.9347pt>
-File: pics/gp-tree.png Graphic file (type png)
-<use pics/gp-tree.png>
-Package pdftex.def Info: pics/gp-tree.png  used on input line 250. on input lin
-e 250.
-Package pdftex.def Info: Requested size: 132.30666pt x 195.1986pt on input line
- 250.
-<pics/consolidate.png, id=106, 764.8575pt x 190.46156pt>
+[12]
+<pics/consolidate.png, id=77, 764.8575pt x 190.46156pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 278. on input
- line 278.
+Package pdftex.def Info: pics/consolidate.png  used on input line 312. on input
+ line 312.
 Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
- 278.
- [18 <./pics/gp-tree.png>]
-<pics/initialization.png, id=111, 716.6775pt x 199.49532pt>
+ 312.
+<pics/initialization.png, id=78, 716.6775pt x 199.49532pt>
 File: pics/initialization.png Graphic file (type png)
 <use pics/initialization.png>
-Package pdftex.def Info: pics/initialization.png  used on input line 297. on in
-put line 297.
+Package pdftex.def Info: pics/initialization.png  used on input line 331. on in
+put line 331.
 Package pdftex.def Info: Requested size: 396.91324pt x 110.4868pt on input line
- 297.
-<pics/dynamic_resource.png, id=112, 718.18312pt x 161.85469pt>
+ 331.
+<pics/dynamic_resource.png, id=79, 718.18312pt x 161.85469pt>
 File: pics/dynamic_resource.png Graphic file (type png)
 <use pics/dynamic_resource.png>
-Package pdftex.def Info: pics/dynamic_resource.png  used on input line 301. on 
-input line 301.
+Package pdftex.def Info: pics/dynamic_resource.png  used on input line 335. on 
+input line 335.
 Package pdftex.def Info: Requested size: 396.91324pt x 89.45253pt on input line
- 301.
-<pics/predict_consolidate.png, id=113, 748.29562pt x 419.31656pt>
+ 335.
+<pics/predict_consolidate.png, id=80, 748.29562pt x 419.31656pt>
 File: pics/predict_consolidate.png Graphic file (type png)
 <use pics/predict_consolidate.png>
-Package pdftex.def Info: pics/predict_consolidate.png  used on input line 305. 
-on input line 305.
+Package pdftex.def Info: pics/predict_consolidate.png  used on input line 339. 
+on input line 339.
 Package pdftex.def Info: Requested size: 396.91324pt x 222.41586pt on input lin
-e 305.
-
-Overfull \hbox (0.74336pt too wide) in paragraph at lines 323--325
+e 339.
+ [13 <./pics/consolidate.png>] [14 <./pics/initialization.png> <./pics/dynamic_
+resource.png> <./pics/predict_consolidate.png>]
+Overfull \hbox (0.74336pt too wide) in paragraph at lines 357--359
 []\OT1/ppl/m/n/10.95 In pre-dic-tion, an op-ti-miza-tion sys-tem takes the cur-
 rent ap-pli-ca-tions' uti-liza-tion records
  []
 
-[19 <./pics/consolidate.png>] [20 <./pics/initialization.png> <./pics/dynamic_r
-esource.png> <./pics/predict_consolidate.png>] [21] [22]
+[15] [16]
 
-LaTeX Warning: Citation `:2013tn' on page 23 undefined on input line 392.
+LaTeX Warning: Citation `:2013tn' on page 17 undefined on input line 426.
 
 
-LaTeX Warning: Citation `Bard:1982ud' on page 23 undefined on input line 392.
+LaTeX Warning: Citation `Bard:1982ud' on page 17 undefined on input line 426.
 
+[17]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 402.
+               Default added (so using `tbp') on input line 436.
 
 
-Overfull \hbox (13.50563pt too wide) in paragraph at lines 417--418
+Overfull \hbox (12.80022pt too wide) in paragraph at lines 451--452
  [][] 
  []
 
 
-LaTeX Warning: Citation `Wood:2009tw' on page 23 undefined on input line 423.
+LaTeX Warning: Citation `Wood:2009tw' on page 18 undefined on input line 457.
 
 
-LaTeX Warning: Citation `Beloglazov:2010vm' on page 23 undefined on input line 
-423.
+LaTeX Warning: Citation `Beloglazov:2010vm' on page 18 undefined on input line 
+457.
 
-[23] [24]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 473
+
+LaTeX Warning: Reference `vector_bin_packing' on page 18 undefined on input lin
+e 457.
+
+[18]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 507
 .
  (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
-LaTeX Warning: Citation `:2013tn' on page 25 undefined on input line 475.
+LaTeX Warning: Citation `:2013tn' on page 19 undefined on input line 509.
 
-[25] [26])) [27]
+[19] [20] [21])) [22]
 \openout2 = `preliminary.aux'.
 
- (./preliminary.tex [28
-
-
-
-]
+ (./preliminary.tex
 Chapter 3.
 
-LaTeX Warning: Citation `Energy_Service_2' on page 29 undefined on input line 1
+LaTeX Warning: Citation `Energy_Service_2' on page 23 undefined on input line 1
 99.
 
-[29] [30]
-<pics/preliminary/cec.png, id=160, 722.7pt x 542.025pt>
+[23
+
+
+
+] [24]
+<pics/preliminary/cec.png, id=129, 722.7pt x 542.025pt>
 File: pics/preliminary/cec.png Graphic file (type png)
 <use pics/preliminary/cec.png>
 Package pdftex.def Info: pics/preliminary/cec.png  used on input line 334. on i
 nput line 334.
 Package pdftex.def Info: Requested size: 352.8155pt x 264.61037pt on input line
  334.
- [31]
+ [25]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 356.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -864,15 +786,15 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 357.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 357.
- [32 <./pics/preliminary/cec.png>]
-<pics/preliminary/hollow.png, id=169, 786.94pt x 596.2275pt>
+ [26 <./pics/preliminary/cec.png>]
+<pics/preliminary/hollow.png, id=138, 786.94pt x 596.2275pt>
 File: pics/preliminary/hollow.png Graphic file (type png)
 <use pics/preliminary/hollow.png>
 Package pdftex.def Info: pics/preliminary/hollow.png  used on input line 396. o
 n input line 396.
 Package pdftex.def Info: Requested size: 308.71104pt x 233.89244pt on input lin
 e 396.
- [33 <./pics/preliminary/hollow.png>]
+ [27 <./pics/preliminary/hollow.png>]
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
@@ -881,7 +803,7 @@ Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 496.
- [34]
+ [28]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 514.
@@ -890,88 +812,88 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 526.
 
-<pics/preliminary/without/testCase1_.png, id=177, 505.89pt x 505.89pt>
+<pics/preliminary/without/testCase1_.png, id=146, 505.89pt x 505.89pt>
 File: pics/preliminary/without/testCase1_.png Graphic file (type png)
 <use pics/preliminary/without/testCase1_.png>
 Package pdftex.def Info: pics/preliminary/without/testCase1_.png  used on input
  line 542. on input line 542.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  542.
-<pics/preliminary/without/testCase2_.png, id=178, 505.89pt x 505.89pt>
+<pics/preliminary/without/testCase2_.png, id=147, 505.89pt x 505.89pt>
 File: pics/preliminary/without/testCase2_.png Graphic file (type png)
 <use pics/preliminary/without/testCase2_.png>
 Package pdftex.def Info: pics/preliminary/without/testCase2_.png  used on input
  line 546. on input line 546.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  546.
-<pics/preliminary/without/testCase3_.png, id=179, 505.89pt x 505.89pt>
+<pics/preliminary/without/testCase3_.png, id=148, 505.89pt x 505.89pt>
 File: pics/preliminary/without/testCase3_.png Graphic file (type png)
 <use pics/preliminary/without/testCase3_.png>
 Package pdftex.def Info: pics/preliminary/without/testCase3_.png  used on input
  line 550. on input line 550.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  550.
-<pics/preliminary/without/testCase4_.png, id=180, 505.89pt x 505.89pt>
+<pics/preliminary/without/testCase4_.png, id=149, 505.89pt x 505.89pt>
 File: pics/preliminary/without/testCase4_.png Graphic file (type png)
 <use pics/preliminary/without/testCase4_.png>
 Package pdftex.def Info: pics/preliminary/without/testCase4_.png  used on input
  line 554. on input line 554.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  554.
-<pics/preliminary/without/testCase5_.png, id=181, 505.89pt x 505.89pt>
+<pics/preliminary/without/testCase5_.png, id=150, 505.89pt x 505.89pt>
 File: pics/preliminary/without/testCase5_.png Graphic file (type png)
 <use pics/preliminary/without/testCase5_.png>
 Package pdftex.def Info: pics/preliminary/without/testCase5_.png  used on input
  line 558. on input line 558.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  558.
-<pics/preliminary/without/testCase6_.png, id=182, 505.89pt x 505.89pt>
+<pics/preliminary/without/testCase6_.png, id=151, 505.89pt x 505.89pt>
 File: pics/preliminary/without/testCase6_.png Graphic file (type png)
 <use pics/preliminary/without/testCase6_.png>
 Package pdftex.def Info: pics/preliminary/without/testCase6_.png  used on input
  line 562. on input line 562.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  562.
-[35] [36 <./pics/preliminary/without/testCase1_.png> <./pics/preliminary/withou
+[29] [30 <./pics/preliminary/without/testCase1_.png> <./pics/preliminary/withou
 t/testCase2_.png> <./pics/preliminary/without/testCase3_.png> <./pics/prelimina
 ry/without/testCase4_.png> <./pics/preliminary/without/testCase5_.png> <./pics/
 preliminary/without/testCase6_.png>]
-<pics/preliminary/1/evolve.png, id=196, 505.89pt x 505.89pt>
+<pics/preliminary/1/evolve.png, id=165, 505.89pt x 505.89pt>
 File: pics/preliminary/1/evolve.png Graphic file (type png)
 <use pics/preliminary/1/evolve.png>
 Package pdftex.def Info: pics/preliminary/1/evolve.png  used on input line 585.
  on input line 585.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  585.
-<pics/preliminary/2/evolve.png, id=197, 505.89pt x 505.89pt>
+<pics/preliminary/2/evolve.png, id=166, 505.89pt x 505.89pt>
 File: pics/preliminary/2/evolve.png Graphic file (type png)
 <use pics/preliminary/2/evolve.png>
 Package pdftex.def Info: pics/preliminary/2/evolve.png  used on input line 589.
  on input line 589.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  589.
-<pics/preliminary/3/evolve.png, id=198, 505.89pt x 505.89pt>
+<pics/preliminary/3/evolve.png, id=167, 505.89pt x 505.89pt>
 File: pics/preliminary/3/evolve.png Graphic file (type png)
 <use pics/preliminary/3/evolve.png>
 Package pdftex.def Info: pics/preliminary/3/evolve.png  used on input line 593.
  on input line 593.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  593.
-<pics/preliminary/4/evolve.png, id=199, 505.89pt x 505.89pt>
+<pics/preliminary/4/evolve.png, id=168, 505.89pt x 505.89pt>
 File: pics/preliminary/4/evolve.png Graphic file (type png)
 <use pics/preliminary/4/evolve.png>
 Package pdftex.def Info: pics/preliminary/4/evolve.png  used on input line 597.
  on input line 597.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  597.
-<pics/preliminary/5/evolve.png, id=200, 505.89pt x 505.89pt>
+<pics/preliminary/5/evolve.png, id=169, 505.89pt x 505.89pt>
 File: pics/preliminary/5/evolve.png Graphic file (type png)
 <use pics/preliminary/5/evolve.png>
 Package pdftex.def Info: pics/preliminary/5/evolve.png  used on input line 601.
  on input line 601.
 Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
  601.
-<pics/preliminary/6/evolve.png, id=201, 505.89pt x 505.89pt>
+<pics/preliminary/6/evolve.png, id=170, 505.89pt x 505.89pt>
 File: pics/preliminary/6/evolve.png Graphic file (type png)
 <use pics/preliminary/6/evolve.png>
 Package pdftex.def Info: pics/preliminary/6/evolve.png  used on input line 605.
@@ -982,10 +904,10 @@ Package pdftex.def Info: Requested size: 198.45662pt x 198.4619pt on input line
 
 LaTeX Warning: Float too large for page by 5.71956pt on input line 611.
 
-[37] [38 <./pics/preliminary/1/evolve.png> <./pics/preliminary/2/evolve.png> <.
+[31] [32 <./pics/preliminary/1/evolve.png> <./pics/preliminary/2/evolve.png> <.
 /pics/preliminary/3/evolve.png> <./pics/preliminary/4/evolve.png> <./pics/preli
 minary/5/evolve.png> <./pics/preliminary/6/evolve.png>]
-<pics/preliminary/violations.png, id=215, 505.89pt x 505.89pt>
+<pics/preliminary/violations.png, id=184, 505.89pt x 505.89pt>
 File: pics/preliminary/violations.png Graphic file (type png)
 <use pics/preliminary/violations.png>
 Package pdftex.def Info: pics/preliminary/violations.png  used on input line 65
@@ -995,51 +917,42 @@ e 652.
 
 Underfull \vbox (badness 1515) has occurred while \output is active []
 
- [39 <./pics/preliminary/violations.png>]) [40]
+ [33 <./pics/preliminary/violations.png>]) [34]
 \openout2 = `contribution.aux'.
 
  (./contribution.tex
 Chapter 4.
 
-Overfull \hbox (0.33891pt too wide) in paragraph at lines 11--12
-[]\OT1/ppl/m/n/10.95 Propose a new Ge-netic pro-gram-ming Hyper-heuristic ap-pr
-oach for dy-nam-i-cally place-
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 22.
+
+
+Overfull \hbox (3.66145pt too wide) in paragraph at lines 36--37
+ [][] 
  []
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 23.
-
-[41
+[35
 
 
 
 ]
-
-LaTeX Warning: Reference `tab:timetable' on page 42 undefined on input line 41.
-
-
-
-Overfull \hbox (81.23627pt too wide) in paragraph at lines 73--74
+Overfull \hbox (5.06416pt too wide) in paragraph at lines 75--76
  [] 
  []
 
-[42]
+[36]
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-) [43] [44
-
-
-] (./proj_report_outline.bbl
+) [37] [38] (./proj_report_outline.bbl
 LaTeX Font Info:    Font shape `OMS/ppl/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
 
 ! Extra }, or forgotten \endgroup.
-l.64 ...), 2010 IEEE International Symposium on\/}
+l.58 ...), 2010 IEEE International Symposium on\/}
                                                    (2010), Ieee,
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1047,15 +960,17 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[45
+[39
 
-] [46]
-Underfull \hbox (badness 1168) in paragraph at lines 248--254
+
+
+] [40]
+Underfull \hbox (badness 1168) in paragraph at lines 225--231
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
 
-[47] [48] [49] [50] [51]) [52] (./proj_report_outline.aux (./introduction.aux)
+[41] [42] [43] [44]) [45] (./proj_report_outline.aux (./introduction.aux)
 (./literature_review.aux) (./preliminary.aux) (./contribution.aux))
 
 LaTeX Warning: There were undefined references.
@@ -1065,10 +980,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6295 strings out of 493675
- 92508 string characters out of 6155645
- 172698 words of memory out of 5000000
- 9397 multiletter control sequences out of 15000+600000
+ 6240 strings out of 493675
+ 91457 string characters out of 6155645
+ 180509 words of memory out of 5000000
+ 9348 multiletter control sequences out of 15000+600000
  50064 words of font info for 141 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
  42i,15n,43p,1387b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1083,10 +998,10 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (58 pages, 1339123 bytes).
+Output written on proj_report_outline.pdf (51 pages, 1110380 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
+ 270 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
