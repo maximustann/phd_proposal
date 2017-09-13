@@ -73,6 +73,12 @@
   Transportation Network}.
 \newblock {\em Transportation Science 35}, 4 (Nov. 2001), 345--358.
 
+\bibitem{Burke:2012gs}
+{\sc Burke, E.~K., Hyde, M.~R., Kendall, G., and Woodward, J.}
+\newblock {Automating the Packing Heuristic Design Process with Genetic
+  Programming}.
+\newblock {\em Evolutionary Computation 20}, 1 (Mar. 2012), 63--89.
+
 \bibitem{2010arXiv1006.0308B}
 {\sc Buyya, R., Beloglazov, A., and Abawajy, J.~H.}
 \newblock {Energy-Efficient Management of Data Center Resources for Cloud
@@ -102,11 +108,6 @@
 \newblock {Live migration of virtual machines}.
 \newblock 273--286.
 
-\bibitem{CoffmanJr:1996ui}
-{\sc Coffman~Jr, E.~G., Garey, M.~R., and Johnson, D.~S.}
-\newblock {\em {Approximation algorithms for bin packing: a survey}}.
-\newblock PWS Publishing Co., Aug. 1996.
-
 \bibitem{Colson:2007bu}
 {\sc Colson, B., Marcotte, P., and Savard, G.}
 \newblock {An overview of bilevel optimization.}
@@ -118,6 +119,12 @@
   programming approach}.
 \newblock {\em International Transactions in Operational Research 2}, 2 (Apr.
   1995), 149--164.
+
+\bibitem{Cowling:2000ek}
+{\sc Cowling, P., Kendall, G., and Soubeiga, E.}
+\newblock {A Hyperheuristic Approach to Scheduling a Sales Summit}.
+\newblock In {\em Practice and Theory of Automated Timetabling III}. Springer,
+  Berlin, Heidelberg, Berlin, Heidelberg, Aug. 2000, pp.~176--190.
 
 \bibitem{Dayarathna:2016ua}
 {\sc Dayarathna, M., Wen, Y., and Fan, R.}
@@ -252,6 +259,10 @@
 \newblock {\em Journal of Network and Systems Management 23}, 3 (2015),
   567--619.
 
+\bibitem{Johnson:2016wp}
+{\sc Johnson, D.~S.}
+\newblock {Vector Bin Packing.}
+
 \bibitem{Jung:2010dt}
 {\sc Jung, G., Hiltunen, M.~A., Joshi, K.~R., Schlichting, R.~D., and Pu, C.}
 \newblock {Mistral - Dynamically Managing Power, Performance, and Adaptation
@@ -280,6 +291,12 @@
 \newblock {kvm: the Linux virtual machine monitor}.
 \newblock {\em {\ldots} of the Linux {\ldots}\/} (2007).
 
+\bibitem{1992gppc.book.....K}
+{\sc Koza, J.~R.}
+\newblock {Genetic programming - on the programming of computers by means of
+  natural selection.}
+\newblock {\em Complex adaptive systems\/} (1993).
+
 \bibitem{Kunkle:2008bz}
 {\sc Kunkle, D., and Schindler, J.}
 \newblock {A Load Balancing Framework for Clustered Storage Systems.}
@@ -303,6 +320,12 @@
 \newblock {CoBRA - A cooperative coevolutionary algorithm for bi-level
   optimization.}
 \newblock {\em IEEE Congress on Evolutionary Computation\/} (2012), 1--8.
+
+\bibitem{Leinberger:1999fs}
+{\sc Leinberger, W., Karypis, G., and Kumar, V.}
+\newblock {Multi-Capacity Bin Packing Algorithms with Applications to Job
+  Scheduling under Multiple Constraints.}
+\newblock {\em ICPP\/} (1999), 404--412.
 
 \bibitem{Li:2006br}
 {\sc Li, X., Tian, P., and Min, X.}
@@ -377,11 +400,28 @@
   Virtual Machines for Green Computing}.
 \newblock {\em IETE Technical Review 28}, 3 (Sept. 2014), 212.
 
+\bibitem{Nguyen:2014eu}
+{\sc Nguyen, S., Zhang, M., Johnston, M., and Tan, K.~C.}
+\newblock {Automatic Design of Scheduling Policies for Dynamic Multi-objective
+  Job Shop Scheduling via Cooperative Coevolution Genetic Programming}.
+\newblock {\em IEEE Transactions on Evolutionary Computation 18}, 2 (2014),
+  193--208.
+
 \bibitem{Oduguwa:2002kr}
 {\sc Oduguwa, V., and Roy, R.}
 \newblock {Bi-level optimisation using genetic algorithm}.
 \newblock In {\em 2002 IEEE International Conference on Artificial Intelligence
   Systems (ICAIS 2002)\/} (2002), IEEE Comput. Soc, pp.~322--327.
+
+\bibitem{Panigrahy:2011wk}
+{\sc Panigrahy, R., Talwar, K., Uyeda, L., and Wieder, U.}
+\newblock {Heuristics for vector bin packing}.
+\newblock {\em research microsoft com\/} (2011).
+
+\bibitem{Panwalkar:1977fw}
+{\sc Panwalkar, S.~S., and Iskander, W.}
+\newblock {A Survey of Scheduling Rules.}
+\newblock {\em Operations Research 25}, 1 (1977), 45--61.
 
 \bibitem{SLA_metric}
 {\sc Paschke, A., and Schnappinger-Gerull, E.}
@@ -400,6 +440,13 @@
 \newblock {Efficient Virtual Machine Sizing for Hosting Containers as a Service
   (SERVICES 2015).}
 \newblock {\em SERVICES\/} (2015).
+
+\bibitem{Poli:2007kt}
+{\sc Poli, R., Woodward, J., and Burke, E.~K.}
+\newblock {A histogram-matching approach to the evolution of bin-packing
+  strategies}.
+\newblock In {\em 2007 IEEE Congress on Evolutionary Computation\/} (2007),
+  IEEE, pp.~3500--3507.
 
 \bibitem{Qin:2012wu}
 {\sc Qin, X., Zhang, W., 0049, W.~W., Wei, J., Zhao, X., and Huang, T.}
@@ -440,6 +487,13 @@
 \newblock {Statistical Characterization of Business-Critical Workloads Hosted
   in Cloud Datacenters.}
 \newblock {\em CCGRID\/} (2015), 465--474.
+
+\bibitem{Sim:2013fe}
+{\sc Sim, K., and Hart, E.}
+\newblock {Generating single and multiple cooperative heuristics for the one
+  dimensional bin packing problem using a single node genetic programming
+  island model.}
+\newblock {\em GECCO\/} (2013), 1549.
 
 \bibitem{Sinha:2013tn}
 {\sc Sinha, A., Malo, P., and Deb, K.}
