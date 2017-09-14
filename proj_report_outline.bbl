@@ -1,5 +1,12 @@
 \begin{thebibliography}{100}
 
+\bibitem{adhikari:2012uq}
+{\sc Adhikari, V.~K., Guo, Y., Hao, F., Varvello, M., Hilt, V., Steiner, M.,
+  and Zhang, Z.-L.}
+\newblock {Unreeling netflix - Understanding and improving multi-CDN movie
+  delivery.}
+\newblock {\em INFOCOM\/} (2012).
+
 \bibitem{Angelo:2013ee}
 {\sc Angelo, J.~S., Krempser, E., and Barbosa, H. J.~C.}
 \newblock {Differential evolution for bilevel programming}.
@@ -79,7 +86,7 @@
   Programming}.
 \newblock {\em Evolutionary Computation 20}, 1 (Mar. 2012), 63--89.
 
-\bibitem{2010arXiv1006.0308B}
+\bibitem{2010arxiv1006.0308b}
 {\sc Buyya, R., Beloglazov, A., and Abawajy, J.~H.}
 \newblock {Energy-Efficient Management of Data Center Resources for Cloud
   Computing - A Vision, Architectural Elements, and Open Challenges.}
@@ -126,7 +133,7 @@
 \newblock In {\em Practice and Theory of Automated Timetabling III}. Springer,
   Berlin, Heidelberg, Berlin, Heidelberg, Aug. 2000, pp.~176--190.
 
-\bibitem{Dayarathna:2016ua}
+\bibitem{dayarathna:2016ua}
 {\sc Dayarathna, M., Wen, Y., and Fan, R.}
 \newblock {Data Center Energy Consumption Modeling - A Survey.}
 \newblock {\em {\ldots} Surveys {\&} Tutorials\/} (2016).
@@ -161,11 +168,6 @@
 \newblock {Virtualization vs Containerization to Support PaaS}.
 \newblock In {\em 2014 IEEE International Conference on Cloud Engineering
   (IC2E)\/} (2014), IEEE, pp.~610--614.
-
-\bibitem{Esposito:2016br}
-{\sc Esposito, C., Castiglione, A., and Choo, K.-K.~R.}
-\newblock {Challenges in Delivering Software in the Cloud as Microservices}.
-\newblock {\em IEEE Cloud Computing 3}, 5 (2016), 10--14.
 
 \bibitem{Falkenauer:1996hv}
 {\sc Falkenauer, E.}
@@ -370,6 +372,11 @@
 \newblock {Genetic algorithm based approach to bi-level linear programming}.
 \newblock {\em RAIRO-Operations Research\/} (1994).
 
+\bibitem{Mathieu:2011dw}
+{\sc Mathieu, R., Pittard, L., and Anandalingam, G.}
+\newblock {Genetic algorithm based approach to bi-level linear programming}.
+\newblock {\em RAIRO-Operations Research 28}, 1 (Mar. 2011), 1--21.
+
 \bibitem{Mell:2011jj}
 {\sc Mell, P.~M., and Grance, T.}
 \newblock {The NIST definition of cloud computing}.
@@ -434,12 +441,6 @@
 \newblock {Virtual Machine Customization and Task Mapping Architecture for
   Efficient Allocation of Cloud Data Center Resources.}
 \newblock {\em Comput. J. 59}, 2 (2016), 208--224.
-
-\bibitem{Piraghaj:2015uf}
-{\sc Piraghaj, S.~F., Dastjerdi, A.~V., Calheiros, R.~N., and Buyya, R.}
-\newblock {Efficient Virtual Machine Sizing for Hosting Containers as a Service
-  (SERVICES 2015).}
-\newblock {\em SERVICES\/} (2015).
 
 \bibitem{Poli:2007kt}
 {\sc Poli, R., Woodward, J., and Burke, E.~K.}
@@ -585,6 +586,13 @@
 \newblock {Memory resource management in VMware ESX server}.
 \newblock {\em ACM SIGOPS Operating Systems Review 36}, SI (Dec. 2002),
   181--194.
+
+\bibitem{Wang:2008kb}
+{\sc Wang, G., Wan, Z., Wang, X., and Lv, Y.}
+\newblock {Genetic algorithm based on simplex method for solving
+  linear-quadratic bilevel programming problem}.
+\newblock {\em Computers {\&} Mathematics with Applications 56}, 10 (Nov.
+  2008), 2550--2555.
 
 \bibitem{Wang:2016eha}
 {\sc Wang, Y., and 0002, Y.~X.}

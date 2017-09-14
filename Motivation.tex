@@ -4,13 +4,22 @@
 \bx{This section identifies the research gaps in container-based cloud data center in three resource management processes.}
 
 
-\bx{Application initial placement is conducted when data centers receive a number of requests for new application deployment.}  The placement can be seen as a static optimization task to allocate applications and reduce energy in PMs. 
+\bx{Application initial placement is conducted when data centers receive a number of requests for new application deployment.}  The placement can be seen as a static optimization task to allocate applications and reduce energy. 
 % The optimization process can be described as: given a number of  PMs represented as resources (e.g CPU cores and RAM etc);  requested applications (wrapped with VMs or container) represented as aforementioned resources; the objective is to allocate these applications into a minimum number of PMs. The decision variable is the location of each application. The basic constraint is that the aggregative resources of hosted VMs cannot exceed the PM's resource capacity.
 % The strategies in VM-based cloud and container-based cloud are different. In VM-based cloud, requested applications (wrapped with VMs) are placed into a minimum number of PMs. The problem in VM-based cloud is often modeled as a bin packing problem \cite{Xiong:2014jq}, with VMs represent items and PMs represent bins. The complexity is NP-hard \cite{Hochbaum:1996ts}. 
 
-\bx{In a container-based Cloud, the optimization processes involve two levels - the lower level optimizes the placement of containers to VMs and the upper level optimizes the placement of VMs to PMs.} The optimization interact with VMs and containers, therefore, it cannot be optimized separately. An additional constraint is that each container has its OS requirement which makes them cannot be simply packed into homogeneous VMs. 
+\bx{In a container-based Cloud, the application initial placement can be seen as a bilevel optimization problem \cite{Colson:2007bu} where each level is bin packing problem.} The lower level optimizes the placement of containers to VMs and the upper level optimizes the placement of VMs to PMs. The advantage the bilevel model is that the interaction of two-level's placement is considered, so that the global optimal can be achieved. Currently, there is no study considers the container-based placement as a bilevel problem.
 
-\bx{Container-based placement can be seen as a bilevel optimization problem \cite{Colson:2007bu} where each level is bin packing problem.} Because of the problem structure has changed, previous VM-based approaches cannot be directly applied on the problem. In addition, currently, there is no study considers the container-based placement as a bilevel problem. The advantage of considering it as a bilevel problem is that containers and VMs can cooperate to achieve lower energy consumption. However, the \emph{optimization of joint placement of container and VMs} is very difficult because of the nature of bilevel problem.
+\bx{Two reasons motivate us to solve the application initial placement in container-based Cloud.} 
+First, In order to solve the application intial placement problem, it needs to propose a new bilevel model.
+A bilevel model - includes energy model, prices model - is required to represent the relationship between container, VMs, and energy consumption.} Current VM-based models cannot be directly applied because the different problem structure. In addition, current VM-based models normally do not consider the influence of the overhead of VM hypervisor. Furthermore, many previous VM-based models do not consider a balance between resources which is crucial according to previous research \cite{Tomas:2013iv}. 
+
+\bx{Second, we will develop an evolutionary computation (EC)-based approach to solve the bilevel optimization problem.}
+\bx{Evolutionary computation based algorithms have been proposed to solve bilevel optimization problems \cite{Wang:2008kb, Wang:2011di, Angelo:2013ee} and shown promising performance}. On the other hand, traditional algorithms such as Integer linear programming (ILP) has been proposed to solve the bilevel optimization problem, however, it requires a transformation of a bilevel problem into a single-level problem, because the complexity for the bilevel problem is high so that the ILP cannot solve it in a feasible time. 
+
+% The optimization interact with VMs and containers, therefore, it cannot be optimized separately. An additional constraint is that each container has its OS requirement which makes them cannot be simply packed into homogeneous VMs. 
+
+% \bx{Container-based placement can be seen as a bilevel optimization problem \cite{Colson:2007bu} where each level is bin packing problem.} Because of the problem structure has changed, previous VM-based approaches cannot be directly applied on the problem. In addition, currently, there is no study considers the container-based placement as a bilevel problem. The advantage of considering it as a bilevel problem is that containers and VMs can cooperate to achieve lower energy consumption. However, the \emph{optimization of joint placement of container and VMs} is very difficult because of the nature of bilevel problem.
 
 % The hierarchy of bilevel optimization makes problems non-convex and strongly NP-hard \cite{Vicente:1994ie}.
 % The placement problem in the VM context has been studied for years \cite{Xu:2010vh, Gao:2013gg, Ferdaus:2014ep} and it is often modeled as a bin packing problem . This is because VMs and PMs are naturally modeled as items and bins. Furthermore, server consolidation and bin-packing have the same optimization objective: minimize the number of bins/PMs. The complexity of bin-packing problem is NP-hard which is NP-hard \cite{Hochbaum:1996ts} which means it is extreme time-consuming to find its optimal solution when the number of decision variables is large. However, most research focus on VM-based server consolidation and these methods cannot be directly applied on container-based consolidation because of the different structure.
@@ -25,13 +34,14 @@
 
 
 % For the lower level of allocation, the objective is to maximize the utilization of resources (e.g a balanced utilization among several resources), while the upper level objective is to minimize the number of PMs. 
-\bx{After initial placement, periodic optimization is a routine process that takes existing applications' placement, re-placing them to PMs according to the nature of their workloads (e.g static, periodic or continuously changing etc).} A live migration technique is used to move one application from one PM to another. The live migration is a very expensive operation since it consumes network bandwidth and uses the resource on both host PM and target PM. Therefore, periodic optimization is a multi-objective task which considers minimizing migration of applications and minimizing the overall energy consumption as well. 
+\bx{After initial placement, periodic optimization is a routine process that takes existing applications' placement, re-placing them to PMs according to the nature of their workloads (e.g static, periodic or continuously changing etc).} A live migration technique is used to move one application from one PM to another. The live migration is a very expensive operation since it consumes network bandwidth and uses the resource on both host PM and target PM. Therefore, periodic optimization is a multi-objective task which considers minimizing migration of applications and minimizing the overall energy consumption. Resolving the bi-level multi-objective problem will lead to a high utilization of PMs as well as a robust placement of applications.
 
-\bx{Two major challenges exist in periodic optimization}. Firstly, it is a multi-objective task, two potentially conflicting objectives: reducing the number of migration and minimizing the energy consumption. Therefore, the trade-off between two objectives must be balanced. Secondly, because of the expensiveness of live migration, cloud providers want to achieve a robust state of data center which means the placement remains stable in a long run. To achieve robustness, periodic optimization must consider the variation of workload and plan their positions in advance. This is because workloads' variation may cause overloading or underloading of PMs which requires live migration. 
+\bx{Two reasons motivates us to explore solutions for periodic optimization in a container-based cloud}. 
+First, periodic optimization in a container-based cloud is a bilevel multi-objective task.
+However, so far, there is no research focus on the bilevel multi-objective problem. 
+Second, not many research have considered the robustness of placement. To achieve robustness, periodic optimization must consider the variation of workload and plan their positions in advance. This is because workloads' variation may cause overloading or underloading of PMs which requires live migration. However, the major gap in literature is most research simplified workloads as static (remains a constant value throughout its life cycle) \cite{Viswanathan:2012ej, Chen:2011fl,Feller:2011vs} for the sake of simplicity. For example, for periodic work, the average value within a period of time will be considered. 
 
-\bx{However, the major gap in literature is most research simplified workloads as static (remains a constant value throughout its life cycle) \cite{Viswanathan:2012ej, Chen:2011fl,Feller:2011vs} for the sake of simplicity.} For example, for periodic work, the average value within a period of time will be considered. 
-
-\bx{In our research, we will consider periodic optimization as a multi-objective problem with various types of workload \cite{Fehling:2014tl}.} Specifically, complementary workloads can be combined so that it can potentially reduce the migration in the future. Thus, the applications are consolidated in a more robust way. 
+% \bx{In our research, we will consider periodic optimization as a multi-objective problem with various types of workload \cite{Fehling:2014tl}.} Specifically, complementary workloads can be combined so that it can potentially reduce the migration in the future. Thus, the applications are consolidated in a more robust way. 
 
 % However, in real life, workloads vary with time. According to Fehling , applications' workload are roughly classified into five categories: static, periodic, once-in-a-life-time, continuously changing, and unpredictable. 
 
@@ -44,23 +54,27 @@
 \vspace{5mm}
 
 
-\bx{Overloading and underloading are scenarios which need an immediate reaction \cite{Beloglazov:2013ht}, thus, a dynamic placement is applied.} In these scenarios, PMs are either running out of resources or running in a low utilization. At these states, applications inside the PM will be placed to other PMs to quickly resolve the problems.
+\bx{Dynamic placemend is applied on overloading and underloading scenarios which need an immediate reaction \cite{Beloglazov:2013ht}.} In these scenarios, PMs are either running out of resources or running in a low utilization. At these states, applications inside the PM will be placed to other PMs to quickly resolve the problems.
 % Overloading is a scenario that the workloads exceed the capacity of its host PM. Hence, one or more applications will be migrated to other PMs. Underloading is when a PM runs in a low utilization, all the applications inside it will be moved to other PMs, so that the PM can be turned off. The common operation in these two scenarios are the dynamic placement \cite{Xiao:2015ik}. Dynamic placement places one application each time in an on-line manner. 
 
-\bx{There are two challenges in dynamic placement.} First, on one hand, dynamic placement allocates an application at a time to meet the requirement of fast reaction. On the other hand, it only considers the best placement of the current application using either simple bin-packing algorithms such as First Fit or manually design heuristics. Simple bin-packing algorithms may perform poorly because application placement is more complicated than bin-packing \cite{Mann:2015ua}, while manual designed heuristics may not be general because they are designed for specific conditions and constraints\cite{Jung:2010dt}.
+\bx{Two reasons for us to solve dynamic placement.} 
+First, we want to develop a uniform algorithm to solve the dynamic placment with various workloads. Current dynamic placement approaches typically applied either simple bin-packing algorithms such as First Fit or manually design heuristics. Simple bin-packing algorithms may perform poorly because application placement is more complicated than bin-packing \cite{Mann:2015ua}, while manual designed heuristics may not be general because they are designed for specific conditions and constraints\cite{Jung:2010dt}. Therefore, we will consider using hyper-heuristic approach such as genetic programming to automatically generate heuristics. 
+% The hyper-heuristic can learn from previous good solutions as well as the features of various workloads so that the dispatching rules can be applied with any conditions and constraints. 
+% on one hand, dynamic placement allocates an application at a time to meet the requirement of fast reaction. On the other hand, it only considers the best placement of the current application using either simple bin-packing algorithms such as First Fit or manually design heuristics. Simple bin-packing algorithms may perform poorly because application placement is more complicated than bin-packing \cite{Mann:2015ua}, while manual designed heuristics may not be general because they are designed for specific conditions and constraints\cite{Jung:2010dt}.
 % Mann's research  showed, server consolidation is a lot harder than bin-packing problem because of the multi-dimensional of resources, heterogeneous PMs, migration cost etc. 
-The second challenge is that, similar to periodic consolidation, different types of workload also need to be considered when dynamically matching the complementary workloads in order to reach a robust state.
 
-\bx{These challenges motivate us to develop a hyper-heuristic approach which can automatically generate heuristics for quickly placing.} The hyper-heuristic can learn from previous good solutions as well as the features of various workloads so that the dispatching rules can be applied with any conditions and constraints. 
+\bx{Second, we want to develop an approach which achieves both fast and global optimization on dynamic placement problem.}
+However, since the applications are placed one at each time, it is difficult to achieve fast placement and global optimization at the same time.
+% \bx{These challenges motivate us to develop a hyper-heuristic approach which can automatically generate heuristics for quickly placing.} 
 
 % In addition, in container-based Cloud, the placement target is on containers and the destination is a suitable VM. However, if no VM can accommodate a container, a new VM must be created, which incurs a second level of deployment.
 
-\bx{In summary, this thesis aims at improving the energy efficiency in a container-based cloud data center.} The gaps in three resource management processes motivate us to address three issues:
-\begin{itemize}
-	\item Develop an algorithm for the joint placement of containers and VMs.
-	\item Develop an algorithm for multi-objective joint placement of containers and VMs with consider various workloads.
-	\item Develop a hyper-heuristic for dynamic placement.
-\end{itemize}
+% \bx{In summary, this thesis aims at improving the energy efficiency in a container-based cloud data center.} The gaps in three resource management processes motivate us to address three issues:
+% \begin{itemize}
+% 	\item Develop an algorithm for the joint placement of containers and VMs.
+% 	\item Develop an algorithm for multi-objective joint placement of containers and VMs with consider various workloads.
+% 	\item Develop a hyper-heuristic for dynamic placement.
+% \end{itemize}
 
 
 
