@@ -8,3 +8,5 @@ INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT background.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/pkg/share/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/pkg/share/texmf-dist/tex/latex/base/omscmr.fd

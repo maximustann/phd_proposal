@@ -35,6 +35,12 @@
   of data centers for Cloud computing.}
 \newblock {\em Future Generation Comp. Syst. 28}, 5 (2012), 755--768.
 
+\bibitem{Beloglazov:2010dt}
+{\sc Beloglazov, A., and Buyya, R.}
+\newblock {Adaptive threshold-based approach for energy-efficient consolidation
+  of virtual machines in cloud data centers.}
+\newblock {\em MGC@Middleware\/} (2010), 1--6.
+
 \bibitem{Beloglazov:2013ht}
 {\sc Beloglazov, A., and Buyya, R.}
 \newblock {Managing Overloaded Hosts for Dynamic Consolidation of Virtual
@@ -183,11 +189,6 @@
 {\sc Fehling, C., Leymann, F., Retter, R., Schupeck, W., and Arbitter, P.}
 \newblock {Cloud Computing Patterns - Fundamentals to Design, Build, and Manage
   Cloud Applications}.
-
-\bibitem{Feitelson:2002kn}
-{\sc Feitelson, D.~G.}
-\newblock {Workload Modeling for Performance Evaluation.}
-\newblock {\em Performance 2459}, Chapter 6 (2002), 114--141.
 
 \bibitem{Feller:2011vs}
 {\sc Feller, E., Rilling, L., and Morin, C.}
@@ -617,6 +618,12 @@
 \newblock {Solving virtual machine packing with a Reordering Grouping Genetic
   Algorithm.}
 \newblock {\em IEEE Congress on Evolutionary Computation\/} (2011), 362--369.
+
+\bibitem{Wood:2009fn}
+{\sc Wood, T., Shenoy, P.~J., Venkataramani, A., and Yousif, M.~S.}
+\newblock {Sandpiper - Black-box and gray-box resource management for virtual
+  machines.}
+\newblock {\em Computer Networks 53}, 17 (2009), 2923--2938.
 
 \bibitem{Xavier:2013fy}
 {\sc Xavier, M.~G., Neves, M.~V., Rossi, F.~D., Ferreto, T.~C., Lange, T., and

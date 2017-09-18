@@ -2,18 +2,18 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces A workflow of resource management \cite {Mishra:2012kx}\relax }}{2}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Relationship between objectives\relax }}{4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Stakeholders of Cloud computing \cite {Jennings:2015ht}\relax }}{9}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Energy consumption distribution of data centers \cite {Rong:2016js}\relax }}{10}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces A Server Consolidation example: Initially, each PM runs an application wrapped with a VM in a low resource utilization state. After the consolidation, both VMs are running on PM A, so that PM B is turned off to save energy \cite {Barroso:2007jt}.\relax }}{11}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A comparison between standard bin packing and vector bin packing\relax }}{11}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces A comparison between VM-based and Container-based virtualization \cite {Piraghaj:2016bw}\relax }}{12}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces A comparison between OS container and Application container \cite {Piraghaj:2017vi}\relax }}{13}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Three scenarios of placement decision\relax }}{15}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces GP program that represents x + max(y $\times $ 2, -2)\relax }}{22}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Stakeholders of Cloud computing \cite {Jennings:2015ht}\relax }}{11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Energy consumption distribution of data centers \cite {Rong:2016js}\relax }}{12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Three scenarios of placement decision\relax }}{13}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A Server Consolidation example: Initially, each PM runs an application wrapped with a VM in a low resource utilization state. After the consolidation, both VMs are running on PM A, so that PM B is turned off to save energy \cite {Barroso:2007jt}.\relax }}{14}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces A comparison between standard bin packing and vector bin packing\relax }}{15}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces A comparison between VM-based and Container-based virtualization \cite {Piraghaj:2016bw}\relax }}{16}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces A comparison between OS container and Application container \cite {Piraghaj:2017vi}\relax }}{16}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces GP program that represents x + max(y $\times $ 2, -2)\relax }}{24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces An example chromosome representation\relax }}{28}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces An example mutation without insertion that causes a lower resource utilization\relax }}{29}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Non-dominated solutions evolve along with the generation\relax }}{32}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces non-dominated solutions comparison between selection with violation control and without violation control\relax }}{34}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Violation Percentage comparison between selection with violation control and without violation control\relax }}{35}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces An example chromosome representation\relax }}{30}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces An example mutation without insertion that causes a lower resource utilization\relax }}{32}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Non-dominated solutions evolve along with the generation\relax }}{35}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces non-dominated solutions comparison between selection with violation control and without violation control\relax }}{36}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Violation Percentage comparison between selection with violation control and without violation control\relax }}{37}
 \addvspace {10\p@ }
