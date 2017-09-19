@@ -181,6 +181,12 @@
 \newblock {\em {\ldots} with Multivalued Mappings 55}, 5-6 (Oct. 2006),
   505--524.
 
+\bibitem{Deng:1998fk}
+{\sc Deng, X.}
+\newblock {Complexity Issues in Bilevel Linear Programming}.
+\newblock In {\em Multilevel Optimization: Algorithms and Applications}.
+  Springer, Boston, MA, Boston, MA, 1998, pp.~149--164.
+
 \bibitem{Dua:2014bw}
 {\sc Dua, R., Raja, A.~R., and Kakadia, D.}
 \newblock {Virtualization vs Containerization to Support PaaS}.

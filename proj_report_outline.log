@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  19 SEP 2017 23:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  20 SEP 2017 08:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -611,11 +611,7 @@ Package pdftex.def Info: pics/thesisPlan.png  used on input line 5. on input li
 ne 5.
 Package pdftex.def Info: Requested size: 441.01772pt x 200.29312pt on input lin
 e 5.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-[5 <./pics/thesisPlan.png>] [6] [7]
+ [4] [5 <./pics/thesisPlan.png>] [6] [7]
 Overfull \hbox (4.88666pt too wide) in paragraph at lines 98--98
 \OT1/ppl/b/n/12 Ge-netic Pro-gram-ming (GP) ap-proach for au-to-mat-i-cally gen
 -er-at-ing dis-patch-
@@ -975,7 +971,7 @@ deleted material, e.g., by typing `I$}'.
 
 
 ] [44]
-Underfull \hbox (badness 1168) in paragraph at lines 247--253
+Underfull \hbox (badness 1168) in paragraph at lines 253--259
 []\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
 a-man, P. P.,
  []
@@ -990,10 +986,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6357 strings out of 493675
- 93103 string characters out of 6155645
- 189552 words of memory out of 5000000
- 9454 multiletter control sequences out of 15000+600000
+ 6358 strings out of 493675
+ 93116 string characters out of 6155645
+ 189557 words of memory out of 5000000
+ 9455 multiletter control sequences out of 15000+600000
  51551 words of font info for 145 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
  42i,17n,43p,1387b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1008,7 +1004,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (56 pages, 1200771 bytes).
+Output written on proj_report_outline.pdf (56 pages, 1201494 bytes).
 PDF statistics:
  290 PDF objects out of 1000 (max. 8388607)
  164 compressed objects within 2 object streams

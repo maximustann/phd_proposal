@@ -18,45 +18,45 @@ Warning--empty journal in Fehling:2014tl
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 120 entries,
+You've used 121 entries,
             2253 wiz_defined-function locations,
-            1280 strings with 26682 characters,
-and the built_in function-call counts, 42159 in all, are:
-= -- 4128
-> -- 2195
+            1287 strings with 26848 characters,
+and the built_in function-call counts, 42594 in all, are:
+= -- 4178
+> -- 2202
 < -- 0
-+ -- 902
-- -- 782
-* -- 3555
-:= -- 6935
-add.period$ -- 357
-call.type$ -- 120
-change.case$ -- 752
++ -- 905
+- -- 784
+* -- 3578
+:= -- 6995
+add.period$ -- 361
+call.type$ -- 121
+change.case$ -- 756
 chr.to.int$ -- 0
-cite$ -- 125
-duplicate$ -- 1306
-empty$ -- 3152
-format.name$ -- 782
-if$ -- 8560
+cite$ -- 126
+duplicate$ -- 1330
+empty$ -- 3194
+format.name$ -- 784
+if$ -- 8665
 int.to.chr$ -- 0
-int.to.str$ -- 120
-missing$ -- 117
-newline$ -- 597
-num.names$ -- 240
-pop$ -- 628
+int.to.str$ -- 121
+missing$ -- 118
+newline$ -- 602
+num.names$ -- 242
+pop$ -- 634
 preamble$ -- 1
-purify$ -- 631
+purify$ -- 634
 quote$ -- 0
-skip$ -- 838
+skip$ -- 857
 stack$ -- 0
-substring$ -- 2756
-swap$ -- 346
+substring$ -- 2793
+swap$ -- 356
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 480
+type$ -- 484
 warning$ -- 5
-while$ -- 436
-width$ -- 123
-write$ -- 1190
+while$ -- 441
+width$ -- 124
+write$ -- 1203
 (There was 1 error message)
