@@ -1,5 +1,11 @@
 \begin{thebibliography}{100}
 
+\bibitem{:2017ff}
+{\sc 0002, Y.~S., White, J., Li, B., Walker, M., and Turner, H.~A.}
+\newblock {Automated QoS-oriented cloud resource optimization using
+  containers.}
+\newblock {\em Autom. Softw. Eng. 24}, 1 (2017), 101--137.
+
 \bibitem{adhikari:2012uq}
 {\sc Adhikari, V.~K., Guo, Y., Hao, F., Varvello, M., Hilt, V., Steiner, M.,
   and Zhang, Z.-L.}
@@ -97,6 +103,12 @@
 \newblock {Energy-Efficient Management of Data Center Resources for Cloud
   Computing - A Vision, Architectural Elements, and Open Challenges.}
 \newblock {\em PDPTA cs.DC\/} (2010), arXiv:1006.0308.
+
+\bibitem{2009LNCS.5931...24B}
+{\sc Buyya, R., Ranjan, R., and Calheiros, R.~N.}
+\newblock {Modeling and Simulation of Scalable Cloud Computing Environments and
+  the CloudSim Toolkit - Challenges and Opportunities}.
+\newblock {\em PDPTA cs.DC}, Chapter 4 (2009), 24--.
 
 \bibitem{Chaisiri:2012cva}
 {\sc Chaisiri, S., Lee, B.-S., and Niyato, D.}
