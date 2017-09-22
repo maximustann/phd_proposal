@@ -3,7 +3,7 @@
 
 
 % \subsection{Cloud computing}
-\bx{Cloud computing is a computing model offers a network of servers to their clients in a on-demand fashion.} From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."}
+\bx{Cloud computing is a computing model that offers a network of servers to their clients in a on-demand fashion.} From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."}
 
 \begin{figure}[H]
 	\centering
@@ -12,7 +12,7 @@
 	\label{fig:stakeholders}
 \end{figure}
 
-\bx{To give an example of how Cloud computing works (see Figure \ref{fig:stakeholders}, considering the case:} a \emph{Cloud provider} builds a data center which contains thousands of servers connected with network. 
+\bx{To give an example of how Cloud computing works (see Figure \ref{fig:stakeholders}), consider the case:} a \emph{Cloud provider} builds a data center which contains thousands of servers connected with network. 
 % These servers are virtualized which means they are partitioned into smaller units of resources called \emph{Virtual Machines (VMs)} or \emph{Containers} \cite{Felter:2015ki}. 
 A web-based application provider is also a \emph{Cloud user}, can deploy and access their applications (e.g Endnote, Google Drive and etc.) in these servers from anywhere in the world. Once the applications start serving, \emph{End users} can use them without installing on their local computers. Cloud providers charge fees from Cloud users for infrastructure and Cloud users charge fees from End users for using their services. \tran{Therefore, from cloud providers' perspective, they can increase their profit by accommodating more applications and reducing the expense of data centers.}
 
@@ -48,39 +48,39 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 \subsection{Placement Decision Scenarios}
 \label{scenarios}
 
-\bx{The server consolidation in data center can be applied to three placement decision scenarios \cite{Svard:2015ic, Mishra:2012kx}: Application initial placement, periodic consolidation, and dynamic placement (see Figure \ref{fig:management}).}
+\bx{The server consolidation in data center can be applied to three placement decision scenarios \cite{Svard:2015ic, Mishra:2012kx}: initial placement of application, periodic consolidation, and dynamic placement of application (see Figure \ref{fig:management}).}
 
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/initial_placement.png}
-		\caption{Application Initial Placement}
+		\caption{initial placement of application}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/periodic_optimization.png}
-	\caption{Periodic Optimization}
+	\caption{periodic placement of application}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/dynamic_placement.png}
-	\caption{Dynamic Placement}
+	\caption{dynamic placement of application}
 	\end{subfigure}
 	\caption{Three scenarios of placement decision}
 	\label{fig:management}
 \end{figure}
 
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
-\subsubsection{Application initial placement}
+\subsubsection{initial placement of application}
 
-\bx{Application initial placement is applied when new applications arrived.} The task is to place them into a set of PMs \cite{Mishra:2012kx} so that all applications' resource demand are satisfied and the energy consumption is minimized.
+\bx{initial placement of application is applied when new applications arrived.} The task is to place them into a set of PMs \cite{Mishra:2012kx} so that all applications' resource demand are satisfied and the energy consumption is minimized.
 
 % In VM-based cloud, this problem is often modeled as a single level bin-packing problem \cite{CoffmanJr:1996ui}. In container-based cloud, an extra level of placement - containers to VMs - need to be considered. Two levels of placement: Container-VM, VM-PM, interact with each other. The problem is modeled as a bilevel optimization problem \cite{Mathieu:2011dw} where each level is a bin-packing problem. Previous approaches are based on VM-based cloud, therefore, they cannot be used in the bilevel problem.
 
 
-\subsubsection{Periodic Optimization} 
+\subsubsection{periodic placement of application} 
 
-\bx{Periodic Optimization is applied periodically to adjust the current placement of applications.} The task is to re-place the current applications so that the energy consumption is minimized and the cost of migration is minimized. This problem is often modeled as a multi-objective static server consolidation problem. 
+\bx{periodic placement of application is applied periodically to adjust the current placement of applications.} The task is to re-place the current applications so that the energy consumption is minimized and the cost of migration is minimized. This problem is often modeled as a multi-objective static server consolidation problem. 
 
-% Similar as application initial placement, container-based periodic optimization is also a bilevel optimization problem. In addition, previous works only consider applications' workload as static, therefore, it incurs more migration afterwards. In practice, the types of workload should be considered into the decision process.
+% Similar as initial placement of application, container-based periodic placement of application is also a bilevel optimization problem. In addition, previous works only consider applications' workload as static, therefore, it incurs more migration afterwards. In practice, the types of workload should be considered into the decision process.
 
 	% In this problem, time is discrete and it can be split into basic time frames, for example: ten seconds. A periodical operation is conducted in every $N$ time frames.
 	% A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Releasing applications cause hollow in PMs; new arrivals cannot change the structure of current allocation. Therefore, after the initial allocation, the overall energy efficiency is likely to drop along with time elapsing. 
@@ -92,9 +92,9 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 
 	% In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
 
-\subsubsection{Dynamic Placement}
+\subsubsection{dynamic placement of application}
 
-\bx{Dynamic placement is applied in two scenarios \cite{Mishra:2012kx}: Overloading and underloading}. Overloading is a scenario where the actual demand of applications in a PM is higher than the PM's resources. Therefore, one or more applications' performance degraded. Underloading is a scenario where the PM is running in low utilization. In both scenarios, the applications running inside the PM will be moved to other PMs in an online fashion which requires a dynamic placement approach \cite{Borodin:2cY4439E}.
+\bx{dynamic placement of application is applied in two scenarios \cite{Mishra:2012kx}: Overloading and underloading}. Overloading is a scenario where the actual demand of applications in a PM is higher than the PM's resources. Therefore, one or more applications' performance degraded. Underloading is a scenario where the PM is running in low utilization. In both scenarios, the applications running inside the PM will be moved to other PMs in an online fashion which requires a dynamic placement of application approach \cite{Borodin:2cY4439E}.
 
 
 
@@ -102,13 +102,13 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 	% \begin{itemize}
 	% 	\item \emph{When to migrate?} refers to determine the time point that a PM is overloaded or underloaded. It is often decide by a threshold of utilization.
 	% 	\item \emph{Which application to migrate?} refers to determine which application need to be migrated so that it optimize the global energy consumption.
-	% 	\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement which is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. 
+	% 	\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement of application which is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. 
 	% \end{itemize}
 
-	% Among three operations, dynamic placement is a dynamic and on-line problem.
+	% Among three operations, dynamic placement of application is a dynamic and on-line problem.
 	% The term ``dynamic'' means the request comes at an arbitrary time point. An on-line problem is a problem which has on-line input and requires on-line output . It is applied when a control system does not have the complete knowledge of future events.
 
-% 	There are two difficulties in this operation, firstly, dynamic placement requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
+% 	There are two difficulties in this operation, firstly, dynamic placement of application requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
 
 % \end{enumerate}
 
@@ -408,11 +408,11 @@ Most of the current research focus on VM-based cloud while their approaches cann
 
 \section{Related Work}
 \label{related_work}
-In this section, we summarize the related works in the terms of three resource management processes: application initial placement, periodic consolidation and dynamic consolidation, corresponding to our proposed objectives. In each sub section, we analyze the container-based and VM-based approaches, discuss their models and methodologies. 
+In this section, we summarize the related works in the terms of three resource management processes: initial placement of application, periodic consolidation and dynamic consolidation, corresponding to our proposed objectives. In each sub section, we analyze the container-based and VM-based approaches, discuss their models and methodologies. 
 
-\subsection{Application Initial Placement}
-Application initial placement is one of the major process in resource management as discussed in Section \ref{scenarios}. 
-The task of application initial placement for cloud provider is to deploy a number of VMs or containers to a minimum number of empty physical machines (PMs), because energy consumption is proportional to the PM number.
+\subsection{initial placement of application}
+initial placement of application is one of the major process in resource management as discussed in Section \ref{scenarios}. 
+The task of initial placement of application for cloud provider is to deploy a number of VMs or containers to a minimum number of empty physical machines (PMs), because energy consumption is proportional to the PM number.
 
 This section first discusses container-based approaches including modeling and methodology. The modeling includes power model and wastage model. Then, we will discuss and reason their disadvantages in design. In order to remedy their problems, we will review a number of VM-based placement including traditional bin packing and more advanced approaches.
 % Furthermore, in our first objective (Section \ref{sec:obj1}), we intend to propose a bilevel optimization to solve the problem. So far there is no research consider the placement problem as a bilevel optimization problem. Therefore, we will review a number of VM-based placement to learn from their models and problem solving approaches. 
@@ -423,7 +423,7 @@ This section first discusses container-based approaches including modeling and m
 % We will first review a number of approaches solving the problem with traditional bin packing approaches. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
-\subsubsection{Container-based Application Initial Placement}
+\subsubsection{Container-based initial placement of application}
 \label{container-based-placement}
 
 This section will briefly discuss the models of container-based approaches. Furthermore, our focus is to discuss the design of separate concern of container placement and VM placement as well as the collaborative placement. 
@@ -443,7 +443,7 @@ In order to solve the two-level of optimization problem, we believe one of the p
 
 % Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralized slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
 
-\subsubsection{VM-based Application Initial Placement}
+\subsubsection{VM-based initial placement of application}
 \label{initial_placement}
 This section first reviews a number of traditional approaches for the VM placement problem. Their drawbacks will be presented. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resources, power model, wastage model, objective, and algorithm.
 
@@ -549,7 +549,7 @@ One major drawback of evolutionary algorithms is its high computation cost which
 In conclusion, as the complexity of the problem, practical problems with bilevel nature are often simplified into a single-level optimization problem which can achieve a satisfactory level instead of optimal. Classic algorithms often fail because of the nature of bilevel problem such as non-linearity, discreteness, no-differentiability, non-convexity etc. EC algorithms have been successfully applied on bilevel problems.
 
 \subsection{Periodic consolidation}
-Periodic consolidation (see Section \ref{scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud datacenter is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with application initial placement (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic consolidation needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
+Periodic consolidation (see Section \ref{scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud data center is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with initial placement of application (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic consolidation needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
 
 Although periodic consolidation has been applied in VM-based Cloud for years \cite{Murtazaev:2014eo,Ferreto:2011ii}, it has not been studied in the new context of container-based Cloud. Therefore, this section will first discuss VM-based models, especially the migration models. Secondly, we will discuss the approaches in periodic consolidation in the VM-context, specifically, in terms of the prediction of workload, these gaps existed in both VM and container context. 
 
@@ -562,7 +562,7 @@ Ferreto proposes a preprocessing step before the placement algorithm. It first o
 Most previous consolidation approaches \cite{Viswanathan:2012ej, Chen:2011fl,Feller:2011vs} only consider static workload. That is, they use a peak or average workload as a represented value as the consolidation input. In most of cases, this will lead to either low utilization: peak time only account for small proportion of the total time, or more migrations: extra migration are performed on workload changes. 
 Therefore, the consolidation is more than aggressively concentrate workload on as few PM as possible, but also considers the robustness. The robustness is referred to the capability of enduring the variation of workload without make too many changes.
 
-In order to achieve robustness, the workload variation must be taken into account. Bobroff \cite{Bobroff:2007ec} analyzed a large number of traces from real world datacenter. They categorize workloads into three main groups: 
+In order to achieve robustness, the workload variation must be taken into account. Bobroff \cite{Bobroff:2007ec} analyzed a large number of traces from real world data center. They categorize workloads into three main groups: 
 
 \begin{itemize}
 	\item Weak variability.
@@ -612,14 +612,14 @@ In the Cloud computing context,  Cloud resource allocation usually has extra con
 \bx{This chapter reviewed the main concepts of cloud resource management and server consolidation.} The challenges of server consolidation in container-based cloud data center were discussed. This chapter also discussed the limitations of existing work on three placement decision scenarios in both container-based and VM-based data center. 
 
 \begin{itemize}
-	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based application initial placement conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub models such as energy model, workload model, variables and constraints need to be further investigated.
-	\item Periodic optimization has not been studied in the container context. A bilevel multi-objective energy model needs to be proposed which considers minimizing migration cost as well as minimizing energy consumption. 
-	\item Traditional periodic optimization mostly consider static workload. Thus, it is very likely lead to large number of adjustment of applications' placement in the future because the fluctuation of workloads. These adjustment will increase the cost for Cloud providers. In order to provide a robust placement of application, various predictable workload patterns such as linear continuously changing can be considered. It needs more investigation on how to represent various workloads and how to combine them in a compact structure.
-	\item Current dynamic placement approaches are based on simple bin-packing algorithms and manually designed heuristics. These heuristics are either perform poorly or cannot be applied with specific constraints. A hyper-heuristic approach can learn from previous good placement patterns and automatically generate heuristics. In order to design a hyper-heuristic, features of various workload need to be investigated. 
+	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based initial placement of application conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub models such as energy model, workload model, variables and constraints need to be further investigated.
+	\item periodic placement of application has not been studied in the container context. A bilevel multi-objective energy model needs to be proposed which considers minimizing migration cost as well as minimizing energy consumption. 
+	\item Traditional periodic placement of application mostly consider static workload. Thus, it is very likely lead to large number of adjustment of applications' placement in the future because the fluctuation of workloads. These adjustment will increase the cost for Cloud providers. In order to provide a robust placement of application, various predictable workload patterns such as linear continuously changing can be considered. It needs more investigation on how to represent various workloads and how to combine them in a compact structure.
+	\item Current dynamic placement of application approaches are based on simple bin-packing algorithms and manually designed heuristics. These heuristics are either perform poorly or cannot be applied with specific constraints. A hyper-heuristic approach can learn from previous good placement patterns and automatically generate heuristics. In order to design a hyper-heuristic, features of various workload need to be investigated. 
 \end{itemize}
 
 
-This research aims to address the above-mentioned issues. The next chapter will focus on the initial work conducted in investigating NSGA-II for bilevel application initial placement.
+This research aims to address the above-mentioned issues. The next chapter will focus on the initial work conducted in investigating NSGA-II for bilevel initial placement of application.
 
 
 % Beloglazov and Buyya \cite{Beloglazov:2012bw} propose
@@ -816,13 +816,13 @@ This research aims to address the above-mentioned issues. The next chapter will 
 % 	\begin{itemize}
 % 		\item \emph{When to migrate?} refers to determine the time point that a PM is overloaded or underloaded. It is often decide by a threshold of utilization.
 % 		\item \emph{Which application to migrate?} refers to determine which application need to be migrated so that it optimize the global energy consumption.
-% 		\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement which is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. 
+% 		\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement of application which is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. 
 % 	\end{itemize}
 
-% 	Among three operations, dynamic placement is a dynamic and on-line problem.
+% 	Among three operations, dynamic placement of application is a dynamic and on-line problem.
 % 	The term ``dynamic'' means the request comes at an arbitrary time point. An on-line problem is a problem which has on-line input and requires on-line output \cite{Borodin:uQcy_H6C}. It is applied when a control system does not have the complete knowledge of future events.
 
-% 	There are two difficulties in this operation, firstly, dynamic placement requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
+% 	There are two difficulties in this operation, firstly, dynamic placement of application requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
 
 % \end{enumerate}
 

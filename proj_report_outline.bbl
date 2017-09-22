@@ -19,6 +19,10 @@
 \newblock In {\em 2013 IEEE Congress on Evolutionary Computation (CEC)\/}
   (2013), IEEE, pp.~470--477.
 
+\bibitem{Banzhaf:1998wc}
+{\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
+\newblock {Genetic programming: an introduction}, 1998.
+
 \bibitem{Bard:1982gs}
 {\sc Bard, J.~F., and Falk, J.~E.}
 \newblock {An explicit solution to the multi-level programming problem}.
@@ -181,11 +185,10 @@
 \newblock {\em {\ldots} with Multivalued Mappings 55}, 5-6 (Oct. 2006),
   505--524.
 
-\bibitem{Deng:1998fk}
-{\sc Deng, X.}
-\newblock {Complexity Issues in Bilevel Linear Programming}.
-\newblock In {\em Multilevel Optimization: Algorithms and Applications}.
-  Springer, Boston, MA, Boston, MA, 1998, pp.~149--164.
+\bibitem{Dosa:2013ie}
+{\sc D{\'o}sa, G., and Sgall, J.}
+\newblock {First Fit bin packing - A tight analysis.}
+\newblock {\em STACS\/} (2013).
 
 \bibitem{Dua:2014bw}
 {\sc Dua, R., Raja, A.~R., and Kakadia, D.}
@@ -283,12 +286,6 @@
 \bibitem{Johnson:2016wp}
 {\sc Johnson, D.~S.}
 \newblock {Vector Bin Packing.}
-
-\bibitem{Jung:2010dt}
-{\sc Jung, G., Hiltunen, M.~A., Joshi, K.~R., Schlichting, R.~D., and Pu, C.}
-\newblock {Mistral - Dynamically Managing Power, Performance, and Adaptation
-  Cost in Cloud Infrastructures.}
-\newblock {\em ICDCS\/} (2010), 62--73.
 
 \bibitem{Kaplan:up01fR-k}
 {\sc Kaplan, J.~M., Forrest, W., and Kindler, N.}
@@ -505,7 +502,7 @@
 \bibitem{Shen:2015hm}
 {\sc Shen, S., van Beek, V., and Iosup, A.}
 \newblock {Statistical Characterization of Business-Critical Workloads Hosted
-  in Cloud Datacenters.}
+  in Cloud Data centers.}
 \newblock {\em CCGRID\/} (2015), 465--474.
 
 \bibitem{Sim:2013fe}
@@ -557,7 +554,7 @@
 
 \bibitem{Svard:2015ic}
 {\sc Svard, P., Li, W., Wadbro, E., Tordsson, J., and Elmroth, E.}
-\newblock {Continuous Datacenter Consolidation}.
+\newblock {Continuous Data center Consolidation}.
 \newblock In {\em 2015 IEEE 7th International Conference on Cloud Computing
   Technology and Science (CloudCom)\/} (2015), IEEE, pp.~387--396.
 
@@ -605,13 +602,6 @@
 \newblock {Memory resource management in VMware ESX server}.
 \newblock {\em ACM SIGOPS Operating Systems Review 36}, SI (Dec. 2002),
   181--194.
-
-\bibitem{Wang:2008kb}
-{\sc Wang, G., Wan, Z., Wang, X., and Lv, Y.}
-\newblock {Genetic algorithm based on simplex method for solving
-  linear-quadratic bilevel programming problem}.
-\newblock {\em Computers {\&} Mathematics with Applications 56}, 10 (Nov.
-  2008), 2550--2555.
 
 \bibitem{Wang:2016eha}
 {\sc Wang, Y., and 0002, Y.~X.}
