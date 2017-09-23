@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  22 SEP 2017 13:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  23 SEP 2017 20:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -596,8 +596,8 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
 
 
 ] [2 <./pics/workflow_management.png>])
-(./Motivation.tex [3] [4]) (./Goals.tex
-<pics/thesisPlan.png, id=42, 1428.83812pt x 648.92438pt>
+(./Motivation.tex [3]) (./Goals.tex
+<pics/thesisPlan.png, id=39, 1428.83812pt x 648.92438pt>
 File: pics/thesisPlan.png Graphic file (type png)
 <use pics/thesisPlan.png>
 Package pdftex.def Info: pics/thesisPlan.png  used on input line 5. on input li
@@ -606,21 +606,40 @@ Package pdftex.def Info: Requested size: 441.01772pt x 200.29312pt on input lin
 e 5.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
- [5 <./pics/thesisPlan.png>] [6]
-[7]
-Overfull \hbox (4.88666pt too wide) in paragraph at lines 107--107
+ [4 <./pics/thesisPlan.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+[6]
+Overfull \hbox (4.88666pt too wide) in paragraph at lines 154--154
 \OT1/ppl/b/n/12 Ge-netic Pro-gram-ming (GP) ap-proach for au-to-mat-i-cally gen
 -er-at-ing dis-patch-
  []
 
-[8]) (./published.tex) (./organization.tex
+[7]) (./published.tex) (./organization.tex
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
-) [9]) [10]
+) [8]) [9]
 \openout2 = `literature_review.aux'.
 
  (./literature_review.tex
+[10
+
+
+
+]
 Chapter 2.
 (./background.tex
 <pics/stakeholders.png, id=63, 899.36pt x 554.07pt>
@@ -630,11 +649,7 @@ Package pdftex.def Info: pics/stakeholders.png  used on input line 10. on input
  line 10.
 Package pdftex.def Info: Requested size: 264.61331pt x 163.01805pt on input lin
 e 10.
- [11
-
-
-
- <./pics/stakeholders.png>]
+ [11 <./pics/stakeholders.png>]
 <pics/energyConsumption.png, id=68, 631.35875pt x 614.295pt>
 File: pics/energyConsumption.png Graphic file (type png)
 <use pics/energyConsumption.png>
@@ -1005,7 +1020,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (56 pages, 1199294 bytes).
+Output written on proj_report_outline.pdf (56 pages, 1198481 bytes).
 PDF statistics:
  290 PDF objects out of 1000 (max. 8388607)
  164 compressed objects within 2 object streams
