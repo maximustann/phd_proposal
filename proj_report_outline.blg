@@ -7,57 +7,60 @@ A level-1 auxiliary file: preliminary.aux
 A level-1 auxiliary file: Contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-I was expecting a `,' or a `}'---line 1344 of file sample.bib
+I was expecting a `,' or a `}'---line 745 of file sample.bib
  : month = 06
  :           /2008
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
-Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Bard:1982gs"
+Warning--I didn't find a database entry for "Mathieu:1994uh"
+Warning--I didn't find a database entry for "Ferreto:2011ii"
+Warning--I didn't find a database entry for "Chen:2011fl"
 Warning--I didn't find a database entry for "Energy_Service_2"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Fehling:2014tl
 Warning--empty journal in Johnson:2016wp
 Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
-You've used 120 entries,
+You've used 118 entries,
             2253 wiz_defined-function locations,
-            1276 strings with 26444 characters,
-and the built_in function-call counts, 41873 in all, are:
-= -- 4096
-> -- 2180
+            1275 strings with 26437 characters,
+and the built_in function-call counts, 41164 in all, are:
+= -- 4035
+> -- 2131
 < -- 0
-+ -- 896
-- -- 776
-* -- 3515
-:= -- 6894
-add.period$ -- 356
-call.type$ -- 120
-change.case$ -- 749
++ -- 876
+- -- 758
+* -- 3448
+:= -- 6777
+add.period$ -- 351
+call.type$ -- 118
+change.case$ -- 734
 chr.to.int$ -- 0
-cite$ -- 125
-duplicate$ -- 1306
-empty$ -- 3133
-format.name$ -- 776
-if$ -- 8503
+cite$ -- 123
+duplicate$ -- 1286
+empty$ -- 3087
+format.name$ -- 758
+if$ -- 8367
 int.to.chr$ -- 0
-int.to.str$ -- 120
-missing$ -- 116
-newline$ -- 596
-num.names$ -- 240
-pop$ -- 628
+int.to.str$ -- 118
+missing$ -- 114
+newline$ -- 586
+num.names$ -- 236
+pop$ -- 614
 preamble$ -- 1
-purify$ -- 628
+purify$ -- 615
 quote$ -- 0
-skip$ -- 840
+skip$ -- 826
 stack$ -- 0
-substring$ -- 2706
-swap$ -- 346
+substring$ -- 2669
+swap$ -- 340
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 480
+type$ -- 472
 warning$ -- 5
-while$ -- 432
-width$ -- 123
-write$ -- 1187
+while$ -- 427
+width$ -- 121
+write$ -- 1171
 (There was 1 error message)

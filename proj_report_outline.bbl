@@ -23,11 +23,6 @@
 {\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
 \newblock {Genetic programming: an introduction}, 1998.
 
-\bibitem{Bard:1982gs}
-{\sc Bard, J.~F., and Falk, J.~E.}
-\newblock {An explicit solution to the multi-level programming problem}.
-\newblock {\em Computers {\&} Operations Research 9}, 1 (Jan. 1982), 77--100.
-
 \bibitem{Barham:2003cj}
 {\sc Barham, P., Dragovic, B., Fraser, K., Hand, S., Harris, T.~L., Ho, A.,
   Neugebauer, R., Pratt, I., and Warfield, A.}
@@ -112,18 +107,12 @@
 {\sc Buyya, R., Ranjan, R., and Calheiros, R.~N.}
 \newblock {Modeling and Simulation of Scalable Cloud Computing Environments and
   the CloudSim Toolkit - Challenges and Opportunities}.
-\newblock {\em PDPTA cs.DC}, Chapter 4 (2009), 24--.
+\newblock {\em PDPTA cs.DC}, Chapter 4 (2009), 24.
 
 \bibitem{Chaisiri:2012cva}
 {\sc Chaisiri, S., Lee, B.-S., and Niyato, D.}
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
 \newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
-
-\bibitem{Chen:2011fl}
-{\sc Chen, M., Zhang, H., Su, Y.-Y., Wang, X., Jiang, G., and Yoshihira, K.}
-\newblock {Effective VM sizing in virtualized data centers}.
-\newblock In {\em 2011 IFIP/IEEE International Symposium on Integrated Network
-  Management (IM 2011)\/} (2011), IEEE, pp.~594--601.
 
 \bibitem{Cho:2016kz}
 {\sc Cho, J., and Kim, Y.}
@@ -159,12 +148,6 @@
 {\sc Dayarathna, M., Wen, Y., and Fan, R.}
 \newblock {Data Center Energy Consumption Modeling - A Survey.}
 \newblock {\em {\ldots} Surveys {\&} Tutorials\/} (2016).
-
-\bibitem{Deb:2009jh}
-{\sc Deb, K., and 0001, A.~S.}
-\newblock {Solving Bilevel Multi-Objective Optimization Problems Using
-  Evolutionary Algorithms.}
-\newblock {\em EMO 5467}, 1 (2009), 110--124.
 
 \bibitem{nsgaii}
 {\sc Deb, K., Pratap, A., Agarwal, S., and Meyarivan, T.}
@@ -228,13 +211,6 @@
   Metaheuristic.}
 \newblock {\em Euro-Par 8632}, Chapter 26 (2014), 306--317.
 
-\bibitem{Ferreto:2011ii}
-{\sc Ferreto, T.~C., Netto, M. A.~S., Calheiros, R.~N., and De~Rose, C. A.~F.}
-\newblock {Server consolidation with migration control for virtualized data
-  centers}.
-\newblock {\em Future Generation Computer Systems 27}, 8 (Oct. 2011),
-  1027--1034.
-
 \bibitem{Forsman:2015ca}
 {\sc Forsman, M., Glad, A., Lundberg, L., and Ilie, D.}
 \newblock {Algorithms for automated live migration of virtual machines.}
@@ -276,6 +252,12 @@
 \newblock {Author's retrospective on {\textquoteleft}Forecasting seasonals and
   trends by exponentially weighted moving averages{\textquoteright}}.
 \newblock {\em International journal of forecasting 20}, 1 (Jan. 2004), 11--13.
+
+\bibitem{Jat:2011us}
+{\sc Jat, S.~N., and Yang, S.}
+\newblock {A Guided Search Non-dominated Sorting Genetic Algorithm for the
+  Multi-Objective University Course Timetabling Problem.}
+\newblock {\em EvoCOP 6622}, 9 (2011), 1--13.
 
 \bibitem{Jennings:2015ht}
 {\sc Jennings, B., and Stadler, R.}
@@ -383,11 +365,6 @@
   computing - A survey.}
 \newblock {\em J. Network and Computer Applications 41\/} (2014), 424--440.
 
-\bibitem{Mathieu:1994uh}
-{\sc Mathieu, R., Pittard, L., and Anandalingam, G.}
-\newblock {Genetic algorithm based approach to bi-level linear programming}.
-\newblock {\em RAIRO-Operations Research\/} (1994).
-
 \bibitem{Mathieu:2011dw}
 {\sc Mathieu, R., Pittard, L., and Anandalingam, G.}
 \newblock {Genetic algorithm based approach to bi-level linear programming}.
@@ -410,12 +387,6 @@
 {\sc Mishra, M., Das, A., Kulkarni, P., and Sahoo, A.}
 \newblock {Dynamic resource management using virtual machine migrations}.
 \newblock {\em IEEE Communications {\ldots} 50}, 9 (2012), 34--40.
-
-\bibitem{Mishra:2011bz}
-{\sc Mishra, M., and Sahoo, A.}
-\newblock {On Theory of VM Placement - Anomalies in Existing Methodologies and
-  Their Mitigation Using a Novel Vector Based Approach.}
-\newblock {\em IEEE CLOUD\/} (2011), 275--282.
 
 \bibitem{Murtazaev:2014eo}
 {\sc Murtazaev, A., and Oh, S.}
@@ -450,6 +421,12 @@
 {\sc Paschke, A., and Schnappinger-Gerull, E.}
 \newblock {A Categorization Scheme for SLA Metrics.}
 \newblock {\em Service Oriented Electronic Commerce 80}, 25-40 (2006), 14.
+
+\bibitem{Pinheiro:2015eu}
+{\sc Pinheiro, R.~L., Silva, D.~L., and Atkin, J.}
+\newblock {Analysis of Objectives Relationships in Multiobjective Problems
+  Using Trade-Off Region Maps.}
+\newblock {\em GECCO\/} (2015), 735--742.
 
 \bibitem{Piraghaj:2016bw}
 {\sc Piraghaj, S.~F., Calheiros, R.~N., Chan, J., Dastjerdi, A.~V., and Buyya,
@@ -502,7 +479,7 @@
 \bibitem{Shen:2015hm}
 {\sc Shen, S., van Beek, V., and Iosup, A.}
 \newblock {Statistical Characterization of Business-Critical Workloads Hosted
-  in Cloud Data centers.}
+  in Cloud Datacenters.}
 \newblock {\em CCGRID\/} (2015), 465--474.
 
 \bibitem{Sim:2013fe}
@@ -546,6 +523,12 @@
 \newblock In {\em Proceedings of the 2008 conference on Power aware computing
   and systems\/} (2008), San Diego, California, pp.~1--5.
 
+\bibitem{Mishra:2011bz}
+{\sc Sudevalayam, S., and Kulkarni, P.}
+\newblock {On Theory of VM Placement - Anomalies in Existing Methodologies and
+  Their Mitigation Using a Novel Vector Based Approach.}
+\newblock {\em IEEE CLOUD\/} (2011), 275--282.
+
 \bibitem{Sun:2008gq}
 {\sc Sun, H., Gao, Z., and Wu, J.}
 \newblock {A bi-level programming model and solution algorithm for the location
@@ -554,7 +537,7 @@
 
 \bibitem{Svard:2015ic}
 {\sc Svard, P., Li, W., Wadbro, E., Tordsson, J., and Elmroth, E.}
-\newblock {Continuous Data center Consolidation}.
+\newblock {Continuous Datacenter Consolidation}.
 \newblock In {\em 2015 IEEE 7th International Conference on Cloud Computing
   Technology and Science (CloudCom)\/} (2015), IEEE, pp.~387--396.
 
@@ -679,11 +662,6 @@
 \newblock In {\em Proceedings of the First Asia-Pacific Symposium on
   Internetware\/} (2009), ACM, p.~3.
 
-\bibitem{Yin:2000bt}
-{\sc Yin, Y.}
-\newblock {Genetic-algorithms-based approach for bilevel programming models}.
-\newblock {\em Journal of Transportation Engineering\/} (2000).
-
 \bibitem{Zhang:2010vo}
 {\sc Zhang, Q., Cheng, L., and Boutaba, R.}
 \newblock {Cloud computing: state-of-the-art and research challenges}.
@@ -703,5 +681,19 @@
   Bilevel Programming with Linear Constraints}.
 \newblock In {\em 2006 5th IEEE International Conference on Cognitive
   Informatics\/} (2006), IEEE, pp.~126--131.
+
+\bibitem{Zio:2011iq}
+{\sc Zio, E., and Bazzo, R.}
+\newblock {A clustering procedure for reducing the number of representative
+  solutions in the Pareto Front of multiobjective optimization problems.}
+\newblock {\em European Journal of Operational Research 210}, 3 (2011),
+  624--634.
+
+\bibitem{Zio:2012jz}
+{\sc Zio, E., and Bazzo, R.}
+\newblock {A Comparison of Methods for Selecting Preferred Solutions in
+  Multiobjective Decision Making}.
+\newblock In {\em Computational Intelligence Systems in Industrial
+  Engineering}. Atlantis Press, Paris, Nov. 2012, pp.~23--43.
 
 \end{thebibliography}
