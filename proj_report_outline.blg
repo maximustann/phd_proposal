@@ -12,10 +12,6 @@ I was expecting a `,' or a `}'---line 745 of file sample.bib
  :           /2008
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
-Warning--I didn't find a database entry for "Bard:1982gs"
-Warning--I didn't find a database entry for "Mathieu:1994uh"
-Warning--I didn't find a database entry for "Ferreto:2011ii"
-Warning--I didn't find a database entry for "Chen:2011fl"
 Warning--I didn't find a database entry for "Energy_Service_2"
 Warning--empty journal in Clark:2005ud
 Warning--empty journal in Fehling:2014tl
@@ -24,43 +20,43 @@ Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
 You've used 118 entries,
             2253 wiz_defined-function locations,
-            1275 strings with 26437 characters,
-and the built_in function-call counts, 41164 in all, are:
-= -- 4035
-> -- 2131
+            1268 strings with 26416 characters,
+and the built_in function-call counts, 41375 in all, are:
+= -- 4060
+> -- 2151
 < -- 0
-+ -- 876
-- -- 758
-* -- 3448
-:= -- 6777
++ -- 884
+- -- 766
+* -- 3476
+:= -- 6814
 add.period$ -- 351
 call.type$ -- 118
-change.case$ -- 734
+change.case$ -- 738
 chr.to.int$ -- 0
 cite$ -- 123
-duplicate$ -- 1286
-empty$ -- 3087
-format.name$ -- 758
-if$ -- 8367
+duplicate$ -- 1279
+empty$ -- 3089
+format.name$ -- 766
+if$ -- 8404
 int.to.chr$ -- 0
 int.to.str$ -- 118
 missing$ -- 114
 newline$ -- 586
 num.names$ -- 236
-pop$ -- 614
+pop$ -- 611
 preamble$ -- 1
-purify$ -- 615
+purify$ -- 619
 quote$ -- 0
 skip$ -- 826
 stack$ -- 0
-substring$ -- 2669
+substring$ -- 2706
 swap$ -- 340
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 472
 warning$ -- 5
-while$ -- 427
+while$ -- 429
 width$ -- 121
-write$ -- 1171
+write$ -- 1172
 (There was 1 error message)

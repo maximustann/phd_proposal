@@ -4,7 +4,16 @@
 %% $Author: kevin $
 %%
 \chapter{Literature Review}\label{C:background}
-This chapter begins by providing a brief introduction of Cloud computing and the energy consumption problem in cloud data centers. Section \ref{resource_management} introduces resource management in cloud including the placement decision scenarios (Section \ref{scenarios}) and the main strategy - server consolidation (Section \ref{consolidation}).The second part (Section \ref{related_work}) gives a literature review on resource management in both container and VM-based cloud. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{pics/scope.png}
+	\caption{Scope of the literature review}
+	\label{fig:scope}
+\end{figure}
+
+\bx{The chapter introduces the background of resource management in cloud computing and the related work of server consolidation strategies related to three placement decision scenarios (see Figure \ref{fig:scope}).}
+\textbf{Background} introduces Cloud computing, energy efficiency problem and resource management in cloud. We also explain virtualization technologies  with three common placement scenarios and corresponding server consolidation strategies. \textbf{Related Work} discusses server consolidation strategies in terms of three placement scenarios with two virtualization technologies, VMs and containers.
 
 % This chapter begins by providing a fundamental background to the field of Cloud computing in Section \ref{sec:background}.
 % Section \ref{} discusses the resource allocation in PaaS as well as the bi-level optimization including both biologically and non-biologically

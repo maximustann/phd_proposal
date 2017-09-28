@@ -23,6 +23,11 @@
 {\sc Banzhaf, W., Nordin, P., Keller, R.~E., and Francone, F.~D.}
 \newblock {Genetic programming: an introduction}, 1998.
 
+\bibitem{Bard:1982gsa}
+{\sc Bard, J.~F., and Falk, J.~E.}
+\newblock {An explicit solution to the multi-level programming problem.}
+\newblock {\em Computers {\&} OR 9}, 1 (1982), 77--100.
+
 \bibitem{Barham:2003cj}
 {\sc Barham, P., Dragovic, B., Fraser, K., Hand, S., Harris, T.~L., Ho, A.,
   Neugebauer, R., Pratt, I., and Warfield, A.}
@@ -114,12 +119,6 @@
 \newblock {Optimization of Resource Provisioning Cost in Cloud Computing.}
 \newblock {\em IEEE Trans. Services Computing 5}, 2 (2012), 164--177.
 
-\bibitem{Cho:2016kz}
-{\sc Cho, J., and Kim, Y.}
-\newblock {Improving energy efficiency of dedicated cooling system and its
-  contribution towards meeting an energy-optimized data center}.
-\newblock {\em Applied Energy 165\/} (Mar. 2016), 967--982.
-
 \bibitem{Clark:2005ud}
 {\sc Clark, C., Fraser, K., Hand, S., Hansen, J.~G., Jul, E., Limpach, C.,
   Pratt, I., and Warfield, A.}
@@ -210,6 +209,12 @@
 \newblock {Virtual Machine Consolidation in Cloud Data Centers Using ACO
   Metaheuristic.}
 \newblock {\em Euro-Par 8632}, Chapter 26 (2014), 306--317.
+
+\bibitem{Ferreto:2011iia}
+{\sc Ferreto, T.~C., Netto, M. A.~S., Calheiros, R.~N., and De~Rose, C. A.~F.}
+\newblock {Server consolidation with migration control for virtualized data
+  centers.}
+\newblock {\em Future Generation Comp. Syst. 27}, 8 (2011), 1027--1034.
 
 \bibitem{Forsman:2015ca}
 {\sc Forsman, M., Glad, A., Lundberg, L., and Ilie, D.}
@@ -435,6 +440,12 @@
   Efficient Allocation of Cloud Data Center Resources.}
 \newblock {\em Comput. J. 59}, 2 (2016), 208--224.
 
+\bibitem{Piraghaj:2015dv}
+{\sc Piraghaj, S.~F., Dastjerdi, A.~V., Calheiros, R.~N., and Buyya, R.}
+\newblock {A Framework and Algorithm for Energy Efficient Container
+  Consolidation in Cloud Data Centers.}
+\newblock {\em DSDIS\/} (2015), 368--375.
+
 \bibitem{Poli:2007kt}
 {\sc Poli, R., Woodward, J., and Burke, E.~K.}
 \newblock {A histogram-matching approach to the evolution of bin-packing
@@ -469,12 +480,6 @@
 {\sc Rosen, R.}
 \newblock {Resource management: Linux kernel namespaces and cgroups}.
 \newblock {\em Haifux\/} (2013).
-
-\bibitem{Shafer:2010vh}
-{\sc Shafer, J.}
-\newblock {I/O virtualization bottlenecks in cloud computing today}.
-\newblock In {\em Proceedings of the 2nd conference on I/O virtualization\/}
-  (2010).
 
 \bibitem{Shen:2015hm}
 {\sc Shen, S., van Beek, V., and Iosup, A.}
@@ -661,12 +666,6 @@
 \newblock {Adaptive resource allocation for service-based systems}.
 \newblock In {\em Proceedings of the First Asia-Pacific Symposium on
   Internetware\/} (2009), ACM, p.~3.
-
-\bibitem{Zhang:2010vo}
-{\sc Zhang, Q., Cheng, L., and Boutaba, R.}
-\newblock {Cloud computing: state-of-the-art and research challenges}.
-\newblock {\em Journal of Internet Services and Applications 1}, 1 (2010),
-  7--18.
 
 \bibitem{Service_dataset}
 {\sc Zhang, Y., Zheng, Z., and Lyu, M.~R.}

@@ -183,7 +183,7 @@ We set four sub objectives to achieve this goal. The first sub objective propose
 
 	\bx{Two major challenges,} \textbf{first}, it is difficult to design a hyper-heuristics to generate dispatching rules. We must explore meaningful features of static workload, VM, and PM to construct a primitive set. It is uncertain which feature can contribute to the dispatching rule.  \textbf{Second}, it is even difficult for the generated dispatching rules to reach a global optimal solution because of the trade-off between training accuracy and over-fitting.
 
-	\bx{To gradually solve above challenges, } \textbf{first}, we may start from considering the features such as the status of VMs (e.g resource utilization), features of workloads (e.g resource requirement) that will affect the placement decision. The above features are represented as resource utilization. We will construct a primitive set with the selected features. 
+	\bx{To gradually solve above challenges,} \textbf{first}, we may start from considering the features such as the status of VMs (e.g resource utilization), features of workloads (e.g resource requirement) that will affect the placement decision. The above features are represented as resource utilization. We will construct a primitive set with the selected features. 
 	\textbf{Second}, we will use the default function set and the basic tree representation for constructing the dispatching rules. 
 	\textbf{Third}, to train the GP-HH, we will use the solutions from the first objective as the learning sets. We may use ten folds cross-validation to prevent from over-fitting. 
 

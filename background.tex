@@ -1,29 +1,29 @@
-\section{Cloud Computing Background}
+\section{Cloud Computing and Energy Efficiency Problem}
 \label{sec:background}
 
 
 % \subsection{Cloud computing}
 \bx{Cloud computing is a computing model that offers a network of servers to their clients in a on-demand fashion.} From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."}
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.6\textwidth]{pics/stakeholders.png}
 	\caption{Stakeholders of Cloud computing \cite{Jennings:2015ht}}
 	\label{fig:stakeholders}
 \end{figure}
 
-\bx{To give an example of how Cloud computing works (see Figure \ref{fig:stakeholders}), consider the case:} a \emph{Cloud provider} builds a data center which contains thousands of servers connected with network. 
+\bx{To give an example of how Cloud computing works (see Figure \ref{fig:stakeholders}), consider the case:} a \emph{Cloud provider} builds a data center contained thousands of servers. These servers connect with network. 
 % These servers are virtualized which means they are partitioned into smaller units of resources called \emph{Virtual Machines (VMs)} or \emph{Containers} \cite{Felter:2015ki}. 
-A web-based application provider is also a \emph{Cloud user}, can deploy and access their applications (e.g Endnote, Google Drive and etc.) in these servers from anywhere in the world. Once the applications start serving, \emph{End users} can use them without installing on their local computers. Cloud providers charge fees from Cloud users for infrastructure and Cloud users charge fees from End users for using their services. \tran{Therefore, from cloud providers' perspective, they can increase their profit by accommodating more applications and reducing the expense of data centers.}
+To use these remote servers, a web-based application provider is also a \emph{Cloud user}, can deploy and access their applications (e.g Endnote, Google Drive and etc.) in these servers from anywhere in the world. Once the applications start serving, \emph{End users} can use them without installing on their local computers. Cloud providers charge fees from Cloud users for infrastructure. Cloud users charge fees from End users for using applications. \tran{Therefore, from cloud providers' perspective, both accommodating more applications and reducing energy consumption lead to the increase of profit.}
 
-\bx{The major expense of data centers is energy consumption \cite{Kaplan:up01fR-k}.} Energy consumption is derived from several parts as illustrated in Figure \ref{fig:consumption}. Cooling system and physical machines (PMs) account for a majority of the consumption. A recent survey \cite{Cho:2016kz} shows that the recent development of cooling techniques have reduced its energy consumption and now PM consumption has become the dominate energy consumption component. 
-
-\bx{According to Hameed et al \cite{Hameed:2016cmb}, PMs are far from energy-efficient.} The main reason for the wastage of energy is that the energy consumption of servers remains high even when the utilization of PMs are low. For example, the average CPU utilization of a data center is only 15\% for most of the time, however, the energy consumption of PM remains 70\% of their peak time. The major reason is that each application is allocated to PMs for the sake of application environment isolation while the resources in the PM are far more than the application needs. 
+\bx{The major expense of a cloud provider is energy consumption \cite{Kaplan:up01fR-k} and physical machines (PMs) (e.g servers) contribute a majority of the energy.} As shown in Figure \ref{fig:consumption}, both cooling system and physical machines (PMs) account for 40\% of energy. However, PMs' energy efficiency are low on average  \cite{Hameed:2016cmb}.
+The reason for low energy efficiency is the disproportionate between the utilization of PMs and the energy consumption of PMs. \howto{For example, when CPU utilization of a PM is 15\%, the energy consumption of the PM is 70\% of its peak time.} Therefore, 
+cloud providers can reduce the energy consumption by improving the utilization of PMs.
 
 % \tran{In order to solve the problem, a concept of
 % \emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption by using virtualization technology.}
 
-\tran{In order to solve the low utilization of PMs, a concept of \emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption by using resource management.}
+\tran{In order to solve the low energy efficiency caused by low utilization of PMs, cloud providers use a resource management system to manage the applications.}
 
 \begin{figure}
 	\centering
@@ -40,45 +40,143 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 \end{figure} 
 
 \section{Cloud Resource Management}
-\label{resource_management}
-\bx{Cloud resource management is a process of allocating computing, storage, networking and indirectly energy resources to a set of applications, to meet the objectives of the \emph{End users}, \emph{Cloud users} and \emph{Cloud providers} \cite{Jennings:2015ht}.} The objectives of cloud provider are efficient and effective resource use, specifically, the high utilization of PMs and energy. To achieve this goal, a strategy of server consolidation is used to enable multiplexing of PMs' resources across applications. Server consolidation is typically implemented through virtualization technologies. This section will first discusses the server consolidation strategy. Then two types of virtualization technologies are introduced and compared. Finally, the research gaps in three placement decision scenarios will be discussed.
+\label{sec:resource_management}
+\bx{Cloud resource management is a process of allocating computation resources (e.g CPU and memory) to Cloud users to run their applications. Meanwhile, resource management aims to achieve low energy consumption in cloud} \cite{Jennings:2015ht}.}
+Resource management applies two types of virtualization: virtual machine (VM) and container on four management steps (see Section \ref{sec:statement}): collecting PMs' utilization data, analyzing available PMs, deciding the placement of applications, and executing the placement. Furthermore, in the third step of placement decision, resource management has three common scenarios: initial placement, periodic placement, and dynamic placement. Resource management uses distinct server consolidation strategies on these placement scenarios based on different virtualiazation technologies to achieve energy efficiency. 
+
+This section will first introduce and compare two types of virtualization: container-based and VM-based and then illustrate 
+three placement decision scenarios. 
+
+\subsection{Virtualization Technologies}
+\label{sec:virtualization}
+% \bx{Two technologies can be used to achieve server consolidation: clustering and virtualization.} Clustering is used in a situation that the applications running in bare-mental PMs are I/O intensive. This is because current virtualization technologies  such as KVM \cite{Kivity:2007wu} or Xen \cite{Barham:2003cj} are not suitable for data intensive application because they have a 20\% to 55\% of reduction of I/O bandwidth (e.g disk reads and writes, network bandwidth) in comparison with bare-mental PM \cite{Shafer:2010vh}. In our research, we consider the applications which require small CPU utilization (e.g 15\%) and low I/O needs such as web services, therefore, this section mainly discusses the virtualization technology.
+
+\bx{Resource management uses virtualization technologies \cite{Uhlig:2005do} to achieve a finer granularity management than a traditional way.} In comparison with traditional management -- allocating an application to a PM -- virtualized management partitions PM's resources (e.g. CPU, memory and disk) into several independent units and allocates applications into these units. 
+The most common units are virtual machines (VMs) and containers.
+
+Virtualization technology rooted back in the 1960s' was originally invented to enable isolated software testing. Because VMs can provide good isolation for applications running without interfering each other \cite{Somani:2009ho}. Soon, people realized that virtualization can improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. 
+
+Next two sections illustrate two classes of virtualization (see Figure \ref{fig:comparison}): VM-based and container-based virtualization and then we give a comparison between two virtualizations.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
+	\caption{A comparison between VM-based and Container-based virtualization \cite{Piraghaj:2016bw}}
+	\label{fig:comparison}
+\end{figure}
+
+\subsubsection{VM-based Virtualization} 
+
+\bx{A VM-based virtualization has a three-layers of structure: PM-Hypervisor-VM (see Figure \ref{fig:comparison} left-hand side).} 
+The hypervisor or the virtual machine monitor (VMM) is a software layer on top of PM. A hypervisor arbitrates accesses to the PM's resources so that VMs can share resources on the PM. Some implementations of VM-based hypervisors such as Xen \cite{Barham:2003cj}, KVM \cite{Kivity:2007wu}, and VMware ESX \cite{Waldspurger:2002db} dominate this field in recent years. On of top of hypervisor, \textbf{VMs} are the fundamental resource management units. A VM allows independent Operating system (OS) running on it.  
+
+In addition, hypervisors support dynamic migration techniques (e.g pre-copy \cite{Clark:2005ud} and post-copy \cite{Hines:2009fv}) that can move VMs from one PM to another. Therefore, resource management can improve the utilization of a PM by migrate VMs to that PM.
+
+% \bx{VMs can be used to reduce the energy consumption in data centers by utilizing the technology of live migration.} live migration  \cite{Hines:2009fv} can move a VM from one PM to another without interrupting the application running inside the VM. A common practice gathers several low utilized VMs into a PM so that the utilization of the PM is improved and idle PMs are turned off to save energy. This practice is called server consolidation which will be discussed in Section \ref{consolidation}.
+
+\subsubsection{Container-based Virtualization} 
+% It allows applications to have their own separated development environment such as libraries. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{pics/container_OS_APP.png}
+	\caption{A comparison between OS container and Application container \cite{Piraghaj:2017vi}}
+	\label{fig:comparison_container}
+\end{figure}
+
+\bx{A Container-based virtualization has a four-layers of structure: PM-Hypervisor-VM-Container (see Figure \ref{fig:comparison} right-hand side).} Container-based virtualization is also addressed as operating-system-level virtualization because containers run on top of VMs. Specifically, container-based virtuliazation includes two classes: OS container and application container \cite{Piraghaj:2017vi}. 
+
+\bx{OS containers (Figure \ref{fig:comparison_container} left-hand side) have a one-on-one relationship with VM.}
+Multiple applications running inside an OS container. Three implementations of OS-level of containers: OpenVZ, Google's control groups, and namespace \cite{Rosen:2013wt} are widely used in Google and Facebook.
+
+\bx{Application containers (Figure \ref{fig:comparison_container} right-hand side) have a many-to-one relationship with VM.} A single application runs on an application container. Major implementations such as Docker, Rocket and Kubernetes \cite{Bernstein:2014ur} are very popular in the software industry. 
+
+\bx{In comparison with OS container, application container is much more flexible because each container to have its separated environment (e.g. libraries) for applications.} Furthermore, application containers provide a finer granularity of resource management by enabling an application level of operations including deployment, scaling, and migration.  
+
+Notice that, in the following content, we use ``container'' to represent ``application container''. 
+We do not discuss Os container because it is very similar to a VM.
+
+% He et al \cite{He:2012im} propose an hierarchical resource management architecture for application container (see Figure \ref{fig:container_architecture}). The major functionality of Cloud controller is to provide a global optimization.
+
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.7\textwidth]{pics/container-arch.png}
+% 	\caption{A resource management architecture of container-based Cloud and the functionalities of each layer.}
+% 	\label{fig:container_architecture}
+% \end{figure}
+
+% \bx{Container-based server consolidation has to consider two levels of optimization on three variables - the placement of containers on VMs, the types of VMs, and the placement of VMs.} The detailed discussion is in Section \ref{related_work}.
+
+\subsubsection{Comparison between Container-based and VM-based virtualization} 
+\label{sec:comparison_container_vm}
+\bx{This section summarizes three disadvantages of VM-based virtualization in terms of energy efficiency and shows container-based can overcome these disadvantages based several research~\cite{Felter:2015ki, Xavier:2013fy, Dua:2014bw}.}  
+
+
+Some main disadvantages in VM-based virtualization are listed as follows:
+\begin{itemize}
+	\item Resource over-provisioning \\
+	\bx{Cloud users tend to reserve over more resources for ensuring the Quality of Service at peak hours \cite{Chaisiri:2012cva} which leads to low resource utilization.} Cloud users do not completely rely on auto-scaling because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted.
+
+	\item Unbalanced usage of resources \\
+	\bx{Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. }For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
+
+	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) \\
+	\bx{Heavy overhead of  hypervisors and redundant OSs running in the PM causes huge resource wastage.} Traditional VM provides a complete independent environment for deploying software which includes its own OS and libraries. However, as most applications only require a general OS such as Windows or Linux, multiple duplicate OSs running in the system is a waste of resource.
+\end{itemize}
+
+
+Some key characteristics of containers can help overcome the above disadvantages of VMs.
+\begin{itemize}
+	\item Container-based virtualization has a lightweight management which generates much less overhead than a VM hypervisor. 
+	\item Container-based virtualization shares OSs which reduces the overhead of multiple OSs while VMs have to run separated OSs.
+
+	The above two characteristics can overcome the heavy overhead of VM hypervisors and reduce the redundant OSs.
+	% \item Container-based virtualization has a near-native performance of CPU, memory, disk and network while VM has a poor I/O performance \cite{Shafer:2010vh}: up to 50\% reduction of bandwidth (e.g hard disk and network). This defect also has a negative effect on the migration performance, since a VM-image is ranging from hundreds of MB to several GBs. 
+	\item Container-based virtualization naturally supports vertical scaling while VM-based virtualization does not. Vertical scaling means a container can dynamically adjust its resources under the host's resource constraint.This feature offers a fine granularity management of resources. 
+
+	Vertical scaling can overcome the resource over-provisioning by dynamically adjusting the size of containers. Furthermore, the size of container reflects the requirement of the application. We can achieve a balanced usage of resources by using appropriate placement algorithm.
+
+\end{itemize}
+
+% \bx{These advantages together with fine granularity resource management of container, can be used to \textbf{improve the energy efficiency} by overcoming three main defects in traditional VM-based cloud data centers.}
+
+
+\bx{In summary, container-based virtualization has the potential to improve further improve the energy efficiency than VM-based virtualization.} No matter cloud uses which virtualization technology, cloud often deals with three placement decision scenarios. 
+% \tran{Next section will introduce the major strategy that is used to reduce the energy consumption in cloud data centers.}
+
 
 
 
 \subsection{Placement Decision Scenarios}
-\label{scenarios}
+\label{sec:scenarios}
 
-\bx{The server consolidation in data center can be applied to three placement decision scenarios \cite{Svard:2015ic, Mishra:2012kx}: initial placement of application, periodic consolidation, and dynamic placement of application (see Figure \ref{fig:management}).}
+\bx{Three placement decision scenarios \cite{Svard:2015ic, Mishra:2012kx}: initial placement of application, periodic placement of application, and dynamic placement of application (see Figure \ref{fig:management}).}
 
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/initial_placement.png}
-		\caption{initial placement of application}
+		\caption{Initial placement of application}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/periodic_optimization.png}
-	\caption{periodic placement of application}
+	\caption{Periodic placement of application}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/dynamic_placement.png}
-	\caption{dynamic placement of application}
+	\caption{Dynamic placement of application}
 	\end{subfigure}
 	\caption{Three scenarios of placement decision}
 	\label{fig:management}
 \end{figure}
 
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
-\subsubsection{initial placement of application}
-
-\bx{initial placement of application is applied when new applications arrived.} The task is to place them into a set of PMs \cite{Mishra:2012kx} so that all applications' resource demand are satisfied and the energy consumption is minimized.
+\paragraph{Initial placement of application} is applied when new applications arrived. The task is to place applications into a set of PMs \cite{Mishra:2012kx} so that PMs satisfy all applications' resource demands and minimize energy consumption.
 
 % In VM-based cloud, this problem is often modeled as a single level bin-packing problem \cite{CoffmanJr:1996ui}. In container-based cloud, an extra level of placement - containers to VMs - need to be considered. Two levels of placement: Container-VM, VM-PM, interact with each other. The problem is modeled as a bilevel optimization problem \cite{Mathieu:2011dw} where each level is a bin-packing problem. Previous approaches are based on VM-based cloud, therefore, they cannot be used in the bilevel problem.
 
 
-\subsubsection{periodic placement of application} 
-
-\bx{periodic placement of application is applied periodically to adjust the current placement of applications.} The task is to re-place the current applications so that the energy consumption is minimized and the cost of migration is minimized. This problem is often modeled as a multi-objective static server consolidation problem. 
+\paragraph{Periodic placement of application} is applied periodically to adjust the current placement of applications. The task is to re-place the current applications so that resource management minimizes the energy consumption and minimizes the cost of migration.
 
 % Similar as initial placement of application, container-based periodic placement of application is also a bilevel optimization problem. In addition, previous works only consider applications' workload as static, therefore, it incurs more migration afterwards. In practice, the types of workload should be considered into the decision process.
 
@@ -92,9 +190,7 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 
 	% In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
 
-\subsubsection{dynamic placement of application}
-
-\bx{dynamic placement of application is applied in two scenarios \cite{Mishra:2012kx}: Overloading and underloading}. Overloading is a scenario where the actual demand of applications in a PM is higher than the PM's resources. Therefore, one or more applications' performance degraded. Underloading is a scenario where the PM is running in low utilization. In both scenarios, the applications running inside the PM will be moved to other PMs in an online fashion which requires a dynamic placement of application approach \cite{Borodin:2cY4439E}.
+\paragraph{Dynamic placement of application} is applied in two scenarios \cite{Mishra:2012kx}: Overloading and underloading. Overloading is a scenario where the total demands of applications in a PM are higher than the PM's resources. Therefore, the PM causes a degradation in one or more applications' performance. Underloading is a scenario where the PM is running in low utilization. In both scenarios, resource management moves the applications from one PM to another PMs in an on-line fashion~\cite{Borodin:2cY4439E}.
 
 
 
@@ -124,9 +220,17 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 % \subsection{VM-based Static Consolidation Techniques}
 % \label{sec:static}
 
+% In summary, resource management allocates resources to Cloud users to run their applications. From technology's perspective, the recent container-based cloud has three advantages than traditional VM-based cloud in terms of energy efficiency. From the procedure of resource management, cloud often encounters three placement decision scenarios. 
+
+Next section will discuss server consolidation strategies in three scenarios based on the two types of virtualization: VM and container.
 
 
-\subsection{Server consolidation}
+\section{Related Work}
+\label{sec:related_work}
+% In this section, we summarize the related works in the terms of three resource management processes: initial placement of application, Periodic placement and dynamic consolidation, corresponding to our proposed objectives. In each sub section, we analyze the container-based and VM-based approaches, discuss their models and methodologies. 
+Related work discusses the server consolidation strategy and the studies of consolidation strategies on three placement decision scenarios: initial placement, periodic placement, and dynamic placement. 
+
+\subsection{Server consolidation strategy}
 \label{consolidation}
 
 \begin{figure}
@@ -137,12 +241,10 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 \end{figure}
 
 
-\bx{Server consolidation is a resource management strategy aims at improving the resource utilization and decreasing the energy consumed by PMs.} A general step of server consolidation is shown in Figure \ref{fig:consolidation}, a number of VMs is migrated to fewer number of PMs. Server consolidation is often applied to solve the problem of PM sprawl \cite{Khanna:2006vq}: a situation that more PMs are used in a low-utilized way. \tran{Server consolidation is usually model as a vector bin packing problem.}
-
+\bx{Server consolidation is a resource management strategy that aims to improve the utilization of PMs and reduce the energy consumption.} We use VM-based virtualization as an example: a general step of server consolidation is shown in Figure \ref{fig:consolidation}, a number of VMs is migrated to fewer number of PMs. Resource management applies Server consolidation to solve 
+the low utilization of PMs called PM sprawl~\cite{Khanna:2006vq}.
 
 % \subsubsubsection{Model}
-\label{vector_bin_packing}
-
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\textwidth]{pics/bin_packing_problem.png}
@@ -154,14 +256,8 @@ A web-based application provider is also a \emph{Cloud user}, can deploy and acc
 
 % Three major benefits of virtualization make it be the first choice for web-based application consolidation: No reliance on hardware, easy to provision and live migration.
 
-\bx{Server consolidation can be done in two ways: Static and dynamic \cite{Xiao:2015ik, Verma:2009wi} which are applied in different placement decision scenarios (discuss in next section).} In some scenarios, for example: new application initialization and global consolidation, involve large number of variables, therefore, it is very time-consuming job and often conducted in an off-line fashion. In other scenarios, when PMs are overloading or underloading, it requires fast a decision-making to migrate one or more VMs to reduce the burden on overloaded PM or improve the utilization. It migrates one VM at a time with a dynamic method. 
+\bx{Server consolidation can be done in two ways: Static and dynamic \cite{Xiao:2015ik, Verma:2009wi} based on different scenarios.} Initial placement and periodic placement involve large number of variables, therefore, they are very time-consuming job and often conducted in an off-line fashion. Dynamic placement requires a fast decision-making to place one application to PMs. Thus, resource management uses a dynamic server consolidation strategy to handle the scenario. 
 
-
-\subsubsection{Vector Bin Packing Model}
-\label{sec:vector_bin_packing}
-\bx{Server consolidation is typically modeled as a Vector bin packing problem which is a variant of standard bin packing problem (see Figure \ref{fig:bin_packing_problem}).} Vector bin packing is also referred as multi-capacity \cite{Leinberger:1999fs} or multi-dimensional bin packing problem \cite{Xiong:2014jq}. Vector bin packing is particularly suitable for modeling resource allocation problems where there is a set of bins with known capacities and a set of items with known demands \cite{Panigrahy:2011wk}. The optimization objective is to minimize the number of bins.
-
-A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, I^2, \dots, I^n$ where each item has $d$ dimension of resources represented in real or discrete number $I^i \in R^d$. A valid solution is packing $I$ into bins $B^1, B^2, \dots, B^k$. For each bin $j$ and each dimension $i$, the sum of resources can not exceed the capacity of bin. The goal of Vector Bin Packing problem is to find a valid solution with minimum number of bins. Notice that, the items assigned to bins do not consider the positions in the bins, that is, there is no geometric interpretation of the items or bins \cite{Johnson:2016wp}.  Vector bin packing reduces to the classic \emph{bin-packing} problem when $d$ = 1. Vector bin packing is an NP-hard problem in strong sense, as it is a generalized bin packing problem.
 
 % Several one dimensional bin packing algorithms have been generalized to vector bin packing such as generalized First Fit and Best Fit. In studies \cite{}, they suggest that an algorithm should keep the bins as ``balanced'' as possible, so that bins have better potential to accommodate more items. 
 
@@ -173,95 +269,6 @@ A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, 
 % of its capacity. Server consolidation is often used to solve the disproportionate between utilization and energy consumption \cite{Barroso:2007jt}.
 
 % \textcolor[Maroon]{How to do server consolidation?}
-
-\subsubsection{Virtualization Technologies}
-
-\bx{Two technologies can be used to achieve server consolidation: clustering and virtualization.} Clustering is used in a situation that the applications running in bare-mental PMs are I/O intensive. This is because current virtualization technologies  such as KVM \cite{Kivity:2007wu} or Xen \cite{Barham:2003cj} are not suitable for data intensive application because they have a 20\% to 55\% of reduction of I/O bandwidth (e.g disk reads and writes, network bandwidth) in comparison with bare-mental PM \cite{Shafer:2010vh}. In our research, we consider the applications which require small CPU utilization (e.g 15\%) and low I/O needs such as web services, therefore, this section mainly discusses the virtualization technology.
-
-\bx{Virtualization \cite{Uhlig:2005do} partitions a PM's resources (e.g. CPU, memory and disk) into several independent units called virtual machines (VMs) or containers.} This technology rooted back in the 1960s' was originally invented to enable isolated software testing, because VMs can provide good isolation so that multiple applications can run in separated VMs within the same PM without interfering each other \cite{Somani:2009ho}. Soon, people realized that it can be a way to improve the utilization of hardware resources: With each application deployed in a VM, a PM can run multiple applications. 
-
-
-There are two classes of virtualization (see Figure \ref{fig:comparison}): Hypervisor-based or VM-based and container-based virtualization.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\textwidth]{pics/comparison.png}
-	\caption{A comparison between VM-based and Container-based virtualization \cite{Piraghaj:2016bw}}
-	\label{fig:comparison}
-\end{figure}
-
-\paragraph{VM-based Virtualization} 
-
-\bx{A VM-based virtualization uses VM as its fundamental resource management unit.} A VM allows independent Operating system runs on it. The system includes a new layer of software - the hypervisor or the virtual machine monitor (VMM). The VMM arbitrates accesses to the PM's resources so that OS from VMs can share. In the previous decades VM-based hypervisors such as Xen \cite{Barham:2003cj}, KVM \cite{Kivity:2007wu}, and VMware ESX \cite{Waldspurger:2002db} dominate this field. VM-based Server consolidation \cite{Zhang:2010vo} utilized dynamic migration techniques (e.g pre-copy \cite{Clark:2005ud} and post-copy \cite{Hines:2009fv}) to resolve the low utilization problem.
-
-% \bx{VMs can be used to reduce the energy consumption in data centers by utilizing the technology of live migration.} live migration  \cite{Hines:2009fv} can move a VM from one PM to another without interrupting the application running inside the VM. A common practice gathers several low utilized VMs into a PM so that the utilization of the PM is improved and idle PMs are turned off to save energy. This practice is called server consolidation which will be discussed in Section \ref{consolidation}.
-
-\paragraph{Container-based Virtualization} 
-% It allows applications to have their own separated development environment such as libraries. 
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.4\textwidth]{pics/container_OS_APP.png}
-	\caption{A comparison between OS container and Application container \cite{Piraghaj:2017vi}}
-	\label{fig:comparison_container}
-\end{figure}
-
-\bx{Container-based virtualization uses both VM and container as its fundamental resource management unit.}
-Container-based virtualization is also often addressed as operating-system-level virtualization. It includes two types of container: OS container and application container \cite{Piraghaj:2017vi}. OS container (as shown in Figure \ref{fig:comparison_container}) can run in both PM and VM which allows multiple applications running inside. There are mainly three implementations of OS-level of containers: OpenVZ, Google's control groups, and namespace \cite{Rosen:2013wt}. Google and Facebook have been using OS container for years and being beneficial for its lightweight and fast communication among applications.
-
-\bx{An application container, such as Docker, Rocket and Kubernetes \cite{Bernstein:2014ur}, accommodates a single application in it.} Application container is much more flexible than OS container because each container to have its separated environment (e.g. libraries) so that the container can be deployed in different OSs. Application container also provides a finer granularity of resource management by enabling an application level of operations including deployment, scaling, and migration.  
-
-% He et al \cite{He:2012im} propose an hierarchical resource management architecture for application container (see Figure \ref{fig:container_architecture}). The major functionality of Cloud controller is to provide a global optimization.
-
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=0.7\textwidth]{pics/container-arch.png}
-% 	\caption{A resource management architecture of container-based Cloud and the functionalities of each layer.}
-% 	\label{fig:container_architecture}
-% \end{figure}
-
-% \bx{Container-based server consolidation has to consider two levels of optimization on three variables - the placement of containers on VMs, the types of VMs, and the placement of VMs.} The detailed discussion is in Section \ref{related_work}.
-
-\paragraph{Comparison between Container-based and VM-based virtualization} 
-\label{sec:comparison_container_vm}
-\bx{This section mainly discussed the differences between application container and VM in terms of their characteristics.}  Os container is not discussed because it is very similar to a VM.
-Several research \cite{Felter:2015ki, Xavier:2013fy, Dua:2014bw} have compared VM-based and container-based virtualization. 
-The advantages of container-based virtualization are mainly from three aspects:
-
-\begin{itemize}
-	\item Container-based virtualization has a lightweight management which generates much less overhead than a VM hypervisor. 
-	\item Container-based virtualization shares OSs which reduces the overhead of multiple OSs while VMs have to run separated OSs.
-	% \item Container-based virtualization has a near-native performance of CPU, memory, disk and network while VM has a poor I/O performance \cite{Shafer:2010vh}: up to 50\% reduction of bandwidth (e.g hard disk and network). This defect also has a negative effect on the migration performance, since a VM-image is ranging from hundreds of MB to several GBs. 
-	\item Containers naturally support vertical scaling while VMs do not. Vertical scaling means a container can dynamically adjust its resources under the host's resource constraint.This feature offers a fine granularity management of resources. 
-\end{itemize}
-
-\bx{These advantages together with fine granularity resource management of container, can be used to improve the energy efficiency by overcoming three main defects in traditional VM-based cloud data centers.}
-
-The defects are listed as follows:
-\begin{itemize}
-	\item Resource over-provisioning \\
-	\bx{Cloud users tend to reserve over more resources for ensuring the Quality of Service at peak hours \cite{Chaisiri:2012cva} which leads to low resource utilization.} Cloud users do not completely rely on auto-scaling because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted.
-
-	\bx{Application container overcomes this defects by dynamically adjusting its size.} With vertical scaling, resource reservation can be performed in a minimum level, which leads to a high utilization of resources.
-
-	\item Unbalanced usage of resources \\
-	\bx{Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. }For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
-
-	\bx{Application container overcomes this defects by combining complementary containers into a VM.} The size of container reflects the requirement of the application. By using appropriate placement algorithm, the balanced usage of resources is achievable.
-
-	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) \\
-	\bx{Heavy overhead of  hypervisors and redundant OSs running in the PM causes huge resource wastage.} Traditional VM provides a complete independent environment for deploying software which includes its own OS and libraries. However, as most applications only require a general OS such as Windows or Linux, multiple duplicate OSs running in the system is a waste of resource.
-
-	\bx{Application container overcomes this defects by running on top of a VM.}
-\end{itemize}
-
-
-
-
-\bx{In summary, container-based cloud data center has the potential to improve further improve the energy efficiency than VM-based cloud.}  However, the placement decision of containers and VMs are quite different.
-Most of the current research focus on VM-based cloud while their approaches cannot be directly used on container-based cloud. Next section discusses the detailed literature review on three placement decision scenarios in container-based and VM-based cloud.
-% \tran{Next section will introduce the major strategy that is used to reduce the energy consumption in cloud data centers.}
-
 
 
 
@@ -406,16 +413,12 @@ Most of the current research focus on VM-based cloud while their approaches cann
 
 % In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
 
-\section{Related Work}
-\label{related_work}
-In this section, we summarize the related works in the terms of three resource management processes: initial placement of application, periodic consolidation and dynamic consolidation, corresponding to our proposed objectives. In each sub section, we analyze the container-based and VM-based approaches, discuss their models and methodologies. 
 
-\subsection{initial placement of application}
-initial placement of application is one of the major process in resource management as discussed in Section \ref{scenarios}. 
-The task of initial placement of application for cloud provider is to deploy a number of VMs or containers to a minimum number of empty physical machines (PMs), because energy consumption is proportional to the PM number.
 
-This section first discusses container-based approaches including modeling and methodology. The modeling includes power model and wastage model. Then, we will discuss and reason their disadvantages in design. In order to remedy their problems, we will review a number of VM-based placement including traditional bin packing and more advanced approaches.
-% Furthermore, in our first objective (Section \ref{sec:obj1}), we intend to propose a bilevel optimization to solve the problem. So far there is no research consider the placement problem as a bilevel optimization problem. Therefore, we will review a number of VM-based placement to learn from their models and problem solving approaches. 
+\subsection{Initial placement of application}
+\label{sec:initial}
+
+This section first discusses server consolidation strategies on container-based virtualization and VM-based virtualization.
 
 % since there are only few research study the  container-based placement and none of them considers it as a bilevel optimization problem, specifically, each level of optimization problem is a bin packing problem.  
 
@@ -425,19 +428,77 @@ This section first discusses container-based approaches including modeling and m
 
 \subsubsection{Container-based initial placement of application}
 \label{container-based-placement}
+This section will discuss existing approaches for Container-based initial placement. Then, we will describe a potentially way of modeling energy consumption in container-based virtualization: a bilevel model. Last, we will illustrate a number of algorithms to solve bilevel optimization problems. 
 
-This section will briefly discuss the models of container-based approaches. Furthermore, our focus is to discuss the design of separate concern of container placement and VM placement as well as the collaborative placement. 
 
-There are only few container-based research in the literature which mainly follow the VM-based modeling. Piraghaj et al \cite{Piraghaj:2016bw} and Mann \cite{Mann:2016hx} both consider a linear energy model which is widely adopted in the literature \cite{Xavier:2017jl}. They consider two resources: CPU and memory. In addition, the constraints are allocated resources cannot exceed the PMs' capacity. In terms of wastage model, so far, they did not use any measure on the residual resources. In contrast, in most VM-based approaches, wastage has been widely considered. It will be discussed in the next section.  
+\paragraph{Existing approaches}
+Only few container-based research in the literature which mainly follow the VM-based modeling. Piraghaj et al \cite{Piraghaj:2016bw} and Mann \cite{Mann:2016hx} both consider a linear energy model which is widely adopted in the literature \cite{Xavier:2017jl}. They consider two resources: CPU and memory. In addition, the constraints are allocated resources cannot exceed the PMs' capacity. In terms of wastage model, so far, they did not use any measure on the residual resources. In contrast, in most VM-based approaches, wastage has been widely considered. It will be discussed in the next section.  
 
 The design of three-tier structure: container-VM-PM raises a placement concern, optimize each tier separately and collaboratively.
 Piraghaj et al \cite{Piraghaj:2016bw} consider it separately. Their placement strategy replies on fast and simple heuristic: in each tier of placement, they apply First Fit algorithm. While their main contribution is not the placement strategy but an architecture for container-based resource management. In this architecture, it allows the cloud providers to customize the size or type of VM when allocating applications instead of traditional fixed size VM. They determine the size of VM by two steps, in a pre-execution phase, they perform clustering technique on historical workload data from Google Cluster Data. In this way, they assert that the applications with similar workload pattern can be categorized into the same group. In the execution phase, when a number of deployment requests of container arrives, if there are enough available resources in the existing VMs, they perform First Fit on containers. If new VMs need to be initiated, they first determines the size of VMs by designed policies. Then, the containers are allocated to certain size of VMs. 
 
-Mann's research \cite{Mann:2016hx} is the earliest study which realizes this two level of placement are interact with each other, therefore, they must be considered collaboratively. Different from Piraghaj's assumption, they consider the container is based on an existing IaaS where fixed types of VM are provided. Therefore, the problem becomes three folds: 1. VM size selection for containers, 2. Place containers, 3. VM placement, and they should be considered together. However, another concern is ``why not placement as many containers as possible in a single VM which minimizes the overhead of hypervisor''. The paper gives an answer of ``Too big VMs limit the consolidation possibilities''.  In order to prove their interaction, they apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. They discover that the final energy consumption varies with the selection algorithms. They claim that the performance is better when VM selection has more knowledge of the PMs' capacity. However, their study only focuses on the partial placement with fixed VM placement algorithm. The answer of ``How these two level of placement interact ?'' is still undiscovered.
+Mann's research \cite{Mann:2016hx} is the earliest study which realizes this two level of placement are interact with each other, therefore, they must be considered collaboratively. Different from Piraghaj's assumption, they consider the container is based on an existing IaaS where fixed types of VM are provided. Therefore, the problem becomes three folds: 
+\begin{enumerate}
 
-There are mainly three reasons for us to propose a distinct approach from Piraghaj \cite{Piraghaj:2016bw} to solve the container-based placement problem. First, their proposed architecture assumes arbitrary size of VM can be created when requests arrive. While our assumption is that the container-based architecture is based on traditional IaaS, where fix-size VMs provide the fundamental resources. Second, from the perspective of energy efficiency, the allocation of container and VM interact with each other. That is, the minimum number of VMs does not necessary lead to the minimum number of PMs, because the type of VMs also affect the results. Therefore, their approach cannot guarantee the energy consumption is near optimal. This inspires us to simultaneously allocate containers and VMs. Third, both approaches did not consider the OS requirement of containers or applications. We argue that this is another critical reason for deploying containers into different VMs besides the ``limit the consolidation possibilities'' argument states by Mann \cite{Mann:2016hx}.
+	\item VM size selection for containers, 
+	\item Place containers, 
+	\item VM placement, 
+\end{enumerate}
+They should be considered together. However, another concern is ``why not placement as many containers as possible in a single VM which minimizes the overhead of hypervisor''. The paper gives an answer of ``Too big VMs limit the consolidation possibilities''.  In order to prove their interaction, they apply a fixed VM placement algorithm and considering a series of VM selection algorithms such as simple selection \cite{Ganesan:2012eb},  Multiple selection, Maxsize, Consolidation-friendly. They discover that the final energy consumption varies with the selection algorithms. They claim that the performance is better when VM selection has more knowledge of the PMs' capacity. However, their study only focuses on the partial placement with fixed VM placement algorithm. The answer of ``How these two level of placement interact ?'' is still undiscovered.
 
-In order to solve the two-level of optimization problem, we believe one of the promising way is to model the problem as a bilevel optimization \cite{Colson:2007bu} as described in detailed in Section \ref{bilevel}. Bilevel optimization naturally models the interaction so that this problem can be tackled by an optimization algorithm. The main challenge is that Bilevel optimization is a strongly NP-hard problem \cite{Sinha:2013tn}, therefore, traditional approaches such as Branch-and-bound \cite{Bard:1982gs} can only be applied in very small problems, or convert the problem into a single-level optimization problem. Evolutionary algorithms, on the other hand, becoming popular approaches in this field \cite{Wang:2005fa, Sinha:2013tn}. 
+Three reasons for us to propose a distinct approach from Piraghaj \cite{Piraghaj:2016bw} to solve the container-based placement problem. First, their proposed architecture assumes arbitrary size of VM can be created when requests arrive. While our assumption is that the container-based architecture is based on traditional IaaS, where fix-size VMs provide the fundamental resources. Second, from the perspective of energy efficiency, the allocation of container and VM interact with each other. That is, the minimum number of VMs does not necessary lead to the minimum number of PMs, because the type of VMs also affect the results. Therefore, their approach cannot guarantee the energy consumption is near optimal. This inspires us to simultaneously allocate containers and VMs. Third, both approaches did not consider the OS requirement of containers or applications. We argue that this is another critical reason for deploying containers into different VMs besides the ``limit the consolidation possibilities'' argument states by Mann \cite{Mann:2016hx}.
+
+In order to solve the problem, we believe one of the promising way is to model the problem as a bilevel optimization \cite{Colson:2007bu} as described in detailed in Section \ref{bilevel}. Bilevel optimization naturally models the interaction so that this problem can be tackled by an optimization algorithm. The main challenge is that Bilevel optimization is a strongly NP-hard problem \cite{Sinha:2013tn}, therefore, traditional approaches such as Branch-and-bound \cite{Bard:1982gsa} can only be applied in very small problems, or convert the problem into a single-level optimization problem. Evolutionary algorithms, on the other hand, becoming popular approaches in this field \cite{Wang:2005fa, Sinha:2013tn}. 
+
+
+
+\paragraph{Energy model in Container-based cloud: Bilevel model}
+\label{bilevel}
+
+\bx{The joint allocation of container and VM can be modeled as a bilevel optimization.}
+A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one problem is embedded within another.
+ % The outer optimization is referred to as the \emph{upper-level} problem, while the inner optimization is referred to as the \emph{lower-level} problem. 
+The general formulation of a bilevel optimization problem can be defined as: 
+
+\begin{subequations}
+\label{eq:bilevel}
+	\begin{align}
+	min_{x \in X, y} 	\quad F(x, y) \\
+	s.t 			\quad G(x, y) \leq 0, \\
+	min_y			\quad f(x, y) \\
+	s.t 			\quad g(x, y)
+	\end{align}
+\end{subequations}
+
+The lower-level problem is the function $f(x, y)$, where the decision variable is $y \in \mathbb{R}^{n_2}$. The upper-level problem is the function $F{x, y}$ where the decision variable is $x \in \mathbb{R}^{n_1}$.
+The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
+
+Bilevel optimization problem has a hierarchical structure which may introduce difficulties such as non-convexity and disconnectedness even for simple cases such as bilevel linear programming problems is strongly NP-hard \cite{Sinha:2013tn}. 
+
+In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995hu}, management: network facility location \cite{Sun:2008gq},  and engineering related: optimal design \cite{KirjnerNeto:1998ef}. 
+
+
+
+
+\paragraph{Existing approaches for Bilevel optimization}
+
+A number of studies have been conducted on bilevel optimization \cite{Colson:2007bu,Dempe:2006jc}. Approximation algorithms such as Karush-kuhn-Tucker approach \cite{Bianco:2009ej, Herskovits:2000be}, branch-and-bound \cite{Bard:1982gsa} are often applied to solve the problem. Most of these approaches are not applicable when the problem size increases.
+% Heuristics such as Evolutionary methods have been applied for solving bilevel optimization problem with higher level of complexity \cite{Yin:2000bt,Wang:2008kb}. 
+
+Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:2011dw} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
+
+Oduguwa and Roy \cite{Oduguwa:2002kr} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
+
+Wang et al \cite{Wang:2005fa} proposed an evolutionary algorithm based approach with a constraint handling technique.  Their approach is able to handle non-differentiability at the upper level objective function, but not in constraints and lower  level objective function.
+Later on, Wang proposed an improved version \cite{Wang:2011di} that shows better performance than the previous version.
+
+Particle Swarm Optimization \cite{Li:2006br} was also used in solving bilevel problems.
+A recent work is from Sinha et al \cite{Sinha:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005fa} and WLD \cite{Wang:2011di}. The results show BLEAQ is much faster than previous approaches.
+One major drawback of evolutionary algorithms is its high computation cost which limits the problem size from growing bigger.
+
+In conclusion, as the complexity of the problem, practical problems with bilevel nature are often simplified into a single-level optimization problem which can achieve a satisfactory level instead of optimal. Classic algorithms often fail because of the nature of bilevel problem such as non-linearity, discreteness, no-differentiability, non-convexity etc. EC algorithms have been successfully applied on bilevel problems.
+
+
 
 % Without this constraint, all containers can be simply allocated to homogeneous VMs which can be solved by traditional VM-based approaches.
 
@@ -445,7 +506,7 @@ In order to solve the two-level of optimization problem, we believe one of the p
 
 \subsubsection{VM-based initial placement of application}
 \label{initial_placement}
-This section first reviews a number of traditional approaches for the VM placement problem. Their drawbacks will be presented. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resources, power model, wastage model, objective, and algorithm.
+This section first describes a commonly used energy model for VM-based virtualization. Then, we review a number of traditional approaches for VM-based initial placement . We mainly study the following five aspects: resources, power model, wastage model, objective, and algorithm.
 
 \begin{table}[]
 \centering
@@ -466,9 +527,21 @@ Xiong and Xu \cite{Xiong:2014jq}               & CPU,RAM,Bandwidth,Disk      & P
 \end{table}
 
 
+\paragraph{Energy model in VM-based cloud: Vector Bin Packing Model}
+\label{sec:vector_bin_packing}
+\bx{Server consolidation is typically modeled as a Vector bin packing problem which is a variant of standard bin packing problem (see Figure \ref{fig:bin_packing_problem}).} Vector bin packing is also referred as multi-capacity \cite{Leinberger:1999fs} or multi-dimensional bin packing problem \cite{Xiong:2014jq}. Vector bin packing is particularly suitable for modeling resource allocation problems where there is a set of bins with known capacities and a set of items with known demands \cite{Panigrahy:2011wk}. The optimization objective is to minimize the number of bins.
+
+A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, I^2, \dots, I^n$ where each item has $d$ dimension of resources represented in real or discrete number $I^i \in R^d$. A valid solution is packing $I$ into bins $B^1, B^2, \dots, B^k$. For each bin $j$ and each dimension $i$, the sum of resources can not exceed the capacity of bin. The goal of Vector Bin Packing problem is to find a valid solution with minimum number of bins. Notice that, the items assigned to bins do not consider the positions in the bins, that is, there is no geometric interpretation of the items or bins \cite{Johnson:2016wp}.  Vector bin packing reduces to the classic \emph{bin-packing} problem when $d$ = 1. Vector bin packing is an NP-hard problem in strong sense, as it is a generalized bin packing problem.
+
+
+
+
+
+
 % As previous Section \ref{vector_bin_packing} mentioned , VM placement problem is often modeled as vector bin packing problem because they are very structurally similar. 
 
-Most of the works model VM placement problem as variants of bin packing problem and propose extensions of greedy-based heuristics such as First Fit Decreasing (FFD) \cite{Wood:2009fn}, Best Fit, Best Fit Decreasing \cite{Beloglazov:2010dt} etc. However, as VM placement is an NP-hard problem, greedy-based approaches can not guaranteed to generate near optimal solutions. Mishra and Sahoo's paper \cite{Mishra:2011bz} further analyzes and discusses the drawbacks of these approaches. They found that, instead of standard bin packing, only vector bin packing is suitable for modeling resource allocation (see Section \ref{vector_bin_packing}). Another drawback of traditional bin packing heuristic is that they do not consider the balance among resources which is a critical issue for vector bin packing problem. Their main contribution is that they list five principles for a good design of objective function, specially, the core idea is to capture the balance among resources.
+\paragraph{Existing Approaches}
+Most of the works model VM placement problem as variants of bin packing problem and propose extensions of greedy-based heuristics such as First Fit Decreasing (FFD) \cite{Wood:2009fn}, Best Fit, Best Fit Decreasing \cite{Beloglazov:2010dt} etc. However, as VM placement is an NP-hard problem, greedy-based approaches can not guaranteed to generate near optimal solutions. Mishra and Sahoo's paper \cite{Mishra:2011bz} further analyzes and discusses the drawbacks of these approaches. They found that, instead of standard bin packing, only vector bin packing is suitable for modeling resource allocation (see Section \ref{sec:vector_bin_packing}). Another drawback of traditional bin packing heuristic is that they do not consider the balance among resources which is a critical issue for vector bin packing problem. Their main contribution is that they list five principles for a good design of objective function, specially, the core idea is to capture the balance among resources.
 
 Based on this insight, Gao et al \cite{Gao:2013gg} and Ferdaus et al \cite{Ferdaus:2014ep} both propose an Ant Colony Optimization based metaheuristic using a vector algebra complementary resource utilization model proposed by Mishra \cite{Mishra:2011bz}. They considered three resources CPU, memory, and network I/O with two objectives: minimizing power consumption and resource wastage. They apply the \emph{Resource Imbalance Vector} to capture the imbalance among three resources. Meanwhile, they use a linear energy consumption function to capture the relationship between CPU utilization and energy \cite{Fan:2007jr}. Their solution was compared with four algorithms: Max-Min Ant System, a greedy-based approach, and two First Fit Decreasing-based methods. The results show that their proposed algorithm has much less wastage than other algorithms.
 
@@ -500,66 +573,31 @@ In summary, most of VM-based placement approaches consider two or three resource
 % As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
 % \subsubsection{Affinity-aware VM Placement}
 
-
-\subsubsection{Bilevel Optimization}
-\label{bilevel}
-
-\bx{The joint allocation of container and VM can be modeled as a bilevel optimization.}
-A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one problem is embedded within another.
- % The outer optimization is referred to as the \emph{upper-level} problem, while the inner optimization is referred to as the \emph{lower-level} problem. 
-The general formulation of a bilevel optimization problem can be defined as: 
-
-\begin{subequations}
-\label{eq:bilevel}
-	\begin{align}
-	min_{x \in X, y} 	\quad F(x, y) \\
-	s.t 			\quad G(x, y) \leq 0, \\
-	min_y			\quad f(x, y) \\
-	s.t 			\quad g(x, y)
-	\end{align}
-\end{subequations}
-
-The lower-level problem is the function $f(x, y)$, where the decision variable is $y \in \mathbb{R}^{n_2}$. The upper-level problem is the function $F{x, y}$ where the decision variable is $x \in \mathbb{R}^{n_1}$.
-The function $F : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ and $f : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}$ are the \emph{upper-level} and \emph{lower-level objective functions} respectively. The function $G : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_1}$ and $g : \mathbb{R}^{n_1} \times  \mathbb{R}^{n_2} \to \mathbb{R}^{m_2}$ are called the \emph{upper-level} and \emph{lower-level constraints} respectively. 
-
-Bilevel optimization problem has a hierarchical structure which may introduce difficulties such as non-convexity and disconnectedness even for simple cases such as bilevel linear programming problems is strongly NP-hard \cite{Sinha:2013tn}. 
-
-In practice, there are a number of problems that are bilevel in nature. For example, transportation related: work design, optimal pricing \cite{Brotcorne:2001je, Constantin:1995hu}, management: network facility location \cite{Sun:2008gq},  and engineering related: optimal design \cite{KirjnerNeto:1998ef}. 
+\subsection{Periodic placement}
+Periodic placement (see Section \ref{sec:scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud data center is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with initial placement of application (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic placement needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
 
 
-\subsubsection{Techniques for Bilevel optimization}
+This section first discusses VM-based approaches including migration model and existing approaches. So far, no research has focused on container-based approaches, hence, we are motivated to fill the research gap.
 
-A number of studies have been conducted on bilevel optimization \cite{Colson:2007bu,Dempe:2006jc}. Approximation algorithms such as Karush-kuhn-Tucker approach \cite{Bianco:2009ej, Herskovits:2000be}, branch-and-bound \cite{Bard:1982gs} are often applied to solve the problem. Most of these approaches are not applicable when the problem size increases.
+
+\subsubsection{VM-based periodic placement}
+Therefore, this section will first discuss VM-based models, especially the migration models. Secondly, we will discuss the approaches in periodic placement in the VM-context, specifically, in terms of the prediction of workload, these gaps existed in both VM and container context. 
+
+\paragraph{Migration Model}
+Murtazaev and Oh \cite{Murtazaev:2014eo}, Beloglazov et al \cite{Beloglazov:2012ji} and Ferreto et al \cite{Ferreto:2011iia} realize that the migration process generates a large overhead so that it should be used as few as possible. In their migration model, they use the number of migration as the optimization objective. Murtazaev's approach minimize this number by developing an algorithm which always chooses a VM in the least loaded PM and attempts to allocate them on the most loaded PMs. 
+
+\paragraph{Existing approaches}
 
 
 
-% Heuristics such as Evolutionary methods have been applied for solving bilevel optimization problem with higher level of complexity \cite{Yin:2000bt,Wang:2008kb}. 
-
-Evolutionary methods have been applied to bilevel optimization problem since 90s. Mathieu et al \cite{Mathieu:1994uh} proposed an genetic algorithm (GA) based approach. It uses a nested strategy - the lower level is optimized with a linear programming method and the upper level apply a GA.
-
-Oduguwa and Roy \cite{Oduguwa:2002kr} proposed a co-evolutionary approach for bilevel problems. Two population are co-operated to find the optimal solution, where each population handles a sub-problem. 
-
-Wang et al \cite{Wang:2005fa} proposed an evolutionary algorithm based approach with a constraint handling technique.  Their approach is able to handle non-differentiability at the upper level objective function, but not in constraints and lower  level objective function.
-Later on, Wang proposed an improved version \cite{Wang:2011di} that shows better performance than the previous version.
-
-Particle Swarm Optimization \cite{Li:2006br} was also used in solving bilevel problems.
-A recent work is from Sinha et al \cite{Sinha:2013tn}, they propose a bilevel evolutionary algorithm (BLEAQ) works by approximating the optimal solution mapping between the lower level optimal solutions and the upper level variables.  BLEAQ was tested on two sets of test problems and the results were compared with WJL \cite{Wang:2005fa} and WLD \cite{Wang:2011di}. The results show BLEAQ is much faster than previous approaches.
-One major drawback of evolutionary algorithms is its high computation cost which limits the problem size from growing bigger.
-
-In conclusion, as the complexity of the problem, practical problems with bilevel nature are often simplified into a single-level optimization problem which can achieve a satisfactory level instead of optimal. Classic algorithms often fail because of the nature of bilevel problem such as non-linearity, discreteness, no-differentiability, non-convexity etc. EC algorithms have been successfully applied on bilevel problems.
-
-\subsection{Periodic consolidation}
-Periodic consolidation (see Section \ref{scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud data center is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with initial placement of application (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic consolidation needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
-
-Although periodic consolidation has been applied in VM-based Cloud for years \cite{Murtazaev:2014eo,Ferreto:2011ii}, it has not been studied in the new context of container-based Cloud. Therefore, this section will first discuss VM-based models, especially the migration models. Secondly, we will discuss the approaches in periodic consolidation in the VM-context, specifically, in terms of the prediction of workload, these gaps existed in both VM and container context. 
 
 % Similar to previous section, we will focus on the following aspects: resource, migration model, workload model, algorithm and objectives.
 
-Murtazaev and Oh \cite{Murtazaev:2014eo}, Beloglazov et al \cite{Beloglazov:2012ji} and Ferreto et al \cite{Ferreto:2011ii} realize that the migration process generates a large overhead so that it should be used as few as possible. In their migration model, they use the number of migration as the optimization objective. Murtazaev's approach minimize this number by developing an algorithm which always chooses a VM in the least loaded PM and attempts to allocate them on the most loaded PMs. Based on this idea, they develop a heuristic based on First and Best Fit. They select a candidate VM based on a surrogate weight of the resources it used.
+
+Based on this idea, Murtazaev develops a heuristic based on First and Best Fit. They select a candidate VM based on a surrogate weight of the resources it used.
 Beloglazov, on the other hand, considers different criteria for selecting candidate VMs. They not only considers the utilization of VMs but also the utilization of the original PM and target PMs. They also propose a simple heuristic: a modified Best Fit Decreasing to solve the problem. However, these two approaches develop their selection criteria in a greedy fashion which may lead to a local optimal. 
 Ferreto proposes a preprocessing step before the placement algorithm. It first orders the VMs according to their workload variation. Then, it only performs placement on those VMs with  the highest variability. These three papers provide some insight that a good placement algorithm should consider more than the utilization of host and target PMs, but also the variation of workload. 
-
-Most previous consolidation approaches \cite{Viswanathan:2012ej, Chen:2011fl,Feller:2011vs} only consider static workload. That is, they use a peak or average workload as a represented value as the consolidation input. In most of cases, this will lead to either low utilization: peak time only account for small proportion of the total time, or more migrations: extra migration are performed on workload changes. 
+Most previous consolidation approaches \cite{Viswanathan:2012ej, Feller:2011vs} only consider static workload. That is, they use a peak or average workload as a represented value as the consolidation input. In most of cases, this will lead to either low utilization: peak time only account for small proportion of the total time, or more migrations: extra migration are performed on workload changes. 
 Therefore, the consolidation is more than aggressively concentrate workload on as few PM as possible, but also considers the robustness. The robustness is referred to the capability of enduring the variation of workload without make too many changes.
 
 In order to achieve robustness, the workload variation must be taken into account. Bobroff \cite{Bobroff:2007ec} analyzed a large number of traces from real world data center. They categorize workloads into three main groups: 
@@ -573,20 +611,30 @@ Workload with weak variability can be directly packed. The only problem is that 
 For the second type of workload, it is hard or even impossible to predict its behavior. The third type of workload can be predicted. However, it is hard to find the applications with compensated workload patterns. 
 
 Meng et al \cite{Meng:2010gh} proposed a standard time series technique to extract the deterministic patterns (e.g trends, cycles and seasonality) and irregular fluctuating patterns from workloads' CPU utilization; they assume the periodic behavior of workload will preserve in the future and predict the irregular parts with two approaches: with and without explicit forecast error models. Then, applications are paired according to their negative correlation. They evaluate the workload prediction and application selection with a server consolidation task. They use First Fit to allocate paired applications. During the consolidation, The consolidation results show that they use 45\% less PMs for hosting the same number of VMs. Furthermore, their approach is more robust since the variation of workload is considered. However, they only consider two complementary applications at a time. 
-% For the long-term workload pattern, Farahnakian et al propose two CPU utilization prediction algorithms: a linear regression approach \cite{Farahnakian:2013gg} and a K-Nearest Neighbor Regression approach \cite{Farahnakian:2015vj}. Based on the prediction, they further propose a utilization prediction-aware Best Fit Decreasing (BFD) algorithm that not only consider current but the future utilization of resources. In comparison with consolidation approaches that do not consider future workload, their approach substantially reduce the number of VM migrations. 
 
-% Hieu el al \cite{Hieu:2015ub} also propose a consolidation process with the consideration of short-term future CPU utilization based on the local history of the considered servers. They propose a multi-linear regression to predict the short-term future workload. Instead of developing a uniform consolidation algorithm that can be applied on all PMs, they separate the overloaded and underloaded PMs with predefined thresholds, and develop two heuristics to these scenarios. They conduct experiments on real world datasets: PlanetLab and the Google Cluster Dataset which show their approach effectively reduce the number of migrations and the number of power state changes of the servers.
+% \subsubsection{Container-based periodic placement}
+% Based on our knowledge, periodic placement has not been studied in the new context of container-based Cloud. 
+% Therefore, we are motivated to explore the migration models and algorithms.
 
-\subsection{VM-based Dynamic Consolidation Techniques}
+% \paragraph{Migration Model}
+% No study has proposed a migration model for container-based periodic placement.
+
+% \paragraph{Existing approaches}
+% No study has proposed an algorithm for container-based periodic placement.
+
+
+\subsection{Dynamic placement}
+This section first discusses server consolidation strategies on VM-based virtualization and container-based virtualization.
+
+
+\subsubsection{VM-based dynamic placement}
 \label{sec:dynamic}
 
 Forsman et al \cite{Forsman:2015ca} propose two distributed migration strategies to balance the load in a system. \emph{The push} strategy is applied on overloaded PM; it attempts to migrate \emph{One} VM at a time to less loaded PMs. \emph{The pull} strategy is applied on underutilized PMs request workload from heavier loaded PMs. Each of the strategy is executed on each PM as an intelligent agent. They share their status with each other through a communication protocol. There are several interesting features of their approach. First, they apply an adaptive high-load threshold (e.g 0.7 of overall CPU utilization) so that it considers the environment changes. Second, they use an EWMA algorithm to reduce the unnecessary migration because EWMA \cite{Holt:2004fs} is useful in smoothing out variations in the average load. Third, they applied an entropy to model the load distribution which is also applied in some previous approaches \cite{Qin:2012wu,Kunkle:2008bz}. Their system is agent-based which means large amount of communication may occur between nodes, this would certainly cost extra network resources which are not discussed. Therefore, we expect to design a centralized system, where all nodes are controlled by a controller. 
 
 Xiao et al \cite{Xiao:2015ik} make two contributions, first, they build a quadratic energy model for the energy consumption of PM and a linear model for the energy consumption of migration \cite{Liu:2013kl}. Second, they propose an algorithm based on Multiplayer random evolutionary game theory to solve the problem. In their approach, VMs are mapped into players that take part in the evolutionary game. In each iteration, all the players choose their best feasible action, i.e, Migrate to a PM which can minimize the energy consumption. Some players will randomly choose PM to avoid being stuck at a local optimal. Their approach is compared with First Fit, Best Fit Increasing, Best Fit Decreasing, Greedy and Load Balance rule. The solutions show their approach can improve energy consumption greatly, especially in the scenario that the distributions of VMs are very centralized.
 
-
-
-\subsubsection{Genetic Programming}
+\paragraph{Genetic Programming-based Hyper-heuristic (GP-HH) for Bin packing}
 
 Genetic programming \cite{1992gppc.book.....K} is an evolutionary computation technique, inspired by biological evolution, to automatically find 
 computer programs for solving a specific task. In a GP population, each individual represents a computer program. In each generation, these programs are evaluated by a predefined fitness function, which accesses the performance of each program. Then, individuals will go through several genetic operators such as selection, crossover, and mutation. A number of top individuals will survive to the next generation while others will be discarded. The major difference between GA and GP is that, each GP individual is represented as a tree with variant depth instead of a string. This representation is particular suitable for a program. For example,  a GP individual is showed in Figure \ref{fig:gp_program} which is a program x + max(y $\times$ 2, -2). The variables \{x, y\} and constraint \{-2, 2\} are called terminal of the program. The arithmetic operations \{+, $\times$, max \} are called functions in GP. A GP individual is a specific combination of elements in terminal set and functional set. In order to observe the relationship between a function and its subtrees, the GP programs are usually presented to human users by using the $prefix$ notation similar to a Lisp expression, for example, x + max(y $\times$ 2, -2) can be expressed as (+ (x (min ($\times$ y 2) -2 ))).
@@ -599,21 +647,26 @@ computer programs for solving a specific task. In a GP population, each individu
 \end{figure}
 
 
-GP approach based hyper-heuristics (GP-HH)  has been applied in many applications such as Job shop scheduling to evolve dispatching rules \cite{Nguyen:2014eu}. The term hyper-heuristics \cite{Cowling:2000ek} means ``heuristics to choose heuristics''.
+GP-based hyper-heuristics (GP-HH)  has been applied in many applications such as Job shop scheduling to evolve dispatching rules \cite{Nguyen:2014eu}. The term hyper-heuristics \cite{Cowling:2000ek} means ``heuristics to choose heuristics''.
 \emph{Dispatching rule} is essentially a heuristics \cite{Panwalkar:1977fw} used in a scheduling context. 
 Resource allocation problems are also in the scheduling category and they are often modeled as bin packing problems. 
 GP-HH has been applied in generating heuristics for bin-packing problems \cite{Poli:2007kt,Sim:2013fe,Burke:2012gs}. These research have shown that GP-HH can generate excellent heuristics which have equal or better performance than human designed heuristics.
 
 In the Cloud computing context,  Cloud resource allocation usually has extra constraints such as multi-dimensional resources, migration costs, heterogeneous PMs etc. These constraints make the Cloud resource allocation problem much harder than original bin packing \cite{Mann:2015ua}. Therefore, traditional bin packing approaches such as First Fit Decreasing, Best Fit etc cannot perform well in this context.  GP-HH, therefore, is a promising technique can be used to automatically generate heuristics under multiple constraints.
 
+\subsubsection{Container-based Cloud}
+\paragraph{Existing approaches}
+Piraghaj et al \cite{Piraghaj:2015dv} propose a framework for container-based resource management including three steps, analyzing resources to trigger migration, deciding which containers to migrate, and placing the container to a VM. In the third step, Piraghaj applies three heuristics: First-Fit, Random, and Least Full. However, this work only reports that their approach can reduce the number of VMs but does not mention how to reduce the number of PMs by migrating VMs. Therefore, this work does not consider the interactions between two levels: VM and PM. 
 
+\paragraph{GP-HH approach for Bilevel optimization problem}
+So far, no study has focus on using GP-HH for bilevel optimization problem. 
 \section{Summary}
 
 \bx{This chapter reviewed the main concepts of cloud resource management and server consolidation.} The challenges of server consolidation in container-based cloud data center were discussed. This chapter also discussed the limitations of existing work on three placement decision scenarios in both container-based and VM-based data center. 
 
 \begin{itemize}
 	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based initial placement of application conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub models such as energy model, workload model, variables and constraints need to be further investigated.
-	\item periodic placement of application has not been studied in the container context. A bilevel multi-objective energy model needs to be proposed which considers minimizing migration cost as well as minimizing energy consumption. 
+	\item Periodic placement of application has not been studied in the container context. A bilevel multi-objective energy model needs to be proposed which considers minimizing migration cost as well as minimizing energy consumption. 
 	\item Traditional periodic placement of application mostly consider static workload. Thus, it is very likely lead to large number of adjustment of applications' placement in the future because the fluctuation of workloads. These adjustment will increase the cost for Cloud providers. In order to provide a robust placement of application, various predictable workload patterns such as linear continuously changing can be considered. It needs more investigation on how to represent various workloads and how to combine them in a compact structure.
 	\item Current dynamic placement of application approaches are based on simple bin-packing algorithms and manually designed heuristics. These heuristics are either perform poorly or cannot be applied with specific constraints. A hyper-heuristic approach can learn from previous good placement patterns and automatically generate heuristics. In order to design a hyper-heuristic, features of various workload need to be investigated. 
 \end{itemize}
