@@ -1,17 +1,17 @@
 \chapter{Proposed Contributions and Project Plan}\label{C:con}
 
-This thesis will contribute to the field of Cloud Computing by proposing novel solutions for bilevel optimization of the joint allocation of container and VM, and to the field of Evolutionary Computation by proposing new representations and genetic operators in evolutionary algorithms. The proposed contributions of this project are listed below:
+This thesis will contribute to the field of Cloud Computing by proposing novel solutions for bilevel optimization of the joint allocation of container and VM. It will also contribute to the field of Evolutionary Computation by proposing new representations and genetic operators in evolutionary algorithms. The proposed contributions of this project are listed below:
  
 \begin{enumerate}
-	\item Two bilevel models for two placement problems: \textbf{first}, a new bilevel energy model for initial placement of application; \textbf{second}, a new bilevel energy and migration model for periodic placement of application with the consideration of three types of workload. The above two models will address the relationship between five factors and energy consumption. The five factors involve locations of container, types of VM, locations of VM, overheads of VM, and the balance between memory and CPU. In addition, the energy and migration model addresses two more factors, migrations of VM and container, three types of workload. These two bilevel models can be used in optimizing energy consumption in initial placement and periodic placement problems.
+	\item Two bilevel models for two placement problems: \textbf{first}, a new bilevel energy model for initial placement of application; \textbf{second}, a new bilevel energy and migration model for periodic placement of application with the consideration of three types of workload. The above two models will address the relationship between five factors and energy consumption. The five factors involve locations of container, types of VM, locations of VM, overheads of VM, and the balance between memory and CPU. In addition, the energy and migration model addresses two more factors: migrations of VM and container and three types of workload. These two bilevel models can be used in optimizing energy consumption in initial placement and periodic placement problems.
 
 	% A new bilevel model for the joint placement of container and VM problem.  The bilevel model will address the relationship between containers, VMs, PMs, and energy consumption. The bilevel model can be used in optimizing the energy consumption in a container-based cloud data center.
-	\item An EC-based bilevel single-objective optimization algorithm for the initial placement of application based on previously proposed bilevel energy model. This algorithm combines clustering technique and heuristics to achieve the scalability of handling one thousand applications. This algorithm is expected to achieve a better energy efficiency than existing VM-based approaches.
+	\item An EC-based bilevel single-objective optimization algorithm for the initial placement of application based on a previously proposed bilevel energy model. This algorithm combines clustering technique and heuristics to achieve the scalability of handling one thousand applications. This algorithm is expected to achieve a better energy efficiency than existing VM-based approaches.
 
 	\item An EC-based bilevel multi-objective algorithm with Pareto front approach for the periodic placement of application with consideration of three types of workload. 
 	This work proposes specific representations and genetic operators for three types of workload. The algorithm is expected to achieve better energy efficiency and migration cost than VM-based approaches with the consideration of three types of workload. 
 
-	\item A new genetic programming hyper-heuristic (GP-HH) approach for single-objective dynamic placement of application with various types of workload in \textbf{VM-based cloud}. The proposed GP-HH solves the single-level of placement: VM to PM, therefore, the algorithm can be used in VM-based cloud. This work will also extract features from various workloads to construct a new primitive set for the GP-HH approach. The proposed GP-HH is expected to learn from good placement solutions and automatically generate dispatching rules for dynamic placement of VMs. These dispatching rules are expected to fast allocate VMs to PMs and achieve a near-optimal solution in energy consumption.
+	\item A new genetic programming hyper-heuristic (GP-HH) approach for single-objective dynamic placement of application with various types of workload in \textbf{VM-based cloud}. The proposed GP-HH solves the single-level of placement: VM to PM. Therefore, the algorithm can be used in VM-based cloud. This work will also extract features from various workloads to construct a new primitive set for the GP-HH approach. The proposed GP-HH is expected to learn from good placement solutions and automatically generate dispatching rules for dynamic placement of VMs. These dispatching rules are expected to fast allocate VMs to PMs and achieve a near-optimal solution in energy consumption.
 
 	\item A new cooperative GP-HH approach for single-objective dynamic placement of application with various types of workload in \textbf{container-based cloud}. This work is based on the previously proposed GP-HH approach. Two GP-HH approaches cooperate to generate dispatching rules for dynamic placement problem in container-based cloud.  The cooperative GP-HH can learn good placement patterns from good solutions and output dispatching rules. These dispatching rules can achieve fast allocation of containers and VMs as well as near optimal solutions in terms of energy consumption.
 \end{enumerate}
@@ -45,7 +45,7 @@ phases to also be carried out as planned.
 
 \section{Project Timeline}
 The phases included in the plan above are estimated to be completed following the timeline
-shown in Table \ref{table-timeline}, which will serve as a guide throughout this project. Note that part of the first phase has already been done, therefore the timeline only shows the estimated remaining time for its full completion.
+shown in Table \ref{table-timeline}. The timeline will serve as a guide throughout this project. Note that part of the first phase has already been done. Therefore the timeline only shows the estimated remaining time for full completion.
 
 
 \begin{table}
@@ -103,15 +103,15 @@ The completed thesis will be organized into the following chapters:
 	\item \textit{Chapter 1: Introduction} \\
 	This chapter will introduce the thesis, providing a problem statement and motivations, defining research goals and objectives, and outlining the structure of the final thesis.
 	\item \textit{Chapter 2: Literature Review} \\
-	The literature review will illustrate the fundamental background of Cloud computing, resource management, and server consolidation. It will examine the existing work on VM-based and container-based server consolidation, discuss concepts in this field in order to provide readers with the necessary background. Multiple sections will consider the issues such as initial placement of application, periodic placement, and dynamic placement of application. The focus of this review is on investigating server consolidation techniques.
+	The literature review will illustrate the fundamental background of Cloud computing, resource management, and server consolidation. It will examine the existing work on VM-based and container-based server consolidation and discuss concepts in this field in order to provide readers with the necessary background. Multiple sections will consider issues such as initial placement of application, periodic placement, and dynamic placement of application. The focus of this review is on investigating server consolidation techniques.
 	\item \textit{Chapter 3: Develop EC-based approaches for the single objective joint placement of containers and VMs for initial placement of application.} \\
-	This chapter will establish a new bilevel energy model for the joint placement of container and VM problem. Based on this model, this chapter will introduce a new EC-based bilevel algorithm combined with clustering technique and heuristics to solve the initial placement of application problem. 
-	\item \textit{Chapter 4: Develop EC-based approaches for the multi-objective joint allocation problem for periodic placement of application} \\
-	This chapter proposes a new bilevel energy and migration model based previously proposed energy model to adapt to multi-objective problem with three types of workload.  This chapter will also propose new EC-based approaches for the bilevel multi-objective periodic placement with considering three types of workload. It is then followed by algorithm performance evaluation that contains an experiment design, setting, results and analysis.
+	This chapter will establish a new bilevel energy model for the joint placement of container and VM. Based on this model, this chapter will introduce a new EC-based bilevel algorithm combined with clustering technique and heuristics to solve the initial placement of application. 
+	\item \textit{Chapter 4: Develop multi-objective EC-based approaches  for periodic placement of application} \\
+	This chapter proposes a new bilevel energy and migration model based on a previously proposed energy model with three types of workload.  This chapter will also propose new EC-based approaches for bilevel multi-objective periodic placement, considering three types of workload. It is then followed by algorithm performance evaluation that contains an experiment design, setting, results and analysis.
 	\item \textit{Chpater 5: Develop a  single-objective cooperative Genetic Programming hyper-heuristic (GP-HH) approach for automatically generating dispatching rules for dynamic placement of application} \\
-	This chapter focuses on providing a Genetic Programming-based hybrid heuristic approach to automatic generate dispatching rules to dynamic consolidation problem. This chapter will propose two algorithms. A GP-HH for single-level of placement: VM-PM and A cooperative GP-HH for bilevel placement: container-VM and VM-PM.
+	This chapter focuses on providing a Genetic Programming-based hybrid heuristic approach to automatically generate dispatching rules to a dynamic consolidation problem. This chapter will propose two algorithms -- a GP-HH for single-level of placement: VM-PM and a cooperative GP-HH for bilevel placement: container-VM and VM-PM.
 	\item \textit{Chapter 7: Conclusions and Future Work}
-	In this chapter, conclusions will be drawn from the analysis and experiments conducted in the different phases of this research, and the main findings for each one of them will be summarized. Additionally, future research directions will be discussed.
+	In this chapter, conclusions will be drawn from the analysis and experiments conducted in the different phases of this research, and the main findings for each phase of them will be summarized. Additionally, future research directions will be discussed.
 
 \end{itemize}
 
@@ -124,5 +124,4 @@ can be used to complete these experiments within reasonable time frames, thus me
 The majority of the material relevant to this research can be found on-line, using the university electronic resources. Other works may either be acquired at the university library, or
 by soliciting assistance from the Subject Librarian for the fields of engineering and computer science.
 \subsection{Conference Travel Grants}
-Publications to relevant venues in this field are expected throughout this project, therefore
-travel grants from the university are required for key conferences.
+Publications to relevant venues in this field are expected throughout this project. Therefore travel grants from the university are required for key conferences.

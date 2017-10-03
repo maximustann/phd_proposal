@@ -167,6 +167,11 @@
 \newblock {\em {\ldots} with Multivalued Mappings 55}, 5-6 (Oct. 2006),
   505--524.
 
+\bibitem{Deshpande:2012jf}
+{\sc Deshpande, U., Kulkarni, U., and Gopalan, K.}
+\newblock {Inter-rack live migration of multiple virtual machines.}
+\newblock {\em VTDC@HPDC\/} (2012), 19.
+
 \bibitem{Dosa:2013ie}
 {\sc D{\'o}sa, G., and Sgall, J.}
 \newblock {First Fit bin packing - A tight analysis.}
@@ -232,6 +237,12 @@
 \newblock {A multi-objective ant colony system algorithm for virtual machine
   placement in cloud computing.}
 \newblock {\em J. Comput. Syst. Sci. 79}, 8 (2013), 1230--1242.
+
+\bibitem{Gerofi:2013bd}
+{\sc Gerofi, B., Vass, Z., and Ishikawa, Y.}
+\newblock {Utilizing memory content similarity for improving the performance of
+  highly available virtual machines.}
+\newblock {\em Future Generation Comp. Syst. 29}, 4 (2013), 1085--1095.
 
 \bibitem{Hameed:2016cmb}
 {\sc Hameed, A., Khoshkbarforoushha, A., Ranjan, R., Jayaraman, P.~P.,
