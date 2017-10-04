@@ -5,64 +5,64 @@
 \contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single objective joint placement of containers and VMs for initial placement of application}{4}
 \contentsline {subsection}{\numberline {1.3.2}Objective Two: Develop an EC-based approach for the multi-objective periodic placement of application}{7}
 \contentsline {subsection}{\numberline {1.3.3}Objective Three: Develop a hyper-heuristic single-objective Cooperative Genetic Programming Hyper-heuristic (GP-HH) approach for automatically generating dispatching rules for dynamic placement of application.}{9}
-\contentsline {section}{\numberline {1.4}Published Papers}{10}
-\contentsline {section}{\numberline {1.5}Organisation of Proposal}{10}
-\contentsline {chapter}{\numberline {2}Background and related work}{11}
-\contentsline {section}{\numberline {2.1}Cloud Computing and Energy Efficiency Problem}{11}
-\contentsline {section}{\numberline {2.2}Cloud Resource Management}{13}
-\contentsline {subsection}{\numberline {2.2.1}Virtualization Technologies}{13}
-\contentsline {subsubsection}{VM-based Virtualization}{14}
-\contentsline {subsubsection}{Container-based Virtualization}{14}
-\contentsline {subsubsection}{Comparison between Container-based and VM-based virtualization}{14}
-\contentsline {subsection}{\numberline {2.2.2}Placement Decision Scenarios}{15}
-\contentsline {paragraph}{Initial placement of application}{15}
-\contentsline {paragraph}{Periodic placement of application}{17}
-\contentsline {paragraph}{Dynamic placement of application}{17}
-\contentsline {section}{\numberline {2.3}Related Work}{17}
-\contentsline {subsection}{\numberline {2.3.1}Server consolidation strategy}{17}
-\contentsline {subsubsection}{Types of Server consolidation}{18}
-\contentsline {subsection}{\numberline {2.3.2}Initial placement of application}{18}
-\contentsline {subsubsection}{Container-based initial placement of application}{18}
-\contentsline {paragraph}{Existing approaches}{18}
-\contentsline {paragraph}{Bilevel optimization}{19}
-\contentsline {paragraph}{Existing approaches for Bilevel optimization}{19}
-\contentsline {subsubsection}{VM-based initial placement of application}{20}
-\contentsline {paragraph}{Energy model in VM-based cloud: Vector Bin Packing Model}{20}
-\contentsline {paragraph}{Existing Approaches}{21}
-\contentsline {subsection}{\numberline {2.3.3}Periodic placement}{22}
-\contentsline {subsubsection}{VM-based periodic placement}{22}
-\contentsline {paragraph}{Migration Model}{22}
-\contentsline {paragraph}{Existing approaches}{23}
-\contentsline {subsection}{\numberline {2.3.4}Dynamic placement}{24}
-\contentsline {subsubsection}{VM-based dynamic placement}{24}
-\contentsline {paragraph}{Genetic Programming-based Hyper-heuristic (GP-HH) for Bin packing}{24}
-\contentsline {subsubsection}{Container-based Cloud}{25}
+\contentsline {section}{\numberline {1.4}Published Papers}{11}
+\contentsline {section}{\numberline {1.5}Organisation of Proposal}{11}
+\contentsline {chapter}{\numberline {2}Background and related work}{13}
+\contentsline {section}{\numberline {2.1}Cloud Computing and Energy Efficiency Problem}{13}
+\contentsline {section}{\numberline {2.2}Cloud Resource Management}{15}
+\contentsline {subsection}{\numberline {2.2.1}Virtualization Technologies}{15}
+\contentsline {subsubsection}{VM-based Virtualization}{16}
+\contentsline {subsubsection}{Container-based Virtualization}{16}
+\contentsline {subsubsection}{Comparison between Container-based and VM-based virtualization}{16}
+\contentsline {subsection}{\numberline {2.2.2}Placement Decision Scenarios}{17}
+\contentsline {paragraph}{Initial placement of application}{17}
+\contentsline {paragraph}{Periodic placement of application}{19}
+\contentsline {paragraph}{Dynamic placement of application}{19}
+\contentsline {section}{\numberline {2.3}Related Work}{19}
+\contentsline {subsection}{\numberline {2.3.1}Server consolidation strategy}{19}
+\contentsline {subsubsection}{Types of Server consolidation}{20}
+\contentsline {subsection}{\numberline {2.3.2}Initial placement of application}{20}
+\contentsline {subsubsection}{Container-based initial placement of application}{20}
+\contentsline {paragraph}{Existing approaches}{20}
+\contentsline {paragraph}{Bilevel optimization}{21}
+\contentsline {paragraph}{Existing approaches for Bilevel optimization}{21}
+\contentsline {subsubsection}{VM-based initial placement of application}{22}
+\contentsline {paragraph}{Energy model in VM-based cloud: Vector Bin Packing Model}{22}
+\contentsline {paragraph}{Existing Approaches}{23}
+\contentsline {subsection}{\numberline {2.3.3}Periodic placement}{24}
+\contentsline {subsubsection}{VM-based periodic placement}{24}
+\contentsline {paragraph}{Migration Model}{24}
 \contentsline {paragraph}{Existing approaches}{25}
-\contentsline {section}{\numberline {2.4}Summary}{25}
-\contentsline {chapter}{\numberline {3}Preliminary Work}{27}
-\contentsline {section}{\numberline {3.1}Related models}{27}
-\contentsline {subsection}{\numberline {3.1.1}Workload model}{27}
-\contentsline {subsection}{\numberline {3.1.2}Power Model}{27}
-\contentsline {section}{\numberline {3.2}Problem Description}{28}
-\contentsline {subsubsection}{Hard constraints}{29}
-\contentsline {subsubsection}{Soft constraint}{29}
-\contentsline {section}{\numberline {3.3}Methods}{29}
-\contentsline {subsection}{\numberline {3.3.1}Chromosome Representation}{30}
-\contentsline {subsection}{\numberline {3.3.2}Initialization}{31}
-\contentsline {subsection}{\numberline {3.3.3}Mutation}{31}
-\contentsline {subsection}{\numberline {3.3.4}Violation control method}{32}
-\contentsline {subsection}{\numberline {3.3.5}Selection}{33}
-\contentsline {subsection}{\numberline {3.3.6}Fitness Function}{33}
-\contentsline {subsection}{\numberline {3.3.7}Algorithm}{33}
-\contentsline {section}{\numberline {3.4}Experiment}{33}
-\contentsline {subsection}{\numberline {3.4.1}Dataset and Instance Design}{33}
-\contentsline {subsection}{\numberline {3.4.2}Results}{37}
-\contentsline {section}{\numberline {3.5}Findings and Future work}{38}
-\contentsline {chapter}{\numberline {4}Proposed Contributions and Project Plan}{39}
-\contentsline {section}{\numberline {4.1}Overview of Project Plan}{40}
-\contentsline {section}{\numberline {4.2}Project Timeline}{40}
-\contentsline {section}{\numberline {4.3}Thesis Outline}{40}
-\contentsline {section}{\numberline {4.4}Resources Required}{42}
-\contentsline {subsection}{\numberline {4.4.1}Computing Resources}{42}
-\contentsline {subsection}{\numberline {4.4.2}Library Resources}{42}
-\contentsline {subsection}{\numberline {4.4.3}Conference Travel Grants}{42}
+\contentsline {subsection}{\numberline {2.3.4}Dynamic placement}{26}
+\contentsline {subsubsection}{VM-based dynamic placement}{26}
+\contentsline {paragraph}{Genetic Programming-based Hyper-heuristic (GP-HH) for Bin packing}{26}
+\contentsline {subsubsection}{Container-based Cloud}{27}
+\contentsline {paragraph}{Existing approaches}{27}
+\contentsline {section}{\numberline {2.4}Summary}{27}
+\contentsline {chapter}{\numberline {3}Preliminary Work}{29}
+\contentsline {section}{\numberline {3.1}Related models}{29}
+\contentsline {subsection}{\numberline {3.1.1}Workload model}{29}
+\contentsline {subsection}{\numberline {3.1.2}Power Model}{29}
+\contentsline {section}{\numberline {3.2}Problem Description}{30}
+\contentsline {subsubsection}{Hard constraints}{31}
+\contentsline {subsubsection}{Soft constraint}{31}
+\contentsline {section}{\numberline {3.3}Methods}{31}
+\contentsline {subsection}{\numberline {3.3.1}Chromosome Representation}{32}
+\contentsline {subsection}{\numberline {3.3.2}Initialization}{33}
+\contentsline {subsection}{\numberline {3.3.3}Mutation}{33}
+\contentsline {subsection}{\numberline {3.3.4}Violation control method}{34}
+\contentsline {subsection}{\numberline {3.3.5}Selection}{35}
+\contentsline {subsection}{\numberline {3.3.6}Fitness Function}{35}
+\contentsline {subsection}{\numberline {3.3.7}Algorithm}{35}
+\contentsline {section}{\numberline {3.4}Experiment}{35}
+\contentsline {subsection}{\numberline {3.4.1}Dataset and Instance Design}{35}
+\contentsline {subsection}{\numberline {3.4.2}Results}{39}
+\contentsline {section}{\numberline {3.5}Findings and Future work}{40}
+\contentsline {chapter}{\numberline {4}Proposed Contributions and Project Plan}{41}
+\contentsline {section}{\numberline {4.1}Overview of Project Plan}{42}
+\contentsline {section}{\numberline {4.2}Project Timeline}{42}
+\contentsline {section}{\numberline {4.3}Thesis Outline}{42}
+\contentsline {section}{\numberline {4.4}Resources Required}{44}
+\contentsline {subsection}{\numberline {4.4.1}Computing Resources}{44}
+\contentsline {subsection}{\numberline {4.4.2}Library Resources}{44}
+\contentsline {subsection}{\numberline {4.4.3}Conference Travel Grants}{44}

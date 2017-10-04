@@ -96,6 +96,11 @@
   Transportation Network}.
 \newblock {\em Transportation Science 35}, 4 (Nov. 2001), 345--358.
 
+\bibitem{Burke:2006ei}
+{\sc Burke, E.~K., Hyde, M.~R., and Kendall, G.}
+\newblock {Evolving Bin Packing Heuristics with Genetic Programming.}
+\newblock {\em PPSN 4193}, Chapter 87 (2006), 860--869.
+
 \bibitem{Burke:2012gs}
 {\sc Burke, E.~K., Hyde, M.~R., Kendall, G., and Woodward, J.}
 \newblock {Automating the Packing Heuristic Design Process with Genetic
@@ -268,12 +273,6 @@
 \newblock {Author's retrospective on {\textquoteleft}Forecasting seasonals and
   trends by exponentially weighted moving averages{\textquoteright}}.
 \newblock {\em International journal of forecasting 20}, 1 (Jan. 2004), 11--13.
-
-\bibitem{Jat:2011us}
-{\sc Jat, S.~N., and Yang, S.}
-\newblock {A Guided Search Non-dominated Sorting Genetic Algorithm for the
-  Multi-Objective University Course Timetabling Problem.}
-\newblock {\em EvoCOP 6622}, 9 (2011), 1--13.
 
 \bibitem{Jennings:2015ht}
 {\sc Jennings, B., and Stadler, R.}

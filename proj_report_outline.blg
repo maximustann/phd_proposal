@@ -19,36 +19,36 @@ Warning--empty journal in Mann:2015ua
 Warning--empty journal in Sinha:2013tn
 You've used 120 entries,
             2253 wiz_defined-function locations,
-            1277 strings with 26734 characters,
-and the built_in function-call counts, 42042 in all, are:
-= -- 4125
-> -- 2185
+            1278 strings with 26705 characters,
+and the built_in function-call counts, 42100 in all, are:
+= -- 4130
+> -- 2190
 < -- 0
-+ -- 898
-- -- 778
-* -- 3534
-:= -- 6926
++ -- 900
+- -- 780
+* -- 3541
+:= -- 6935
 add.period$ -- 357
 call.type$ -- 120
-change.case$ -- 750
+change.case$ -- 751
 chr.to.int$ -- 0
 cite$ -- 125
 duplicate$ -- 1297
-empty$ -- 3140
-format.name$ -- 778
-if$ -- 8538
+empty$ -- 3143
+format.name$ -- 780
+if$ -- 8549
 int.to.chr$ -- 0
 int.to.str$ -- 120
 missing$ -- 116
 newline$ -- 596
 num.names$ -- 240
-pop$ -- 619
+pop$ -- 620
 preamble$ -- 1
-purify$ -- 629
+purify$ -- 630
 quote$ -- 0
 skip$ -- 837
 stack$ -- 0
-substring$ -- 2753
+substring$ -- 2762
 swap$ -- 344
 text.length$ -- 0
 text.prefix$ -- 0
