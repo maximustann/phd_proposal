@@ -1,11 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1507078933 "Goals.tex" "Goals.pdf" "Goals" 1507078934
+["pdflatex"] 1507177885 "Goals.tex" "Goals.pdf" "Goals" 1507177886
   "/etc/texmf/texmf.cnf" 1498188680 31930 5d12f12a9f7d785fbba339159e5d30d3 ""
   "/usr/pkg/share/texmf-dist/fonts/map/fontname/texfonts.map" 1466306335 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1486026475 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1498190442 2963132 81ca9361992cbf4ed56a7283785ae50a ""
   "Goals.aux" 1505084102 8 a94a2480d3289e625eea47cd1b285758 ""
-  "Goals.tex" 1507078933 48408 537013421e39751202b00aac323c525f ""
+  "Goals.tex" 1507177881 48961 d58b1a3f5b1e788deb05b8698e2a8a37 ""
   (generated)
   "Goals.pdf"
   "Goals.log"

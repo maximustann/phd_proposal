@@ -41,7 +41,8 @@ cloud providers can reduce the energy consumption by improving the utilization o
 
 \section{Cloud Resource Management}
 \label{sec:resource_management}
-\bx{Cloud resource management is a process of allocating computation resources (e.g CPU and memory) to Cloud users to run their applications. Meanwhile, resource management aims to achieve low energy consumption in cloud} \cite{Jennings:2015ht}.}
+\bx{Cloud resource management is a process of allocating computation resources (e.g CPU and memory) to Cloud users to run their applications. Meanwhile, resource management aims to achieve low energy consumption in cloud} \cite{Jennings:2015ht}.
+
 Resource management applies two types of virtualization: virtual machine (VM) and container on four management steps (see Section \ref{sec:statement}): collecting PMs' utilization data, analyzing available PMs, deciding the placement of applications, and executing the placement. Furthermore, in the third step of placement decision, resource management has three common scenarios: initial placement, periodic placement, and dynamic placement. Resource management uses distinct server consolidation strategies on these placement scenarios based on different virtualiazation technologies to achieve energy efficiency. 
 
 This section will first introduce and compare two types of virtualization: VM-based and container-based and then illustrate 
@@ -101,7 +102,7 @@ We do not discuss Os container because it is very similar to a VM.
 % \begin{figure}
 % 	\centering
 % 	\includegraphics[width=0.7\textwidth]{pics/container-arch.png}
-% 	\caption{A resource management architecture of container-based Cloud and the functionalities of each layer.}
+% 	\caption{A resource management architecture of container-based clouds and the functionalities of each layer.}
 % 	\label{fig:container_architecture}
 % \end{figure}
 
@@ -126,17 +127,18 @@ Some main disadvantages in VM-based virtualization are listed as follows:
 
 
 Some key characteristics of containers can help overcome the above disadvantages of VMs.
+
+The following two characteristics can overcome the heavy overhead of VM hypervisors and reduce the redundant OSs.
 \begin{itemize}
-	The following two characteristics can overcome the heavy overhead of VM hypervisors and reduce the redundant OSs.
 	\item Container-based virtualization has lightweight management which generates much less overhead than a VM hypervisor. 
 	\item Container-based virtualization shares OSs which reduces the overhead of multiple OSs while VMs have to run separate OSs.
 
 	% \item Container-based virtualization has a near-native performance of CPU, memory, disk and network while VM has a poor I/O performance \cite{Shafer:2010vh}: up to 50\% reduction of bandwidth (e.g hard disk and network). This defect also has a negative effect on the migration performance, since a VM-image is ranging from hundreds of MB to several GBs. 
 	\item Container-based virtualization naturally supports vertical scaling while VM-based virtualization does not. Vertical scaling means a container can dynamically adjust its resources under the host's resource constraint. This feature offers a fine granularity management of resources. 
 
-	Vertical scaling can overcome the resource over-provisioning by dynamically adjusting the size of containers. Furthermore, the size of container reflects the requirement of the application. We can achieve a balanced usage of resources by using appropriate placement algorithm.
-
 \end{itemize}
+
+	Vertical scaling can overcome the resource over-provisioning by dynamically adjusting the size of containers. Furthermore, the size of container reflects the requirement of the application. We can achieve a balanced usage of resources by using appropriate placement algorithm.
 
 % \bx{These advantages together with fine granularity resource management of container, can be used to \textbf{improve the energy efficiency} by overcoming three main defects in traditional VM-based cloud data centers.}
 
@@ -173,7 +175,7 @@ Some key characteristics of containers can help overcome the above disadvantages
 % Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
 \paragraph{Initial placement of application} is applied when new applications arrived. The task is to place applications into a set of PMs \cite{Mishra:2012kx} so that PMs satisfy all applications' resource demands and minimize the energy consumption.
 
-% In VM-based cloud, this problem is often modeled as a single level bin-packing problem \cite{CoffmanJr:1996ui}. In container-based cloud, an extra level of placement - containers to VMs - need to be considered. Two levels of placement: Container-VM, VM-PM, interact with each other. The problem is modeled as a bilevel optimization problem \cite{Mathieu:2011dw} where each level is a bin-packing problem. Previous approaches are based on VM-based cloud, therefore, they cannot be used in the bilevel problem.
+% In VM-based cloud, this problem is often modeled as a single level bin-packing problem \cite{CoffmanJr:1996ui}. In container-based clouds, an extra level of placement - containers to VMs - need to be considered. Two levels of placement: Container-VM, VM-PM, interact with each other. The problem is modeled as a bilevel optimization problem \cite{Mathieu:2011dw} where each level is a bin-packing problem. Previous approaches are based on VM-based cloud, therefore, they cannot be used in the bilevel problem.
 
 
 \paragraph{Periodic placement of application} is applied periodically to adjust the current placement of applications. The task is to re-place the current applications so that resource management minimizes the energy consumption and minimizes the cost of migration.
@@ -220,7 +222,7 @@ Some key characteristics of containers can help overcome the above disadvantages
 % \subsection{VM-based Static Consolidation Techniques}
 % \label{sec:static}
 
-% In summary, resource management allocates resources to Cloud users to run their applications. From technology's perspective, the recent container-based cloud has three advantages than traditional VM-based cloud in terms of energy efficiency. From the procedure of resource management, cloud often encounters three placement decision scenarios. 
+% In summary, resource management allocates resources to Cloud users to run their applications. From technology's perspective, the recent container-based clouds has three advantages than traditional VM-based cloud in terms of energy efficiency. From the procedure of resource management, cloud often encounters three placement decision scenarios. 
 
 Next section will discuss server consolidation strategies in three scenarios based on the two types of virtualization: VM and container.
 
@@ -536,7 +538,7 @@ Xiong and Xu \cite{Xiong:2014jq}               & CPU,RAM,Bandwidth,Disk      & P
 \end{table}
 
 
-\paragraph{Energy model in VM-based cloud: Vector Bin Packing Model}
+\paragraph{Energy model in VM-based clouds: Vector Bin Packing Model}
 \label{sec:vector_bin_packing}
 \bx{Server consolidation is typically modeled as a Vector bin packing problem which is a variant of standard bin packing problem (see Figure \ref{fig:bin_packing_problem}).} Vector bin packing is also referred as multi-capacity \cite{Leinberger:1999fs} or multi-dimensional bin packing problem \cite{Xiong:2014jq}. Vector bin packing is particularly suitable for modeling resource allocation problems where there is a set of bins with known capacities and a set of items with known demands \cite{Panigrahy:2011wk}. The optimization objective is to minimize the number of bins.
 
@@ -585,7 +587,7 @@ In summary, most of VM-based placement approaches consider two or three resource
 \subsection{Periodic placement}
 Periodic placement (see Section \ref{sec:scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud data center is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with initial placement of application (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic placement needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
 
-Based on our knowledge, periodic placement has not been studied in the context of container-based Cloud. 
+Based on our knowledge, periodic placement has not been studied in the context of container-based clouds. 
 Therefore, this section only discusses VM-based periodic placement.
 
 \subsubsection{VM-based periodic placement}
@@ -658,7 +660,7 @@ GP-HH has been applied in generating heuristics for bin-packing problems \cite{P
 
 In the Cloud computing context,  Cloud resource allocation usually has extra constraints such as multi-dimensional resources, migration costs, heterogeneous PMs etc. These constraints make the Cloud resource allocation problem much harder than original bin packing \cite{Mann:2015ua}. Therefore, traditional bin packing approaches such as First Fit Decreasing, Best Fit etc cannot perform well in this context.  GP-HH, therefore, is a promising technique can be used to automatically generate heuristics under multiple constraints.
 
-\subsubsection{Container-based Cloud}
+\subsubsection{Container-based clouds}
 \paragraph{Existing approaches}
 Piraghaj et al \cite{Piraghaj:2015dv} propose a framework for container-based resource management including three steps, analyzing resources to trigger migration, deciding which containers to migrate, and placing the container to a VM. In the third step, Piraghaj applies three heuristics: First-Fit, Random, and Least Full. However, this work only reports that their approach can reduce the number of VMs but does not mention how to reduce the number of PMs by migrating VMs. Therefore, this work does not consider the interactions between two levels: VM and PM. 
 
@@ -667,7 +669,7 @@ Piraghaj et al \cite{Piraghaj:2015dv} propose a framework for container-based re
 
 \section{Summary}
 
-\bx{This chapter reviewed the main concepts of cloud resource management and server consolidation.} The challenges of server consolidation in container-based cloud data center were discussed. This chapter also discussed the limitations of existing work on three placement decision scenarios in both container-based and VM-based data center. 
+\bx{This chapter reviewed the main concepts of cloud resource management and server consolidation.} It also discusses the challenges of server consolidation in container-based clouds. We illustrate the limitations of existing work on three placement decision scenarios in both container-based and VM-based clouds. 
 
 \begin{itemize}
 	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based initial placement of application conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub models such as energy model, workload model, variables and constraints need to be further investigated.

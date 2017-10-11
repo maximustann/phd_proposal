@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
 \contentsline {section}{\numberline {1.2}Motivation}{3}
 \contentsline {section}{\numberline {1.3}Research Goals}{4}
-\contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single objective joint placement of containers and VMs for initial placement of application}{4}
+\contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single objective joint placement of containers and VMs for initial placement of application}{5}
 \contentsline {subsection}{\numberline {1.3.2}Objective Two: Develop an EC-based approach for the multi-objective periodic placement of application}{7}
 \contentsline {subsection}{\numberline {1.3.3}Objective Three: Develop a hyper-heuristic single-objective Cooperative Genetic Programming Hyper-heuristic (GP-HH) approach for automatically generating dispatching rules for dynamic placement of application.}{9}
 \contentsline {section}{\numberline {1.4}Published Papers}{11}
@@ -15,19 +15,19 @@
 \contentsline {subsubsection}{Container-based Virtualization}{16}
 \contentsline {subsubsection}{Comparison between Container-based and VM-based virtualization}{16}
 \contentsline {subsection}{\numberline {2.2.2}Placement Decision Scenarios}{17}
-\contentsline {paragraph}{Initial placement of application}{17}
+\contentsline {paragraph}{Initial placement of application}{19}
 \contentsline {paragraph}{Periodic placement of application}{19}
 \contentsline {paragraph}{Dynamic placement of application}{19}
 \contentsline {section}{\numberline {2.3}Related Work}{19}
 \contentsline {subsection}{\numberline {2.3.1}Server consolidation strategy}{19}
-\contentsline {subsubsection}{Types of Server consolidation}{20}
+\contentsline {subsubsection}{Types of Server consolidation}{19}
 \contentsline {subsection}{\numberline {2.3.2}Initial placement of application}{20}
 \contentsline {subsubsection}{Container-based initial placement of application}{20}
 \contentsline {paragraph}{Existing approaches}{20}
 \contentsline {paragraph}{Bilevel optimization}{21}
-\contentsline {paragraph}{Existing approaches for Bilevel optimization}{21}
+\contentsline {paragraph}{Existing approaches for Bilevel optimization}{22}
 \contentsline {subsubsection}{VM-based initial placement of application}{22}
-\contentsline {paragraph}{Energy model in VM-based cloud: Vector Bin Packing Model}{22}
+\contentsline {paragraph}{Energy model in VM-based clouds: Vector Bin Packing Model}{22}
 \contentsline {paragraph}{Existing Approaches}{23}
 \contentsline {subsection}{\numberline {2.3.3}Periodic placement}{24}
 \contentsline {subsubsection}{VM-based periodic placement}{24}
@@ -36,7 +36,7 @@
 \contentsline {subsection}{\numberline {2.3.4}Dynamic placement}{26}
 \contentsline {subsubsection}{VM-based dynamic placement}{26}
 \contentsline {paragraph}{Genetic Programming-based Hyper-heuristic (GP-HH) for Bin packing}{26}
-\contentsline {subsubsection}{Container-based Cloud}{27}
+\contentsline {subsubsection}{Container-based clouds}{27}
 \contentsline {paragraph}{Existing approaches}{27}
 \contentsline {section}{\numberline {2.4}Summary}{27}
 \contentsline {chapter}{\numberline {3}Preliminary Work}{29}

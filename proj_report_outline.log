@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  4 OCT 2017 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  12 OCT 2017 09:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,20 +346,28 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \everycr=\toks26
 \minrowclearance=\skip64
 )
-(/usr/pkg/share/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box58
-\UL@hyphenbox=\box59
-\UL@skip=\skip65
-\UL@hook=\toks27
-\UL@height=\dimen150
-\UL@pe=\count126
-\UL@pixel=\dimen151
-\ULC@box=\box60
-Package: ulem 2012/05/18
-\ULdepth=\dimen152
+(/usr/pkg/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip65
+\enit@outerparindent=\dimen150
+\enit@toks=\toks27
+\enit@inbox=\box58
+\enitdp@description=\count126
 )
-\@float@every@fig=\toks28
-\c@fig=\count127
+(/usr/pkg/share/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box59
+\UL@hyphenbox=\box60
+\UL@skip=\skip66
+\UL@hook=\toks28
+\UL@height=\dimen151
+\UL@pe=\count127
+\UL@pixel=\dimen152
+\ULC@box=\box61
+Package: ulem 2012/05/18
+\ULdepth=\dimen153
+)
+\@float@every@fig=\toks29
+\c@fig=\count128
  (./vuwproject.sty
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/mathpazo.sty
 Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
@@ -368,7 +376,7 @@ Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS)
 VUW Honours reports modifications -- Mar 1995
 Modified to handle different degrees 2003
 Modified to handle duplex printing properly 2006
-\@abstract=\box61
+\@abstract=\box62
 ) (./proj_report_outline.aux (./introduction.aux) (./literature_review.aux)
 (./preliminary.aux
 
@@ -410,35 +418,35 @@ LaTeX Warning: Label `sub@fig:f' multiply defined.
 ) (./Contribution.aux))
 \openout1 = `proj_report_outline.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 88.
  (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 (/usr/pkg/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
-\scratchdimen=\dimen153
-\scratchbox=\box62
-\nofMPsegments=\count129
-\nofMParguments=\count130
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count131
-\MPscratchDim=\dimen154
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count129
+\scratchdimen=\dimen154
+\scratchbox=\box63
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen155
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks31
 ) (/usr/pkg/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -485,7 +493,7 @@ G,.JBIG2,.JB2 ,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box63
+\AtBeginShipoutBox=\box64
 
 (/usr/pkg/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -500,59 +508,59 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 104
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 106
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 104
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 106
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 104
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 106
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 104.
+(Font)              scaled to size 10.42007pt on input line 106.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 104.
+(Font)              scaled to size 7.91925pt on input line 106.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 104.
+(Font)              scaled to size 6.25204pt on input line 106.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 104.
+(Font)              scaled to size 10.42007pt on input line 106.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 104.
+(Font)              scaled to size 7.91925pt on input line 106.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 104.
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 104
+(Font)              scaled to size 6.25204pt on input line 106.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 106
 .
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 104.
+(Font)              scaled to size 11.40997pt on input line 106.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 104.
+(Font)              scaled to size 8.33606pt on input line 106.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 104.
+(Font)              scaled to size 11.40997pt on input line 106.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 104.
+(Font)              scaled to size 8.33606pt on input line 106.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 106.
  [-1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [0]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 108.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 110.
  (./proj_report_outline.toc [1
 
 
@@ -596,86 +604,86 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 <pics/workflow_management.png, id=30, 768.62157pt x 394.47375pt>
 File: pics/workflow_management.png Graphic file (type png)
 <use pics/workflow_management.png>
-Package pdftex.def Info: pics/workflow_management.png  used on input line 70. o
-n input line 70.
+Package pdftex.def Info: pics/workflow_management.png  used on input line 69. o
+n input line 69.
 Package pdftex.def Info: Requested size: 352.8155pt x 181.07489pt on input line
- 70.
+ 69.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 70.
  [2 <./pics/workflow_management.png>]
-Overfull \hbox (3.14758pt too wide) in paragraph at lines 147--148
+Overfull \hbox (7.79036pt too wide) in paragraph at lines 144--146
 [][]\OT1/ppl/m/n/10.95 This re-search aims at im-prov-ing the en-ergy ef-fi-cie
-ncy in container-based cloud by propos-
+ncy in container-based clouds by propos-
  []
 
 ) (./Motivation.tex [3]) (./Goals.tex
-<pics/thesisPlan.png, id=39, 1434.10782pt x 691.08188pt>
+<pics/thesisPlan.png, id=39, 1434.86063pt x 644.4075pt>
 File: pics/thesisPlan.png Graphic file (type png)
 <use pics/thesisPlan.png>
 Package pdftex.def Info: pics/thesisPlan.png  used on input line 5. on input li
 ne 5.
-Package pdftex.def Info: Requested size: 441.01772pt x 212.51431pt on input lin
+Package pdftex.def Info: Requested size: 441.01772pt x 198.06317pt on input lin
 e 5.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
- [4 <./pics/thesisPlan.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./pics/thesisPlan.png>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+[6]
+Overfull \hbox (16.32565pt too wide) in paragraph at lines 94--95
+\OT1/ppl/m/n/10.95 and-conquer ap-proach splits a large prob-lem into sub-probl
+ems, the smaller sub-problems
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+
+Overfull \hbox (3.87628pt too wide) in paragraph at lines 121--123
+\OT1/ppl/m/n/10.95 many re-search only con-sid-ers the num-ber of mi-gra-tions 
+[72]. In container-based clouds,
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 
-Overfull \hbox (3.95247pt too wide) in paragraph at lines 139--140
-\OT1/ppl/m/n/10.95 that can achieve bet-ter en-ergy ef-fi-ciency and mi-gra-tio
-n cost than VM-based ap-proaches.[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
 [8]
-Overfull \hbox (3.71056pt too wide) in paragraph at lines 176--176
+Overfull \hbox (3.71056pt too wide) in paragraph at lines 179--179
 \OT1/ppl/b/n/12 Ge-netic Pro-gram-ming Hyper-heuristic (GP-HH) ap-proach for au
 -to-mat-i-cally
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Overfull \hbox (0.69966pt too wide) in paragraph at lines 195--198
+\OT1/ppl/m/n/10.95 man-u-ally de-signed heuris-tics and sim-ple bin-packing heu
+ris-tics. These heuris-tics must
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-! Extra }, or forgotten \endgroup.
-l.208 ...les can deal with all kinds of workload.}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[10]
-Overfull \hbox (3.55708pt too wide) in paragraph at lines 218--221
-[]\OT1/ppl/m/n/10.95 Develop a co-op-er-a-tive GP-HH ap-proach for au-to-mat-i-
-cally gen-er-at-ing dis-patch-ing rules
- []
-
-) (./published.tex) (./organization.tex
+[10]) (./published.tex) (./organization.tex
 Missing character: There is no â in font pplr7t!
 Missing character: There is no € in font pplr7t!
 Missing character: There is no ™ in font pplr7t!
@@ -713,255 +721,118 @@ input line 31.
 Package pdftex.def Info: Requested size: 154.35889pt x 150.18958pt on input lin
 e 31.
 
-! Too many }'s.
-l.44 ...umption in cloud} \cite{Jennings:2015ht}.}
-                                                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14 <./pics/stakeholders.png> <./pics/energyConsumption.png>]
 <pics/comparison.png, id=82, 590.95781pt x 389.20406pt>
 File: pics/comparison.png Graphic file (type png)
 <use pics/comparison.png>
-Package pdftex.def Info: pics/comparison.png  used on input line 63. on input l
-ine 63.
+Package pdftex.def Info: pics/comparison.png  used on input line 64. on input l
+ine 64.
 Package pdftex.def Info: Requested size: 308.71104pt x 203.31966pt on input lin
-e 63.
+e 64.
 
-Underfull \vbox (badness 3769) has occurred while \output is active []
+Underfull \vbox (badness 3108) has occurred while \output is active []
 
  [15 <./pics/comparison.png>]
 <pics/container_OS_APP.png, id=87, 503.63156pt x 435.12563pt>
 File: pics/container_OS_APP.png Graphic file (type png)
 <use pics/container_OS_APP.png>
-Package pdftex.def Info: pics/container_OS_APP.png  used on input line 82. on i
-nput line 82.
+Package pdftex.def Info: pics/container_OS_APP.png  used on input line 83. on i
+nput line 83.
 Package pdftex.def Info: Requested size: 176.40439pt x 152.40912pt on input lin
-e 82.
+e 83.
 
 
-LaTeX Warning: Citation `Piraghaj:2017vi' on page 16 undefined on input line 83
+LaTeX Warning: Citation `Piraghaj:2017vi' on page 16 undefined on input line 84
 .
 
 
-LaTeX Warning: Citation `Piraghaj:2017vi' on page 16 undefined on input line 83
+LaTeX Warning: Citation `Piraghaj:2017vi' on page 16 undefined on input line 84
 .
 
 
-LaTeX Warning: Citation `Piraghaj:2017vi' on page 16 undefined on input line 87
+LaTeX Warning: Citation `Piraghaj:2017vi' on page 16 undefined on input line 88
 .
 
 
-Overfull \hbox (3.88553pt too wide) in paragraph at lines 87--88
+Overfull \hbox (3.88553pt too wide) in paragraph at lines 88--89
 []\OT1/ppl/m/n/10.95 A Container-based vir-tu-al-iza-tion has four-layers of st
 ruc-ture: PM-Hypervisor-VM-Container
  []
 
 
-Overfull \hbox (7.78473pt too wide) in paragraph at lines 87--88
+Overfull \hbox (7.78473pt too wide) in paragraph at lines 88--89
 \OT1/ppl/m/n/10.95 (see Fig-ure 2.4[] right-hand side).[] Container-based vir-t
 u-al-iza-tion is also ad-dressed as operating-
  []
 
 [16 <./pics/container_OS_APP.png>]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 117.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 118.
 
 
 (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 	\item C
-              ontainer-based virtualization has lightweight management which...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 	\item C
-              ontainer-based virtualization has lightweight management which...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 	\item C
-              ontainer-based virtualization has lightweight management which...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 	\item C
-              ontainer-based virtualization shares OSs which reduces the ove...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 	\item C
-              ontainer-based virtualization shares OSs which reduces the ove...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 	\item C
-              ontainer-based virtualization shares OSs which reduces the ove...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135 	\item C
-              ontainer-based virtualization naturally supports vertical scal...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135 	\item C
-              ontainer-based virtualization naturally supports vertical scal...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135 	\item C
-              ontainer-based virtualization naturally supports vertical scal...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 \end{itemize}
-                   
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
 <pics/initial_placement.png, id=92, 731.73375pt x 215.30438pt>
 File: pics/initial_placement.png Graphic file (type png)
 <use pics/initial_placement.png>
-Package pdftex.def Info: pics/initial_placement.png  used on input line 158. on
- input line 158.
+Package pdftex.def Info: pics/initial_placement.png  used on input line 160. on
+ input line 160.
 Package pdftex.def Info: Requested size: 396.91324pt x 116.78827pt on input lin
-e 158.
+e 160.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 159.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 161.
 <pics/periodic_optimization.png, id=93, 760.34062pt x 401.24907pt>
 File: pics/periodic_optimization.png Graphic file (type png)
 <use pics/periodic_optimization.png>
-Package pdftex.def Info: pics/periodic_optimization.png  used on input line 162
-. on input line 162.
+Package pdftex.def Info: pics/periodic_optimization.png  used on input line 164
+. on input line 164.
 Package pdftex.def Info: Requested size: 396.91324pt x 209.46501pt on input lin
-e 162.
+e 164.
 <pics/dynamic_placement.png, id=94, 726.46407pt x 175.40532pt>
 File: pics/dynamic_placement.png Graphic file (type png)
 <use pics/dynamic_placement.png>
-Package pdftex.def Info: pics/dynamic_placement.png  used on input line 166. on
- input line 166.
+Package pdftex.def Info: pics/dynamic_placement.png  used on input line 168. on
+ input line 168.
 Package pdftex.def Info: Requested size: 396.91324pt x 95.83621pt on input line
- 166.
-[17] [18 <./pics/initial_placement.png> <./pics/periodic_optimization.png> <./p
-ics/dynamic_placement.png>]
+ 168.
+ [17] [18 <./pics/initial_placement.png> <./pics/periodic_optimization.png> <./
+pics/dynamic_placement.png>]
 <pics/consolidate.png, id=104, 764.8575pt x 190.46156pt>
 File: pics/consolidate.png Graphic file (type png)
 <use pics/consolidate.png>
-Package pdftex.def Info: pics/consolidate.png  used on input line 238. on input
- line 238.
+Package pdftex.def Info: pics/consolidate.png  used on input line 240. on input
+ line 240.
 Package pdftex.def Info: Requested size: 308.71104pt x 76.87494pt on input line
- 238.
+ 240.
 <pics/bin_packing_problem.png, id=105, 638.385pt x 306.39468pt>
 File: pics/bin_packing_problem.png Graphic file (type png)
 <use pics/bin_packing_problem.png>
-Package pdftex.def Info: pics/bin_packing_problem.png  used on input line 250. 
-on input line 250.
+Package pdftex.def Info: pics/bin_packing_problem.png  used on input line 252. 
+on input line 252.
 Package pdftex.def Info: Requested size: 264.61331pt x 127.00182pt on input lin
-e 250.
- [19 <./pics/consolidate.png> <./pics/bin_packing_problem.png>] [20]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 483
+e 252.
+ [19 <./pics/consolidate.png>] [20 <./pics/bin_packing_problem.png>]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 485
 .
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-[21]
+) [21]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 520.
+               Default added (so using `tbp') on input line 522.
 
 
-Overfull \hbox (13.5056pt too wide) in paragraph at lines 535--536
+Overfull \hbox (13.5056pt too wide) in paragraph at lines 537--538
  [][] 
  []
 
 [22] [23] [24] [25]
-Overfull \hbox (3.97453pt too wide) in paragraph at lines 643--645
+Overfull \hbox (3.97453pt too wide) in paragraph at lines 645--647
  \OT1/ppl/b/n/10.95 Ge-netic Programming-based Hyper-heuristic (GP-HH) for Bin 
 pack-ing[] \OT1/ppl/m/n/10.95 Ge-netic pro-gram-
  []
@@ -969,30 +840,30 @@ pack-ing[] \OT1/ppl/m/n/10.95 Ge-netic pro-gram-
 <pics/gp-tree.png, id=136, 305.64188pt x 450.9347pt>
 File: pics/gp-tree.png Graphic file (type png)
 <use pics/gp-tree.png>
-Package pdftex.def Info: pics/gp-tree.png  used on input line 648. on input lin
-e 648.
+Package pdftex.def Info: pics/gp-tree.png  used on input line 650. on input lin
+e 650.
 Package pdftex.def Info: Requested size: 132.30666pt x 195.1986pt on input line
- 648.
+ 650.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 649.
+(Font)              scaled to size 9.37807pt on input line 651.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 649.
+(Font)              scaled to size 7.29405pt on input line 651.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 649.
+(Font)              scaled to size 5.21004pt on input line 651.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 649.
+(Font)              scaled to size 9.37807pt on input line 651.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 649.
+(Font)              scaled to size 7.29405pt on input line 651.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 649.
+(Font)              scaled to size 5.21004pt on input line 651.
 [26]
-Overfull \hbox (0.16312pt too wide) in paragraph at lines 663--664
+Overfull \hbox (0.16312pt too wide) in paragraph at lines 665--666
 \OT1/ppl/m/n/10.95 man-age-ment in-clud-ing three steps, an-a-lyz-ing re-source
 s to trig-ger mi-gra-tion, de-cid-ing which
  []
 
 [27 <./pics/gp-tree.png>]
-Overfull \hbox (2.8683pt too wide) in paragraph at lines 676--677
+Overfull \hbox (2.8683pt too wide) in paragraph at lines 678--679
 []\OT1/ppl/m/n/10.95 Current dy-namic place-ment of ap-pli-ca-tion ap-proaches 
 are based on sim-ple bin-packing
  []
@@ -1158,37 +1029,33 @@ Chapter 4.
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 27.
+               Default added (so using `tbp') on input line 31.
 
 
-Overfull \hbox (53.92265pt too wide) in paragraph at lines 41--42
+Overfull \hbox (53.92265pt too wide) in paragraph at lines 45--46
  [][] 
  []
 
-[42] [43]) [44] (./proj_report_outline.bbl
-LaTeX Font Info:    Font shape `OMS/ppl/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
-
-! Extra }, or forgotten \endgroup.
-l.81 ...), 2010 IEEE International Symposium on\/}
-                                                   (2010), Ieee,
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[45
+[42] [43]) [44] (./proj_report_outline.bbl [45
 
 
 
-] [46]
-Underfull \hbox (badness 1168) in paragraph at lines 253--259
-[]\OT1/ppl/m/sc/10.95 Hameed, A., Khoshk-bar-foroushha, A., Ran-jan, R., Ja-yar
-a-man, P. P.,
- []
-
-[47] [48] [49] [50] [51]) [52] (./proj_report_outline.aux (./introduction.aux)
+]
+Missing character: There is no ï in font pplrc7t!
+Missing character: There is no ¿ in font pplrc7t!
+Missing character: There is no ½ in font pplrc7t!
+ [46] [47] [48] [49]
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no œ in font pplr7t!
+Missing character: There is no â in font pplr7t!
+Missing character: There is no € in font pplr7t!
+Missing character: There is no  in font pplr7t!
+ [50]
+[51]
+Missing character: There is no Â in font pplrc7t!
+Missing character: There is no   in font pplrc7t!
+ [52]) [53] (./proj_report_outline.aux (./introduction.aux)
 (./literature_review.aux) (./preliminary.aux) (./Contribution.aux))
 
 LaTeX Warning: There were undefined references.
@@ -1198,10 +1065,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6449 strings out of 493675
- 94050 string characters out of 6155645
- 194496 words of memory out of 5000000
- 9540 multiletter control sequences out of 15000+600000
+ 6728 strings out of 493675
+ 98740 string characters out of 6155645
+ 201598 words of memory out of 5000000
+ 9815 multiletter control sequences out of 15000+600000
  51657 words of font info for 146 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
  42i,17n,43p,1424b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1216,10 +1083,10 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (58 pages, 1303814 bytes).
+Output written on proj_report_outline.pdf (59 pages, 1290782 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
+ 301 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

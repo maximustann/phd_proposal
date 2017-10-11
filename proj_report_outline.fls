@@ -91,6 +91,8 @@ INPUT /usr/pkg/share/texmf-dist/tex/latex/colortbl/colortbl.sty
 INPUT /usr/pkg/share/texmf-dist/tex/latex/colortbl/colortbl.sty
 INPUT /usr/pkg/share/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/pkg/share/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/pkg/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/pkg/share/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/pkg/share/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT /usr/pkg/share/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm

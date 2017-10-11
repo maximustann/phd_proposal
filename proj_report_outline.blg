@@ -7,55 +7,53 @@ A level-1 auxiliary file: preliminary.aux
 A level-1 auxiliary file: Contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-I was expecting a `,' or a `}'---line 755 of file sample.bib
- : month = 06
- :           /2008
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Piraghaj:2017vi"
-Warning--empty journal in Clark:2005ud
+Name 1 in "{Gy{\"{o}}rgy D{\'{o}}sa}, and Jiř{\'{i}} Sgall" has a comma at the end for entry Dosa:2013ie
+while executing---line 1092 of file acm.bst
+Warning--there's a number but no series in Energy_1
 Warning--empty journal in Fehling:2014tl
-Warning--empty journal in Johnson:2016wp
-Warning--empty journal in Mann:2015ua
+Name 1 in "{Gy{\"{o}}rgy D{\'{o}}sa}, and Jiř{\'{i}} Sgall" has a comma at the end for entry Dosa:2013ie
+while executing---line 1133 of file acm.bst
 Warning--empty journal in Sinha:2013tn
 You've used 120 entries,
             2253 wiz_defined-function locations,
-            1278 strings with 26705 characters,
-and the built_in function-call counts, 42100 in all, are:
-= -- 4130
-> -- 2190
+            1314 strings with 29653 characters,
+and the built_in function-call counts, 42916 in all, are:
+= -- 4268
+> -- 2140
 < -- 0
-+ -- 900
-- -- 780
-* -- 3541
-:= -- 6935
-add.period$ -- 357
++ -- 880
+- -- 760
+* -- 3663
+:= -- 7004
+add.period$ -- 359
 call.type$ -- 120
-change.case$ -- 751
+change.case$ -- 741
 chr.to.int$ -- 0
-cite$ -- 125
-duplicate$ -- 1297
-empty$ -- 3143
-format.name$ -- 780
-if$ -- 8549
+cite$ -- 123
+duplicate$ -- 1299
+empty$ -- 3252
+format.name$ -- 760
+if$ -- 8742
 int.to.chr$ -- 0
 int.to.str$ -- 120
 missing$ -- 116
-newline$ -- 596
+newline$ -- 598
 num.names$ -- 240
-pop$ -- 620
+pop$ -- 586
 preamble$ -- 1
-purify$ -- 630
+purify$ -- 620
 quote$ -- 0
-skip$ -- 837
+skip$ -- 843
 stack$ -- 0
-substring$ -- 2762
-swap$ -- 344
+substring$ -- 3043
+swap$ -- 351
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 480
-warning$ -- 5
-while$ -- 436
+warning$ -- 3
+while$ -- 465
 width$ -- 123
-write$ -- 1192
-(There was 1 error message)
+write$ -- 1216
+(There were 2 error messages)
