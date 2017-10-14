@@ -3,21 +3,31 @@
 This thesis will contribute to the field of Cloud Computing by proposing novel solutions for improving energy efficiency in container-based clouds. It will also contribute to the field of Evolutionary Computation (EC) by proposing new representations and genetic operators for solving bilevel optimization problems. The proposed contributions of this project are listed below:
  
 \begin{enumerate}
-	\item Two new bilevel models for predicting energy consumption in container-based clouds: \textbf{first}, a new bilevel energy model for initial placement of application; \textbf{second}, a new bilevel energy and migration model for periodic placement of application with the consideration of three types of workload. The above two models will address the relationship between energy consumption and five factors such as locations of container, tyeps of VM, and locations of VM.  
+	\item Two new bilevel models for predicting energy consumption in container-based clouds \\
+
+	 \textbf{First}, a new bilevel energy model for initial placement of application will be developed; \textbf{second}, we will also propose a new bilevel energy and migration model for periodic placement of application with the consideration of three types of workload. The above two models will address the relationship between energy consumption and five factors: locations of container, types of VM, locations of VM, overheads of VM, and the balance between memory and CPU.  
 	These two bilevel models can be used in optimizing energy consumption and minimizing migration cost in container-based clouds.
 
 	% A new bilevel model for the joint placement of container and VM problem.  The bilevel model will address the relationship between containers, VMs, PMs, and energy consumption. The bilevel model can be used in optimizing the energy consumption in a container-based cloud data center.
-	\item A new EC-based bilevel single-objective optimization algorithm for solving the initial placement of application problem based on previously proposed bilevel energy model. The new algorithm contributes to both Cloud computing and EC. From the perspective of cloud computing, the algorithm produces a resource allocation with better energy efficiency in container-based clouds. From the perspective of EC, the algorithm develops new representations, search mechanisms for bilevel optimization problems. In addition, the work also develops a hybrid approach that combines EC with clustering techniques.
+	\item A new EC-based bilevel single-objective optimization algorithm for solving the initial placement of application problem based on previously proposed bilevel energy model \\
 
-	\item A new EC-based bilevel multi-objective algorithm with Pareto front approach for solving the periodic placement of application. This algorithm will consider three types of predictable workload: static, periodic, and linear continuously changing workloads. From the perspective of cloud computing, the algorithm is expected to achieve better energy efficiency and migration cost than existing VM-based approaches with consideration of three types of workload. From the perspective of EC, the algorithm proposes specific representations and genetic operators for three types of workload. 
+	The new algorithm will contribute to both Cloud computing and EC. From the perspective of cloud computing, the algorithm produces a resource allocation with better energy efficiency in container-based clouds. From the perspective of EC, the algorithm will develop new representations, search mechanisms for bilevel optimization problems. In addition, the work also will develop a hybrid approach that combines EC with clustering techniques.
 
-	\item A new genetic programming hyper-heuristic (GP-HH) approach for solving single-objective dynamic placement of application with three types of predictable workload and two types of unpredictable workload in \textbf{VM-based clouds}. The proposed GP-HH focuses on solving the single-level of placement: VM to PM. From the perspective of cloud computing,
-	the GP-HH can be used in VM-based clouds and it is expected to fast allocate VMs to PMs and achieve a near-optimal solution in energy consumption.
-	From perspective of EC,  the GP-HH is the first to solve resource allocation problem in container-based clouds. The algorithm will propose new primitive set, search mechanisms.
+	\item A new EC-based bilevel multi-objective algorithm with Pareto front approach for solving the periodic placement of application\\
 
-	\item A new cooperative GP-HH approach for solving single-objective dynamic placement of application with five types of workload in \textbf{container-based clouds}. This work is based on the previously proposed GP-HH approach.
-	From perspective of cloud computing, the cooperative GP-HH can quickly allocate containers and VMs to achieve near optimal solutions in terms of energy consumption.
-	From perspective of EC, the new cooperative GP-HH method will solve bilevel dynamic problem.
+	This algorithm will consider three types of predictable workload: static, periodic, and linear continuously changing From the perspective of cloud computing, the algorithm is expected to achieve better energy efficiency and migration cost than existing VM-based approaches. From the perspective of EC, the algorithm will propose specific representations and genetic operators for three types of workload. 
+
+	\item A new genetic programming hyper-heuristic (GP-HH) approach for solving single-objective dynamic placement of application with three types of predictable workload and two types of unpredictable workload in \textbf{VM-based clouds} \\
+
+	The proposed GP-HH focuses on solving the single-level of placement: VM to PM. From the perspective of cloud computing,
+	the GP-HH can be used in VM-based clouds and GP-HH is expected to allocate VMs to PMs quickly and achieve a near-optimal solution in energy consumption.
+	From the perspective of EC,  the GP-HH is the first to solve resource allocation problems in container-based clouds. The algorithm will propose new primitive set, search mechanisms.
+
+	\item A new cooperative GP-HH approach for solving single-objective dynamic placement of application with five types of workload in \textbf{container-based clouds} \\
+
+	This work is based on the previously proposed GP-HH approach.
+	From the perspective of cloud computing, the cooperative GP-HH can quickly allocate containers and VMs to achieve near optimal solutions in terms of energy consumption.
+	From the perspective of EC, the new cooperative GP-HH method will solve bilevel dynamic problems.
 \end{enumerate}
 
 \section{Overview of Project Plan}

@@ -7,6 +7,12 @@
   delivery}.
 \newblock {\em Proceedings - IEEE INFOCOM\/} (2012), 1620--1628.
 
+\bibitem{Anderson:1994io}
+{\sc Anderson, E., and Ferris, M.}
+\newblock {Genetic algorithms for combinatorial optimization: The assemble line
+  balancing problem}.
+\newblock {\em ORSA Journal on Computing 6}, 2 (may 1994), 1--23.
+
 \bibitem{Angelo:2013ee}
 {\sc Angelo, J.~S., Krempser, E., and Barbosa, H. J.~C.}
 \newblock {Differential Evolution for Bilevel Programming}.
@@ -183,12 +189,6 @@
   Algorithm}.
 \newblock {\em Evolutionary Computation 18}, 3 (Aug 2010), 403--449.
 
-\bibitem{Dempe:2006jc}
-{\sc Dempe, S., Kalashnikov, V., and Kalashnykova, N.}
-\newblock {Optimality conditions for bilevel programming problems}.
-\newblock {\em Springer Optimization and Its Applications 2}, 5-6 (Oct 2006),
-  505--524.
-
 \bibitem{Deshpande:2012jf}
 {\sc Deshpande, U., Kulkarni, U., and Gopalan, K.}
 \newblock {Inter-rack Live Migration of Multiple Virtual Machines}.
@@ -265,6 +265,18 @@
   highly available virtual machines}.
 \newblock {\em Future Generation Computer Systems 29}, 4 (2013), 1085--1095.
 
+\bibitem{Babu:2013jf}
+{\sc Gupta, H., and Sahu, K.}
+\newblock {Honey Bee Behavior Based Load Balancing of Tasks in Cloud
+  Computing}.
+\newblock {\em Applied Soft Computing 3}, 6 (2014), 842--846.
+
+\bibitem{Guzek:2015ds}
+{\sc Guzek, M., Bouvry, P., and Talbi, E.~G.}
+\newblock {A survey of evolutionary computation for resource management of
+  processing in cloud computing [review article]}.
+\newblock {\em IEEE Computational Intelligence Magazine 10}, 2 (2015), 53--67.
+
 \bibitem{Dosa:2013ie}
 {\sc {Gy{\"{o}}rgy D{\'{o}}sa}, and Sgall, J.}
 \newblock {First Fit bin packing: A tight analysis}.
@@ -289,6 +301,20 @@
 \newblock {\em China Journal of Highway and Transport 16}, 2 (Apr 2003),
   115--119.
 
+\bibitem{6681297}
+{\sc Iturriaga, S., Nesmachnow, S., Dorronsoro, B., Talbi, E.~G., and Bouvry,
+  P.}
+\newblock A parallel hybrid evolutionary algorithm for the optimization of
+  broker virtual machines subletting in cloud systems.
+\newblock In {\em 2013 Eighth International Conference on P2P, Parallel, Grid,
+  Cloud and Internet Computing\/} (Oct 2013), pp.~594--599.
+
+\bibitem{Jarboui:2007in}
+{\sc Jarboui, B., Cheikh, M., Siarry, P., and Rebai, A.}
+\newblock {Combinatorial particle swarm optimization (CPSO) for partitional
+  clustering problem}.
+\newblock {\em Applied Mathematics and Computation 192}, 2 (2007), 337--345.
+
 \bibitem{Jennings:2015ht}
 {\sc Jennings, B., and Stadler, R.}
 \newblock {Resource management in clouds: Survey and research challenges}.
@@ -303,6 +329,19 @@
 \bibitem{Kaplan:up01fR-k}
 {\sc Kaplan, J.~M., Forrest, W., and Kindler, N.}
 \newblock {Revolutionizing data center energy efficiency}, 2008.
+
+\bibitem{Eberhart:1995tj}
+{\sc Kennedy, J., and EBERHART, C.}
+\newblock {\em {Particle swarm optimiza-tion: proceeding of IEEE International
+  Conference onNeural Networks}}, vol.~1948.
+\newblock Perth, 1942.
+
+\bibitem{Kennedy:1997hd}
+{\sc Kennedy, J., and Eberhart, R.}
+\newblock {A discrete binary version of the particle swarm algorithm}.
+\newblock In {\em 1997 IEEE International Conference on Systems, Man, and
+  Cybernetics. Computational Cybernetics and Simulation\/} (1997), vol.~5,
+  IEEE, pp.~4--8.
 
 \bibitem{Khanna:2006vq}
 {\sc Khanna, G., Beaty, K., Kar, G., and Kochut, A.}
@@ -369,6 +408,12 @@
   8th International Conference, Zakopane, Poland, June 25-29, 2006.
   Proceedings}. Springer Berlin Heidelberg, Berlin, Heidelberg, 2006,
   pp.~1169--1178.
+
+\bibitem{Liao:2007dl}
+{\sc Liao, C.-J., Tseng, C.-T., and Luarn, P.}
+\newblock {A discrete version of particle swarm optimization for flowshop
+  scheduling problems}.
+\newblock {\em Computers {\&} Operations Research 34}, 10 (2007), 3099--3111.
 
 \bibitem{Lien:2007it}
 {\sc Lien, C.~H., Bai, Y.~W., and Lin, M.~B.}
@@ -627,6 +672,12 @@
 \newblock {\em Proceedings of the 2012 IEEE Network Operations and Management
   Symposium, NOMS 2012\/} (2012), 9--16.
 
+\bibitem{Vose:1993iu}
+{\sc Vose, M.~D., and Hall, A.}
+\newblock {Modeling Simple Genetic Algorithms}.
+\newblock In {\em Evolutionary Computation}, vol.~3. Elsevier, 1996,
+  pp.~453--472.
+
 \bibitem{Waldspurger:2002db}
 {\sc Waldspurger, C.~A.}
 \newblock {Memory resource management in VMware ESX server}.
@@ -690,6 +741,11 @@
 \newblock {An Efficient Global K-means Clustering Algorithm}.
 \newblock {\em JCP 6}, 2 (2011), 271--279.
 
+\bibitem{Engelbrecht:dm}
+{\sc Xing, B., and Gao, W.-J.}
+\newblock {\em {Introduction to Computational Intelligence}}.
+\newblock John Wiley {\&} Sons, Ltd, 2014.
+
 \bibitem{Xiong:2014jq}
 {\sc Xiong, A.-p., and Xu, C.-x.}
 \newblock {Energy Efficient Multiresource Allocation of Virtual Machine Based
@@ -704,6 +760,12 @@
   Computing and Communications, GreenCom 2010, 2010 IEEE/ACM International
   Conference on Cyber, Physical and Social Computing, CPSCom 2010\/} (2010),
   179--188.
+
+\bibitem{Yao2006}
+{\sc Yao, X., and Xu, Y.}
+\newblock Recent advances in evolutionary computation.
+\newblock {\em Journal of Computer Science and Technology 21}, 1 (Jan 2006),
+  1--18.
 
 \bibitem{Service_1}
 {\sc Yau, S.~S., and An, H.~G.}
@@ -744,5 +806,11 @@
 \newblock {A survey and taxonomy on energy efficient resource allocation
   techniques for cloud computing systems}.
 \newblock {\em Computing NA}, 7 (2014), 751--774.
+
+\bibitem{Zomaya:2005bb}
+{\sc Zomaya, A.~Y., and Crnomarkovic, K.}
+\newblock {Genetic Algorithms for Scheduling in Grid Computing Environments.}
+\newblock {\em Handbook of Bioinspired Algorithms and Applications 20053845\/}
+  (2005), 13--208.
 
 \end{thebibliography}
