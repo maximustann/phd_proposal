@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  17 OCT 2017 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  18 OCT 2017 08:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1101,7 +1101,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  6775 strings out of 493675
  99687 string characters out of 6155645
- 201873 words of memory out of 5000000
+ 202873 words of memory out of 5000000
  9859 multiletter control sequences out of 15000+600000
  51657 words of font info for 146 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
@@ -1117,7 +1117,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (69 pages, 1349378 bytes).
+Output written on proj_report_outline.pdf (69 pages, 1349371 bytes).
 PDF statistics:
  339 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams
