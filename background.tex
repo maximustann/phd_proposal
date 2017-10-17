@@ -125,21 +125,21 @@ The following two characteristics can overcome the heavy overhead of VM hypervis
 \subsection{Placement Decision Scenarios}
 \label{sec:scenarios}
 
-\bx{Three placement decision scenarios \cite{Svard:2015ic, Mishra:2012kx}: initial placement of application, periodic placement of application, and dynamic placement of application (see Figure \ref{fig:management}).}
+\bx{Three placement decision scenarios \cite{Svard:2015ic, Mishra:2012kx}: initial placement of applications, periodic placement of applications, and dynamic placement of applications (see Figure \ref{fig:management}).}
 
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/initial_placement.png}
-		\caption{Initial placement of application}
+		\caption{Initial placement of applications}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/periodic_optimization.png}
-	\caption{Periodic placement of application}
+	\caption{Periodic placement of applications}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.9\textwidth}
 		\includegraphics[width=\textwidth]{pics/dynamic_placement.png}
-	\caption{Dynamic placement of application}
+	\caption{Dynamic placement of applications}
 	\end{subfigure}
 	\caption{Three scenarios of placement decision}
 	\label{fig:management}
@@ -215,7 +215,7 @@ This section will first introduces these three important EC algorithms that we w
 	\label{fig:operators}
 \end{figure}
 
-\bx{GA-based algorithms are suitable for off-line combinatorial optimization problems.} Different from traditional algorithm such as Integer linear programming (ILP) technique, a GA-based algorithm bypasses the complicated procedure of tunning parameters by searching through the solution space of a problem. Although a GA-based algorithm does not guarantee a global optima solution, a GA-based algorithm normally can provide a near-optima solution within feasible amount of time. Although a GA-based algorithm spends less time than an ILP, it still takes too long time than an on-line problem requires. Therefore, we will consider use a GA-based algorithm in the first and second objectives: initial placement of application and periodic placement of application. 
+\bx{GA-based algorithms are suitable for off-line combinatorial optimization problems.} Different from traditional algorithm such as Integer linear programming (ILP) technique, a GA-based algorithm bypasses the complicated procedure of tunning parameters by searching through the solution space of a problem. Although a GA-based algorithm does not guarantee a global optima solution, a GA-based algorithm normally can provide a near-optima solution within feasible amount of time. Although a GA-based algorithm spends less time than an ILP, it still takes too long time than an on-line problem requires. Therefore, we will consider use a GA-based algorithm in the first and second objectives: initial placement of applications and periodic placement of applications. 
 
 GA-based algorithms have been applied to a variety of combinatorial optimization problems such as the assembly line balancing problem \cite{Anderson:1994io}, scheduling in Grid computing \cite{Zomaya:2005bb} and resource allocation problem in clouds \cite{Wilcox:2011ea}. Specifically, we will discuss the literature that applied GA-based algorithms in the server consolidation strategies in Section \ref{sec:related_work}. 
 
@@ -320,9 +320,9 @@ However, it is difficult to design dispatching rules for dynamic JSS problems. T
 
 To design dispatching rules more effectively, researchers use a hyper-heuristic technique to automatically generate dispatching rules. Specifically, a great number of hyper-heuristic approaches to JSS problem uses Genetic Programming (GP) technique called GP hyper-heuristic (GP-HH). GP-HH represents dispatching rules with a tree-based representation and these dispatching rules can be interpreted as priority-based dispatching rules. GP-HH approaches generally outperform manually designed dispatching rules for both static and dynamic JSS problems \cite{Branke:2016wy}. 
 
-In comparison between the dynamic JSS problem and the dynamic placement of application, they share many similarities. First of all, they are both on-line problems that require a fast reaction. Second, they both dispatch jobs to machines. The differences are the dynamic JSS problem normally does not care the amount of resources that a job consumes. The dynamic placement not only considers the resource requirement of jobs but also the remaining of resources in Physical machines (PMs). Another difference is that the jobs in dynamic JSS go through a route of machines while the jobs in dynamic placement stay at one machine.
+In comparison between the dynamic JSS problem and the dynamic placement of applications, they share many similarities. First of all, they are both on-line problems that require a fast reaction. Second, they both dispatch jobs to machines. The differences are the dynamic JSS problem normally does not care the amount of resources that a job consumes. The dynamic placement not only considers the resource requirement of jobs but also the remaining of resources in Physical machines (PMs). Another difference is that the jobs in dynamic JSS go through a route of machines while the jobs in dynamic placement stay at one machine.
 
-The similarities inspire us to apply GP-HH approach on the dynamic placement of application problem.
+The similarities inspire us to apply GP-HH approach on the dynamic placement of applications problem.
 
 \vspace{5mm}
 
@@ -356,7 +356,7 @@ This section will discuss existing approaches for container-based initial placem
 The second difference is their resource management architectures. The architecture in Piraghaj's research allows adjusting 
 the size of VMs when allocating new applications, while in Mann's work, containers runs on top of a traditional IaaS where containers must choose to allocate to a type of VM. 
 
-The third difference is their distinct ways to achieve initial placement based on their different architectures of resource management. Piraghaj considers the initial placement a two-steps procedure: containers to VMs and VMs to PM. Because their resource management allows cloud providers to customize the size of VMs, in the first step, they must first determine the size of VM. Piraghaj performs clustering technique on historical workload data from Google Cluster Data. In this way, Piraghaj suggests that the applications with similar workload pattern can be categorized into the same group. In the placement step, Piraghaj designs a simple heuristic: in both VM and PM levels, they apply First Fit algorithm. Then, the containers are allocated to certain size of VMs. Piraghaj claims that their main contribution is not the placement strategy but an architecture for container-based resource management. On the other hand, Mann realizes this two-levels of placement are interact with each other, therefore, container-VM and VM-PM must be considered collaboratively. Specifically, the initial placement of application becomes three parts: 
+The third difference is their distinct ways to achieve initial placement based on their different architectures of resource management. Piraghaj considers the initial placement a two-steps procedure: containers to VMs and VMs to PM. Because their resource management allows cloud providers to customize the size of VMs, in the first step, they must first determine the size of VM. Piraghaj performs clustering technique on historical workload data from Google Cluster Data. In this way, Piraghaj suggests that the applications with similar workload pattern can be categorized into the same group. In the placement step, Piraghaj designs a simple heuristic: in both VM and PM levels, they apply First Fit algorithm. Then, the containers are allocated to certain size of VMs. Piraghaj claims that their main contribution is not the placement strategy but an architecture for container-based resource management. On the other hand, Mann realizes this two-levels of placement are interact with each other, therefore, container-VM and VM-PM must be considered collaboratively. Specifically, the initial placement of applications becomes three parts: 
 
 \begin{itemize}
 	\item VM size selection for containers
@@ -485,7 +485,7 @@ In summary, most of VM-based placement approaches consider two or three resource
 
 
 \subsection{Periodic Placement of Applications}
-Periodic placement (see Section \ref{sec:scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud data center is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with initial placement of application (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic placement needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
+Periodic placement (see Section \ref{sec:scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud data center is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with initial placement of applications (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic placement needs to take the cost of applications migration into account, therefore, it is often considered as a multi-objective optimization problem. 
 
 Based on our knowledge, periodic placement has not been studied in the context of container-based clouds. 
 Therefore, this section only discusses VM-based periodic placement.
@@ -521,12 +521,12 @@ For the second type of workload, it is hard or even impossible to predict its be
 Meng et al \cite{Meng:2010gh} proposed a standard time series technique to extract the deterministic patterns (e.g trends, cycles and seasonality) and irregular fluctuating patterns from workloads' CPU utilization; they assume the periodic behavior of workload will preserve in the future and predict the irregular parts with two approaches: with and without explicit forecast error models. Then, applications are paired according to their negative correlation. They evaluate the workload prediction and application selection with a server consolidation task. They use First Fit to allocate paired applications. During the consolidation, The consolidation results show that they use 45\% less PMs for hosting the same number of VMs. Furthermore, their approach is more robust since the variation of workload is considered. However, they only consider two complementary applications at a time. 
 
 \paragraph{EC-based Approaches}
-In a similar problem to periodic optimization of application, Dhinesh and Venkata propose a honey bee behavior for load balancing  of application \cite{Babu:2013jf}. They represent workloads on overloaded PMs as bees and VMs with low load levels as bees' destinations. The load-balancing task has three objectives: decreasing makespan and response time, improving the load balance, and reducing the number of migrated tasks. The honey bee algorithm simulates bee behavior as a search mechanism. Although this research does not focus on the energy consumption, it provides some insights of the migration model and a new EC-based approach.
+In a similar problem to periodic optimization of applications, Dhinesh and Venkata propose a honey bee behavior for load balancing  of applications \cite{Babu:2013jf}. They represent workloads on overloaded PMs as bees and VMs with low load levels as bees' destinations. The load-balancing task has three objectives: decreasing makespan and response time, improving the load balance, and reducing the number of migrated tasks. The honey bee algorithm simulates bee behavior as a search mechanism. Although this research does not focus on the energy consumption, it provides some insights of the migration model and a new EC-based approach.
 
 
 \vspace{5mm}
 
-In summary, current migration models of placement of application normally do not consider the resources. This model cannot apply in container-based virtualization. Another disadvantage is that most research do not consider the fluctuation of workloads. In addition, no research has focus on container-based periodic placement. 
+In summary, current migration models of placement of applications normally do not consider the resources. This model cannot apply in container-based virtualization. Another disadvantage is that most research do not consider the fluctuation of workloads. In addition, no research has focus on container-based periodic placement. 
 
 
 
@@ -557,11 +557,11 @@ In summary, current approaches for dynamic placement are mostly based on manual 
 \bx{This chapter reviewed the main concepts of cloud resource management, server consolidation strategies, and Evolutionary Computation (EC).} It also reviews both VM-based and container-based consolidate strategies in terms of traditional approaches and EC-based approaches. We illustrate the limitations of existing work on three placement decision scenarios in both container-based and VM-based clouds. 
 
 \begin{itemize}
-	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based initial placement of application conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub-models such as energy model, workload model, variables and constraints need to be further investigated.
-	\item Periodic placement of application has not been studied in the container context. A bilevel multi-objective energy model needs to be proposed which considers minimizing migration cost as well as minimizing energy consumption. 
-	\item Traditional periodic placement of application mostly consider static workload. Thus, it is very likely lead to large number of adjustment of applications' placement in the future because the fluctuation of workloads. These adjustment will increase the cost for Cloud providers. In order to provide a robust placement of application, various predictable workload patterns such as linear continuously changing can be considered. It needs more investigation on how to represent various workloads and how to combine them in a compact structure.
-	\item Current dynamic placement of application approaches are based on simple bin-packing algorithms and manually designed heuristics. These heuristics are either perform poorly or cannot be applied with specific constraints. A hyper-heuristic approach can learn from previous good placement patterns and automatically generate heuristics. In order to design a hyper-heuristic, features of various workload need to be investigated. 
+	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based initial placement of applications conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub-models such as energy model, workload model, variables and constraints need to be further investigated.
+	\item Periodic placement of applications has not been studied in the container context. A bilevel multi-objective energy model needs to be proposed which considers minimizing migration cost as well as minimizing energy consumption. 
+	\item Traditional periodic placement of applications mostly consider static workload. Thus, it is very likely lead to large number of adjustment of applications' placement in the future because the fluctuation of workloads. These adjustment will increase the cost for Cloud providers. In order to provide a robust placement of applications, various predictable workload patterns such as linear continuously changing can be considered. It needs more investigation on how to represent various workloads and how to combine them in a compact structure.
+	\item Current dynamic placement of applications approaches are based on simple bin-packing algorithms and manually designed heuristics. These heuristics are either perform poorly or cannot be applied with specific constraints. A hyper-heuristic approach can learn from previous good placement patterns and automatically generate heuristics. In order to design a hyper-heuristic, features of various workload need to be investigated. 
 \end{itemize}
 
-EC-based approaches have been widely applied in various combinatorial optimization problems. Specifically, meta-heuristics such as GA and PSO are more suitable for static problems and hyper-heuristics such as GP are suitable for dynamic problems. In particular, for bilevel problems, EC-based approaches have shown promising good performance. Therefore, this research aims to address the above-mentioned issues with EC-based approaches. The next chapter will focus on the initial work conducted in investigating NSGA-II for bilevel initial placement of application.
+EC-based approaches have been widely applied in various combinatorial optimization problems. Specifically, meta-heuristics such as GA and PSO are more suitable for static problems and hyper-heuristics such as GP are suitable for dynamic problems. In particular, for bilevel problems, EC-based approaches have shown promising good performance. Therefore, this research aims to address the above-mentioned issues with EC-based approaches. The next chapter will focus on the initial work conducted in investigating NSGA-II for bilevel initial placement of applications.
 

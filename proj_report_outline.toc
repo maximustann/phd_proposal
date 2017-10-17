@@ -2,9 +2,9 @@
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
 \contentsline {section}{\numberline {1.2}Motivation}{3}
 \contentsline {section}{\numberline {1.3}Research Goals}{4}
-\contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single objective joint placement of containers and VMs for initial placement of application}{5}
-\contentsline {subsection}{\numberline {1.3.2}Objective Two: Develop an EC-based approach for the multi-objective periodic placement of application}{7}
-\contentsline {subsection}{\numberline {1.3.3}Objective Three: Develop a hyper-heuristic single-objective Cooperative Genetic Programming Hyper-heuristic (GP-HH) approach for automatically generating dispatching rules for dynamic placement of application.}{9}
+\contentsline {subsection}{\numberline {1.3.1}Objective One: Develop EC-based approaches for the single-objective joint placement of containers and VMs for initial placement of applications}{5}
+\contentsline {subsection}{\numberline {1.3.2}Objective Two: Develop an EC-based approach for the multi-objective periodic placement of applications}{7}
+\contentsline {subsection}{\numberline {1.3.3}Objective Three: Develop a hyper-heuristic single-objective Cooperative Genetic Programming Hyper-heuristic (GP-HH) approach for automatically generating dispatching rules for dynamic placement of applications.}{9}
 \contentsline {section}{\numberline {1.4}Published Papers}{11}
 \contentsline {section}{\numberline {1.5}Organisation of Proposal}{11}
 \contentsline {chapter}{\numberline {2}Background and Related Work}{13}
