@@ -13,64 +13,64 @@
 \contentsline {subsection}{\numberline {2.2.1}Virtualization Technologies}{15}
 \contentsline {subsubsection}{VM-based Virtualization}{16}
 \contentsline {subsubsection}{Container-based Virtualization}{16}
-\contentsline {subsubsection}{Comparison between Container-based and VM-based virtualization}{16}
+\contentsline {subsubsection}{Comparison between Container-based and VM-based Virtualization}{16}
 \contentsline {subsection}{\numberline {2.2.2}Placement Decision Scenarios}{17}
-\contentsline {paragraph}{Initial placement of application}{19}
-\contentsline {paragraph}{Periodic placement of application}{19}
-\contentsline {paragraph}{Dynamic placement of application}{19}
-\contentsline {subsection}{\numberline {2.2.3}Server consolidation strategy}{19}
-\contentsline {subsubsection}{Types of Server consolidation}{19}
+\contentsline {paragraph}{Initial Placement of Applications}{19}
+\contentsline {paragraph}{Periodic Placement of Applications}{19}
+\contentsline {paragraph}{Dynamic Placement of Applications}{19}
+\contentsline {subsection}{\numberline {2.2.3}Server Consolidation Strategy}{19}
+\contentsline {subsubsection}{Types of Server Consolidation}{19}
 \contentsline {section}{\numberline {2.3}Evolutionary Computation}{20}
-\contentsline {subsection}{\numberline {2.3.1}Genetic Algorithm (GA)}{20}
+\contentsline {subsection}{\numberline {2.3.1}Genetic Algorithms (GAs)}{20}
 \contentsline {subsection}{\numberline {2.3.2}Particle Swarm Optimization (PSO)}{21}
 \contentsline {subsection}{\numberline {2.3.3}Genetic Programming-based Hyper-heuristic (GP-HH)}{22}
-\contentsline {subsection}{\numberline {2.3.4}EC algorithms in combinatorial optimization}{23}
-\contentsline {paragraph}{Cloud computing resource allocation}{23}
-\contentsline {paragraph}{Job shop scheduling}{24}
-\contentsline {section}{\numberline {2.4}Related Work}{24}
-\contentsline {subsection}{\numberline {2.4.1}Initial placement of application}{24}
-\contentsline {subsubsection}{Container-based initial placement of application}{24}
-\contentsline {paragraph}{Existing approaches}{24}
-\contentsline {paragraph}{Bilevel optimization}{25}
-\contentsline {paragraph}{Evolutionary Computation Approaches for Bilevel optimization}{26}
-\contentsline {subsubsection}{VM-based initial placement of application}{26}
-\contentsline {paragraph}{Energy model in VM-based clouds: Vector Bin Packing Model}{27}
-\contentsline {paragraph}{Traditional Approaches}{27}
-\contentsline {paragraph}{EC-based Approaches}{27}
-\contentsline {subsection}{\numberline {2.4.2}Periodic placement}{28}
-\contentsline {subsubsection}{VM-based periodic placement}{29}
-\contentsline {paragraph}{Migration Model}{29}
-\contentsline {paragraph}{Traditional approaches}{29}
-\contentsline {paragraph}{EC-based approaches}{30}
-\contentsline {subsection}{\numberline {2.4.3}Dynamic placement}{30}
-\contentsline {subsubsection}{VM-based dynamic placement}{30}
-\contentsline {subsubsection}{Container-based clouds}{31}
-\contentsline {paragraph}{Existing approaches}{31}
-\contentsline {section}{\numberline {2.5}Summary}{31}
-\contentsline {chapter}{\numberline {3}Preliminary Work}{33}
-\contentsline {section}{\numberline {3.1}Related models}{33}
-\contentsline {subsection}{\numberline {3.1.1}Workload model}{33}
-\contentsline {subsection}{\numberline {3.1.2}Power Model}{33}
-\contentsline {section}{\numberline {3.2}Problem Description}{34}
-\contentsline {subsubsection}{Hard constraints}{35}
-\contentsline {subsubsection}{Soft constraint}{35}
-\contentsline {section}{\numberline {3.3}Methods}{36}
-\contentsline {subsection}{\numberline {3.3.1}Chromosome Representation}{36}
-\contentsline {subsection}{\numberline {3.3.2}Initialization}{37}
-\contentsline {subsection}{\numberline {3.3.3}Mutation}{37}
-\contentsline {subsection}{\numberline {3.3.4}Violation control method}{39}
-\contentsline {subsection}{\numberline {3.3.5}Selection}{39}
-\contentsline {subsection}{\numberline {3.3.6}Fitness Function}{39}
-\contentsline {subsection}{\numberline {3.3.7}Algorithm}{39}
-\contentsline {section}{\numberline {3.4}Experiment}{39}
-\contentsline {subsection}{\numberline {3.4.1}Dataset and Instance Design}{40}
-\contentsline {subsection}{\numberline {3.4.2}Results}{42}
-\contentsline {section}{\numberline {3.5}Findings and Future work}{44}
-\contentsline {chapter}{\numberline {4}Proposed Contributions and Project Plan}{47}
-\contentsline {section}{\numberline {4.1}Overview of Project Plan}{48}
-\contentsline {section}{\numberline {4.2}Project Timeline}{48}
-\contentsline {section}{\numberline {4.3}Thesis Outline}{49}
-\contentsline {section}{\numberline {4.4}Resources Required}{50}
-\contentsline {subsection}{\numberline {4.4.1}Computing Resources}{50}
-\contentsline {subsection}{\numberline {4.4.2}Library Resources}{50}
-\contentsline {subsection}{\numberline {4.4.3}Conference Travel Grants}{50}
+\contentsline {subsection}{\numberline {2.3.4}EC Algorithms in Combinatorial Optimization}{23}
+\contentsline {paragraph}{Cloud Computing Resource Allocation}{23}
+\contentsline {paragraph}{Job Shop Scheduling}{24}
+\contentsline {section}{\numberline {2.4}Related Work}{25}
+\contentsline {subsection}{\numberline {2.4.1}Initial Placement of Applications}{25}
+\contentsline {subsubsection}{Container-based Initial Placement of Applications}{25}
+\contentsline {paragraph}{Existing Approaches}{25}
+\contentsline {paragraph}{Bilevel Optimization}{26}
+\contentsline {paragraph}{Evolutionary Computation Approaches for Bilevel Optimization}{27}
+\contentsline {subsubsection}{VM-based Initial Placement of Applications}{28}
+\contentsline {paragraph}{Energy Model in VM-based Clouds: Vector Bin Packing Model}{28}
+\contentsline {paragraph}{Traditional Approaches}{28}
+\contentsline {paragraph}{EC-based Approaches}{29}
+\contentsline {subsection}{\numberline {2.4.2}Periodic Placement of Applications}{29}
+\contentsline {subsubsection}{VM-based Periodic Placement of Applications}{30}
+\contentsline {paragraph}{Migration Model}{30}
+\contentsline {paragraph}{Traditional Approaches}{30}
+\contentsline {paragraph}{EC-based Approaches}{31}
+\contentsline {subsection}{\numberline {2.4.3}Dynamic Placement of Applications}{31}
+\contentsline {subsubsection}{VM-based Dynamic Placement}{31}
+\contentsline {subsubsection}{Container-based Clouds}{32}
+\contentsline {paragraph}{Existing Approaches}{32}
+\contentsline {section}{\numberline {2.5}Summary}{32}
+\contentsline {chapter}{\numberline {3}Preliminary Work}{35}
+\contentsline {section}{\numberline {3.1}Related Models}{35}
+\contentsline {subsection}{\numberline {3.1.1}Workload model}{35}
+\contentsline {subsection}{\numberline {3.1.2}Power Model}{35}
+\contentsline {section}{\numberline {3.2}Problem Description}{36}
+\contentsline {subsubsection}{Hard Constraints}{37}
+\contentsline {subsubsection}{Soft Constraint}{37}
+\contentsline {section}{\numberline {3.3}Methods}{38}
+\contentsline {subsection}{\numberline {3.3.1}Chromosome Representation}{38}
+\contentsline {subsection}{\numberline {3.3.2}Initialization}{39}
+\contentsline {subsection}{\numberline {3.3.3}Mutation}{39}
+\contentsline {subsection}{\numberline {3.3.4}Violation Control Method}{41}
+\contentsline {subsection}{\numberline {3.3.5}Selection}{41}
+\contentsline {subsection}{\numberline {3.3.6}Fitness Function}{41}
+\contentsline {subsection}{\numberline {3.3.7}Algorithm}{41}
+\contentsline {section}{\numberline {3.4}Experiment}{41}
+\contentsline {subsection}{\numberline {3.4.1}Dataset and Instance Design}{42}
+\contentsline {subsection}{\numberline {3.4.2}Results}{44}
+\contentsline {section}{\numberline {3.5}Findings and Future Work}{46}
+\contentsline {chapter}{\numberline {4}Proposed Contributions and Project Plan}{49}
+\contentsline {section}{\numberline {4.1}Overview of Project Plan}{50}
+\contentsline {section}{\numberline {4.2}Project Timeline}{50}
+\contentsline {section}{\numberline {4.3}Thesis Outline}{51}
+\contentsline {section}{\numberline {4.4}Resources Required}{52}
+\contentsline {subsection}{\numberline {4.4.1}Computing Resources}{52}
+\contentsline {subsection}{\numberline {4.4.2}Library Resources}{52}
+\contentsline {subsection}{\numberline {4.4.3}Conference Travel Grants}{52}

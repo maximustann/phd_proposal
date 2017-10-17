@@ -7,6 +7,12 @@
   delivery}.
 \newblock {\em Proceedings - IEEE INFOCOM\/} (2012), 1620--1628.
 
+\bibitem{AmaralArmentano:2000dk}
+{\sc {Amaral Armentano}, V., and {Rig{\~{a}}o Scrich}, C.}
+\newblock {Tabu search for minimizing total tardiness in a job shop}.
+\newblock {\em International Journal of Production Economics 63}, 2 (jan 2000),
+  131--140.
+
 \bibitem{Anderson:1994io}
 {\sc Anderson, E., and Ferris, M.}
 \newblock {Genetic algorithms for combinatorial optimization: The assemble line
@@ -99,6 +105,12 @@
 \bibitem{Borodin:2cY4439E}
 {\sc Borodin, A., and El, R.}
 \newblock {Yaniv (1998): Online Computation and Competitive Analysis}.
+
+\bibitem{Branke:2016wy}
+{\sc Branke, J., Nguyen, S., Pickardt, C., and Zhang, M.}
+\newblock {Automated Design of Production Scheduling Heuristics: A Review}.
+\newblock {\em IEEE Transactions on Evolutionary Computation X}, X (2015),
+  1--1.
 
 \bibitem{Brotcorne:2001je}
 {\sc Brotcorne, L., Labb�, M., Marcotte, P., and Savard, G.}
@@ -246,6 +258,13 @@
   Mattias}.
 \newblock {\em Elsevier 101\/} (2014), 110--126.
 
+\bibitem{Frey:2013gp}
+{\sc Frey, S., Fittkau, F., and Hasselbring, W.}
+\newblock {Search-based genetic optimization for deployment and reconfiguration
+  of software in the cloud. International Conference on Software Engineering
+  (ICSE-13). San Francisco, CA, USA,18--26 May 2013}.
+\newblock {\em ICSE\/} (2013), 512--521.
+
 \bibitem{Ganesan:2012eb}
 {\sc Ganesan, R., Sarkar, S., and Narayan, A.}
 \newblock {Analysis of SaaS business platform workloads for sizing and
@@ -315,6 +334,13 @@
   clustering problem}.
 \newblock {\em Applied Mathematics and Computation 192}, 2 (2007), 337--345.
 
+\bibitem{Jayamohan:2004kq}
+{\sc Jayamohan, M., and Rajendran, C.}
+\newblock {Development and analysis of cost-based dispatching rules for job
+  shop scheduling}.
+\newblock {\em European Journal of Operational Research 157}, 2 (2004),
+  307--321.
+
 \bibitem{Jennings:2015ht}
 {\sc Jennings, B., and Stadler, R.}
 \newblock {Resource management in clouds: Survey and research challenges}.
@@ -361,6 +387,13 @@
 \newblock {kvm: the Linux virtual machine monitor}.
 \newblock {\em Proceedings of the Linux Symposium 1\/} (2007), 225--230.
 
+\bibitem{Kousiouris:2013vg}
+{\sc Kousiouris, G., Menychtas, A., Kyriazis, D., Konstanteli, K., Gogouvitis,
+  S.~V., Katsaros, G., and Varvarigou, T.~A.}
+\newblock {Parametric design and performance analysis of a decoupled
+  service-oriented prediction framework based on embedded numerical software}.
+\newblock {\em IEEE Transactions on Services Computing 6}, 4 (2013), 511--524.
+
 \bibitem{1992gppc.book.....K}
 {\sc Koza, J.}
 \newblock {Genetic Programming: On the Programming of Computers by Means of
@@ -379,6 +412,13 @@
 \newblock {Power and performance management of virtualized computing
   environments via lookahead control}.
 \newblock {\em Cluster Computing 12}, 1 (2009), 1--15.
+
+\bibitem{Laredo:2014db}
+{\sc Laredo, J. L.~J., Bouvry, P., Guinand, F., Dorronsoro, B., and Fernandes,
+  C.}
+\newblock {The sandpile scheduler:How self-organized criticalitymay lead to
+  dynamic load-balancing}.
+\newblock {\em Cluster Computing 17}, 2 (2014), 191--204.
 
 \bibitem{evo_str}
 {\sc {Lee, K. Y. and Yang}, F.~F.}
@@ -539,12 +579,24 @@
   and Communications and 8th IEEE International Conference on Internet of
   Things, DSDIS/CPSCom/GreenCom/iThings 2015\/} (2015), 368--375.
 
+\bibitem{Piraghaj:gb}
+{\sc Piraghaj, S.~F., Dastjerdi, A.~V., Calheiros, R.~N., and Buyya, R.}
+\newblock {A Survey and Taxonomy of Energy Efficient Resource Management
+  Techniques in Platform as a Service Cloud}.
+\newblock In {\em IGI Global}. IGI Global, 2016, pp.~410--454.
+
 \bibitem{Poli:2007kt}
 {\sc Poli, R., Woodward, J., and Burke, E.~K.}
 \newblock {A histogram-matching approach to the evolution of bin-packing
   strategies}.
 \newblock In {\em 2007 IEEE Congress on Evolutionary Computation\/} (2007),
   IEEE, pp.~3500--3507.
+
+\bibitem{Potts:2009eb}
+{\sc Potts, C.~N., and Strusevich, V.~a.}
+\newblock {Fifty years of scheduling: a survey of milestones}.
+\newblock {\em Journal of the Operational Research Society 60}, S1 (2009),
+  S41--S68.
 
 \bibitem{Qin:2012wu}
 {\sc Qin, X., Zhang, W., Wang, W., Wei, J., Zhao, X., and Huang, T.}
@@ -631,16 +683,35 @@
   Computing Technology and Science, CloudCom 2015\/} (2016), IEEE,
   pp.~387--396.
 
+\bibitem{Tan2017}
+{\sc Tan, B., Huang, H., Ma, H., and Zhang, M.}
+\newblock {\em {Binary PSO for Web Service Location-Allocation}}, vol.~10142
+  LNAI.
+\newblock 2017.
+
 \bibitem{Tan:2017fa}
 {\sc Tan, B., Ma, H., and Mei, Y.}
 \newblock {A NSGA-II-based Approach for Service Resource Allocation in Cloud}.
 \newblock {\em CEC\/} (2017), 2574--2581.
+
+\bibitem{Tan2016}
+{\sc Tan, B., Ma, H., and Zhang, M.}
+\newblock {\em {Optimization of Location Allocation of Web Services Using a
+  Modified Non-dominated Sorting Genetic Algorithm}}, vol.~9592.
+\newblock 2016.
 
 \bibitem{Tomas:2013iv}
 {\sc Tom{\'{a}}s, L., and Tordsson, J.}
 \newblock {Improving cloud infrastructure utilization through overbooking}.
 \newblock {\em Proceedings of the 2013 ACM Cloud and Autonomic Computing
   Conference on - CAC '13\/} (2013), 1.
+
+\bibitem{Tsai:2013fn}
+{\sc Tsai, J.-T., Fang, J.-C., and Chou, J.-H.}
+\newblock {Optimized task scheduling and resource allocation on cloud computing
+  environment using improved differential evolution algorithm}.
+\newblock {\em Computers {\&} Operations Research 40}, 12 (dec 2013),
+  3045--3055.
 
 \bibitem{Uhlig:2005do}
 {\sc Uhlig, R., Neiger, G., Rodgers, D., Santoni, A.~L., Martins, F. C.~M.,
@@ -779,6 +850,13 @@
   computing}.
 \newblock In {\em Proceedings of the IEEE Symposium on Reliable Distributed
   Systems\/} (2011), pp.~1--10.
+
+\bibitem{Zhou:2009dq}
+{\sc Zhou, H., Cheung, W., and Leung, L.~C.}
+\newblock {Minimizing weighted tardiness of job-shop scheduling using a hybrid
+  genetic algorithm}.
+\newblock {\em European Journal of Operational Research 194}, 3 (may 2009),
+  637--649.
 
 \bibitem{Zhu:2006in}
 {\sc Zhu, X., Yu, Q., and Wang, X.}

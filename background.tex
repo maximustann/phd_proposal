@@ -2,7 +2,6 @@
 \label{sec:background}
 
 
-% \subsection{Cloud computing}
 \bx{Cloud computing is a computing model that offers a network of servers to their clients in a on-demand fashion.} From NIST's definition \cite{Mell:2011jj}, \textit{"cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."} Hence, Cloud computing has major functionalities for providing facilities to cloud users.
 
 \begin{figure}
@@ -13,30 +12,21 @@
 \end{figure}
 
 \bx{To give an example of how Cloud computing works (see Figure \ref{fig:stakeholders}), consider the case:} a \emph{Cloud provider} builds a data center containing thousands of servers. These servers connect with a network. 
-% These servers are virtualized which means they are partitioned into smaller units of resources called \emph{Virtual Machines (VMs)} or \emph{Containers} \cite{Felter:2015ki}. 
 To use these remote servers, \emph{Cloud user} (e.g an application provider), can deploy and access their applications (e.g Endnote, Google Drive and etc.) in these servers from anywhere in the world. Once the applications start serving, \emph{End users} can use them without installing on their local computers. Cloud providers charge fees from Cloud users for infrastructure. Cloud users charge fees from End users for using applications. \tran{Therefore, from cloud providers' perspective, both accommodating more applications and reducing energy consumption lead to the increase of profit.}
 
 \bx{The major expense of a cloud provider is energy consumption \cite{Kaplan:up01fR-k} and physical machines (PMs) (e.g servers) contribute to a majority of the energy.} As shown in Figure \ref{fig:consumption}, both the cooling system and physical machines (PMs) account for 40\% of energy. However, PMs' energy efficiency are low on average  \cite{Hameed:2016cmb}.
 The reason for low energy efficiency is the disproportion between the utilization of PMs and the energy consumption of PMs. \howto{For example, when CPU utilization of a PM is 15\%, the energy consumption of the PM is 70\% of its peak time.} Therefore, 
 cloud providers can reduce the energy consumption by improving the utilization of PMs.
 
-% \tran{In order to solve the problem, a concept of
-% \emph{energy proportional computing} \cite{Barroso:2007jt} raised to address the disproportionate between utilization and energy consumption by using virtualization technology.}
 
 \tran{In order to solve the low energy efficiency caused by low utilization of PMs, cloud providers use a resource management system to manage the applications.}
 
 \begin{figure}
 	\centering
-	% \begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=0.35\textwidth]{pics/energyConsumption.png}
 		\caption{Energy consumption distribution of data centers \cite{Rong:2016js}}
 		\label{fig:consumption}
-	% \end{subfigure}
-	% \begin{subfigure}[b]{0.45\textwidth}
-	% 	\includegraphics[width=\textwidth]{pics/util.png}
-	% 	\caption{Disproportionate between utilization and energy consumption \cite{Barroso:2007jt}}
-	% 	\label{fig:unproportional}
-	% \end{subfigure}
+
 \end{figure} 
 
 \section{Cloud Resource Management}
@@ -50,7 +40,6 @@ three placement decision scenarios.
 
 \subsection{Virtualization Technologies}
 \label{sec:virtualization}
-% \bx{Two technologies can be used to achieve server consolidation: clustering and virtualization.} Clustering is used in a situation that the applications running in bare-mental PMs are I/O intensive. This is because current virtualization technologies  such as KVM \cite{Kivity:2007wu} or Xen \cite{Barham:2003cj} are not suitable for data intensive application because they have a 20\% to 55\% of reduction of I/O bandwidth (e.g disk reads and writes, network bandwidth) in comparison with bare-mental PM \cite{Shafer:2010vh}. In our research, we consider the applications which require small CPU utilization (e.g 15\%) and low I/O needs such as web services, therefore, this section mainly discusses the virtualization technology.
 
 \bx{Resource management uses virtualization technologies \cite{Uhlig:2005do} to achieve a finer granularity management than the traditional way.} In comparison with traditional management -- allocating an application to a PM -- virtualized management partitions PM's resources (e.g. CPU, memory and disk) into several independent units and allocates applications into these units. 
 The most common units are virtual machines (VMs) and containers.
@@ -73,19 +62,17 @@ The hypervisor or the virtual machine monitor (VMM) is a software layer on top o
 
 In addition, hypervisors support dynamic migration techniques (e.g pre-copy \cite{Clark:2005ud} and post-copy \cite{Hines:2009fv}) that can move VMs from one PM to another. Therefore, resource management can improve the utilization of a PM by migrating VMs to that PM.
 
-% \bx{VMs can be used to reduce the energy consumption in data centers by utilizing the technology of live migration.} live migration  \cite{Hines:2009fv} can move a VM from one PM to another without interrupting the application running inside the VM. A common practice gathers several low utilized VMs into a PM so that the utilization of the PM is improved and idle PMs are turned off to save energy. This practice is called server consolidation which will be discussed in Section \ref{consolidation}.
 
 \subsubsection{Container-based Virtualization} 
-% It allows applications to have their own separated development environment such as libraries. 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.4\textwidth]{pics/container_OS_APP.png}
-	\caption{A comparison between OS container and Application container \cite{Piraghaj:2017vi}}
+	\caption{A comparison between OS container and Application container \cite{Piraghaj:gb}}
 	\label{fig:comparison_container}
 \end{figure}
 
-\bx{A Container-based virtualization has four-layers of structure: PM-Hypervisor-VM-Container (see Figure \ref{fig:comparison} right-hand side).} Container-based virtualization is also addressed as operating-system-level virtualization because containers run on top of VMs. Specifically, container-based virtuliazation includes two classes: OS container and application container \cite{Piraghaj:2017vi}. 
+\bx{A Container-based virtualization has four-layers of structure: PM-Hypervisor-VM-Container (see Figure \ref{fig:comparison} right-hand side).} Container-based virtualization is also addressed as operating-system-level virtualization because containers run on top of VMs. Specifically, container-based virtuliazation includes two classes: OS container and application container \cite{Piraghaj:gb}. 
 
 \bx{OS containers (Figure \ref{fig:comparison_container} left-hand side) have a one-on-one relationship with VM.}
 Multiple applications run inside an OS container. Three implementations of OS-level of containers: OpenVZ, Google's control groups, and namespace \cite{Rosen:2013wt} are widely used in Google and Facebook.
@@ -97,18 +84,8 @@ Multiple applications run inside an OS container. Three implementations of OS-le
 Notice that, in the following content, we use ``container'' to represent ``application container''. 
 We do not discuss Os container because it is very similar to a VM.
 
-% He et al \cite{He:2012im} propose an hierarchical resource management architecture for application container (see Figure \ref{fig:container_architecture}). The major functionality of Cloud controller is to provide a global optimization.
 
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=0.7\textwidth]{pics/container-arch.png}
-% 	\caption{A resource management architecture of container-based clouds and the functionalities of each layer.}
-% 	\label{fig:container_architecture}
-% \end{figure}
-
-% \bx{Container-based server consolidation has to consider two levels of optimization on three variables - the placement of containers on VMs, the types of VMs, and the placement of VMs.} The detailed discussion is in Section \ref{related_work}.
-
-\subsubsection{Comparison between Container-based and VM-based virtualization} 
+\subsubsection{Comparison between Container-based and VM-based Virtualization} 
 \label{sec:comparison_container_vm}
 \bx{This section summarizes three disadvantages of VM-based virtualization in terms of energy efficiency and shows how container-based can overcome these disadvantages based on several research~\cite{Felter:2015ki, Xavier:2013fy, Dua:2014bw}.}  
 
@@ -133,18 +110,14 @@ The following two characteristics can overcome the heavy overhead of VM hypervis
 	\item Container-based virtualization has lightweight management which generates much less overhead than a VM hypervisor. 
 	\item Container-based virtualization shares OSs which reduces the overhead of multiple OSs while VMs have to run separate OSs.
 
-	% \item Container-based virtualization has a near-native performance of CPU, memory, disk and network while VM has a poor I/O performance \cite{Shafer:2010vh}: up to 50\% reduction of bandwidth (e.g hard disk and network). This defect also has a negative effect on the migration performance, since a VM-image is ranging from hundreds of MB to several GBs. 
 	\item Container-based virtualization naturally supports vertical scaling while VM-based virtualization does not. Vertical scaling means a container can dynamically adjust its resources under the host's resource constraint. This feature offers a fine granularity management of resources. 
 
 \end{itemize}
 
 	Vertical scaling can overcome the resource over-provisioning by dynamically adjusting the size of containers. Furthermore, the size of container reflects the requirement of the application. We can achieve a balanced usage of resources by using appropriate placement algorithm.
 
-% \bx{These advantages together with fine granularity resource management of container, can be used to \textbf{improve the energy efficiency} by overcoming three main defects in traditional VM-based cloud data centers.}
-
 
 \bx{In summary, container-based virtualization has the potential to further improve the energy efficiency than VM-based virtualization.} No matter which virtualization technology is used, cloud often deals with three placement decision scenarios. 
-% \tran{Next section will introduce the major strategy that is used to reduce the energy consumption in cloud data centers.}
 
 
 
@@ -172,61 +145,17 @@ The following two characteristics can overcome the heavy overhead of VM hypervis
 	\label{fig:management}
 \end{figure}
 
-% Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
-\paragraph{Initial placement of application} is applied when new applications arrived. The task is to place applications into a set of PMs \cite{Mishra:2012kx} so that PMs satisfy all applications' resource demands and minimize the energy consumption.
-
-% In VM-based cloud, this problem is often modeled as a single level bin-packing problem \cite{CoffmanJr:1996ui}. In container-based clouds, an extra level of placement - containers to VMs - need to be considered. Two levels of placement: Container-VM, VM-PM, interact with each other. The problem is modeled as a bilevel optimization problem \cite{Mathieu:2011dw} where each level is a bin-packing problem. Previous approaches are based on VM-based cloud, therefore, they cannot be used in the bilevel problem.
-
-
-\paragraph{Periodic placement of application} is applied periodically to adjust the current placement of applications. The task is to re-place the current applications so that resource management minimizes the energy consumption and minimizes the cost of migration.
-
-% Similar as initial placement of application, container-based periodic placement of application is also a bilevel optimization problem. In addition, previous works only consider applications' workload as static, therefore, it incurs more migration afterwards. In practice, the types of workload should be considered into the decision process.
-
-	% In this problem, time is discrete and it can be split into basic time frames, for example: ten seconds. A periodical operation is conducted in every $N$ time frames.
-	% A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Releasing applications cause hollow in PMs; new arrivals cannot change the structure of current allocation. Therefore, after the initial allocation, the overall energy efficiency is likely to drop along with time elapsing. 
-
-	% In prediction, an optimization system takes  the current applications' utilization records as the input. Make a prediction of their utilization in the next period of time. 
-	% In Global consolidation, based on the predict utilization and the current allocation - including a list of applications/VMs and a list of PMs, the system adjusts the allocation so that the global resource utilization is improved.
-
-	% In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005ud}, and it is a very expensive operation because it occupies the resources in both the host and the target. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization even difficult.
-
-	% In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
-
-\paragraph{Dynamic placement of application} is applied in two scenarios \cite{Mishra:2012kx}: Overloading and underloading. Overloading is a scenario where the total demands of applications in a PM are higher than the PM's resources. Therefore, the PM causes a degradation in one or more applications' performance. Underloading is a scenario where the PM is running in low utilization. In both scenarios, resource management moves the applications from one PM to another PMs in an on-line fashion~\cite{Borodin:2cY4439E}.
+\paragraph{Initial Placement of Applications} is applied when new applications arrived. The task is to place applications into a set of PMs \cite{Mishra:2012kx} so that PMs satisfy all applications' resource demands and minimize the energy consumption.
 
 
 
-	% No matter which scenario it is, a dynamic resource management always involves three steps . 
-	% \begin{itemize}
-	% 	\item \emph{When to migrate?} refers to determine the time point that a PM is overloaded or underloaded. It is often decide by a threshold of utilization.
-	% 	\item \emph{Which application to migrate?} refers to determine which application need to be migrated so that it optimize the global energy consumption.
-	% 	\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement of application which is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. 
-	% \end{itemize}
+\paragraph{Periodic Placement of Applications} is applied periodically to adjust the current placement of applications. The task is to re-place the current applications so that resource management minimizes the energy consumption and minimizes the cost of migration.
 
-	% Among three operations, dynamic placement of application is a dynamic and on-line problem.
-	% The term ``dynamic'' means the request comes at an arbitrary time point. An on-line problem is a problem which has on-line input and requires on-line output . It is applied when a control system does not have the complete knowledge of future events.
-
-% 	There are two difficulties in this operation, firstly, dynamic placement of application requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
-
-% \end{enumerate}
-
-% Finally, a consolidation plan includes four major items:
-% 			\begin{enumerate}
-% 				\item A list of existing PMs after consolidation
-% 				\item A list of new virtual machines created after consolidation
-% 				\item A list of old PMs to be turned off after consolidation
-% 				\item The exact placement of applications and services
-% 			\end{enumerate}
-
-
-% \subsection{VM-based Static Consolidation Techniques}
-% \label{sec:static}
-
-% In summary, resource management allocates resources to Cloud users to run their applications. From technology's perspective, the recent container-based clouds has three advantages than traditional VM-based cloud in terms of energy efficiency. From the procedure of resource management, cloud often encounters three placement decision scenarios. 
+\paragraph{Dynamic Placement of Applications} is applied in two scenarios \cite{Mishra:2012kx}: Overloading and underloading. Overloading is a scenario where the total demands of applications in a PM are higher than the PM's resources. Therefore, the PM causes a degradation in one or more applications' performance. Underloading is a scenario where the PM is running in low utilization. In both scenarios, resource management moves the applications from one PM to another PMs in an on-line fashion~\cite{Borodin:2cY4439E}.
 
 Next section will discuss general server consolidation strategies.
 
-\subsection{Server consolidation strategy}
+\subsection{Server Consolidation Strategy}
 \label{consolidation}
 
 \begin{figure}
@@ -248,7 +177,7 @@ the low utilization of PMs called PM sprawl~\cite{Khanna:2006vq}.
 	\label{fig:bin_packing_problem}
 \end{figure}
 
-\subsubsection{Types of Server consolidation}
+\subsubsection{Types of Server Consolidation}
 
 % Three major benefits of virtualization make it be the first choice for web-based application consolidation: No reliance on hardware, easy to provision and live migration.
 
@@ -257,21 +186,21 @@ the low utilization of PMs called PM sprawl~\cite{Khanna:2006vq}.
 
 
 \section{Evolutionary Computation}
-Evolutionary Computation (EC) algorithms are artificial intelligent algorithms that are inspired by biological mechanisms of evolution, social interactions and swarm intelligence. They are famous for strong search ability because they have several distinguished characteristics such as the use of a population-based search and the ability of avoiding local optima. EC algorithms have been applied successfully to solve a variety of real-world problems \cite{Engelbrecht:dm}, especially, combinatorial optimization problems.
+\bx{Evolutionary Computation (EC) algorithms are artificial intelligent algorithms that are inspired by biological mechanisms of evolution, social interactions and swarm intelligence.} They are famous for strong search ability because they have several distinguished characteristics such as the use of a population-based search and the ability of avoiding local optima. EC algorithms have been applied successfully to solve a variety of real-world problems \cite{Engelbrecht:dm}, especially, combinatorial optimization problems.
 
 % A common process of EC algorithms is as follows. Initially, the population are randomly generated in the search space. During the evolution process, the population
 % explores according to the evaluation of a or multiple predefined fitness functions. At the end of the evolution, the individual with the best fitness value is selected as the output.
 
-To solve optimization problems, researchers have proposed a variety of EC algorithms \cite{Yao2006}. The majority of current EC algorithms descends from three major approaches: \emph{genetic algorithms (GA)}, \emph{particle swarm optimization (PSO)} and \emph{genetic programming (GP)}. 
+\bx{Researchers have proposed a variety of EC algorithms \cite{Yao2006} to solve optimization problems.} The majority of current EC algorithms descends from three major approaches: \emph{genetic algorithms (GAs)}, \emph{particle swarm optimization (PSO)} and \emph{genetic programming (GP)}. 
 
 
-This section will first introduces these three important EC algorithms that we would like to use in our future work. Then, we will review a number of EC algorithms, which are used in combinatorial optimization problems. From these problems, we will conclude some of the characteristics of combinatorial problems that suitable for using EC algorithms. 
+This section will first introduces these three important EC algorithms that we would like to use in our future work. Then, we will review a number of EC algorithms, which are used in combinatorial optimization problems. From these problems, we will conclude some of the advantages of using EC algorithms in solving resource allocation problem in clouds.
 
-\subsection{Genetic Algorithm (GA)}
+\subsection{Genetic Algorithms (GAs)}
 % GA \cite{Holland:1962fy} was introduced by Holland. Since then, a large number of applications \cite{DeJong:1992vk, DeJong:1992ws} have applied GA  as their search mechanism. 
-GA is a population-based search algorithm \cite{Vose:1993iu}. In GA, the solution of a problem is coded as a vector of numbers called chromosome or individual. A GA searches for the best solution by iteratively changing the values in the chromosome. 
+\bx{GA is a population-based search algorithm \cite{Vose:1993iu}.} In GA, the solution of a problem is coded as a vector of numbers called chromosome or individual. A GA searches for the best solution by iteratively changing the values in the chromosome. 
 
-We describe a general GA procedure as follows. In the beginning, a population of chromosomes which represents the solutions of the problem are often represented as a fixed length string. Each entry or bit can be continuous, discrete or even alphabets depending on the problem.  The evolution often starts from randomly generated population followed by an iterative process called generation.  In each generation, the fitness value of chromosomes is evaluated according to a defined fitness function.  Then, genetic operators such as mutation and crossover are applied on the solutions so that they are modified. As a search mechanism, these operators move solutions to explore the search space. New generations of solutions are then evaluated by the fitness function.  This evolutionary procedure ends when a predefined generation number or a satisfactory level of fitness has been reached.
+\bx{We describe a general GA procedure as follows.} In the beginning, a population of chromosomes which represents the solutions of the problem are often represented as a fixed length string. Each entry or bit can be continuous, discrete or even alphabets depending on the problem.  The evolution often starts from randomly generated population followed by an iterative process called generation.  In each generation, the fitness value of chromosomes is evaluated according to a defined fitness function.  Then, genetic operators such as mutation and crossover are applied on the solutions so that they are modified. As a search mechanism, these operators move solutions to explore the search space. New generations of solutions are then evaluated by the fitness function.  This evolutionary procedure ends when a predefined generation number or a satisfactory level of fitness has been reached.
 
 \begin{figure}
 	\centering
@@ -286,7 +215,7 @@ We describe a general GA procedure as follows. In the beginning, a population of
 	\label{fig:operators}
 \end{figure}
 
-GA-based algorithms are suitable for off-line combinatorial optimization problems. Different from traditional algorithm such as Integer linear programming (ILP) technique, a GA-based algorithm bypasses the complicated procedure of tunning parameters by searching through the solution space of a problem. Although a GA-based algorithm does not guarantee a global optima solution, a GA-based algorithm normally can provide a near-optima solution within feasible amount of time. Although a GA-based algorithm spends less time than an ILP, it still takes too long time than an on-line problem requires. Therefore, we will consider use a GA-based algorithm in the first and second objectives: initial placement of application and periodic placement of application. 
+\bx{GA-based algorithms are suitable for off-line combinatorial optimization problems.} Different from traditional algorithm such as Integer linear programming (ILP) technique, a GA-based algorithm bypasses the complicated procedure of tunning parameters by searching through the solution space of a problem. Although a GA-based algorithm does not guarantee a global optima solution, a GA-based algorithm normally can provide a near-optima solution within feasible amount of time. Although a GA-based algorithm spends less time than an ILP, it still takes too long time than an on-line problem requires. Therefore, we will consider use a GA-based algorithm in the first and second objectives: initial placement of application and periodic placement of application. 
 
 GA-based algorithms have been applied to a variety of combinatorial optimization problems such as the assembly line balancing problem \cite{Anderson:1994io}, scheduling in Grid computing \cite{Zomaya:2005bb} and resource allocation problem in clouds \cite{Wilcox:2011ea}. Specifically, we will discuss the literature that applied GA-based algorithms in the server consolidation strategies in Section \ref{sec:related_work}. 
 
@@ -298,9 +227,9 @@ Next section will introduce another popular algorithm: particle swarm optimizati
 % and continuous, mainly experimental, parameter optimization problems \cite{Klockgether:1970tw}. 
 
 \subsection{Particle Swarm Optimization (PSO)}
-PSO is a meta-heuristic algorithm inspired by the social behavior of birds \cite{Eberhart:1995tj}. In PSO, each individual -- a particle -- searches the solution space. The underlying phenomenon of PSO is to use the collective knowledge to find the optimal solution.
+\bx{PSO is a meta-heuristic algorithm inspired by the social behavior of birds \cite{Eberhart:1995tj}.} In PSO, each individual -- a particle -- searches the solution space. The underlying phenomenon of PSO is to use the collective knowledge to find the optimal solution.
 
-At the initial state, each particle has a random initial position in the search space which is represented by a vector $\vec{x}_i = (x_{i1}, x_{i2}, \dots, x_{iD})$, where \emph{D} is the dimension of the search space. A particle has a velocity as $\vec{v}_i = (v_{i1}, v_{i2}, \dots, v_{iD})$. The velocity is limited by a threshold $v_{\max}$ so that for any $i$ and $d$, $v_{id} \in [-v_{\max}, v_{\max}]$. During the search process, each particle maintains a record of its best position so far, called the \emph{personal best} ($pbest$). The best position among all the personal best positions of its neighbors is the \emph{global best} ($gbest$). The position and velocity of each particle are updated according to the following equations:
+\bx{We describe the procedure of PSO as follows.} At the initial state, each particle has a random initial position in the search space which is represented by a vector $\vec{x}_i = (x_{i1}, x_{i2}, \dots, x_{iD})$, where \emph{D} is the dimension of the search space. A particle has a velocity as $\vec{v}_i = (v_{i1}, v_{i2}, \dots, v_{iD})$. The velocity is limited by a threshold $v_{\max}$ so that for any $i$ and $d$, $v_{id} \in [-v_{\max}, v_{\max}]$. During the search process, each particle maintains a record of its best position so far, called the \emph{personal best} ($pbest$). The best position among all the personal best positions of its neighbors is the \emph{global best} ($gbest$). The position and velocity of each particle are updated according to the following equations:
 \begin{equation}
 \label{eq:updatePosition}
 x^{t+1}_{id} = x^{t}_{id} + v^{t+1}_{id},
@@ -313,10 +242,10 @@ v^{t+1}_{id} = w \cdot v^{t}_{id} + c_1 \cdot r_{1i} \cdot (p_{id} - x^t_{id}) +
 
 Here, $t$ is the index of iteration. $d$ is the index of dimension. The inertia weight $w$ is used to balance the local search and global search abilities. The parameters $c_1$ and $c_2$ are the acceleration constants. $r_{1i}$ and $r_{2i}$ are random constants following the uniform distribution in the interval $[0, 1]$. $p_{id}$ and $p_{gd}$ denote the values of $pbest$ and $gbest$ in the $d^{th}$ dimension of the $i^{th}$ particle.
 
-PSO-based algorithms are also suitable for combinatorial optimization problems. Although PSO was originally developed for optimizing problems with continuous representations (e.g. real-value), the recent development of PSO support the discrete problem as well. Specifically, the binary PSO \cite{Kennedy:1997hd} is designed for binary problems; the discrete PSO \cite{Liao:2007dl} is designed for scheduling problems; and a Combinatorial PSO \cite{Jarboui:2007in} is developed for problems with integer representation. In the literature, PSO-based algorithms have also been applied for resource allocation problem \cite{Xiong:2014jq}. We will discuss these approaches in Section \ref{sec:related_work}.
+\bx{PSO-based algorithms are also suitable for combinatorial optimization problems.} Although PSO was originally developed for optimizing problems with continuous representations (e.g. real-value), the recent development of PSO support the discrete problem as well. Specifically, the binary PSO \cite{Kennedy:1997hd} is designed for binary problems; the discrete PSO \cite{Liao:2007dl} is designed for scheduling problems; and a Combinatorial PSO \cite{Jarboui:2007in} is developed for problems with integer representation. In the literature, PSO-based algorithms have also been applied for resource allocation problem \cite{Xiong:2014jq}. We will discuss these approaches in Section \ref{sec:related_work}.
 
 
-Compared with GA-based algorithms, PSO-based algorithms have a faster convergence speed. However, PSO-based algorithms are more easier to be stuck at local optima for large dimensional problems than GA-based algorithms. Therefore, sometimes PSO-based algorithms can be used in dynamic problems if the number of variables is small. More often, PSO-based algorithms are applied in off-line problems like GA. Therefore, we will also consider using PSO in the first and second objectives.
+\bx{Compared with GA-based algorithms, PSO-based algorithms have a faster convergence speed.} However, PSO-based algorithms are more easier to be stuck at local optima for large dimensional problems than GA-based algorithms. Therefore, sometimes PSO-based algorithms can be used in dynamic problems if the number of variables is small. More often, PSO-based algorithms are applied in off-line problems like GA. Therefore, we will also consider using PSO in the first and second objectives.
 
 Next section will introduce the genetic programming-based hyper-heuristic (GP-HH), which is suitable for dynamic problems.
 
@@ -340,179 +269,85 @@ GP-HH has been applied in generating heuristics for bin-packing problems \cite{P
 
 In the Cloud computing context,  Cloud resource allocation usually has extra constraints such as multi-dimensional resources, migration costs, heterogeneous PMs, etc. These constraints make the Cloud resource allocation problem much harder than original bin packing \cite{Mann:2015ua}. Therefore, traditional bin packing approaches such as First Fit Decreasing, Best Fit, etc, cannot perform well in this context.  GP-HH, therefore, is a promising technique that can be used to automatically generate heuristics under multiple constraints.
 
-\subsection{EC algorithms in combinatorial optimization}
-This section will review a number of EC algorithms in two typical combinatorial optimization field: cloud computing resource allocation and job shop scheduling. 
+\subsection{EC Algorithms in Combinatorial Optimization}
+This section will review a number of EC algorithms in two typical combinatorial optimization fields: cloud computing resource allocation and job shop scheduling. 
 
-\paragraph{Cloud computing resource allocation}
+\paragraph{Cloud Computing Resource Allocation}
 Traditional cloud computing resource allocation includes six categories \cite{Guzek:2015ds}: cloud brokering, VM placement, service placement and workflow scheduling are typically static problems; server load balancing and cloud capacity planning are dynamic problems. EC algorithms have been applied in problems in each of these categories. This section will briefly review approaches used in these problems except VM placement. We will explicitly discuss VM placement in Section \ref{sec:related_work}.
 
 \vspace{5mm}
 
-In cloud brokering problem, a cloud broker is an intermediary between cloud users and cloud providers. Cloud brokers estimate the resource requirements and choose resources for cloud users. The objective of cloud brokering is to minimize the cost for cloud users as well as guarantee the quality of service (QoS).
+In cloud brokering problem, a cloud broker is an intermediary between cloud users and cloud providers. Cloud brokers estimate the resource requirements and choose resources for cloud users. The objective of cloud brokering is to minimize the cost for cloud users as well as guarantee the quality of service (QoS) of cloud users' applications.
 
-Frey et al \cite{} propose a GA approach (CDOXploer) for finding near-optimal cloud deployment architectures and runtime reconfiguration rules for softwares. Their approach takes into account VM types, the number of VMs and the scaling policies of VMs. CDOXplorer minimizes response times, costs, and SLA violations in order to satisfy the requirement of cloud users.  In comparison with Frey's centralized approach, Iturriaga et al \cite{6681297} propose an Evolutionary Algorithm (EA) with distributed sub-populations. In each sub-population, they applied a Simulated Annealing (SA) method to find the local optimal solution. The proposed algorithm is shown outperform than the reference list scheduling algorithm in both computation time and performance (maximizing the profit of a broker).
-
-\vspace{5mm}
-
-In service placement problem, cloud users would like to optimize the costs and performance (e.g QoS) of their services. To achieve that, cloud users need to decide the locations of service and the number of service \cite{Guzek:2015ds}. Therefore, service placement less focuses on resource allocation. 
-
-Tan et al \cite{} propose an aggregation approach with binary PSO to solve the service placement problem with two objectives: minimizing cost and minimizing the response time. They find that the single-objective algorithm can only provide one solution for each run, hence, single-objective algorithm cannot provide alternatives when cloud users do not have preferences. Therefore, they develop an NSGA-II based approach \cite{} that uses Pareto front approach to find a set of non-dominated solutions. They conclude that multi-objective evolutionary algorithms are suitable for service placement problem.
+Frey et al \cite{Frey:2013gp} propose a GA approach (CDOXploer) for finding near-optimal cloud deployment architectures and runtime reconfiguration rules for softwares. Their approach takes into account VM types, the number of VMs, and the scaling policies of VMs. CDOXplorer minimizes response times, costs, and SLA violations in order to satisfy the requirement of cloud users.  In comparison with Frey's centralized approach, Iturriaga et al \cite{6681297} propose an Evolutionary Algorithm (EA) with distributed sub-populations. In each sub-population, they applied a Simulated Annealing (SA) method to find the local optimal solution. The proposed algorithm is shown outperform than the reference list scheduling algorithm in both computation time and performance (maximizing the profit of a broker).
 
 \vspace{5mm}
 
-The workflow scheduling problem allocates a set of dependent services, organized as a directed acyclic graph (DAG). The objectives of workflow scheduling are minimizing makespan and cost. The major difference between workflow scheduling and service placement is the extra constraint on the order of services. Another difference is that workflow scheduling rarely considers the latency issue. 
+In service placement problem, cloud users would like to optimize the costs and performance (e.g QoS) of their services. Compared with cloud brokering problem, service placement less focuses on resource allocation but more focuses on the latencies between locations. Cloud users need to decide the locations of services and the number of services \cite{Guzek:2015ds}. 
 
- Tsai et al \cite{} develop an Improved Differential EA (IDEA) to solve the multi-objective scheduling problem. They represent the solution as a permutation of subtasks. They also design a crossover operator that only changes the resource allocation of subtasks and a mutation operator that changes the task order. They compare IDEA with NSGA-II, SPEA2, and DEA in two test scenarios. The results show their approach outperforms than other EC algorithms. 
+Tan et al \cite{Tan2017} propose an aggregation approach with binary PSO to solve the service placement problem with two objectives: minimizing cost and minimizing the response time. They find that the single-objective algorithm can only provide one solution for each run, hence, single-objective algorithm cannot provide alternatives when cloud users do not have preferences. Therefore, they develop an NSGA-II based approach \cite{Tan2016} that uses Pareto front approach to find a set of non-dominated solutions. They conclude that multi-objective evolutionary algorithms are suitable for the service placement problem.
+
+\vspace{5mm}
+
+The workflow scheduling problem allocates a set of dependent services, organized as a directed acyclic graph (DAG). The objectives of workflow scheduling are minimizing makespan and cost. The major difference between workflow scheduling and service placement is the extra constraint on the order of services. Another difference is that workflow scheduling rarely considers the latency issue. Compared with cloud brokering problem, workflow scheduling problems have additional dependencies between applications.
+
+ Tsai et al \cite{Tsai:2013fn} develop an Improved Differential EA (IDEA) to solve the multi-objective scheduling problem. They represent the solution as a permutation of subtasks. They also design a crossover operator that only changes the resource allocation of subtasks and a mutation operator that changes the task order. They compare IDEA with NSGA-II, SPEA2, and DEA in two test scenarios. The results show their approach outperforms than other EC algorithms. 
 
 \vspace{5mm}
 
 Capacity planning problems estimate the future load of VMs and PMs before allocating resources.
-The major objectives is to optimize the QoS while minimizing the cost of users. This problem is often treated as a dynamic problem. 
+The major objectives is to optimize the QoS while minimizing the cost of users. Different from above problems, the capacity planning problem is often treated as a dynamic problem. 
 
-Kousiouris et al \cite{} propose an artificial neural (ANN) network-based framework to predict the load of a GNU Octave system. They use a GA to create the structure of ANN and the ANN is encoded using a bit-string representation. The algorithm can be trained off-line and test on-lien. Therefore, it is well-suit for a dynamic problem.
+Kousiouris et al \cite{Kousiouris:2013vg} propose an artificial neural (ANN) network-based framework to predict the load of a GNU Octave system. They use a GA to create the structure of ANN and the ANN is encoded using a bit-string representation. The algorithm can be trained off-line and test on-lien. Therefore, it is well-suit for a dynamic problem.
 
 \vspace{5mm}
 
-Server Farm Load Balancing problem is also a dynamic problem. The task is to dispatch incoming requests to a set of machines. The major objective is to satisfy the QoS of a cloud user.
+Similar as the capacity planning problem, server Farm Load Balancing problem is also a dynamic problem. The task is to dispatch incoming requests to a set of machines. The major objective is to satisfy the QoS (e.g. makespan) of cloud users.
 
-\paragraph{Job shop scheduling}
+Laredo et al \cite{Laredo:2014db} propose an on-line and decentralized scheduler for distributing Bag-of-task kind of workloads to heterogeneous infrastructures. Their approach mimics the behavior of sandpile. They manage cloud resources (PMs) by segmenting resources and assign each segmentation with a monitor called agent. These agents interact with their neighbors (predefined) and share their information about resources. Tasks arrive to PMs and accumulate as grains of sand. When an agent detects an unbalance between a segment of resources and its neighbors, it triggers an avalanche. They test the system with very large scale problems: 2048 PMs and 2048 tasks and achieve at least five times better in terms of makespan and throughput than a round robin algorithm.
 
-In conclusion, 
+Server Farm load balancing is very similar to another classic problem: job shop scheduling (JSS). They both dispatch a set of jobs to a set of machines except load balancing problem focus more on computing resources such as CPUs and memories. In the next section, we will introduce JSS and the EC methods applying on JSS.
+\paragraph{Job Shop Scheduling}
+Job shop scheduling (JSS) problems \cite{Potts:2009eb} dispatch a set of jobs to machines. A job goes through a predetermined sequence of operations in order to finish its tasks. Each machine can only process a specific operation. Therefore, we need to make intelligent decisions to schedule these jobs in order to finish processing jobs before their due dates.
+
+JSS problems can be divided into two categories: static and dynamic. In static JSS problems, all properties of jobs and machines are known in advance. In dynamic JSS problems, properties of jobs are unknown.  
+
+The state-of-the-art approaches for static JSS problems use meta-heuristics. Examples of meta-heuristics approaches to JSS include Tabu search \cite{AmaralArmentano:2000dk}, GA \cite{Zhou:2009dq} and etc. These meta-heuristics can handle large JSS problem instances effectively. 
+
+Dynamic JSS problems often apply small heuristics such as dispatching rules \cite{Branke:2016wy} because dispatching rules have short reaction times and can quickly deal with unforeseen changes in an on-line event. For example, a SPT (shortest processing time) selects the job with the shortest processing time waiting at the available machine. Apart from simple dispatching rules, composite dispatching rules (CDRs) \cite{Jayamohan:2004kq} combine several simple dispatching rules to achieve higher performance. 
+
+However, it is difficult to design dispatching rules for dynamic JSS problems. This is because, first, no single dispatching rule is more effective than others for all JSS problems. Second, a real-world dynamic JSS problem is changing over time, e.g. machines are added and removed. Therefore, designing dispatching rules often requires domain knowledge. 
+
+To design dispatching rules more effectively, researchers use a hyper-heuristic technique to automatically generate dispatching rules. Specifically, a great number of hyper-heuristic approaches to JSS problem uses Genetic Programming (GP) technique called GP hyper-heuristic (GP-HH). GP-HH represents dispatching rules with a tree-based representation and these dispatching rules can be interpreted as priority-based dispatching rules. GP-HH approaches generally outperform manually designed dispatching rules for both static and dynamic JSS problems \cite{Branke:2016wy}. 
+
+In comparison between the dynamic JSS problem and the dynamic placement of application, they share many similarities. First of all, they are both on-line problems that require a fast reaction. Second, they both dispatch jobs to machines. The differences are the dynamic JSS problem normally does not care the amount of resources that a job consumes. The dynamic placement not only considers the resource requirement of jobs but also the remaining of resources in Physical machines (PMs). Another difference is that the jobs in dynamic JSS go through a route of machines while the jobs in dynamic placement stay at one machine.
+
+The similarities inspire us to apply GP-HH approach on the dynamic placement of application problem.
+
+\vspace{5mm}
+
+
+In conclusion, EC-based algorithms have been widely used in resource allocation problems in cloud for both static problems and dynamic problems. Specifically, meta-heuristics such as GA and PSO are more suitable for static problems and hyper-heuristics such as GP are suitable for dynamic problems. 
+We conclude several advantages of EC approaches. First, EC-based algorithms rely on searching in the solution space, which bypass the complexity of finding the exact mathematical approach. Second, EC-based algorithms are population-based algorithms, which can find near-optimal solutions within a feasible amount of time.
 Next section will provide the literature of traditional approaches and EC-based approaches on server consolidation strategies in terms of two virtualization: container and VM. 
 
 
 \section{Related Work}
 \label{sec:related_work}
-% In this section, we summarize the related works in the terms of three resource management processes: initial placement of application, Periodic placement and dynamic consolidation, corresponding to our proposed objectives. In each sub section, we analyze the container-based and VM-based approaches, discuss their models and methodologies. 
 Related work discusses the server consolidation strategy and the studies of consolidation strategies on three placement decision scenarios: initial placement, periodic placement, and dynamic placement. 
 
-% Several one dimensional bin packing algorithms have been generalized to vector bin packing such as generalized First Fit and Best Fit. In studies \cite{}, they suggest that an algorithm should keep the bins as ``balanced'' as possible, so that bins have better potential to accommodate more items. 
 
-% \subsubsubsection{Server consolidation technologies}
-
-% \textcolor[Maroon]{Why Server consolidation?}
-% Physical server sprawl not only wastes valuable computing resources but leads to a waste of energy, as Hameed et al \cite{Hameed:2016cma} addressed, even at a low level of 10\% of CPU utilization, PMs still consume more than 50\% of its peak time. 
-% In addition, Han et al \cite{Han:2017jz} state that average resource utilization of PMs  is usually between 10\% to 50\%
-% of its capacity. Server consolidation is often used to solve the disproportionate between utilization and energy consumption \cite{Barroso:2007jt}.
-
-% \textcolor[Maroon]{How to do server consolidation?}
-
-
-
-
-% \textcolor{Maroon}{To understand the relationship among providers and users, we first illustrate the stakeholders of Cloud computing.} (see Figure \ref{fig:stakeholders}): Cloud providers, Cloud users (applications providers), and End (application) users \cite{Jennings:2015ht}. Cloud providers build data centers, provide maintenance and resource management on hardware infrastructures such as servers. Cloud users develop and deploy applications on Cloud infrastructures. End users consumes applications developed by Cloud users and hosted by Cloud providers. 
-
-% Cloud computing has made one critical change in software industry, it separates the role of traditional service provider into service provider and infrastructure provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, this separation add one more layer between service provider and users, as: Cloud providers, Cloud users (service providers), and End users \cite{Jennings:2015ht} . 
-
-
-% The detailed goal and objectives of stakeholders are described below. 
-
-
-% \begin{itemize}
-% 	\item \emph{Cloud providers}' goal is to increase the profit by boosting the income and reducing the expense. Their income comes from Cloud users' rental of servers or \emph{Physical Machines (PMs)} in terms of resource quality (e.g  3.5GHz dual-core CPU), quantity (e.g 3 PMs), and time (e.g 1 year). Therefore, Cloud providers objective is to maximize utilization of computing resources. A high utilization brings two benefits, firstly, it increases income by accommodating more applications in limited resources. Secondly, it cuts the expense of energy consumption by packing applications in a minimum number of PMs so that idle PMs can be turned off. 	
-% 	\item \emph{Cloud users}' goal is also to increase the profit mainly through two objectives, attracting more End users and reduce the expense of resources. The first objective can be achieved by improving the quality of service as well as lower the fee for End users. Either way depends not only on the software entities but also the quality of service (QoS) offered by Cloud provider. The second objective can be achieved by a good estimation of the reserved resources, so that they do not rent insufficient  or too much resources which cause performance degradation or wastage.
-% 	\item \emph{End Users}' goal is to obtain a satisfactory service. It is achieved by signing a Service Level Agreement (SLA) with Cloud users which constrains the performance of the services.
-% \end{itemize}
-
-% \textcolor{Maroon}{Cloud service models describe the responsibilities and obligations of stakeholders.}
-% Cloud computing has three traditional service models \cite{Mell:2011jj}: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The relationship among three service models is showed in Figure \ref{fig:architecture}. 
-% Service models of Cloud computing are critical in solving energy consumption problem because their distinct ways of managing resources have sever effect on the problem. These distinct ways of resource management mainly result from the responsibilities among stakeholders. 
-
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=0.9\textwidth]{pics/architecture.png}
-% 	\caption{Cloud computing architecture \cite{Zhang:2010vo}. 
-% 	IaaS provides the fundamental resources such as CPU cores, RAM. The resources are usually wrapped with various types of virtual machine. PaaS provides a software platform sitting on top of IaaS for Cloud users to develop applications. SaaS describes the relationship between applications and End Users.}
-% 	\label{fig:architecture}
-% \end{figure} 
-
-% \begin{itemize}
-% 	\item IaaS, a Cloud provider hosts hardwares such as PMs and cooling infrastructure on behalf of Cloud users. Computational resources are often encapsulated in virtualized computing units called virtual machines (VMs). Cloud providers establish a number of types of VM for simplifying the management. The `type' means a VM contains a certain quantity of resources such as 2-cores and 1 GB RAM.  \emph{Traditional} IaaS and PaaS use VM as the fundamental unit of resources.
-
-% 	A typical procedure of an application deployment includes several steps.
-% 	Initially, the Cloud user estimates the resources that their applications might consume and selects a type of VM which can satisfy the requirement. After the Cloud user has made the decision, he/she sends requests to Cloud providers for a number of VMs. Finally, Cloud providers received the request, provisioned and allocated these VMs to PMs. 
-
-% 	% From the resource management perspective, the constraint in allocation of VMs is that the aggregated VMs' resources in a PM cannot exceed the capacity of the PM. After these VMs have been allocated, their types cannot be changed. During the life cycle of an application, Cloud providers can dynamically adjust the locations of VMs, provision new VMs (same type) for the replicas of an application, as well as turning on/off PMs.
-
-% 	% After receiving the requests, Cloud providers choose a set of PMs which contains sufficient resources, provision the required VMs in them. Then, the VMs are assigned to the Cloud users. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is used to provision new VMs to Cloud users. Finally, Cloud providers optimize the locations of VMs so that the energy consumption of data center is minimized.
-
-
-%  	\item PaaS, a Cloud provider offers a platform which allows Cloud users to develop, test and deploy their applications on it.
-
-%  	From resource management perspective, PaaS is sitting above the IaaS which means the underlying resource is still based on IaaS VM types. Different from IaaS, PaaS takes the responsibility of selecting VMs and allows Cloud users to focus on software development. 
-
- 	% A typical procedure of a Cloud user deploying their applications in an PaaS cloud includes several steps.
- 	% In the first step, Cloud users need to provide the initial estimation of the quantity of resources instead of types of VM. Then, Cloud providers determine the types of VM for applications according to the estimated resources.  After this step, resource management system conducts the provisioning and allocating as the same steps in IaaS. During the life cycle of applications, similar to IaaS, Cloud providers can also adjust the location of VMs, add new VMs, and control the status of PMs. Different from IaaS, Cloud providers can change the type of VM for an application as long as the application's performance can be guaranteed.
-
- 	% The system monitors the utilization of a number of PM and VM and through adjustment of their location to optimize the energy consumption of the data center. The input is a list of VMs (e.g CPU cores and RAMs) and a list of PMs. The task is to put the VMs into these PMs so that the VMs only use a minimum number of PMs. The sizes of VMs and PMs are fixed. A system can only adjust which VM is allocated to which PM. A general constraint is the sum of resources of the VMs inside a PM cannot exceed the capacity of the PM.
-
-%  	\item SaaS, Cloud users develop applications and deploy them on Cloud so that End users can access them via the Internet. Although this service model does not directly related to the resource management, it provides the fundamental reasons for resource management and optimization: applications receive fluctuated requests from End users. Because of the dynamic nature of workloads, the underlying resources must also be dynamic adjusted to meet the requirement.
-% \end{itemize}
- 
-% \subsection{Drawbacks of Traditional Service Models}
-
-% There are three characteristics in IaaS which naturally lead to a low resource utilization.
-% \begin{itemize}
-% 	\item Resource over-provisioning \\
-% 	As previous mentioned, VMs are either selected by Cloud users or automatically selected by software platforms. In either case, it requires an estimation of required resources. However, The accurate estimation is almost impossible because of unpredictable workloads; A simple way is to reserve more resources for ensuring the QoS at peak hours \cite{Chaisiri:2012cva}, rather than completely rely on auto-scaling, simply because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, in most of time, resources are wasted. In IaaS, the types of VM are a part of the contract, Cloud providers cannot simply change the type of VMs after provisioning.
-
-% 	\item Unbalanced usage of resources \\
-% 	Specific applications consume unbalanced resources which leads to vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
-
-% 	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) \\
-% 	% Redundant operating systems (OSs) cause vast resource wastage. \\ 
-% 	In VM-based resource allocation, heavy overhead is caused by
-% 	the hypervisor of VMs and the separated operating systems running in the PM. A hypervisor manages and monitors the VMs running on a PM. The overhead of a hypervisor is heavier with the increasing numbers of VM. Redundant operating system is another reason for overhead, as normal applications do not need specific operating systems; Commonly used OSs - such as Linux-based: RedHat, or Windows server versions - are well enough for their needs. Therefore, running applications in separated operating system simultaneously is unnecessary.
-% \end{itemize}
-
-
-% For traditional PaaS, Cloud providers can adjust the VMs' location and the type of VMs. Therefore, it overcomes the first drawback of IaaS. Because of PaaS is built upon IaaS, the one-on-one relationship between application and VM still exist. PaaS can only select the most suitable type instead of changing their sizes. Therefore, the unbalanced resource problem cannot be solved. In addition, PaaS brings a restriction for the applications deployed on it. PaaS build a software middle-ware to allow Cloud users' development. The middle-ware requires the deployed applications to be compatible with the environment, for example, Google App engine only allows certain programming languages and libraries. Therefore, the generality of PaaS is limited. It is urgent to provide a environment which supports automatic resource management as well as an editable programming environment.
-
-
-% \subsection{Container as a Service}
-% \textcolor{Maroon}{Container as a Service (CaaS) \cite{Piraghaj:2017vi} is a new service model which is usually considered as a combination of IaaS and PaaS.} CaaS uses containers and VM as its fundamental resource allocation unit as shown in Figure \ref{fig:comparison} on the right hand side. 
-
-
-% \textcolor{Maroon}{CaaS has advantages of both IaaS and PaaS but without their disadvantages.} On one hand - similar to PaaS - CaaS allows Cloud providers to manage resource in a fine granularity with containers, therefore, it may lead to high utilization of resources. On the other hand - similar to IaaS - CaaS allows customers to customize their software environment without being constrained by platforms. Therefore, it has more flexibility than PaaS.
-
-
-
-% Later, multiple ways of dynamic migration (e.g pre-copy \cite{Clark:2005ud} and post-copy \cite{Hines:2009fv}) of VM were invented, which compresses and transfers a VM from one PM to another. This technique allows resource management in real time which inspires the strategy of server consolidation. 
-
-	
-% On the other hand, the disadvantages of containers are categorized in two aspects. Currently, containers have rather poor performance in isolation for memory, disk, and network. Security is immature in containers \cite{Bernstein:2014ur}, therefore, high security required applications are not recommended to be deployed in such systems. 
-
-
-
-% PSO was initiated to solve continuous optimization problems - position update function is developed for real numbers. To address discrete problems, Kennedy and Eberhart developed a binary PSO \cite{Kennedy:1997hd}. 
-
-%
-
-
-
-% Static initialization, is also frequently referred to initial placement problem \cite{Jennings:2015ht}. Whenever a request for provisioning of applications by one or more Cloud users. The resource management system schedules the applications into a set of PMs. Currently, most state-of-the-art research focus on VM-based placement, in this case, applications are installed in VMs. Therefore, ``application placement'' and ``VM placement'' are used interchangeable in the literature. 
-
-% In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
-
-
-
-\subsection{Initial placement of application}
+\subsection{Initial Placement of Applications}
 \label{sec:initial}
 
 This section first discusses server consolidation strategies on container-based virtualization and VM-based virtualization.
 
-% since there are only few research study the  container-based placement and none of them considers it as a bilevel optimization problem, specifically, each level of optimization problem is a bin packing problem.  
-
-
-% We will first review a number of approaches solving the problem with traditional bin packing approaches. Then, a number of advanced approaches will be examined. We mainly study the following five aspects: resource model, power model, wastage model, objective, and algorithm.
-% In energy-aware resource management, the initialization has the objective of minimizing the used PMs. In literature, the static initialization problem is often modeled as the vector bin packing problem. Each application represents an item and PMs represents bins.
-
-\subsubsection{Container-based initial placement of application}
+\subsubsection{Container-based Initial Placement of Applications}
 \label{container-based-placement}
-This section will discuss existing approaches for Container-based initial placement. Then, we will describe a potentially way of modeling energy consumption in container-based virtualization: a bilevel model. Last, we will illustrate a number of algorithms to solve bilevel optimization problems. 
+This section will discuss existing approaches for container-based initial placement. Then, we will describe a potentially way of modeling energy consumption in container-based virtualization: a bilevel model. Last, we will illustrate a number of algorithms to solve bilevel optimization problems. 
 
 
-\paragraph{Existing approaches}
+\paragraph{Existing Approaches}
 
 \bx{We discuss two research works on container-based virtualization: Piraghaj et al \cite{Piraghaj:2016bw} and Mann \cite{Mann:2016hx} on their similarities and differences.} Two papers both consider two resources: CPU and memory. The constraints on these resources are the containers cannot exceed the resources in their located VMs. Both research do not include the balance of CPUs and memories. In contrast, in most VM-based approaches (discussed in next section) consider the balance.
 
@@ -539,16 +374,13 @@ In order to prove interaction of two-levels of placement, Mann fixed a VM placem
 
 In order to solve the problem, we believe a promising way is to model the energy consumption in container-based virtualization as a bilevel optimization~\cite{Colson:2007bu} (described in the next section). Bilevel optimization represents the interaction so that a bilevel optimization algorithm can solve the energy consumption problem. Next section will introduce the basic structure of a bilevel model or a bilevel optimization.
 
-% The main challenge is that solving a bilevel optimization is NP-hard~\cite{Sinha:2013tn}. Traditional approaches such as Branch-and-bound \cite{Bard:1982gsa} can only be applied in very small problems. Evolutionary algorithms, on the other hand, become popular approaches in bilevel optimization \cite{Wang:2005fa, Sinha:2013tn}. 
 
 
 
-\paragraph{Bilevel optimization}
+\paragraph{Bilevel Optimization}
 \label{bilevel}
 
-% \bx{The joint allocation of container and VM can be modeled as a bilevel optimization.}
 A bilevel optimization \cite{Colson:2007bu} is a kind of optimization where one problem is embedded within another.
- % The outer optimization is referred to as the \emph{upper-level} problem, while the inner optimization is referred to as the \emph{lower-level} problem. 
 The general formulation of a bilevel optimization problem can be defined as: 
 
 \begin{subequations}
@@ -571,7 +403,7 @@ In practice, there are a number of problems that are bilevel in nature. For exam
 
 
 
-\paragraph{Evolutionary Computation Approaches for Bilevel optimization}
+\paragraph{Evolutionary Computation Approaches for Bilevel Optimization}
 
 % A number of studies have been conducted on bilevel optimization \cite{Colson:2007bu,Dempe:2006jc}. 
 Traditional approximation algorithms such as Karush-kuhn-Tucker approach \cite{Bianco:2009ej, Herskovits:2000be}, branch-and-bound \cite{Bard:1982gsa} are often applied to solve bilevel problems. Most of these approaches are not applicable when the problem size increases.
@@ -591,11 +423,7 @@ In conclusion, as the complexity of the problem, practical problems with bilevel
 
 
 
-% Without this constraint, all containers can be simply allocated to homogeneous VMs which can be solved by traditional VM-based approaches.
-
-% Mesos \cite{Hindman:2011ux} is a platform for sharing commodity clusters between cluster computing frameworks such as Hadoop and MPI. It has a two-level of resource allocation architecture where a master node and several slave node. A master node only decides how many resources to offer to each framework (slave) based on fair sharing policy \cite{Ghodsi:2011vm}. Each slave node belongs to a cluster framework and it makes the decision of which resources to use. Each framework has to define its allocation policy. Mesos focus on sharing resources across multiple frameworks and has a better scalability since it deligates the application placement to decentralized slave nodes. The main problem for Mesos is that it does not consider energy consumption for Cloud providers with user-defined allocation policy.
-
-\subsubsection{VM-based initial placement of application}
+\subsubsection{VM-based Initial Placement of Applications}
 \label{initial_placement}
 This section first describes a commonly used energy model for VM-based virtualization: Bin packing model. Then, we review a number of traditional approaches and EC-based approaches for VM-based initial placement . We mainly study the following five aspects: resources, power model, wastage model (balance between resources), objective, and algorithm.
 
@@ -618,7 +446,7 @@ Xiong and Xu \cite{Xiong:2014jq}               & CPU,RAM,Bandwidth,Disk      & P
 \end{table}
 
 
-\paragraph{Energy model in VM-based clouds: Vector Bin Packing Model}
+\paragraph{Energy Model in VM-based Clouds: Vector Bin Packing Model}
 \label{sec:vector_bin_packing}
 \bx{Server consolidation is typically modeled as a Vector bin packing problem which is a variant of standard bin packing problem (see Figure \ref{fig:bin_packing_problem}).} Vector bin packing is also referred as multi-capacity \cite{Leinberger:1999fs} or multi-dimensional bin packing problem \cite{Xiong:2014jq}. Vector bin packing is particularly suitable for modeling resource allocation problems where there is a set of bins with known capacities and a set of items with known demands \cite{Panigrahy:2011wk}. The optimization objective is to minimize the number of bins.
 
@@ -629,7 +457,6 @@ A d-dimensional Vector Bin Packing Problem ($VBP_d$), give a set of items $I^1, 
 
 
 
-% As previous Section \ref{vector_bin_packing} mentioned , VM placement problem is often modeled as vector bin packing problem because they are very structurally similar. 
 
 \paragraph{Traditional Approaches}
  Wang and Xia \cite{Wang:2016eha} develop a MIP algorithm for solving large-scale VM placement problem under a \emph{non-linear} power consumption model.  Instead of considering the power consumption as a linear model like most researchers, they consider the power consumption is a cubical power function of frequency and use a \emph{dynamic voltage and frequency scaling (DVFS)} technique to adjust CPU frequencies. In order to solve the non-linear problem, they first use a linear function to approximate the cubical function. Then, they first use the Gruobi MIP solver to solve the relaxed linearized problem. Then, they apply an iterative rounding algorithm to obtain the near optimal solution.   
@@ -657,26 +484,13 @@ Xiong and Xu \cite{Xiong:2014jq} propose a PSO based approach to solve the probl
 In summary, most of VM-based placement approaches consider two or three resources (I/O has not been considered in many approaches because they assume that network attached storage (NAS) is used as a main storage along the cluster \cite{Murtazaev:2014eo}). After Mishra unreal the principles of vector bin packing, most research apply a balance-measure among resources as their objectives. EC approaches are widely used because they are better performed than traditional heuristics and faster than ILP methods.
 
 
-% Because of its NP-hard nature, several researchers propose well-known bin-packing heuristics
-% First Fit (FF), First Fit Decreasing (FFD), Best Fit (BF) and etc. These algorithms have constant-factor approximation to bin-packing problems. However, VM placement is more complex than bin-packing problem \cite{Mann:2015ua}, 
-
-% Panigraph et al \cite{Panigrahy:2011wk} study variants of First Fit Decreasing (FFD) algorithms and inspired by bad isntances for FFD-type algorithms, they propose a geometric heuristics which outperform FFD-based heuristics in most of cases.
-
-% \subsection{VM-based Dynamic Consolidation Techniques}
-% \label{sec:dynamic}
-
-% \section{Container-based Consolidation Techniques}
-% Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or {}dynamic problem \cite{Beloglazov:2012bw}. 
-% As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
-% \subsubsection{Affinity-aware VM Placement}
-
-\subsection{Periodic placement}
+\subsection{Periodic Placement of Applications}
 Periodic placement (see Section \ref{sec:scenarios}) is an process that optimizes the current allocation of resources in a periodic fashion \cite{Mishra:2012kx}. This is because the cloud data center is a dynamic environment with continuous deployment and releases that causes degradation of the resource utilization, thus, the allocation needs to be adjusted when the performance degrades to a certain level. In comparison with initial placement of application (see Section \ref{initial_placement}), the similarity is that they are both static approaches which consider a batch of applications and PMs. The difference is that periodic placement needs to take the cost of application migration into account, therefore, it is often considered as a multi-objective optimization problem. 
 
 Based on our knowledge, periodic placement has not been studied in the context of container-based clouds. 
 Therefore, this section only discusses VM-based periodic placement.
 
-\subsubsection{VM-based periodic placement}
+\subsubsection{VM-based Periodic Placement of Applications}
 This section will first discuss migration models. Secondly, we will discuss the approaches in periodic placement in the VM-context, specifically, in terms of the prediction of workload, these gaps existed in both VM and container context. 
 
 \paragraph{Migration Model}
@@ -684,7 +498,7 @@ Murtazaev and Oh \cite{Murtazaev:2014eo}, Beloglazov et al \cite{Beloglazov:2012
 
 Another research direction of  bandwidth optimization technique considers the network bandwidth and the size of VM memory \cite{Deshpande:2012jf, Gerofi:2013bd}. However, bandwidth optimization mainly focus on minimizing the transfer of memory pages called deduplication. Therefore, bandwidth optimization technique does not consider the interaction between migration and consolidation while we believe the consolidation should also consider the size of memory and network bandwidth.
 
-\paragraph{Traditional approaches}
+\paragraph{Traditional Approaches}
 % Similar to previous section, we will focus on the following aspects: resource, migration model, workload model, algorithm and objectives.
 
 Murtazaev's approach minimizes the number of migration by developing an algorithm that always chooses a VM from the least loaded PM and attempts to migrate these VMs to the most loaded PMs. 
@@ -706,24 +520,20 @@ For the second type of workload, it is hard or even impossible to predict its be
 
 Meng et al \cite{Meng:2010gh} proposed a standard time series technique to extract the deterministic patterns (e.g trends, cycles and seasonality) and irregular fluctuating patterns from workloads' CPU utilization; they assume the periodic behavior of workload will preserve in the future and predict the irregular parts with two approaches: with and without explicit forecast error models. Then, applications are paired according to their negative correlation. They evaluate the workload prediction and application selection with a server consolidation task. They use First Fit to allocate paired applications. During the consolidation, The consolidation results show that they use 45\% less PMs for hosting the same number of VMs. Furthermore, their approach is more robust since the variation of workload is considered. However, they only consider two complementary applications at a time. 
 
-\paragraph{EC-based approaches}
+\paragraph{EC-based Approaches}
 In a similar problem to periodic optimization of application, Dhinesh and Venkata propose a honey bee behavior for load balancing  of application \cite{Babu:2013jf}. They represent workloads on overloaded PMs as bees and VMs with low load levels as bees' destinations. The load-balancing task has three objectives: decreasing makespan and response time, improving the load balance, and reducing the number of migrated tasks. The honey bee algorithm simulates bee behavior as a search mechanism. Although this research does not focus on the energy consumption, it provides some insights of the migration model and a new EC-based approach.
 
-% \subsubsection{Container-based periodic placement}
-% 
 
-% \paragraph{Migration Model}
-% No study has proposed a migration model for container-based periodic placement.
+\vspace{5mm}
 
-% \paragraph{Existing approaches}
-% No study has proposed an algorithm for container-based periodic placement.
+In summary, current migration models of placement of application normally do not consider the resources. This model cannot apply in container-based virtualization. Another disadvantage is that most research do not consider the fluctuation of workloads. In addition, no research has focus on container-based periodic placement. 
 
 
-\subsection{Dynamic placement}
+
+\subsection{Dynamic Placement of Applications}
 This section first discusses server consolidation strategies on VM-based virtualization and container-based virtualization.
-% Dynamic placement assumes that we need to migrate an application from a PM to another in a short time period. Thus, the resource demand of the application is no longer stochastic in nature. We can see resource demand as a fixed value. 
 
-\subsubsection{VM-based dynamic placement}
+\subsubsection{VM-based Dynamic Placement}
 \label{sec:dynamic}
 
 Forsman et al \cite{Forsman:2015ca} propose two distributed migration strategies to balance the load in a system. \emph{The push} strategy is applied on overloaded PMs; it attempts to migrate \emph{One} VM at a time to less loaded PMs. \emph{The pull} strategy is applied on underutilized PMs requesting workloads from heavier loaded PMs. Each of the strategy is executed on each PM as an intelligent agent. These intelligent agents (e.g PMs) share their status with each other through a communication protocol. Forsman's approach has several interesting features. First, they apply an adaptive high-load threshold (e.g 0.7 of overall CPU utilization) so that it considers the environment changes. Second, they use an EWMA algorithm to reduce the unnecessary migration because EWMA \cite{Holt:2004fs} is useful in smoothing out variations in the average load. Third, they applied an entropy to model the load distribution. The entropy method is also applied in some previous approaches \cite{Qin:2012wu,Kunkle:2008bz}. In addition, Forsman's system is agent-based, which means large amount of communication may occur between nodes. The heavy communication would certainly cost extra network resources. Therefore, we expect to design a centralized system, where all nodes are controlled by a controller. 
@@ -731,301 +541,27 @@ Forsman et al \cite{Forsman:2015ca} propose two distributed migration strategies
 Xiao et al  \cite{Xiao:2015ik} propose an algorithm based on evolutionary game theory. Their approach has two contributions. First, they build a quadratic energy model for the energy consumption of PM and a linear model for the energy consumption of migration. Second, they propose an algorithm based on Multiplayer random evolutionary game theory to solve the dynamic placement problem. In their approach, VMs are mapped into players that take part in the evolutionary game. In each iteration, all players choose their best feasible action, i.e, players migrate to the PMs, which can minimize the energy consumption. Some players randomly choose PMs in order to avoid being stuck at a local optimal. Xiao compared their approach with give simple bin-packing heuristics: First Fit, Best Fit Increasing, Best Fit Decreasing, Greedy and Load Balance rule. The solutions show their approach can improve energy consumption greatly, especially in the scenario that the distributions of VMs are very centralized.
 
 
-\subsubsection{Container-based clouds}
-\paragraph{Existing approaches}
+\subsubsection{Container-based Clouds}
+\paragraph{Existing Approaches}
 Piraghaj et al \cite{Piraghaj:2015dv} propose a framework for container-based resource management including three steps, analyzing resources to trigger migration, deciding which containers to migrate, and placing the container to a VM. In the third step, Piraghaj applies three heuristics: First-Fit, Random, and Least Full. However, this work only reports that their approach can reduce the number of VMs but does not mention how to reduce the number of PMs by migrating VMs. Therefore, this work does not consider the interactions between two levels: VM and PM. 
 
+
+\vspace{5mm}
+
+In summary, current approaches for dynamic placement are mostly based on manual designed heuristics, which require domain knowledge. In addition, for container-based dynamic placement, the only research does not consider the interaction between two-level of placement and solves the bilevel problems layer-by-layer.
 % \paragraph{GP-HH approach for Bilevel optimization problem}
 % So far, no study has focus on using GP-HH for bilevel optimization problem. 
 
 \section{Summary}
 
-\bx{This chapter reviewed the main concepts of cloud resource management and server consolidation strategies.} It discusses the challenges of server consolidation in container-based clouds. We illustrate the limitations of existing work on three placement decision scenarios in both container-based and VM-based clouds. 
+\bx{This chapter reviewed the main concepts of cloud resource management, server consolidation strategies, and Evolutionary Computation (EC).} It also reviews both VM-based and container-based consolidate strategies in terms of traditional approaches and EC-based approaches. We illustrate the limitations of existing work on three placement decision scenarios in both container-based and VM-based clouds. 
 
 \begin{itemize}
-	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based initial placement of application conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub models such as energy model, workload model, variables and constraints need to be further investigated.
+	\item \bx{Current research lacks appropriate model to capture the relationship between containers, VMs and PMs.} Hence, most research on container-based initial placement of application conducts the placement in two independent steps: container-VM and VM-PM. These approaches neglected the interaction between two levels of placement, hence, they cannot reach a near optimal energy consumption. A bilevel model for the joint placement of containers and VMs need to be proposed. Related sub-models such as energy model, workload model, variables and constraints need to be further investigated.
 	\item Periodic placement of application has not been studied in the container context. A bilevel multi-objective energy model needs to be proposed which considers minimizing migration cost as well as minimizing energy consumption. 
 	\item Traditional periodic placement of application mostly consider static workload. Thus, it is very likely lead to large number of adjustment of applications' placement in the future because the fluctuation of workloads. These adjustment will increase the cost for Cloud providers. In order to provide a robust placement of application, various predictable workload patterns such as linear continuously changing can be considered. It needs more investigation on how to represent various workloads and how to combine them in a compact structure.
 	\item Current dynamic placement of application approaches are based on simple bin-packing algorithms and manually designed heuristics. These heuristics are either perform poorly or cannot be applied with specific constraints. A hyper-heuristic approach can learn from previous good placement patterns and automatically generate heuristics. In order to design a hyper-heuristic, features of various workload need to be investigated. 
 \end{itemize}
 
-
-This research aims to address the above-mentioned issues. The next chapter will focus on the initial work conducted in investigating NSGA-II for bilevel initial placement of application.
-
-
-% Beloglazov and Buyya \cite{Beloglazov:2012bw} propose
-
-
-
-
-
-% Initialization is one of the major step in resource management. It can be considered as a static problem \cite{Jennings:2015ht} or dynamic problem \cite{Beloglazov:2012bw}. 
-% As we discussed in the previous section, a dynamic allocation normally cannot gives a global optimized solution of a batch of tasks. Therefore, in the context of maximizing the energy efficiency of a data center, we category initialization into a static optimization approach.
-
-% % Previous research mainly use heuristic to solve this problem. 
-
-
-% \subsection{Traditional Approaches}
-% \subsection{EC Approaches}
-
-% \section{}
-% \textcolor{Maroon}{Why this field is important.}
-
-% Cloud computing has made one critical change in software industry, it separates the role of traditional service provider into service provider and infrastructure provider. As Wei \cite{Wei:2010fn} states, ``one provides the computing of services, and the other provides the services of computing''. Therefore, this separation add one more layer between service provider and users, as: Cloud providers, Cloud users (service providers), and End users \cite{Jennings:2015ht} (see Figure \ref{fig:stakeholders}). 
-
-% This separation of role has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users. First, Cloud users do not need upfront investment in hardwares (e.g servers and networking devices) and pay for hardwares' maintenance. Second, Cloud users will not worried about the limited resources will obstruct the performance of their services when unexpected high demand occurs. The elastic nature of cloud can dynamic allocate and release resources for a service. In addition, Cloud users can pay as much as the resource usage under a \emph{pay-as-you-go} policy. Third, Cloud users can publish and update their applications at any location as long as there is an Internet connection. These advantages allow anyone or organization to deploy their softwares on Cloud in a reasonable price. 
-
-
-
-
-% In this thesis, we focus on a core issue of helping Cloud providers to increase their profits. This goal can be done by two ways, attracting more Cloud users to use Cloud services and reducing the expense.
-
-
-
-
-
-
-
-
-% Service models of Cloud computing are critical in solving energy consumption problem because their distinct ways of managing resources have severe effect on the problem. These distinct ways of resource management mainly result from the responsibilities among stakeholders. 
-
-% There are three traditional service models \cite{Mell:2011jj} which describe the responsibilities among stakeholders: Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). The architecture of Cloud computing is illustrate in Figure \ref{fig:architecture}.
-
-% \begin{itemize}
-% 	\item IaaS, a Cloud provider hosts hardwares such as PMs and cooling infrastructure on behalf of Cloud users. A Cloud provider also provides maintenance, management of hardware resources. 
-
-% 	In IaaS, Cloud provider offers the fundamental resources such as CPU cores, RAMs, and network bandwidth. These resources are often encapsulated in virtualized computing units called virtual machines (VMs). Cloud providers establish a number of types of VM for simplifying the management. The `type' means a VM contains a certain quantity of resources such as 2-cores and 1 GB RAM.  \emph{Traditional} IaaS and PaaS use VM as the fundamental unit of resources.
-
-% 	A typical procedure of a Cloud user deploying their applications in an IaaS cloud includes several steps.
-% 	Initially, Cloud users estimate the resources that their applications might consume and select a type of VM which can satisfy the requirement. After Cloud users have made the decisions, they send requests to Cloud providers for a number of VMs. Finally, Cloud providers received the request, provisioned and allocated these VMs to PMs. 
-
-% 	From the resource management perspective, the constraint in allocation of VMs is that the aggregated VMs' resources in a PM cannot exceed the capacity of the PM. After these VMs have been allocated, their types cannot be changed. During the life cycle of an application, Cloud providers can dynamically adjust the locations of VMs, provision new VMs (same type) for the replicas of an application, as well as turning on/off PMs.
-
-	% After receiving the requests, Cloud providers choose a set of PMs and allocate the required VMs in them. Then, Cloud users can access the VMs through remote consoles. Cloud providers manage the VMs by monitoring the resource utilization of VMs and PMs. If a VM has run out of resources, an auto-scaling strategy is automatically applied to duplicate the users' VM. Finally, Cloud providers optimize the locations of VMs by consolidating them into a minimum number of PMs.
-
-
- 	% \item PaaS, a Cloud provider builds a software platform on top of hardwares provided by IaaS. This platform allows a complete life-cycle of software development including development, testing and deployment.
-
- 	% From resource management perspective, PaaS is sitting above the IaaS which means the underlying resource is still based on IaaS VM types. Different from IaaS, PaaS takes the responsibility of selecting VMs and allows Cloud users to focus on software development. 
-
- 	% A typical procedure of a Cloud user deploying their applications in an PaaS cloud includes several steps.
- 	% In the first step, Cloud users need to provide the initial estimation of the quantity of resources instead of types of VM. Then, Cloud providers determine the types of VM for applications according to the estimated resources.  After this step, resource management system conducts the provisioning and allocating as the same steps in IaaS. During the life cycle of applications, similar to IaaS, Cloud providers can also adjust the location of VMs, add new VMs, and control the status of PMs. Different from IaaS, Cloud providers can change the type of VM for an application according to it needs.
-
- 	% The system monitors the utilization of a number of PM and VM and through adjustment of their location to optimize the energy consumption of the data center. The input is a list of VMs (e.g CPU cores and RAMs) and a list of PMs. The task is to put the VMs into these PMs so that the VMs only use a minimum number of PMs. The sizes of VMs and PMs are fixed. A system can only adjust which VM is allocated to which PM. A general constraint is the sum of resources of the VMs inside a PM cannot exceed the capacity of the PM.
-
- 	% \item SaaS describes the relationship between Cloud users and End users. End users create workloads for applications. Although this service model does not directly related to the resource management, it provides the fundamental reasons for resource management and optimization. Because of the dynamic nature of workloads, the underlying resources must also be dynamic adjusted to meet the requirement.
-% \end{itemize}
-
-
-
-% \textcolor{Maroon}{Describe the current ``hot topics'' in the field}
-
-% \subsection{Research Fields in Cloud Computing}
-% Cloud computing paradigm has been applied for over ten years, however, many problems have been fully addressed and new challenges has emerged along with new technologies. We summarize some of the hot research fields.
-
-% \subsubsection{Automated service provisioning}
-% The key functionality of Cloud computing is to provide an elastic resource management for applications. Cloud users desire a complete automated service provisioning which automatically allocate and release resources for applications that satisfies the service level objective (SLOs). 
-
-% Current automated service provisioning normally involves three steps \cite{Zhang:2010vo}: 
-% (1) Constructing a performance model which can predict the need of resources of a given application. (2) Periodically predict the future resource requirement of the application using the model. (3) Automatically allocating resources to the application.
-
-% There are multiple difficulties in this problem. First problem is the mapping between SLOs such as Quality of Service (QoS) requirements: throughput, response time and etc, to low level hardwares such as CPU and memory requirements. This problem is often addressed as Resource Demand Profiling. Approaches are categorized into model-driven, where a predefined model is used to identify the resources' requirement of applications; or statistical techniques which use machine learning algorithms to predict the requirement in the future.
-
-% In the model-driven category, Urgaonkar and et al \cite{Urgaonkar:2005uo} that use a queuing model to determine the resources (each server as the resource unit) for multi-tier application. They model each server as as a G/G/1 queuing system; Bennani and Menasce \cite{Bennani:2005wd} also propose a multiclass queuing network models for both online transactions applications and batch processing applications. 
-
-% In statistical approaches, Li and et al \cite{Li:2011cx} develop a trace-and-replay tool called CloudProphet to predict a legacy application's performance. It monitors the performance of the application locally and replays the workload in the cloud for prediction. Gong and et al. \cite{Gong:2010td} use a signal processing algorithm - Fast Fourier Transform to detect 
-% repeating resource usage patterns, and a statistical learning algorithm - discrete-time Markov chain to build short-term demand predictions.
-
-% Furthermore, the decisions are often made in an on-line fashion to trigger the allocation and de-allocation of resources in order to satisfy the fluctuate workload over multiple time scales \cite{Crovella:1997tr}. 
-
-
-
-% \subsubsection{Virtual machine migration}
-% \subsubsection{Server consolidation}
-% \subsubsection{Energy management}
-% \subsubsection{Novel cloud architectures}
-
-% \subsection{Container as a Service}
-% Our proposed optimization approaches are based on a new service model: 
-
-% Before explaining the details of resource management strategies, we first illustrate several characteristics of resource management in IaaS.
-% Firstly, we illustrate the disadvantages of traditional IaaS and PaaS and discuss the reasons of why current approaches cannot completely overcome these problems. From there, we explain why CaaS is a prescription of their problems.
-
-
-
-
-% Specifically, the profit can be improved by reducing the energy consumption. A direct way to reduce energy consumption is to always use a minimum number of Physical machines (PMs) hosting applications. This is because the more PMs are running, the more energy they are 
-% consumed.
-
-
-
-% Cloud computing is derived from a few computing paradigms including Grid computing, service computing and etc. Grid computing allow their users to run a large-scale computational intensive tasks on a geographically distributed computing resources. Cloud computing is similar to grid computing of utilizing a group distributed
-% comtpuing resources. Unlike grid takes each computer as an individual resource, Cloud computing virtualizes the Physical resources into VMs and provides a centralized resource management. Service computing, including Service Oriented Architecture (SOA) and Web services, focus on constructing large scale Web-based application using the Internet. In SOA, web services are the building blocks of softwares and they can be distributed developed, deployed and composited through the Internet. The technologies, such as SOAP and REST, enables Web serivces.
-
-
-
-
-
-
-
-
-
-
-% Service computing such as Service Oriented Architecture and Web Services, focus on the seamless business processes. 
-
-% The purpose of Cloud computing is to reduce the cost of ``in-house'' 
-
-
-
-
-% The separate responsibility between Cloud providers and Cloud users has completely reformed the software industry \cite{Buyya:2009ix} by providing three major benefits to Cloud users.
-% First, Cloud users do not need upfront investment in hardwares (e.g PMs and networking devices) and pay for hardwares' maintenance. Therefore, it eliminates the risk of initial investment.
-% Second, Cloud users do not need to worry about the limited resources which can obstruct the performance of their services when unexpected high demand occurs. Cloud providers off an elastic nature of Cloud which can dynamic allocates and releases resources for a software.  Cloud users only need to pay the resources that they have used under a \emph{pay-as-you-go} policy. Third, Cloud users can publish and update their applications at any location as long as there is an Internet connection. These advantages allow anyone or organization to deploy their softwares on Cloud in a reasonable price. 
-
-% As previous section mentioned, our goal in this thesis is to help Cloud providers to increase their profit from data centers. Specifically, we focus on how to save money by cutting expenses of Cloud data centers. 
-% Cloud providers have two ways of achieving this goals, one is to provide better Quality of Service (QoS) service such as high throughput, low latency, and high availability, to attract more Cloud users to use Cloud services. The other way is to save money 
-% Each stakeholder has their objectives.  End users consume application. They require a guarantee quality of softwares including functional requirements which are the functionalities defined by Cloud users, and non-functional requirements such as availability, security, and network latency. Cloud users develop and deploy softwares on Cloud. They provide functional correct softwares and they also desire the non-functional requirements of softwares can be satisfied by Cloud resources. Cloud providers offer low-level resources such as computational power, storage and network bandwidth. Cloud providers want to increase their profit by attracting more Cloud users to use Cloud services and reducing the expense caused
-% \begin{figure}[H]
-% 	\centering
-% 	\includegraphics[width=0.5\textwidth]{pics/energyConsumption.png}
-% 	\caption{Energy consumption distribution of data centers \cite{Rong:2016js}}
-% 	\label{fig:consumption}
-% \end{figure} 
-
-
-
-
-
-
-
-
-% \subsection{Resource Management in IaaS}
-% The resource management in IaaS can be roughly separated into three \cite{Svard:2015ic, Mishra:2012kx} which are applied in different scenarios: Application initialization, Prediction and Global consolidation, and Dynamic resource management (see Figure \ref{fig:management}). 
-
-% \begin{figure}
-% 	\centering
-% 	\begin{subfigure}[b]{0.9\textwidth}
-% 		\includegraphics[width=\textwidth]{pics/initialization.png}
-% 		\caption{Initialization}
-% 	\end{subfigure}
-% 	\begin{subfigure}[b]{0.9\textwidth}
-% 		\includegraphics[width=\textwidth]{pics/dynamic_resource.png}
-% 	\caption{Dynamic resource management}
-% 	\end{subfigure}
-% 	\begin{subfigure}[b]{0.9\textwidth}
-% 		\includegraphics[width=\textwidth]{pics/predict_consolidate.png}
-% 	\caption{Prediction and Consolidation}
-% 	\end{subfigure}
-% 	\caption{Three stages of resource management in IaaS}
-% 	\label{fig:management}
-% \end{figure}
-
-
-% Server consolidation is the core functionality involving in all Cloud resource management operations. These operations
-
-% Data center constantly receives new requests for applications initialization. Once the new applications have been allocated, the utilization begins to drop. This is because, initially, applications are compactly allocated on PMs. As old applications instance are released because of canceling, the compact structure become loose. Dynamic resource management is a process which can slow the utilization from decreasing. It consolidates by re-allocating one application at a time. Finally, global consolidation is conducted periodically to dramatically improve the resource utilization.
-% \begin{enumerate}
-% 	\item \emph{Application initialization} is applied when new applications or new VMs arrive and the problem is to allocate them into a minimum number of PMs.
-
-% 	In this problem, a set of applications or VMs are waiting in a queue. The resource capacity of the PM and usage by applications are characterized by a vector of resource utilizations including CPU, memory and etc. Then, the allocation system must select a minimum number of PMs to accommodate them so that after the allocation, the resource utilizations remain high. The problem is to consider the different combinations of applications so that the overall resource utilization is high. This problem is naturally modeled as a static bin-packing problem \cite{CoffmanJr:1996ui} which is a NP-hard problem meaning it is unlikely to find an optimal solution of a large problem. 
-
-% 	\item \emph{Prediction and Global consolidation} is conducted periodically to adjust the current allocation of applications so that the overall utilization is improved.
-
-% 	In this problem, time is discrete and it can be split into basic time frames, for example: ten seconds. A periodical operation is conducted in every $N$ time frames.
-% 	A cloud data center has a highly dynamic environment with continuous arriving and releasing of applications. Releasing applications cause hollow in PMs; new arrivals cannot change the structure of current allocation. Therefore, after the initial allocation, the overall energy efficiency is likely to drop along with time elapsing. 
-
-% 	In prediction, an optimization system takes  the current applications' utilization records as the input. Make a prediction of their utilization in the next period of time. 
-% 	In Global consolidation, based on the predict utilization and the current allocation - including a list of applications/VMs and a list of PMs, the system adjusts the allocation so that the global resource utilization is improved.
-
-% 	In comparison with initialization, instead of new arrivals, the global consolidation considers the previous allocation. Another major difference is that global consolidation needs to minimize the differences of allocation before and after the optimization. This is because the adjustment of allocation relies on a technique called live migration \cite{Clark:2005uda}, and it is a very expensive operation because it occupies the resources in both the host and the target. Therefore, global optimization must be considered as a time-dependent activity which makes the optimization even difficult.
-
-% In comparison with dynamic consolidation, global consolidation takes a set of VMs as input instead of one. Therefore, it is time consuming and often treated as a static problem.
-% 	\item \emph{Dynamic resource management} 
-%  	Dynamic resource management is applied in three scenarios. \textbf{First},  it is applied when a PM is overloading. In order to prevent the QoS from dropping, an application is migrated to another PM. This is called hot-spot mitigation \cite{Mishra:2012kx}. \textbf{Second}, it is applied when a PM is under-loading. Under-loading is when a PM is in a low utilization state normally defined by a threshold. At this moment, all the applications in the under-loading PM are migrated to other active PMs, so the PM becomes empty and can be turned off. This is called dynamic consolidation. \textbf{Third}, it is applied when a PM having very high level of utilization while others having low. An adjustment is to migrate one or more application from high utilized PMs to low ones. This is called load balancing.
-
-% 	No matter which scenario it is, a dynamic resource management always involves three steps . 
-% 	\begin{itemize}
-% 		\item \emph{When to migrate?} refers to determine the time point that a PM is overloaded or underloaded. It is often decide by a threshold of utilization.
-% 		\item \emph{Which application to migrate?} refers to determine which application need to be migrated so that it optimize the global energy consumption.
-% 		\item \emph{Where to migrate?} refers to determine which host that an application is migrated to. This step is called dynamic placement of application which is directly related to the consolidation, therefore, it is decisive in improving energy-efficiency. 
-% 	\end{itemize}
-
-% 	Among three operations, dynamic placement of application is a dynamic and on-line problem.
-% 	The term ``dynamic'' means the request comes at an arbitrary time point. An on-line problem is a problem which has on-line input and requires on-line output \cite{Borodin:uQcy_H6C}. It is applied when a control system does not have the complete knowledge of future events.
-
-% 	There are two difficulties in this operation, firstly, dynamic placement of application requires a fast decision while the search space is very large (e.g hundreds of thousands of PMs). Secondly, migrate one application at a time is hard to reach a global optimized state.
-
-% \end{enumerate}
-
-
-
-% Finally, a consolidation plan includes four major items:
-% 			\begin{enumerate}
-% 				\item A list of existing PMs after consolidation
-% 				\item A list of new virtual machines created after consolidation
-% 				\item A list of old PMs to be turned off after consolidation
-% 				\item The exact placement of applications and services
-% 			\end{enumerate}
-
-% By the nature of Cloud resource management, server consolidation techniques can also be categories into static and dynamic methods. Static method is a time consuming process which is often conducted off-line in a periodical fashion; initialization and global consolidation belong to this category. It provides a global optimization to the data center. Dynamic method adjusts PMs in real time. It often allocates one application at a time. Therefore, it can be executed quickly and often provides a local optimization to the data center.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% They are bonded by the Quality of service and computing resource. Quality of service and the computing resources are the two sides of a coin. 
-
-
-
-% Cloud users deploy their software on Clouds. They want to increase the profit by increasing income and decreasing expense. In order to accomplish this goal, they can attract more End suers by improving the functionality of softwares and the non-functionality features by guaranteeing Quality of Service (QoS). To improve the non-functionality features, Cloud users need to reserve enough resources as well as minimizing the resource so that the cost is low.
-
-
-% service capacity planning is the core process. The capacity planning has two conflicting objectives, on one hand, it must meet End users' QoS requirement by using enough resources.  On the other hand, the cost must be minimized. In pre-Cloud era, the capacity planning determines the upfront investment in infrastructure, therefore, capacity, reliability, and scalability are all need to be carefully considered and balanced. In Cloud environment, the burden of capacity planning is largely released by elastic resource management and the pay-as-you-go policy.
-
-
-% Cloud users identify a list of critical QoS parameters called Service Level Agreement (SLA) which specifies the non-functional requirements such as throughput, latency, and availability. These QoS parameters are mapped to resources (e.g. CPU, memory, network bandwidth) which can satisfy these requirements. Violation of SLA will lead to penalty and decreasing in number of users. Therefore, in essence, the key to attract more users is an effective resource management system which can rapidly react to the fluctuating resource demand. 
-
-% Beside increase the income, reduce the expense is another way to improve profit. As previous section mentioned, energy consumption is the main source of expense. In energy consumption, server energy consumption is the core that needs to be improved. 
-
-% \subsection{Energy-aware Resource Management}
-% \subsection{An Overview of Evolutionary Computation}
-
-
-% In order to understand Cloud computing, firstly we will illustrate the five essential elements of Cloud computing and their advantages.
-
-% Cloud computing has five essential elements:
-
-
-% \textcolor{Blue}{What is your purpose to describe the following content?}
-% \textcolor{Red}{
-% 	I would like to discuss the differences, advantages of disadvantage of the resource management in different service models. Therefore, after illustrate how they are work. The point is to compare the resource management. And then, lead to a new service model. And the advantage of new service model should be obvious. 
-% }\\
-% Traditional Cloud computing has three service model as illustrated in Figure \ref{}.
-% Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service. 
-% \subsection{Resource Management}
-% Scope of Cloud computing resource management.
-% \begin{enumerate}
-%  \item Actors
-%  \item Management Objectives
-%  \item Resource Types
-%  \item Enabling Technologies
-% \end{enumerate}
-
-
-
-
-
+EC-based approaches have been widely applied in various combinatorial optimization problems. Specifically, meta-heuristics such as GA and PSO are more suitable for static problems and hyper-heuristics such as GP are suitable for dynamic problems. In particular, for bilevel problems, EC-based approaches have shown promising good performance. Therefore, this research aims to address the above-mentioned issues with EC-based approaches. The next chapter will focus on the initial work conducted in investigating NSGA-II for bilevel initial placement of application.
 

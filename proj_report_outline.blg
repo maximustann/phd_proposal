@@ -7,8 +7,14 @@ A level-1 auxiliary file: preliminary.aux
 A level-1 auxiliary file: Contribution.aux
 The style file: acm.bst
 Database file #1: sample.bib
-Warning--I didn't find a database entry for "Piraghaj:2017vi"
-Warning--I didn't find a database entry for ""
+"," immediately follows an entry type---line 2309 of file sample.bib
+ : Maximus Tann (maximus.tann@gmail.com
+ :                                     , maximustann@gmail.com)
+I'm skipping whatever remains of this entry
+")" immediately follows an entry type---line 2309 of file sample.bib
+ : Maximus Tann (maximus.tann@gmail.com, maximustann@gmail.com
+ :                                                            )
+I'm skipping whatever remains of this entry
 Name 1 in "{Gy{\"{o}}rgy D{\'{o}}sa}, and Jiř{\'{i}} Sgall" has a comma at the end for entry Dosa:2013ie
 while executing---line 1092 of file acm.bst
 Warning--there's a number but no series in Energy_1
@@ -16,46 +22,48 @@ Warning--empty journal in Fehling:2014tl
 Name 1 in "{Gy{\"{o}}rgy D{\'{o}}sa}, and Jiř{\'{i}} Sgall" has a comma at the end for entry Dosa:2013ie
 while executing---line 1133 of file acm.bst
 Warning--empty journal in Sinha:2013tn
+Warning--empty publisher in Tan2017
+Warning--empty publisher in Tan2016
 Warning--can't use both volume and number fields in Vose:1993iu
-You've used 131 entries,
+You've used 143 entries,
             2253 wiz_defined-function locations,
-            1385 strings with 31726 characters,
-and the built_in function-call counts, 46787 in all, are:
-= -- 4656
-> -- 2302
+            1455 strings with 34127 characters,
+and the built_in function-call counts, 51230 in all, are:
+= -- 5092
+> -- 2536
 < -- 0
-+ -- 948
-- -- 816
-* -- 3969
-:= -- 7613
-add.period$ -- 393
-call.type$ -- 131
-change.case$ -- 800
++ -- 1044
+- -- 900
+* -- 4364
+:= -- 8340
+add.period$ -- 430
+call.type$ -- 143
+change.case$ -- 876
 chr.to.int$ -- 0
-cite$ -- 135
-duplicate$ -- 1444
-empty$ -- 3573
-format.name$ -- 816
-if$ -- 9562
+cite$ -- 149
+duplicate$ -- 1573
+empty$ -- 3902
+format.name$ -- 900
+if$ -- 10458
 int.to.chr$ -- 0
-int.to.str$ -- 131
-missing$ -- 129
-newline$ -- 653
-num.names$ -- 262
-pop$ -- 649
+int.to.str$ -- 143
+missing$ -- 143
+newline$ -- 713
+num.names$ -- 286
+pop$ -- 720
 preamble$ -- 1
-purify$ -- 670
+purify$ -- 736
 quote$ -- 0
-skip$ -- 939
+skip$ -- 1018
 stack$ -- 0
-substring$ -- 3304
-swap$ -- 394
+substring$ -- 3615
+swap$ -- 426
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 520
-warning$ -- 4
-while$ -- 507
-width$ -- 134
-write$ -- 1332
-(There were 2 error messages)
+type$ -- 564
+warning$ -- 6
+while$ -- 552
+width$ -- 146
+write$ -- 1454
+(There were 4 error messages)
