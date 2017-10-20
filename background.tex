@@ -93,13 +93,13 @@ We do not discuss Os container because it is very similar to a VM.
 Some main disadvantages in VM-based virtualization are listed as follows:
 \begin{itemize}
 	\item Resource over-provisioning \\
-	\bx{Cloud users tend to reserve more resources for ensuring the Quality of Service at peak hours \cite{Chaisiri:2012cva} which leads to low resource utilization.} Cloud users do not completely rely on auto-scaling because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, for most of the time, resources are wasted.
+	\bx{Cloud users tend to reserve more resources for ensuring the Quality of Service at peak hours \cite{Chaisiri:2012cva}} The over reserved resources lead to low resource utilization. Cloud users do not completely rely on auto-scaling because auto-scaling is more expensive than reservation. However, the peak hours only account for a short period, therefore, for most of the time, resources are wasted.
 
 	\item Unbalanced usage of resources \\
-	\bx{Specific applications consume unbalanced resources which leads to a vast amount of resource wastage \cite{Tomas:2013iv}. }For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
+	\bx{Specific applications consume unbalanced resources.} The unbalanced resources lead to a vast amount of resource wastage \cite{Tomas:2013iv}. For example, computation intensive tasks consume much more CPU than RAM; a fixed type of VM provides much more RAM than it needs. Because the tasks use too much CPU, they prevent other tasks from co-allocating. This also causes wastage.
 
 	\item Heavy overhead of VM hypervisors and redundant operating systems (OSs) \\
-	\bx{Heavy overhead of  hypervisors and redundant OSs running in the PM also causes huge resource wastage.} Traditional VM provides a complete independent environment for deploying software which includes its own OS and libraries. However, as most applications only require a general OS such as Windows or Linux, multiple duplicate OSs running in the system is a waste of resource.
+	\bx{Heavy overhead of  hypervisors and redundant OSs running in the PM also causes huge resource wastage.} Traditional VMs provide a complete independent environment that includes its own OS and libraries for deploying software. However, as most applications only require a general OS such as Windows or Linux, multiple duplicate OSs running in the system is a waste of resource.
 \end{itemize}
 
 
@@ -107,8 +107,8 @@ Some key characteristics of containers can help overcome the above disadvantages
 
 The following two characteristics can overcome the heavy overhead of VM hypervisors and reduce the redundant OSs.
 \begin{itemize}
-	\item Container-based virtualization has lightweight management which generates much less overhead than a VM hypervisor. 
-	\item Container-based virtualization shares OSs which reduces the overhead of multiple OSs while VMs have to run separate OSs.
+	\item Container-based virtualization has lightweight management that generates much less overhead than a VM hypervisor. 
+	\item Container-based virtualization shares OSs. Therefore, fewer VMs reduce overheads of multiple OSs.
 
 	\item Container-based virtualization naturally supports vertical scaling while VM-based virtualization does not. Vertical scaling means a container can dynamically adjust its resources under the host's resource constraint. This feature offers a fine granularity management of resources. 
 
@@ -117,7 +117,7 @@ The following two characteristics can overcome the heavy overhead of VM hypervis
 	Vertical scaling can overcome the resource over-provisioning by dynamically adjusting the size of containers. Furthermore, the size of container reflects the requirement of the application. We can achieve a balanced usage of resources by using appropriate placement algorithm.
 
 
-\bx{In summary, container-based virtualization has the potential to further improve the energy efficiency than VM-based virtualization.} No matter which virtualization technology is used, cloud often deals with three placement decision scenarios. 
+\bx{In summary, container-based virtualization has the potential to further improve the energy efficiency than VM-based virtualization.} No matter which virtualization technology is used, the cloud often deals with three placement decision scenarios. 
 
 
 
@@ -194,7 +194,7 @@ the low utilization of PMs called PM sprawl~\cite{Khanna:2006vq}.
 \bx{Researchers have proposed a variety of EC algorithms \cite{Yao2006} to solve optimization problems.} The majority of current EC algorithms descends from three major approaches: \emph{genetic algorithms (GAs)}, \emph{particle swarm optimization (PSO)} and \emph{genetic programming (GP)}. 
 
 
-This section will first introduces these three important EC algorithms that we would like to use in our future work. Then, we will review a number of EC algorithms, which are used in combinatorial optimization problems. From these problems, we will conclude some of the advantages of using EC algorithms in solving resource allocation problem in clouds.
+This section will first introduces these three important EC algorithms that we would like to use in our future work. Then, we will review a number of EC algorithms that are used in combinatorial optimization problems. From these problems, we will conclude some of the advantages of using EC algorithms in solving resource allocation problem in clouds.
 
 \subsection{Genetic Algorithms (GAs)}
 % GA \cite{Holland:1962fy} was introduced by Holland. Since then, a large number of applications \cite{DeJong:1992vk, DeJong:1992ws} have applied GA  as their search mechanism. 
@@ -229,7 +229,7 @@ Next section will introduce another popular algorithm: particle swarm optimizati
 \subsection{Particle Swarm Optimization (PSO)}
 \bx{PSO is a meta-heuristic algorithm inspired by the social behavior of birds \cite{Eberhart:1995tj}.} In PSO, each individual -- a particle -- searches the solution space. The underlying phenomenon of PSO is to use the collective knowledge to find the optimal solution.
 
-\bx{We describe the procedure of PSO as follows.} At the initial state, each particle has a random initial position in the search space which is represented by a vector $\vec{x}_i = (x_{i1}, x_{i2}, \dots, x_{iD})$, where \emph{D} is the dimension of the search space. A particle has a velocity as $\vec{v}_i = (v_{i1}, v_{i2}, \dots, v_{iD})$. The velocity is limited by a threshold $v_{\max}$ so that for any $i$ and $d$, $v_{id} \in [-v_{\max}, v_{\max}]$. During the search process, each particle maintains a record of its best position so far, called the \emph{personal best} ($pbest$). The best position among all the personal best positions of its neighbors is the \emph{global best} ($gbest$). The position and velocity of each particle are updated according to the following equations:
+\bx{We describe the procedure of PSO as follows.} At the initial state, each particle has a random initial position in the search space that is represented by a vector $\vec{x}_i = (x_{i1}, x_{i2}, \dots, x_{iD})$, where \emph{D} is the dimension of the search space. A particle has a velocity as $\vec{v}_i = (v_{i1}, v_{i2}, \dots, v_{iD})$. The velocity is limited by a threshold $v_{\max}$ so that for any $i$ and $d$, $v_{id} \in [-v_{\max}, v_{\max}]$. During the search process, each particle maintains a record of its best position so far, called the \emph{personal best} ($pbest$). The best position among all the personal best positions of its neighbors is the \emph{global best} ($gbest$). The position and velocity of each particle are updated according to the following equations:
 \begin{equation}
 \label{eq:updatePosition}
 x^{t+1}_{id} = x^{t}_{id} + v^{t+1}_{id},

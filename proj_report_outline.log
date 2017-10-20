@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  18 OCT 2017 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  20 OCT 2017 11:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -818,14 +818,6 @@ ne 212.
 Package pdftex.def Info: Requested size: 194.04886pt x 35.71126pt on input line
  212.
  [20 <./pics/crossover.png> <./pics/mutation.png>]
-Overfull \hbox (6.58907pt too wide) in paragraph at lines 232--233
-\OT1/ppl/m/n/10.95 dom ini-tial po-si-tion in the search space which is rep-re-
-sented by a vec-tor $[] \OT1/zplm/m/n/10.95 = (\OML/zplm/m/it/10.95 x[]\OT1/ppl
-/m/n/10.95 , \OML/zplm/m/it/10.95 x[]\OT1/ppl/m/n/10.95 , [] , \OML/zplm/m/it/1
-0.95 x[]\OT1/zplm/m/n/10.95 )$\OT1/ppl/m/n/10.95 ,
- []
-
-
 Overfull \hbox (9.61066pt too wide) in paragraph at lines 232--233
 \OT1/ppl/m/n/10.95 where \OT1/ppl/m/it/10.95 D \OT1/ppl/m/n/10.95 is the di-men
 -sion of the search space. A par-ti-cle has a ve-loc-ity as $[] \OT1/zplm/m/n/1
@@ -1117,7 +1109,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (69 pages, 1349408 bytes).
+Output written on proj_report_outline.pdf (69 pages, 1349397 bytes).
 PDF statistics:
  339 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams
