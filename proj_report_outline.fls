@@ -252,6 +252,9 @@ INPUT pics/thesisPlan.png
 INPUT ./pics/thesisPlan.png
 INPUT ./pics/thesisPlan.png
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
+INPUT /usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+INPUT /usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/pkg/share/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
 INPUT /usr/pkg/share/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT published.tex
@@ -284,9 +287,6 @@ INPUT ./pics/comparison.png
 INPUT pics/container_OS_APP.png
 INPUT ./pics/container_OS_APP.png
 INPUT ./pics/container_OS_APP.png
-INPUT /usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
-INPUT /usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
-INPUT /usr/pkg/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT pics/initial_placement.png
 INPUT ./pics/initial_placement.png
 INPUT ./pics/initial_placement.png

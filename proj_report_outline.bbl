@@ -74,6 +74,11 @@
 \newblock {\em IEEE Transactions on Parallel and Distributed Systems 24}, 7
   (2013), 1366--1379.
 
+\bibitem{Bentley:1980dz}
+{\sc Bentley, J.~L.}
+\newblock {Multidimensional Divide-and-Conquer.}
+\newblock {\em Commun. ACM 23}, 4 (1980), 214--229.
+
 \bibitem{Bernstein:2014ur}
 {\sc Bernstein, D.}
 \newblock {Containers and cloud: From LXC to docker to kubernetes}.
@@ -469,6 +474,11 @@
 \newblock {\em Proceedings of the 20th international symposium on High
   performance distributed computing - HPDC '11 16}, 2 (2011), 171.
 
+\bibitem{:2002vv}
+{\sc Lodi, A., Martello, S., and Monaci, M.}
+\newblock {Two-dimensional packing problems - A survey.}
+\newblock {\em European Journal of Operational Research\/} (2002).
+
 \bibitem{Mann:2015ua}
 {\sc Mann, Z.~A.}
 \newblock {Approximability of VM allocation : Much harder than bin packing}.
@@ -521,6 +531,13 @@
   Their Mitigation Using a Novel Vector Based Approach}.
 \newblock {\em IEEE CLOUD\/} (2011), 275--282.
 
+\bibitem{Moritz:2015hv}
+{\sc Moritz, R.~L., Reich, E., Schwarz, M., Bernt, M., and Middendorf, M.}
+\newblock {Refined ranking relations for selection of solutions in multi
+  objective metaheuristics}.
+\newblock {\em European Journal of Operational Research 243}, 2 (2015),
+  454--464.
+
 \bibitem{Murtazaev:2014eo}
 {\sc Murtazaev, A., and Oh, S.}
 \newblock {Sercon: Server Consolidation Algorithm using Live Migration of
@@ -539,6 +556,11 @@
 \newblock {Bi-level optimisation using genetic algorithm}.
 \newblock In {\em Proceedings - 2002 IEEE International Conference on
   Artificial Intelligence Systems\/} (2002), IEEE Comput. Soc, pp.~322--327.
+
+\bibitem{Hyvarinen:2004vj}
+{\sc Oja, A.~H., Karhunen, J., and Erkki}.
+\newblock {\em {Independent Component Analysis}}.
+\newblock John Wiley {\&} Sons, apr 2001.
 
 \bibitem{Panigrahy:2011wk}
 {\sc Panigrahy, R., Talwar, K., Uyeda, L., and Wieder, U.}
@@ -688,11 +710,6 @@
 \newblock {\em {Binary PSO for Web Service Location-Allocation}}, vol.~10142
   LNAI.
 \newblock 2017.
-
-\bibitem{Tan:2017fa}
-{\sc Tan, B., Ma, H., and Mei, Y.}
-\newblock {A NSGA-II-based Approach for Service Resource Allocation in Cloud}.
-\newblock {\em CEC\/} (2017), 2574--2581.
 
 \bibitem{Tan2016}
 {\sc Tan, B., Ma, H., and Zhang, M.}

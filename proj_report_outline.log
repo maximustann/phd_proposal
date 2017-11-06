@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  20 OCT 2017 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (Web2C 2017) (preloaded format=pdflatex 2017.6.23)  27 OCT 2017 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,17 +597,22 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 
 
 ]
-<pics/workflow_management.png, id=30, 768.62157pt x 394.47375pt>
+<pics/workflow_management.png, id=30, 769.37437pt x 392.21532pt>
 File: pics/workflow_management.png Graphic file (type png)
 <use pics/workflow_management.png>
-Package pdftex.def Info: pics/workflow_management.png  used on input line 47. o
-n input line 47.
-Package pdftex.def Info: Requested size: 352.8155pt x 181.07489pt on input line
- 47.
+Package pdftex.def Info: pics/workflow_management.png  used on input line 44. o
+n input line 44.
+Package pdftex.def Info: Requested size: 352.8155pt x 179.86465pt on input line
+ 44.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 48.
- [2 <./pics/workflow_management.png>])
-(./Motivation.tex [3]) (./Goals.tex
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 45.
+ [2 <./pics/workflow_management.png>]
+Overfull \hbox (12.72263pt too wide) in paragraph at lines 86--88
+\OT1/ppl/m/n/10.95 First, we can-not di-rectly ap-ply cur-rent VM-based server 
+con-sol-i-da-tion ap-proaches to container-
+ []
+
+) (./Motivation.tex [3]) (./Goals.tex
 <pics/thesisPlan.png, id=39, 1434.86063pt x 644.4075pt>
 File: pics/thesisPlan.png Graphic file (type png)
 <use pics/thesisPlan.png>
@@ -624,53 +629,66 @@ bjective joint
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2221) has occurred while \output is active []
 
  [4 <./pics/thesisPlan.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 19.
+ (/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
  []
 
 [5] [6]
-Overfull \hbox (16.32565pt too wide) in paragraph at lines 96--97
-\OT1/ppl/m/n/10.95 and-conquer ap-proach splits a large prob-lem into sub-probl
-ems, the smaller sub-problems
- []
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-
- []
-
-
-Overfull \hbox (3.87628pt too wide) in paragraph at lines 124--126
-\OT1/ppl/m/n/10.95 many re-search only con-sid-ers the num-ber of mi-gra-tions 
-[85]. In container-based clouds,
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Overfull \hbox (3.95247pt too wide) in paragraph at lines 100--101
+\OT1/ppl/m/n/10.95 that can achieve bet-ter en-ergy ef-fi-ciency and mi-gra-tio
+n cost than VM-based ap-proaches.[] 
+ []
+
+
+Overfull \hbox (1.61879pt too wide) in paragraph at lines 108--109
+[]\OT1/ppl/m/n/10.95 Sub-objective 2.3: To ex-tend the multi-objective bilevel 
+op-ti-miza-tion al-go-rithm to adapt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 [8]
-Overfull \hbox (3.71056pt too wide) in paragraph at lines 182--182
-\OT1/ppl/b/n/12 Ge-netic Pro-gram-ming Hyper-heuristic (GP-HH) ap-proach for au
--to-mat-i-cally
+Overfull \hbox (0.31563pt too wide) in paragraph at lines 125--125
+[]\OT1/ppl/b/n/12 Objective Three: De-velop a single-objective Co-op-er-a-tive 
+Ge-netic Pro-gram-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
+ []
+
+
+Overfull \hbox (0.34943pt too wide) in paragraph at lines 133--134
+\OT1/ppl/m/n/10.95 bin-packing prob-lem be-cause of multi-dimensional re-source
+s and mul-ti-ple con-straints.
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
@@ -758,13 +776,6 @@ u-al-iza-tion is also ad-dressed as operating-
  []
 
 [16 <./pics/container_OS_APP.png>]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 95.
-
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
 <pics/initial_placement.png, id=94, 731.73375pt x 215.30438pt>
 File: pics/initial_placement.png Graphic file (type png)
 <use pics/initial_placement.png>
@@ -866,13 +877,13 @@ Overfull \hbox (13.5056pt too wide) in paragraph at lines 445--446
  []
 
 [28] [29] [30] [31]
-Overfull \hbox (0.16312pt too wide) in paragraph at lines 546--547
+Overfull \hbox (0.16312pt too wide) in paragraph at lines 545--546
 \OT1/ppl/m/n/10.95 man-age-ment in-clud-ing three steps, an-a-lyz-ing re-source
 s to trig-ger mi-gra-tion, de-cid-ing which
  []
 
 [32]
-Overfull \hbox (7.51108pt too wide) in paragraph at lines 563--564
+Overfull \hbox (7.51108pt too wide) in paragraph at lines 562--563
 []\OT1/ppl/m/n/10.95 Current dy-namic place-ment of ap-pli-ca-tions ap-proaches
  are based on sim-ple bin-packing
  []
@@ -1091,10 +1102,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6775 strings out of 493675
- 99687 string characters out of 6155645
- 201872 words of memory out of 5000000
- 9859 multiletter control sequences out of 15000+600000
+ 6778 strings out of 493675
+ 99733 string characters out of 6155645
+ 202887 words of memory out of 5000000
+ 9862 multiletter control sequences out of 15000+600000
  51657 words of font info for 146 fonts, out of 8000000 for 9000
  890 hyphenation exceptions out of 8191
  42i,17n,43p,1394b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1109,7 +1120,7 @@ dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/pkg/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
 sr/pkg/share/texmf-dist/fonts/type1/vuw/vuw20.pfb>
-Output written on proj_report_outline.pdf (69 pages, 1349397 bytes).
+Output written on proj_report_outline.pdf (69 pages, 1350928 bytes).
 PDF statistics:
  339 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams
